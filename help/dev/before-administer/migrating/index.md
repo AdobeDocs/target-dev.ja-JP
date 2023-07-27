@@ -1,0 +1,12 @@
+---
+title: Adobe Analytics API 仕様 2.0
+description: Adobe Analytics API 仕様 2.0
+source-git-commit: a5bcf98b586c655a36a9ae8800a8f31978d68646
+workflow-type: tm+mt
+source-wordcount: '12'
+ht-degree: 0%
+
+---
+
+
+# プレースホルダー：Target 移行ガイド

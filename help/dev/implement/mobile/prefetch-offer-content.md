@@ -1,0 +1,34 @@
+---
+keywords: オファー，プリフェッチ， iOS, android, sdk，モバイル，モバイル sdk, $8
+description: 以下を使用します。 [!DNL Adobe Target] iOSおよび Android Mobile SDK のプリフェッチ機能を使用して、サーバーからの応答をキャッシュすることで、可能な限り少ない回数でオファーコンテンツを取得できます。
+title: モバイルアプリ用のオファーコンテンツをプリフェッチできますか？
+feature: Implement Mobile
+exl-id: 6f8e8298-f1e9-46f0-828f-717c7d632077
+source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 39%
+
+---
+
+# プリフェッチオファーコンテンツ
+
+[!DNL Target] のプリフェッチ機能では、iOS および Android Mobile SDK を使用してサーバーからの応答をキャッシュすることにより、可能な限り少ない回数でオファーコンテンツを取得できます。
+
+>[!IMPORTANT]
+>
+>のサポート [!DNL Adobe Mobile] バージョン 4.*x* SDK は 2021 年 8 月 31 日をもって終了しており、お勧めしません。 [!DNL Adobe Target] モバイルユーザー。
+>
+>The [モバイルアプリ用Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank} は、を強化するための推奨されるソリューションです。 [!DNL Adobe Experience Cloud] ソリューションおよびサービスをモバイルアプリに追加できます。
+
+このプロセスにより、読み込み時間が短縮され、複数のネットワーク呼び出しを防ぎ [!DNL Target] 、モバイルアプリユーザーがmboxを訪問したことを通知できます。プリフェッチ呼び出し中にすべてのコンテンツが取得され、キャッシュされます。このコンテンツは、指定された mbox 名のキャッシュされたコンテンツを含む今後のすべての呼び出しに対してキャッシュから取得されます。
+
+iOSおよび Android Mobile SDK でプリフェッチメソッドを使用する際は、次の制限を考慮してください。
+
+* プリフェッチコンテンツは、起動間で保持されません。プリフェッチコンテンツは、アプリケーションが稼働しているか `clearPrefetchCache()` 、メソッドが呼び出されるまでキャッシュされます。
+* プリフェッチ機能は、次の用にサポートされていません： [!UICONTROL 自動配分] および [!UICONTROL 自動ターゲット] トラフィック配分方法、 [!UICONTROL Automated Personalization] または [!UICONTROL Recommendations] アクティビティのタイプ、または [A/B または XT アクティビティ内の recommendations オファー](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html).
+
+プリフェッチメソッド、パブリッククラス、コードサンプルなどについて詳しくは、以下のドキュメントを参照してください。
+
+* **IOS:**  [iOSでのオファーコンテンツのプリフェッチ](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html) （内） *Mobile Services iOS SDK ヘルプ*.
+* **Android:**  [Android でのオファーコンテンツのプリフェッチ](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html) （内） *Mobile Services Android SDK のヘルプ*.
