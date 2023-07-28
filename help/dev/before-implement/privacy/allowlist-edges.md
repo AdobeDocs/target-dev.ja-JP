@@ -4,10 +4,10 @@ description: ホストのリストを表示して、に役立て許可リスト�
 title: 方法をす許可リストに加えるる [!DNL Target] エッジノード？
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-source-git-commit: 55deb12a59dc228ec7dcec17fc0ecb43e2900613
+source-git-commit: 3f4147d521b1fb3ee12e879e52a48d459f6b24b9
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 5%
+source-wordcount: '516'
+ht-degree: 6%
 
 ---
 
@@ -27,11 +27,7 @@ ht-degree: 5%
 >
 >[!DNL Adobe Target] インフラストラクチャが更新中で、アドレスをするお客様は許可リストに加える、両方の IP セットを使用する必要があります。 これをおこなわないと、エクスペリエンスを取得するための Target API 呼び出しが、サーバーを使用するように設定されたファイアウォールの背後にあるネットワーク内から発生する、サーバー側またはハイブリッド実装を使用するお客様に影響しま許可リストに加えるす。
 >
->この更新は、次のスケジュールに従っておこなわれています。
->
->* 5 月 22～26 日：ヨーロッパ、中東、アフリカ (EMEA) 地域
->* 5 月 22～26 日：アジア太平洋 (APAC) 地域
->* 6 月 6～10 日：南北アメリカ地域
+>すべての Edge4 *x* 以下の表に記載されているアドレスは、2023 年 8 月 9 日に更新される予定です。
 
 ## Network Address Translation（NAT；ネットワークアドレス変換）：の IP アドレス [!DNL Target] エッジ
 
