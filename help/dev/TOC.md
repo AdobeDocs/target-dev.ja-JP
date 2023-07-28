@@ -2,9 +2,9 @@
 user-guide-title: Adobe Target デベロッパーガイド
 breadcrumb-title: Target 開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: 5321ce43be26e8f0776da49e597ecb5f8dfb5984
+source-git-commit: 65cad3c558aa0f52c8007dcdb566c0ce3b29d8b7
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '739'
 ht-degree: 56%
 
 ---
@@ -217,5 +217,6 @@ ht-degree: 56%
       + [SDK の初期化](/help/dev/patterns/initialize-sdk.md)
       + [データ収集の設定](/help/dev/patterns/data-collection.md)
       + [エクスペリエンスをレンダリング](/help/dev/patterns/render-experiences.md)
+      + [ターゲットに通知](/help/dev/patterns/notify-target.md)
 
 
