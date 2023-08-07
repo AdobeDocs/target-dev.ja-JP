@@ -4,9 +4,9 @@ description: 各バージョンの変更に関する詳細を表示 [!DNL Adobe 
 title: at.js の各バージョンには何が含まれますか。
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: dc7831e4c3eb7dfc4a11d440e55b3a116b6e28fc
 workflow-type: tm+mt
-source-wordcount: '4554'
+source-wordcount: '4603'
 ht-degree: 74%
 
 ---
@@ -15,9 +15,15 @@ ht-degree: 74%
 
 [!DNL Adobe Target] at. js JavaScript ライブラリの各バージョンの変更点についての詳細です。
 
->[!WARNING]
+>[!IMPORTANT]
 >
->[!DNL Adobe Target] は、at.js 1.*x* と at.js 2.*x* 間のマッピングについて説明します。サポート対象のバージョンを実行するには、at.js のメジャーバージョンのいずれかの最新の更新にアップグレードしてください。
+>[!DNL Adobe Target] は、at.js 1.*x* と at.js 2.*x* 間のマッピングについて説明します。
+>
+>at.js 1.*x* はメンテナンスモードに入りました。 The [!DNL Target] チームは、必要に応じてバグ修正とセキュリティパッチをリリースします。
+>
+>The [!DNL Target] チームは、at.js 2.*x* およびでは、バグ修正、セキュリティパッチ、機能、パフォーマンスの最適化を継続的にリリースしています。
+>
+>最新バージョンの 1 つにアップグレードする必要があります。*x* または 2.*x* 対応するメジャーバージョンの以前のマイナーバージョンで検出された問題に対するバグ修正およびセキュリティパッチを取得する。
 
 のタグ [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) は、at.js をアップグレードするための推奨される方法です。 拡張機能開発者は、拡張機能に新しい機能を継続的に追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンへとパッケージ化され、アップグレードとしてAdobe Experience Platformカタログ内で使用できるようになります。 詳しくは、 [拡張機能のアップグレード](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) （内） *タグの概要* ガイド。
 
