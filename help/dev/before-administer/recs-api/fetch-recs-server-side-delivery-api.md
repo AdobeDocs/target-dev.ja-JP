@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: ba53161b2ec51af3d90994773034790feb51099c
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1507'
 ht-degree: 1%
 
 ---
@@ -88,7 +88,6 @@ Delivery API で使用できるレコメンデーションを作成するには�
 | --- | --- |
 | [Adobe Target Everywhere - Server 側または IoT での実装](https://expleague.azureedge.net/labs/L733/index.html) | Adobe Targetのサーバー側 API を利用した React アプリケーションの実践的な操作を提供するAdobe Summit2019 Lab。 |
 | [AdobeSDK を使用しないモバイルアプリでのAdobe Target](https://community.tealiumiq.com/t5/Universal-Data-Hub/Adobe-Target-in-a-Mobile-App-Without-the-Adobe-SDK/ta-p/26753) | このガイドでは、AdobeSDK をインストールせずにモバイルアプリでAdobe Targetをセットアップする方法を説明します。 このソリューションでは、Tealium SDK Web ビューと Remote Commands モジュールを使用して、Adobe訪問者 API(Experience Cloud) およびAdobe Target API にリクエストを送受信します。 |
-| [モバイルアプリにおけるAdobe Targetの仕組み](../../implement/mobile/how-target-works-mobile-apps.md) | Mobile SDK での Target の仕組み |
 | [Target API のExperience Platform Launchと実装での Target 拡張機能の設定](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | Experience Platform Launchで Target 拡張機能を設定し、アプリに Target 拡張機能を追加し、アクティビティのリクエスト、オファーのプリフェッチ、ビジュアルプレビューモードの開始をおこなうための Target API を実装する手順です。 |
 | [Adobe Target Node Client](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) | オープンソースの Target Node.js SDK v1.0 |
 | [サーバー側の概要](../../implement/server-side/server-side-overview.md) | Adobe Target Server Side Delivery API、Server Side Batch Delivery API、Node.js SDK、Adobe Target Recommendations API に関する情報です。 |
