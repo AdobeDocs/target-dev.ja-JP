@@ -4,10 +4,10 @@ description: モバイルプレビューリンクを使用して、モバイル�
 title: モバイルプレビューリンクを [!DNL Target] 携帯？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
+source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 57%
+source-wordcount: '552'
+ht-degree: 51%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 57%
 
 ## 前提条件
 
-1. **サポートされているバージョンの SDK を使用する：**&#x200B;モバイルプレビュー機能を使用するには、4.14 以降の適切なバージョンの Adobe Mobile SDK をダウンロードして対応するアプリにインストールする必要があります。
+1. **サポートされているバージョンの SDK を使用します。** モバイルプレビュー機能を使用するには、適切なバージョンのAdobeMobile SDK を対応するアプリにダウンロードしてインストールする必要があります。
 
    適切な SDK をダウンロードする手順については、 [現在の SDK のバージョン](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} （内） *[!DNL Adobe Experience Platform Mobile SDK]* ドキュメント。
 
