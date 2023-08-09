@@ -4,9 +4,9 @@ description: モバイルプレビューリンクを使用して、モバイル�
 title: モバイルプレビューリンクを [!DNL Target] 携帯？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
+source-git-commit: 97c96e63f9121793a83b445ad3dc33c5d094509a
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '555'
 ht-degree: 51%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 51%
    * **iOs**: iOSの URL スキームの設定について詳しくは、 [アプリのカスタム URL スキームの定義](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} をApple Developer Web サイトに追加します。
    * **Android**:Android 用の URL スキームの設定について詳しくは、 [アプリコンテンツへのディープリンクの作成](https://developer.android.com/training/app-links/deep-linking){target=_blank} （ Android Developers の Web サイト）を参照してください。
 
-1. **設定 `collectLaunchInfo` API**
+1. **設定 `collectLaunchInfo` API（i0S のみ）**
 
    詳しくは、 [ビジュアルプレビュー](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* （内） *[!DNL Adobe Experience Platform Mobile SDK]* ドキュメント。
 
