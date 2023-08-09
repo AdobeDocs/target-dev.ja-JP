@@ -4,20 +4,16 @@ description: モバイルプレビューリンクを使用して、モバイル�
 title: モバイルプレビューリンクを [!DNL Target] 携帯？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 68%
+source-wordcount: '554'
+ht-degree: 57%
 
 ---
 
 # [!DNL Target] モバイルプレビュー
 
 モバイルのプレビューリンクを使用して、モバイルアプリケーションアクティビティの簡易的なエンドツーエンドの QA を実行できます。特別なテスト用のデバイスがなくても、ご利用のデバイス上で様々なエクスペリエンスを確認できます。
-
->[!NOTE]
->
->モバイルプレビュー機能を使用するには、4.14 以降の適切なバージョンの Adobe Mobile SDK をダウンロードしてインストールする必要があります。
 
 ## 概要
 
@@ -27,69 +23,24 @@ ht-degree: 68%
 
 1. **サポートされているバージョンの SDK を使用する：**&#x200B;モバイルプレビュー機能を使用するには、4.14 以降の適切なバージョンの Adobe Mobile SDK をダウンロードして対応するアプリにインストールする必要があります。
 
-   適切な SDK をダウンロードする手順については、以下を参照してください。
-
-   * **IOS:** [事前準備](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/requirements.html) （内） *Mobile Services iOSヘルプ*.
-   * **Android:** [事前準備](https://experienceleague.adobe.com/docs/mobile-services/android/getting-started-android/requirements.html) （内） *Mobile Services Android ヘルプ*.
+   適切な SDK をダウンロードする手順については、 [現在の SDK のバージョン](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} （内） *[!DNL Adobe Experience Platform Mobile SDK]* ドキュメント。
 
 1. **URL スキームを設定する：**&#x200B;プレビューリンクでは、URL スキームを使用してアプリを開きます。プレビュー用に一意の URL スキームを指定する必要があります。
 
-   iOS の例を次の図に示します。
+   詳しくは、 [ビジュアルプレビュー](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* （内） *[!DNL Adobe Experience Platform Mobile SDK]* ドキュメント。
 
-   ![代替画像](assets/mobile-preview-url-scheme-ios.png)
+   詳細は次のリンクに記載されています。
 
-   Android の例を次の図に示します。
+   * **iOs**: iOSの URL スキームの設定について詳しくは、 [アプリのカスタム URL スキームの定義](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} をApple Developer Web サイトに追加します。
+   * **Android**:Android 用の URL スキームの設定について詳しくは、 [アプリコンテンツへのディープリンクの作成](https://developer.android.com/training/app-links/deep-linking){target=_blank} （ Android Developers の Web サイト）を参照してください。
 
-   ![代替画像](assets/Android_Deeplink.png)
+1. **設定 `collectLaunchInfo` API**
 
-1. **アドビの DeepLink を追跡する**
-
-   **iOS：**&#x200B;アプリケーションデリゲートで、 デリゲートが前の手順で指定した URL スキームでリソースを開くように要求されたときに `[ADBMobile trackAdobeDeepLink:url` を呼び出します。
-
-   コードスニペットの例を次に示します。
-
-   ```javascript {line-numbers="true"}
-   - (BOOL) application:(UIApplication *)app openURL:(NSURL *)url 
-                options:(NSDictionary<NSString *,id> *)options { 
-   
-       if ([[url scheme] isEqualToString:@"com.adobe.targetmobile"]) { 
-           [ADBMobile trackAdobeDeepLink:url]; 
-           return YES; 
-       } 
-       return NO; 
-   } 
-   ```
-
-   **Android：**&#x200B;アプリケーションで、 呼び出し元が前の手順で指定した URL スキームでリソースを開くように要求されたときに `Config.trackAdobeDeepLink(URL);` を呼び出します。
-
-   ```javascript {line-numbers="true"}
-    private Boolean shouldOpenDeeplinkUrl() { 
-        Intent appLinkIntent = getIntent(); 
-        String appLinkAction = appLinkIntent.getAction(); 
-        Uri appLinkData = appLinkIntent.getData; 
-        if (appLinkData.toString().startsWith("com.adobe.targetmobile")) { 
-            Config.trackAdobeDeepLink(appLinkData); 
-            return true; 
-        } 
-        return false; 
-     }
-   ```
-
-   Android でモバイルプレビューが動作するようにするには、AdobeMobile SDK のバージョン 5 を使用している場合は、AndroidManifest.xml に次のコードスニペットも追加する必要があります。
-
-   ```javascript {line-numbers="true"}
-   <activity android:name="com.adobe.marketing.mobile.FullscreenMessageActivity" />
-   ```
-
-   バージョン 4 の Mobile SDK を使用している場合は、次のAdobeスニペットを使用します。
-
-   ```javascript {line-numbers="true"}
-   <activity android:name="com.adobe.mobile.MessageFullScreenActivity" />
-   ```
+   詳しくは、 [ビジュアルプレビュー](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* （内） *[!DNL Adobe Experience Platform Mobile SDK]* ドキュメント。
 
 ## プレビューリンクの生成
 
-1. Adobe Analytics の [!DNL Target] UI で、 **[!UICONTROL その他のオプション]** アイコン（縦並びの省略記号）をクリックし、「 **[!UICONTROL モバイルプレビューを作成]**.
+1. Adobe Analytics の [!DNL Target] UI で、 **[!UICONTROL その他のオプション]** アイコン（縦の省略記号）をクリックし、「 **[!UICONTROL モバイルプレビューを作成]**.
 
    ![代替画像](assets/mobile-preview-create.png)
 
