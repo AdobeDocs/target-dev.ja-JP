@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target デベロッパーガイド
 breadcrumb-title: Target 開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: eadb45877b13ac029dae6aaf172abebabb804983
+source-git-commit: 2d1b1829a8f794e29bb054d1bfdcb5047d6b4acb
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 54%
+source-wordcount: '721'
+ht-degree: 53%
 
 ---
 
@@ -168,6 +168,7 @@ ht-degree: 54%
    + [Target モバイルのプレビュー](implement/mobile/target-mobile-preview.md)
    + [Location Service の使用](implement/mobile/use-location-service.md)
    + [モバイルアプリ用 Target に関する FAQ](implement/mobile/mobile-faq.md)
+   + [Web ビューを使用したネイティブアプリでの AEP Mobile SDK による Target の実装](/help/dev/implement/mobile/native-app.md)
 + メールの実装 {#implement-email}
    + [電子メール：Target の実装の概要](implement/email/overview.md)
    + [画像用 adbox の作成](implement/email/testing-content-with-the-adbox.md)
