@@ -4,10 +4,10 @@ description: 方法を学ぶ [!DNL Adobe Target] は、IP アドレス、PII、�
 title: PII を含むプライバシーの問題に Target はどのように対処しますか？
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: d9ac5bab3a09cf49b2178a62c06eebe733b9048d
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 47%
+source-wordcount: '865'
+ht-degree: 39%
 
 ---
 
@@ -38,6 +38,14 @@ Adobeは、ユーザーがAdobeを有効にできる「プライバシーバイ�
   ![obfuscate-ip-options](assets/obfuscate-ip.png)
 
 [!DNL Target] は完全な IP アドレスを受け取り、（「最後のオクテット」または「IP 全体」に設定されている場合）指定に従って難読化します。 [!DNL Target] 次に、現在のセッション中にのみ、不明化された IP アドレスをメモリに保持します。
+
+### を使用する場合のデータストリームレベルの IP 難読化 [!DNL Adobe Experience Platform Web SDK]
+
+を使用する場合、 [!DNL Platform Web SDK] （バージョン 23.4 以降）では、データストリームレベルの IP の不明化設定は、 [!DNL Target]. 例えば、datastream-level IP obfuscation（データストリームレベルの IP の不明化）オプションが [!UICONTROL 完全] そして [!DNL Target] IP obfuscation（IP の不明化）オプションが [!UICONTROL 最終オクテットの難読化], [!DNL Target] は、完全に不明化された IP を受け取ります。 で IP が不明化されているので [!DNL Target] は、ジオロケーション参照の前に発生します。データストリームレベルの IP 難読化設定は、影響を受けません。
+
+IP の不明化をデータストリームレベルで設定し、データが Edge ネットワークを経由した後、 [!DNL Target] および [!DNL Adobe Audience Manager] (AAM) には、不明化された IP のみが含まれ、クライアント IP に基づくロジックは、データストリームレベルの IP の不明化オプションの影響を受けます。 で設定された任意の IP 難読化 [!DNL Target] またはAAMが既に不明化された IP に適用されている。
+
+詳しくは、 [!UICONTROL IP Obfuscation（IP の不明化）] in [データストリームの設定](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html){target=_blank} （内） *[!DNL Adobe Experience Platfrom]データストリームガイド*.
 
 ## 地理特性
 
