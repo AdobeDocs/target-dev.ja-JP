@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 948ebe0c5011fb0327a7b5d45f3e7ac857fcb8ad
+source-git-commit: e15513f5c52240536ccf41f16ba7f4dc6dbf9a04
 workflow-type: tm+mt
-source-wordcount: '1772'
+source-wordcount: '1791'
 ht-degree: 7%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 7%
 **前提条件**
 
 * 訪問者 ID/API サービスを使用するには、会社で [!DNL Adobe Experience Cloud] また、 [!UICONTROL 組織 ID]. 詳しくは、 [Experience Cloud要件：組織 ID](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} （内） *ID サービスヘルプ* ガイド。
-* 必要なのは `VisitorAPI.js` ファイル。 このファイルを入手するには、デジタルマーケティングチームにお問い合わせください。
+* 必要なのは `VisitorAPI.js` ファイル。 次の場合は、既にこのファイルが存在するはずです。 [!DNL Adobe Analytics] 実装済み。 このファイルは、 [[!DNL Adobe Experience Platform] タグ拡張子](https://experienceleague.adobe.com/docs/tags.html){target=_blank} or can be downloaded from the [Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}.
 
 **VisitorAPI.js を設定および参照してください。**
 
@@ -431,7 +431,7 @@ ht-degree: 7%
 
 **前提条件**
 
-* Web SDK ライブラリファイルをダウンロードするか、デジタルマーケティングチームに問い合わせます。 `at.js 2.*x*`
+* をダウンロードするか、デジタルマーケティングチームに `at.js 2.*x*` JavaScript ライブラリファイル。
 
 *読み取り*
 
