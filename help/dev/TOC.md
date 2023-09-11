@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target デベロッパーガイド
 breadcrumb-title: Target 開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: 2d1b1829a8f794e29bb054d1bfdcb5047d6b4acb
+source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 53%
+source-wordcount: '729'
+ht-degree: 55%
 
 ---
 
@@ -208,10 +208,11 @@ ht-degree: 53%
    + [Adobe Experience Platform Edge Network Server API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
 + 実装パターン {#implementation-patterns} {#hidden}
    + [実装パターンの概要](/help/dev/patterns/pattern-overview.md)
-   + Target の実装パターン {#target}
-      + [SDK の初期化](/help/dev/patterns/initialize-sdk.md)
-      + [データ収集の設定](/help/dev/patterns/data-collection.md)
-      + [エクスペリエンスをレンダリング](/help/dev/patterns/render-experiences.md)
-      + [ターゲットに通知](/help/dev/patterns/notify-target.md)
+   + at.js を使用したRecommendations実装パターン {#atjs}
+      + [at.js を使用したRecommendations実装パターンの概要](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [SDK の初期化](/help/dev/patterns/recs-atjs/initialize-sdk.md)
+      + [データ収集の設定](/help/dev/patterns/recs-atjs/data-collection.md)
+      + [エクスペリエンスをレンダリング](/help/dev/patterns/recs-atjs/render-experiences.md)
+      + [ターゲットに通知](/help/dev/patterns/recs-atjs/notify-target.md)
 
 

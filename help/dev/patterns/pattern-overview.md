@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: c4b9dfed19e5e4a56bfeae26c4310b997a2d617e
+source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,10 @@ ht-degree: 0%
 
 各パターンは異なるパーツで構成されます。 各パーツは、 [!DNL Target] 実装。
 
-各部分については、このガイドの別のページで説明します。 例えば、 [!DNL Target] 実装パターンには、次のページが含まれます。
+各部分については、このガイドの別のページで説明します。 例えば、 [[!DNL Recommendations] at.js を使用した実装パターン](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md) には、次のページが含まれます。
 
 * SDK を初期化
-* プロファイルを強化
+* データ収集の設定
 * エクスペリエンスをレンダリング
 * 通知 [!DNL Target]
 
