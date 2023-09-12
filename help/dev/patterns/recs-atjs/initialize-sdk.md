@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: e15513f5c52240536ccf41f16ba7f4dc6dbf9a04
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 7%
@@ -54,7 +54,7 @@ ht-degree: 7%
 
 +++詳細を見る
 
-![訪問者 API SDK の図を読み込み](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="300" zoomable="yes"}
+![訪問者 API SDK の図を読み込み](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="400" zoomable="yes"}
 
 **前提条件**
 
@@ -90,7 +90,7 @@ ht-degree: 7%
 
 +++詳細を見る
 
-![顧客 ID を設定](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="300" zoomable="yes"}
+![顧客 ID を設定](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="400" zoomable="yes"}
 
 **前提条件**
 
@@ -117,7 +117,7 @@ ht-degree: 7%
 
 +++詳細を見る
 
-![自動ページ読み込みリクエストの設定](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="300" zoomable="yes"}
+![自動ページ読み込みリクエストの設定](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="400" zoomable="yes"}
 
 **前提条件**
 
@@ -146,7 +146,7 @@ ht-degree: 7%
 
 +++詳細を見る
 
-![ちらつき処理図の設定](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="300" zoomable="yes"}
+![ちらつき処理図の設定](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="400" zoomable="yes"}
 
 **前提条件**
 
@@ -179,7 +179,7 @@ ht-degree: 7%
 
 +++詳細を見る
 
-![データマッピング図](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="300" zoomable="yes"}
+![データマッピング図](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="400" zoomable="yes"}
 
 **前提条件**
 
@@ -399,7 +399,7 @@ ht-degree: 7%
 
 +++詳細を見る
 
-![リモートデータマッピング図](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="300" zoomable="yes"}
+![リモートデータマッピング図](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="400" zoomable="yes"}
 
 **前提条件**
 
@@ -427,7 +427,7 @@ ht-degree: 7%
 
 +++詳細を見る
 
-![Adobe Target Web SDK の図を読み込む](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="300" zoomable="yes"}
+![Adobe Target Web SDK の図を読み込む](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="400" zoomable="yes"}
 
 **前提条件**
 
