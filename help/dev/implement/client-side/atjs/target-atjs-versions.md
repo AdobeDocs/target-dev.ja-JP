@@ -4,10 +4,10 @@ description: 各バージョンの変更に関する詳細を表示 [!DNL Adobe 
 title: at.js の各バージョンには何が含まれますか。
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: dc7831e4c3eb7dfc4a11d440e55b3a116b6e28fc
+source-git-commit: 0bdbeebc07bc4e1dd0dc34171fbf2476db5c256f
 workflow-type: tm+mt
-source-wordcount: '4603'
-ht-degree: 74%
+source-wordcount: '4635'
+ht-degree: 73%
 
 ---
 
@@ -25,7 +25,12 @@ ht-degree: 74%
 >
 >最新バージョンの 1 つにアップグレードする必要があります。*x* または 2.*x* 対応するメジャーバージョンの以前のマイナーバージョンで検出された問題に対するバグ修正およびセキュリティパッチを取得する。
 
-のタグ [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) は、at.js をアップグレードするための推奨される方法です。 拡張機能開発者は、拡張機能に新しい機能を継続的に追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンへとパッケージ化され、アップグレードとしてAdobe Experience Platformカタログ内で使用できるようになります。 詳しくは、 [拡張機能のアップグレード](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) （内） *タグの概要* ガイド。
+のタグ [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) は、at.js をアップグレードするための推奨される方法です。 拡張機能開発者は、拡張機能に新しい機能を継続的に追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンへとパッケージ化され、アップグレードとしてAdobe Experience Platformカタログ内で使用できるようになります。 詳しくは、 [拡張機能のアップグレード](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) （内） *タグの概要* guide.6 以降
+
+## at.js バージョン 2.10.3（2023年9月12日（PT））
+
+* 間違ってトリガーされた問題を修正しました `at-content-rendering-succeeded` オファーがレンダリングされない場合のカスタムイベント。 正しいイベント、 `at-content-rendering-no-offers`を呼び出し、がトリガーされました。
+* 追加済み `eventToken` および `responseTokens` 次のエラーオブジェクトに： `at-content-rendering-failed` カスタムイベント。
 
 ## at.js バージョン 2.10.2（2023年3月7日（PT））
 
@@ -109,7 +114,7 @@ at.js のこのリリースはメンテナンスリリースで、次の修正�
 
 at.js のこのリリースはメンテナンスリリースで、次の修正が含まれています。
 
-* mbox クリックの追跡と A4T に関連する問題を修正しました。 0n-click を押すと、 [!DNL Target] は、正しい mbox パラメーターと mbox パラメーターで Delivery API 呼び出しを実行しました。 しかし、SDID は [!DNL Analytics] を呼び出したので、ヒットのステッチとコンバージョンはおこなわれませんでした。 （TNT-38372）
+* mbox クリックの追跡と A4T に関連する問題を修正しました。 0n-click を押すと、 [!DNL Target] は、正しい mbox パラメーターと mbox パラメーターと共に Delivery API 呼び出しを実行しました。 しかし、SDID は [!DNL Analytics] を呼び出したので、ヒットのステッチとコンバージョンはおこなわれませんでした。 （TNT-38372）
 
 ## at.js 2.3.2（2020 年 7 月 24 日）
 
