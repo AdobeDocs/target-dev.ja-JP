@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 8707fb55d66cb7a28d311a03c749acb1a1d79cf8
+source-git-commit: 3f97c3b38300ec4bbb0bffccfc0ff3f02457a0fc
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,17 @@ ht-degree: 0%
 
 The [!DNL Adobe Target] 実装パターンは、 [!DNL Target] ベストプラクティスに従い、お客様およびコンサルタントの実装の問題を減らすのに役立ちます。
 
+実装のプロセス [!DNL Target] フレームワークやプラットフォームによって異なる [!DNL Target] チームは、様々なフレームワーク、プラットフォーム、統合の実装パターンを作成する予定です。
+
 現在、次のパターンを使用できます。
 
 * [[!DNL Recommendations] at.js を使用した実装パターン](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
+これらの実装パターンは、方法ではなく、何を、いつ、どこでおこなうかに焦点を当てることを目的としています。 詳細なフロー図は、操作のシーケンスを理解し、関連ドキュメントへのリンクから状況に応じた手順を順を追って説明するのに役立ちます。
+
 ## 新しいパターンのアイデアや既存のパターンの修正を提案する
 
-The [!DNL Target] チームは、様々なフレームワーク、プラットフォーム、統合の実装パターンを作成する予定です。 また、既存のパターンの改善案も歓迎します。
+The [!DNL Target] チームは、様々なフレームワーク、プラットフォーム、統合に対して様々な実装パターンを作成する予定です。 また、既存のパターンの改善案も歓迎します。
 
 チームが新しいパターンを作成したり、既存のパターンを改善したりするには、 **フィードバックオプション** のすべての記事の下部にある機能 *[!DNL Adobe Experience League]*.
 
@@ -43,9 +47,11 @@ The [!DNL Target] チームは、様々なフレームワーク、プラット�
 
    1. タイトルを入力し、テキストボックスにコメントを入力します。
 
+      必要に応じて、ファイルまたはスクリーンショットを添付します。
+
    1. クリック **[!UICONTROL 新しい問題を送信]** 終了したとき。
 
-1. （条件付き）既存のパターンの記事を編集するには、 **[!UICONTROL 編集を提案]**」、「 **[!UICONTROL 編集]** アイコン（鉛筆アイコン）をクリックします。
+1. （条件付き）既存のパターンのテキストを編集するには、関連する記事の「フィードバック」オプションモデルで、 **[!UICONTROL 編集を提案]**」、「 **[!UICONTROL 編集]** アイコン（鉛筆アイコン）をクリックします。
 
    1. Markdown 構文を使用して編集を行います。
 
@@ -55,7 +61,7 @@ The [!DNL Target] チームは、この機能を使用してコメントや編�
 
 >[!NOTE]
 >
->[!DNL Adobe] 従業員は *の実装パターン [!DNL Adobe Target] 実装* wiki を参照してください。 上記の指示に従って、リンクと [!DNL Target] チームが内部の [!DNL Adobe] wiki.
+>[!DNL Adobe] 従業員は *の実装パターン [!DNL Adobe Target] 実装* wiki を参照してください。 アイデアを提案し、リンクと [!DNL Target] チームが内部の [!DNL Adobe] wiki.
 
 
 
