@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
+source-git-commit: 8fae7e18f555e6b549e0b9c486be73e3483dac86
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 1%
@@ -29,13 +29,13 @@ ht-degree: 1%
 
 ![Target 図を通知](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
 
-## 火 [!DNL Adobe Target] API の追跡
+## 4.1：火 [!DNL Adobe Target] API の追跡
 
 この手順により、に送信する必要のあるすべてのイベントを確実に実行できます。 [!DNL Target] は、 `trackEvent` メソッド。
 
 +++詳細を見る
 
-![Fire Adobe Target Track API の図](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram.png){width="400" zoomable="yes"}
+![Fire Adobe Target Track API の図](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 注文コンバージョン属性は、 *前提条件* 」の節を参照してください。 mbox の名前は問題になりませんが、変換は、 `orderConfirmPage`.
 
