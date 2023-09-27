@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: a87f9a13fc1feb12c62f1b772975958541f7523a
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1814'
 ht-degree: 7%
 
 ---
@@ -25,7 +25,9 @@ ht-degree: 7%
 
 複数ページのアプリの場合、このフローは、ページがリロードされるたびに、または訪問者が Web サイトの新しいページに移動するたびに発生します。
 
-次の図に示すステップ番号は、以下のセクションに対応しています。
+>[!NOTE]
+>
+>次の図に示すステップ番号は、以下のセクションに対応しています。 ステップ番号は特定の順序ではなく、 [!DNL Target] アクティビティの作成中に UI が表示されます。
 
 ![SDK ダイアグラムの初期化](/help/dev/patterns/recs-atjs/assets/diagram-initiaze-sdk.png){width="600" zoomable="yes"}
 

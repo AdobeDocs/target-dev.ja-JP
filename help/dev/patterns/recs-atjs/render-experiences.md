@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 85af1bad244dc0aa7665e2fbb627d82f6fabbf88
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1104'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,9 @@ ht-degree: 7%
 
 at.js で利用可能な、あらかじめ用意されている自動ちらつき処理は、 [!UICONTROL 自動ページ読み込み要求] 有効。 このオプションを選択すると、HTMLの本文全体が非表示になり、次のエクスペリエンスが取得されます。 [!DNL Target]. この場合、ちらつきを処理するのはユーザーの責任です。 ガイダンスについて、ちらつき処理に使用できる実装パターンを検索します。
 
-次の図に示すステップ番号は、以下のセクションに対応しています。
+>[!NOTE]
+>
+>次の図に示すステップ番号は、以下のセクションに対応しています。 ステップ番号は特定の順序ではなく、 [!DNL Target] アクティビティの作成中に UI が表示されます。
 
 ![エクスペリエンス図をレンダリング](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
