@@ -3,9 +3,9 @@ title: create メソッドを使用して Java SDK を初期化する
 description: create メソッドを使用して Java SDK を初期化し、 [!UICONTROL TargetClient] 電話をかける [!DNL Adobe Target] 実験とパーソナライズされたエクスペリエンスの場合。
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d080b5e402e5d55039bf06611b44678cc6c36de
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '462'
 ht-degree: 18%
 
 ---
@@ -44,6 +44,9 @@ ClientConfigBuilder ClientConfig.builder()
 | socketTimeout | 数値 | × | 10000 | すべての要求のソケットタイムアウト（ミリ秒） |
 | maxConnectionsPerHost | 数値 | × | 100 | 1 回あたりの最大接続数 [!DNL Target] ホスト |
 | maxConnectionsTotal | 数値 | × | 200 | すべての [!DNL Target] ホスト |
+| connectionTtlMs | 数値 | × | -1 | Total time to live (TTL) は、持続接続の最大寿命をミリ秒単位で定義します。 デフォルトでは、接続は無期限に有効な状態に保たれます |
+| idleConnectionValidationMs | 数値 | × | 1000 | 永続的な接続が再利用される前に再検証される非アクティブな期間（ミリ秒） |
+| evictIdleConnectionsAfterSecs | 数値 | × | 20 | 接続プールからアイドル状態の接続を削除する時間（秒） |
 | enableRetries | ブール値 | × | true | ソケットタイムアウトの自動再試行（最大 4 回） |
 | logRequests | ブール値 | × | false | ログ [!DNL Target] デバッグでのリクエストと応答 |
 | logRequestStatus | ブール値 | × | false | ログ [!DNL Target] 応答時間、ステータス、URL |
