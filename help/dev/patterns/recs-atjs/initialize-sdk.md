@@ -4,11 +4,9 @@ description: の読み込みに必要なすべての手順を確認します。 
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1820'
 ht-degree: 7%
 
 ---
@@ -448,6 +446,8 @@ at.js ファイルは、実験、最適化、パーソナライゼーション�
 +++
 
 [このページの上部にある図に戻ります。](#diagram)
+
+手順 2 に進みます。 [データ収集の設定](/help/dev/patterns/recs-atjs/data-collection.md).
 
 
 

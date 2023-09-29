@@ -4,11 +4,9 @@ description: データ収集に必要なタスクがすべて正しい順序で�
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 30634afc84877a4e88e08f3b2173d4c0727f4362
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '391'
 ht-degree: 3%
 
 ---
@@ -107,4 +105,6 @@ ht-degree: 3%
 +++
 
 [このページの上部にある図に戻ります。](#diagram)
+
+手順 3 に進みます。 [エクスペリエンスをレンダリング](/help/dev/patterns/recs-atjs/render-experiences.md)
 

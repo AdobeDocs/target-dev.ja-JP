@@ -4,11 +4,9 @@ description: 追跡が必要なすべてのイベントを [!DNL Target] は、 
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 013a49b92357cfb5d45f7e595b46b1b12ce91c65
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '359'
 ht-degree: 1%
 
 ---
@@ -49,6 +47,10 @@ ht-degree: 1%
    * `productPurchaseId`：注文の一部として購入された製品 ID。 複数の製品はコンマで区切ります。
    * `orderTotal`：購入の注文合計。
    * `orderId`：購入の注文 ID。
+
+  次の図に、 [規則 [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} それは、次の日にのみ実行されるはずです： [!UICONTROL 確認] ページに貼り付けます。
+
+  ![アクション設定ページ](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
 * 買い物かごへの追加のイベントを追跡している場合は、 `cartIds` をパラメーターとして使用します。 製品 ID のコンマ区切りリストを `cardIds`.
 

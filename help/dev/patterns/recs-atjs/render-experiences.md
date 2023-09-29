@@ -4,11 +4,9 @@ description: エクスペリエンスのレンダリングに必要なすべて�
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1124'
 ht-degree: 7%
 
 ---
@@ -52,7 +50,7 @@ at.js で利用可能な、あらかじめ用意されている自動ちらつ�
 
 ## 3.1：昇格 {#promotion}
 
-プロモーション項目の追加と Target Recommendationsでの配置の制御 [デザイン](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
+プロモーション項目を追加し、レコメンデーションデザインでの配置を制御するには、 [!DNL Target] アクティビティの作成中に UI が表示されます。
 
 +++詳細を見る
 
@@ -65,6 +63,10 @@ at.js で利用可能な、あらかじめ用意されている自動ちらつ�
 **エンティティのパラメーターが必要です**
 
 * 「属性別にプロモート」オプションを使用する場合は、プロモーションの項目属性を渡す必要があります。
+
+**読み取り**
+
+* [プロモーションの追加](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -297,3 +299,5 @@ at.js で利用可能な、あらかじめ用意されている自動ちらつ�
 +++
 
 [このページの上部にある図に戻ります。](#diagram)
+
+手順 4 に進みます。 [ターゲットに通知](/help/dev/patterns/recs-atjs/notify-target.md).

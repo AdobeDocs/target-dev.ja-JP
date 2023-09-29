@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target デベロッパーガイド
 breadcrumb-title: Target 開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 55%
@@ -206,7 +206,7 @@ ht-degree: 55%
       + [モデル API](/help/dev/administer/models-api/models-api-overview.md)
    + [Adobe Admin Console API](/help/dev/before-implement/delivery-api-overview/adobe-console-api.md)
    + [Adobe Experience Platform Edge Network Server API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
-+ 実装パターン {#implementation-patterns} {#hidden}
++ 実装パターン {#implementation-patterns}
    + [実装パターンの概要](/help/dev/patterns/pattern-overview.md)
    + at.js を使用したRecommendations実装パターン {#atjs}
       + [at.js を使用したRecommendations実装パターンの概要](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
