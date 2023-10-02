@@ -4,9 +4,9 @@ description: 実装パターンの使用方法の理解
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 09dafc7c85ea7f3600fceac4e673e8f1901771a4
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ The [!DNL Adobe Target] 実装パターンは、 [!DNL Target] ベストプラ�
 
 * [[!DNL Recommendations] at.js を使用した実装パターン](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
-これらの実装パターンは、方法ではなく、何を、いつ、どこでおこなうかに焦点を当てることを目的としています。 詳細なフロー図は、操作のシーケンスを理解し、関連ドキュメントへのリンクから状況に応じた手順を順を追って説明するのに役立ちます。
+これらの実装パターンでは、何を、いつ、どこでおこなうかに焦点を当てています。 詳細なフロー図は、操作のシーケンスを理解し、関連ドキュメントへのリンクから状況に応じた手順を順を追って説明するのに役立ちます。
 
 ## 新しいパターンのアイデアや既存のパターンの修正を提案する
 
