@@ -4,9 +4,9 @@ description: 各バージョンの変更に関する詳細を表示 [!DNL Adobe 
 title: at.js の各バージョンには何が含まれますか。
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 0bdbeebc07bc4e1dd0dc34171fbf2476db5c256f
+source-git-commit: 45b5c44370476f27bba7077d5379d7742e87a90a
 workflow-type: tm+mt
-source-wordcount: '4635'
+source-wordcount: '4662'
 ht-degree: 73%
 
 ---
@@ -26,6 +26,11 @@ ht-degree: 73%
 >最新バージョンの 1 つにアップグレードする必要があります。*x* または 2.*x* 対応するメジャーバージョンの以前のマイナーバージョンで検出された問題に対するバグ修正およびセキュリティパッチを取得する。
 
 のタグ [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) は、at.js をアップグレードするための推奨される方法です。 拡張機能開発者は、拡張機能に新しい機能を継続的に追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンへとパッケージ化され、アップグレードとしてAdobe Experience Platformカタログ内で使用できるようになります。 詳しくは、 [拡張機能のアップグレード](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) （内） *タグの概要* guide.6 以降
+
+## at.js バージョン 2.11.0（2023年10月10日（PT））
+
+* カスタムの設定のサポートを追加しました。 [!DNL Adobe Experience Platform] (AEP) `sandboxId` および `sandboxName` in `targetGlobalSettings`（で Delivery API に渡される） `getOffer/getOffers` 呼び出し。
+* チェーン用のシャドウ DOM 修正 `:eq()` セレクター内。
 
 ## at.js バージョン 2.10.3（2023年9月12日（PT））
 
