@@ -1,13 +1,13 @@
 ---
-keywords: target 開発者ガイド；概要
+keywords: target 開発者ガイド；概要；ホーム
 title: Adobe Target デベロッパーガイド
 description: ' [!DNL Adobe Target]  を実装および管理し、その API および SDK を操作する方法'
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: 063d0574ee380bf76130fb0f17db89cd09efdb7d
+source-git-commit: 1d834edf4da94614e3a4be665ebd97399439ec98
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '480'
 ht-degree: 12%
 
 ---
