@@ -5,16 +5,14 @@ description: ' [!DNL Adobe Target]  を実装および管理し、その API お
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 063d0574ee380bf76130fb0f17db89cd09efdb7d
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '479'
 ht-degree: 12%
 
 ---
 
 # [!DNL Adobe Target] 開発者用ガイド
-
-![Adobe Targetバナー画像](/help/dev/assets/target-home-banner-simple.png)
 
 **([表示 [!DNL Target] ドキュメントの更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank})**
 
@@ -36,7 +34,7 @@ ht-degree: 12%
 
 ## クライアント側実装
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk.md): [!DNL Adobe Experience Platform Web SDK] を使用すると、 [!DNL Experience Cloud] （次を含む） [!DNL Target]) 経由で [!UICONTROL Adobe Experience Edge Network].
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk.md): [!DNL Adobe Experience Platform Web SDK] を使用すると、 [!DNL Experience Cloud] （次を含む） [!DNL Target]) 経由で [!UICONTROL AdobeExperience Edge ネットワーク].
 
 [**Target at.js JavaScript ライブラリ**](/help/dev/implement/client-side/overview.md):at.js JavaScript ライブラリは、Web 実装のページ読み込み時間を改善し、セキュリティを強化して、シングルページアプリケーション向けのより優れた実装オプションを提供します。
 
