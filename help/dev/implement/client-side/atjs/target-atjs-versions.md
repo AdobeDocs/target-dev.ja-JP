@@ -4,10 +4,10 @@ description: 各バージョンの変更に関する詳細を表示 [!DNL Adobe 
 title: at.js の各バージョンには何が含まれますか。
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: eb82f6a0d0165d73c1c40917c96e09c8bdddf647
+source-git-commit: c5d1f477a2561a59efb3250e35563b48822fbe59
 workflow-type: tm+mt
-source-wordcount: '4678'
-ht-degree: 73%
+source-wordcount: '4697'
+ht-degree: 72%
 
 ---
 
@@ -30,6 +30,10 @@ ht-degree: 73%
 ## at.js バージョン 2.11.2（2023年10月26日（PT））
 
 * カスタムイベントで送信されるレスポンストークンに不整合がある問題を修正しました。
+
+## at.js バージョン 2.11.1（2023年10月13日（PT））
+
+* at.js を実行するページが互換モードの場合にキャッチできないエラーが発生する問題を修正しました。
 
 ## at.js バージョン 2.11.0（2023年10月10日（PT））
 
