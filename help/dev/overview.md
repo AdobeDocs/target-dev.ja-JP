@@ -5,9 +5,9 @@ description: ' [!DNL Adobe Target]  を実装および管理し、その API お
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: 1d834edf4da94614e3a4be665ebd97399439ec98
+source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '481'
 ht-degree: 12%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 12%
 
 [**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports)：取得 [!UICONTROL A/B テスト] および [!UICONTROL Automated Personalization] アクティビティレポートデータ。
 
-[**[!DNL Target Recommendations API]**](http://developers.adobetarget.com/api/recommendations/)：を使用します。 [!DNL Target Recommendations] API.
+[**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/)：を使用します。 [!DNL Target Recommendations] API.
 
 [**[!DNL Target Models API]**](administer/models-api/models-api-overview.md)：を管ブロックリストに加える理して、 [!DNL Target] 機械学習モデル。
 

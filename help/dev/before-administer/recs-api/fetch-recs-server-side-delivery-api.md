@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: ba53161b2ec51af3d90994773034790feb51099c
+source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1520'
 ht-degree: 1%
 
 ---
@@ -97,22 +97,22 @@ Delivery API で使用できるレコメンデーションを作成するには�
 
 ほとんどの場合、レコメンデーションはAdobe Target UI で設定され、上記の節で説明したような理由で、Target API を介して使用またはアクセスされます。 この UI と API の調整は一般的です。 ただし、API を介してすべてのアクション（セットアップと結果の使用）を実行したい場合があります。 一般的ではありませんが、ユーザーは、 *および* は、レコメンデーションの結果を API を完全に使用して活用します。
 
-我々は、 [前の節](manage-catalog.md) Adobe Target Recommendationsエンティティを管理し、サーバー側で配信する方法 同様に、 [Adobe Developer Console](https://developer.adobe.com/console/home) では、Adobe Targetにログインしなくても条件、プロモーション、コレクション、デザインテンプレートを管理できます。 すべてのRecommendations API の完全なリストは、次のとおりです。 [ここ](http://developers.adobetarget.com/api/recommendations/)ですが、参照用の要約を次に示します。
+我々は、 [前の節](manage-catalog.md) Adobe Target Recommendationsエンティティを管理し、サーバー側で配信する方法 同様に、 [Adobe Developer Console](https://developer.adobe.com/console/home) では、Adobe Targetにログインしなくても条件、プロモーション、コレクション、デザインテンプレートを管理できます。 すべてのRecommendations API の完全なリストは、次のとおりです。 [ここ](https://developer.adobe.com/target/administer/recommendations-api/)ですが、参照用の要約を次に示します。
 
 | リソース | 詳細 |
 | --- | --- |
-| [コレクション](http://developers.adobetarget.com/api/recommendations/#tag/Collections) | コレクションのリスト、作成、取得、編集、削除を行います。 |
-| [条件](http://developers.adobetarget.com/api/recommendations/#tag/Criteria) | 条件のリストと取得。 |
-| [デザイン](http://developers.adobetarget.com/api/recommendations/#tag/Designs) | デザインのリスト、作成、取得、編集、削除、検証を行います。 |
-| [エンティティ](http://developers.adobetarget.com/api/recommendations/#tag/Entities) | エンティティを保存、削除、取得します。 |
-| [プロモーション](http://developers.adobetarget.com/api/recommendations/#tag/Promotions) | プロモーションのリスト、作成、取得、編集、削除を行います。 |
-| [カテゴリ条件](http://developers.adobetarget.com/api/recommendations/#tag/Category-Criteria) | カテゴリ条件のリスト、作成、取得、編集、削除を行います。 |
-| [カスタム条件](http://developers.adobetarget.com/api/recommendations/#tag/Custom-Criteria) | カスタム条件のリスト、作成、取得、編集および削除を行います。 |
-| [項目条件](http://developers.adobetarget.com/api/recommendations/#tag/Item-Criteria) | 項目基準のリスト、作成、取得、編集、削除を行います。 |
-| [人気度の条件](http://developers.adobetarget.com/api/recommendations/#tag/Popularity-Criteria) | 人気度条件のリスト、作成、取得、編集および削除を行います。 |
-| [プロファイル属性条件](http://developers.adobetarget.com/api/recommendations/#tag/Profile-Attribute-Criteria) | プロファイル属性条件のリスト、作成、取得、編集、削除を行います。 |
-| [最近の条件](http://developers.adobetarget.com/api/recommendations/#tag/Recent-Criteria) | 最近の条件のリスト、作成、取得、編集、削除を行います。 |
-| [シーケンス条件](http://developers.adobetarget.com/api/recommendations/#tag/Sequence-Criteria) | シーケンス条件のリスト、作成、取得、編集および削除を行います。 |
+| [コレクション](https://developer.adobe.com/target/administer/recommendations-api/#tag/Collections) | コレクションのリスト、作成、取得、編集、削除を行います。 |
+| [条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Criteria) | 条件のリストと取得。 |
+| [デザイン](https://developer.adobe.com/target/administer/recommendations-api/#tag/Designs) | デザインのリスト、作成、取得、編集、削除、検証を行います。 |
+| [エンティティ](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) | エンティティを保存、削除、取得します。 |
+| [プロモーション](https://developer.adobe.com/target/administer/recommendations-api/#tag/Promotions) | プロモーションのリスト、作成、取得、編集、削除を行います。 |
+| [カテゴリ条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Category-Criteria) | カテゴリ条件のリスト、作成、取得、編集、削除を行います。 |
+| [カスタム条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Custom-Criteria) | カスタム条件のリスト、作成、取得、編集および削除を行います。 |
+| [項目条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Item-Criteria) | 項目基準のリスト、作成、取得、編集、削除を行います。 |
+| [人気度の条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Popularity-Criteria) | 人気度条件のリスト、作成、取得、編集および削除を行います。 |
+| [プロファイル属性条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Profile-Attribute-Criteria) | プロファイル属性条件のリスト、作成、取得、編集、削除を行います。 |
+| [最近の条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | 最近の条件のリスト、作成、取得、編集、削除を行います。 |
+| [シーケンス条件](https://developer.adobe.com/target/administer/recommendations-api/#tag/Sequence-Criteria) | シーケンス条件のリスト、作成、取得、編集および削除を行います。 |
 
 ## リファレンスドキュメント
 
