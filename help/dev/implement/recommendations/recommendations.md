@@ -4,9 +4,9 @@ description: の実装方法を学ぶ [!UICONTROL Recommendations] アクティ�
 title: 実装方法 [!UICONTROL Recommendations] アクティビティ？
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-source-git-commit: 1e1bfb556005f7ea998caf97685c834825372bd6
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1461'
 ht-degree: 29%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 29%
 | メソッド | 内容 | 使用するタイミング | 追加情報 |
 | --- | --- | --- | --- |
 | カタログフィード | フィード (CSV、Google Product XML、Analytics Product Classifications) を毎日アップロードおよび取り込むようにスケジュールします。 | 一度に複数の項目に関する情報を送信する場合。 頻繁に変更されない情報を送信する場合。 | 詳しくは、 [フィード](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html). |
-| エンティティ API | API を呼び出して、単一アイテムの最新の更新を送信します。 | 一度に 1 つの項目に関する更新が発生した場合に送信するためのものです。 頻繁に変更される情報（価格、在庫/在庫レベルなど）を送信する場合。 | 詳しくは、 [エンティティ API 開発者向けドキュメント](https://developers.adobetarget.com/api/recommendations/#tag/Entities). |
+| エンティティ API | API を呼び出して、単一アイテムの最新の更新を送信します。 | 一度に 1 つの項目に関する更新が発生した場合に送信するためのものです。 頻繁に変更される情報（価格、在庫/在庫レベルなど）を送信する場合。 | 詳しくは、 [エンティティ API 開発者向けドキュメント](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | ページ上で更新を渡す | ページ上の JavaScript を使用するか Delivery API を使用して、単一のアイテムに関する最新の更新を送信します。 | 一度に 1 つの項目に関する更新が発生した場合に送信するためのものです。 頻繁に変更される情報（価格、在庫/在庫レベルなど）を送信する場合。 | 詳しくは、 [品目ビュー/製品ページ](#item-views-or-product-pages) 下 |
 
 ほとんどのお客様は、少なくとも 1 つのフィードを実装する必要があります。 その後、Entities API またはページ上の方法を使用して、頻繁に変更される属性や項目の更新でフィードを補完するよう選択できます。

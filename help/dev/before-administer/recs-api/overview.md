@@ -6,10 +6,10 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 0d03c650-0b00-44b8-a794-10e5d738e42c
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 2%
+source-wordcount: '339'
+ht-degree: 1%
 
 ---
 
@@ -47,4 +47,4 @@ Target 管理 API にはが必要です。 [Adobe認証設定](../configure-auth
 | リソース | 詳細 |
 | --- | --- |
 | Postman | を取得します [Postmanアプリ](https://www.postman.com/downloads/) ご使用のオペレーティングシステム用。 Postman basic は、アカウントの作成に自由に対応しています。 Adobe Target API を一般に使用するためには必須ではありませんが、Postmanでは API ワークフローが容易になります。Adobe Targetでは、API の実行とその動作方法の学習に役立つ、いくつかのPostmanコレクションが提供されています。 このガイドの残りの部分は、Postmanの作業に関する知識を前提としています。 不明な点は、 [Postmanドキュメント](https://learning.getpostman.com/). |
-| 参照 | このガイドの残りの部分では、次のリソースに関する知識が前提となります。<UL><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target 管理およびプロファイル API のドキュメント](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API ドキュメント](https://developers.adobetarget.com/api/recommendations/)</li></UL> |
+| 参照 | このガイドの残りの部分では、次のリソースに関する知識が前提となります。<UL><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target 管理およびプロファイル API のドキュメント](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API ドキュメント](https://developer.adobe.com/target/administer/recommendations-api/)</li></UL> |

@@ -3,9 +3,9 @@ title: Adobe Target API の概要
 description: 様々なAdobe Target API の概要（delivery api、reporting api、admin api、profile api、recommendations api、postman コレクションへのリンクを含む）。
 exl-id: bf886103-36af-4061-b8be-2fe645f45ff3
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '440'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Adobe Target API は、管理者、プロファイル、配信、レポートの
 
 | API タイプ | 何が可能か | ダウンロードリンク | その他の役立つリンク |
 | --- | --- | --- |--- |
-| [管理者](../administer/admin-api/admin-api-overview-new.md) | アクティビティ、オーディエンス、オファーおよびその他のオブジェクト (Recommendationsのエンティティ、条件、デザインなど ) を作成、変更および削除します。 Recommendations API は管理 API の一種です )。 | <UL><li>[Target 管理 API Postmanコレクション](https://developers.adobetarget.com/api/#admin-postman-collection)</li><li>[Recommendations API Postmanコレクション](https://developers.adobetarget.com/api/recommendations/#section/Postman)</li></UL> | [Recommendations API の使用](../before-administer/recs-api/overview.md) |
+| [管理者](../administer/admin-api/admin-api-overview-new.md) | アクティビティ、オーディエンス、オファーおよびその他のオブジェクト (Recommendationsのエンティティ、条件、デザインなど ) を作成、変更および削除します。 Recommendations API は管理 API の一種です )。 | <UL><li>[Target 管理 API Postmanコレクション](https://developers.adobetarget.com/api/#admin-postman-collection)</li><li>[Recommendations API Postmanコレクション](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman)</li></UL> | [Recommendations API の使用](../before-administer/recs-api/overview.md) |
 | プロファイル | Adobe Targetに保存されているユーザープロファイルを取得して変更します。 | [Target プロファイル API Postman Collection](https://developers.adobetarget.com/api/#profiles) |  |
 | [配信](../implement/delivery-api/overview.md) | エンドユーザーに配信するために、最適化され、パーソナライズされたコンテンツを Target から取得します。 | [Target 配信 API Postmanコレクション](/help/dev/before-implement/delivery-api-overview/getting-started.md#postman) |  |
 | [レポート](../administer/admin-api/admin-api-overview-new.md) | アクティビティの結果と他のレポート結果をエクスポートします。 | レポート API は、 [Target 管理 API Postmanコレクション](https://developers.adobetarget.com/api/#admin-postman-collection). |  |

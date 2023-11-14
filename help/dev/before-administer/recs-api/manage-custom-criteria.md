@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '939'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Recommendationsが提供するアルゴリズムは、プロモーションし�
 
 ## カスタム条件の作成
 
-を使用してカスタム条件を作成するには [カスタム条件 API の作成](https://developers.adobetarget.com/api/recommendations/#operation/createCriteriaCustom)の場合の構文は次のとおりです。
+を使用してカスタム条件を作成するには [カスタム条件 API の作成](https://developer.adobe.com/target/administer/recommendations-api/#operation/createCriteriaCustom)の場合の構文は次のとおりです。
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
@@ -39,7 +39,7 @@ Recommendationsが提供するアルゴリズムは、プロモーションし�
 
    ![CreateCustomCriteria1](assets/CreateCustomCriteria1.png)
 
-1. を追加します。 **本文** as **raw** カスタム条件の CSV ファイルの場所を定義する JSON。 次に示す例を使用します： [カスタム条件 API の作成](https://developers.adobetarget.com/api/recommendations/#operation/getAllCriteriaCustom) テンプレートとしてのドキュメント ( `environmentId` および必要に応じてその他の値。 この例では、キーとして LAST_PURCHASED を使用します。
+1. を追加します。 **本文** as **raw** カスタム条件の CSV ファイルの場所を定義する JSON。 次に示す例を使用します： [カスタム条件 API の作成](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom) テンプレートとしてのドキュメント ( `environmentId` および必要に応じてその他の値。 この例では、キーとして LAST_PURCHASED を使用します。
 
    ![CreateCustomCriteria2](assets/CreateCustomCriteria2.png)
 
@@ -55,7 +55,7 @@ Recommendationsが提供するアルゴリズムは、プロモーションし�
 
 ## カスタム条件のリスト
 
-すべてのカスタム条件のリストと各条件の詳細を取得するには、 [カスタム条件 API のリスト](https://developers.adobetarget.com/api/recommendations/#operation/getAllCriteriaCustom). 構文は次のとおりです。
+すべてのカスタム条件のリストと各条件の詳細を取得するには、 [カスタム条件 API のリスト](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom). 構文は次のとおりです。
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
@@ -66,7 +66,7 @@ Recommendationsが提供するアルゴリズムは、プロモーションし�
 
 ## カスタム条件の編集
 
-カスタム条件定義の詳細を変更するには、 [カスタム条件 API の編集](https://developers.adobetarget.com/api/recommendations/#operation/updateCriteriaCustom). 構文は次のとおりです。
+カスタム条件定義の詳細を変更するには、 [カスタム条件 API の編集](https://developer.adobe.com/target/administer/recommendations-api/#operation/updateCriteriaCustom). 構文は次のとおりです。
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -86,7 +86,7 @@ Recommendationsが提供するアルゴリズムは、プロモーションし�
 
 ## カスタム条件の取得
 
-特定のカスタム条件のカスタム条件の詳細を表示するには、 [カスタム条件 API の取得](https://developers.adobetarget.com/api/recommendations/#operation/getCriteriaCustom). 構文は次のとおりです。
+特定のカスタム条件のカスタム条件の詳細を表示するには、 [カスタム条件 API の取得](https://developer.adobe.com/target/administer/recommendations-api/#operation/getCriteriaCustom). 構文は次のとおりです。
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -99,7 +99,7 @@ Recommendationsが提供するアルゴリズムは、プロモーションし�
 
 ## カスタム条件の削除
 
-前述の条件 ID を使用して、 [カスタム条件 API の削除](https://developers.adobetarget.com/api/recommendations/#operation/deleteCriteriaCustom). 構文は次のとおりです。
+前述の条件 ID を使用して、 [カスタム条件 API の削除](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteCriteriaCustom). 構文は次のとおりです。
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 

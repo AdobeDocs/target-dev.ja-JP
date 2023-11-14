@@ -3,9 +3,9 @@ title: の認証を設定する方法 [!DNL Adobe Target] API
 description: とのやり取りに必要な認証トークンを生成する方法 [!DNL Adobe Target] API は？
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1942'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ The [!DNL Adobe Target] 管理 API（以下を含む） [!DNL Recommendations Ad
 | リソース | 詳細 |
 | --- | --- |
 | Postman | これらの手順を正しく完了するには、 [Postmanアプリ](https://www.postman.com/downloads/) ご使用のオペレーティングシステム用。 Postman basic は、アカウントの作成に自由に対応しています。 を使用するために必須ではありませんが、 [!DNL Adobe Target] 一般に、Postmanは API ワークフローをより簡単にし、 [!DNL Adobe Target] には、API の実行や動作の仕組みを学ぶのに役立つ、いくつかのPostmanコレクションが用意されています。 このガイドの残りの部分は、Postmanの作業に関する知識を前提としています。 不明な点については、 [Postmanドキュメント](https://learning.getpostman.com/). |
-| 参照 | このガイドの残りの部分では、次のリソースに関する知識が前提となります。<ul><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target 管理およびプロファイル API のドキュメント](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API ドキュメント](https://developers.adobetarget.com/api/recommendations/)</li></ul> |
+| 参照 | このガイドの残りの部分では、次のリソースに関する知識が前提となります。<ul><li>[Adobe I/OGithub](https://github.com/adobeio)</li><li>[Target 管理およびプロファイル API のドキュメント](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API ドキュメント](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## Adobe I/Oプロジェクトの作成
 
@@ -225,7 +225,7 @@ Postmanでプロジェクトの詳細を指定する方法は多数あります�
 
    >[!NOTE]
    >
-   >テナント ID が [!DNL Target] `clientcode`. 次にログインすると、URL にテナント ID が存在します： [!DNL Target]. テナント ID を取得するには、 Adobe Experience Cloudにログインして、 [!DNL Target]をクリックし、 Target カードをクリックします。 URL サブドメインで指定されているように、テナント ID の値を使用します。 例えば、 [!DNL Adobe Target] 次に該当 `<https://mycompany.experiencecloud.adobe.com/...>` テナント ID が「mycompany」になります。
+   >テナント ID が [!DNL Target] `clientcode`. 次にログインすると、URL にテナント ID が存在します： [!DNL Target]. テナント ID を取得するには、 Adobe Experience Cloudにログインして、を開きます。 [!DNL Target]をクリックし、 Target カードをクリックします。 URL サブドメインで指定されているように、テナント ID の値を使用します。 例えば、 [!DNL Adobe Target] 次に該当 `<https://mycompany.experiencecloud.adobe.com/...>` テナント ID が「mycompany」になります。
 
 1. 正しい環境を選択したことを確認した後、リクエストを送信します。 アクティビティのリストを含む応答を受け取ります。
 

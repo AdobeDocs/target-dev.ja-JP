@@ -6,10 +6,10 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '919'
-ht-degree: 2%
+source-wordcount: '924'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 また、 [Recommendations API を使用するための要件](/help/dev/before-administer/recs-api/overview.md#prerequisites)では、 [アクセストークンの生成](/help/dev/before-administer/configure-authentication.md) JWT 認証フローを使用して [!DNL Adobe Target] の管理 API [Adobe Developer Console](https://developer.adobe.com/console/home).
 
-これで、 [Recommendations API](https://developers.adobetarget.com/api/recommendations/) recommendations カタログの項目を追加、更新、削除する場合。 残りのAdobe Target Admin API と同様に、Recommendations API では認証が必要です。
+これで、 [Recommendations API](https://developer.adobe.com/target/administer/recommendations-api/) recommendations カタログの項目を追加、更新、削除する場合。 残りのAdobe Target Admin API と同様に、Recommendations API では認証が必要です。
 
 >[!NOTE]
 >
@@ -25,11 +25,11 @@ ht-degree: 2%
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-続行する前に、 [Recommendations Postmanコレクション](https://developers.adobetarget.com/api/recommendations/#section/Postman).
+続行する前に、 [Recommendations Postmanコレクション](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman).
 
 ## エンティティ保存 API での項目の作成と更新
 
-製品ページで実行される CSV 製品フィードや Target リクエストではなく、API を使用してRecommendations製品データベースに値を入力するには、 [エンティティ保存 API](https://developers.adobetarget.com/api/recommendations/#operation/saveEntities). このリクエストは、単一の Target 環境内の項目を追加または更新します。 構文は次のとおりです。
+製品ページで実行される CSV 製品フィードや Target リクエストではなく、API を使用してRecommendations製品データベースに値を入力するには、 [エンティティ保存 API](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities). このリクエストは、単一の Target 環境内の項目を追加または更新します。 構文は次のとおりです。
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
@@ -124,7 +124,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
 
 ## Get Entity API を使用した品目の詳細の取得
 
-既存の項目の詳細を取得するには、 [エンティティ API を取得](https://developers.adobetarget.com/api/recommendations/#operation/getEntity). 構文は次のとおりです。
+既存の項目の詳細を取得するには、 [エンティティ API を取得](https://developer.adobe.com/target/administer/recommendations-api/#operation/getEntity). 構文は次のとおりです。
 
 ```
 GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
@@ -163,7 +163,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
 ## エンティティ削除 API での品目の削除
 
-カタログから項目を削除するには、 [エンティティ削除 API](https://developers.adobetarget.com/api/recommendations/#operation/deleteEntities). 構文は次のとおりです。
+カタログから項目を削除するには、 [エンティティ削除 API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteEntities). 構文は次のとおりです。
 
 ```
 DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimited-entity-ids]&environment=[environmentId]
