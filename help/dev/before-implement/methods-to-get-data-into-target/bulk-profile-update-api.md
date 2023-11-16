@@ -4,10 +4,10 @@ description: データをに取り込む [!DNL Target] 一括プロファイル�
 title: データをに取り込む方法 [!DNL Target] プロファイル一括更新 API を使用している場合
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 60%
+source-wordcount: '404'
+ht-degree: 57%
 
 ---
 
@@ -41,6 +41,8 @@ API を使用して、.csv ファイルをに送信します。 [!DNL Adobe Targ
 ## 注意事項
 
 バッチファイルの容量は 50 MB 未満にする必要があります。また、1 回にアップロードできる行数は 50 万行までです。
+
+通常、更新は 1 時間以内に行われますが、反映されるまで 24 時間かかる場合があります
 
 以降のバッチで、24 時間以内にアップロードできる回数や行数に上限はありません。ただし、他のプロセスを効率的に実行するために、営業時間中は取り込みプロセスが調整される場合があります。
 
