@@ -4,9 +4,9 @@ description: 各バージョンの変更に関する詳細を表示 [!DNL Adobe 
 title: at.js の各バージョンには何が含まれますか。
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: c5d1f477a2561a59efb3250e35563b48822fbe59
+source-git-commit: ccb87e1217b754b2d496308da35998882cbe2fb1
 workflow-type: tm+mt
-source-wordcount: '4697'
+source-wordcount: '4712'
 ht-degree: 72%
 
 ---
@@ -26,6 +26,10 @@ ht-degree: 72%
 >最新バージョンの 1 つにアップグレードする必要があります。*x* または 2.*x* 対応するメジャーバージョンの以前のマイナーバージョンで検出された問題に対するバグ修正およびセキュリティパッチを取得する。
 
 のタグ [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) は、at.js をアップグレードするための推奨される方法です。 拡張機能開発者は、拡張機能に新しい機能を継続的に追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンへとパッケージ化され、アップグレードとしてAdobe Experience Platformカタログ内で使用できるようになります。 詳しくは、 [拡張機能のアップグレード](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) （内） *タグの概要* guide.6 以降
+
+## at.js バージョン2.11.3（2023 年 11 月 22 日）
+
+* レスポンストークンが `at-content-rendering-failed` イベント。
 
 ## at.js バージョン 2.11.2（2023年10月26日（PT））
 
