@@ -4,10 +4,10 @@ description: データをに取り込む [!DNL Target] 単一のプロファイ�
 title: データをに取り込む方法 [!DNL Target] 単一プロファイル更新 API を使用する場合
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
+source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 35%
+ht-degree: 11%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 35%
 
 ## 形式
 
-訪問者は、 の [!DNL Target]mboxPC または `mbox3rdPartyId` の値によって識別する必要があります。Experience Cloud ID（ECID）には対応していません。
+訪問者は、 [!DNL Target] `mboxPC` 値または `mbox3rdPartyId` の値です。 The [!UICONTROL Experience CloudID] (ECID) はサポートされていません。
 
 ## 使用例
 
@@ -25,17 +25,14 @@ ht-degree: 35%
 
 ## 方法の利点
 
-プロファイル属性の数に上限がありません。
-
-サイトを介して送信されるプロファイル属性を、API を介して更新できます（その逆も可能です）。
+* プロファイル属性の数に上限がありません。*
+* サイトを介して送信されるプロファイル属性は、API を介して更新することも、逆の方法で更新することもできます。
 
 ## 注意事項
 
-24 時間ごとの API 呼び出しの上限は 100 万件です。
-
-プロファイルのみが更新されます。潜在的なユーザーのプロファイルを作成できません [!DNL Target] はまだ見ていません。
-
-通常、更新は 1 時間以内におこなわれますが、反映されるまでに 24 時間かかる場合があります。
+* 24 時間あたりの API 呼び出し数の上限は 1,000,000 件（100 万件）です。
+* プロファイルのみが更新されます。潜在的なユーザーのプロファイルを作成できません [!DNL Target] はまだ見ていません。
+* 通常、更新は 1 時間以内におこなわれますが、反映されるまでに 24 時間かかる場合があります。
 
 ## コードの例
 

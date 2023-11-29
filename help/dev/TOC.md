@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target デベロッパーガイド
 breadcrumb-title: Target 開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 55%
@@ -209,10 +209,10 @@ ht-degree: 55%
 + 実装パターン {#implementation-patterns}
    + [実装パターンの概要](/help/dev/patterns/pattern-overview.md)
    + at.js を使用したRecommendations実装パターン {#atjs}
-      + [at.js を使用したRecommendations実装パターンの概要](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [at.js を使用した Recommendations 実装パターンの概要](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [SDK の初期化](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [データ収集の設定](/help/dev/patterns/recs-atjs/data-collection.md)
-      + [エクスペリエンスをレンダリング](/help/dev/patterns/recs-atjs/render-experiences.md)
+      + [エクスペリエンスのレンダリング](/help/dev/patterns/recs-atjs/render-experiences.md)
       + [ターゲットに通知](/help/dev/patterns/recs-atjs/notify-target.md)
 
 
