@@ -3,9 +3,9 @@ title: Adobe Target Single Profile Update API
 description: 使用方法を学ぶ [!DNL Adobe Target] [!UICONTROL 単一プロファイル更新 API] 1 人の訪問者のプロファイルデータをに送信する [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
+source-git-commit: dcff5d2eb8740420a9f9cf488474c3bca1628567
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '386'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,8 @@ The [!UICONTROL 単一プロファイル更新 API] およびは、通常、実�
 * 通常、更新は 1 時間以内におこなわれますが、反映されるまでに 24 時間かかる場合があります。
 
   より多くの更新を送信する場合や、より短い期間で更新を処理する必要がある場合は、クライアント側の更新（推奨）または [!DNL Adobe Target] サーバーサイド [配信 API](/help/dev/implement/delivery-api/overview.md).
+
+* The [!UICONTROL 単一プロファイル更新 API] は、サーバー間 API で、Web ページ内で機能するように設計されていません。 Web ページ内から訪問者プロファイルを更新するには、 [trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) 関数または [配信 API](/help/dev/implement/delivery-api/overview.md).
 
 ## 形式
 
