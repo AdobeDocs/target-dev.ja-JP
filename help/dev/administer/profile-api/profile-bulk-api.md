@@ -3,9 +3,9 @@ title: Adobe Target一括プロファイル更新 API
 description: 使用方法を学ぶ [!DNL Adobe Target] [!UICONTROL プロファイル一括更新 API] 複数の訪問者のプロファイルデータを [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 6f7d9875e3b73352ead3a55e40a4b2f81f3d4400
+source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '722'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 The [!DNL Adobe Target] [!UICONTROL プロファイル一括更新 API] バッチファイルを使用して、1 つの web サイトに対する複数の訪問者のユーザープロファイルを一括で更新できます。
 
-の使用 [!UICONTROL プロファイル一括更新 API]を使用すると、多くのユーザーが以下の操作をおこなうために、詳細な訪問者プロファイルデータをプロファイルパラメーターの形式で簡単に送信できます。 [!DNL Target] 任意の外部ソースから。 外部ソースには、顧客関係管理 (CRM) システムや POS(Point of Sale) システムが含まれます。POS システムは通常 Web ページでは利用できません。
+の使用 [!UICONTROL プロファイル一括更新 API]を使用すると、多くのユーザーが以下の操作をおこなうために、詳細な訪問者プロファイルデータをプロファイルパラメーターの形式で簡単に送信できます。 [!DNL Target] 任意の外部ソースから。 外部ソースには、顧客関係管理 (CRM) システムや POS(Point of Sale) システムが含まれますが、これらは Web ページでは通常利用できません。
 
 | バージョン | URL の例 | 機能 |
 | --- | --- | --- |
@@ -24,6 +24,11 @@ The [!DNL Adobe Target] [!UICONTROL プロファイル一括更新 API] バッ�
 >[!NOTE]
 >
 >のバージョン 2(v2) [!UICONTROL プロファイル一括更新 API] は現在のバージョンです。 しかし、 [!DNL Target] は、バージョン 1(v1) をサポートします。
+
+## プロファイル一括更新 API のメリット
+
+* プロファイル属性の数に上限がありません。
+* サイトを介して送信されるプロファイル属性は、API を介して更新することも、逆の方法で更新することもできます。
 
 ## 注意事項
 
