@@ -4,10 +4,10 @@ description: データをに取り込む [!DNL Target] の使用 [!UICONTROL プ
 title: データをに取り込む方法 [!DNL Target] の使用 [!UICONTROL プロファイル一括更新 API]?
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
+source-git-commit: 946e9431e6bde30f564b4ba1a4cf0a78d8c5c6bf
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 4%
+source-wordcount: '286'
+ht-degree: 5%
 
 ---
 
@@ -17,9 +17,11 @@ The [!DNL Adobe Target] [!UICONTROL プロファイル一括更新 API] バッ�
 
 の使用 [!UICONTROL プロファイル一括更新 API]を使用すると、多くのユーザーが以下の操作をおこなうために、詳細な訪問者プロファイルデータをプロファイルパラメーターの形式で簡単に送信できます。 [!DNL Target] 任意の外部ソースから。 外部ソースには、顧客関係管理 (CRM) システムや POS(Point of Sale) システムが含まれますが、これらは Web ページでは通常利用できません。
 
+対比 [!UICONTROL プロファイル一括更新 API] と [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md).
+
 ## [!UICONTROL 顧客属性] 対 [!UICONTROL プロファイル一括更新 API]
 
-このオプションは、 [!UICONTROL 顧客属性] には、いくつかの違いがあります。
+このオプションは、 [[!UICONTROL 顧客属性]](/help/dev/before-implement/methods-to-get-data-into-target/customer-attributes.md) には、いくつかの違いがあります。
 
 * [!UICONTROL 顧客属性] FTP アップロードを使用します。The [!UICONTROL Target 一括プロファイル更新 API] は HTTPPOSTAPI を使用します。
 * [!UICONTROL 顧客属性] データはと共有できます。 [!DNL Analytics]. The [!UICONTROL プロファイルの一括更新] はでのみ使用できます [!DNL Target].
@@ -31,6 +33,8 @@ The [!DNL Adobe Target] [!UICONTROL プロファイル一括更新 API] バッ�
 * 送信する `mbox3rdPartyID` には、プラス記号（+）とスラッシュ（/）を含めることはできません。
 
 ## リソース
+
+詳しくは、次を参照してください。
 
 * [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
 * [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)

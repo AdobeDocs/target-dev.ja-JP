@@ -4,10 +4,10 @@ description: データをに取り込む [!DNL Target] 単一のプロファイ�
 title: データをに取り込む方法 [!DNL Target] の使用 [!UICONTROL 単一プロファイル更新 API]?
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
+source-git-commit: 946e9431e6bde30f564b4ba1a4cf0a78d8c5c6bf
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 0%
+source-wordcount: '162'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,11 @@ The [!DNL Adobe Target] [!UICONTROL 単一プロファイル更新 API] を使�
 
 The [!UICONTROL 単一プロファイル更新 API] およびは、通常、実装されていないチャネルで発生するトランザクションに関して更新が必要な場合に使用されます [!DNL Target]. 例えば、何らかのオフラインアクションを実行する 1 人の訪問者のプロファイルを更新するとします。 アクションには、コールセンターへのリーチ、ローンの資金提供、店舗内のロイヤルティカードを使用したキオスクへのアクセスなどが含まれます。
 
-## リソース:
+対比 [!UICONTROL 単一プロファイル更新 API] と [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md).
+
+## リソース
+
+詳しくは、次を参照してください。
 
 * [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
 * [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)
