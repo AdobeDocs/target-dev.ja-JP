@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target デベロッパーガイド
 breadcrumb-title: Target 開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
+source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 55%
+source-wordcount: '740'
+ht-degree: 54%
 
 ---
 
@@ -193,7 +193,10 @@ ht-degree: 55%
    + 管理 API {#admin-api}
       + [管理 API の概要](before-administer/admin-api-overview/admin-api-overview.md)
       + [Adobe Target Admin API](/help/dev/administer/admin-api/admin-api-overview-new.md)
-   + [プロファイル API](/help/dev/administer/profile-api/profile-api-overview.md)
+   + プロファイル API {#profile-apis}
+      + [プロファイル API の概要](/help/dev/administer/profile-api/profile-api-overview.md)
+      + [単一プロファイル更新 API](/help/dev/administer/profile-api/profile-single-api.md)
+      + [プロファイル一括更新 API](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [レポート API](/help/dev/administer/reporting-api/reporting-api.md)
    + Recommendations API {#recommendations-api}
       + [Recommendations API の概要](before-administer/recs-api/overview.md)

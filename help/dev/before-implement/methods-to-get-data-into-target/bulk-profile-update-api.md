@@ -4,10 +4,10 @@ description: データをに取り込む [!DNL Target] の使用 [!UICONTROL プ
 title: データをに取り込む方法 [!DNL Target] の使用 [!UICONTROL プロファイル一括更新 API]?
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
+source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 30%
+source-wordcount: '421'
+ht-degree: 23%
 
 ---
 
@@ -44,12 +44,10 @@ CRM やその他の内部システムは、常に更新しておきたい訪問�
 * バッチファイルの容量は 50 MB 未満にする必要があります。また、1 回にアップロードできる行数は 50 万行までです。
 * 通常、更新は 1 時間以内におこなわれますが、反映されるまでに 24 時間かかる場合があります。
 * 後続のバッチで 24 時間以内にアップロードできる行数に制限はありません。 ただし、他のプロセスを効率的に実行するために、営業時間中は取り込みプロセスが調整される場合があります。
-* 合間に mbox を呼び出すことなく、連続する [V2 一括更新呼び出し（](https://developers.adobetarget.com/api/#updating-profiles)`thirdPartyIds`）を同じ に対しておこなうと、最初の一括更新呼び出しで更新されたプロパティは上書きされます。
+* 同じに対する、その間に mbox を呼び出さない、連続する V2 一括更新呼び出し。 `thirdPartyIds` は、最初の一括更新呼び出しで更新されたプロパティを上書きします。
 
-## コードの例
+## リソース
 
-[プロファイルの更新](https://developers.adobetarget.com/api/#updating-profiles)を参照してください。
-
-### 関連情報へのリンク
-
-[プロファイルの更新](https://developers.adobetarget.com/api/#updating-profiles)
+* [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
+* [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)
+* [[!DNL Adobe Target Bulk Profile Update API]](/help/dev/administer/profile-api/profile-bulk-api.md)
