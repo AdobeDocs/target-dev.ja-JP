@@ -1,18 +1,18 @@
 ---
 keywords: target 開発者ガイド；概要；ホーム
-title: Adobe Target デベロッパーガイド
-description: ' [!DNL Adobe Target]  を実装および管理し、その API および SDK を操作する方法'
+title: Adobe Target Developer Guide
+description: 実装方法と管理方法 [!DNL Adobe Target] とで API や SDK を連携させることはできますか？
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: a72d3ee76b25702b186565e86ec6b0e67c9d5d1b
+source-git-commit: dadc3804da4592dba4ad88b8c5c9f804c56e232b
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 13%
+source-wordcount: '407'
+ht-degree: 5%
 
 ---
 
-# [!DNL Adobe Target] 開発者用ガイド
+# [!DNL Adobe Target] 開発者ガイド
 
 **([表示 [!DNL Target] ドキュメントの更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank})**
 
@@ -76,7 +76,7 @@ ht-degree: 13%
 
 [**[!DNL Target Admin API]**](administer/admin-api/admin-api-overview-new.md)：を使用します。 [!DNL Adobe Target] プロパティ、アクティビティ、オーディエンス、オファー、プロパティ、レポート、mbox、ホスト、環境などを管理するための管理 API。
 
-[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profile-api-overview.md)：取得 [!DNL Adobe Target] ユーザープロファイル情報。
+[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md)：取得 [!DNL Adobe Target] ユーザープロファイル情報。
 
 [**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports)：取得 [!UICONTROL A/B テスト] および [!UICONTROL Automated Personalization] アクティビティレポートデータ。
 
