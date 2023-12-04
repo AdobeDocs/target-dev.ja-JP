@@ -1,18 +1,18 @@
 ---
-user-guide-title: Adobe Target デベロッパーガイド
+user-guide-title: Adobe Target Developer Guide
 breadcrumb-title: Target 開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
+source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 54%
+source-wordcount: '744'
+ht-degree: 46%
 
 ---
 
 
-# Adobe Target デベロッパーガイド {#developer}
+# Adobe Target Developer Guide {#developer}
 
-+ [Adobe Target デベロッパーガイド](overview.md)
++ [Adobe Target Developer Guide](overview.md)
 + はじめに {#implementation}
    + 実装する前に {#before-implement}
       + [実装する前に](before-implement/considerations-before-you-implement-target.md)
@@ -36,7 +36,7 @@ ht-degree: 54%
       + [単一プロファイル更新 API](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
       + [顧客属性](before-implement/methods-to-get-data-into-target/customer-attributes.md)
       + [プロファイル API 設定](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
-   + [Target  セキュリティの概要](before-implement/target-security-overview.md)
+   + [Target のセキュリティの概要](before-implement/target-security-overview.md)
    + [サポートされているブラウザー](before-implement/supported-browsers.md)
    + [TLS（Transport Layer Security）暗号化の変更](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME と Adobe Target](before-implement/implement-cname-support-in-target.md)
@@ -154,7 +154,7 @@ ht-degree: 54%
    + Python SDK リファレンス {#python}
       + [Python SDK の概要](implement/server-side/python/overview.md)
       + [Python SDK のインストール](implement/server-side/python/install-sdk.md)
-      + [Python SDK の初期化](implement/server-side/python/initialize-sdk.md)
+      + [Python SDK を初期化する](implement/server-side/python/initialize-sdk.md)
       + [オファーの取得 (Python)](implement/server-side/python/get-offers.md)
       + [属性の取得 (Python)](implement/server-side/python/get-attributes.md)
       + [通知の送信 (Python)](implement/server-side/python/send-notifications.md)
@@ -169,7 +169,7 @@ ht-degree: 54%
    + [Location Service の使用](implement/mobile/use-location-service.md)
    + [モバイルアプリ用 Target に関する FAQ](implement/mobile/mobile-faq.md)
    + [Web ビューを使用したネイティブアプリでの AEP Mobile SDK による Target の実装](/help/dev/implement/mobile/native-app.md)
-+ メールの実装 {#implement-email}
++ 電子メールの実装 {#implement-email}
    + [電子メール：Target の実装の概要](implement/email/overview.md)
    + [画像用 adbox の作成](implement/email/testing-content-with-the-adbox.md)
    + [電子メール画像 adbox のテスト](implement/email/testing-email-image-adbox.md)
@@ -185,16 +185,18 @@ ht-degree: 54%
       + [訪問者の特定](/help/dev/before-implement/delivery-api-overview/identifying-visitors.md)
       + [単一またはバッチ配信](/help/dev/before-implement/delivery-api-overview/single-or-batch.md)
       + [プリフェッチ](/help/dev/before-implement/delivery-api-overview/prefetch.md)
-      + [ 通知 ](/help/dev/before-implement/delivery-api-overview/notifications.md)
+      + [通知](/help/dev/before-implement/delivery-api-overview/notifications.md)
       + [Experience Cloudとの統合](before-implement/delivery-api-overview/integration.md)
-      + [考慮事項と既知の制限事項](/help/dev/before-implement/delivery-api-overview/known-limitations.md)
+      + [注意点と既知の制限事項](/help/dev/before-implement/delivery-api-overview/known-limitations.md)
       + [クライアントヒント](/help/dev/before-implement/delivery-api-overview/client-hints.md)
       + [配信 API](/help/dev/implement/delivery-api/delivery-api.md)
    + 管理 API {#admin-api}
       + [管理 API の概要](before-administer/admin-api-overview/admin-api-overview.md)
       + [Adobe Target Admin API](/help/dev/administer/admin-api/admin-api-overview-new.md)
    + プロファイル API {#profile-apis}
-      + [プロファイル API の概要](/help/dev/administer/profile-api/profile-api-overview.md)
+      + [プロファイル API の概要](/help/dev/administer/profile-api/profiles-api.md)
+      + [プロファイルを取得](/help/dev/administer/profile-api/profile-fetch.md)
+      + [プロファイルを更新](/help/dev/administer/profile-api/profile-api-overview.md)
       + [単一プロファイル更新 API](/help/dev/administer/profile-api/profile-single-api.md)
       + [プロファイル一括更新 API](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [レポート API](/help/dev/administer/reporting-api/reporting-api.md)
@@ -212,10 +214,10 @@ ht-degree: 54%
 + 実装パターン {#implementation-patterns}
    + [実装パターンの概要](/help/dev/patterns/pattern-overview.md)
    + at.js を使用したRecommendations実装パターン {#atjs}
-      + [at.js を使用した Recommendations 実装パターンの概要](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [at.js を使用したRecommendations実装パターンの概要](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [SDK の初期化](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [データ収集の設定](/help/dev/patterns/recs-atjs/data-collection.md)
-      + [エクスペリエンスのレンダリング](/help/dev/patterns/recs-atjs/render-experiences.md)
+      + [エクスペリエンスをレンダリング](/help/dev/patterns/recs-atjs/render-experiences.md)
       + [ターゲットに通知](/help/dev/patterns/recs-atjs/notify-target.md)
 
 

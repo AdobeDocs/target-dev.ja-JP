@@ -1,17 +1,17 @@
 ---
-title: Adobe Target Profile API の概要
+title: プロファイルを更新
 description: Adobe Target Profile API を使用して訪問者データをに送信する方法を説明します。 [!DNL Target].
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: 1a1c3d96cf6ef5c337a63fdec8c700da695ff5d1
+source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 1%
+source-wordcount: '226'
+ht-degree: 3%
 
 ---
 
-# [!DNL Adobe Target Profile APIs overview]
+# プロファイルを更新
 
 ユーザープロファイルには、年齢、性別、購入した製品、最終訪問時刻など、Web ページ訪問者の人口統計情報と行動情報が含まれます。 [!DNL Adobe Target] は、この情報を使用して、各訪問者に提供するコンテンツをパーソナライズします。
 
