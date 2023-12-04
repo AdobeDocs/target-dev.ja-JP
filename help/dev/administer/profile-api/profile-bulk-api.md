@@ -3,10 +3,10 @@ title: Adobe Target一括プロファイル更新 API
 description: 使用方法を学ぶ [!DNL Adobe Target] [!UICONTROL プロファイル一括更新 API] 複数の訪問者のプロファイルデータを [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
+source-git-commit: 8bc819823462fae71335ac3b6c871140158638fe
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 9%
+source-wordcount: '727'
+ht-degree: 8%
 
 ---
 
@@ -54,14 +54,14 @@ batch=pcId, param1, param2, param3, param4 123, value1 124, value1,,, value4 125
 * バッチファイルの容量は 50 MB 未満にする必要があります。また、行の総数が 500,000 を超えないようにしてください。 この制限により、サーバーが多くのリクエストであふれるのを防ぐことができます。
 * 複数のファイルを送信できます。 ただし、1 日に送信するすべてのファイルの合計行数は、クライアントごとに 100 万行を超えないようにする必要があります。
 * アップロードできる属性の数に制限はありません。 ただし、システムデータを含むプロファイルの全体的なサイズは 2000 KB を超えないでください。 [!DNL Adobe] では、プロファイル属性に 1000 KB 未満のストレージを使用することをお勧めします。
-* パラメーターと値は、大文字と小文字を区別します。
+* パラメーターおよび値の大文字と小文字は区別されます。
 
 ## HTTPPOSTリクエスト
 
 に対する HTTPPOSTリクエスト [!DNL Target] エッジサーバーを使用してファイルを処理します。 curl コマンドを使用した batch.txt ファイルの HTTPPOSTリクエストの例を次に示します。
 
 ``````
-curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/v2/profile/batchUpdate
+curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
 ``````
 
 要素の説明：
