@@ -4,9 +4,9 @@ description: 使用方法 [!UICONTROL Adobe Target Delivery API]?
 keywords: 配信 api
 exl-id: 142ec3be-b017-4cdc-9079-b1cc173a710a
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,3 @@ The `clientCode` は、 [!DNL Target] に移動して UI を表示 **[!UICONTROL
 1. の作成 [!DNL Target] アクティビティ (A/B、XT、AP またはRecommendations) [フォームベースのコンポーザー](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) または [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
 1. 配信 API を使用して、 [!DNL Target] 手順 2 で作成したアクティビティ。
 1. 訪問者にエクスペリエンスを提示します。
-
-## Postman Collection {#postman}
-
-Postmanは、API 呼び出しを簡単に実行できるアプリケーションです。 [このPostmanコレクション](https://run.pstmn.io/button.svg) には、サンプル配信 API 呼び出しが含まれています。

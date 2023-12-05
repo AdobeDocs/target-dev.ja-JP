@@ -3,7 +3,7 @@ title: プロファイルを取得
 description: Adobe Target Profile API を使用して、で使用する訪問者データを取得する方法を説明します。 [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 1%
@@ -39,13 +39,13 @@ http://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?
 次の例は、 `thirdPartyId`:
 
 ```
-https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
 置換 `<your-client-code>` および `your-thirdpartyid` およびは、GETリクエストを実行します。 次に、を使用したプロファイル取得呼び出しの例を示します。 [!UICONTROL thirdpartyid]:
 
 ```
-http://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
 ```
 
 この呼び出しがおこなわれると、 [!DNL Target] は、エッジリクエストで指定されたクラスター内の最初のプロファイルを探すか、プロファイルが配置されている場所にプロファイルを配置して、コンテンツを返します。 プロファイルコンテンツは JSON 形式で返されます。
