@@ -3,10 +3,10 @@ title: Adobe Target一括プロファイル更新 API
 description: 使用方法を学ぶ [!DNL Adobe Target] [!UICONTROL プロファイル一括更新 API] 複数の訪問者のプロファイルデータを [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: b263fef6017dc6f840037cab9045c36b9e354cee
+source-git-commit: 38a5e82d3170fa64220bd63f505f1470af43e8a3
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 9%
+source-wordcount: '824'
+ht-degree: 8%
 
 ---
 
@@ -35,6 +35,7 @@ The [!DNL Adobe Target] [!UICONTROL プロファイル一括更新 API] バッ�
 * バッチファイルの容量は 50 MB 未満にする必要があります。また、1 回にアップロードできる行数は 50 万行までです。
 * 後続のバッチで 24 時間以内にアップロードできる行数に制限はありません。 ただし、他のプロセスを効率的に実行するために、営業時間中は取り込みプロセスが調整される場合があります。
 * 同じ thirdPartyIds に対して、間に mbox を呼び出すことなく、連続する v2 一括更新呼び出しを実行すると、最初の一括更新呼び出しで更新されたプロパティは上書きされます。
+* [!DNL Adobe] では、バッチプロファイルデータの 100%が Target でオンボーディングされて保持され、ターゲティングで使用できるとは限りません。 現在の設計では、データのごく一部（大規模な実稼動バッチの 0.1%まで）がオンボーディングまたは保持されない可能性があります。
 
 ## バッチファイル
 
