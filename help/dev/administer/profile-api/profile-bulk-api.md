@@ -3,10 +3,10 @@ title: Adobe Target一括プロファイル更新 API
 description: 使用方法を学ぶ [!DNL Adobe Target] [!UICONTROL プロファイル一括更新 API] 複数の訪問者のプロファイルデータを [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 8bc819823462fae71335ac3b6c871140158638fe
+source-git-commit: b263fef6017dc6f840037cab9045c36b9e354cee
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 8%
+source-wordcount: '773'
+ht-degree: 9%
 
 ---
 
@@ -72,27 +72,58 @@ BATCH.TXT はファイル名です。 CLIENTCODE は [!DNL Target] クライア�
 
 ### Inspect応答
 
-v2 はプロファイルごとのステータスを返し、v1 は全体のステータスのみを返します。 応答には、プロファイル別成功メッセージを持つ別の URL へのリンクが含まれます。
+プロファイル API は、処理するバッチの送信ステータスと、特定のバッチジョブの全体的なステータスを示す別の URL への「batchStatus」の下のリンクを返します。
 
-### 応答の例
+### API 応答の例
+
+次のコードスニップは、Profiles API 応答の例です。
 
 ```
-true http://mboxedge19.tt.omtrdc.net/m2/demo/v2/profile/batchStatus?batchId=demo-1845664501&m2Node=00 Batch submitted for processing
+<response>
+    <success>true</success>
+    <batchStatus>http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473848678-13029383</batchStatus>
+    <message>Batch submitted for processing</message>
+</response>
 ```
 
 エラーが発生した場合、応答には次の情報が含まれます。 `success=false` とエラーの詳細なメッセージ。
 
-成功した応答は次のようになります。
+### デフォルトのバッチステータス応答
 
-``````
-demo-1845664501 1436187396849-250353.03_03 success 2403081156529-351655.03_03 success 2403081156529-351656.03_03 success 1436187396849-250351.01_00 success 
-``````
+上記の `batchStatus` URL リンクがクリックされると、次のようになります。
+
+```
+<response><batchId>demo4-1701473848678-13029383</batchId><status>complete</status><batchSize>1</batchSize></response>
+```
 
 ステータスフィールドに期待される値は次のとおりです。
 
-**成功**：プロファイルが更新されました。 プロファイルが見つからなかった場合は、バッチの値を使用して作成されます。
-**エラー**：失敗、例外、メッセージが失われたので、プロファイルは更新も作成もされませんでした。
-**保留中**：プロファイルはまだ更新も作成もされていません。
+| ステータス | 詳細 |
+| --- | --- |
+| [!UICONTROL complete] | プロファイルの一括更新要求が正常に完了しました。 |
+| [!UICONTROL 不完全] | プロファイルのバッチ更新リクエストは、まだ処理中で、完了していません。 |
+| [!UICONTROL 詰まった] | プロファイルのバッチ更新リクエストが停止しており、完了できませんでした。 |
 
+### 詳細なバッチステータス URL 応答
 
+より詳細な応答は、パラメーターを渡すことで取得できます `showDetails=true` から `batchStatus` url を上に置きます。
 
+次に例を示します。
+
+```
+http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473848678-13029383&showDetails=true
+```
+
+#### 詳細な応答
+
+```
+<response>
+    <batchId>demo4-1701473848678-13029383</batchId>
+    <status>complete</status>
+    <batchSize>1</batchSize>
+    <consumedCount>1</consumedCount>
+    <successfulUpdates>1</successfulUpdates>
+    <profilesNotFound>0</profilesNotFound>
+    <failedUpdates>0</failedUpdates>
+</response>
+```
