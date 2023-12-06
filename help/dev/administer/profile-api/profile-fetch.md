@@ -3,16 +3,28 @@ title: プロファイルを取得
 description: Adobe Target Profile API を使用して、で使用する訪問者データを取得する方法を説明します。 [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: ee53a8f0210480d9b70dc77a3a5cd8d92d2f2e3d
+source-git-commit: 49acf92bbe06dbcee36fef2b7394acd7ce37baad
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '293'
 ht-degree: 1%
 
 ---
 
 # プロファイルを更新
 
-A [!DNL Target] プロファイルは、次の 2 つの方法で取得できます。 `tntid` または `thirdPartyId`.
+A [!DNL Target] プロファイルは、次の 3 つの方法で取得できます。 `[!DNL Experience Cloud Visitor ID]` (`ECID`), `tntid` または `thirdPartyId`.
+
+## の使用 [!DNL Experience Cloud Visitor ID] (ECID)
+
+に基づいてプロファイルを取得できます `ECID`. HTTP メソッドはGETです。
+
+URL は、次の例のようになります。
+
+```
+https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
+```
+
+置換 `<clientCode>` を [!DNL Target] [!UICONTROL クライアントコード] および `<ECID>` を [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID]) をクリックします。
 
 ## tntid の使用
 
@@ -24,7 +36,7 @@ A [!DNL Target] プロファイルは、次の 2 つの方法で取得できま�
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/your-tnt-id?client=<your-client-code>
 ```
 
-置換 `<your-client-code>` および `your-tnt-id` およびは、GETリクエストを実行します。 次に、を使用したプロファイル取得呼び出しの例を示します。 `tntid`;
+置換 `<your-client-code>` および `your-tnt-id` およびは、GETリクエストを実行します。 次に、を使用したプロファイル取得呼び出しの例を示します。 `tntid`:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?client=<your-client-code>
