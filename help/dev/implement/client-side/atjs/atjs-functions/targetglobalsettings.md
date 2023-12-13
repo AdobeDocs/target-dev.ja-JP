@@ -4,10 +4,10 @@ description: 以下を使用します。 [!UICONTROL targetGlobalSettings()] 関
 title: 使用方法 [!UICONTROL targetGlobalSettings()] 機能？
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
-source-git-commit: d5d25c6a559dafe446d26cca6c03d8e693cbd508
+source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
 workflow-type: tm+mt
-source-wordcount: '2521'
-ht-degree: 68%
+source-wordcount: '2568'
+ht-degree: 58%
 
 ---
 
@@ -18,6 +18,18 @@ at.js ライブラリの設定は、 `[!UICONTROL targetGlobalSettings()]`を設
 ## 設定
 
 次の設定を上書きできます。
+
+### aepSandboxId
+
+* **型**：String
+* **デフォルト値**: null
+* **説明**：送信に使用されるオプションのパラメーター [!DNL Adobe Experience Platform] 共有するサンドボックス ID [!DNL Adobe Experience Platform] を使用してデフォルト以外のサンドボックスで作成された宛先 [!DNL Target]. 次の場合 `aepSandboxId` が null 以外の場合、 `aepSandboxName` また、を指定する必要があります。
+
+### aepSandboxName
+
+* **型**：String
+* **デフォルト値**: null
+* **説明**：送信に使用されるオプションのパラメーター [!DNL Adobe Experience Platform] 共有するサンドボックス名 [!DNL Adobe Experience Platform] を使用してデフォルト以外のサンドボックスで作成された宛先 [!DNL Target]. 次の場合 `aepSandboxName` が null 以外の場合、 `aepSandboxId` また、を指定する必要があります。
 
 ### artifactLocation
 
@@ -88,13 +100,13 @@ at.js ライブラリの設定は、 `[!UICONTROL targetGlobalSettings()]`を設
 
   **サーバー側のみ**：
 
-  at.js 2.5 以降が実装され web プロパティにデプロイされる場合に標準で設定されているデフォルトの判定方法はサーバー側のみです。
+  at.js 2.5 以降が実装され Web プロパティにデプロイされている場合、サーバー側のみが初期設定で設定されるデフォルトの判定方法です。
 
-  サーバー側のみ をデフォルト設定として使用すると、すべての決定は [!DNL Target] エッジネットワーク上で行われます。これにはブロッキングサーバーコールが必要になります。このアプローチは、徐々に遅延を引き起こす可能性がありますが、適用する機能を提供するなど、大きなメリットも提供します [!DNL Target]を含むの機械学習機能 [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) および [自動ターゲット](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) アクティビティ。
+  サーバーサイドのみをデフォルトの設定として使用する場合、 [!DNL Target] エッジネットワーク。ブロックサーバー呼び出しが含まれます。 このアプローチは、徐々に遅延を引き起こす可能性がありますが、適用する機能を提供するなど、大きなメリットも提供します [!DNL Target]を含むの機械学習機能 [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) および [自動ターゲット](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) アクティビティ。
 
   さらに、 [!DNL Target]のユーザープロファイルは、セッションやチャネルをまたいで保持され、ビジネスに強力な成果をもたらすことができます。
 
-  最後に、サーバー側のみ では、Adobe Experience Cloud を使用して、Audience Manager セグメントや Adobe Analytics セグメントを介してターゲティングできるオーディエンスを微調整できます。
+  最後に、サーバーサイドでは、Adobe Experience Cloudを使用し、Audience ManagerおよびAdobe Analyticsセグメントを通じてターゲットに設定できるオーディエンスを微調整することのみできます。
 
   **オンデバイスのみ**：
 
@@ -110,7 +122,7 @@ at.js ライブラリの設定は、 `[!UICONTROL targetGlobalSettings()]`を設
 
   ハイブリッドは、オンデバイス判定と、 [!DNL Adobe Target] Edge ネットワークを実行する必要があります。
 
-  オンデバイス判定アクティビティとサーバー側アクティビティの両方を管理している場合は、ページに [!DNL Target] をデプロイしてプロビジョニングする方法を考える際に、少し複雑で面倒な場合があります。ハイブリッド判定方法では、サーバー側実行が必要なアクティビティについて エッジネットワークに対してサーバーコールを行う必要がある場合と、オンデバイス判定のみを実行する必要がある場合を [!DNL Target] が把握しています。[!DNL Adobe Target]
+  オンデバイス判定アクティビティとサーバー側アクティビティの両方を管理している場合は、ページに [!DNL Target] をデプロイしてプロビジョニングする方法を考える際に、少し複雑で面倒な場合があります。判定方法としてハイブリッドを使用する場合、 [!DNL Target] は、 [!DNL Adobe Target] サーバー側での実行を必要とするアクティビティと、デバイス上での決定のみを実行する必要がある場合に備えた Edge ネットワーク。
 
   JSON ルールアーティファクトには、mbox がサーバー側アクティビティを実行しているか、オンデバイス判定アクティビティを実行しているかを at.js に通知するメタデータが含まれています。この判定方法では、迅速に配信するアクティビティをオンデバイス判定を通じて確実におこない、より強力な ML 駆動型パーソナライゼーションを必要とするアクティビティでは、 [!DNL Adobe Target] Edge ネットワーク。
 
@@ -166,7 +178,7 @@ at.js ライブラリの設定は、 `[!UICONTROL targetGlobalSettings()]`を設
 
 * **タイプ**：ブール値
 * **デフォルト値**：false
-* **説明**[!DNL Target]： が訪問者 API の `isOptedOut()` 関数を呼び出す必要があるかどうかを示します。これは、デバイスグラフ有効化の一部です。
+* **説明**：が [!DNL Target] 訪問者 API を呼び出す必要がある `isOptedOut()` 関数に置き換えます。 これは、デバイスグラフ有効化の一部です。
 
 ### overrideMboxEdgeServer
 
@@ -214,7 +226,7 @@ at.js ライブラリの設定は、 `[!UICONTROL targetGlobalSettings()]`を設
 
 * **型**：String
 * **デフォルト値**：UI で設定された値。
-* **説明**[!DNL Target]： エッジサーバーを表します。
+* **説明**：を表します [!DNL Target] エッジサーバー。
 
 ### serverState
 
@@ -284,7 +296,7 @@ window.targetGlobalSettings = {
 | name | 文字列 | プロバイダーの名前。 |
 | version | 文字列 | プロバイダーのバージョン。このキーはプロバイダーの展開に使用されます。 |
 | timeout | 数値 | ネットワークリクエストの場合は、プロバイダーのタイムアウトを表します。このキーはオプションです。 |
-| provider | 関数 | プロバイダーデータの取得ロジックを含む関数。<p>この関数の必須パラメーターは `callback` のみです。この callback パラメーターは、データを適切に取得した場合またはエラーが発生した場合にのみ呼び出す必要があります。<p>このコールバックは、次の 2 つのパラメーターを受け取ります。<ul><li>error：エラーの有無を表します。エラーがない場合、このパラメーターは null に設定されます。</li><li>params: JSON オブジェクト。 [!DNL Target] リクエスト。</li></ul> |
+| provider | 関数 | プロバイダーデータの取得ロジックを含む関数。<p>この関数の必須パラメーターは 1 つだけです。 `callback`. この callback パラメーターは、データを適切に取得した場合またはエラーが発生した場合にのみ呼び出す必要があります。<p>このコールバックは、次の 2 つのパラメーターを受け取ります。<ul><li>error：エラーの有無を表します。エラーがない場合、このパラメーターは null に設定されます。</li><li>params: JSON オブジェクト。 [!DNL Target] リクエスト。</li></ul> |
 
 データプロバイダーで同期実行を使用する場合の例は次のとおりです。
 
@@ -398,11 +410,11 @@ window.targetGlobalSettings = {
 ...
 ```
 
-`cspScriptNonce` と `cspStyleNonce` の設定を指定した後、at.js 2.3.0 以降では、 オファーの適用時に DOM に追加するすべての SCRIPT タグと STYLE タグに対して、これらを Nonce 属性に設定します。[!DNL Target]
+後 `cspScriptNonce` および `cspStyleNonce` 設定が指定されている場合、at.js 2.3.0 以降は、適用時に DOM に追加されるすべての SCRIPT タグと STYLE タグに対して、これらを nonce 属性として設定します [!DNL Target] オファー。
 
 ## ハイブリッドパーソナライゼーション
 
-`serverState`[!DNL Target] は at.js v2.2 以降で使用できる設定です。 のハイブリッド統合が実装されている場合に、ページのパフォーマンスを最適化するために使用できます。ハイブリッド統合とは、クライアント側で at.js v2.2 以降と Delivery API または [!DNL Target] エクスペリエンスを配信するためのサーバー側の SDK。 `serverState` には、at.js v2.2 以降で、サーバーサイドで取得したコンテンツからエクスペリエンスを直接適用し、提供されるページの一部としてクライアントに返す機能が備わっています。
+`serverState` は、at.js v2.2 以降で使用可能な設定で、 [!DNL Target] が実装されている。 ハイブリッド統合とは、クライアント側で at.js v2.2 以降と Delivery API または [!DNL Target] エクスペリエンスを配信するためのサーバー側の SDK。 `serverState` には、at.js v2.2 以降で、サーバーサイドで取得したコンテンツからエクスペリエンスを直接適用し、提供されるページの一部としてクライアントに返す機能が備わっています。
 
 ### 前提条件
 
@@ -529,9 +541,9 @@ const PAGE_TEMPLATE = `
 
    * **注意**：現在、サーバー側で取得された mbox は、`serverState` ではサポートされていません。
 
-* `serverState` オファーを適用する場合、at.js では `pageLoadEnabled` と `viewsEnabled` の設定を考慮します。例えば、`pageLoadEnabled` 設定が false の場合、ページ読み込みオファーは適用されません。
+* 適用時 `serverState` オファー， at.js は考慮 `pageLoadEnabled` および `viewsEnabled` 設定（ページ読み込みオファーなど）は、 `pageLoadEnabled` の設定が false の場合、
 
-  これらの設定をオンにするには、**管理／実装／編集／ページ読み込みが有効**&#x200B;で有効に切り替えます。
+  これらの設定をオンにするには、 **管理/実装/編集/ページ読み込みが有効になっています。**.
 
   ![「ページ読み込みが有効」設定](../../assets/page-load-enabled-setting.png)
 
