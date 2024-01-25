@@ -1,13 +1,13 @@
 ---
 keywords: at.js faq, at.js に関するよくある質問, faq, ちらつき, ローダー, ページローダー, クロスドメイン, ファイルサイズ, ファイルのサイズ, x-domain, at.js と mbox.js, x のみ, クロスドメイン, safari, シングルページアプリ, セレクターが見つかりません, セレクター, シングルページアプリケーション, tt.omtrdc.net, spa, Adobe Experience Manager, AEM, ip アドレス, httponly, HttpOnly, Secure, ip, cookie ドメイン
-description: '  [!DNL Adobe Target]  at.js JavaScript ライブラリに関するよくある質問への回答を紹介します。'
+description: に関するよくある質問への回答を読む [!DNL Adobe Target] at.js JavaScript ライブラリ。
 title: at.js に関するよくある質問と回答
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 448c43c0c10e22ad054f4ee98bfc282f8c96cdcb
 workflow-type: tm+mt
-source-wordcount: '2897'
-ht-degree: 74%
+source-wordcount: '2938'
+ht-degree: 66%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 74%
 
 ## mbox.js と比較して at.js を使用するメリットは何ですか。
 
-at.js ライブラリは mbox.js に代わるものです。 mbox.js ライブラリのサポートは終了しました。 ほとんどのユーザーにとって、at.js は mbox.js よりもメリットがあります。
+at.js ライブラリは mbox.js に代わるものです。 mbox.js ライブラリのサポートは終了しました。 ただし、ほとんどのユーザーにとって、at.js は mbox.js よりもメリットがあります。
 
-at.js のメリットの例として、Web 実装のページ読み込み時間の改善、セキュリティの強化、シングルページアプリケーション向けのより優れた実装オプションの提供があげられます。
+多くのメリットがある中でも、at.js は、Web 実装のページ読み込み時間を強化し、セキュリティを強化して、シングルページアプリケーション向けのより優れた実装オプションを提供します。
 
 次の図は、mbox.js と at.js を使用した場合のページ読み込みパフォーマンスを示しています。
 
@@ -31,7 +31,7 @@ at.js のメリットの例として、Web 実装のページ読み込み時間�
 
 ## at.js および mbox.js はページ読み込み時間にどのように影響しますか？
 
-特に新しいユーザーとリピートユーザーのコンテキストにおいて at.js と mbox.js がページ読み込み時間に与える影響を知りたいと考えているお客様やコンサルタントは数多くいます。残念ながら、at.js または mbox.js が各ページの読み込み時間にどのように影響するかはお客様の実装に左右されるので、具体的な数値を測定して示すことは困難です。
+特に新しいユーザーと再訪問者のコンテキストにおいて at.js と mbox.js がページ読み込み時間に与える影響を知りたいと考えているお客様やコンサルタントは数多くいます。 残念ながら、at.js または mbox.js が各ページの読み込み時間にどのように影響するかはお客様の実装によって測定し、具体的な数値を示すのは困難です。
 
 ただし、訪問者 API がページに存在する場合、 [!DNL Target] at.js と mbox.js がページ読み込み時間にどのように影響するかをより深く理解できます。
 
@@ -69,9 +69,9 @@ at.js のメリットの例として、Web 実装のページ読み込み時間�
 
 ## at.js を旧バージョンから 1.0.0 にアップグレードした後、応答時間が長くなったように感じるのはなぜですか。
 
-at.js バージョン 1.0.0 以降では、すべてのリクエストが同時並行で実行されます。以前のバージョンではリクエストが順番に実行されます。つまり、リクエストがキューに入り、[!DNL Target] は、最初のリクエストの処理が完了するまで待ってから次のリクエストに移ります。
+at.js バージョン 1.0.0 以降では、すべてのリクエストが同時並行で実行されます。 以前のバージョンではリクエストが順番に実行されます。つまり、リクエストがキューに入り、[!DNL Target] は、最初のリクエストの処理が完了するまで待ってから次のリクエストに移ります。
 
-この at.js の旧バージョンでのリクエストの実行方法では、いわゆる「ヘッドオブラインブロッキング」の問題が生じやすくなります。at.js 1.0.0 以降では、 [!DNL Target] を並列リクエストの実行に切り替えました。
+この at.js の旧バージョンでのリクエストの実行方法では、いわゆる「ヘッドオブラインブロッキング」の問題が生じやすくなります。 at.js 1.0.0 以降では、 [!DNL Target] を並列リクエストの実行に切り替えました。
 
 at.js 0.9.1 で「ネットワーク」タブのウォーターフォールをチェックすると、次に表示されます。 [!DNL Target] リクエストは、前のリクエストが完了するまで開始されません。 このシーケンスは、at.js 1.0.0 以降では、基本的にすべてのリクエストが同時に開始される場合とは異なります。
 
@@ -118,11 +118,11 @@ at.js を非同期で読み込む方法は、ブラウザーによるレンダ�
 
 ## at.js は [!DNL Adobe Experience Manager] 統合（Experience Manager）と互換性がありますか？
 
-[!DNL Adobe Experience Manager] 6.2 と FP-11577（またはそれ以降）で、at.js 実装とその [!UICONTROL Adobe Target Cloud Services] 統合をサポートします。
+[!DNL Adobe Experience Manager] 6.2 と FP-11577（またはそれ以降）で、at.js 実装とその [!UICONTROL Adobe TargetCloud Service] 統合とも呼ばれます。
 
 ## どうしたら at.js を使用してページ読み込み時のちらつきを回避できますか？
 
-[!DNL Target] には、ページ読み込み時のちらつきを回避する方法がいくつか用意されています。詳しくは、 [at.js によるちらつきの回避](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
+[!DNL Target] には、ページ読み込み時のちらつきを回避する方法がいくつか用意されています。 詳しくは、 [at.js によるちらつきの回避](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
 
 ## at.js のファイルサイズはどれくらいですか？
 
@@ -130,7 +130,7 @@ at.js ファイルはダウンロード時には約 109 KB あります。ただ
 
 ## at.js が mbox.js よりも大きいのはなぜですか？
 
-at.js 実装が単一のライブラリ（at.js）を使用するのに対して、mbox.js 実装は、実際には 2 つのライブラリ（mbox.js および target.js）を使用します。そのため、より公平な比較は、at.js 対 mbox.js *および* `target.js` になります。2 つのバージョンの gzip 圧縮サイズを比較すると、at.js バージョン 1.2 は 34 KB で、mbox.js バージョン 63 は 26.2 KB です。
+at.js 実装が単一のライブラリ ( at.js) を使用するのに対して、mbox.js 実装は、実際には 2 つのライブラリ（ mbox.js と target.js）を使用します。 そのため、より公平な比較は、at.js 対 mbox.js *および* `target.js` になります。2 つのバージョンの gzip 圧縮サイズを比較すると、at.js バージョン 1.2 は 34 KB で、mbox.js バージョン 63 は 26.2 KB です。
 
 at.js がより大きいのは、mbox.js に比べて、より多くの DOM 解析をおこなうためです。at.js は JSON 応答で「生」データを取得し、その意味を理解する必要があるので、これが必要です。mbox.js では `document.write()` を使用し、すべての解析はブラウザーによって行われます。
 
@@ -162,7 +162,7 @@ Safari 訪問者をサポートするために、より優れた X-Domain は「
 
 [!DNL Target] のお客様は、[!DNL Target] でクラウドベースのインスタンスを使用してテストをおこなったり、簡単な概念実証に利用したりする場合があります。これらのドメインは、他の多くのドメインと同様に[パブリックサフィックスリスト](https://publicsuffix.org/list/public_suffix_list.dat)に含まれています。
 
-これらのドメインを使用する場合は、targetGlobalSettings() を使用して `cookieDomain` 設定をカスタマイズしない限り、最新のブラウザーでは Cookie が保存されません。詳しくは、「[ でのクラウドベースのインスタンスの使用 [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)」を参照してください。
+これらのドメインを使用する場合は、targetGlobalSettings() を使用して `cookieDomain` 設定をカスタマイズしない限り、最新のブラウザーでは Cookie が保存されません。詳しくは、 [でのクラウドベースのインスタンスの使用 [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md).
 
 ## at.js を使用する際に、IP アドレスを Cookie ドメインとして使用することはできますか。
 
@@ -203,7 +203,7 @@ if (/^123\.456\.78\..*/g.test(window.location.hostname)) {
 * ページが動的に作成されており、at.js が要素を見つけられない。
 * （ネットワークが低速なので）ページの作成に時間がかかり、at.js が DOM でセレクターを見つけられない。
 * アクティビティが実行されているページの構造が変更されている。Visual Experience Composer（VEC）でアクティビティを再度開くと、警告メッセージが表示されます。アクティビティを更新して、必要な要素がすべて見つかるようにします。
-* 基になるページがシングルページアプリケーション（SPA）の一部であるか、ページの下部に表示される要素がページに含まれていて、at.js の「セレクターポーリングメカニズム」がこれらの要素を見つけることができない。`selectorsPollingTimeout` の値を増やすと問題が解決する場合があります。詳しくは、[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) を参照してください。
+* 基になるページがシングルページアプリケーション (SPA) の一部であるか、ページの下部に表示される要素がページに含まれていて、at.js の「セレクターポーリングメカニズム」がこれらの要素を見つけられない。 `selectorsPollingTimeout` の値を増やすと問題が解決する場合があります。詳しくは、[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) を参照してください。
 * いずれかのクリック追跡指標が、その指標が設定された URL に関係なく、それ自体をすべてのページに追加しようとしている。害はありませんが、この状況ではこれらのメッセージの多くが表示されます。
 
   最も良い結果を得るには、 [at.js の最新バージョン](/help/dev/implement/client-side/atjs/target-atjs-versions.md). at.js のダウンロード方法について詳しくは、 [を使用して at.js をダウンロードします。 [!DNL Target] インターフェイス](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) セクション内 [*at.js のデプロイ方法* > *実装方法 [!DNL Target] タグマネージャーなし*](how-to-deployatjs/implement-target-without-a-tag-manager.md) 記事。
@@ -297,3 +297,7 @@ a.js には HTML5 の doctype が必要です。
 `<!DOCTYPE html>`
 
 HTML5 の doctype を使用すると、ページが標準モードで読み込まれます。互換モードでロードする場合、at.js が依存する一部の JS API は無効になります。[!DNL Target]は、互換モードで at.js を無効にします。
+
+## at.js は Ionic アプリケーション環境で動作しますか。
+
+at.js は Web 以外の環境で機能することを意図していなかったので、この実装はテストされませんでした。 [!DNL Adobe] は、を推奨します。 [モバイル実装用 SDK](/help/dev/implement/mobile/overview.md).
