@@ -3,9 +3,9 @@ title: オンデバイス判定のトラブルシューティング
 description: トラブルシューティング方法を説明します [!UICONTROL オンデバイス判定]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 
 ## 3. [!UICONTROL オンデバイス判定] *ルールアーティファクト* は、定義されたポーリング間隔に従って取得され、キャッシュされています。
 
-1. ポーリング間隔の時間（デフォルトは 5 分）を待ち、アーティファクトが SDK によって取得されることを確認します。 同じ端末ログが出力されます。
+1. ポーリング間隔の時間（デフォルトは 20 分）を待ち、アーティファクトが SDK によって取得されることを確認します。 同じ端末ログが出力されます。
 
    さらに、[!DNL Target]トレースは、ルールアーティファクトに関する詳細と共にターミナルに出力する必要があります。
 
