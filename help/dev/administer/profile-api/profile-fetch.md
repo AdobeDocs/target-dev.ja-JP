@@ -3,14 +3,15 @@ title: プロファイルを取得
 description: Adobe Target Profile API を使用して、で使用する訪問者データを取得する方法を説明します。 [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: 49acf92bbe06dbcee36fef2b7394acd7ce37baad
+exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
+source-git-commit: b8ccfdcaff6aa17a325727df0a9ffd716e44519b
 workflow-type: tm+mt
 source-wordcount: '293'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# プロファイルを更新
+# プロファイルを取得
 
 A [!DNL Target] プロファイルは、次の 3 つの方法で取得できます。 `[!DNL Experience Cloud Visitor ID]` (`ECID`), `tntid` または `thirdPartyId`.
 
