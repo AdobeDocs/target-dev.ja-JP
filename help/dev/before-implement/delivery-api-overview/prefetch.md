@@ -4,9 +4,9 @@ description: でのプリフェッチの使用方法 [!UICONTROL Adobe Target De
 keywords: 配信 api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
+source-git-commit: 803723d95d50cc39101d1646232446fbb0254385
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -126,7 +126,7 @@ curl -X POST \
 
 [[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) は、 [!DNL Analytics] コンバージョン指標およびオーディエンスセグメント。
 
-以下のコードスニペットを使用して、を含む mbox をプリフェッチできます。 `clickTrack` 通知する指標 [!DNL Analytics] オファーがクリックされたことを示します。
+次のコードスニペットは、を含むプリフェッチ mbox からの応答です。 `clickTrack` 通知する指標 [!DNL Analytics] オファーがクリックされたことを示します。
 
 ```
 {
