@@ -4,9 +4,9 @@ description: でのプリフェッチの使用方法 [!UICONTROL Adobe Target De
 keywords: 配信 api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,51 @@ curl -X POST \
 ```
 
 応答内に、 `content` 特定ののユーザーに表示するエクスペリエンスを含むフィールド `mbox`. これは、ユーザーがセッション内で Web またはモバイルアプリケーションを操作し、 `mbox` アプリケーションの特定のページでは、別のページを作成する代わりに、エクスペリエンスをキャッシュから配信できます [!UICONTROL Adobe Target Delivery API] を呼び出します。 ただし、 `mbox`, a `notification` は、インプレッションのログが記録されるように、Delivery API 呼び出しを介して送信されます。 これは、 `prefetch` の呼び出しがキャッシュされます。つまり、ユーザーは、 `prefetch` 呼び出しが発生します。 詳しくは、 `notification` プロセス、を参照してください。 [通知](notifications.md).
+
+## 使用時に clickTrack 指標を使用して mbox をプリフェッチ [!UICONTROL Analytics for Target] (A4T)
+
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) は、 [!DNL Analytics] コンバージョン指標およびオーディエンスセグメント。
+
+以下のコードスニペットを使用して、を含む mbox をプリフェッチできます。 `clickTrack` 通知する指標 [!DNL Analytics] オファーがクリックされたことを示します。
+
+```
+{
+  "prefetch": {
+    "mboxes": [
+      {
+        "index": 0,
+        "name": "<mboxName>",
+        "options": [
+           ...
+        ],
+        "metrics": [
+          {
+            "type": "click",
+            "eventToken": "<eventToken>",
+             "analytics": {
+               "payload": {
+                 "pe": "tnt",
+                 "tnta": "..."
+               }
+             }
+          },
+          }
+        ],
+        "analytics": {
+          "payload": {
+            "pe": "tnt",
+            "tnta": "347565:1:0|2,347565:1:0|1"
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+>[!NOTE]
+>
+>mbox のプリフェッチには、 [!DNL Analytics] 認定されたアクティビティのみのペイロード。 まだ認定されていないアクティビティの成功指標をプリフェッチすると、レポートの不整合が生じます。
 
 ## プリフェッチビュー数
 
