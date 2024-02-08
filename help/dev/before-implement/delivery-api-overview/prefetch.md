@@ -4,9 +4,9 @@ description: でのプリフェッチの使用方法 [!UICONTROL Adobe Target De
 keywords: 配信 api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
+source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 モバイルアプリやサーバーなどのクライアントは、1 回のセッション内で特定の訪問者に対して複数の mbox をプリフェッチし、それらをキャッシュすることで、 [!UICONTROL Adobe Target Delivery API].
 
-```
+```shell shell-session
 curl -X POST \
 'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=7abf6304b2714215b1fd39a870f01afc#1555632114' \
 -H 'Content-Type: application/json' \
@@ -71,7 +71,7 @@ curl -X POST \
 
 内 `prefetch` フィールドに、1 つ以上の `mboxes` 1 つのセッション内の訪問者に対して少なくとも 1 回プリフェッチする必要がある場合。 プリフェッチ後 `mboxes`に設定すると、次の応答を受け取ります。
 
-```
+```JSON {line-numbers="true"}
 {
     "status": 200,
     "requestId": "5efee0d8-3779-4b12-a74e-e04848faf191",
@@ -128,7 +128,7 @@ curl -X POST \
 
 次のコードスニペットは、を含む mbox のプリフェッチからの応答です。 `clickTrack` 通知する指標 [!DNL Analytics] オファーがクリックされたことを示します。
 
-```
+```JSON {line-numbers="true"}
 {
   "prefetch": {
     "mboxes": [
@@ -169,9 +169,9 @@ curl -X POST \
 
 ## プリフェッチビュー数
 
-ビューは、シングルページアプリケーション (SPA) とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、ビジュアル要素の論理的なグループと見なすことができ、まとめてSPAまたは Mobile エクスペリエンスを構成します。 これで、VEC は Delivery API を通じて AB および XT アクティビティを作成し、 [SPAの表示](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) これで、をプリフェッチできるようになりました。
+ビューは、シングルページアプリケーション (SPA) とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、ビジュアル要素の論理的なグループと見なすことができ、まとめてSPAまたは Mobile エクスペリエンスを構成します。 今回は、VEC が作成した Delivery API を通じて、 [[!UICONTROL A/B テスト]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} and [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X) 変更を加えた T 活動 [SPAの表示](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) これで、をプリフェッチできるようになりました。
 
-```
+```shell  {line-numbers="true"}
 curl -X POST \
   'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=a3e7368c62d944c0855d424cd7a03ab0' \
   -H 'Content-Type: application/json' \
@@ -199,9 +199,9 @@ curl -X POST \
 }'
 ```
 
-上記の呼び出し例では、Web 用に表示する AB および XT アクティビティ用にSPA VEC で作成されたすべてのビューをプリフェッチします `channel`. 呼び出しでは、訪問者が持つ AB または XT アクティビティからすべてのビューをプリフェッチすることに注意してください。 `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` 誰が訪問しているか `url`:`https://target.enablementadobe.com/react/demo/#/` 資格を満たしている。
+上記の呼び出しの例では、SPA VEC で作成されたすべてのビューを事前取得し、 [!UICONTROL A/B テスト] および Web 用に表示する XT アクティビティ `channel`. この呼び出しは、 [!UICONTROL A/B テスト] または訪問者が `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` 誰が訪問しているか `url`:`https://target.enablementadobe.com/react/demo/#/` 資格を満たしている。
 
-```
+```JSON  {line-numbers="true"}
 {
     "status": 200,
     "requestId": "14ce028e-d2d2-4504-b3da-32740fa8dd61",
@@ -280,4 +280,4 @@ curl -X POST \
 }
 ```
 
-Adobe Analytics の `content` 応答のフィールドには、次のようなメタデータをメモします。 `type`, `selector`, `cssSelector`、および `content`：ユーザーがページを訪問したときに、エクスペリエンスをエンドユーザーにレンダリングするために使用します。 なお、 `prefetched` コンテンツは、必要に応じてキャッシュし、ユーザーにレンダリングできます。
+Adobe Analytics の `content` 応答のフィールドには、次のようなメタデータをメモします。 `type`, `selector`, `cssSelector`、および `content`：ユーザーがページを訪問したときに、エクスペリエンスを訪問者にレンダリングするために使用します。 なお、 `prefetched` コンテンツは、必要に応じてキャッシュし、ユーザーにレンダリングできます。
