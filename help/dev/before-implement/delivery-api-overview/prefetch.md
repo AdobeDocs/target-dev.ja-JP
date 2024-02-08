@@ -4,28 +4,28 @@ description: でのプリフェッチの使用方法 [!UICONTROL Adobe Target De
 keywords: 配信 api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 9a3068b0765c238daa2f9af904c0f6f15b57cc24
+source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
 
 # プリフェッチ
 
-プリフェッチを使用すると、モバイルアプリやサーバーなどのクライアントは、1 回のリクエストで複数の mbox やビューのコンテンツを取得し、ローカルにキャッシュして、後で通知できます。 [!DNL Target] ユーザーがこれらの mbox またはビューを訪問したとき。
+プリフェッチを使用すると、モバイルアプリやサーバーなどのクライアントは、1 回のリクエストで複数の mbox やビューのコンテンツを取得し、ローカルにキャッシュして、後で通知できます。 [!DNL Target] 訪問者がこれらの mbox またはビューを訪問したとき。
 
-プリフェッチを利用する場合、次の用語に精通しておくことが重要です。
+プリフェッチを使用する場合、次の用語に精通しておくことが重要です。
 
 | フィールド名 | 説明 |
 | --- | --- |
-| `prefetch` | 取得するが訪問済みとしてマークすべきでない mbox とビューのリスト。 The [!DNL Target] Edge は、 `eventToke`n は、プリフェッチ配列内に存在する mbox またはビューごとに生成されます。 |
+| `prefetch` | 取得するが訪問済みとしてマークすべきでない mbox とビューのリスト。 The [!DNL Target] Edge は、 `eventToken` プリフェッチ配列内に存在する mbox またはビューごとに。 |
 | `notifications` | 以前にプリフェッチされ、訪問済みとしてマークされる必要がある mbox とビューのリスト。 |
 | `eventToken` | コンテンツがプリフェッチされた際に返される、ハッシュ化された暗号化トークン。 このトークンは、に返送する必要があります [!DNL Target] （内） `notifications` 配列。 |
 
 ## Mbox のプリフェッチ
 
-モバイルアプリやサーバーなどのクライアントは、1 つのセッション内で特定のユーザーに対して複数の mbox をプリフェッチし、 [!UICONTROL Adobe Target Delivery API].
+モバイルアプリやサーバーなどのクライアントは、1 回のセッション内で特定の訪問者に対して複数の mbox をプリフェッチし、それらをキャッシュすることで、 [!UICONTROL Adobe Target Delivery API].
 
 ```
 curl -X POST \
@@ -69,7 +69,7 @@ curl -X POST \
 }'
 ```
 
-内 `prefetch` フィールドに、1 つ以上の `mboxes` セッション内のユーザーに対して、一度ににプリフェッチする必要がある。 これらをプリフェッチした後 `mboxes` 次の応答を受け取ります。
+内 `prefetch` フィールドに、1 つ以上の `mboxes` 1 つのセッション内の訪問者に対して少なくとも 1 回プリフェッチする必要がある場合。 プリフェッチ後 `mboxes`に設定すると、次の応答を受け取ります。
 
 ```
 {
@@ -120,9 +120,9 @@ curl -X POST \
 }
 ```
 
-応答内に、 `content` 特定ののユーザーに表示するエクスペリエンスを含むフィールド `mbox`. これは、ユーザーがセッション内で Web またはモバイルアプリケーションを操作し、 `mbox` アプリケーションの特定のページでは、別のページを作成する代わりに、エクスペリエンスをキャッシュから配信できます [!UICONTROL Adobe Target Delivery API] を呼び出します。 ただし、 `mbox`, a `notification` は、インプレッションのログが記録されるように、Delivery API 呼び出しを介して送信されます。 これは、 `prefetch` の呼び出しがキャッシュされます。つまり、ユーザーは、 `prefetch` 呼び出しが発生します。 詳しくは、 `notification` プロセス、を参照してください。 [通知](notifications.md).
+応答内に、 `content` 特定の `mbox`. これは、訪問者がセッション内で Web またはモバイルアプリケーションを操作し、 `mbox` アプリケーションの特定のページでは、別のページを作成する代わりに、エクスペリエンスをキャッシュから配信できます [!UICONTROL Adobe Target Delivery API] を呼び出します。 ただし、 `mbox`, a `notification` は、インプレッションログを記録するために、Delivery API 呼び出しを介して送信されます。 これは、 `prefetch` の呼び出しがキャッシュされます。つまり、訪問者は、 `prefetch` 呼び出しが発生します。 詳しくは、 `notification` プロセス、詳しくは、 [通知](notifications.md).
 
-## 使用時に clickTrack 指標を使用して mbox をプリフェッチ [!UICONTROL Analytics for Target] (A4T)
+## での mbox のプリフェッチ `clickTrack` 指標を使用する場合 [!UICONTROL Analytics for Target] (A4T)
 
 [[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) は、 [!DNL Analytics] コンバージョン指標およびオーディエンスセグメント。
 
