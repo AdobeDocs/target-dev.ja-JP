@@ -4,10 +4,10 @@ description: モバイルプレビューリンクを使用して、モバイル�
 title: モバイルプレビューリンクを [!DNL Adobe Target] 携帯？
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 0bcfa16cb79644e7ce10e33daf6c8385104c197f
+source-git-commit: 15e42d0fb049f9243ff5468ff5f22a8e79c55c79
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 27%
+source-wordcount: '508'
+ht-degree: 23%
 
 ---
 
@@ -38,25 +38,25 @@ ht-degree: 27%
 
 ## プレビューリンクの生成
 
-1. Adobe Analytics の [!DNL Target] UI で、 **[!UICONTROL その他のオプション]** アイコン（縦の省略記号）をクリックし、「 **[!UICONTROL モバイルプレビューリンクを作成]**.
+1. Adobe Analytics の [!DNL Target] UI で、 **[!UICONTROL More Options]** アイコン（縦の省略記号）をクリックし、「 **[!UICONTROL Create Mobile Preview Link]**.
 
    ![代替画像](assets/mobile-preview-create.png)
 
-1. プレビューするアクティビティを選択し、「 **[!UICONTROL モバイルプレビューリンクを生成]**.
+1. プレビューするアクティビティを選択し、「 **[!UICONTROL Generate Mobile Preview Link]**.
 
    >[!NOTE]
    >
-   >選択できるのはフォームベースのみです [!UICONTROL A/B テスト] および [!UICONTROL エクスペリエンスのターゲット設定] (XT) アクティビティ
+   >選択できるのはフォームベースのみです [!UICONTROL A/B Test] および [!UICONTROL Experience Targeting] (XT) アクティビティ
 
    ![代替画像](assets/mobile-preview-select-activities.png)
 
 1. アプリの URL スキームを指定します。
 
-   したがって、URL スキームは、iOSまたは Android アプリに存在するスキームと同じである必要があります。 必要に応じて、iOSと Android で、この手順を個別に繰り返します。
+   URL スキームは、iOSまたは Android アプリに存在するものと同じである必要があります。 必要に応じて、iOSと Android で、この手順を個別に繰り返します。
 
    ![代替画像](assets/mobile-preview-enter-url-scheme.png)
 
-1. 「**[!UICONTROL モバイルプレビューリンクを生成」をクリック]** して、リンクをコピーします。
+1. クリック **[!UICONTROL Generate Mobile Preview Link]**&#x200B;をクリックし、リンクをコピーします。
 
    ![代替画像](assets/mobile-preview-generate-and-copy.png)
 
@@ -70,14 +70,14 @@ ht-degree: 27%
 
    |![ディープリンクのプレビュー1](assets/mobile-preview-open-deeplink.png)|![ディープリンクのプレビュー2](assets/mobile-preview-open-app.png)|
 
-   アプリが開き、 [!DNL Target] [!UICONTROL モバイルプレビューモード].
+   アプリが開き、 [!DNL Target] [!UICONTROL Mobile Preview Mode].
 
-1. 表示するエクスペリエンスの組み合わせを選択し、「エクスペリエンス **[!UICONTROL を開始」をクリック]** します。
+1. 表示するエクスペリエンスの組み合わせを選択し、「 **[!UICONTROL Launch Experiences]**.
 
    |![mobile preview1](assets/mobile-preview-experience-selection-1.png)|![モバイルプレビュー2](assets/mobile-preview-experience-result-1-france.png)|![モバイルプレビュー3](assets/mobile-preview-experience-result-1-shipfree.png)|
 |![モバイルプレビュー4](assets/mobile-preview-experience-selection-2.png)|![モバイルプレビュー5](assets/mobile-preview-experience-result-2-aus.png)|![モバイルプレビュー6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## 制限事項
 
-* 「**[!UICONTROL エクスペリエンスを開始]**」ボタンをクリックした後で新しいコンテンツを表示するには、ビューをもう一度読み込む必要があります。最も簡単な方法は、一旦別の画面に切り替えた後、変更を適用する画面に戻ることです。
+* 新しいコンテンツを表示するには、ビューを再度読み込む必要があります。 **[!UICONTROL Launch Experiences]** 」ボタンがクリックされたときに表示されます。 最も簡単な方法は、一旦別の画面に切り替えた後、変更を適用する画面に戻ることです。
 * モバイルプレビューは、API-19（KitKat）より前の Android バージョンではサポートされません。
