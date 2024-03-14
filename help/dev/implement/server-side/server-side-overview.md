@@ -4,16 +4,22 @@ description: 詳しくは、 [!DNL Adobe Target] サーバー側配信 API、SDK
 title: どこで学べばよいか [!DNL Target] サーバー側配信 API および SDK
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 75af30045684b95d5989b0a1f877ba95bb8cd883
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 14%
+source-wordcount: '569'
+ht-degree: 13%
 
 ---
 
 # サーバー側：実装 [!DNL Target]
 
 次に関する情報： [!DNL Adobe Target] サーバー側配信 API、SDK、 [!DNL Target Recommendations] API
+
+>[!NOTE]
+>
+>実装で at.js および [!DNL AppMeasurement] クライアント側では、 [!UICONTROL Target Delivery API] およびサーバー側 SDK については、以下で説明します。
+>
+>実装で [!UICONTROL Adobe Experience Platform Web SDK]を使用する場合、 [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 以下の処理は、[!DNL Target] のサーバー側実装で発生します。
 
