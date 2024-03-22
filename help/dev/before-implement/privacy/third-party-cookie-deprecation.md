@@ -3,7 +3,7 @@ keywords: 概要とリファレンス， cookie，ファーストパーティ，
 description: に対するサードパーティ Cookie の廃止の影響について説明します。 [!DNL Adobe Target] (at.js)
 title: サードパーティ Cookie の廃止の影響 [!DNL Adobe Target] (at.js)
 feature: at.js
-source-git-commit: 54647001c4e5dc5ce208430c7fea103a720b0980
+source-git-commit: 705b94d60690a6e32185908c4bc53d8a3cee70bb
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
