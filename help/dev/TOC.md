@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target Developer Guide
 breadcrumb-title: Target 開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: 49b6572c0d414ab304712691c97794bb0b1e3781
+source-git-commit: 54647001c4e5dc5ce208430c7fea103a720b0980
 workflow-type: tm+mt
 source-wordcount: '753'
 ht-degree: 45%
@@ -22,7 +22,7 @@ ht-degree: 45%
       + [プライバシーとデータ保護規制](before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)
       + [Target の Cookie](before-implement/privacy/cookie-behavior.md)
       + [Target の Cookie の削除](before-implement/privacy/cookie-deleting.md)
-      + [サードパーティ Cookie の廃止が Target(at.js) に与える影響](/help/dev/before-implement/privacy/third_party_cookie_deprecation)
+      + [サードパーティ Cookie の廃止が Target(at.js) に与える影響](/help/dev/before-implement/privacy/third-party-cookie-deprecation.md)
       + [Google Chrome SameSite cookie ポリシー](before-implement/privacy/google-chrome-samesite-cookie-policies.md)
       + [Apple Intelligent Tracking Prevention（ITP）2.x](before-implement/privacy/apple-itp-2x.md)
       + [コンテンツセキュリティポリシー（CSP）指令](before-implement/privacy/content-security-policy.md)
