@@ -1,22 +1,22 @@
 ---
 title: でのプロキシ設定の実装 [!DNL Adobe Target] Java SDK
-description: TargetClient プロキシを設定する方法については、 [!DNL Adobe Target] Java SDK。
+description: で TargetClient プロキシ設定を指定する方法を説明します [!DNL Adobe Target] Java SDK。
 feature: APIs/SDKs
 exl-id: 32e8277d-3bba-4621-b9c7-3a49ac48a466
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 59ab3f53e2efcbb9f7b1b2073060bbd6a173e380
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '170'
 ht-degree: 1%
 
 ---
 
-# プロキシ設定 (Java)
+# プロキシ設定（Java）
 
 ## 基本プロキシ
 
-SDK を実行するアプリケーションがプロキシでインターネットにアクセスする必要がある場合、 `TargetClient` は、次のようにプロキシ設定で設定する必要があります。
+SDK を実行しているアプリケーションで、インターネットへのアクセスにプロキシが必要な場合、 `TargetClient` 次のようにプロキシ設定を使用して設定する必要があります。
 
-### 基本プロキシ設定
+### 基本的なプロキシ設定
 
 ```java {line-numbers="true"}
 ClientConfig clientConfig = ClientConfig.builder()
@@ -29,7 +29,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Authentication
 
-プロキシ認証が必要な場合は、資格情報をパラメーターとしてに渡すことができます。 `ClientProxyConfig` コンストラクタ。次の例のとおりです。 これは、単純なユーザー名/パスワードプロキシ認証に対してのみ機能します。
+プロキシ認証が必要な場合、資格情報をパラメーターとしてに渡すことができます。 `ClientProxyConfig` 次の例に従って、コンストラクターを設定します。 これは、単純なユーザー名/パスワードプロキシ認証でのみ機能することに注意してください。
 
 ### 基本プロキシ認証
 
@@ -41,3 +41,17 @@ ClientConfig clientConfig = ClientConfig.builder()
     .build();
 TargetClient targetClient = TargetClient.create(clientConfig);
 ```
+
+## オンデバイス判定
+
+ルールアーティファクトを取得するリクエストの場合、応答をキャッシュしないようにプロキシを設定する必要があります。 ただし、そのリクエストに対してプロキシのキャッシュメカニズムを設定できない場合は、設定オプションを使用してプロキシレベルのキャッシュを回避します。 この回避策は、 `Authorization` ルールリクエストに対する空の文字列値を持つヘッダーで、応答をキャッシュできないことをプロキシに示す必要があります。
+
+この回避策を有効にするには、次の設定を行います。
+
+```java {line-numbers="true"}
+ClientConfig.builder()
+    .shouldArtifactRequestBypassProxyCache(true)
+    .build();
+```
+
+
