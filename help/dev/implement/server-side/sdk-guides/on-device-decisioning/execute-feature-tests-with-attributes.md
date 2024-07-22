@@ -1,122 +1,122 @@
 ---
-title: 属性を使用して機能テストを実行
-description: 属性を使用して機能テストを実行
+title: 属性を使用した機能テストの実行
+description: 属性を使用した機能テストの実行
 feature: APIs/SDKs
 exl-id: c89d337c-20a9-454c-930c-79d9217e23b6
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
 
-# 属性を使用して機能テストを実行
+# 属性を使用した機能テストの実行
 
 ## 手順の概要
 
-1. 有効にする [!UICONTROL オンデバイス判定] （組織の）
-1. の作成 [!UICONTROL A/B テスト] アクティビティ
-1. A と B を定義する
+1. 組織の [!UICONTROL on-device decisioning] を有効にする
+1. [!UICONTROL A/B Test] アクティビティの作成
+1. A と B の定義
 1. オーディエンスを追加
-1. トラフィックの配分を設定
-1. トラフィックの配分をバリエーションに設定
+1. トラフィック配分の設定
+1. トラフィック配分をバリエーションに設定
 1. レポートの設定
-1. KPI を追跡するための指標を追加
-1. 属性を使用して機能テストを実行するコードを実装します。
+1. KPI を追跡するための指標の追加
+1. 属性を使用した機能テストを実行するコードの実装
 1. コンバージョンイベントを追跡するコードの実装
-1. 属性を使用して機能テストを有効化
+1. 属性を使用した機能テストのアクティブ化
 
 >[!NOTE]
 >
->小売 e コマース会社の場合を考えます。 顧客が商品カタログを閲覧して並べ替える際に、コンバージョン率を上げたい。 特定の並べ替えアルゴリズムやページネーション戦略によって、他のアルゴリズムよりも優れた結果が得られるという仮説があります。 この理論をテストするには、エンドユーザーに対して異なる並べ替えオプションを使用して並べ替えウィジェットの再設計を伴う機能テストを実行します。 この機能テストをほぼゼロの待ち時間で実行し、ユーザーエクスペリエンスに悪影響を与えず、結果に歪曲を与えないようにしたい場合。
+>小売 e コマース会社の場合は、 顧客が製品カタログを閲覧および並べ替える際のコンバージョン率を高めたい場合。 特定の並べ替えアルゴリズムとページネーション戦略により、他の方法よりも優れた結果が得られるという仮説があります。 この理論をテストするには、エンドユーザーに合わせて異なる並べ替えオプションを使用して並べ替えウィジェットを再設計する機能テストを実行することにします。 この機能テストがゼロに近い待ち時間で実行されることを確認して、ユーザーエクスペリエンスに悪影響を与えず、結果をゆがめないようにする必要があります。
 
-## 1.有効にする [!UICONTROL オンデバイス判定] （組織の）
+## 1.組織の [!UICONTROL on-device decisioning] を有効にする
 
-オンデバイス判定を有効にすると、A/B アクティビティがほぼゼロの待ち時間で実行されます。 この機能を有効にするには、次に移動します。 **[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]** in [!DNL Adobe Target]、を有効にします。 **[!UICONTROL オンデバイス判定]** 切り替え
+オンデバイス判定を有効にすることで、A/B アクティビティがほぼゼロの待ち時間で実行されるようになります。 この機能を有効にするには、[!DNL Adobe Target] で **[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Account details]** に移動し、「**[!UICONTROL On-Device Decisioning]**」トグルを有効にします。
 
-![代替画像](assets/asset-odd-toggle.png)
+![alt 画像 ](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->管理者または承認者が必要です [ユーザーロール](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) 有効または無効にするには **[!UICONTROL オンデバイス判定]** 切り替え
+>**[!UICONTROL On-Device Decisioning]** の切り替えを有効または無効にするには、管理者または承認者 [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) が必要です。
 
-を有効にした後 **[!UICONTROL オンデバイス判定]** トグル、 [!DNL Adobe Target] 生成を開始 *ルールアーティファクト* を設定します。
+「**[!UICONTROL On-Device Decisioning]**」切替スイッチを有効 [!DNL Adobe Target] すると、クライアントの *ルールアーティファクト* の生成を開始します。
 
-## 2. [!UICONTROL A/B テスト] アクティビティ
+## 2. [!UICONTROL A/B Test] アクティビティの作成
 
-1. In [!DNL Adobe Target]をクリックし、 **[!UICONTROL アクティビティ]** ページ、「 」を選択します。 **[!UICONTROL アクティビティを作成]** > **[!UICONTROL A/B テスト]**.
+1. [!DNL Adobe Target] で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]**/**[!UICONTROL A/B test]** を選択します。
 
-   ![代替画像](assets/asset-ab.png)
+   ![alt 画像 ](assets/asset-ab.png)
 
-1. Adobe Analytics の **[!UICONTROL A/B テストアクティビティの作成]** モーダルのままにします。デフォルトのままにします。 **[!UICONTROL Web]** オプションが選択されている (1)、 **[!UICONTROL フォーム]** experience composer (2) として、「 」を選択します。 **[!UICONTROL デフォルトのワークスペース]** 次を使用 **[!UICONTROL プロパティの制限がありません]** (3) をクリックし、 **[!UICONTROL 次へ]** (4)。
+1. **[!UICONTROL Create A/B Test Activity]** モーダルでは、デフォルトの **[!UICONTROL Web]** オプションを選択した状態（1）のままにし、experience composer として **[!UICONTROL Form]** を選択し（2）、**[!UICONTROL No Property Restrictions]** を使用して **[!UICONTROL Default Workspace]** を選択し（3）、**[!UICONTROL Next]** をクリックします（4）。
 
-   ![代替画像](assets/asset-form.png)
+   ![alt 画像 ](assets/asset-form.png)
 
 ## 3. A と B を定義する
 
-1. Adobe Analytics の **[!UICONTROL エクスペリエンス]** アクティビティを作成する手順で、アクティビティの名前を指定し (1)、2 つ目のエクスペリエンス（エクスペリエンス B）を追加します。それには、 **[!UICONTROL エクスペリエンスを追加]** (2) ボタン。 属性を使用して機能テストを実行するアプリケーション内の場所の名前 (3) を入力します。 次の例では、 `product-results-page` は、エクスペリエンス A に対して定義された場所です（エクスペリエンス B に対して定義された場所でもあります）。
+1. アクティビティ作成の **[!UICONTROL Experiences]** の手順で、アクティビティの名前を指定し（1）、「エクスペリ **[!UICONTROL Add Experience]** ンス」（2） ボタンをクリックして、2 つ目のエクスペリエンスとして「エクスペリエンス B」を追加します。 属性を使用した機能テストを実行する、アプリケーション内の場所の名前（3）を入力します。 次の例では、エクスペリエンス A に対して定義された場所は `product-results-page` です（エクスペリエンス B に対しても定義された場所です）。
 
-   ![代替画像](assets/asset-location.png)
+   ![alt 画像 ](assets/asset-location.png)
 
-   **[!UICONTROL エクスペリエンス A]** には、次の操作をビジネスロジックにおこなうように通知する JSON が含まれます。
+   **[!UICONTROL Experience A]** には、以下を行うためのビジネスロジックを示す JSON が含まれます。
 
-   * で並べ替えアルゴリズム機能を開始します。 `test_sorting` 機能フラグ
-   * で定義された推奨並べ替えアルゴリズムを実行します。 `sorting_algorithm _**_attribute`
-   * ページごとに 50 個の製品を返します。 `pagination_limit`
+   * `test_sorting` 機能フラグを使用して、ソートアルゴリズム機能を開始します
+   * `sorting_algorithm _**_attribute` で定義された推奨ソートアルゴリズムを実行します。
+   * `pagination_limit` で定義されたページネーション戦略で定義されているページごとに 50 製品を返します
 
-1. エクスペリエンス A で、「 」をクリックして、次の場所からコンテンツを変更します。 **[!UICONTROL デフォルトコンテンツ]** を JSON に追加するには、次を選択します。 **[!UICONTROL JSON オファーを作成]** (1) に示すように。
+1. エクスペリエンス A で、をクリックし、以下に示すように（1） **[!UICONTROL Create JSON Offer]** 選択して、コンテンツを **[!UICONTROL Default Content]** から JSON に変更します。
 
-   ![代替画像](assets/asset-offer.png)
+   ![alt 画像 ](assets/asset-offer.png)
 
-1. を使用して JSON を定義する `test_sorting`, `sorting_algorithm`、および `pagination_limit` 推奨並べ替えアルゴリズムの開始に使用するフラグと属性（ページ番号の上限は 50 個）。
-
-   >[!NOTE]
-   >
-   >条件 [!DNL Adobe Target] は、ユーザーにエクスペリエンス A を表示するようにバケット化し、例で定義された属性を持つ JSON が返されます。 コードでは、機能フラグの値を確認する必要があります `test_sorting` をクリックして、並べ替え機能をオンにする必要があるかどうかを確認します。 その場合は、 `sorting_algorithm` 属性を使用して、推奨商品を商品リスト表示で表示します。 アプリケーションに表示する製品の上限は 50 です。これは、 `pagination_limit` 属性。
-
-   ![代替画像](assets/asset-sorting.png)
-
-   **[!UICONTROL エクスペリエンス B]** は、次の操作をビジネスロジックに指示する JSON を定義します。
-
-   * test_sorting 機能フラグを使用して、並べ替えアルゴリズム機能を開始します。
-   * を実行します。 `best_sellers` で定義された並べ替えアルゴリズム `sorting_algorithm _**_attribute`
-   * ページごとに 50 個の製品を返します。 `pagination_limit`
+1. `test_sorting`、`sorting_algorithm`、`pagination_limit` のフラグと属性を使用して、ページネーション制限 50 製品で、推奨される並べ替えアルゴリズムを開始するために使用される JSON を定義します。
 
    >[!NOTE]
    >
-   >条件 [!DNL Adobe Target] をグループ化してユーザーにエクスペリエンス B を表示し、例で定義された属性を持つ JSON が返されます。 コードでは、機能フラグの値を確認する必要があります `test_sorting` をクリックして、並べ替え機能をオンにする必要があるかどうかを確認します。 その場合は、 `best_sellers` の値 `sorting_algorithm` 製品リスト表示でベストセラー商品を表示する属性。 アプリケーションに表示する製品の上限は 50 です。これは、 `pagination_limit` 属性。
+   >エクスペリエンス A を表示する [!DNL Adobe Target] めにユーザーをグループ化すると、例で定義された属性を含む JSON が返されます。 コードでは、機能フラグ `test_sorting` の値をチェックして、並べ替え機能をオンにする必要があるかどうかを確認します。 その場合は、`sorting_algorithm` 属性の推奨値を使用して、製品リスト表示で推奨製品を表示します。 アプリケーションに表示する製品の制限は 50 です。これは、`pagination_limit` 属性の値であるからです。
 
-   ![代替画像](assets/asset-sorting-b.png)
+   ![alt 画像 ](assets/asset-sorting.png)
 
-## 4.オーディエンスを追加する
+   次の **[!UICONTROL Experience B]** 順を実行するように、ビジネスロジックを示す JSON を定義します。
 
-Adobe Analytics の **[!UICONTROL ターゲット設定]** ステップ、 **[!UICONTROL すべての訪問者]** オーディエンス。 これにより、並べ替え機能の影響と、結果に最も影響を与えるアルゴリズムと項目数を把握できます。
+   * test_sorting 機能フラグを使用して、ソートアルゴリズム機能を開始します
+   * `sorting_algorithm _**_attribute` で定義された `best_sellers` ソートアルゴリズムを実行します。
+   * `pagination_limit` で定義されたページネーション戦略で定義されているページごとに 50 製品を返します
 
-![代替画像](assets/asset-audience-b.png)
+   >[!NOTE]
+   >
+   >[!DNL Adobe Target] がユーザーをバケット化してエクスペリエンス B を表示すると、例で定義された属性を含む JSON が返されます。 コードでは、機能フラグ `test_sorting` の値をチェックして、並べ替え機能をオンにする必要があるかどうかを確認します。 その場合は、`sorting_algorithm` 属性の `best_sellers` 値を使用して、製品リスト表示で最も売れた製品を表示します。 アプリケーションに表示する製品の制限は 50 です。これは、`pagination_limit` 属性の値であるからです。
 
-## 5.トラフィックの配分を設定する
+   ![alt 画像 ](assets/asset-sorting-b.png)
 
-並べ替えアルゴリズムとページネーション戦略をテストする訪問者の割合を定義します。 つまり、このテストを展開したいユーザーの割合を示します。 この例では、ログインしているすべてのユーザーにこのテストをデプロイする場合、トラフィックの配分は 100%のままにします。
+## 4. オーディエンスの追加
 
-![代替画像](assets/asset-allocation-100.png)
+**[!UICONTROL Targeting]** の手順では、**[!UICONTROL All Visitors]** オーディエンスを保持します。 これにより、並べ替え機能の影響と、結果に最適なアルゴリズムと項目数を把握できます。
 
-## 6.トラフィックの配分をバリエーションに設定する
+![alt 画像 ](assets/asset-audience-b.png)
 
-レコメンデーションされた商品を表示する訪問者の割合と、ベストセラーの並べ替えアルゴリズムを定義します。1 ページにつき 50 個の商品の制限があります。 この例では、トラフィックの配分は、エクスペリエンス A とエクスペリエンス B の間で50/50分割したままにします。
+## 5. トラフィック配分の設定
 
-![代替画像](assets/asset-variations-50.png)
+並べ替えアルゴリズムとページネーション戦略をテストする、訪問者の割合を定義します。 つまり、このテストをロールアウトするユーザーの割合を指定します。 この例では、すべてのログインユーザーにこのテストをデプロイするには、トラフィックの割り当てを 100% に保ちます。
 
-## 7.レポートを設定する
+![alt 画像 ](assets/asset-allocation-100.png)
 
-Adobe Analytics の **[!UICONTROL 目標と設定]** ステップ、選択 **[!UICONTROL Adobe Target]** として **[!UICONTROL レポートソース]** A/B テスト結果を [!DNL Adobe Target] UI、または **[!UICONTROL Adobe Analytics]** をクリックして、Adobe Analytics UI に表示します。
+## 6. トラフィック配分をバリエーションに設定する
 
-![代替画像](assets/asset-reporting-b.png)
+推奨される製品とベストセラーの並べ替えアルゴリズムを表示する訪問者の割合を定義します。ページあたり 50 製品という制限があります。 この例では、エクスペリエンス A と B の間でトラフィック配分を 50/50 に分割します。
 
-## 8. KPI を追跡するための指標を追加
+![alt 画像 ](assets/asset-variations-50.png)
 
-を選択します。 **[!UICONTROL 目標指標]** 属性を使用してフィーチャーテストを測定する場合。 この例では、成功は、表示された並べ替えアルゴリズムとページネーション戦略に応じて、ユーザーが商品を購入したかどうかに基づきます。
+## 7. レポートの設定
 
-## 9.属性を持つ機能テストをアプリケーションに実装する
+**[!UICONTROL Goals & Settings]** の手順で、[!DNL Adobe Target] UI で A/B テストの結果を表示する **[!UICONTROL Reporting Source]** として **[!UICONTROL Adobe Target]** を選択するか、Adobe Analytics UI で表示する **[!UICONTROL Adobe Analytics]** を選択します。
+
+![alt 画像 ](assets/asset-reporting-b.png)
+
+## 8. KPI を追跡するための指標を追加する
+
+属性を使用して機能テストを測定する **[!UICONTROL Goal Metric]** を選択します。 この例では、成功は、表示された並べ替えアルゴリズムとページネーション戦略に応じて、ユーザーが製品を購入したかどうかに基づいています。
+
+## 9.属性を使用した機能テストのアプリケーションへの実装
 
 >[!BEGINTABS]
 
@@ -173,7 +173,7 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 >[!ENDTABS]
 
-## 10.コンバージョンイベントを追跡するコードを実装する
+## 10. コンバージョンイベントを追跡するコードの実装
 
 >[!BEGINTABS]
 
@@ -242,6 +242,6 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 >[!ENDTABS]
 
-## 11.属性を使用して機能テストを有効化する
+## 11.属性を使用した機能テストのアクティブ化
 
-![代替画像](assets/asset-activate.png)
+![alt 画像 ](assets/asset-activate.png)

@@ -1,31 +1,31 @@
 ---
-title: を初期化します。 [!DNL Adobe Target] リクエストをログに記録する Java SDK
-description: リクエストを [!DNL Adobe Target] Java SDK。
+title: リクエストをログに記録する  [!DNL Adobe Target] Java SDK の初期化
+description: Java SDK でリクエストをログに記録する方法  [!DNL Adobe Target]  説明します。
 feature: APIs/SDKs
 exl-id: 85d1a6ef-0b08-4948-8133-740b7d6141dd
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '118'
 ht-degree: 4%
 
 ---
 
-# ロガー (Java)
+# ロガー（Java）
 
 ## 説明
 
-条件 [SDK の初期化](initialize-sdk.md)、には複数のオプションがあります `ClientConfig` オブジェクトに書き込みます。このオブジェクトはリクエストをログに記録するために設定できます。
+[SDK の初期化 ](initialize-sdk.md) 時に、`ClientConfig` オブジェクトにはいくつかのオプションがあり、リクエストをログに記録するように設定できます。
 
 | オプション | 説明 |
 | --- | --- |
-| `logRequests` | リクエスト本文全体と応答本文全体をログに記録します。 |
-| `logRequestStatus` | リクエストの URL、ステータス、応答時間を記録します。 |
+| `logRequests` | リクエスト本文全体と応答本文をログに記録します。 |
+| `logRequestStatus` | リクエストの url、ステータスおよび応答時間をログに記録します。 |
 
-[!DNL Target] Java SDK では、 `slf4j` ログ。 ロガーの実装 ( 例： `java.util.logging`, `logback`、および `log4j`. 参照： [http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html) を参照してください。 すべてのログは、 `debug`.
+Java SDK[!DNL Target]、`slf4j` ログを使用します。 `java.util.logging`、`logback`、`log4j` などのロガーを実装する必要があります。 詳しくは、[http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html) を参照してください。 すべてのログが `debug` に印刷されます。
 
 ## 例
 
-次を追加： `slf4j` 依存関係。
+`slf4j` 依存関係を追加します。
 
 >[!BEGINTABS]
 
@@ -49,7 +49,7 @@ compile 'org.slf4j:slf4j-simple:2.0.0-alpha0'
 
 >[!ENDTABS]
 
-を有効にします。 `DEBUG` のログを作成し、リクエストのログフラグをマークします。
+実装に基づいて `DEBUG` ログを有効にし、リクエストログフラグをマークします。
 
 ### デバッグ
 
@@ -65,4 +65,4 @@ ClientConfig config = ClientConfig.builder()
 TargetClient targetClient = TargetClient.create(config);
 ```
 
-要求、応答、および応答時間がコンソールに表示されます。
+リクエスト、応答および応答時間がコンソールに表示されます。

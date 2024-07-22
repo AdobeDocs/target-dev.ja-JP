@@ -1,52 +1,52 @@
 ---
-keywords: 実装， javascript ライブラリ， js, atjs，オンデバイス判定，デバイス判定， at.js，オンデバイス，デバイス上，実装 0
-description: の実行方法を学ぶ [!UICONTROL オンデバイス判定] at.js ライブラリを使用
-title: オンデバイス判定は at.js JavaScript ライブラリとどのように連携しますか。
+keywords: 実装，javascript ライブラリ，js, atjs, on-device decisioning, at.js, on-device, on device, implementation0
+description: at.js ライブラリを使用して [!UICONTROL on-device decisioning] を実行する方法を説明します
+title: オンデバイス判定は at.js JavaScript ライブラリでどのように機能しますか？
 feature: at.js
 exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '3689'
-ht-degree: 13%
+source-wordcount: '3478'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL オンデバイス判定] （at.js 用）
+# at.js の [!UICONTROL On-device decisioning]
 
-バージョン 2.5.0 以降、at.js オファー [!UICONTROL オンデバイス判定]. [!UICONTROL オンデバイス判定] を使用して、 [A/B テスト](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html) および [エクスペリエンスのターゲット設定](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT) ブラウザー上でのアクティビティ。 [!DNL Adobe Target] Edge ネットワーク。
+バージョン 2.5.0 以降、at.js は [!UICONTROL on-device decisioning] を提供します。 [!UICONTROL On-device decisioning] を使用すると、ブラウザー上で [A/B テスト ](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html) および [ エクスペリエンスのターゲット設定 ](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) （XT）アクティビティをキャッシュして、[!DNL Adobe Target] Edge Networkへのネットワークリクエストをブロックすることなく、インメモリ判定を実行できます。
 
 >[!NOTE]
 >
->[!UICONTROL オンデバイス判定] は、クライアント側実装とサーバー側実装の両方で使用できます。 この記事では、 [!UICONTROL オンデバイス判定] （クライアント側） に関する情報 [!UICONTROL オンデバイス判定] サーバー側の場合は、サーバー側実装のドキュメントを参照してください。 [ここ](../../../server-side/sdk-guides/on-device-decisioning/overview.md).
+>[!UICONTROL On-device decisioning] は、クライアントサイド実装とサーバーサイド実装の両方で使用できます。 この記事では、クライアントサイドの [!UICONTROL on-device decisioning] について説明します。 サーバーサイドの [!UICONTROL on-device decisioning] について詳しくは、サーバーサイド実装のドキュメント [ こちら ](../../../server-side/sdk-guides/on-device-decisioning/overview.md) を参照してください。
 
-[!DNL Target] また、は、実験や機械学習に基づく（ML 駆動の）パーソナライゼーションアクティビティから、ライブサーバー呼び出しを介して、最も関連性の高い最新のエクスペリエンスを提供する柔軟性も提供します。 つまり、パフォーマンスが最も重要な場合、 [!UICONTROL オンデバイス判定]. ただし、最も関連性の高い最新の ML 駆動型エクスペリエンスが必要な場合は、代わりにサーバー呼び出しをおこなうことができます。
+また、[!DNL Target] は、ライブサーバー呼び出しを通じて、実験や機械学習に基づく（ML 駆動の）パーソナライゼーションアクティビティから最も関連性が高い最新のエクスペリエンスを柔軟に提供します。 つまり、パフォーマンスが最も重要な場合は、[!UICONTROL on-device decisioning] の使用を選択できます。 ただし、最も関連性が高く、最新の ML ドリブン型のエクスペリエンスが必要な場合は、代わりにサーバーコールを行うことができます。
 
-## のメリット [!UICONTROL オンデバイス判定]?
+## [!UICONTROL on-device decisioning] の利点は何ですか？
 
-の利点 [!UICONTROL オンデバイス判定] 次を含む：
+[!UICONTROL on-device decisioning] の利点は次のとおりです。
 
-* **超高速な意思決定とエクスペリエンスを提供します。** グループ化と判定は、ネットワークリクエストのブロックを防ぐために、メモリ内およびブラウザーで実行されます。
-* **アプリケーションのパフォーマンスを向上させます。** エンドユーザーエクスペリエンスを損なうことなく、実験を実行し、パーソナライゼーションを顧客およびユーザーに提供します。
-* **Googleサイトの品質スコアを改善します。** メモリ内で判定がおこなわれるので、オンラインビジネスのGoogleサイトの品質スコアを向上させ、消費者が見つけやすくします。
-* **リアルタイム分析から学ぶ。** を通じて、アクティビティのパフォーマンスからリアルタイムでインサイトを得る [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T) レポート。 A4T を使用すると、重要な時点で戦略をピボットできます。
+* **驚くほど高速な意思決定とエクスペリエンスを実現します。** バケッティングと決定は、ネットワークリクエストがブロックされるのを回避するために、メモリ内およびブラウザーで実行されます。
+* **アプリケーションのパフォーマンスの向上。** 実験を実行し、エンドユーザーのエクスペリエンスを損なうことなく、顧客とユーザーにパーソナライゼーションを提供します。
+* **Google サイトの品質スコアが向上します。** インメモリで意思決定が行われるので、オンラインビジネスのGoogle サイト品質スコアを向上させて、消費者がより多くの情報を見つけられるようにします。
+* **リアルタイム分析から説明します。** [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) （A4T）レポートを使用して、アクティビティのパフォーマンスからリアルタイムでインサイトを得ます。 A4T を使用すると、重要な瞬間に戦略を転換できます。
 
 ## サポートされる機能
 
-The [!DNL Adobe Target] JS SDK は、お客様がパフォーマンスと決定のためのデータの鮮度を柔軟に選択できるようにします。 つまり、機械学習を通じて最も関連性が高く、パーソナライズされたコンテンツを配信することが最も重要な場合は、ライブサーバー呼び出しをおこなう必要があります。 しかし、パフォーマンスがより重要な場合は、デバイス上およびメモリ内での判断が必要です。 の場合 [!UICONTROL オンデバイス判定] 機能するには、サポートされる機能のリストを参照してください。
+[!DNL Adobe Target] JS SDK を使用すると、意思決定のためのデータのパフォーマンスと鮮度を柔軟に選択できます。 つまり、最も関連性が高く、魅力的なパーソナライズされたコンテンツを機械学習を通じて配信することが最も重要な場合は、ライブサーバーを呼び出す必要があります。 ただし、パフォーマンスがより重要な場合は、オンデバイスおよびメモリ内の決定を行う必要があります。 動作する [!UICONTROL on-device decisioning] については、サポートされている機能のリストを参照してください。
 
 * アクティビティのタイプ
 * オーディエンスのターゲティング
 * 配分方法
 
-詳しくは、 [次の機能でサポートされます。 [!UICONTROL オンデバイス判定]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md).
+詳しくは、[[!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) でサポートされる機能」を参照してください。
 
-## 方法 [!UICONTROL オンデバイス判定] 仕事？
+## [!UICONTROL on-device decisioning] の仕組み
 
-を使用して at.js をデプロイおよび初期化する場合 [!UICONTROL オンデバイス判定] 有効、 [ルールアーティファクト](/help/dev/implement/client-side/atjs/on-device-decisioning/rule-artifact.md) を含む [!UICONTROL オンデバイス判定] A/B および XT のアクティビティ、オーディエンスおよびアセットは、訪問者に最も近い Akamai CDN からダウンロードされ、訪問者のブラウザーにローカルにキャッシュされます。 エクスペリエンスを取得するリクエストが at.js からおこなわれると、キャッシュされたルールアーティファクトでエンコードされたメタデータに基づいて、返されるエクスペリエンスに関する決定がメモリ内でおこなわれます。
+[!UICONTROL on-device decisioning] を有効にして at.js をデプロイおよび初期化すると、A/B および XT のアクティビティ、オーディエンスおよびアセット用の [!UICONTROL on-device decisioning] を含んだ [ ルールアーティファクト ](/help/dev/implement/client-side/atjs/on-device-decisioning/rule-artifact.md) が、最も近い Akamai CDN から訪問者にダウンロードされ、訪問者のブラウザーにローカルにキャッシュされます。 エクスペリエンスを取得するためのリクエストが at.js から送信されると、キャッシュされたルールアーティファクトにエンコードされたメタデータに基づいて、返すエクスペリエンスに関する決定がメモリ内で行われます。
 
 ## 判定方法
 
-を使用 [!UICONTROL オンデバイス判定], [!DNL Target] では、「判定方法」という新しい設定を導入します。 判定方法の設定は、at.js がエクスペリエンスを提供する方法を示します。 判定方法には次の 3 つの値があります。
+[!UICONTROL on-device decisioning] では、Decisioning Method[!DNL Target] いう新しい設定が導入されています。 判定方法の設定は、at.js でのエクスペリエンスの提供方法を指定します。 判定方法には次の 3 つの値があります。
 
 * サーバー側のみ
 * オンデバイスのみ
@@ -56,201 +56,201 @@ The [!DNL Adobe Target] JS SDK は、お客様がパフォーマンスと決定�
 
 at.js 2.5.0 以降が実装され web プロパティにデプロイされる場合に標準で設定されているデフォルトの判定方法はサーバー側のみです。
 
-サーバー側のみ をデフォルト設定として使用すると、すべての決定は [!DNL Target] エッジネットワーク上で行われます。これにはブロッキングサーバーコールが必要になります。このアプローチは、徐々に遅延を引き起こす可能性がありますが、適用する機能を提供するなど、大きなメリットも提供します [!DNL Target]を含むの機械学習機能 [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) および [自動ターゲット](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) アクティビティ。
+サーバーサイドのみをデフォルト設定として使用すると、すべての決定は [!DNL Target] エッジネットワーク上で行われます。これにはブロッキングサーバーコールが必要になります。 このアプローチでは、待ち時間が徐々に増えるおそれがありますが、[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) （AP）および [ 自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) のアクティビティなど、[!DNL Target] の機械学習機能を適用する機能を提供するなど、大きなメリットもあります。
 
-さらに、 [!DNL Target]のユーザープロファイルは、セッションやチャネルをまたいで保持され、ビジネスに強力な成果をもたらすことができます。
+さらに、すべてのセッションやチャネルにわたって永続化された [!DNL Target] のユーザープロファイルを使用して、パーソナライズされたエクスペリエンスを強化することで、ビジネスに大きな成果をもたらすことができます。
 
-最後に、サーバー側のみ では、Adobe Experience Cloud を使用して、Audience Manager セグメントや Adobe Analytics セグメントを介してターゲティングできるオーディエンスを微調整できます。
+最後に、サーバーサイドのみでは、Adobe Experience Cloudを使用して、Audience ManagerセグメントやAdobe Analytics セグメントを介してターゲティングできるオーディエンスを微調整できます。
 
-次の図は、訪問者、ブラウザー、at.js 2.5.0 以降および [!DNL Adobe Target] Edge ネットワーク。 このフロー図は、新規訪問者と再訪問者を取り込みます。
+次の図は、訪問者、ブラウザー、at.js 2.5.0 以降と [!DNL Adobe Target] Edge ネットワークの間のやり取りを示しています。 次のフロー図は、新規訪問者と再訪問者を取り込みます。
 
 （全幅に拡大するには、画像をクリックします）。
 
-![サーバー側のみのフロー図](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/server-side-only.png "サーバー側のみのフロー図"){zoomable=&quot;yes&quot;}
+![ サーバー側のみのフロー図 ](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/server-side-only.png " サーバー側のみのフロー図 "){zoomable="yes"}
 
-次のリストは、ダイアグラムの数値に対応しています。
+次のリストは、図の数値に対応します。
 
 | 手順 | 説明 |
 | --- | --- |
-| 1 | Experience Cloud訪問者 ID は、 [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?). |
-| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />   at.js ライブラリは、ページに実装されているオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
-| 3 | at.js ライブラリでは、ちらつきを防ぐために本文を非表示にします。 |
-| 4 | ページ読み込みリクエストが実行され、（ECID、顧客 ID、カスタムパラメーター、ユーザープロファイルなど）設定済みのすべてのパラメーターが含まれます。 |
-| 5 | プロファイルスクリプトが実行されてから、プロファイルストアにフィードされます。<br />プロファイルストアは、オーディエンスライブラリから正規のオーディエンスをリクエストします ( 例えば、Adobe Analytics、Adobe Audience Managerなどから共有されたオーディエンス )。<br />顧客属性がバッチ処理でプロファイルストアに送信されます。 |
-| 6 | プロファイルストアは、アクティビティをフィルタリングするために、オーディエンスの選定とグループ化に使用されます。 |
-| 7 | 結果のコンテンツは、エクスペリエンスがライブから判断された後に選択されます [!DNL Target] アクティビティ。 |
-| 8 | at.js ライブラリでは、レンダリングが必要なエクスペリエンスに関連付けられている、ページ上の対応する要素を非表示にします。 |
-| 9 | at.js ライブラリは、本文を表示し、訪問者が表示できるように、残りのページを読み込むことができます。 |
-| 10 | at.js ライブラリは DOM を操作して、 [!DNL Target] Edge ネットワーク。 |
-| 11 | エクスペリエンスが訪問者用にレンダリングされます。 |
+| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html?) から取得されます。 |
+| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />   at.js ライブラリは、ページに実装されたオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
+| 3 | at.js ライブラリは、ちらつきを防ぐために本文を非表示にします。 |
+| 4 | ページ読み込みリクエストは、すべての設定済みパラメーター（ECID、顧客 ID、カスタムパラメーター、ユーザープロファイルなど）を含めて行われます。 |
+| 5 | プロファイルスクリプトは、を実行してからプロファイルストアにフィードします。<br /> プロファイルストアは、オーディエンスライブラリから選定オーディエンス（Adobe Analytics、Adobe Audience Managerなどから共有されたオーディエンスなど）をリクエストします。<br />顧客属性がバッチ処理でプロファイルストアに送信されます。 |
+| 6 | プロファイルストアは、アクティビティをフィルタリングするためのオーディエンスの選定およびバケット化に使用されます。 |
+| 7 | 結果として生成されるコンテンツは、エクスペリエンスがライブ [!DNL Target] アクティビティから決定された後に選択されます。 |
+| 8 | at.js ライブラリは、レンダリングが必要なエクスペリエンスに関連付けられた、ページ上の対応する要素を非表示にします。 |
+| 9 | at.js ライブラリは、ページの残りを読み込んで訪問者が表示できるように本文を表示します。 |
+| 10 | at.js ライブラリは、DOM を操作して、[!DNL Target] Edge Networkーからエクスペリエンスをレンダリングします。 |
+| 11 | エクスペリエンスが訪問者向けにレンダリングされます。 |
 | 12 | Web ページ全体が読み込まれます。 |
 | 13 | Analytics データがデータ収集サーバーに送信されます。 |
-| 14 | ターゲットデータは、SDID を使用して Analytics データに適合され、Analytics レポートストレージへと処理されます。[!DNL Target]Analytics for [!UICONTROL （A4T）レポートを使用して、Analytics データが Analytics および ]Target に表示できるようになります。 |
+| 14 | ターゲットデータは、SDID を介して Analytics データと照合され、Analytics レポートストレージで処理されます。 [!UICONTROL Analytics for Target] （A4T）レポートを使用して、Analytics データが Analytics と [!DNL Target] の両方に表示できるようになります。 |
 
 ### オンデバイスのみ
 
-オンデバイスのみが、at.js 2.5.0 以降で設定する必要がある判定方法です ( [!UICONTROL オンデバイス判定] は、Web ページ全体でのみ使用する必要があります。
+オンデバイスのみは、web ページ全体でのみ使用する場合に at.js 2.5.0 以降で設定する必要 [!UICONTROL on-device decisioning] ある判定方法です。
 
-[!UICONTROL オンデバイス判定] は、に適合するすべてのアクティビティを含むキャッシュされたルールアーティファクトから決定されるので、超高速でエクスペリエンスとパーソナライゼーションアクティビティを配信できます。 [!UICONTROL オンデバイス判定].
+決定 [!UICONTROL On-device decisioning]、エクスペリエンススコアに該当するすべてのアクティビティを含んだ、キャッシュされたルールアーティファクトから行われるので、エクスペリエンスとパーソナライゼーションアクティビティを超高速で配信で [!UICONTROL on-device decisioning] ます。
 
-どのアクティビティが適合するかを確認するには [!UICONTROL オンデバイス判定]を参照してください。 [でサポートされる機能 [!UICONTROL オンデバイス判定]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md).
+どのアクティビティが [!UICONTROL on-device decisioning] の対象となるかについて詳しくは、[[!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) でサポートされる機能」を参照してください。
 
-この判定方法は、Target からの意思決定を必要とするすべてのページでパフォーマンスが非常に重要な場合にのみ使用してください。 さらに、この判定方法を選択した場合、オンデバイス判定の対象とならない [!DNL Target] アクティビティは配信も実行もされないことに注意してください。at.js ライブラリ 2.5.0 以降は、キャッシュされたルールアーティファクトのみを探して決定を下すように設定されています。
+この判定方法は、Target からの決定を必要とするすべてのページでパフォーマンスが非常に重要な場合にのみ使用してください。 さらに、この判定方法を選択した場合、[!UICONTROL on-device decisioning] の条件を満たさない [!DNL Target] アクティビティは配信も実行もされないことに注意してください。 at.js ライブラリ 2.5.0 以降は、キャッシュされたルールアーティファクトのみを探して決定を下すように設定されています。
 
-次の図は、訪問者、ブラウザー、at.js 2.5.0 以降および Akamai CDN 間のインタラクションを示しています。 Akamai CDN は、訪問者の最初の訪問に関するルールアーティファクトをキャッシュします。 新しい訪問者が最初にページを訪問する際には、JSON ルールアーティファクトを Akamai CDN からダウンロードして、訪問者のブラウザーにローカルにキャッシュする必要があります。 JSON ルールアーティファクトがダウンロードされた後、ネットワーク呼び出しをブロックせずに、即座に判定がおこなわれます。 次のフロー図は、新規訪問者を示しています。
+次の図は、訪問者、ブラウザー、at.js 2.5.0 以降と Akamai CDN の間のやり取りを示しています。 Akamai CDN は、訪問者の初回訪問のルールアーティファクトをキャッシュします。 新規訪問者の最初のページ訪問では、JSON ルールアーティファクトを Akamai CDN からダウンロードして、訪問者のブラウザー上でローカルにキャッシュする必要があります。 JSON ルールアーティファクトがダウンロードされると、ネットワーク呼び出しをブロックすることなく、すぐに決定が行われます。 次のフロー図は、新規訪問者を取り込んでいます。
 
 （全幅に拡大するには、画像をクリックします）。
 
-![オンデバイスのみのフロー図](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/on-device-only.png "オンデバイスのみのフロー図"){zoomable=&quot;yes&quot;}
+![ オンデバイスのみのフロー図 ](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/on-device-only.png " オンデバイスのみのフロー図 "){zoomable="yes"}
 
-次のリストは、ダイアグラムの数値に対応しています。
+次のリストは、図の数値に対応します。
 
 >[!NOTE]
 >
->[!DNL Adobe Target] 管理サーバーは、に該当するすべてのアクティビティを認定します [!UICONTROL オンデバイス判定]を生成し、JSON ルールアーティファクトを生成して、Akamai CDN に反映します。 アクティビティで、Akamai CDN に反映される新しい JSON ルールアーティファクトを出力するための更新が継続的に監視されます。
+>管理サーバー [!DNL Adobe Target]、[!UICONTROL on-device decisioning] 用の対象となるすべてのアクティビティを選定し、JSON ルールアーティファクトを生成して、Akamai CDN に伝播します。 アクティビティは、Akamai CDN に伝播する新しい JSON ルールアーティファクトを出力するための更新について継続的に監視されます。
 
 | 手順 | 説明 |
 | --- | --- |
-| 1 | Experience Cloud訪問者 ID は、 [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
-| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されているオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
-| 3 | at.js ライブラリでは、ちらつきを防ぐために本文を非表示にします。 |
-| 4 | at.js ライブラリは、訪問者に最も近い Akamai CDN から JSON ルールアーティファクトを取得するリクエストを作成します。 |
-| 5 | Akamai CDN は、JSON ルールアーティファクトを使用して応答します。 |
-| 6 | JSON ルールアーティファクトは、訪問者のブラウザー上でローカルにキャッシュされます。 |
-| 7 | at.js ライブラリは、JSON ルールアーティファクトを解釈し、エクスペリエンスを取得する決定を実行し、テストされた要素を非表示にします。 |
-| 8 | at.js ライブラリは、本文を表示し、訪問者が表示できるように、残りのページを読み込むことができます。 |
-| 9 | at.js ライブラリは DOM を操作して、キャッシュされた JSON ルールアーティファクトからエクスペリエンスをレンダリングします。 |
-| 10 | エクスペリエンスが訪問者用にレンダリングされます。 |
+| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html) から取得されます。 |
+| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されたオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
+| 3 | at.js ライブラリは、ちらつきを防ぐために本文を非表示にします。 |
+| 4 | at.js ライブラリは、訪問者に最も近い Akamai CDN から JSON ルールアーティファクトを取得するリクエストを行います。 |
+| 5 | Akamai CDN が JSON ルールアーティファクトで応答します。 |
+| 6 | JSON ルールアーティファクトは、訪問者のブラウザーにローカルにキャッシュされます。 |
+| 7 | at.js ライブラリは JSON ルールアーティファクトを解釈し、エクスペリエンスを取得するための決定を実行し、テストされた要素を非表示にします。 |
+| 8 | at.js ライブラリは、ページの残りを読み込んで訪問者が表示できるように本文を表示します。 |
+| 9 | at.js ライブラリは、DOM を操作して、キャッシュされた JSON ルールアーティファクトからエクスペリエンスをレンダリングします。 |
+| 10 | エクスペリエンスが訪問者向けにレンダリングされます。 |
 | 11 | Web ページ全体が読み込まれます。 |
-| 12 | Analytics データがデータ収集サーバーに送信されます。ターゲットデータは、SDID を使用して Analytics データに適合され、Analytics レポートストレージへと処理されます。[!DNL Target]Analytics for [!UICONTROL （A4T）レポートを使用して、Analytics データが Analytics および ]Target に表示できるようになります。 |
+| 12 | Analytics データはデータ収集サーバーに送信されます。 ターゲットデータは、SDID を介して Analytics データと照合され、Analytics レポートストレージで処理されます。 [!UICONTROL Analytics for Target] （A4T）レポートを使用して、Analytics データが Analytics と [!DNL Target] の両方に表示できるようになります。 |
 
-次の図は、訪問者の後続のページヒットまたは再訪問に対する、訪問者、ブラウザー、at.js 2.5.0 以降、キャッシュされた JSON ルールアーティファクト間のインタラクションを示しています。 JSON ルールアーティファクトは既にキャッシュされ、ブラウザーで使用できるので、ネットワーク呼び出しをブロックすることなく、即座に決定がおこなわれます。 このフロー図は、後続のページナビゲーションまたは再訪問者をキャプチャします。
+次の図は、訪問者、ブラウザー、at.js 2.5.0 以降および訪問者の後続のページヒットまたは再訪問に対するキャッシュされた JSON ルールアーティファクトの間のインタラクションを示しています。 JSON ルールアーティファクトは既にキャッシュされており、ブラウザーで使用できるので、ネットワーク呼び出しをブロックすることなく、すぐに決定が行われます。 このフロー図は、その後のページナビゲーションまたは再訪問者を取り込みます。
 
 （全幅に拡大するには、画像をクリックします）。
 
-![後続のページナビゲーションと再訪問に関する、デバイス上のみのフロー図](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/on-device-only-subsequent.png "後続のページナビゲーションと再訪問に関する、デバイス上のみのフロー図"){zoomable=&quot;yes&quot;}
+![ 後続のページナビゲーションおよび繰り返し訪問のオンデバイスのみのフロー図 ](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/on-device-only-subsequent.png " 後続のページナビゲーションおよび繰り返し訪問のオンデバイスのみのフロー図 "){zoomable="yes"}
 
-次のリストは、ダイアグラムの数値に対応しています。
+次のリストは、図の数値に対応します。
 
 >[!NOTE]
 >
->[!DNL Adobe Target] 管理サーバーは、に該当するすべてのアクティビティを認定します [!UICONTROL オンデバイス判定]を生成し、JSON ルールアーティファクトを生成して、Akamai CDN に反映します。 アクティビティで、Akamai CDN に反映される新しい JSON ルールアーティファクトを出力するための更新が継続的に監視されます。
+>管理サーバー [!DNL Adobe Target]、[!UICONTROL on-device decisioning] 用の対象となるすべてのアクティビティを選定し、JSON ルールアーティファクトを生成して、Akamai CDN に伝播します。 アクティビティは、Akamai CDN に伝播する新しい JSON ルールアーティファクトを出力するための更新について継続的に監視されます。
 
 | 手順 | 説明 |
 | --- | --- |
-| 1 | Experience Cloud訪問者 ID は、 [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
-| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されているオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
-| 3 | at.js ライブラリでは、ちらつきを防ぐために本文を非表示にします。 |
-| 4 | at.js ライブラリは、JSON ルールアーティファクトを解釈し、メモリ内の決定を実行してエクスペリエンスを取得します。 |
-| 5 | テストされた要素は非表示になります。 |
-| 6 | at.js ライブラリは、本文を表示し、訪問者が表示できるように、残りのページを読み込むことができます。 |
-| 7 | at.js ライブラリは DOM を操作して、キャッシュされた JSON ルールアーティファクトからエクスペリエンスをレンダリングします。 |
-| 8 | エクスペリエンスが訪問者用にレンダリングされます。 |
+| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html) から取得されます。 |
+| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されたオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
+| 3 | at.js ライブラリは、ちらつきを防ぐために本文を非表示にします。 |
+| 4 | at.js ライブラリは、JSON ルールアーティファクトを解釈し、エクスペリエンスを取得するためにメモリ内の決定を実行します。 |
+| 5 | テストされた要素は非表示です。 |
+| 6 | at.js ライブラリは、ページの残りを読み込んで訪問者が表示できるように本文を表示します。 |
+| 7 | at.js ライブラリは、DOM を操作して、キャッシュされた JSON ルールアーティファクトからエクスペリエンスをレンダリングします。 |
+| 8 | エクスペリエンスが訪問者向けにレンダリングされます。 |
 | 9 | Web ページ全体が読み込まれます。 |
-| 10 | Analytics データがデータ収集サーバーに送信されます。ターゲットデータは、SDID を使用して Analytics データに適合され、Analytics レポートストレージへと処理されます。[!DNL Target]Analytics for [!UICONTROL （A4T）レポートを使用して、Analytics データが Analytics および ]Target に表示できるようになります。 |
+| 10 | Analytics データはデータ収集サーバーに送信されます。 ターゲットデータは、SDID を介して Analytics データと照合され、Analytics レポートストレージで処理されます。 [!UICONTROL Analytics for Target] （A4T）レポートを使用して、Analytics データが Analytics と [!DNL Target] の両方に表示できるようになります。 |
 
 ### ハイブリッド
 
-ハイブリッドは、at.js 2.5.0 以降で、 [!UICONTROL オンデバイス判定] と、 [!DNL Adobe Target] Edge ネットワークを実行する必要があります。
+ハイブリッドは、[!UICONTROL on-device decisioning] アクティビティと、[!DNL Adobe Target] Edge ネットワークへのネットワーク呼び出しを必要とするアクティビティの両方を実行する必要がある場合に、at.js 2.5.0 以降で設定する必要がある判定方法です。
 
-両方を管理している場合 [!UICONTROL オンデバイス判定] アクティビティとサーバー側のアクティビティは、のデプロイとプロビジョニングの方法を考える際に、少し複雑で面倒な場合があります [!DNL Target] 」と入力します。 ハイブリッド判定方法では、サーバー側実行が必要なアクティビティについて エッジネットワークに対してサーバーコールを行う必要がある場合と、オンデバイス判定のみを実行する必要がある場合を [!DNL Target] が把握しています。[!DNL Adobe Target]
+[!UICONTROL on-device decisioning] アクティビティとサーバーサイドアクティビティの両方を管理している場合は、ページにをデプロイしてプロビジョニングする方法を考える際に、少し複雑で面倒な場合 [!DNL Target] あります。 ハイブリッド判定方法では、サーバー側実行が必要 [!DNL Target] アクティビティについて [!DNL Adobe Target] Edge ネットワークに対してサーバーコールを行う必要がある場合と、オンデバイス判定のみを実行する必要がある場合を把握しています。
 
-JSON ルールのアーティファクトには、mbox がサーバー側のアクティビティを実行しているか、または [!UICONTROL オンデバイス判定] アクティビティ。 この判定方法では、迅速に配信する予定のアクティビティは、 [!UICONTROL オンデバイス判定] また、より強力な ML 駆動型パーソナライゼーションを必要とするアクティビティの場合、これらのアクティビティは、 [!DNL Adobe Target] Edge ネットワーク。
+JSON ルールアーティファクトには、mbox がサーバー側アクティビティを実行しているか、[!UICONTROL on-device decisioning] アクティビティを実行しているかを at.js に通知するメタデータが含まれています。 この判定方法では、迅速に配信すべきアクティビティを [!UICONTROL on-device decisioning] を通じて行い、機械学習によるより強力なパーソナライゼーションを必要とするアクティビティについては、[!DNL Adobe Target] Edge ネットワークを介して行います。
 
-次の図は、訪問者、ブラウザー、at.js 2.5.0 以降、Akamai CDN および [!DNL Adobe Target] Edge ネットワークを使用します。 この図から取り上げるべき点は、JSON ルールアーティファクトは、非同期でダウンロードされる一方で、決定は [!DNL Adobe Target] Edge ネットワーク。
+次の図は、新しい訪問者が初めてページにアクセスする場合の、訪問者、ブラウザー、at.js 2.5.0 以降、Akamai CDN および [!DNL Adobe Target] Edge Network間のインタラクションを示しています。 この図から得られるメリットは、JSON ルールアーティファクトが非同期でダウンロードされる一方で、決定は [!DNL Adobe Target] Edge Network を介して行われることです。
 
-この方法では、多数のアクティビティを含む可能性があるアーティファクトのサイズが、判定の待ち時間に悪影響を与えないようにします。 JSON ルールアーティファクトを同期的にダウンロードし、その後に決定をおこなう場合も、遅延に悪影響を与え、一貫性が失われる可能性があります。 したがって、ハイブリッド判定方法は、新しい訪問者に対して常にサーバー側で判定を呼び出し、JSON ルールアーティファクトが並行してキャッシュされるので、お勧めのベストプラクティスです。 以降のページ訪問と再訪問では、JSON ルールアーティファクトを通じて、キャッシュとメモリ内から決定がおこなわれます。
+このアプローチにより、多くのアクティビティを含む可能性のあるアーティファクトのサイズが、決定の待ち時間に悪影響を与えないようにします。 JSON ルールアーティファクトを同期的にダウンロードし、その後に決定を行うと、待ち時間に悪影響を及ぼす可能性があり、一貫性がなくなる場合があります。 したがって、ハイブリッド判定方法は、新しい訪問者の決定を常にサーバー側で呼び出すためのベストプラクティスの推奨事項です。JSON ルールのアーティファクトは並行してキャッシュされます。 以降のページ訪問および再来訪では、JSON ルールアーティファクトを通じてキャッシュとメモリ内から決定が行われます。
 
 （全幅に拡大するには、画像をクリックします）。
 
-![初回訪問者のハイブリッドフロー図](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/hybrid-first-time-visitor.png "初回訪問者のハイブリッドフロー図"){zoomable=&quot;yes&quot;}
+![ 初回訪問者用ハイブリッドフロー図 ](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/hybrid-first-time-visitor.png " 初回訪問者用ハイブリッドフロー図 "){zoomable="yes"}
 
-次のリストは、ダイアグラムの数値に対応しています。
+次のリストは、図の数値に対応します。
 
 >[!NOTE]
 >
->[!DNL Adobe Target] 管理サーバーは、に該当するすべてのアクティビティを認定します [!UICONTROL オンデバイス判定]を生成し、JSON ルールアーティファクトを生成して、Akamai CDN に反映します。 アクティビティで、Akamai CDN に反映される新しい JSON ルールアーティファクトを出力するための更新が継続的に監視されます。
+>管理サーバー [!DNL Adobe Target]、[!UICONTROL on-device decisioning] 用の対象となるすべてのアクティビティを選定し、JSON ルールアーティファクトを生成して、Akamai CDN に伝播します。 アクティビティは、Akamai CDN に伝播する新しい JSON ルールアーティファクトを出力するための更新について継続的に監視されます。
 
 | 手順 | 説明 |
 | --- | --- |
-| 1 | Experience Cloud訪問者 ID は、 [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
-| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されているオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
-| 3 | at.js ライブラリでは、ちらつきを防ぐために本文を非表示にします。 |
-| 4 | ページ読み込みリクエストが [!DNL Adobe Target] Edge ネットワーク（ECID、顧客 ID、カスタムパラメーター、ユーザープロファイルなど、設定済みのすべてのパラメーターを含む）。 |
-| 5 | 同時に、at.js は、訪問者に最も近い Akamai CDN から JSON ルールアーティファクトを取得するリクエストをおこないます。 |
-| 6 | ([!DNL Adobe Target] Edge Network) プロファイルスクリプトが実行されてから、プロファイルストアにフィードされます。 プロファイルストアは、オーディエンスライブラリから正規のオーディエンスをリクエストします ( 例えば、Adobe Analytics、Adobe Audience Managerなどから共有されたオーディエンス )。 |
-| 7 | Akamai CDN は、JSON ルールアーティファクトを使用して応答します。 |
-| 8 | プロファイルストアは、アクティビティをフィルタリングするために、オーディエンスの選定とグループ化に使用されます。 |
-| 9 | 結果のコンテンツは、エクスペリエンスがライブから判断された後に選択されます [!DNL Target] アクティビティ。 |
-| 10 | at.js ライブラリでは、レンダリングが必要なエクスペリエンスに関連付けられている、ページ上の対応する要素を非表示にします。 |
-| 11 | at.js ライブラリは、本文を表示し、訪問者が表示できるように、残りのページを読み込むことができます。 |
-| 12 | at.js ライブラリは DOM を操作して、 [!DNL Target] Edge ネットワーク。 |
-| 13 | エクスペリエンスが訪問者用にレンダリングされます。 |
+| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html) から取得されます。 |
+| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されたオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
+| 3 | at.js ライブラリは、ちらつきを防ぐために本文を非表示にします。 |
+| 4 | （ECID、顧客 ID、カスタムパラメーター、ユーザープロファイルなどの）設定済みのすべてのパラメーターを含むページ読み込みリクエストが [!DNL Adobe Target] Edge Networkに対して実行されます。 |
+| 5 | 同時に、at.js は、訪問者に最も近い Akamai CDN から JSON ルールアーティファクトを取得するリクエストを行います。 |
+| 6 | （[!DNL Adobe Target] Edge Network）プロファイルスクリプトが実行され、プロファイルストアにフィードされます。 プロファイルストアは、オーディエンスライブラリから選定オーディエンス（Adobe Analytics、Adobe Audience Managerなどから共有されたオーディエンスなど）をリクエストします。 |
+| 7 | Akamai CDN が JSON ルールアーティファクトで応答します。 |
+| 8 | プロファイルストアは、アクティビティをフィルタリングするためのオーディエンスの選定およびバケット化に使用されます。 |
+| 9 | 結果として生成されるコンテンツは、エクスペリエンスがライブ [!DNL Target] アクティビティから決定された後に選択されます。 |
+| 10 | at.js ライブラリは、レンダリングが必要なエクスペリエンスに関連付けられた、ページ上の対応する要素を非表示にします。 |
+| 11 | at.js ライブラリは、ページの残りを読み込んで訪問者が表示できるように本文を表示します。 |
+| 12 | at.js ライブラリは、DOM を操作して、[!DNL Target] Edge Networkーからエクスペリエンスをレンダリングします。 |
+| 13 | エクスペリエンスが訪問者向けにレンダリングされます。 |
 | 14 | Web ページ全体が読み込まれます。 |
-| 15 | Analytics データがデータ収集サーバーに送信されます。ターゲットデータは、SDID を使用して Analytics データに適合され、Analytics レポートストレージへと処理されます。[!DNL Target]Analytics for [!UICONTROL （A4T）レポートを使用して、Analytics データが Analytics および ]Target に表示できるようになります。 |
+| 15 | Analytics データはデータ収集サーバーに送信されます。 ターゲットデータは、SDID を介して Analytics データと照合され、Analytics レポートストレージで処理されます。 [!UICONTROL Analytics for Target] （A4T）レポートを使用して、Analytics データが Analytics と [!DNL Target] の両方に表示できるようになります。 |
 
-次の図は、後続のページナビゲーションまたは再訪問での、訪問者、ブラウザー、at.js 2.5.0 以降、キャッシュされた JSON ルールアーティファクト間のインタラクションを示しています。 この図では、後続のページナビゲーションまたは再訪問でデバイス上の決定がおこなわれる使用例にのみ焦点を当てます。 特定のページに対してどのアクティビティがライブになっているかに応じて、サーバー側の決定を実行するためにサーバー側の呼び出しがおこなわれる場合があることに注意してください。
+次の図は、訪問者、ブラウザー、at.js 2.5.0 以降および後続のページナビゲーションまたは再訪問のためのキャッシュされた JSON ルールアーティファクトの間のインタラクションを示しています。 この図では、後続のページナビゲーションや再来訪に対してデバイス上の決定が行われるユースケースにのみ焦点を当てています。 特定のページでライブになっているアクティビティに応じて、サーバーサイドの呼び出しを行ってサーバーサイドの決定を実行できます。
 
 （全幅に拡大するには、画像をクリックします）。
 
-![後続のページナビゲーションおよび繰り返し訪問に関するハイブリッドフロー図](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/hybrid-subsequent.png "後続のページナビゲーションおよび繰り返し訪問に関するハイブリッドフロー図"){zoomable=&quot;yes&quot;}
+![ 後続のページナビゲーションと繰り返し訪問のハイブリッドフロー図 ](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/hybrid-subsequent.png " 後続のページナビゲーションと繰り返し訪問のハイブリッドフロー図 "){zoomable="yes"}
 
-次のリストは、ダイアグラムの数値に対応しています。
+次のリストは、図の数値に対応します。
 
 >[!NOTE]
 >
->[!DNL Adobe Target] 管理サーバーは、に該当するすべてのアクティビティを認定します [!UICONTROL オンデバイス判定]を生成し、JSON ルールアーティファクトを生成して、Akamai CDN に反映します。 アクティビティで、Akamai CDN に反映される新しい JSON ルールアーティファクトを出力するための更新が継続的に監視されます。
+>管理サーバー [!DNL Adobe Target]、[!UICONTROL on-device decisioning] 用の対象となるすべてのアクティビティを選定し、JSON ルールアーティファクトを生成して、Akamai CDN に伝播します。 アクティビティは、Akamai CDN に伝播する新しい JSON ルールアーティファクトを出力するための更新について継続的に監視されます。
 
 | 手順 | 説明 |
 | --- | --- |
-| 1 | Experience Cloud訪問者 ID は、 [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
-| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されているオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
-| 3 | at.js ライブラリでは、ちらつきを防ぐために本文を非表示にします。 |
+| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html) から取得されます。 |
+| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されたオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
+| 3 | at.js ライブラリは、ちらつきを防ぐために本文を非表示にします。 |
 | 4 | エクスペリエンスを取得するリクエストが作成されます。 |
-| 5 | at.js ライブラリによって、JSON ルールアーティファクトが既にキャッシュされていることが確認され、メモリ内で決定を実行してエクスペリエンスを取得します。 |
-| 6 | テストされた要素は非表示になります。 |
-| 7 | at.js ライブラリは、本文を表示し、訪問者が表示できるように、残りのページを読み込むことができます。 |
-| 8 | at.js ライブラリは DOM を操作して、キャッシュされた JSON ルールアーティファクトからエクスペリエンスをレンダリングします。 |
-| 9 | エクスペリエンスが訪問者用にレンダリングされます。 |
+| 5 | at.js ライブラリは、JSON ルールアーティファクトが既にキャッシュされていることを確認し、エクスペリエンスを取得するためにメモリ内の決定を実行します。 |
+| 6 | テストされた要素は非表示です。 |
+| 7 | at.js ライブラリは、ページの残りを読み込んで訪問者が表示できるように本文を表示します。 |
+| 8 | at.js ライブラリは、DOM を操作して、キャッシュされた JSON ルールアーティファクトからエクスペリエンスをレンダリングします。 |
+| 9 | エクスペリエンスが訪問者向けにレンダリングされます。 |
 | 10 | Web ページ全体が読み込まれます。 |
-| 11 | Analytics データがデータ収集サーバーに送信されます。ターゲットデータは、SDID を使用して Analytics データに適合され、Analytics レポートストレージへと処理されます。[!DNL Target]Analytics for [!UICONTROL （A4T）レポートを使用して、Analytics データが Analytics および ]Target に表示できるようになります。 |
+| 11 | Analytics データはデータ収集サーバーに送信されます。 ターゲットデータは、SDID を介して Analytics データと照合され、Analytics レポートストレージで処理されます。 [!UICONTROL Analytics for Target] （A4T）レポートを使用して、Analytics データが Analytics と [!DNL Target] の両方に表示できるようになります。 |
 
-## 有効にする方法 [!UICONTROL オンデバイス判定]?
+## [!UICONTROL on-device decisioning] を有効にするにはどうすればよいですか？
 
-[!UICONTROL オンデバイス判定] は、すべてに対して使用できます [!DNL Target] at.js 2.5.0 以降を使用するお客様
+[!UICONTROL On-device decisioning] は、At.js 2.5.0 以降を使用するすべての [!DNL Target] ユーザーが利用できます。
 
-有効にするには [!UICONTROL オンデバイス判定]:
+[!UICONTROL on-device decisioning] を有効にするには：
 
 >[!NOTE]
 >
->管理者または承認者が必要です [ユーザーロール](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) :「オンデバイス判定」切り替えを有効または無効にします。
+>オンデバイス判定の切り替えを有効または無効にするには、管理者または承認者 [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) が必要です。
 
-1. クリック **[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]**.
-1. の下 **[!UICONTROL アカウントの詳細]**、スライド **[!UICONTROL オンデバイス判定]** 「オン」の位置に切り替えます。
+1. **[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Account details]** をクリックします。
+1. **[!UICONTROL Account details]** の下で、**[!UICONTROL On-Device Decisioning]** トグルを「オン」の位置にスライドします。
 
-   ![[!UICONTROL オンデバイス判定] トグル](assets/on-device-decisioning-toggle.png)
+   切 ![[!UICONTROL On-device decisioning] 替え ](assets/on-device-decisioning-toggle.png)
 
-   「既存のすべての [!UICONTROL オンデバイス判定] 「アーティファクト内の認定済みアクティビティ」オプションは、 [!UICONTROL オンデバイス判定].
-1. （条件付き）すべてをライブにする場合は、切り替えを「オン」の位置にスライドさせます。 [!DNL Target] 条件を満たすアクティビティ [!UICONTROL オンデバイス判定] を自動的にアーティファクトに含めます。
+   [!UICONTROL on-device decisioning] を有効にすると、「既存のすべて [!UICONTROL on-device decisioning] 適格なアクティビティをアーティファクトに含める」オプションが表示されます。
+1. （条件付き）オンの対象となるすべてのライブ [!DNL Target] アクティビティをアーティファクトに自動的に含める場合は、切り替えスイッチを「[!UICONTROL on-device decisioning]」の位置にスライドします。
 
-   この切り替えをオフにした場合は、次の項目を再作成してアクティブ化する必要があります。 [!UICONTROL オンデバイス判定] アクティビティを生成し、ルールアーティファクトに含める必要があります。 つまり、「オンデバイス判定」切り替えをオンにする前のライブ状態のアクティビティは、ルールアーティファクトには含まれません。
+   このトグルをオフのままにすると、生成されたルールアーティファクトに含めるには、[!UICONTROL on-device decisioning] のアクティビティを再作成してアクティブ化する必要があります。 つまり、「オンデバイス判定」切り替えスイッチをオンにする前にライブ状態になっていたアクティビティは、ルールアーティファクトに含まれません。
 
-「オンデバイス判定」切り替えを有効にした後、 [!DNL Target] 生成と伝播を開始 [ルールアーティファクト](/help/dev/implement/client-side/atjs/on-device-decisioning/rule-artifact.md) を設定します。
+オンデバイス判定トグルを有効に [!DNL Target] ると、クライアントの [ ルールアーティファクト ](/help/dev/implement/client-side/atjs/on-device-decisioning/rule-artifact.md) の生成と伝播が開始されます。
 
 >[!WARNING]
 >
->初期化の前に、必ず切り替えを有効にしてください [!DNL Adobe Target] 使用する SDK [!UICONTROL オンデバイス判定]. ルールアーティファクトは、まず、生成して Akamai CDN に反映する必要があります ( [!UICONTROL オンデバイス判定] を有効にします。 最初のルールアーティファクトが生成されて Akamai CDN に反映されるまで、伝播には 5～10 分かかる場合があります。
+>[!UICONTROL on-device decisioning] を使用するように [!DNL Adobe Target] SDK を初期化する前に、必ず切り替えスイッチを有効にします。 ルールアーティファクトを生成して Akamai CDN に反映させると、[!UICONTROL on-device decisioning] が機能するようになります。 最初のルールアーティファクトが生成されて Akamai CDN に伝播されるまでに、伝播に 5 ～ 10 分かかる場合があります。
 
-## at.js 2.5.0 以降で [!UICONTROL オンデバイス判定]?
+## at.js 2.5.0 以降で [!UICONTROL on-device decisioning] を使用するように設定するにはどうすればよいですか？
 
-1. クリック **[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]**.
-1. の下 **[!UICONTROL 実装方法]** > **[!UICONTROL 主な実装方法]**&#x200B;をクリックし、 **[!UICONTROL 編集]** を at.js バージョンの横に置きます（at.js 2.5.0 以降にする必要があります）。
+1. **[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Account details]** をクリックします。
+1. **[!UICONTROL Implementation Methods]**/**[!UICONTROL Main Implementation Method]** で、at.js バージョンの横にある「**[!UICONTROL Edit]**」をクリックします（at.js 2.5.0 以降である必要があります）。
 
-   ![主な実装方法設定の編集](assets/main-implementation-method.png)
+   ![ メインの実装方法の設定の編集 ](assets/main-implementation-method.png)
 
    >[!WARNING]
    >
-   >これらのデフォルト設定を変更する前に、現在の実装に影響を与えないように、ClientCare にお問い合わせください。
+   >これらのデフォルト設定を変更する前に、現在の実装に影響を与えないよう、Client Care にお問い合わせください。
 
 1. 目的の判定方法を選択します。
 
@@ -258,11 +258,11 @@ JSON ルールのアーティファクトには、mbox がサーバー側のア�
    * オンデバイスのみ
    * ハイブリッド
 
-   ![at.js 設定パネルを編集](assets/global-settings.png)
+   ![at.js 設定パネルを編集 ](assets/global-settings.png)
 
 ### グローバル設定
 
-すべての [!DNL Target] 決定。 様々な判定方法は、サーバー側のみ、オンデバイスのみ、ハイブリッドです。 選択された判定方法 ( [!DNL Target] UI はで設定されます。 `window.targetGlobalSettings` の下に `decisioningMethod` フィールドに入力します。 詳しくは、 `decisioningMethod` in [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#decisioningmethod).
+すべての決定に対してデフォルトの判定方法 [!DNL Target] 設定できます。 様々な判定方法として、サーバー側のみ、オンデバイスのみ、ハイブリッドがあります。 [!DNL Target] UI で選択された判定方法は、`decisioningMethod` フィールドの下の `window.targetGlobalSettings` で設定されます。 `decisioningMethod` について詳しくは、[targetGlobalSettings （） ](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#decisioningmethod) を参照してください。
 
 ```javascript {line-numbers="true"}
 <head> 
@@ -282,7 +282,7 @@ JSON ルールのアーティファクトには、mbox がサーバー側のア�
 
 ### カスタマイズされた設定
 
-次の場合、 `decisioningMethod` in `window.targetGlobalSettings`を返しますが、 `decisioningMethod` 次の期間 [!DNL Adobe Target] ユースケースに従った決定では、以下の項目を指定してこの手順を実行できます。 `decisioningMethod` at.js2.5.0 以降の [getOffers()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) を呼び出します。
+`window.targetGlobalSettings` で `decisioningMethod` を設定しても、ユースケースに従って各 [!DNL Adobe Target] 決定の `decisioningMethod` を上書きする場合は、At.js2.5.0 以降の [getOffers （） ](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) 呼び出しで `decisioningMethod` を指定することで、この手順を実行できます。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({ 
@@ -303,37 +303,37 @@ adobe.target.getOffers({
 
 >[!NOTE]
 >
->getOffers() 呼び出しで「オンデバイス」または「ハイブリッド」を判定メソッドとして使用するには、グローバル設定に `decisioningMethod` を「on-device」または「hybrid」として設定できます。 at.js ライブラリ 2.5.0 以降は、ページに読み込んだ直後に、JSON ルールアーティファクトをダウンロードしてキャッシュするかどうかを把握している必要があります。 グローバル設定の判定メソッドが「サーバー側」に設定され、「オンデバイス」または「ハイブリッド」の判定メソッドが getOffers() 呼び出しに渡された場合、at.js 2.5.0 以降では、JSON ルールアーティファクトがキャッシュされず、オンデバイスの判定が実行されます。
+>getOffers （）呼び出しで判定方法として「on-device」または「hybrid」を使用するには、グローバル設定が「on-device」または「hybrid」に `decisioningMethod` 定されていることを確認します。 at.js ライブラリ 2.5.0 以降では、ページに読み込んだ直後に、JSON ルールアーティファクトをダウンロードしてキャッシュするかどうかを知る必要があります。 グローバル設定の判定方法が「サーバー側」に設定され、「オンデバイス」または「ハイブリッド」の判定方法が getOffers （）呼び出しに渡された場合、at.js 2.5.0 以降では、オンデバイス判定を実行するために JSON ルールアーティファクトがキャッシュされません。
 
 ### アーティファクトキャッシュ TTL
 
-Target は、に適合するアクティビティを表します。 [!UICONTROL オンデバイス判定] は、メタデータ、ルール、条件で構成されるアーティファクトとして使用されます。 このアーティファクトは Akamai CDN 上にキャッシュされます。 ユーザーの初回訪問中に、ユーザーのブラウザーは、 [!UICONTROL オンデバイス判定] アクティビティ。
+Target は、メタデータ、ルールおよび条件で構成されるアーティファクトとして [!UICONTROL on-device decisioning] に適合するアクティビティを表します。 このアーティファクトは Akamai CDN にキャッシュされます。 ユーザーの初回の訪問時に、ユーザーのブラウザーが、[!UICONTROL on-device decisioning] のアクティビティを表すアーティファクトをダウンロードしてキャッシュします。
 
-その後のサイト訪問時に、ブラウザーは、新しいバージョンのアーティファクトをダウンロードする必要があるかどうかを自動的に確認します。 このチェックは待ち時間を追加します。 アーティファクトキャッシュの TTL は、最後に正常にダウンロードされてからの更新済みアーティファクトをブラウザーで確認しない分数を定義します。 期間が長いほど、パフォーマンスが向上します。 時間枠が短いほど、データの鮮度が向上しますが、待ち時間が長くなります。
+その後サイトに訪問すると、ブラウザーはアーティファクトの新しいバージョンをダウンロードする必要があるかどうかを自動的に確認します。 このチェックにより、待ち時間が追加されます。 アーティファクトキャッシュ TTL は、最後に成功したダウンロード以降に更新されたアーティファクトをブラウザーがチェックしないようにする時間（分）を定義します。 期間が長いほど、パフォーマンスが向上します。 時間枠が短いほど、データの鮮度は高くなりますが、待ち時間が追加されるというコストがかかります。
 
-## アクティビティが [!UICONTROL オンデバイス判定] 適格か？
+## アクティビティが実施要件を満たしていることを確認するにはどうすればよ [!UICONTROL on-device decisioning] ですか？
 
-次の条件を満たすアクティビティを作成した後、 [!UICONTROL オンデバイス判定] 有効。デバイス判定有効と読み取られたラベルは、アクティビティの概要ページに表示されます。
+実施要件を満たしてい [!UICONTROL on-device decisioning] いアクティビティを作成すると、オンデバイス判定が実施要件を満たしていることを示すラベルがアクティビティの概要ページに表示されます。
 
-![アクティビティの概要ページのオンデバイス判定対象ラベル。](assets/on-device-decisioning-eligible-label.png)
+![ アクティビティの概要ページのオンデバイス判定の実施要件ラベル。](assets/on-device-decisioning-eligible-label.png)
 
-このラベルは、アクティビティが常に [!UICONTROL オンデバイス判定]. at.js 2.5.0 以降が [!UICONTROL オンデバイス判定] このアクティビティは、デバイス上で実行されます。 at.js 2.5.0 以降がオンデバイスを使用するように設定されていない場合、このアクティビティは、at.js からおこなわれるサーバー呼び出しを介して引き続き配信されます。
+このラベルは、アクティビティが常に [!UICONTROL on-device decisioning] 経由で配信されるとは限りません。 at.js 2.5.0 以降が [!UICONTROL on-device decisioning] を使用するように設定されている場合にのみ、このアクティビティはデバイス上で実行されます。 at.js 2.5.0 以降がオンデバイスを使用するように設定されていない場合、このアクティビティは、at.js から行われるサーバー呼び出しを使用して引き続き配信されます。
 
-次の条件を満たすすべてのアクティビティに対してフィルターを適用できます [!UICONTROL オンデバイス判定] は、 On-Device Decisioning Eligible フィルターを介してアクティビティページで有効です。
+オンデバイス判定実施要件フィルターを使用すると、アクティビティページで実施要件を満たしてい [!UICONTROL on-device decisioning] いすべてのアクティビティをフィルタリングできます。
 
-![アクティビティページのオンデバイス判定対象フィルター。](assets/on-device-decisioning-filter.png)
+![ アクティビティページのオンデバイス判定の実施要件フィルター。](assets/on-device-decisioning-filter.png)
 
 >[!NOTE]
 >
->次のアクティビティを作成してアクティブ化した後： [!UICONTROL オンデバイス判定] 有効な場合は、生成され Akamai CDN の POP（臨場感点）に反映されるルールアーティファクトに含められるまでに 5～10 分かかる場合があります。
+>実施要件を満た [!UICONTROL on-device decisioning] いアクティビティを作成してアクティブ化した後、生成されて Akamai CDN POS （POS）に伝播されるルールアーティファクトに含まれるまでに 5 ～ 10 分かかる場合があります。
 
-## 次を確実にする手順の概要 [!UICONTROL オンデバイス判定] アクティビティは、at.js 2.5.0 を使用して配信されます+?
+## [!UICONTROL on-device decisioning] アクティビティが At.js 2.5.0 を介して確実に配信されるようにする手順の概要+?
 
-1. 次にアクセス： [!DNL Adobe Target] UI を開き、に移動します。 **[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]** 有効にする **[!UICONTROL オンデバイス判定]** 切り替え
-1. を有効にします。 **[!UICONTROL &quot;既存のすべてを含める [!UICONTROL オンデバイス判定] アーティファクト内の適格なアクティビティ»]** 切り替え
+1. [!DNL Adobe Target] UI にアクセスし、**[!UICONTROL Administration]** / **[!UICONTROL Implementation]** / **[!UICONTROL Account Details]** に移動して「**[!UICONTROL On-Device Decisioning]**」切り替えスイッチを有効にします。
+1. 「**[!UICONTROL "Include all existing [!UICONTROL on-device decisioning] qualified activities in the artifact"]**」切替スイッチを有効にします。
 
-   最初の JSON ルールアーティファクトの生成には、最大 10 分かかる場合があります。
+   最初の JSON ルールのアーティファクトの生成には、最大 10 分かかることがあります。
 
-1. の作成とアクティブ化 [次の条件でサポートされるアクティビティタイプ： [!UICONTROL オンデバイス判定]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md)を確認し、 [!UICONTROL オンデバイス判定] 適格。
-1. を設定します。 **[!UICONTROL 判定方法]** 次のいずれかを実行します。 **[!UICONTROL &quot;ハイブリッド&quot;]** または **[!UICONTROL &quot;On-device only&quot;]** at.js 設定 UI を使用します。
-1. ページに at.js 2.5.0 以降をダウンロードしてデプロイします。
+1. [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) でサポートされている [ アクティビティタイプを作成してアクティブ化し、適格 [!UICONTROL on-device decisioning] あることを確認します。
+1. at.js 設定 UI を使用して、**[!UICONTROL Decisioning Method]** を **[!UICONTROL "Hybrid"]** または **[!UICONTROL "On-device only"]** に設定します。
+1. At.js 2.5.0 以降をダウンロードしてページにデプロイします。

@@ -1,22 +1,22 @@
 ---
-title: Experience CloudID(ECID) サービス
-description: ただし、 [!DNL Target] コンテンツを取得するための SDK [!DNL Target] は、 [!UICONTROL Experience CloudID] ユーザートラッキング用の (ECID) は、Adobeを超えて拡張されます [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] 製品と機能 (A4T レポートや [!DNL Adobe Audience Manager] (AAM) セグメント。
+title: Experience CloudID （ECID）サービス
+description: ' [!DNL Target] SDK を使用してからコンテンツを取得する  [!DNL Target]  は強力ですが、[!UICONTROL Experience Cloud ID] （ECID）をユーザートラッキングに使用する付加価値は、A4T レポートや  [!DNL Adobe Audience Manager]  （AAM）セグメントなどのAdobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud]  製品および機能を超えます。'
 exl-id: fd7e5c3e-51c1-4965-ab6a-f50a6b0c910b
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 1%
+source-wordcount: '264'
+ht-degree: 0%
 
 ---
 
-# [!UICONTROL Experience CloudID] (ECID) サービス
+# [!UICONTROL Experience Cloud ID] （ECID）サービス
 
-## [!UICONTROL Experience CloudID] (ECID) 統合
+## [!UICONTROL Experience Cloud ID] （ECID）統合
 
-ただし、 [!DNL Target] コンテンツを取得するための SDK [!DNL Target] は、 [!UICONTROL Experience CloudID] ユーザートラッキング用の (ECID) は、 [!DNL Adobe Target]. ECID を使用すると、 [!DNL Adobe Experience Cloud] 製品と機能 (A4T レポートや [!DNL Adobe Audience Manager] (AAM) セグメント。
+[!DNL Target] からのコンテンツの取得に [!DNL Target] SDK を使用すると強力になる場合がありますが、ユーザートラッキングに [!UICONTROL Experience Cloud ID] （ECID）を使用する付加価値は [!DNL Adobe Target] を超えて拡大します。 ECID を使用すると、A4T レポートおよび [!DNL Adobe Audience Manager] （AAM）セグメントなど、[!DNL Adobe Experience Cloud] の製品および機能を活用できます。
 
-ECID は、 `visitor.js`：独自の状態を維持します。 The `visitor.js` ファイルが次の名前の cookie を作成： `AMCV_{organizationId}`（で使用） [!DNL Target] ECID 統合用の SDK。 次の場合に [!DNL Target] 応答が返されたら、クライアント側の Visitor インスタンスを次のように更新する必要があります。 `thevisitorState` 返される [!DNL Target] SDK.
+ECID は、`visitor.js` によって生成および管理され、独自の状態を維持します。 `visitor.js` ファイルは、ECID 統合のために [!DNL Target] SDK で使用される `AMCV_{organizationId}` という名前の cookie を作成します。 [!DNL Target] 応答が返されたら、[!DNL Target] SDK から返された `thevisitorState` で、クライアントサイドの訪問者インスタンスを更新する必要があります。
 
 ```html {line-numbers="true"}
 <!doctype html>
@@ -156,9 +156,9 @@ public class TargetControllerSample {
 
 >[!ENDTABS]
 
-## ECID と顧客 ID の統合
+## 顧客 ID 統合を使用した ECID
 
-訪問者のユーザーアカウントとログインステータスの詳細を追跡するには、次の手順を実行します。 `customerIds` 経由で通過する可能性がある [!DNL Target] SDK.
+訪問者ユーザーアカウントとログインステータスの詳細を追跡するために、`customerIds` は [!DNL Target] SDK を介して渡すことができます。
 
 ```html {line-numbers="true"
 <!doctype html>
@@ -307,18 +307,18 @@ public class TargetControllerSample {
 
 >[!ENDTABS]
 
-## ECID および [!DNL Analytics] 統合
+## ECID と [!DNL Analytics] の統合
 
-を最大限に活用するには、以下を実行します。 [!DNL Target] SDK を使用し、 [!DNL Adobe Analytics]を使用すると、ECID 全体で統合を使用できます。 [!DNL Analytics]、および [!DNL Target].
+[!DNL Target] SDK を最大限に活用し、[!DNL Adobe Analytics] が提供する強力な分析機能を使用するには、ECID、[!DNL Analytics]、[!DNL Target] 間の統合を使用できます。
 
-ECID 間での統合の使用 [!DNL Analytics]、および [!DNL Target] 以下を実行できます。
+ECID、[!DNL Analytics]、[!DNL Target] 間で統合を使用すると、次のことができます。
 
-* Adobe Audience Manager(AAM) のセグメントの使用
-* から取得したコンテンツに基づいてユーザーエクスペリエンスをカスタマイズする [!DNL Target]
-* すべてのイベントと成功指標が [!DNL Analytics]
-* 用途 [!DNL Analytics]&#39;強力なクエリとその優れたレポートビジュアライゼーションのメリット
+* Adobe Audience Manager（AAM）のセグメントの使用
+* [!DNL Target] から取得したコンテンツに基づいてユーザーエクスペリエンスをカスタマイズする
+* すべてのイベントと成功指標が [!DNL Analytics] に収集されていることを確認します。
+* [!DNL Analytics] の強力なクエリを使用して、素晴らしいレポートビジュアライゼーションを活用します
 
-ECID 間の統合 [!DNL Analytics]、および [!DNL Target] サーバー側での analytics に対する特別な処理は不要です。 代わりに、ECID を統合したら、を追加します。 `AppMeasurement.js` ([!DNL Analytics] ライブラリ ) をクライアント側で確認できます。 [!DNL Analytics] 次に、訪問者インスタンスを使用して [!DNL Target].
+ECID、[!DNL Analytics]、[!DNL Target] 間の統合では、サーバーサイドでの分析に特別な処理は必要ありません。 代わりに、ECID を統合したら、クライアント側で `AppMeasurement.js` （[!DNL Analytics] ライブラリ）を追加します。 次に [!DNL Analytics] 訪問者インスタンスを使用して [!DNL Target] と同期します。
 
 ```html {line-numbers="true"}
 <!doctype html>

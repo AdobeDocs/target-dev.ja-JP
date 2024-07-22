@@ -1,13 +1,13 @@
 ---
-keywords: adobe.target.applyOffers, applyOffers, applyoffers, apply offers, at.js，関数，
-description: 以下を使用します。 [!UICONTROL adobe.target.applyOffers()] 関数 [!DNL Adobe Target] at.js JavaScript ライブラリを使用して、応答に複数のオファーを適用することができます。 (at.js 2.x)
-title: 使用方法 [!UICONTROL adobe.target.applyOffers()] 機能？
+keywords: adobe.target.applyOffers, applyOffers, applyoffers, apply offers, at.js，関数，関数，
+description: at.js JavaScript ライブラリの [!UICONTROL adobe.target.applyOffers()] 関数を使用して  [!DNL Adobe Target]  複数のオファーを応答に適用します。 （at.js 2.x）
+title: '[!UICONTROL adobe.target.applyOffers()] 関数の使用方法'
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '813'
-ht-degree: 85%
+source-wordcount: '808'
+ht-degree: 82%
 
 ---
 
@@ -17,18 +17,18 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->この関数は at.js 2.*x*.この関数は at.js バージョン 1 では使用できません。*x*.
+>この関数は at.js 2 で導入されました。*x* を通じてクロスドメイントラッキングを使用している場合です。この関数は at.js バージョン 1 では使用できません。*x*.
 
 | キー | タイプ | 必須？ | 説明 |
 | --- | --- | --- | --- |
-| selector | 文字列 | × | [!DNL Target] がオファーコンテンツを配置する必要がある HTML 要素を特定するために使用される HTML 要素または CSS セレクター。セレクターが指定されていない場合、 [!DNL Target] は、使用するHTML要素がHTMLHEADであると仮定します。 |
+| selector | 文字列 | × | [!DNL Target] がオファーコンテンツを配置する必要がある HTML 要素を特定するために使用される HTML 要素または CSS セレクター。セレクターがない場合、[!DNL Target] は使用するHTMLHEADがHTML要素であると見なします。 |
 | 応答 | オブジェクト | ○ | `getOffers()` からのレスポンスオブジェクト。<br />下の「リクエスト」の表を参照してください。 |
 
 ## 応答
 
 >[!NOTE]
 >
->詳しくは、 [Delivery API ドキュメント](/help/dev/implement/delivery-api/overview.md) を参照してください。
+>以下に示すすべてのフィールドで使用可能なタイプについて詳しくは、[ 配信 API ドキュメント ](/help/dev/implement/delivery-api/overview.md) を参照してください。
 
 | フィールド名 | 説明 |
 | --- | --- |
@@ -36,7 +36,7 @@ ht-degree: 85%
 | response > prefetch > views > options > type | オプションのタイプ。「コンテンツ」フィールドのタイプを反映します。サポートされているタイプはアクションです。 |
 | response > prefetch > views > state | ビューの表示通知で転送する必要がある不透明なビューステートトークン。 |
 | response > prefetch > views > options > responseTokens | 現在のオプションの処理時に収集された `responseTokens` のマップが含まれています。 |
-| response > prefetch > views > analytics > payload | [!DNL Analytics]ビューが適用された後に に送信される必要があるクライアントサイド統合のための ペイロード。[!DNL Analytics] |
+| response > prefetch > views > analytics > payload | 表示 [!DNL Analytics] 適用した後に [!DNL Analytics] に送信する必要があるクライアントサイド統合用のペイロード。 |
 | response > prefetch > views > trace | ビューごとのプリフェッチコールの全トレースデータを含むオブジェクト。<br />トレースオブジェクトにはトレースのバージョンも含まれます。<br />トレースオブジェクトには、現在のビューの詳細も含まれます。 |
 | response > prefetch > views > options > eventToken | イベントログはオプションごとに実行されます。適用されるオプションごとに、それぞれのイベントトークンを通知トークンのリストに追加する必要があります。注意： ビューは複数のオプションで構成されています。すべてのオプションの適用および表示されている場合、通知にすべての `eventTokens` を含める必要があります。 |
 | response > prefetch > views > name | 人間が解読可能な形式のビュー名。 |
@@ -61,16 +61,16 @@ ht-degree: 85%
 | response > execute > mboxes > mbox > metrics | `clickThrough` 指標のリストが含まれています。 |
 | response > execute > mboxes > mbox > mbox | mbox の名前。 |
 | response > execute > mboxes > mbox >index | レスポンスが、リクエストからのこのインデックスを持つ mbox に対するものであることを示します。 |
-| response > execute > mboxes > mbox > analytics > payload | [!DNL Analytics]mbox の適用後に に送信する必要がある、クライアントサイド統合用の ペイロード[!DNL Analytics]（「A4T が有効なキャンペーン」セクションを参照してください） |
+| response > execute > mboxes > mbox > analytics > payload | mbox の適用後に [!DNL Analytics] に送信する必要があるクライアントサイド統合用の [!DNL Analytics] ペイロード。 （「A4T が有効なキャンペーン」セクションを参照してください） |
 | response > execute > mboxes | 実行された mbox のリスト。 |
 | response > execute > pageLoad > options > content | 注意：「オプション」の内容は明確に定義されておらず、オプションのタイプ／テンプレートの構造に直接依存しています。 |
 | response > execute > pageLoad > options > type | オプションのタイプ。「コンテンツ」フィールドのタイプを反映します。サポートされているタイプは、html、redirect、JSON、dynamic、および action です。 |
 | response > execute > pageLoad > options | ビューでグループ化されていないオプション（target-global-mbox およびビューでグループ化されていないビューを持つアクティビティのオプション）。 |
 | response > execute > pageLoad > metrics | 特定のビューに属していないクリック指標。 |
 | response > execute > pageLoad > trace | pageLoad リクエストのすべてのトレースデータを含むオブジェクト。 |
-| response > execute > pageLoad > analytics > payload | [!DNL Analytics]ページロードコンテンツが適用された後に に送信する必要がある、クライアントサイド統合用の ペイロード。[!DNL Analytics]（「A4T が有効なキャンペーン」セクションを参照してください） |
+| response > execute > pageLoad > analytics > payload | ペ [!DNL Analytics] ジ読み込みコンテンツの適用後に [!DNL Analytics] に送信する必要があるクライアントサイド統合用のペイロード。 （「A4T が有効なキャンペーン」セクションを参照してください） |
 
-## 例 [!UICONTROL applyOffers()] 呼び出し
+## 呼び出 [!UICONTROL applyOffers()] 例
 
 ```javascript {line-numbers="true"}
 adobe.target.applyOffers({response:{
@@ -107,7 +107,7 @@ adobe.target.applyOffers({response:{
 }});
 ```
 
-## と連携する Promise の呼び出し例 `[!UICONTROL getOffers()]` および `[!UICONTROL applyOffers()]`（これらの関数は Promise ベースなので）
+## `[!UICONTROL getOffers()]` および `[!UICONTROL applyOffers()]` を使用した Promise チェーンの呼び出しの例。これらの関数は Promise ベースであるためです。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({...})
@@ -116,9 +116,9 @@ adobe.target.getOffers({...})
 .catch(error => console.log("Error", error));
 ```
 
-getOffers() の使用方法のその他の例については、 getOffers を参照してください。 [ドキュメント](adobe-target-getoffers-atjs-2.md)
+getOffers （）の使用方法のその他の例については、getOffers [ ドキュメントを参照してください ](adobe-target-getoffers-atjs-2.md)
 
-### ページ読み込み要求の例
+### ページ読み込みリクエストの例
 
 
 ```javascript {line-numbers="true"}

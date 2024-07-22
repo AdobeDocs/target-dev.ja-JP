@@ -1,27 +1,27 @@
 ---
-keywords: グローバル mbox パラメーター， targetPageParams，クエリ文字列，配列， json, dtm
-description: の使用方法を学ぶ [!UICONTROL targetPageParams] 追加のターゲティングやコンテキスト情報をに渡す機能 [!DNL Adobe Target] グローバル mbox。
-title: グローバル mbox にパラメーターを渡す方法を教えてください。
+keywords: グローバル mbox パラメーター，targetPageParams, クエリ文字列，配列，json, dtm
+description: '[!UICONTROL targetPageParams] 関数を使用して、追加のターゲティングまたはコンテキスト情報をグローバル mbox に渡す方法を説明  [!DNL Adobe Target]  ます。'
+title: グローバル mbox にパラメーターを渡すにはどうすればよいですか？
 feature: at.js
 exl-id: 2a6be3e4-a618-4812-9e87-b01789705c40
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 65%
+source-wordcount: '370'
+ht-degree: 62%
 
 ---
 
 # グローバル mbox にパラメーターを渡す
 
-JavaScript `targetPageParams` 関数は、 [!DNL Adobe Target]. これは、追加のターゲティング/コンテキスト情報がに渡されるあらゆるシナリオで必要です。 [!DNL Target].
+JavaScript `targetPageParams` 関数は、[!DNL Adobe Target] のグローバル mbox にパラメーターを渡すために使用されます。 これは、追加のターゲティングやコンテキストの情報を [!DNL Target] に渡す必要があるすべてのシナリオで必要です。
 
 例えば、Recommendations アクティビティでは、表示されている現在の製品またはカテゴリを示すために、これらのパラメーターを使用します。
 
-JavaScript 関数を呼び出すコードは、グローバル mbox が at.js の一部として呼び出される場合でも、ページのグローバル mbox の前に記述する必要があります。これは、グローバル mbox がページのコードに手動で組み込まれる場合でも同様です。
+JavaScript関数を呼び出すコードは、グローバル mbox が at.js の一部として呼び出されるか、ページコードに手動で含まれているかに関係なく、ページ上のグローバル mbox の前に置く必要があります。
 
 >[!NOTE]
 >
->グローバル mbox だけでなく、ページ上のすべての mbox にパラメーターを追加する場合は、 [targetPageParamsAll()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md) 関数に置き換えます。
+>グローバル mbox だけでなく、ページ上のすべての mbox にパラメーターを追加する場合は、[targetPageParamsAll （） ](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md) 関数を使用します。
 
 次のいずれかの方法で、`targetPageParams()` 関数を使用して `target-global-mbox` にパラメーターを渡せます。
 
@@ -46,7 +46,7 @@ p1=v1&p2=v2&p3=hello%20world
 
   この例では、p3 の値は `hello world` です。この値は、URL エンコードされています。
 
-次のページコードの例を考えてみましょう。
+次のページコードの例について考えてみます。
 
 ```html {line-numbers="true"}
 <html> 
@@ -88,7 +88,7 @@ p1=v1&p2=v2&p3=hello%20world
 
 ## JSON
 
-JSON は、パラメーターを渡すための強力な機能を備えています。[!DNL Target] は、JSON オブジェクトのキーを使用して、複雑な構造をシンプルなパラメーターへとフラット化します。
+JSON は、パラメーターを渡すための強力な機能を備えています。[!DNL Target] では、JSON オブジェクトキーを使用して、複雑な構造を単純なパラメーターに統合します。
 
 ```json {line-numbers="true"}
 <!--window.-->targetPageParams = function() { 
@@ -111,5 +111,5 @@ JSON は、パラメーターを渡すための強力な機能を備えていま
 
 * a=1
 * b=2
-* `profile.memberStatus`=ゴールド
+* `profile.memberStatus`=Gold
 * `profile.country.city`=San Francisco

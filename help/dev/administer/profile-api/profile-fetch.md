@@ -1,85 +1,85 @@
 ---
-title: プロファイルを取得
-description: Adobe Target Profile API を使用して、で使用する訪問者データを取得する方法を説明します。 [!DNL Target].
+title: プロファイルの取得
+description: Adobe Target Profile API を使用して、 [!DNL Target] で使用する訪問者データを取得する方法を説明します。
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
 source-git-commit: b8ccfdcaff6aa17a325727df0a9ffd716e44519b
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
 
-# プロファイルを取得
+# プロファイルの取得
 
-A [!DNL Target] プロファイルは、次の 3 つの方法で取得できます。 `[!DNL Experience Cloud Visitor ID]` (`ECID`), `tntid` または `thirdPartyId`.
+[!DNL Target] プロファイルは、`[!DNL Experience Cloud Visitor ID]` （`ECID`）、`tntid`、`thirdPartyId` の 3 つの方法で取得できます。
 
-## の使用 [!DNL Experience Cloud Visitor ID] (ECID)
+## [!DNL Experience Cloud Visitor ID] （ECID）の使用
 
-に基づいてプロファイルを取得できます `ECID`. HTTP メソッドはGETです。
+`ECID` に基づいてプロファイルを取得できます。 HTTP メソッドはGETである必要があります。
 
-URL は、次の例のようになります。
+URL は次の例のようになります。
 
 ```
 https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
 ```
 
-置換 `<clientCode>` を [!DNL Target] [!UICONTROL クライアントコード] および `<ECID>` を [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID]) をクリックします。
+`<clientCode>` を [!DNL Target] [!UICONTROL Client Code] に、`<ECID>` を [!DNL Experience Cloud Visitor ID] （[!DNL Marketing Cloud Visitor ID]）に置き換えます。
 
 ## tntid の使用
 
-[!DNL Target] を自動的に割り当てる `tntid` リクエストごとに
+[!DNL Target] は、リクエストごとに自動的に `tntid` を割り当てます。
 
-次の例は、 `tntid`:
+`tntid` を使用してプロファイルを取得するリクエストの形式の例を次に示します。
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/your-tnt-id?client=<your-client-code>
 ```
 
-置換 `<your-client-code>` および `your-tnt-id` およびは、GETリクエストを実行します。 次に、を使用したプロファイル取得呼び出しの例を示します。 `tntid`:
+`<your-client-code>` と `your-tnt-id` を置き換えて、GETリクエストを実行します。 `tntid` を使用したプロファイル取得呼び出しの例を次に示します。
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?client=<your-client-code>
 ```
 
-## thirdPartyId の使用
+## サードパーティ ID の使用
 
-[!DNL Adobe Target] プロファイルは、独自の識別子 ( 例： CRM ID、 `uuid`、メンバーシップ番号など )。
+[!DNL Adobe Target] プロファイルは、独自の識別子（CRM ID、`uuid`、メンバーシップ番号など）で拡張できます。
 
-詳しくは、 [プロファイルを更新](/help/dev/administer/profile-api/profile-api-overview.md) をアタッチする方法を学ぶには `thirdPartyId` をプロファイルに追加します。
+プロファイルに `thirdPartyId` を添付する方法については、[ プロファイルの更新 ](/help/dev/administer/profile-api/profile-api-overview.md) を参照してください。
 
-次の例は、 `thirdPartyId`:
+`thirdPartyId` を使用してプロファイルを取得するリクエストの形式の例を次に示します。
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
-置換 `<your-client-code>` および `your-thirdpartyid` およびは、GETリクエストを実行します。 次に、を使用したプロファイル取得呼び出しの例を示します。 [!UICONTROL thirdpartyid]:
+`<your-client-code>` と `your-thirdpartyid` を置き換えて、GETリクエストを実行します。 [!UICONTROL thirdpartyid] を使用したプロファイル取得呼び出しの例を次に示します。
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
 ```
 
-この呼び出しがおこなわれると、 [!DNL Target] は、エッジリクエストで指定されたクラスター内の最初のプロファイルを探すか、プロファイルが配置されている場所にプロファイルを配置して、コンテンツを返します。 プロファイルコンテンツは JSON 形式で返されます。
+この呼び出しが行われると、[!DNL Target] は、エッジリクエストで示されたクラスター内、またはプロファイルが存在する場所で最初にプロファイルを見つけて、コンテンツを返そうとします。 プロファイルコンテンツは JSON 形式で返されます。
 
 ## Authentication
 
-The [!DNL Target Profile API] 認証をオンにすることで、セキュリティを確保できます。 [!DNL Target] ここで説明する UI。 認証がオンになったら、すべてのプロファイル API リクエストで、リクエストヘッダーにプロファイル認証トークンが設定されている必要があります。 トークン自体は、 [!DNL Target] UI または上記の手順 ( [プロファイル認証トークン](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} 」セクションに入力します。
+[!DNL Target Profile API] は、ここで説明するように、[!DNL Target] UI から認証をオンにすることで保護できます。 認証をオンにすると、すべてのプロファイル API リクエストのリクエストヘッダーにプロファイル認証トークンが設定される必要があります。 トークン自体は、[!DNL Target] UI を使用するか、前述の [ プロファイル認証トークン ](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} の節で説明している手順を使用して生成できます。
 
-## 計量
+## 計測
 
 これらの呼び出しは、mbox 呼び出しにはカウントされません。
 
 ## エラー処理
 
-への呼び出しの場合 `/thirdPartyId` 無効な、または期限切れの `thirdPartyId` 指定：
+`/thirdPartyId` への呼び出しで、無効な呼び出しまたは期限切れの `thirdPartyId` が指定された場合：
 
 ```
 {"status" : 404, "message" : "No profile found for client <client_code> with third party id=<third_party_id>"}
 ```
 
-プロファイルが見つからない場合、または期限切れの場合：
+プロファイルが見つからないか、有効期限が切れている場合：
 
 ```
 {"status" : 404, "message" : "No profile found for client <client_code> with mboxPC=<mbox_pc>"}

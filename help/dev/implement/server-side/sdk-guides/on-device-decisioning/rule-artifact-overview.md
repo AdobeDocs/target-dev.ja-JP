@@ -1,39 +1,39 @@
 ---
 title: オンデバイス判定ルールアーティファクトについて
-description: ルールアーティファクト（JSON 表現）の使用方法を説明します。 [!DNL Adobe Target] [!UICONTROL オンデバイス判定] アクティビティ。
+description: ' [!DNL Adobe Target] [!UICONTROL on-device decisioning] アクティビティの JSON 表現であるルールアーティファクトの使用方法を説明します。'
 feature: APIs/SDKs
 exl-id: 3dfb08df-eaa9-43d4-b009-e5f64c3a96d7
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
 
 # ルールアーティファクトの概要
 
-ルールアーティファクトは、 [!DNL Adobe Target] [!UICONTROL オンデバイス判定] アクティビティ。 これは次の方法で生成されます。 [!DNL Adobe Target] Akamai CDN に反映され、エンドユーザーにできる限り近い場所にルールアーティファクトが存在することを確認します。 アクティビティの正確な実行と配信を保証するメタデータと、イベントトラッキングを介したリアルタイムの分析を可能にするメタデータが含まれています。 The [!DNL Adobe Target] SDK は、ルールアーティファクトを自動的に管理できるように設定できます。ユーザーが指定した時間間隔に従って、SDK をダウンロードまたは更新できます。 さらに、のような分散メモリキャッシュシステムを使用して、ルールアーティファクトの独自のローカルコピーを維持することもできます。 [Memcached](https://memcached.org/) 初期設定 [!DNL Adobe Target] SDK を使用することで、ステートレスサーバーはリクエストを即座に処理できます。 これらのオプションの詳細については、次のガイドを参照してください。
+ルールアーティファクトは、[!DNL Adobe Target] [!UICONTROL on-device decisioning] アクティビティの JSON 表現です。 ルールは [!DNL Adobe Target] によって生成され、Akamai CDN に伝播されて、エンドユーザーにできるだけ近いルールアーティファクトが提供されるようにします。 アクティビティの正確な実行と配信を保証すると同時に、イベントトラッキングによるリアルタイム分析を可能にするメタデータが含まれています。 [!DNL Adobe Target] SDK は、ルールアーティファクトを自動管理できる方法で設定できます。これにより、ユーザー指定の時間間隔に従って SDK をダウンロードまたは更新できます。 さらに、[Memcached](https://memcached.org/) などの分散メモリキャッシュシステムを使用して、ルールアーティファクトの独自のローカルコピーを維持し、[!DNL Adobe Target] SDK を初期化することもできます。これにより、ステートレスサーバーがリクエストをすぐに処理できます。 これらのオプションについて詳しくは、次のガイドを参照してください。
 
-* [を使用したルールアーティファクトの自動的なダウンロード、保存および更新 [!DNL Adobe Target] SDK](rule-artifact-sdk.md)
+* [ [!DNL Adobe Target] SDK を使用したルールアーティファクトの自動ダウンロード、保存および更新](rule-artifact-sdk.md)
 * [JSON ペイロードを使用したルールアーティファクトのダウンロード、保存、更新](rule-artifact-json.md)
 
 ## ルールアーティファクトの例
 
-以下の例については、ここをクリックしてください： [ルールアーティファクト](rule-artifact-example.md).
+[ ルールアーティファクト ](rule-artifact-example.md) の例については、ここをクリックしてください。
 
-## クライアントのルールアーティファクトを表示する方法
+## クライアントのルールアーティファクトの表示方法
 
-トレースを有効にすると、次の追加情報が出力されます： [!DNL Adobe Target] ルールアーティファクトに関しては、具体的には URL です。
+トレースを有効にすると、ルールアーティファクト（特に URL）に関する追加情報が [!DNL Adobe Target] から出力されます。
 
 1. Target UI に移動します。
 
-   &lt;!— image-target-ui-1.png を挿入 —>
-   ![代替画像](assets/asset-rule-artifact-1.png)
+   &lt;!— image-target-ui-1.png の挿入 – >
+   ![alt 画像 ](assets/asset-rule-artifact-1.png)
 
-1. に移動します。 **[!UICONTROL 管理]** > **[!UICONTROL 実装]** をクリックします。 **[!UICONTROL 新しい認証トークンを生成]**.
+1. **[!UICONTROL Administration]**/**[!UICONTROL Implementation]** に移動し、「**[!UICONTROL Generate New Authorization Token]**」をクリックします。
 
-   &lt;!— image-target-ui-2.png を挿入 —>
-   ![代替画像](assets/asset-rule-artifact-2.png)
+   &lt;!— image-target-ui-2.png の挿入 – >
+   ![alt 画像 ](assets/asset-rule-artifact-2.png)
 
 1. 新しく生成された認証トークンをクリップボードにコピーし、Target リクエストに追加します。
 
@@ -50,7 +50,7 @@ ht-degree: 0%
    }};
    ```
 
-1. ターミナルを介して Target Trace を出力し、アーティファクトに関する詳細を表示します。 URL には、 `artifactLocation` 変数を使用します。
+1. アーティファクトに関する詳細を表示するには、ターミナルを介して Target Trace を出力します。 URL には、`artifactLocation` 変数を使用してアクセスできます。
 
    ```
    "trace": {

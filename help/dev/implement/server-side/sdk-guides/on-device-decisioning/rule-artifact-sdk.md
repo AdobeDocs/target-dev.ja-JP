@@ -1,18 +1,18 @@
 ---
-title: オンデバイス判定ルールアーティファクトを自動的にダウンロード、保存および更新します
-description: を初期化する際に、オンデバイス判定ルールアーティファクトを操作する方法を説明します。 [!DNL Adobe Target] SDK.
+title: オンデバイス判定ルールアーティファクトの自動的なダウンロード、保存、更新
+description: ' [!DNL Adobe Target] SDK の初期化中にオンデバイス判定ルールアーティファクトを操作する方法を説明します。'
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 1%
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
-# ルールアーティファクトのダウンロード、保存、更新を、 [!DNL Adobe Target] SDK
+# [!DNL Adobe Target] SDK を使用したルールアーティファクトの自動ダウンロード、保存および更新
 
-この方法は、 [!DNL Adobe Target] SDK は、Web サーバーを初期化して起動すると同時に使用します。 ルールアーティファクトは、 [!DNL Adobe Target] SDK およびメモリにキャッシュしてから、Web サーバーアプリケーションがリクエストの処理を開始します。 Web アプリケーションが起動して実行されたら、 [!DNL Adobe Target] 決定は、インメモリルールアーティファクトを使用して実行されます。 キャッシュされたルールアーティファクトは、 `pollingInterval` SDK の初期化手順の間にを指定します。
+Web サーバーの初期化と開始を同時に行いながら [!DNL Adobe Target] SDK を初期化できる場合は、この方法が最適です。 ルールアーティファクトは、web サーバーアプリケーションがリクエストの処理を開始する前に、[!DNL Adobe Target] SDK によってダウンロードされ、メモリにキャッシュされます。 Web アプリケーションが起動して実行されると、すべて [!DNL Adobe Target] 決定がメモリ内ルールアーティファクトを使用して実行されます。 キャッシュされたルールアーティファクトは、SDK 初期化手順で指定した `pollingInterval` に基づいて更新されます。
 
 ## 手順の概要
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 1. SDK の初期化
 1. ルールアーティファクトの保存と使用
 
-## 1. SDK をインストールします。
+## 1. SDK をインストールする
 
 >[!BEGINTABS]
 
@@ -42,9 +42,9 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2. SDK を初期化します
+## 2. SDK の初期化
 
-1. まず、SDK を読み込みます。 サーバーの起動を制御できる同じファイルにインポートします。
+1. まず、SDK を読み込みます。 サーバーの起動を制御できるのと同じファイルにを読み込みます。
 
    **Node.js**
 
@@ -59,7 +59,7 @@ npm i @adobe/target-nodejs-sdk -P
    import com.adobe.target.edge.client.TargetClient;
    ```
 
-1. SDK を設定するには、 create メソッドを使用します。
+1. SDK を設定するには、create メソッドを使用します。
 
    **Node.js**
 
@@ -92,14 +92,14 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. クライアント ID と組織 ID の両方を、 [!DNL Adobe Target] 移動して **[!UICONTROL 管理]** > **[!UICONTROL 実装]**、ここに示すように。
+1. ここに示すように、**[!UICONTROL Administration]** / **[!UICONTROL Implementation]** に移動すると、client と organizationId の両方を [!DNL Adobe Target] から取得できます。
 
-   &lt;!— image-client-code.png を挿入 —>
-   ![Target の管理の下の実装ページ](assets/asset-rule-artifact-3.png)
+   &lt;!— image-client-code.png を挿入 – >
+   ![Target 管理の実装ページ ](assets/asset-rule-artifact-3.png)
 
-## 3.ルールアーティファクトを保存して使用する
+## 3. ルールアーティファクトの保存と使用
 
-ルールアーティファクトを自分で管理する必要はなく、SDK メソッドの呼び出しは簡単である必要があります。
+ルールアーティファクトを自分で管理する必要はなく、SDK メソッドの呼び出しは簡単です。
 
 >[!BEGINTABS]
 
@@ -146,9 +146,9 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->上記のコードサンプルでは、 `TargetClient` オブジェクトは、メモリ内ルールアーティファクトへの参照を保持します。 このオブジェクトを使用して標準の SDK メソッドを呼び出すと、判定にメモリ内ルールアーティファクトが使用されます。 アプリケーションが、初期化およびクライアント要求をリッスンするファイル以外のファイルで SDK メソッドを呼び出す必要があり、これらのファイルが TargetClient オブジェクトにアクセスできない場合、JSON ペイロードをダウンロードし、SDK を初期化する必要があります。 次の項で、 [JSON ペイロードを使用したルールアーティファクトのダウンロード](rule-artifact-json.md).
+>上記のコードサンプルでは、`TargetClient` オブジェクトは、メモリ内ルールアーティファクトへの参照を保持します。 このオブジェクトを標準 SDK メソッドの呼び出しに使用する場合、決定にはメモリ内ルールアーティファクトが使用されます。 クライアントリクエストを初期化してリッスンするファイル以外のファイルで SDK メソッドを呼び出す必要がある構造のアプリケーションで、それらのファイルが TargetClient オブジェクトにアクセスできない場合、JSON ペイロードをダウンロードしてローカル JSON ファイルに保存し、他のファイルで使用して SDK を初期化する必要があるファイルに保存できます。 これについては、次の節 [JSON ペイロードを使用したルールアーティファクトのダウンロード ](rule-artifact-json.md) で説明します。
 
-以下に、 [!DNL Adobe Target] SDK.
+[!DNL Adobe Target] SDK を初期化した後に web アプリケーションを開始する例を次に示します。
 
 >[!BEGINTABS]
 

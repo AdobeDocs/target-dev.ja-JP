@@ -1,13 +1,13 @@
 ---
-keywords: registerExtension, registerextension，レジスタ拡張， at.js，関数， clientCode, serverDomain, globalMboxName, globalMboxAutoCreate, timeout, registerExtension2
-description: 以下を使用します。 [!UICONTROL registerExtension()] 関数 [!DNL Adobe Target] at.js JavaScript ライブラリを使用して、特定の拡張機能を登録します。 (at.js 1.x)
-title: 使用方法 [!UICONTROL registerExtension()] 機能？
+keywords: registerExtension, registerextension，登録拡張，at.js，関数，clientCode, serverDomain, globalMboxName, globalMboxAutoCreate, timeout, registerExtension2
+description: 特定の拡張機能を登録するには、at [!DNL Adobe Target] js JavaScript ライブラリの [!UICONTROL registerExtension()] 関数を使用します。 （at.js 1.x）
+title: '[!UICONTROL registerExtension()] 関数の使用方法'
 feature: at.js
 exl-id: 71decf00-84c5-4914-b0cd-bb061fa6265f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 76%
+source-wordcount: '265'
+ht-degree: 66%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->この関数は at.js バージョン 1.*x* のみで使用できます。この関数は at.js 2.*x*.at.js 2.x で使用する場合、この関数はデフォルトコンテンツを返します。
+>この関数は、at.js バージョン 1 で使用できます。*x* のみで使用できます。この関数は、at.js 2 のリリースで廃止されました。*x* を通じてクロスドメイントラッキングを使用している場合です。at.js 2.x で使用した場合、この関数はデフォルトコンテンツを返します。
 
 options パラメーターは必須で、以下の構造を持ちます。
 
@@ -32,7 +32,7 @@ options パラメーターは必須で、以下の構造を持ちます。
 * パラメーターのいずれかが指定されていない場合は、例外が発生します。
 * モジュール配列が空白の場合は、例外が発生します。
 
-`[!UICONTROL registerExtension]` の使用方法に関するその他の情報および例の詳細については、GitHub 上の「[Adobe Experience Cloud Target atjs Extensions](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions)」ページを参照してください。
+`[!UICONTROL registerExtension]` の使用方法の詳細と例については、GitHub の [Adobe Experience Cloud Target atjs Extensions](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions) ページを参照してください。
 
 ## モジュールメソッドの設定
 
@@ -40,7 +40,7 @@ options パラメーターは必須で、以下の構造を持ちます。
 |--- |--- |--- |
 | clientCode | 文字列 | クライアントコード |
 | serverDomain | 文字列 | Edge サーバードメイン |
-| globalMboxName | 文字列 | [!DNL Target] グローバル mbox 名 |
+| globalMboxName | 文字列 | グロ [!DNL Target] バル mbox 名 |
 | globalMboxAutoCreate | ブール値 | 自動作成が有効化されているかどうかを示します。 |
 | timeout | 数値 | リクエストのタイムアウト |
 

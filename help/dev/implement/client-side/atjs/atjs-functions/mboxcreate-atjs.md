@@ -1,13 +1,13 @@
 ---
-keywords: mboxCreate, mboxcreate, mbox create, at.js，関数
-description: 以下を使用します。 [!UICONTROL mboxCreate()] 関数 [!DNL Adobe Target] at.js JavaScript ライブラリを使用して、mboxDefault クラス名を持つ最も近い DIV にオファーを適用できます。 (at.js 1.x)
-title: 使用方法 [!UICONTROL mboxCreate()] 機能？
+keywords: mboxCreate, mboxcreate, mbox create, at.js，関数，関数
+description: at.js JavaScript ライブラリの [!UICONTROL mboxCreate()] 関数を使用して  [!DNL Adobe Target] mboxDefault クラス名を持つ最も近い DIV にオファーを適用します。 （at.js 1.x）
+title: '[!UICONTROL mboxCreate()] 関数の使用方法'
 feature: at.js
 exl-id: 86eba1fc-4e1d-4793-94e7-898bf81f8945
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 55%
+source-wordcount: '205'
+ht-degree: 52%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->この関数は at.js バージョン 1.*x* のみで使用できます。この関数は at.js 2.x のリリースで廃止されました。at.js 2.x で使用する場合、この関数はデフォルトコンテンツを返します。
+>この関数は、at.js バージョン 1 で使用できます。*x* のみで使用できます。この関数は at.js 2.x のリリースで廃止されました。at.js 2.x で使用する場合、この関数はデフォルトコンテンツを返します。
 
-この関数は、mbox.js（現在は非推奨）から at.js への移行の多くを簡単にするために、at.js に組み込まれています。 新しく `[!UICONTROL mboxCreate()]` に代わるものは、`[!UICONTROL adobe.target.applyOffer()]`/`[!UICONTROL adobe.target.getOffer()]` または Angular ディレクティブです。
+この関数は、mbox.js （現在は非推奨）から at.js への移行を容易にするために、主に at.js に組み込まれています。 新しく `[!UICONTROL mboxCreate()]` に代わるものは、`[!UICONTROL adobe.target.applyOffer()]`/`[!UICONTROL adobe.target.getOffer()]` または Angular ディレクティブです。
 
 ## 例
 
@@ -41,8 +41,8 @@ ht-degree: 55%
 
   例えば、サイトコードまたは後でページに表示される他の mbox によって使用される JavaScript 変数を設定するオファー。
 
-* 必ず `<div class="mboxDefault"></div>`呼び出し前 `[!UICONTROL mboxCreate()]`at.js によって追加されないので、できません。
+* at.js では追加されないので、`[!UICONTROL mboxCreate()]` を呼び出す前に `<div class="mboxDefault"></div>` を必ず用意してください。
 
 * 空の、ページの先頭にある `[!UICONTROL mboxCreate()]` 関数は、グローバル mbox としてお勧めしません。
 
-  at.js で自動作成されたグローバル mbox は、 `<head>` およびは、より早くコンテンツを返すことができます。
+  at.js に自動作成されたグローバル mbox は、`<head>` から起動してコンテンツを以前に返す可能性があるので、より優れたオプションです。

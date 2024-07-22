@@ -1,13 +1,13 @@
 ---
-keywords: ブラウザー，前提条件，要件， Internet Explorer, Chrome, Firefox, Safari, Android，サーフェス，ブラウザー 0
-description: どのインターネットブラウザーを使用しているかを学ぶ [!DNL Adobe Target] は、そのインターフェイスとコンテンツ配信をサポートしています。
-title: ブラウザーの機能 [!DNL Target] サポート？
+keywords: ブラウザー、前提条件、要件、internet explorer、chrome、firefox、safari、android、surface、Browsers0
+description: インターフェイスとコンテンツ配信  [!DNL Adobe Target]  どのインターネットブラウザーがサポートされているかについて説明します。
+title: はどのブラウザ  [!DNL Target]  をサポートしていますか？
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 44%
+source-wordcount: '350'
+ht-degree: 26%
 
 ---
 
@@ -15,16 +15,16 @@ ht-degree: 44%
 
 [!DNL Adobe Target] アプリケーションとコンテンツ配信は様々なブラウザーとデバイスでテストされています。
 
-TLS について詳しくは、 [TLS(Transport Layer Security) 暗号化の変更](tls-transport-layer-security-encryption.md).
+TLS について詳しくは、「[TLS （Transport Layer Security）暗号化の変更 ](tls-transport-layer-security-encryption.md)」を参照してください。
 
-## [!DNL Target]Standard／Premium インターフェイス
+## [!DNL Target] Standard/Premium インターフェイス
 
-The [!DNL Target] インターフェイスは、次のブラウザーおよびデバイスをサポートしています。
+[!DNL Target] インターフェイスは、次のブラウザーとデバイスをサポートしています。
 
 | デバイスタイプ | ブラウザーのバージョン |
 |--- |--- |
-| Windows | <ul><li>Microsoft Edge</li><li>Google Chrome（最新、最新の 1 つ前）</li><li>Mozilla Firefox（最新、最新の 1 つ前）</li></ul> |
-| Mac | <ul><li>Firefox（最新、最新の 1 つ前）</li><li>Chrome（最新、最新の 1 つ前）</li></ul> |
+| Windows | <ul><li>Microsoft Edge</li><li>GoogleChrome（最新、最新–1）</li><li>Mozilla Firefox （最新、最新–1）</li></ul> |
+| Mac | <ul><li>Firefox （最新、最新–1）</li><li>Chrome（最新、最新–1）</li></ul> |
 
 ## コンテンツ配信
 
@@ -32,13 +32,13 @@ The [!DNL Target] インターフェイスは、次のブラウザーおよび�
 
 | デバイスタイプ | ブラウザーのバージョン |
 |--- |--- |
-| Windows | <ul><li>Microsoft Internet Explorer 9 および 10. エミュレーションモードでテスト済み。**注意**:IE 9 でのコンテンツ配信は、at.js 1.3.0 以降ではサポートされなくなりました。 IE 10、11、およびすべての古いバージョンでのコンテンツ配信は、at.js 2.5.0（以降）ではサポートされなくなりました。</li><li>Internet Explorer 11. **注意**:IE 10、11、およびすべての古いバージョンでのコンテンツ配信は、at.js 2.5.0（以降）ではサポートされなくなりました。</li><li>Microsoft Edge</li><li>Chrome（最新、最新の 1 つ前）</li><li>Firefox（最新、最新の 1 つ前）</li></ul> |
-| Mac | <ul><li>Apple Safari（最新） **注意**： Safari でファーストパーティ Cookie とサードパーティ Cookie がどのように処理されるかについて詳しくは、「[Target の Cookie](../implement/client-side/atjs/atjs-cookies.md)」を参照してください。</li><li>Firefox（最新、最新の 1 つ前）</li><li>Chrome（最新、最新の 1 つ前）</li></ul> |
+| Windows | <ul><li>Microsoft Internet Explorer 9 および 10。 エミュレーションモードでテスト済み。**注意**:IE 9 でのコンテンツ配信は、at.js 1.3.0 （およびそれ以降）ではサポートされなくなりました。 IE 10、11、およびすべての旧バージョンでのコンテンツ配信は、at.js 2.5.0 （およびそれ以降）ではサポートされなくなりました。</li><li>Internet Explorer 11。 **注意**:IE 10、11 およびすべての旧バージョンでのコンテンツ配信は、at.js 2.5.0 （およびそれ以降）ではサポートされなくなりました。</li><li>Microsoft Edge</li><li>Chrome（最新、最新–1）</li><li>Firefox （最新、最新–1）</li></ul> |
+| Mac | <ul><li>Apple Safari （最新） **注意**:Safari でのファーストパーティおよびサードパーティ Cookie の処理方法について詳しくは、[Target Cookie](../implement/client-side/atjs/atjs-cookies.md) を参照してください。</li><li>Firefox （最新、最新–1）</li><li>Chrome（最新、最新–1）</li></ul> |
 | モバイル／タブレット | <ul><li>Apple iOS（最新）</li><li>Android デバイスおよびタブレット（Android 4 以降）</li><li>Microsoft Surface（Windows 8.1）</li></ul> |
 
 以下のことに注意してください。
 
-* at.js 実装の場合、 [!DNL Target] は、Internet Explorer の旧バージョンおよび上述のブラウザーの旧バージョンで、デフォルトコンテンツを表示します。
-* Internet Explorer は、すべての不明な要素（カスタム要素など）を同じ要素タイプとして扱います。 その結果、配信はカスタム要素では機能しません。
-* [!DNL Target] は、上述のリストに記載されていないブラウザーおよび[互換モード](https://en.wikipedia.org/wiki/Quirks_mode)を使用するブラウザーで、デフォルトコンテンツを表示します。at.js には、`<!DOCTYPE html>` など、標準モードでレンダリングを行う doctype が必要です。
-* [!DNL Adobe] Delivery インフラストラクチャの安全確保のために、2018 年 9 月 13 日以降、TLS 1.0 のデバイスおよびブラウザーはサポートされなくなっています。「[TLS（トランスポート層セキュリティ）暗号化の変更](../before-implement/tls-transport-layer-security-encryption.md)」を参照して、この変更による全体への影響について理解してください。
+* at.js 実装の場合、[!DNL Target] では、以前のバージョンの Internet Explorer と、場合によっては上記のブラウザーの以前のバージョンで、デフォルトコンテンツが表示されます。
+* Internet Explorer では、すべての不明な要素（カスタム要素など）は同じ要素タイプとして処理されます。 その結果、配信はカスタム要素では機能しません。
+* [!DNL Target] は、上記に示されていないブラウザーおよび [ 互換モード ](https://en.wikipedia.org/wiki/Quirks_mode) を使用しているブラウザーで、デフォルトコンテンツを表示します。 at.js には、`<!DOCTYPE html>` など、標準モードでレンダリングを行う doctype が必要です。
+* 配信インフラストラクチャ [!DNL Adobe]、2018 年 9 月 12 日（PT）以降、TLS 1.0 デバイスおよびブラウザーをサポートしないように保護されています。 「[TLS（トランスポート層セキュリティ）暗号化の変更](../before-implement/tls-transport-layer-security-encryption.md)」を参照して、この変更による全体への影響について理解してください。

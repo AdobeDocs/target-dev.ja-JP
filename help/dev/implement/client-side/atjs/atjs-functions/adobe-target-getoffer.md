@@ -1,19 +1,19 @@
 ---
-keywords: adobe.target.getOffer, getOffer, getoffer, get offer, at.js，関数， $8
-description: 以下を使用します。 [!UICONTROL adobe.target.getOffer()] 関数とそのオプション [!DNL Adobe Target] at.js ライブラリを使用して、 [!DNL Target] オファー。
-title: 使用方法 [!UICONTROL adobe.target.getOffer()] 機能？
+keywords: adobe.target.getOffer, getOffer, getoffer, get offer, at.js，関数，関数，$8
+description: '[!UICONTROL adobe.target.getOffer()] 関数とそのオプションを at [!DNL Adobe Target] js ライブラリに使用して、オファーを取得するリクエストを実行  [!DNL Target]  ます。'
+title: '[!UICONTROL adobe.target.getOffer()] 関数の使用方法'
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '460'
 ht-degree: 81%
 
 ---
 
 # [!DNL adobe.target.getOffer(options)]
 
-この関数は、 [!DNL Target] オファー。
+この関数は、[!DNL Target] しいオファーを取得するリクエストをトリガーします。
 
 `[!UICONTROL adobe.target.applyOffer()]` と併用して、応答を処理するか、独自の成功処理を使用します。options パラメーターは必須で、以下の構造を持ちます。
 
@@ -21,13 +21,13 @@ ht-degree: 81%
 |--- |--- |--- |--- |
 | mbox | 文字列 | ○ | mbox 名 |
 | params | オブジェクト | × | mbox パラメーター。次の構造を持つキーと値のペアのオブジェクト。<P>`{ "param1": "value1", "param2": "value2"}` |
-| success | 関数 | ○ | サーバーから応答を受け取ると、コールバックが実行されます。success コールバック関数は、オファーオブジェクトの配列を表す単一のパラメーターを受け取ります。次に success コールバックの例を示します。<P>`function handleSuccess(response){......}`<P>詳しくは、以下の「応答」を参照してください。 |
-| error | 関数 | ○ | エラーを受け取ると、コールバックが実行されます。エラーと見なされる状況がいくつかあります。<ul><li>HTTP ステータスコードが 200 OK ではない</li><li>応答が解析できない。例えば、脆弱な構造の JSON や、JSON ではなく HTML など。</li><li>応答には「エラー」キーが含まれます。例えば、危険にさらされて例外がスローされ、リクエストが適切に処理されない可能性があります。mbox がブロックされ、そのコンテンツを取得できないなどの場合にエラーが発生する可能性があります。error コールバック関数は、status と error の 2 つのパラメーターを受け取ります。次に error コールバックの例を示します。 `function handleError(status, error){......}`</li></ul>詳しくは、以下の「エラー応答」を参照してください。 |
-| timeout | 数値 | × | タイムアウト（ミリ秒）。指定しない場合は、at.js のデフォルトのタイムアウトが使用されます。<P>デフォルトのタイムアウトは、 [!DNL Target] 下の UI [!UICONTROL 管理] > [!UICONTROL 実装]. |
+| success | 関数 | ○ | サーバーから応答を受け取ると、コールバックが実行されます。success コールバック関数は、オファーオブジェクトの配列を表す単一のパラメーターを受け取ります。成功コールバックの例を次に示します。<P>`function handleSuccess(response){......}`<P>詳しくは、以下の「応答」を参照してください。 |
+| error | 関数 | ○ | エラーを受け取ると、コールバックが実行されます。エラーと見なされる状況がいくつかあります。<ul><li>HTTP ステータスコードが 200 OK ではない</li><li>応答が解析できない。例えば、脆弱な構造の JSON や、JSON ではなく HTML など。</li><li>応答には「エラー」キーが含まれます。例えば、危険にさらされて例外がスローされ、リクエストが適切に処理されない可能性があります。mbox がブロックされ、そのコンテンツを取得できないなどの場合にエラーが発生する可能性があります。error コールバック関数は、status と error の 2 つのパラメーターを受け取ります。エラーコールバックの例を次に示します。`function handleError(status, error){......}`</li></ul>詳しくは、以下の「エラー応答」を参照してください。 |
+| timeout | 数値 | × | タイムアウト（ミリ秒）。指定しない場合は、at.js のデフォルトのタイムアウトが使用されます。<P>デフォルトのタイムアウトは、[!DNL Target] UI の [!UICONTROL Administration] > [!UICONTROL Implementation] で設定できます。 |
 
 ## 例
 
-を使用したパラメーターの追加 [!UICONTROL getOffer()] およびを使用して [!UICONTROL applyOffer()] 成功処理の場合：
+[!UICONTROL getOffer()] を使用したパラメーターの追加と、成功処理での [!UICONTROL applyOffer()] の使用：
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -48,7 +48,7 @@ adobe.target.getOffer({
 });
 ```
 
-を使用したパラメーターとプロファイルパラメーターの追加 [!UICONTROL getOffer()] およびを使用して [!UICONTROL applyOffer()] 成功処理の場合：
+[!UICONTROL getOffer()] でのパラメーターおよびプロファイルパラメーターの追加、および成功処理での [!UICONTROL applyOffer()] の使用：
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -71,7 +71,7 @@ adobe.target.getOffer({
 });
 ```
 
-でのカスタムタイムアウトとカスタム成功処理の使用 [!UICONTROL getOffer()]:
+[!UICONTROL getOffer()] でのカスタムタイムアウトとカスタム成功処理の使用：
 
 「YOUR_OWN_CUSTOM_HANDLING_FUNCTION」は、お客様が定義する関数のプレースホルダーです。
 

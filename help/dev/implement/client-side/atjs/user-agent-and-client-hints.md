@@ -1,25 +1,25 @@
 ---
-keywords: at.js，ブラウザーユーザーエージェント，ユーザーエージェント，クライアントヒント，ユーザーエージェント
-description: Adobe Targetがユーザーエージェントとクライアントヒントを使用して、訪問者をセグメント化とパーソナライゼーションの対象として認定する方法について説明します。
+keywords: at.js, ブラウザー user agent, user agent, client hints, user-agent
+description: Adobe Targetが user-agent と Client Hints を使用して、セグメンテーションおよびパーソナライゼーションのために訪問者を選定する方法を説明します。
 title: User Agent と Client Hints
 feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 74%
+source-wordcount: '1162'
+ht-degree: 72%
 
 ---
 
 # User-agent と Client Hints
 
-Adobe Targetは、ユーザーエージェントを使用して、訪問者をセグメント化とパーソナライゼーションの対象に認定します。
+Adobe Targetは、user-agent を使用して、セグメンテーションおよびパーソナライゼーションのために訪問者を選定します。
 
 >[!NOTE]
 >
 >この記事の情報は、[at.js バージョン 2.9.0](target-atjs-versions.md)（またはそれ以降）に適用されます。
 
-Web ブラウザーがサーバーにリクエストをおこなうたびに、ブラウザーと、ブラウザーが実行される環境に関する情報がリクエストのヘッダーに含まれます。 インターネットの初期の頃から、このデータは、user-agent と呼ばれる単一の文字列で集計されています。
+Web ブラウザーからサーバーに対してリクエストが行われるたびに、リクエストのヘッダーにブラウザーに関する情報とブラウザーが実行されている環境が含まれます。 インターネットの初期の頃から、このデータは、user-agent と呼ばれる単一の文字列で集計されています。
 
 以下のテキストに、Safari ブラウザーを使用する Mac OS X ベースのコンピューターの user-agent の例を示します。
 
@@ -44,11 +44,11 @@ user-agent 文字列に含まれるブラウザーおよびデバイス情報の
 
 ## User-agent の使用例
 
-ユーザーエージェントは、長い間、マーケティングチームや開発者チームに、ブラウザー、オペレーティングシステム、デバイスでのサイトコンテンツの表示方法や、ユーザーの Web サイトとのやり取りに関する重要なインサイトを提供してきました。 また、User-agents は、スパムのブロックやサイトをクロールするボットのフィルタリングなど、様々な追加の目的にも使用されます。
+User-agents は、長い間、マーケティングチームや開発者チームに対して、ブラウザー、オペレーティングシステム、デバイスによるサイトコンテンツの表示方法や、ユーザーによる web サイトとのやり取りに関する重要なインサイトを提供するために使用されてきました。 また、User-agents は、スパムのブロックやサイトをクロールするボットのフィルタリングなど、様々な追加の目的にも使用されます。
 
 しかし、近年、一部のサイト所有者やマーケティングベンダーは、リクエストヘッダーに含まれる他の情報と共に user-agent を使用して、ユーザーが知らないうちにユーザーを特定する手段として使用できる、デジタル指紋を作成しています。サイト所有者にとって user-agent が重要な目的を果たすにもかかわらず、ブラウザー開発者は、サイト訪問者に関する潜在的なプライバシーの問題を制限するために、user-agents の動作方法の変更を決定しました。
 
-ブラウザ開発者は、この課題の解決策として User-Agent Client Hints を作成しました。 クライアントヒントを使用すると、サイトで必要なブラウザー、オペレーティングシステム、デバイス情報を収集できるほか、フィンガープリントなどのコーバートトラッキング方法に対する保護も強化できます。
+ブラウザー開発者は、この課題の解決策として User-Agent Client Hints を作成しました。 Client Hints を使用すると、サイトはブラウザー、オペレーティングシステム、デバイスの必要な情報を収集できる一方で、フィンガープリントのような秘密の追跡方法に対する保護を強化できます。
 
 ## クライアントヒント
 
@@ -56,9 +56,9 @@ User-Agent Client Hints は、web サイト所有者に、user-agent で利用�
 
 User-Agent Client Hints は、Chrome バージョン 89 以降で利用できます。Chromium ベースのブラウザー（Microsoft Edge、Opera、Brave、Chrome Android、Opera Android および Samsung Internet）の最近のバージョンも、Client Hints API をサポートしています。
 
-ブラウザーから web サーバーに送信される最初のリクエストのヘッダーに含まれる Client Hints には、ブラウザーのブランド、ブラウザーのメジャーバージョン、クライアントがモバイルデバイスであるかどうかのインジケーターが含まれます。データの各部分には、1 つのユーザーエージェント文字列にグループ化されるのではなく、独自のヘッダー値があります。
+ブラウザーから web サーバーに送信される最初のリクエストのヘッダーに含まれる Client Hints には、ブラウザーのブランド、ブラウザーのメジャーバージョン、クライアントがモバイルデバイスであるかどうかのインジケーターが含まれます。単一の user-agent 文字列にグループ化されるのではなく、データの各部分に独自のヘッダー値があります。
 
-例えば、次にクライアントヒントを示します。
+例えば、次のような Client Hints があります。
 
 ```
 Sec-CH-UA: "Chromium";v="101", "Google Chrome";v="101", " Not;A Brand";v="99" 
@@ -66,7 +66,7 @@ Sec-CH-UA-Mobile: ?0
 Sec-CH-UA-Platform: "macOS"
 ```
 
-これは同じブラウザーのユーザーエージェントです。
+...これに対して、同じブラウザーの user-agent があります。
 
 ```
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36 
@@ -132,13 +132,13 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like 
 
 現在、Chromium ベースのブラウザーは、web サーバーに対するリクエストのヘッダーで、Client Hints と共に user-agent を送信し続けています。ただし、2022年4月から2023年2月までは、user-agent 文字列に含まれるデータ量が削減されます。Safari や Firefox などの他のブラウザーは、引き続き user-agent 文字列を利用しますが、そこに含まれる情報量は削減される予定です。
 
-## クライアントヒントが必要な Target の使用例
+## クライアントヒントを必要とする Target の使用例
 
 以下に、Client Hints を必要とする Target の使用例を示します。
 
 ### オーディエンス属性
 
-Target オーディエンスを使用し、次のオーディエンス属性のいずれかを使用する場合、Target では、正しいセグメント化を実行するためにクライアントヒントが必要です。
+Target オーディエンスを使用し、以下のオーディエンス属性のいずれかを使用する場合、Target では正しいセグメント化を実行するために Client Hints が必要です。
 
 * ブラウザー
 * オペレーティングシステム
@@ -156,26 +156,26 @@ Target オーディエンスを使用し、次のオーディエンス属性の�
 (user.clientHint('sec-ch-ua-platform') === 'Windows')));" 
 ```
 
-次に、クライアントヒントと対応するプロファイルスクリプト使用セマンティクスの表を示します。
+次に、Client Hints と、それに対応するプロファイルスクリプトの使用状況法のセマンティクスの表を示します。
 
-| クライアントヒントヘッダー | エントロピー | オーディエンス属性 | プロファイルスクリプトの使用状況 |
+| Client Hint ヘッダー | エントロピー | オーディエンス属性 | プロファイルスクリプトの使用状況 |
 | --- | --- | --- | --- |
 | [Sec-CH-UA](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA) | 低 | ブラウザー | `user.clientHint('sec-ch-ua')` |
-| [Sec-CH-UA-Arch](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Arch) | 高 | プロファイルスクリプトを使用したユーザーへの公開 | `user.clientHint('sec-ch-ua-arch')` |
-| [Sec-CH-UA-Bitness](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Bitness) | 高 | プロファイルスクリプトを使用したユーザーへの公開 | `user.clientHint('sec-ch-ua-bitness')` |
+| [Sec-CH-UA-Arch](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Arch) | 高 | プロファイルスクリプトを使用してユーザーに公開 | `user.clientHint('sec-ch-ua-arch')` |
+| [Sec-CH-UA-Bitness](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Bitness) | 高 | プロファイルスクリプトを使用してユーザーに公開 | `user.clientHint('sec-ch-ua-bitness')` |
 | [Sec-CH-UA-Full-Version-List](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Full-Version-List) | 高 | ブラウザー | `user.clientHint('sec-ch-ua-full-version-list')` |
 | [Sec-CH-UA-Mobile](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile) | 低 | モバイル | `user.clientHint('sec-ch-ua-mobile')` |
 | [Sec-CH-UA-Model](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Model) | 高 | モバイル | `user.clientHint('sec-ch-ua-model')` |
 | [Sec-CH-UA-Platform](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform) | 低 | オペレーティングシステム | `user.clientHint('sec-ch-ua-platform')` |
-| [Sec-CH-UA-Platform-Version](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform-Version) | 高 | プロファイルスクリプトを使用したユーザーへの公開 | `user.clientHint('sec-ch-ua-platform-version')` |
+| [Sec-CH-UA-Platform-Version](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform-Version) | 高 | プロファイルスクリプトを使用してユーザーに公開 | `user.clientHint('sec-ch-ua-platform-version')` |
 
-## クライアントヒントをAdobe Targetに渡す方法
+## Client Hints をAdobe Targetに渡す方法
 
-以下の節では、Target 実装に応じて、クライアントヒントを渡す方法の詳細について説明します。
+以下の節に、Target 実装に応じた Client Hints の渡し方に関する詳細情報を示します。
 
 ### at.js バージョン 2.9.0（またはそれ以降）
 
-at.js 2.9.0 以降、ユーザーエージェントクライアントヒントは、ブラウザーから自動的に収集され、 `getOffer/getOffers()` が呼び出されます。 デフォルトでは、at.js は、「低エントロピー」の Client Hints のみを収集します。前の節で「高エントロピー」に分類されたデータに基づいてオーディエンスセグメンテーションを実行したり、プロファイルスクリプトを使用したりする場合、`targetGlobalSettings` を使用してブラウザーから「高エントロピー」の Client Hints を収集するように at.js を設定する必要があります。
+at.js 2.9.0 以降では、`getOffer/getOffers()` が呼び出されると、User Agent Client Hints がブラウザーから自動的に収集されて、Target に送信されます。 デフォルトでは、at.js は、「低エントロピー」の Client Hints のみを収集します。前の節で「高エントロピー」に分類されたデータに基づいてオーディエンスセグメンテーションを実行したり、プロファイルスクリプトを使用したりする場合、`targetGlobalSettings` を使用してブラウザーから「高エントロピー」の Client Hints を収集するように at.js を設定する必要があります。
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };
@@ -183,4 +183,4 @@ window.targetGlobalSettings = { allowHighEntropyClientHints: true };
 
 ### サーバーサイド SDK
 
-サーバー側 SDK を使用してクライアントヒントを渡す方法について詳しくは、 [クライアントヒント](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) （サーバー側実装ドキュメント）を参照してください。
+サーバーサイド SDK を使用して Client Hints を渡す方法について詳しくは、サーバーサイド実装ドキュメントの [Client Hints](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) を参照してください。

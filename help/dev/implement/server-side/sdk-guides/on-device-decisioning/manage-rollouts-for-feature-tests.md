@@ -1,80 +1,80 @@
 ---
-title: 機能テストのロールアウトを管理
-description: を使用して機能テストのロールアウトを管理する方法を説明します。 [!UICONTROL オンデバイス判定].
+title: 機能テストのロールアウトの管理
+description: '[!UICONTROL on-device decisioning] を使用して機能テストのロールアウトを管理する方法を説明します。'
 feature: APIs/SDKs
 exl-id: caa91728-6ac0-4583-a594-0c8fe616342d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
 
-# 機能テストのロールアウトを管理
+# 機能テストのロールアウトの管理
 
 ## 手順の概要
 
-1. 有効にする [!UICONTROL オンデバイス判定] （組織の）
-1. の作成 [!UICONTROL A/B テスト] アクティビティ
-1. 機能とロールアウトの設定を定義する
-1. アプリケーションで機能を実装してレンダリングする
-1. アプリケーションでのイベントのトラッキングの実装
-1. A/B アクティビティをアクティブ化
-1. 必要に応じてロールアウトとトラフィックの割り当てを調整
+1. 組織の [!UICONTROL on-device decisioning] を有効にする
+1. [!UICONTROL A/B Test] アクティビティの作成
+1. 機能の定義とロールアウト設定
+1. アプリケーションでの機能の実装とレンダリング
+1. アプリケーションにイベントのトラッキングを実装
+1. A/B アクティビティのアクティベート
+1. 必要に応じてロールアウトとトラフィック割り当てを調整する
 
-## 1.有効にする [!UICONTROL オンデバイス判定] （組織の）
+## 1.組織の [!UICONTROL on-device decisioning] を有効にする
 
-オンデバイス判定を有効にすると、A/B アクティビティがほぼゼロの待ち時間で実行されます。 この機能を有効にするには、次に移動します。 **[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]** in [!DNL Adobe Target]、を有効にします。 **[!UICONTROL オンデバイス判定]** 切り替え
+オンデバイス判定を有効にすることで、A/B アクティビティがほぼゼロの待ち時間で実行されるようになります。 この機能を有効にするには、[!DNL Adobe Target] で **[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Account details]** に移動し、「**[!UICONTROL On-Device Decisioning]**」トグルを有効にします。
 
-![代替画像](assets/asset-odd-toggle.png)
+![alt 画像 ](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->管理者または承認者が必要です [ユーザーロール](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) 有効または無効にするには [!UICONTROL オンデバイス判定] 切り替え
+>[!UICONTROL On-Device Decisioning] の切り替えを有効または無効にするには、管理者または承認者 [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) が必要です。
 
-を有効にした後 [!UICONTROL オンデバイス判定] トグル、 [!DNL Adobe Target] 生成を開始 *ルールアーティファクト* を設定します。
+「[!UICONTROL On-Device Decisioning]」切替スイッチを有効 [!DNL Adobe Target] すると、クライアントの *ルールアーティファクト* の生成を開始します。
 
-## 2. [!UICONTROL A/B テスト] アクティビティ
+## 2. [!UICONTROL A/B Test] アクティビティの作成
 
-1. In [!DNL Adobe Target]をクリックし、 **[!UICONTROL アクティビティ]** ページ、「 」を選択します。 **[!UICONTROL アクティビティを作成]** > **[!UICONTROL A/B テスト]**.
+1. [!DNL Adobe Target] で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]**/**[!UICONTROL A/B test]** を選択します。
 
-   ![代替画像](assets/asset-ab.png)
+   ![alt 画像 ](assets/asset-ab.png)
 
-1. Adobe Analytics の **[!UICONTROL A/B テストアクティビティの作成]** モーダルのままにします。デフォルトのままにします。 **[!UICONTROL Web]** オプションが選択されている (1)、 **[!UICONTROL フォーム]** experience composer (2) として、「 」を選択します。 **[!UICONTROL デフォルトのワークスペース]** 次を使用 **[!UICONTROL プロパティの制限がありません]** (3) をクリックし、 **[!UICONTROL 次へ]** (4)。
+1. **[!UICONTROL Create A/B Test Activity]** モーダルでは、デフォルトの **[!UICONTROL Web]** オプションを選択した状態（1）のままにし、experience composer として **[!UICONTROL Form]** を選択し（2）、**[!UICONTROL No Property Restrictions]** を使用して **[!UICONTROL Default Workspace]** を選択し（3）、**[!UICONTROL Next]** をクリックします（4）。
 
-   ![代替画像](assets/asset-form.png)
+   ![alt 画像 ](assets/asset-form.png)
 
-## 3.機能とロールアウトの設定を定義する
+## 3.機能の定義とロールアウト設定
 
-Adobe Analytics の **[!UICONTROL エクスペリエンス]** アクティビティの作成手順。アクティビティの名前を指定します (1)。 機能のロールアウトを管理するアプリケーション内の場所 (2) の名前を入力します。 例：  `ondevice-rollout` または `homepage-addtocart-rollout` は、機能ロールアウトを管理する宛先を示す場所名です。 次の例では、 `ondevice-rollout` は、エクスペリエンス A に対して定義された場所です。オプションで、オーディエンスの絞り込み条件 (4) を追加して、認定をアクティビティに制限できます。
+アクティビティ作成の **[!UICONTROL Experiences]** の手順で、アクティビティの名前を指定します（1）。 機能のロールアウトを管理するアプリケーション内の場所（2）の名前を入力します。 例えば、`ondevice-rollout` や `homepage-addtocart-rollout` は、機能ロールアウトを管理する宛先を示すロケーション名です。 次の例で、`ondevice-rollout` はエクスペリエンス A に対して定義された場所です。オプションで、オーディエンスの絞り込み（4）を追加して、アクティビティの選定を制限できます。
 
-![代替画像](assets/asset-location-rollout.png)
+![alt 画像 ](assets/asset-location-rollout.png)
 
-1. Adobe Analytics の **[!UICONTROL コンテンツ]** セクションで、「 **[!UICONTROL JSON オファーを作成]** を (1) に設定します。
+1. 同じページの「**[!UICONTROL Content]**」セクションで、次に示すように、ドロップダウンの「**[!UICONTROL Create JSON Offer]** （1）」を選択します。
 
-   ![代替画像](assets/asset-offer.png)
+   ![alt 画像 ](assets/asset-offer.png)
 
-1. Adobe Analytics の **[!UICONTROL JSON データ]** 表示されるテキストボックスに、有効な JSON オブジェクト (2) を使用して、Experience A(1) でこのアクティビティでロールアウトする機能の機能フラグ変数を入力します。
+1. 表示される **[!UICONTROL JSON Data]** テキストボックスで、有効な JSON オブジェクト（2）を使用して、Experience A （1）でこのアクティビティとともにロールアウトする機能の機能フラグ変数を入力します。
 
-   ![代替画像](assets/asset-json-a-rollout.png)
+   ![alt 画像 ](assets/asset-json-a-rollout.png)
 
-1. クリック **[!UICONTROL 次へ]** (1) に進む **[!UICONTROL ターゲット設定]** アクティビティ作成のステップ。
+1. **[!UICONTROL Next]** （1）をクリックして、アクティビティ作成の **[!UICONTROL Targeting]** のステップに進みます。
 
-   ![代替画像](assets/asset-next-2-t-rollout.png)
+   ![alt 画像 ](assets/asset-next-2-t-rollout.png)
 
-1. Adobe Analytics の **[!UICONTROL ターゲット設定]** ステップ、 **[!UICONTROL すべての訪問者]** audience (1)。簡潔にします。 ただし、トラフィックの配分 (2) を 10%に調整します。 これにより、サイト訪問者の 10%にのみ機能が制限されます。 「次へ」(3) をクリックして、 **[!UICONTROL 目標と設定]** 手順
+1. **[!UICONTROL Targeting]** の手順では、簡単にするために、**[!UICONTROL All Visitors]** オーディエンス（1）を残します。 ただし、トラフィック配分（2）を 10% に調整します。 これにより、機能がサイト訪問者の 10% のみに制限されます。 次へ（3）をクリックして、**[!UICONTROL Goals & Settings]** のステップに進みます。
 
-   ![代替画像](assets/asset-next-2-g-rollout.png)
+   ![alt 画像 ](assets/asset-next-2-g-rollout.png)
 
-1. Adobe Analytics の **[!UICONTROL 目標と設定]** ステップ、選択 **[!UICONTROL Adobe Target]** (1) **[!UICONTROL レポートソース]** アクティビティの結果を [!DNL Adobe Target] UI
+1. **[!UICONTROL Goals & Settings]** の手順で、[!DNL Adobe Target] UI でアクティビティの結果を表示する **[!UICONTROL Reporting Source]** として **[!UICONTROL Adobe Target]** （1）を選択します。
 
-1. を選択します。 **[!UICONTROL 目標指標]** を使用して、アクティビティを測定します。 この例では、ユーザーが orderConfirm(2) の場所に到達したかどうかで示されるように、コンバージョンが成功するのは、ユーザーが品目を購入したかどうかに基づきます。
+1. アクティビティを測定する **[!UICONTROL Goal Metric]** を選択します。 この例では、ユーザーが orderConfirm （2）の場所に到達したかどうかで示されるように、ユーザーがアイテムを購入したかどうかに基づいてコンバージョンが成功します。
 
-1. クリック **[!UICONTROL 保存して閉じる]** (3) をクリックして、アクティビティを保存します。
+1. **[!UICONTROL Save & Close]** （3）をクリックして、アクティビティを保存します。
 
-   ![代替画像](assets/asset-conv-rollout.png)
+   ![alt 画像 ](assets/asset-conv-rollout.png)
 
-## 4.アプリケーションで機能を実装してレンダリングする
+## 4. アプリケーションで機能を実装しレンダリングする
 
 >[!BEGINTABS]
 
@@ -103,9 +103,9 @@ targetClient.getAttributes(["ondevice-rollout"]).then(function(attributes) {
 
 >[!ENDTABS]
 
-## 5.アプリケーションでのイベントのトラッキングの実装
+## 5. アプリケーションにイベントのトラッキングを実装する
 
-機能フラグ変数をアプリケーションで使用可能にした後、既にアプリケーションに含まれている任意の機能を有効にすることができます。 訪問者がアクティビティの対象にならない場合、その訪問者はオーディエンスとして定義された 10%バケットの一部に含まれていなかったことを意味します。
+機能フラグ変数をアプリケーションで使用できるようにすると、既にアプリケーションの一部となっている任意の機能を有効にすることができます。 訪問者がアクティビティの対象とならない場合は、オーディエンスとして定義された 10% バケットに含まれていなかったことを意味します。
 
 >[!BEGINTABS]
 
@@ -155,14 +155,14 @@ else {
 
 >[!ENDTABS]
 
-## 6.ロールアウトアクティビティをアクティブにする
+## 6. ロールアウトアクティビティの有効化
 
-![代替画像](assets/asset-activate-rollout.png)
+![alt 画像 ](assets/asset-activate-rollout.png)
 
-## 7.必要に応じてロールアウトとトラフィックの配分を調整します
+## 7.必要に応じたロールアウトとトラフィック割り当ての調整
 
-アクティビティを有効にしたら、必要に応じて、いつでもアクティビティを編集してトラフィックの配分を増減できます。
+アクティビティをアクティブ化したら、いつでも編集して、必要に応じてトラフィックの割り当てを増減します。
 
-最初のロールアウトの成功により、トラフィックの配分を 10%から 50%に増やします。
+最初のロールアウトが正常に行われるので、トラフィック割り当てを 10% から 50% に増やします。
 
-![代替画像](assets/asset-adjust-rollout.png)
+![alt 画像 ](assets/asset-adjust-rollout.png)

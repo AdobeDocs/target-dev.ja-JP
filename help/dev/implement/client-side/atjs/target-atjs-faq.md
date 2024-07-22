@@ -1,13 +1,13 @@
 ---
 keywords: at.js faq, at.js に関するよくある質問, faq, ちらつき, ローダー, ページローダー, クロスドメイン, ファイルサイズ, ファイルのサイズ, x-domain, at.js と mbox.js, x のみ, クロスドメイン, safari, シングルページアプリ, セレクターが見つかりません, セレクター, シングルページアプリケーション, tt.omtrdc.net, spa, Adobe Experience Manager, AEM, ip アドレス, httponly, HttpOnly, Secure, ip, cookie ドメイン
-description: に関するよくある質問への回答を読む [!DNL Adobe Target] at.js JavaScript ライブラリ。
+description: at [!DNL Adobe Target] js JavaScript ライブラリに関するよくある質問への回答を紹介します。
 title: at.js に関するよくある質問と回答
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
 source-git-commit: 448c43c0c10e22ad054f4ee98bfc282f8c96cdcb
 workflow-type: tm+mt
-source-wordcount: '2938'
-ht-degree: 66%
+source-wordcount: '2923'
+ht-degree: 67%
 
 ---
 
@@ -17,27 +17,27 @@ ht-degree: 66%
 
 ## mbox.js と比較して at.js を使用するメリットは何ですか。
 
-at.js ライブラリは mbox.js に代わるものです。 mbox.js ライブラリのサポートは終了しました。 ただし、ほとんどのユーザーにとって、at.js は mbox.js よりもメリットがあります。
+at.js ライブラリは、mbox.js に代わるものです。 mbox.js ライブラリはサポートされなくなりました。 ただし、ほとんどの場合、at.js は mbox.js よりもメリットがあります。
 
-多くのメリットがある中でも、at.js は、Web 実装のページ読み込み時間を強化し、セキュリティを強化して、シングルページアプリケーション向けのより優れた実装オプションを提供します。
+特に、at.js は、web 実装のページ読み込み時間を改善し、セキュリティを向上し、単一ページアプリケーション向けのより優れた実装オプションを提供します。
 
 次の図は、mbox.js と at.js を使用した場合のページ読み込みパフォーマンスを示しています。
 
 （全幅に拡大するには、画像をクリックします）。
 
-![mbox.js と at.js の比較に関するページパフォーマンス図](/help/dev/implement/client-side/atjs/assets/atjs_versus_mboxjs.png "mbox.js と at.js の比較に関するページパフォーマンス図"){zoomable=&quot;yes&quot;}
+![mbox.js と at.js の比較を行ったページパフォーマンス図 ](/help/dev/implement/client-side/atjs/assets/atjs_versus_mboxjs.png "mbox.js と at.js の比較を行ったページパフォーマンス図 "){zoomable="yes"}
 
 上図のとおり、mbox.js を使用すると、[!DNL Target] の呼び出しが完了するまでページコンテンツの読み込みが開始されませんでした。at.js を使用すると、[!DNL Target] の呼び出しが開始するとページ内容が読み込まれ、呼び出しが完了するまで待ちません。 
 
 ## at.js および mbox.js はページ読み込み時間にどのように影響しますか？
 
-特に新しいユーザーと再訪問者のコンテキストにおいて at.js と mbox.js がページ読み込み時間に与える影響を知りたいと考えているお客様やコンサルタントは数多くいます。 残念ながら、at.js または mbox.js が各ページの読み込み時間にどのように影響するかはお客様の実装によって測定し、具体的な数値を示すのは困難です。
+多くのお客様とコンサルタントは、at.js と mbox.js がページ読み込み時間に与える影響を、特に新規ユーザーと再ユーザーのコンテキストで知りたいと考えています。 残念ながら、at.js や mbox.js が各顧客の実装によってページ読み込み時間にどのように影響するかについて、測定し、具体的な数値を示すのは困難です。
 
-ただし、訪問者 API がページに存在する場合、 [!DNL Target] at.js と mbox.js がページ読み込み時間にどのように影響するかをより深く理解できます。
+ただし、訪問者 API がページに存在 [!DNL Target] る場合は、at.js と mbox.js がページ読み込み時間にどのように影響するかを把握しやすくなります。
 
 >[!NOTE]
 >
->Visitor API と at.js または mbox.js は、（本文を非表示にする技術により）グローバル mbox を使用している場合にのみ、ページ読み込み時間に影響を与えます。 リージョナル mbox は訪問者 API 統合の影響を受けません。
+>訪問者 API および at.js または mbox.js がページ読み込み時間に影響するのは、グローバル mbox を使用している場合のみです（本文を非表示にする手法があるので）。 リージョナル mbox は訪問者 API 統合の影響を受けません。
 
 以降のセクションでは、新しい訪問者と再訪問者の一連のアクションについて説明します。
 
@@ -48,9 +48,9 @@ at.js ライブラリは mbox.js に代わるものです。 mbox.js ライブ�
 1. グローバル mbox の自動作成が有効な場合、[!DNL Target] JavaScript ライブラリは以下を実行します。
 
    * Visitor オブジェクトをインスタンス化します。
-   * The [!DNL Target] ライブラリは訪問者 IDExperience Cloudを取得しようとします。
+   * [!DNL Target] ライブラリは、Experience Cloudの訪問者 ID データの取得を試みます。
    * この訪問者は新規訪問者なので、訪問者 API によって demdex.net へのクロスドメインリクエストがトリガーされます。
-   * Experience Cloud訪問者 ID データが取得された後、 [!DNL Target] が起動されます。
+   * Experience Cloud訪問者 ID データが取得されたら、[!DNL Target] へのリクエストがトリガーされます。
 
 ### 再訪問者
 
@@ -59,30 +59,30 @@ at.js ライブラリは mbox.js に代わるものです。 mbox.js ライブ�
 1. グローバル mbox の自動作成が有効な場合、[!DNL Target] JavaScript ライブラリは以下を実行します。
 
    * Visitor オブジェクトをインスタンス化します。
-   * The [!DNL Target] ライブラリは訪問者 IDExperience Cloudを取得しようとします。
+   * [!DNL Target] ライブラリは、Experience Cloudの訪問者 ID データの取得を試みます。
    * 訪問者 API が、Cookie からデータを取得します。
-   * Experience Cloud訪問者 ID データが取得された後、 [!DNL Target] が起動されます。
+   * Experience Cloud訪問者 ID データが取得されたら、[!DNL Target] へのリクエストがトリガーされます。
 
 >[!NOTE]
 >
->新規訪問者の場合、訪問者 API が存在する場合、 [!DNL Target] 確実に確実にするために何度も電線を越える必要がある [!DNL Target] リクエストには、Experience Cloud訪問者 ID データが含まれます。 再訪問者の場合、[!DNL Target] は、パーソナライズされたコンテンツを取得するためにのみ [!DNL Target] とやり取りします。
+>新規訪問者の場合、訪問者 API が存在す [!DNL Target] と、リクエストにExperience Cloudの訪問者 ID データが含まれていることを確認するために複数回やり取りを行う必要 [!DNL Target] あります。 再訪問者の場合、[!DNL Target] は、パーソナライズされたコンテンツを取得するためにのみ [!DNL Target] とやり取りします。
 
 ## at.js を旧バージョンから 1.0.0 にアップグレードした後、応答時間が長くなったように感じるのはなぜですか。
 
 at.js バージョン 1.0.0 以降では、すべてのリクエストが同時並行で実行されます。 以前のバージョンではリクエストが順番に実行されます。つまり、リクエストがキューに入り、[!DNL Target] は、最初のリクエストの処理が完了するまで待ってから次のリクエストに移ります。
 
-この at.js の旧バージョンでのリクエストの実行方法では、いわゆる「ヘッドオブラインブロッキング」の問題が生じやすくなります。 at.js 1.0.0 以降では、 [!DNL Target] を並列リクエストの実行に切り替えました。
+at.js の以前のバージョンでのリクエストの実行方法では、いわゆる「ヘッドオブラインブロッキング」の問題が生じやすくなります。 at.js 1.0.0 以降では、が同時並行でリクエストを実行するように変更されまし [!DNL Target]。
 
-at.js 0.9.1 で「ネットワーク」タブのウォーターフォールをチェックすると、次に表示されます。 [!DNL Target] リクエストは、前のリクエストが完了するまで開始されません。 このシーケンスは、at.js 1.0.0 以降では、基本的にすべてのリクエストが同時に開始される場合とは異なります。
+at.js 0.9.1 で「ネットワーク」タブのウォーターフォールをチェックすると、の現在のリクエストの処理が完了するまで、次のリク [!DNL Target] ストが実行されないことがわかります。 at.js 1.0.0 以降では、このような順次処理は行われず、基本的にすべてのリクエストが同時に開始されます。
 
 応答時間に関しては、次のような数式が成り立ちます。
 
 <ul class="simplelist"> 
- <li> at.js 0.9.1：すべての [!DNL Target] requests =リクエストの応答時間の合計 </li> 
- <li> at.js 1.0.0 以降：すべての [!DNL Target] requests =最大リクエスト応答時間 </li> 
+ <li> at.js 0.9.1：すべての [!DNL Target] リクエストの応答時間= リクエストの応答時間の合計 </li> 
+ <li> at.js 1.0.0 以降：すべての [!DNL Target] リクエストの応答時間= リクエストの応答時間の最大値 </li> 
 </ul>
 
-at.js ライブラリバージョン 1.0.0 では、リクエストがより迅速に完了します。 また、at.js リクエストは非同期なので、 [!DNL Target] では、ページレンダリングをブロックしません。 リクエストの処理に数秒を要した場合でも、レンダリングされたページが表示されます。[!DNL Target] が [!DNL Target] エッジサーバーからの応答を受け取るまで、ページの一部分が空白になるだけです。
+at.js ライブラリバージョン 1.0.0 の方がリクエストの処理が早く完了します。 また、at.js のリクエストは非同期なので、によってページレンダリング [!DNL Target] ブロックされることはありません。 リクエストの処理に数秒を要した場合でも、レンダリングされたページが表示されます。[!DNL Target] が [!DNL Target] エッジサーバーからの応答を受け取るまで、ページの一部分が空白になるだけです。
 
 ## [!DNL Target] ライブラリを非同期で読み込むことはできますか？
 
@@ -90,7 +90,7 @@ at.js 1.0.0 リリースでは、[!DNL Target] ライブラリを非同期で読
 
 at.js を非同期で読み込む手順は次のとおりです。
 
-* 推奨されるアプローチは、Adobe Experience Platformのタグを使用することです。
+* Adobe Experience Platformのタグを使用する方法をお勧めします。
 * at.js を読み込むスクリプトタグに async 属性を追加することで、at.js を非同期で読み込むこともできます。次のように使用します。
 
   ```
@@ -110,7 +110,7 @@ at.js を非同期で読み込む方法は、ブラウザーによるレンダ�
 
 ページ（または指定された部分）を事前に非表示にしておき、at.js とグローバルリクエストが読み込まれてからページを表示するスニペットを使用すると、ちらつきを回避できます。このスニペットは、at.js の読み込みの前に追加する必要があります。
 
-非同期を使用して at.js をデプロイしている場合 [!UICONTROL Adobe Experience Platform] 実装する前に、実装する前に、事前に非表示になるスニペットをページに直接含めてください。 [!DNL Target] using [!UICONTROL Adobe Experience Platform] 埋め込みコード。
+非同期 [!UICONTROL Adobe Experience Platform] 実装を通じて at.js をデプロイする場合は、 [!UICONTROL Adobe Experience Platform] 埋め込みコードを使用して [!DNL Target] を実装する前に、事前非表示のスニペットをページに直接含めてください。
 
 同期 DTM 実装を介して at.js を導入する場合、ページの最上部にあるページ型ルールを通して、スニペットを非表示にすることができます。
 
@@ -118,11 +118,11 @@ at.js を非同期で読み込む方法は、ブラウザーによるレンダ�
 
 ## at.js は [!DNL Adobe Experience Manager] 統合（Experience Manager）と互換性がありますか？
 
-[!DNL Adobe Experience Manager] 6.2 と FP-11577（またはそれ以降）で、at.js 実装とその [!UICONTROL Adobe TargetCloud Service] 統合とも呼ばれます。
+[!DNL Adobe Experience Manager] 6.2 と FP-11577 （またはそれ以降）で、at.js 実装とその [!UICONTROL Adobe Target Cloud Services] 統合をサポートします。
 
 ## どうしたら at.js を使用してページ読み込み時のちらつきを回避できますか？
 
-[!DNL Target] には、ページ読み込み時のちらつきを回避する方法がいくつか用意されています。 詳しくは、 [at.js によるちらつきの回避](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
+[!DNL Target] には、ページ読み込み時のちらつきを防ぐ方法がいくつか用意されています。 詳しくは、「[at.js によるちらつきの防止 ](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)」を参照してください。
 
 ## at.js のファイルサイズはどれくらいですか？
 
@@ -130,7 +130,7 @@ at.js ファイルはダウンロード時には約 109 KB あります。ただ
 
 ## at.js が mbox.js よりも大きいのはなぜですか？
 
-at.js 実装が単一のライブラリ ( at.js) を使用するのに対して、mbox.js 実装は、実際には 2 つのライブラリ（ mbox.js と target.js）を使用します。 そのため、より公平な比較は、at.js 対 mbox.js *および* `target.js` になります。2 つのバージョンの gzip 圧縮サイズを比較すると、at.js バージョン 1.2 は 34 KB で、mbox.js バージョン 63 は 26.2 KB です。
+at.js の実装は単一のライブラリ（at.js）を使用し、mbox.js の実装は実際に 2 つのライブラリ（mbox.js と target.js）を使用します。 そのため、より公平な比較は、at.js 対 mbox.js *および* `target.js` になります。2 つのバージョンの gzip 圧縮サイズを比較すると、at.js バージョン 1.2 は 34 KB で、mbox.js バージョン 63 は 26.2 KB です。
 
 at.js がより大きいのは、mbox.js に比べて、より多くの DOM 解析をおこなうためです。at.js は JSON 応答で「生」データを取得し、その意味を理解する必要があるので、これが必要です。mbox.js では `document.write()` を使用し、すべての解析はブラウザーによって行われます。
 
@@ -142,11 +142,11 @@ at.js は、現在、jQuery の一部を使用しています。そのため、a
 
 ## at.js は、Safari とクロスドメインの「x のみ」の設定をサポートしますか。
 
-いいえ。クロスドメインが「x のみ」に設定され、Safari がサードパーティの cookie を無効にしている場合、mbox.js と at.js の両方が無効な cookie を設定し、そのクライアントのドメインでは mbox のリクエストが実行されません。
+いいえ、クロスドメインが「x のみ」に設定され、Safari がサードパーティの Cookie を無効化している場合、mbox.js と at.js の両方が無効化された Cookie を設定し、そのクライアントのドメインでは mbox のリクエストが実行されません。
 
-Safari 訪問者をサポートするために、より優れた X-Domain は「無効」（ファーストパーティ Cookie のみを設定）または「有効」（Safari ではファーストパーティ Cookie のみを設定し、他のブラウザーではファーストパーティ Cookie とサードパーティ Cookie を設定）になります。
+Safari の訪問者をサポートするには、「無効化」（ファーストパーティの Cookie のみ設定）または「有効化」（Safari ではファーストパーティの Cookie のみ設定、他のブラウザーではファーストパーティとサードパーティの Cookie を設定）の方がクロスドメインの設定として優れています。
 
-## Target を使用できますか？ [!UICONTROL Visual Experience Composer] (VEC) を使用している場合は、
+## Target [!UICONTROL Visual Experience Composer] （VEC）を単一ページアプリケーションで使用できますか？
 
 はい。at.js 2.x を使用する場合は、SPA に VEC を使用できます。詳しくは、[単一ページアプリケーション（SPA）Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html) を参照してください。
 
@@ -162,11 +162,11 @@ Safari 訪問者をサポートするために、より優れた X-Domain は「
 
 [!DNL Target] のお客様は、[!DNL Target] でクラウドベースのインスタンスを使用してテストをおこなったり、簡単な概念実証に利用したりする場合があります。これらのドメインは、他の多くのドメインと同様に[パブリックサフィックスリスト](https://publicsuffix.org/list/public_suffix_list.dat)に含まれています。
 
-これらのドメインを使用する場合は、targetGlobalSettings() を使用して `cookieDomain` 設定をカスタマイズしない限り、最新のブラウザーでは Cookie が保存されません。詳しくは、 [でのクラウドベースのインスタンスの使用 [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md).
+これらのドメインを使用する場合は、targetGlobalSettings() を使用して `cookieDomain` 設定をカスタマイズしない限り、最新のブラウザーでは Cookie が保存されません。詳しくは、「[ でのクラウドベースのインスタンスの使用  [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md) を参照してください。
 
 ## at.js を使用する際に、IP アドレスを Cookie ドメインとして使用することはできますか。
 
-はい。[at.js バージョン 1.2 以降](/help/dev/implement/client-side/atjs/target-atjs-versions.md)では使用可能です。Adobeでは、常に最新バージョンを使用することを強くお勧めします。
+はい。[at.js バージョン 1.2 以降](/help/dev/implement/client-side/atjs/target-atjs-versions.md)では使用可能です。ただし、Adobeでは、常に最新バージョンを使用することを強くお勧めします。
 
 >[!NOTE]
 >
@@ -196,21 +196,21 @@ if (/^123\.456\.78\..*/g.test(window.location.hostname)) {
 
 ## 「アクションでセレクターが見つかりません」などの警告メッセージが表示されるのはなぜですか。
 
-これらのメッセージは、at.js の機能とは関係ありません。 at.js ライブラリは、DOM 内で見つからないすべてのものを報告します。
+これらのメッセージは at.js 機能と関係がありません。 at.js ライブラリは、DOM に見つからないすべての情報を報告しようとします。
 
 この警告メッセージが表示された場合は、次のような原因が考えられます。
 
 * ページが動的に作成されており、at.js が要素を見つけられない。
 * （ネットワークが低速なので）ページの作成に時間がかかり、at.js が DOM でセレクターを見つけられない。
 * アクティビティが実行されているページの構造が変更されている。Visual Experience Composer（VEC）でアクティビティを再度開くと、警告メッセージが表示されます。アクティビティを更新して、必要な要素がすべて見つかるようにします。
-* 基になるページがシングルページアプリケーション (SPA) の一部であるか、ページの下部に表示される要素がページに含まれていて、at.js の「セレクターポーリングメカニズム」がこれらの要素を見つけられない。 `selectorsPollingTimeout` の値を増やすと問題が解決する場合があります。詳しくは、[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) を参照してください。
+* 基になるページが Single Page Application （SPA）の一部であるか、ページの下部に表示される要素がページに含まれていて、at.js の「セレクターポーリングメカニズム」でこれらの要素が見つからない。 `selectorsPollingTimeout` の値を増やすと問題が解決する場合があります。詳しくは、[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) を参照してください。
 * いずれかのクリック追跡指標が、その指標が設定された URL に関係なく、それ自体をすべてのページに追加しようとしている。害はありませんが、この状況ではこれらのメッセージの多くが表示されます。
 
-  最も良い結果を得るには、 [at.js の最新バージョン](/help/dev/implement/client-side/atjs/target-atjs-versions.md). at.js のダウンロード方法について詳しくは、 [を使用して at.js をダウンロードします。 [!DNL Target] インターフェイス](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) セクション内 [*at.js のデプロイ方法* > *実装方法 [!DNL Target] タグマネージャーなし*](how-to-deployatjs/implement-target-without-a-tag-manager.md) 記事。
+  最良の結果を得るには、[ 最新バージョンの at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md) をダウンロードして使用してください。 at.js のダウンロード方法について詳しくは、[at.js のデプロイ方法 ](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface)/*タグマネージャーを使用しない [!DNL Target] の実装* 記事の [*at [!DNL Target] js のダウンロードの節を参照してください*](how-to-deployatjs/implement-target-without-a-tag-manager.md)
 
 ## [!DNL Target] のサーバー呼び出しが送られる tt.omtrdc.net というドメインは何ですか？
 
-tt.omtrdc.netは、Adobeの EDGE ネットワークのドメイン名です。 [!DNL Target].
+tt.omtrdc.netは、[!DNL Target] のすべてのサーバー呼び出しを受信するAdobeのEDGE ネットワークのドメイン名です。
 
 ## at.js で HttpOnly および Secure の Cookie フラグが常に使用されるとは限らないのはなぜですか？
 
@@ -220,31 +220,31 @@ Secure は、ページが HTTPS でロードされた場合にのみ、JavaScrip
 
 Cookie がクライアント側で生成されるので、[!DNL Target] がユーザーを適切に追跡できるようにするため、[!DNL Target] では、上記の状況を除き、これらのフラグのどちらも使用しません。
 
-## at.js は XSS や MITM 攻撃などのセキュリティ上の問題をどのように処理しますか？
+## at.js は、XSS や MITM 攻撃などのセキュリティ上の問題をどのように処理しますか。
 
-at.js によって有効になっているAdobe Edgeネットワークとの通信は、HTTPS 経由でのみ発生し、 `secureOnly` オプションは、 targetGlobalSettings() 関数で true に設定されます ([targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)) で始まらない場合、at.js はページのプロトコルに基づいて HTTP と HTTPS との切り替えを許可されます。
+at.js によって有効になるAdobe Edge ネットワークとの通信は、targetGlobalSettings （）関数（[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)）で `secureOnly` オプションが true に設定されている場合にのみ、HTTPS 経由で行われます。それ以外の場合、at.js は、ページプロトコルに基づいて HTTP と HTTPS を切り替えることができます。
 
-デフォルトでは、次のヘッダーが適用されます。
-* HTTP Strict Transport Security(HSTS)
+次のヘッダーがデフォルトで適用されます。
+* HTTP 完全転送セキュリティ（HSTS）
 * X-XSS 保護
-* X 個のコンテンツタイプオプション
+* X コンテンツタイプオプション
 * Referrer-Policy
 
-クライアントページで既に使用されているすべてのヘッダーを適用できます。 これをおこなう一般的な方法の 1 つは、「HTTP リクエストヘッダーの認証」を通じてです。 Adobeカスタマーケアは、ベストメソッドとプラクティスの詳細をお知らせします。
+クライアントページで既に使用されているすべてのヘッダーを適用できます。 これを行う一般的な方法の 1 つは、「HTTP リクエストヘッダー認証」を介することです。 Adobeカスタマーケアは、ベストプラクティスに関してさらにアドバイスを提供できます。
 
-また、Adobe Edge Network へのリクエストは（訪問者のブラウザーから作成するように設計されているので）公開され、表示される訪問者の詳細は含まれません（訪問者 ID のみを含みます）。 これらのリクエストは、訪問者にエクスペリエンスを提供し、訪問者がページ上で何を表示するかに関する詳細を含みます。
+さらに、Adobe Edge Network へのリクエストは公開されており（訪問者のブラウザーから作成されるように設計されているので）、表示される訪問者の詳細は含まれていません（訪問者 ID のみが含まれています）。 これらのリクエストは、訪問者にエクスペリエンスを提供し、訪問者がページで表示する内容の詳細が含まれます。
 
-次の要求で送信されるレスポンストークンとセッション ID の場合は、次の点に注意してください。
+これらのリクエストで送信される応答トークンおよびセッション ID に関しては、次の点に注意してください。
 
-* 通信セッションを追跡します。
-* ランダムな文字で構成されています。
+* コミュニケーションセッションを追跡します
+* ランダムな文字で構成されています
 * セッション ID は 30 分間有効です
-* レスポンストークンを無効にすることができます ([レスポンストークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html))
+* レスポンストークンは無効にできます（[ レスポンストークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)）
 * これらは、Adobeソリューションの環境でのみ役立ちます。
 
-これは、 `Access-Control-Allow-Origin` at.js リクエストの値が「*」のヘッダー。パブリックなので、認証は不要で、JavaScript 呼び出しを介してAdobe Edgeネットワークに任意のドメインからアクセスする必要があります。
+at.js リクエストでは、値が「*」の `Access-Control-Allow-Origin` ヘッダーが表示されることが予想されます。これは、これらが公開されており、認証が必要ではなく、JavaScript呼び出しを使用してどのドメインからでもAdobe Edge Network にアクセスする必要があるためです。
 
-ただし、ページ上でコンテンツセキュリティポリシー (CSP) を適用する必要があります。 at.js の CSP 要件の詳細については、 [コンテンツセキュリティポリシー](/help/dev/before-implement/privacy/content-security-policy.md) および [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+ただし、コンテンツセキュリティポリシー（CSP）をページに適用する必要があります。 at.js の CSP 要件について詳しくは、[ コンテンツセキュリティポリシー ](/help/dev/before-implement/privacy/content-security-policy.md) および [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) を参照してください。
 
 ## at.js はどのくらいの頻度でネットワークリクエストを送信しますか？
 
@@ -298,6 +298,6 @@ a.js には HTML5 の doctype が必要です。
 
 HTML5 の doctype を使用すると、ページが標準モードで読み込まれます。互換モードでロードする場合、at.js が依存する一部の JS API は無効になります。[!DNL Target]は、互換モードで at.js を無効にします。
 
-## at.js は Ionic アプリケーション環境で動作しますか。
+## at.js は Ionic アプリ環境で機能しますか。
 
-at.js は Web 以外の環境で機能することを意図していなかったので、この実装はテストされませんでした。 [!DNL Adobe] は、を推奨します。 [モバイル実装用 SDK](/help/dev/implement/mobile/overview.md).
+at.js は web 以外の環境での動作を想定していなかったので、この実装はテストされませんでした。 [!DNL Adobe] では、モバイル実装用の [SDK](/help/dev/implement/mobile/overview.md) を推奨しています。

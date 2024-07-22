@@ -1,88 +1,88 @@
 ---
 title: Adobe Target SDK を使用したパーソナライゼーションの配信
-description: を使用してパーソナライゼーションを配信する方法を説明します。 [!UICONTROL オンデバイス判定].
+description: '[!UICONTROL on-device decisioning] を使用してパーソナライゼーションを配信する方法を説明します。'
 feature: APIs/SDKs
 exl-id: bac64c78-0d3a-40d7-ae2b-afa0f1b8dc4f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
 
-# パーソナライゼーションを配信
+# パーソナライゼーションの配信
 
 ## 手順の概要
 
-1. 有効にする [!UICONTROL オンデバイス判定] （組織の）
-1. の作成 [!UICONTROL エクスペリエンスのターゲット設定] (XT) アクティビティ
-1. オーディエンスごとにパーソナライズされたエクスペリエンスを定義
-1. オーディエンスごとにパーソナライズされたエクスペリエンスを検証
+1. 組織の [!UICONTROL on-device decisioning] を有効にする
+1. [!UICONTROL Experience Targeting] （XT）アクティビティの作成
+1. オーディエンスごとにパーソナライズされたエクスペリエンスの定義
+1. オーディエンスごとにパーソナライズされたエクスペリエンスの検証
 1. レポートの設定
-1. KPI を追跡するための指標を追加
-1. アプリケーションへのパーソナライズされたオファーの実装
+1. KPI を追跡するための指標の追加
+1. パーソナライズされたオファーをアプリケーションに実装
 1. コンバージョンイベントを追跡するコードの実装
-1. のアクティブ化 [!UICONTROL エクスペリエンスのターゲット設定] (XT) パーソナライゼーションアクティビティ
+1. [!UICONTROL Experience Targeting] （XT）パーソナライゼーションアクティビティの有効化
 
-ツーリング会社だとしましょう。 特定の旅行用パッケージを 25%引きでパーソナライズしたオファーを提供したい。 オファーがユーザーの共感を呼ぶために、目的の都市のランドマークを表示することにしました。 また、パーソナライズされたオファーの配信をほぼゼロの待ち時間で実行し、ユーザーエクスペリエンスに悪影響を与えず、結果に歪曲を与えないようにしたい場合もあります。
+あなたがツーリング会社だとします。 特定の旅行パッケージに対して 25% オフのパーソナライズされたオファーを配信する場合。 オファーがユーザーの共感を得られるよう、宛先の都市のランドマークを表示することにしました。 また、パーソナライズされたオファーの配信がゼロに近い待ち時間で実行されるようにすることで、ユーザーエクスペリエンスに悪影響を与えず、結果をゆがめることもありません。
 
-## 1.有効にする [!UICONTROL オンデバイス判定] （組織の）
+## 1.組織の [!UICONTROL on-device decisioning] を有効にする
 
-1. オンデバイス判定を有効にすると、A/B アクティビティがほぼゼロの待ち時間で実行されます。 この機能を有効にするには、次に移動します。 **[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]** in [!DNL Adobe Target]、を有効にします。 **[!UICONTROL オンデバイス判定]** 切り替え
+1. オンデバイス判定を有効にすることで、A/B アクティビティがほぼゼロの待ち時間で実行されるようになります。 この機能を有効にするには、[!DNL Adobe Target] で **[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Account details]** に移動し、「**[!UICONTROL On-Device Decisioning]**」トグルを有効にします。
 
-   ![代替画像](assets/asset-odd-toggle.png)
+   ![alt 画像 ](assets/asset-odd-toggle.png)
 
    >[!NOTE]
    >
-   >管理者または承認者が必要です [ユーザーロール](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) 有効または無効にするには [!UICONTROL オンデバイス判定] 切り替え
+   >[!UICONTROL On-Device Decisioning] の切り替えを有効または無効にするには、管理者または承認者 [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) が必要です。
 
-   を有効にした後 **[!UICONTROL オンデバイス判定]** トグル、 [!DNL Adobe Target] 生成を開始 *ルールアーティファクト* を設定します。
+   「**[!UICONTROL On-Device Decisioning]**」切替スイッチを有効 [!DNL Adobe Target] すると、クライアントの *ルールアーティファクト* の生成を開始します。
 
-## 2. [!UICONTROL エクスペリエンスのターゲット設定] (XT) アクティビティ
+## 2. [!UICONTROL Experience Targeting] （XT）アクティビティの作成
 
-1. In [!DNL Adobe Target]をクリックし、 **[!UICONTROL アクティビティ]** ページ、「 」を選択します。 **[!UICONTROL アクティビティを作成]** > **[!UICONTROL エクスペリエンスのターゲット設定]**.
+1. [!DNL Adobe Target] で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]**/**[!UICONTROL Experience Targeting]** を選択します。
 
-   ![代替画像](assets/asset-xt.png)
+   ![alt 画像 ](assets/asset-xt.png)
 
-1. Adobe Analytics の **[!UICONTROL エクスペリエンスのターゲット設定アクティビティを作成]** モーダルのままにします。デフォルトのままにします。 **[!UICONTROL Web]** オプションが選択されている (1)、 **[!UICONTROL フォーム]** experience composer(2) として、ワークスペースとプロパティ (3) を選択し、「 **[!UICONTROL 次へ]** (4)。
+1. **[!UICONTROL Create Experience Targeting Activity]** モーダルでは、デフォルトの **[!UICONTROL Web]** オプションを選択した状態（1）のままにし、experience composer として **[!UICONTROL Form]** を選択し（2）、ワークスペースとプロパティを選択し（3）、「**[!UICONTROL Next]**」（4）をクリックします。
 
-   ![代替画像](assets/asset-xt-next.png)
+   ![alt 画像 ](assets/asset-xt-next.png)
 
-## 3.オーディエンスごとにパーソナライズされたエクスペリエンスを定義する
+## 3. オーディエンスごとにパーソナライズされたエクスペリエンスを定義する
 
-1. Adobe Analytics の **[!UICONTROL エクスペリエンス]** アクティビティの作成手順、クリック **[!UICONTROL オーディエンスを変更]** を使用して、カリフォルニアのサンフランシスコに旅行する訪問者のオーディエンスを作成できます。
+1. アクティビティ作成の **[!UICONTROL Experiences]** の手順で、「**[!UICONTROL Change Audience]**」をクリックし、カリフォルニア州サンフランシスコへの旅行を希望する訪問者のオーディエンスを作成します。
 
-   ![代替画像](assets/asset-change-audience.png)
+   ![alt 画像 ](assets/asset-change-audience.png)
 
-1. Adobe Analytics の **[!UICONTROL オーディエンスを作成]** モーダルを使用する場合は、カスタムルールを定義します。 `destinationCity = San Francisco`. これは、サンフランシスコに旅行するユーザーのグループを定義します。
+1. **[!UICONTROL Create Audience]** モーダルで、`destinationCity = San Francisco` の場所にカスタムルールを定義します。 これは、サンフランシスコに旅行したいユーザーのグループを定義します。
 
-   ![代替画像](assets/asset-audience-sf.png)
+   ![alt 画像 ](assets/asset-audience-sf.png)
 
-1. Still in the **[!UICONTROL エクスペリエンス]** 手順：ゴールデンゲートブリッジに関する特別オファーをレンダリングするアプリケーション内の場所 (1) の名前を入力します。ただし、サンフランシスコに向かう人に限ります。 ここに示す例では、homepage は、HTMLオファー用に選択された場所 (2) で、 **[!UICONTROL コンテンツ]** 領域。
+1. **[!UICONTROL Experiences]** の手順で、ゴールデンゲートBridgeに関する特別なオファーをレンダリングするアプリケーション内の場所の名前（1）を入力します。 次の例では、ホームページは、HTMLオファー（2）に対して選択された場所であり、**[!UICONTROL Content]** の領域で定義されています。
 
-   ![代替画像](assets/asset-content-sf.png)
+   ![alt 画像 ](assets/asset-content-sf.png)
 
-1. 「 」をクリックして別のターゲティング対象オーディエンスを追加 **[!UICONTROL エクスペリエンスのターゲット設定を追加]**. 今回は、次の条件に該当するオーディエンスルールを定義して、ニューヨークに旅行するオーディエンスをターゲットに設定します。 `destinationCity = New York`. エンパイアステートビルディングに関する特別オファーを表示するアプリケーション内の場所を定義します。 ここに示す例では、 `homepage` は、HTMLオファー (2) に対して選択された場所で、 **[!UICONTROL コンテンツ]** 領域。
+1. 「**[!UICONTROL Add Experience Targeting]**」をクリックして、別のターゲティングオーディエンスを追加します。 今回は、`destinationCity = New York` のオーディエンスルールを定義して、ニューヨークに旅行するオーディエンスをターゲットにします。 エンパイアステートビルに関する特別なオファーをレンダリングする場所を、アプリケーション内で定義します。 ここに示す例では、`homepage` はHTMLオファー（2）に対して選択された場所であり、**[!UICONTROL Content]** 領域で定義されています。
 
-   ![代替画像](assets/asset-content-ny.png)
+   ![alt 画像 ](assets/asset-content-ny.png)
 
-## 4.オーディエンスごとにパーソナライズされたエクスペリエンスを確認する
+## 4. オーディエンスごとにパーソナライズされたエクスペリエンスを検証する
 
-Adobe Analytics の **[!UICONTROL ターゲット設定]** 手順で、オーディエンスごとに目的のパーソナライズされたエクスペリエンスが設定されていることを確認します。
+**[!UICONTROL Targeting]** の手順では、オーディエンスごとに目的のパーソナライズされたエクスペリエンスを設定したことを確認します。
 
-![代替画像](assets/asset-verify-sf-ny.png)
+![alt 画像 ](assets/asset-verify-sf-ny.png)
 
-## 5.レポートを設定する
+## 5. レポートの設定
 
-Adobe Analytics の **[!UICONTROL 目標と設定]** ステップ、選択 **[!UICONTROL Adobe Target]** として **[!UICONTROL レポートソース]** アクティビティの結果を [!DNL Adobe Target] UI、または **[!UICONTROL Adobe Analytics]** をクリックして、Adobe Analytics UI に表示します。
+**[!UICONTROL Goals & Settings]** の手順で、[!DNL Adobe Target] UI でアクティビティの結果を表示する **[!UICONTROL Reporting Source]** として **[!UICONTROL Adobe Target]** を選択するか、Adobe Analytics UI で表示する **[!UICONTROL Adobe Analytics]** を選択します。
 
-![代替画像](assets/asset-reporting-sf-ny.png)
+![alt 画像 ](assets/asset-reporting-sf-ny.png)
 
-## 6. KPI を追跡するための指標を追加
+## 6. KPI を追跡するための指標の追加
 
-を選択します。 **[!UICONTROL 目標指標]** ：アクティビティの成功を測定します。 この例では、ユーザーがパーソナライズされた宛先オファーをクリックしたかどうかに基づいて、コンバージョンが成功します。
+アクティビティの成功を測定する **[!UICONTROL Goal Metric]** を選択します。 この例では、コンバージョンが成功するかは、ユーザーがパーソナライズされた宛先オファーをクリックしたかどうかに基づきます。
 
-## 7.パーソナライズされたオファーをアプリケーションに実装する
+## 7. パーソナライズされたオファーをアプリケーションに実装する
 
 >[!BEGINTABS]
 
@@ -146,7 +146,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-## 8.コンバージョンイベントを追跡するコードを実装する
+## 8. コンバージョンイベントを追跡するコードの実装
 
 >[!BEGINTABS]
 
@@ -219,6 +219,6 @@ notificationDeliveryService.sendNotification(request);
 
 >[!ENDTABS]
 
-## 9.エクスペリエンスのターゲット設定 (XT) アクティビティをアクティブ化します
+## 9. エクスペリエンスのターゲット設定（XT）アクティビティをアクティブ化する
 
-![代替画像](assets/asset-xt-activate.png)
+![alt 画像 ](assets/asset-xt-activate.png)

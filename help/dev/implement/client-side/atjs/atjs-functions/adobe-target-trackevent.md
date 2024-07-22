@@ -1,12 +1,12 @@
 ---
-keywords: adobe.target.trackEvent, trackEvent, trackevent, track event, at.js，関数， preventDefault, preventdefault, prevent default, adobe.target.trackEvent
-description: 以下を使用します。 [!UICONTROL adobe.target.trackEvent()] 関数 [!DNL Adobe Target] at.js JavaScript ライブラリを使用して、サイト上でのクリック数やコンバージョン数などのユーザーのアクションをレポートするリクエストを実行します。
-title: 使用方法 [!UICONTROL adobe.target.trackEvent()] 機能？
+keywords: adobe.target.trackEvent, trackEvent, trackevent, track event, at.js, functions, function, preventDefault, preventdefault, prevent default, adobe.target.trackEvent
+description: at.js JavaScript ライブラリの [!UICONTROL adobe.target.trackEvent()] 関数を使用して  [!DNL Adobe Target]  サイトでのクリック数やコンバージョン数などのユーザーアクションをレポートするリクエストを実行します。
+title: '[!UICONTROL adobe.target.trackEvent()] 関数の使用方法'
 feature: at.js
 exl-id: 9a55e4f1-d7f9-47c1-867c-2ce06fb26f9f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '314'
 ht-degree: 59%
 
 ---
@@ -21,10 +21,10 @@ API の詳細を次に示します。
 
 | キー | タイプ | 必須 | 説明 |
 |--- |--- |--- |--- |
-| mbox | 文字列 | ○ | mbox 名<P>**注意**: [!UICONTROL trackEvent()] の呼び出しが、ページで既に実行されている mbox 名で実行される ( [!UICONTROL trackEvent()] がリセットされ、次の値とは異なる [!DNL Target] ページのを呼び出します。 ただし、 [!UICONTROL trackEvent()] 別の mbox 名での呼び出しでは、 [!UICONTROL trackEvent()] 呼び出しの SDID が [!UICONTROL ページ読み込み要求]/[!UICONTROL triggerView()] ページのを呼び出します。 |
-| selector | 文字列 | × | CSS セレクターは HTML 要素を見つけるために使用されます。イベントリスナーが、見つけた要素に添付されます  |
+| mbox | 文字列 | ○ | mbox 名<P>**注意**：ページで既に実行された mbox 名を使用して [!UICONTROL trackEvent()] 呼び出しが実行された場合、[!UICONTROL trackEvent()] の SDID はリセットされ、ページでの [!DNL Target] 呼び出しとは異なります。 ただし、異なる mbox 名で [!UICONTROL trackEvent()] 呼び出しを実行すると、[!UICONTROL trackEvent()] 呼び出しの SDID がページ上の [!UICONTROL Page Load Request]/[!UICONTROL triggerView()] 呼び出しと一致した状態が維持されます。 |
+| selector | 文字列 | × | CSS セレクターは HTML 要素を見つけるために使用されます。イベントリスナーは、見つかった要素に添付されます。 |
 | type | 文字列 | × | 登録されたイベントタイプを表します。クリック、マウスダウンなどの HTML の既知のイベントとカスタム HTML イベントの両方が可能です。 |
-| preventDefault | ブール値 | × | イベントリスナーコールバックで `[!UICONTROL event.preventDefault()]` を使用するかどうかを示します。デフォルトは false です。<P>**注意**：のみ `[!UICONTROL form[submit]]` および `a[click]` はサポートされています。 サポートすべきシナリオの複雑さと量の膨大さにより、その他のシナリオはサポートされません。 |
+| preventDefault | ブール値 | × | イベントリスナーコールバックで `[!UICONTROL event.preventDefault()]` を使用するかどうかを示します。デフォルトは false です。<P>**メモ**：サポートされているのは `[!UICONTROL form[submit]]` と `a[click]` だけです。 サポートすべきシナリオの複雑さと量の膨大さにより、その他のシナリオはサポートされません。 |
 | params | オブジェクト | × | mbox パラメーター。次の構造を持つキーと値のペアのオブジェクト。<P>`{ "param1": "value1", "param2": "value2"}` |
 | timeout | 数値 | × | タイムアウト（ミリ秒）。<P>指定しない場合は、次のデフォルト値が使用されます。<P>`...timeoutInSeconds: 0.15...}` |
 | success | 関数 | × | イベントが繰り返されたことを伝えるために使用されるコールバック関数。 |

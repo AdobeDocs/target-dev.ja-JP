@@ -1,6 +1,6 @@
 ---
-title: で非同期リクエストを使用する方法 [!DNL Adobe Target] Java SDK
-description: 方法を学ぶ [!DNL Target] Java SDK は非同期リクエストをサポートするので、有効なターゲット時間をゼロに抑えることができます。
+title: ' [!DNL Adobe Target] Java SDK での非同期要求の使用方法'
+description: Java SDK が  [!DNL Target]  非同期リクエストをサポートする方法を説明します。これにより、有効なターゲット時間をゼロに減らすことができます。
 feature: APIs/SDKs
 exl-id: e11f8d16-76f6-4d39-822a-34a1cf7f623f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -10,11 +10,11 @@ ht-degree: 3%
 
 ---
 
-# 非同期リクエスト (Java)
+# 非同期要求（Java）
 
 ## 説明
 
-サーバー側の統合の利点の 1 つは、並列処理を使用することで、サーバー側で利用可能な大量の帯域幅とコンピューティングリソースを活用できる点です。 [!DNL Target] Java SDK は非同期リクエストをサポートするので、有効なターゲット時間をゼロに抑えることができます。
+サーバーサイド統合の利点の 1 つは、並列処理を使用することで、サーバーサイドで利用できる膨大な帯域幅とコンピューティングリソースを活用できる点です。 Java SDK[!DNL Target]、非同期リクエストをサポートしており、有効ターゲット時間をゼロに減らすことができます。
 
 ## サポートされるメソッド
 
@@ -28,9 +28,9 @@ CompletableFuture<Attributes> getAttributesAsync(TargetDeliveryRequest targetReq
 
 ## 例
 
-サンプル `Spring` アプリケーションコントローラーは次のようになります。
+`Spring` アプリケーションコントローラーの例は次のようになります。
 
-### サンプルコントローラ
+### サンプル コントローラ
 
 ```javascript {line-numbers="true"}
 @RestController
@@ -73,6 +73,6 @@ public class TargetRestController {
 }
 ```
 
-この例では、 [SDK を初期化しました](initialize-sdk.md) 春の豆として、そしてあなたが持っている [ユーティリティメソッド](utility-methods.md) 使用可能
+この例では、SDK を [ 初期化 ](initialize-sdk.md) して Spring Bean とし、[ ユーティリティメソッド ](utility-methods.md) を使用できることを前提としています。
 
-The [!DNL Target] リクエストが次より前に実行される： `simulateIO` また、実行されるまでには、ターゲット結果も準備が整っている必要があります。 そうでなくても、ほとんどの場合、大幅な節約になります。
+[!DNL Target] リクエストは `simulateIO` の前に実行され、実行される時点で、ターゲット結果も準備が整っています。 そうでない場合でも、ほとんどの場合、大幅に節約できます。

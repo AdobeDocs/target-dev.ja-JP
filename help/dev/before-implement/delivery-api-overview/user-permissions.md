@@ -1,20 +1,20 @@
 ---
-title: Adobe Target Delivery API のユーザー権限
-description: Adobe Target Delivery API のユーザー権限
+title: Adobe Target配信 API のユーザー権限
+description: Adobe Target配信 API のユーザー権限
 badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=ja#premium newtab=true" tooltip="Target Premium に含まれる機能を確認してください。"
 keywords: 配信 api
 exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 10%
+source-wordcount: '161'
+ht-degree: 6%
 
 ---
 
-# ユーザー権限 (Premium)
+# ユーザー権限（Premium）
 
-[!DNL Adobe] を使用すると、ユーザーはAdobe Targetの使用時にユーザーの権限を管理できます。 を成功に導くために [!UICONTROL Adobe Target Delivery API] を呼び出す場合、適切な権限を持つトークンを API 呼び出し内で渡す必要があります。 ユーザー権限とトークン訪問の取得方法の詳細 [このドキュメント](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
+[!DNL Adobe] を使用すると、ユーザーがAdobe Targetを使用する際にユーザーの権限を管理できます。 [!UICONTROL Adobe Target Delivery API] 呼び出しを成功させるには、適切な権限を持つトークンを API 呼び出し内で渡す必要があります。 ユーザー権限とトークンの取得方法について詳しくは、[ このドキュメント ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) を参照してください。
 
 ```
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
     }'
 ```
 
-対応するトークンを取得したら、に渡します。 `property` -> `token` を呼び出すたびに使用します。 次の場合、 `property` -> `token` が API 呼び出しのたびに渡されない場合、 `content` Adobe Targetから戻る
+対応するトークンを取得したら、実行されるすべての API 呼び出しで `property` -> `token` に渡します。 すべての API 呼び出し内で `property` -> `token` が渡されない場合、Adobe Targetから `content` が返されることはありません。
 
 ```
 {
@@ -71,4 +71,4 @@ curl -X POST \
 }
 ```
 
-上記のように、 `property` -> `token`に値を指定しない場合、コンテンツは返されません。 API 呼び出しの内容を期待しているが、応答から何も取得していない場合、おそらく  `property` -> `token` が指定されていないか、正しい権限がない状態で渡されています。
+上記のように、`property` -> `token` を渡さずに、コンテンツを取得することはできません。 API 呼び出しからコンテンツを期待しても、応答からコンテンツが取得されない場合、`property` -> `token` が指定されていないか、正しい権限なしで渡されていることが原因である可能性が高いです。

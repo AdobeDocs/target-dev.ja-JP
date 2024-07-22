@@ -1,19 +1,19 @@
 ---
-title: Adobe Target Delivery API はじめに
-description: 使用方法 [!UICONTROL Adobe Target Delivery API]?
+title: Adobe Target配信 API の概要
+description: '[!UICONTROL Adobe Target Delivery API] の使い方'
 keywords: 配信 api
 exl-id: 142ec3be-b017-4cdc-9079-b1cc173a710a
 feature: APIs/SDKs
 source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
-# の概要 [!UICONTROL Adobe Target Delivery API]
+# [!UICONTROL Adobe Target Delivery API] の基本を学ぶ
 
-A [!UICONTROL Target 配信 API] 呼び出しは次のようになります。
+[!UICONTROL Target Delivery API] 呼び出しは、次のようになります。
 
 ```
 curl -X POST \
@@ -45,10 +45,10 @@ curl -X POST \
     }'
 ```
 
-The `clientCode` は、 [!DNL Target] に移動して UI を表示 **[!UICONTROL 管理]** > **[!UICONTROL 実装]**.
+`clientCode` は、**[!UICONTROL Administration]** / **[!UICONTROL Implementation]** に移動して、[!DNL Target] UI から取得できます。
 
-を作成する前に [!UICONTROL Target 配信 API] を呼び出す場合は、次の手順に従って、応答にエンドユーザーに表示する関連するエクスペリエンスが含まれていることを確認します。
+[!UICONTROL Target Delivery API] 呼び出しを行う前に、次の手順に従って、エンドユーザーに表示する関連エクスペリエンスが応答に含まれていることを確認します。
 
-1. の作成 [!DNL Target] アクティビティ (A/B、XT、AP またはRecommendations) [フォームベースのコンポーザー](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) または [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
-1. 配信 API を使用して、 [!DNL Target] 手順 2 で作成したアクティビティ。
+1. [ フォームベースのコンポーザー ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) または [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) を使用して、[!DNL Target] アクティビティ（A/B、XT、AP またはRecommendations）を作成します。
+1. 配信 API を使用して、手順 2 で作成した [!DNL Target] アクティビティで使用されている mbox の応答を取得します。
 1. 訪問者にエクスペリエンスを提示します。

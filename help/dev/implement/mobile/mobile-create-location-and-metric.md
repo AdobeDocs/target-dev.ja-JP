@@ -1,38 +1,38 @@
 ---
 keywords: モバイルアプリ, モバイルアプリ位置, Target モバイルアプリ, モバイルターゲット位置, モバイルアプリ成功指標
-description: サンプルコードを表示して、iOSアプリで場所と成功指標を作成し、 [!DNL Adobe Target] を使用して、アプリをパーソナライズおよび最適化します。
-title: 作成方法 [!DNL Target] iOSアプリの場所と成功指標
+description: iOS アプリで場所と成功指標を作成する方法を学ぶのに役立つサンプルコードを表示します。これにより、を使用してアプリをパーソナラ  [!DNL Adobe Target]  ズおよび最適化できます。
+title: iOS アプリで場所  [!DNL Target]  成功指標を作成するにはどうすればよいですか？
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 67%
+source-wordcount: '442'
+ht-degree: 66%
 
 ---
 
-# iOS — 作成 [!DNL Target] 場所と成功指標
+# iOS -[!DNL Target] の場所と成功指標の作成
 
-次を使用するには： [!DNL Target] モバイルアプリで、場所と成功指標を作成します。
+モバイルアプリで [!DNL Target] を使用するには、場所と成功指標を作成します。
 
 >[!IMPORTANT]
 >
->のサポート [!DNL Adobe Mobile] バージョン 4.*x* SDK は 2021 年 8 月 31 日をもって終了しており、お勧めしません。 [!DNL Adobe Target] モバイルユーザー。
+>[!DNL Adobe Mobile] バージョン 4 のサポート。*x* SDK は 2021 年 8 月 31 日（PT）をもって終了し、[!DNL Adobe Target] モバイルユーザーには推奨されなくなりました。
 >
->The [モバイルアプリ用Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank} は、を強化するための推奨されるソリューションです。 [!DNL Adobe Experience Cloud] ソリューションおよびサービスをモバイルアプリに追加できます。
+>[ モバイルアプリ用Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank} は、モバイルアプリで [!DNL Adobe Experience Cloud] のソリューションおよびサービスを強化するための推奨ソリューションです。
 
-この節では、アプリのテンプレートとして使用できるサンプルコードを紹介します。この節のサンプルには、iOS 用のコードがあります。Android でも同じパターンを使用します。Android 専用の構文は [](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html)Experience Cloud 用 Android SDK 4.xソリューションガイドで紹介しています。
+この節では、アプリのテンプレートとして使用できるサンプルコードを紹介します。この節のサンプルには、iOS 用のコードがあります。Android でも同じパターンを使用します。Android固有の構文については、[Android SDK 4.x for Experience Cloudソリューション ](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html) ガイドを参照してください。
 
 >[!NOTE]
 >
->詳しくは、 [モバイルドキュメント](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html) ( 使用可能なすべての [!DNL Target] メソッド。
+>使用可能なすべての [!DNL Target] メソッドのリストについては、[ モバイルドキュメント ](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html) を参照してください。
 
-を作成するには、以下を実行します。 [!DNL Target] の場所を指定してリクエストをおこなう場合、主に次の 2 つのメソッドがあります。
+アプリに [!DNL Target] しい場所を作成してリクエストするには、主に次の 2 つの方法があります。
 
 * `targetCreateRequestWithName`
 * `targetLoadRequest`
 
-1. の作成 [!DNL Target] 場所。
+1. [!DNL Target] の場所を作成します。
 
    リクエストを作成するためのサンプル呼び出しを以下に示します。
 

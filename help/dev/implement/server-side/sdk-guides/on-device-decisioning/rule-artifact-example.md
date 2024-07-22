@@ -1,6 +1,6 @@
 ---
-title: オン判定ルールアーティファクトの例
-description: オンデバイス判定のルールアーティファクトの例を表示します。
+title: On-decisioning ルールアーティファクトの例
+description: オンデバイス判定のルールアーティファクトの例を示します。
 feature: APIs/SDKs
 exl-id: 0e138b78-4ea9-4d17-a6fa-609ad23c4ca8
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab

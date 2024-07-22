@@ -1,13 +1,13 @@
 ---
-keywords: at.js, 2.0, 1.x, cookie
-description: 方法の詳細 [!DNL Adobe Target] at.js 2.x および at.js 1.x は Cookie を処理します。
-title: at.js の Cookie
+keywords: at.js、2.0、1.x、cookie
+description: at.js 2.x および at [!DNL Adobe Target] js 1.x での cookie の処理方法の詳細
+title: at.js の cookie
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1711'
-ht-degree: 80%
+source-wordcount: '1716'
+ht-degree: 72%
 
 ---
 
@@ -17,15 +17,15 @@ at.js 2.x および at.js 1 に関する情報です。*x* の Cookie の動作�
 
 ## at.js 2.x の Cookie の動作
 
-at.js バージョン 2.x( 最大 ( バージョン2.10.0を含まない ) の場合、 *ファーストパーティ cookie のみがサポートされます*. at.js 1.*x*&#x200B;に値をセットする場合、ファーストパーティ Cookie「mbox」は `clientdomain.com`です。 `clientdomain` はお客様のドメインです。
+at.js バージョン 2.x （バージョン 2.10.0 以下）の場合、*ファーストパーティ cookie のみがサポートされます*。 at.js 1.*x*、ファーストパーティ cookie 「mbox」は `clientdomain.com` に保存され、`clientdomain` はドメインです。
 
 at.js はセッション ID を生成し、Cookie に保存します。最初の応答には、任意のアクティビティ情報と、[!DNL Target] サーバーによって生成された `TNT` または `PC ID` も含まれています。続いて at.js は `TNT/PC ID` を Cookie に書き込みます。
 
-The `AMCV_###@AdobeOrg` ファーストパーティ Cookie は、常にExperience CloudID サービスによって設定されます。ただし、 `ECID` が渡される [!DNL Target] リクエスト。
+`AMCV_###@AdobeOrg` ファーストパーティ Cookie は、[!DNL Target] リクエストで渡されますが、常にExperience CloudID サービスによって `ECID` 定されます。
 
 >[!NOTE]
 >
->at.js バージョン2.10.0以降では、ファーストパーティ Cookie とクロスドメイン Cookie の両方がサポートされています。
+>at.js バージョン 2.10.0 以降では、ファーストパーティ cookie とクロスドメイン cookie の両方がサポートされています。
 
 ### サードパーティ cookie とクロスドメイントラッキングのサポート
 
@@ -33,7 +33,7 @@ The `AMCV_###@AdobeOrg` ファーストパーティ Cookie は、常にExperienc
 
 >[!NOTE]
 >
->at.js バージョン2.10.0以降では、サードパーティ Cookie とクロスドメイントラッキングの両方がサポートされています。
+>at.js バージョン 2.10.0 以降では、サードパーティ cookie とクロスドメイントラッキングの両方がサポートされています。
 
 
 ## at.js 1.*x* cookie の動作
@@ -42,7 +42,7 @@ at.js バージョン 1.*x* の場合、Cookie の動作は、その Cookie が�
 
 ### ファーストパーティ Cookie またはサードパーティ Cookie を使用するタイミング
 
-サイトの設定によって、どの Cookie を使用するかが決まります。次の点を理解すると役に立ちます。 [!DNL Target] は、ファーストパーティ Cookie とサードパーティ Cookie を理解しようとする際に機能します。 詳しくは、 [方法 [!DNL Adobe Target] 動作](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) を参照してください。
+サイトの設定によって、どの Cookie を使用するかが決まります。ファーストパーティとサードパーティの Cookie を理解しようとする際に、[!DNL Target] がどのように機能するかを理解すると役に立ちます。 詳しくは [ [!DNL Adobe Target]  仕組み ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) を参照してください。
 
 Cookie について、3 つの主要な使用例を次に示します。
 
@@ -82,7 +82,7 @@ at.js によって `mboxSession ID` が生成され、Cookie に保存されま�
 
 >[!NOTE]
 >
->The `AMCV_###@AdobeOrg` ファーストパーティ Cookie は、常に訪問者 ID と共にExperience Cloudされます。
+>`AMCV_###@AdobeOrg` のファーストパーティ cookie は、常にExperience Cloud訪問者 ID を使用して設定されます。
 
 ### サードパーティ Cookie の動作
 
@@ -113,7 +113,7 @@ Cookie にはいくつかのデフォルト設定があります。cookie の期
 | cookie 名 | mbox。 |
 | cookie ドメイン | コンテンツを提供するドメインの 2 番目および最上位のレベルです。会社のドメインなので、cookie はファーストパーティ cookie になります。例: `mycompany.com`. |
 | サーバードメイン | `clientcode.tt.omtrdc.net`。アカウントのクライアントコードを使用します。 |
-| cookie の期間 | cookie が訪問者のブラウザーに残る期間は、訪問者が最後にログインしてから 2 年間です。<P>The `deviceIdLifetime` の設定は上書き可能です： [at.js バージョン 2.3.1 以降](../atjs/target-atjs-versions.md). 詳しくは、[targetGlobalSettings()](../../../implement/client-side/atjs/atjs-functions/targetglobalsettings.md) を参照してください。 |
+| cookie の期間 | cookie が訪問者のブラウザーに残る期間は、訪問者が最後にログインしてから 2 年間です。<P>`deviceIdLifetime` の設定は、[at.js バージョン 2.3.1 以降 ](../atjs/target-atjs-versions.md) で上書きできます。 詳しくは、[targetGlobalSettings()](../../../implement/client-side/atjs/atjs-functions/targetglobalsettings.md) を参照してください。 |
 | P3P ポリシー | ほとんどのブラウザーのデフォルト設定の要求に従って、cookie は P3P ポリシーに基づいて発行されます。P3P ポリシーはブラウザーに対して、cookie を扱うユーザーおよびその情報の使用方法を指示します。 |
 
 Cookie は、キャンペーンでの訪問者のエクスペリエンスを管理するための様々な値を保持します。
@@ -125,16 +125,16 @@ Cookie は、キャンペーンでの訪問者のエクスペリエンスを管�
 | check | 訪問者が cookie をサポートするかどうかを判別するために使用される簡単なテスト値。訪問者がページをリクエストするたびに設定されます。 |
 | disable | 訪問者の読み込み時間がAdobe Experience Platform Web SDK または at.js ファイルで設定されているタイムアウトを超えた場合に設定されます。 デフォルトでは、1 時間存続します。 |
 
-## 影響 [!DNL Target] Apple WebKit 追跡の変更による Safari 訪問者の場合
+## Apple WebKit のトラッキングの変更による Safari 訪問者の [!DNL Target] への影響
 
 次の点に注意してください。
 
-### 方法 [!DNL Adobe Target] 追跡作業？
+### [!DNL Adobe Target] トラッキングの仕組み
 
 | Cookie | 詳細 |
 |--- |--- |
-| ファーストパーティドメイン | これは、 [!DNL Target] 顧客。  「mbox」Cookie はお客様のドメインで設定されます。 |
-| サードパーティ追跡 | サードパーティ追跡は、 [!DNL Target] および [!DNL Adobe Audience Manager] (AAM)。  サードパーティ追跡には、クロスサイトスクリプティング技法が必要となります。[!DNL Target] では、`clientcode.tt.omtrd.net` ドメインで設定される「mboxSession」と「mboxPC」の 2 つの Cookie を使用します。 |
+| ファーストパーティドメイン | これは、[!DNL Target] のお客様向けの標準実装です。  「mbox」Cookie はお客様のドメインで設定されます。 |
+| サードパーティ追跡 | サードパーティトラッキングは、[!DNL Target] および [!DNL Adobe Audience Manager] （AAM）における広告とターゲティングのユースケースにとって重要です。  サードパーティ追跡には、クロスサイトスクリプティング技法が必要となります。[!DNL Target] では、`clientcode.tt.omtrd.net` ドメインに設定された「mboxSession」と「mboxPC」の 2 つの cookie を使用します。 |
 
 ### Apple のアプローチについて
 
@@ -148,11 +148,11 @@ Apple の発表内容：
 |--- |--- |
 | Intelligent tracking prevention | 詳しくは、WebKit オープンソース Web ブラウザーエンジン Web サイトの [Intelligent Tracking Prevention](https://webkit.org/blog/7675/intelligent-tracking-prevention/) を参照してください。 |
 | Cookie | Safari における Cookie の処理方法：<ul><li>ユーザーが直接アクセスするドメインにないサードパーティ Cookie は保存されません。この動作は新しいものではありません。既に Safari ではサードパーティ Cookie はサポートされていません。</li><li>ユーザーが直接アクセスするドメインで設定されたサードパーティ Cookie は、24 時間後に消去されます。</li><li>ファーストパーティドメインがサイトを横断してユーザーを追跡していると分類されている場合、そのファーストパーティ Cookie は 30 日後に削除されます。この問題は、異なるドメインにオンラインでユーザーを送信する大企業で起こる可能性があります。Apple では、これらのドメインがどのように分類されるか、またドメインがサイトを横断してユーザーを追跡していると分類されているかどうかを調べる方法について明確にしていません。</li></ul> |
-| 機械学習によるクロスサイトドメインの識別 | Apple の発表内容：<P>機械学習分類子：非公開で管理されるトップドメインがサイトを横断してユーザーを追跡できるかどうかについて、収集された統計情報に基づいて分類するために、機械学習モデルが使用されます。収集された様々な統計情報から、多数の一意のドメインの下位にあるサブリソース、多数の一意のドメインの下位にあるサブフレーム、多数の一意のドメインへのリダイレクト、という 3 つのベクトルが現在の追跡方法に基づく分類に対する強力なシグナルとなることがわかりました。すべてのデータ収集と分類はデバイス上でおこなわれます。<P>ただし、ユーザーがトップドメイン（ファーストパーティドメインと呼ばれることもあります）である example.com で何らかのアクションを起こした場合、Intelligent Tracking Prevention は、これをユーザーがこの Web サイトに関心があるシグナルと見なし、次のタイムラインに示すように、その動作を一時的に調整します。<P>このユーザーが過去 24 時間の間に example.com で何らかのアクションを起こしていた場合、`example.com` がサードパーティのときはその Cookie を使用できます。これにより、「Y で X アカウントを使用してサインインする」ログインシナリオが可能になります。<ul><li>トップレベルドメインとして訪問されるドメインは影響を受けません。例えば、OKTA のようなサイト</li><li>複数の一意のドメインを横断する現在のページのサブドメインまたはサブフレームであるドメインを識別します </li></ul> |
+| 機械学習によるクロスサイトドメインの識別 | Apple の発表内容：<P>機械学習分類子：非公開で管理されるトップドメインがサイトを横断してユーザーを追跡できるかどうかについて、収集された統計情報に基づいて分類するために、機械学習モデルが使用されます。収集された様々な統計情報から、多数の一意のドメインの下位にあるサブリソース、多数の一意のドメインの下位にあるサブフレーム、多数の一意のドメインへのリダイレクト、という 3 つのベクトルが現在の追跡方法に基づく分類に対する強力なシグナルとなることがわかりました。すべてのデータ収集と分類はデバイス上でおこなわれます。<P>ただし、ユーザーがファーストパーティドメインと呼ばれる最上位のドメインとしてexample.comを操作すると、インテリジェントトラッキング防止機能により、ユーザーが web サイトに興味を持っているというシグナルと見なされ、次のタイムラインに示すように一時的にその動作が調整されます。<P>ユーザーが過去 24 時間にexample.comを操作した場合、その Cookie は `example.com` がサードパーティであるときに使用できます。 これにより、「Y で X アカウントを使用してサインインする」ログインシナリオが可能になります。<ul><li>トップレベルドメインとして訪問されるドメインは影響を受けません。例えば、OKTA のようなサイト</li><li>複数の一意のドメインをまたいで、現在のページのサブドメインまたはサブフレームであるドメインを識別します。</li></ul> |
 
 ### アドビが受ける影響
 
 | 影響を受ける機能 | 詳細 |
 |--- |--- |
-| オプトアウトのサポート | Apple の WebKit 追跡における変更により、オプトアウトのサポートが影響を受けます。<P>[!DNL Target] のオプトアウトでは、`clientcode.tt.omtrdc.net` ドメインの Cookie が使用されます。詳しくは、「[プライバシー](/help/dev/before-implement/privacy/privacy.md)」を参照してください。<P>[!DNL Target] は、次の 2 つのオプトアウトをサポートします。<ul><li>クライアントごと（クライアントがオプトアウトリンクを管理します）。</li><li>1 つは、Adobeを介し、すべてのユーザーをオプトアウトします [!DNL Target] の機能をすべてのお客様に適用できます。</li></ul>どちらの方法でもサードパーティ Cookie が使用されます。 |
-| [!DNL Target] アクティビティ | 顧客は、 [プロファイルの有効期間長](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) その [!DNL Target] アカウント — 最大 90 日間。 お客様のドメインがサイトを横断してユーザーを追跡しているとマークされているので、アカウントのプロファイル有効期間が 30 日を超え、ファーストパーティ cookie が消去されると、Safari 訪問者の行動が [!DNL Target]:<P>**[!DNL Target]レポート**： Safari ユーザーがアクティビティに参加してから 30 日後に戻り、コンバージョンを達成すると、そのユーザーは、2 人の訪問者と 1 つのコンバージョンとしてカウントされます。<P>この動作は、 [!DNL Analytics] を使用します (A4T)。<P>**プロファイルおよびアクティビティメンバーシップ**：<ul><li>プロファイルデータは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li>アクティビティメンバーシップは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li> [!DNL Target]サードパーティ Cookie 実装またはファーストパーティおよびサードパーティ Cookie 実装を使用しているアカウントの Safari では、 は動作しません。この動作は新しいものではありません。Safari では、サードパーティ Cookie を以前から許可していません。</li></ul><P>**候補**：顧客ドメインがセッションをまたいで訪問者を追跡しているとマークされる可能性が懸念される場合、でプロファイルの有効期間を 30 日以下に設定するのが安全です。 [!DNL Target]. これにより、ユーザーは Safari と他のすべてのブラウザーで同様に追跡されます。 |
+| オプトアウトのサポート | Apple の WebKit 追跡における変更により、オプトアウトのサポートが影響を受けます。<P>オプトアウト [!DNL Target]、`clientcode.tt.omtrdc.net` ドメインの cookie を使用します。 詳しくは、「[プライバシー](/help/dev/before-implement/privacy/privacy.md)」を参照してください。<P>[!DNL Target] では、次の 2 つのオプトアウトをサポートしています。<ul><li>クライアントごと（クライアントがオプトアウトリンクを管理します）。</li><li>1 つは、すべてのお客様に対してすべての [!DNL Target] 機能からユーザーをオプトアウトするAdobeを介して行われます。</li></ul>どちらの方法でもサードパーティ Cookie が使用されます。 |
+| [!DNL Target] アクティビティ | 顧客は、[!DNL Target] アカウントに対して [ プロファイルの有効期間 ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) を最大 90 日間まで選択できます。 懸念されるのは、アカウントのプロファイルの有効期間が 30 日を超え、顧客のドメインがクロスサイトでトラッキングユーザーとしてマークされているのでファーストパーティ cookie がパージされると、[!DNL Target] の次の領域で Safari 訪問者の行動が影響を受けるということです。<P>**[!DNL Target]Reports**:Safari ユーザーがアクティビティにエントリし、30 日後に戻ってから変換した場合、そのユーザーは 2 人の訪問者と 1 つのコンバージョンとしてカウントされます。<P>この動作は、[!DNL Analytics] をレポートソースとして使用するアクティビティ（A4T）でも同じです。<P>**プロファイルとアクティビティメンバーシップ**:<ul><li>プロファイルデータは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li>アクティビティメンバーシップは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li> [!DNL Target] は、サードパーティ cookie の実装またはファーストパーティおよびサードパーティ cookie の実装を使用しているアカウントの場合、Safari では機能しません。 この動作は新しいものではありません。Safari では、サードパーティ Cookie を以前から許可していません。</li></ul><P>**提案**：顧客ドメインがクロスセッションで 1 つのトラッキング訪問者としてマークされる可能性が懸念される場合は、プロファイルの有効期間を [!DNL Target] で 30 日以内に設定するのが最も安全です。 これにより、ユーザーは Safari と他のすべてのブラウザーで同様に追跡されます。 |

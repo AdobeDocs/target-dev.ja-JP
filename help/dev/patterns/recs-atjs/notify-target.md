@@ -1,71 +1,65 @@
 ---
-title: ターゲットに通知
-description: 追跡が必要なすべてのイベントを [!DNL Target] は、 trackEvent メソッドを使用して送信されます。
+title: Notify Target
+description: で追跡する必要のあるすべてのイベントは、trackEvent メソ  [!DNL Target]  ドを使用して送信してください。
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: efccadab-d139-4423-8613-c2743d87b3a0
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '346'
 ht-degree: 1%
 
 ---
 
-# 通知 [!DNL Target]
+# [!DNL Target] に通知
 
-この手順を完了すると、 [!DNL Adobe Target] は、 `trackEvent` メソッド。
+この手順を完了すると、[!DNL Adobe Target] に送信する必要のあるすべてのイベントが `trackEvent` メソッドを使用して送信されるようになります。
 
-で追跡する必要があるイベント [!DNL Target] は、プライマリコンバージョンイベントまたは成功指標にすることができます。
+[!DNL Target] で追跡する必要があるイベントは、プライマリコンバージョンイベントまたは成功指標のいずれかです。
 
 >[!TIP]
 >
->このトピックの画像をクリックすると、全画面表示に展開されます。
+>全画面表示するには、このトピックの画像をクリックします。
 
-## 通知 [!DNL Target] 図 {#diagram}
+## 図 [!DNL Target] 通知 {#diagram}
 
-次の図に示すステップ番号は、以下の節に対応しています。
+次の図のステップ番号は、以下の節に対応しています。
 
-![Target 図を通知](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
+![ ターゲット図への通知 ](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
 
-## 4.1：火 [!DNL Adobe Target] API の追跡
+## 4.1:Fire [!DNL Adobe Target] Track API
 
-この手順により、に送信する必要のあるすべてのイベントを確実に実行できます。 [!DNL Target] は、 `trackEvent` メソッド。
+この手順は、[!DNL Target] に送信する必要のあるすべてのイベントを、`trackEvent` メソッドを使用して確実に送信するのに役立ちます。
 
 +++詳細を見る
 
-![Fire Adobe Target Track API の図](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
+![Fire Adobe Target Track API の図 ](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
-注文コンバージョン属性は、 *前提条件* 」の節を参照してください。 mbox の名前は問題になりませんが、変換は、 `orderConfirmPage`.
+以下の *前提条件* セクションで説明されているように、注文コンバージョン属性を送信します。 mbox の名前は重要ではありませんが、変換には `orderConfirmPage` を使用します。
 
-この呼び出しに注文コンバージョン属性を含める必要はありません。 これらの呼び出しは、メインのコンバージョンイベントの前のミニコンバージョンイベントと考えられる成功指標を記録するのが理想的です。 `CardIds` は、 `Add to Cart` イベント。
+この呼び出しに注文コンバージョン属性を含める必要はありません。 これらの呼び出しは理想的に、メインコンバージョンイベントの前にミニコンバージョンイベントと考えられる成功指標を記録します。 `Add to Cart` イベントに基づいて、買い物かごベースのレコメンデーションに `CardIds` を含める必要があります。
 
 **前提条件**
 
-* ビジネスチームと話し合い、コンバージョン指標や成功指標と見なされるすべてのイベントを特定します。 また、売上高を生み出すコンバージョンイベントを識別して、その詳細をに送信する必要があります。 [!DNL Target] とイベントデータを組み合わせて使用します。
-* コンバージョンイベントで送信できるよう、データレイヤーで次の属性が使用可能であることを確認します。 コンバージョンイベントは、製品購入や買い物かごへの追加イベントなどの売上高を生成します。
+* ビジネスチームと会い、コンバージョン指標または成功指標と見なされるすべてのイベントを特定します。 また、イベントデータと共にこれらの詳細を [!DNL Target] に送信できるように、収益を生成するコンバージョンイベントを識別する必要があります。
+* コンバージョンイベントで送信できるように、データレイヤーで次の属性が使用可能であることを確認します。 コンバージョンイベントによって売上高（製品購入や買い物かごに追加イベントなど）が生成されます。
 
-   * `productPurchaseId`：注文の一部として購入された製品 ID。 複数の製品はコンマで区切ります。
+   * `productPurchaseId`：注文の一環として購入された製品 ID。 コンマを使用して複数の製品を区切ります。
    * `orderTotal`：購入の注文合計。
    * `orderId`：購入の注文 ID。
 
-  次の図に、 [規則 [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} それは、次の日にのみ実行されるはずです： [!UICONTROL 確認] ページに貼り付けます。
+  次の図は、[!UICONTROL Confirmation] ページでのみ実行する [ [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} のルールを示しています。
 
-  ![アクション設定ページ](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
+  ![ アクション設定ページ ](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
-* 買い物かごへの追加のイベントを追跡している場合は、 `cartIds` をパラメーターとして使用します。 製品 ID のコンマ区切りリストを `cardIds`.
+* 買い物かごへの追加についてイベントをトラッキングしている場合は、`cartIds` をパラメーターとして送信します。 `cardIds` に製品 ID のコンマ区切りリストを渡すことができます。
 
 **読み取り**
 
-* [adobe.target.trackEvent() メソッド](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [買い物かごに基づく条件の買い物かご ID](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
+* [adobe.target.trackEvent （） メソッド](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
+* [ 買い物かごベースの条件の cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
 
 **アクション**
 
-* 用途 `adobe.target-trackEvent()` に送信する必要のあるすべてのデータを送信する方法 [!DNL Target].
-
-
-
-
-
-
-
+* メソッド `adobe.target-trackEvent()` 使用して、[!DNL Target] に送信する必要のあるすべてのデータを送信します。

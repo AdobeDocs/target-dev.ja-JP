@@ -1,37 +1,37 @@
 ---
-title: Experience CloudA4T レポートとの統合
+title: Experience Cloud A4T レポートとの統合
 description: Experience Cloudとの統合、A4T レポート、Analytics for Target の統合
-keywords: 配信 api，サーバー側，サーバー側，統合， a4t
+keywords: 配信 api, サーバーサイド，サーバーサイド，統合，a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 8%
+source-wordcount: '342'
+ht-degree: 7%
 
 ---
 
 # Analytics for Target（A4T）レポート
 
-[!DNL Adobe Target] は、デバイス上での判定とサーバー側での Target アクティビティの両方に対して A4T レポートをサポートしています。 A4T レポートを有効にするには、次の 2 つの設定オプションがあります。
+[!DNL Adobe Target] は、オンデバイス判定アクティビティとサーバー側 Target アクティビティの両方で A4T レポートをサポートしています。 A4T レポートを有効にする設定オプションは 2 つあります。
 
-* [!DNL Adobe Target] analytics ペイロードをに自動的に転送します。 [!DNL Adobe Analytics]または
-* ユーザーは、次の分析ペイロードをリクエストします： [!DNL Adobe Target]. ([!DNL Adobe Target] は、 [!DNL Adobe Analytics] 呼び出し元にペイロードを戻す。)
+* [!DNL Adobe Target] が analytics ペイロードを自動的に [!DNL Adobe Analytics] に転送する
+* ユーザーは、[!DNL Adobe Target] から Analytics ペイロードをリクエストします。 （[!DNL Adobe Target] は [!DNL Adobe Analytics] ペイロードを呼び出し元に返します。）
 
 >[!NOTE]
 >
->オンデバイス判定は、A4T レポートのみをサポートします [!DNL Adobe Target] analytics ペイロードをに自動的に転送します。 [!DNL Adobe Analytics]. からの分析ペイロードの取得 [!DNL Adobe Target] はサポートされていません。
+>オンデバイス判定では、[!DNL Adobe Target] が分析ペイロードを [!DNL Adobe Analytics] に自動的に転送する A4T レポートのみをサポートしています。 [!DNL Adobe Target] からの分析ペイロードの取得はサポートされていません。
 
 ## 前提条件
 
-1. でアクティビティを設定します。 [!DNL Adobe Target] を使用した UI [!DNL Adobe Analytics] をレポートソースとして追加し、A4T でアカウントが有効になっていることを確認します。
-1. API ユーザーはAdobe Marketing Cloud訪問者 ID を生成し、Target リクエストの実行時にこの ID を利用できるようにします。
+1. [!DNL Adobe Analytics] をレポートソースとして使用して [!DNL Adobe Target] UI でアクティビティを設定し、アカウントが A4T に対して有効になっていることを確認します。
+1. API ユーザーは、Adobe Marketing Cloud訪問者 ID を生成し、Target リクエストの実行時にこの ID が使用できるようにします。
 
-## [!DNL Adobe Target] Analytics ペイロードを自動的に転送します
+## [!DNL Adobe Target] が Analytics ペイロードを自動的に転送します
 
-[!DNL Adobe Target] は、分析ペイロードをに自動的に転送できます。 [!DNL Adobe Analytics] 次の識別子が指定されている場合：
+次の識別子 [!DNL Adobe Target] 指定されている場合、analytics ペイロードを [!DNL Adobe Analytics] に自動的に転送できます。
 
-1. `supplementalDataId`：間でステッチに使用される ID [!DNL Adobe Analytics] および [!DNL Adobe Target]. 次の条件を満たすため [!DNL Adobe Target] および [!DNL Adobe Analytics] データを正しく結び付けるには `supplementalDataId` 両方に渡す必要があります [!DNL Adobe Target] および [!DNL Adobe Analytics].
+1. `supplementalDataId`:[!DNL Adobe Analytics] と [!DNL Adobe Target] の間でつなぐために使用する ID。 [!DNL Adobe Target] と [!DNL Adobe Analytics] がデータを正しくステッチするには、[!DNL Adobe Target] と [!DNL Adobe Analytics] の両方に同じ `supplementalDataId` を渡す必要があります。
 1. `trackingServer`: [!DNL Adobe Analytics] サーバー。
 
 >[!BEGINTABS]
@@ -113,9 +113,9 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-## ユーザーが以下から分析ペイロードを取得する [!DNL Adobe Target]
+## ユーザーが [!DNL Adobe Target] から分析ペイロードを取得します
 
-ユーザーは、 [!DNL Adobe Analytics] 特定の mbox のペイロードをに送信し、 [!DNL Adobe Analytics] 経由 [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). When in an [!DNL Adobe Target] リクエストが発生した場合、pass `client_side` から `logging` フィールドに値を入力します。 Analytics をレポートソースとして使用しているアクティビティに指定した mbox が存在する場合、ペイロードが返されます。
+ユーザーは、指定された mbox の [!DNL Adobe Analytics] ペイロードを取得し、[Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を介して [!DNL Adobe Analytics] に送信できます。 [!DNL Adobe Target] リクエストが発生したら、`client_side` をリクエストの `logging` フィールドに渡します。 これにより、Analytics をレポートソースとして使用するアクティビティに指定された mbox が存在する場合、ペイロードが返されます。
 
 >[!BEGINTABS]
 
@@ -189,28 +189,28 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-指定した後 `logging = client_side`の場合、ペイロードが mbox フィールドに格納されます。
+`logging = client_side` を指定すると、ペイロードが mbox フィールドに取り込まれます。
 
-Target からの応答に `analytics -> payload` プロパティを次のように転送します： [!DNL Adobe Analytics]. [!DNL Adobe Analytics] は、このペイロードの処理方法を知っています。 これは、次の形式を使用して、GETリクエストでおこなうことができます。
+Target からの応答に `analytics -> payload` プロパティ内の値が含まれる場合は、そのまま [!DNL Adobe Analytics] に転送します。 [!DNL Adobe Analytics] のペイロードの処理方法がわかっています。 これは、次のフォーマットを使用したGETリクエストで実行できます。
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
 ```
 
-### クエリー文字列パラメーターおよび変数
+### クエリ文字列のパラメーターと変数
 
 | フィールド名 | 必須 | 説明 |
 | --- | --- | --- |
 | `rsid` | ○ | レポートスイート ID |
-| `pe` | ○ | ページイベント。 常にに設定 `tnt` |
-| `tnta` | ○ | で Target サーバーによって返された Analytics ペイロード `analytics -> payload -> tnta` |
+| `pe` | ○ | ページイベント。 常に `tnt` に設定 |
+| `tnta` | ○ | `analytics -> payload -> tnta` で Target サーバーから返された Analytics ペイロード |
 | `mid` | ○ | Marketing Cloud 訪問者 ID |
 
-### 必須ヘッダー値
+### 必須のヘッダー値
 
 | ヘッダー名 | ヘッダー値 |
 | --- | --- |
-| ホスト | Analytics データ収集サーバー ( 例： `adobeags421.sc.omtrdc.net`) |
+| ホスト | Analytics データ収集サーバー（例：`adobeags421.sc.omtrdc.net`） |
 
 ### A4T データ挿入 HTTP Get 呼び出しの例
 

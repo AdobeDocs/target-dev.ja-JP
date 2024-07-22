@@ -1,20 +1,20 @@
 ---
-title: でのプロキシ設定の実装 [!DNL Adobe Target] Node.js SDK
-description: 設定方法を学ぶ [!UICONTROL TargetClient] プロキシの設定 [!DNL Adobe Target] Node.js SDK.
+title: ' [!DNL Adobe Target] Node.js SDK へのプロキシ設定の実装'
+description: ' [!DNL Adobe Target] Node.js SDK で [!UICONTROL TargetClient] プロキシ設定を指定する方法を説明します。'
 feature: APIs/SDKs
 exl-id: c9f04e81-3fa3-4e64-a974-379420b0518a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '94'
 ht-degree: 0%
 
 ---
 
-# プロキシ設定 (Node.js)
+# プロキシ設定（Node.js）
 
-ノード SDK の HTTP リクエストのプロキシを設定するには、初期化中に SDK で使用される Fetch API を上書きします。
+Node SDK の HTTP リクエストのプロキシを設定するには、初期化中に SDK が使用するフェッチ API を上書きします。
 
-次に、上書きの方法を示す基本的な例を示します。 `fetchApi` 期間中 `TargetClient` プロキシを追加する初期化：
+次に、`TargetClient` の初期化中に `fetchApi` を上書きしてプロキシを追加する方法を示す基本的な例を示します。
 
 ```javascript {line-numbers="true"}
 const { ProxyAgent } = require("undici");
@@ -33,6 +33,6 @@ client = TargetClient.create({
 });
 ```
 
-これは、18.2 以降のノードバージョンでのみ機能します。 `undici.fetch` はデフォルトです `fetch` （ノード用）。
-次を参照してください： [ノード SDK のサンプルリポジトリ](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration)
-プロキシの設定例を参照してください。
+これは、ノードのデフォルト `fetch` であるノードバージョン 18.2 以降 `undici.fetch` のみ機能することに注意してください。
+[Node SDK サンプルリポジトリ ](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration) を参照してください。
+（古いバージョンのノードのプロキシ設定の例やその他詳細情報）。

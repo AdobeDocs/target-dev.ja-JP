@@ -1,20 +1,20 @@
 ---
 title: ユーザーの権限とプロパティ
-description: The [!DNL Target] SDK には、ユーザー権限とプロパティがサポートされています。
+description: ' [!DNL Target] SDK には、ユーザー権限およびプロパティのサポートが含まれています。'
 exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 9%
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 # ユーザーの権限とプロパティ
 
-The [!DNL Target] SDK には、ユーザー権限とプロパティがサポートされています。 もしあなたがどのように [!DNL Adobe Target] は、ワークスペースとプロパティを介してエンタープライズ権限を処理します。詳しくは、 [Enterprise ユーザーの権限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=ja).
+[!DNL Target] SDK には、ユーザー権限およびプロパティのサポートが含まれています。 [!DNL Adobe Target] がワークスペースとプロパティを介して企業の権限をどのように処理するかについて詳しくは、[ 企業ユーザーの権限 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=ja) を参照してください。
 
-クライアントは、2 つの方法のいずれかでプロパティトークンを使用できます。
+クライアントは 2 つの方法のいずれかでプロパティトークンを使用できます。
 
 ## グローバルプロパティトークン
 
@@ -48,9 +48,9 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 >[!ENDTABS]
 
-## getOffers 呼び出しの付随的なプロパティトークン
+## getOffers 呼び出しの付帯プロパティトークン
 
-プロパティトークンは個々の `getOffers` を呼び出します。 これは、プロパティオブジェクトをリクエストに追加することでおこなわれます。 この方法で指定されたプロパティトークンは、設定のセットよりも優先されます。
+プロパティトークンは、個々の `getOffers` 呼び出しで指定することもできます。 これを行うには、プロパティ オブジェクトをリクエストに追加します。 この方法で指定されたプロパティトークンは、設定の 1 つのセットより優先されます。
 
 >[!BEGINTABS]
 

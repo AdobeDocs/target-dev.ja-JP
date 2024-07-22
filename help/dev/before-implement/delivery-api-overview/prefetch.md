@@ -1,31 +1,31 @@
 ---
-title: Adobe Target Delivery API Prefetch
-description: でのプリフェッチの使用方法 [!UICONTROL Adobe Target Delivery API]?
+title: Adobe Target配信 API プリフェッチ
+description: '[!UICONTROL Adobe Target Delivery API] でのプリフェッチの使用方法'
 keywords: 配信 api
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
 source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
 
 # プリフェッチ
 
-プリフェッチを使用すると、モバイルアプリやサーバーなどのクライアントは、1 回のリクエストで複数の mbox やビューのコンテンツを取得し、ローカルにキャッシュして、後で通知できます。 [!DNL Target] 訪問者がこれらの mbox またはビューを訪問したとき。
+プリフェッチを使用すると、モバイルアプリやサーバーなどのクライアントは、複数の mbox またはビューのコンテンツを 1 回のリクエストで取得し、ローカルにキャッシュした後、訪問者が mbox またはビューに訪問した [!DNL Target] きに通知することができます。
 
-プリフェッチを使用する場合、次の用語に精通しておくことが重要です。
+プリフェッチを使用する場合、次の用語を理解しておくことが重要です。
 
 | フィールド名 | 説明 |
 | --- | --- |
-| `prefetch` | 取得するが訪問済みとしてマークすべきでない mbox とビューのリスト。 The [!DNL Target] Edge は、 `eventToken` プリフェッチ配列内に存在する mbox またはビューごとに。 |
-| `notifications` | 以前にプリフェッチされ、訪問済みとしてマークされる必要がある mbox とビューのリスト。 |
-| `eventToken` | コンテンツがプリフェッチされた際に返される、ハッシュ化された暗号化トークン。 このトークンは、に返送する必要があります [!DNL Target] （内） `notifications` 配列。 |
+| `prefetch` | 取得する必要があるが、訪問済みとしてマークしてはいけない mbox とビューのリスト。 [!DNL Target] Edgeは、プリフェッチ配列に存在する mbox またはビューごとに `eventToken` を返します。 |
+| `notifications` | 以前にプリフェッチされ、訪問済みとしてマークする必要があった mbox とビューのリスト。 |
+| `eventToken` | コンテンツがプリフェッチされたときに返される、ハッシュ化された暗号化トークン。 このトークンは、`notifications` 配列の [!DNL Target] に送り返される必要があります。 |
 
-## Mbox のプリフェッチ
+## Mbox をプリフェッチ
 
-モバイルアプリやサーバーなどのクライアントは、1 回のセッション内で特定の訪問者に対して複数の mbox をプリフェッチし、それらをキャッシュすることで、 [!UICONTROL Adobe Target Delivery API].
+モバイルアプリやサーバーなどのクライアントでは、セッション内の特定の訪問者に対して複数の mbox をプリフェッチし、それらをキャッシュして、[!UICONTROL Adobe Target Delivery API] への複数の呼び出しを回避できます。
 
 ```shell shell-session
 curl -X POST \
@@ -69,7 +69,7 @@ curl -X POST \
 }'
 ```
 
-内 `prefetch` フィールドに、1 つ以上の `mboxes` 1 つのセッション内の訪問者に対して少なくとも 1 回プリフェッチする必要がある場合。 プリフェッチ後 `mboxes`に設定すると、次の応答を受け取ります。
+「`prefetch`」フィールド内に、セッション内の訪問者に `mboxes` して少なくとも 1 回プリフェッチする 1 つ以上のリクエストを追加します。 これらの `mboxes` ータをプリフェッチすると、次の応答が返されます。
 
 ```JSON {line-numbers="true"}
 {
@@ -120,13 +120,13 @@ curl -X POST \
 }
 ```
 
-応答内に、 `content` 特定の `mbox`. これは、訪問者がセッション内で Web またはモバイルアプリケーションを操作し、 `mbox` アプリケーションの特定のページでは、別のページを作成する代わりに、エクスペリエンスをキャッシュから配信できます [!UICONTROL Adobe Target Delivery API] を呼び出します。 ただし、 `mbox`, a `notification` は、インプレッションログを記録するために、Delivery API 呼び出しを介して送信されます。 これは、 `prefetch` の呼び出しがキャッシュされます。つまり、訪問者は、 `prefetch` 呼び出しが発生します。 詳しくは、 `notification` プロセス、詳しくは、 [通知](notifications.md).
+応答内には、特定の `mbox` ーザーの訪問者に表示するエクスペリエンスを含む `content` フィールドが表示されます。 これは、サーバーにキャッシュされている場合に非常に便利です。訪問者がセッション内で web アプリケーションやモバイルアプリケーションを操作し、アプリケーションの特定のページで `mbox` を訪問すると、別の [!UICONTROL Adobe Target Delivery API] 呼び出しを行う代わりに、キャッシュからエクスペリエンスを配信できます。 ただし、エクスペリエンスが `mbox` ージから訪問者に配信されると、配信 API 呼び出しを介してエクスペリ `notification` ンスが送信され、インプレッションログが発生します。 これは、`prefetch` 呼び出しの応答がキャッシュされ、訪問者が `prefetch` 呼び出し発生時にエクスペリエンスを確認していないためです。 `notification` のプロセスについて詳しくは、[ 通知 ](notifications.md) を参照してください。
 
-## での mbox のプリフェッチ `clickTrack` 指標を使用する場合 [!UICONTROL Analytics for Target] (A4T)
+## [!UICONTROL Analytics for Target] を使用する際の `clickTrack` 指標を含む mbox のプリフェッチ（A4T）
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) は、 [!DNL Analytics] コンバージョン指標およびオーディエンスセグメント。
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} （A4T）は、コンバージョン指標とオーディエンスセグメントに基づいてアクティビティを作成でき [!DNL Analytics] クロスソリューション統合環境です。
 
-次のコードスニペットは、を含む mbox のプリフェッチからの応答です。 `clickTrack` 通知する指標 [!DNL Analytics] オファーがクリックされたことを示します。
+次のコードスニペットは、オファーがクリックされたことを [!DNL Analytics] ーザーに通知する、`clickTrack` の指標を含む mbox のプリフェッチからの応答です。
 
 ```JSON {line-numbers="true"}
 {
@@ -165,11 +165,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->mbox のプリフェッチには、 [!DNL Analytics] 認定されたアクティビティのみのペイロード。 まだ認定されていないアクティビティの成功指標をプリフェッチすると、レポートの不整合が生じます。
+>mbox のプリフェッチには、該当するアクティビティのみの [!DNL Analytics] ペイロードが含まれます。 まだ選定されていないアクティビティの成功指標をプリフェッチすると、レポートに不整合が生じます。
 
-## プリフェッチビュー数
+## ビューをプリフェッチ
 
-ビューは、シングルページアプリケーション (SPA) とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、ビジュアル要素の論理的なグループと見なすことができ、まとめてSPAまたは Mobile エクスペリエンスを構成します。 今回は、VEC が作成した Delivery API を通じて、 [[!UICONTROL A/B テスト]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} and [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X) 変更を加えた T 活動 [SPAの表示](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) これで、をプリフェッチできるようになりました。
+ビューは、シングルページアプリケーション（SPA）とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、SPA エクスペリエンスまたはモバイルエクスペリエンスを構成するビジュアル要素の論理的なグループと見なすことができます。 これで、配信 API を通じて、VEC で作成した [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} アクティビティと、[SPAのビュー ](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) に変更を加えた [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} （X） T アクティビティをプリフェッチできるようになりました。
 
 ```shell  {line-numbers="true"}
 curl -X POST \
@@ -199,7 +199,7 @@ curl -X POST \
 }'
 ```
 
-上記の呼び出しの例では、SPA VEC で作成されたすべてのビューを事前取得し、 [!UICONTROL A/B テスト] および Web 用に表示する XT アクティビティ `channel`. この呼び出しは、 [!UICONTROL A/B テスト] または訪問者が `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` 誰が訪問しているか `url`:`https://target.enablementadobe.com/react/demo/#/` 資格を満たしている。
+上記の呼び出し例では、SPA VEC で作成されたすべてのビュー（[!UICONTROL A/B Test] アクティビティと XT アクティビティ）をプリフェッチし、Web `channel` ージに表示します。 この呼び出しによって、`tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` を持つ訪問者が `url`:`https://target.enablementadobe.com/react/demo/#/` を訪問した際に適格となる、[!UICONTROL A/B Test] または XT アクティビティのすべてのビューがプリフェッチされることに注意してください。
 
 ```JSON  {line-numbers="true"}
 {
@@ -280,4 +280,4 @@ curl -X POST \
 }
 ```
 
-Adobe Analytics の `content` 応答のフィールドには、次のようなメタデータをメモします。 `type`, `selector`, `cssSelector`、および `content`：ユーザーがページを訪問したときに、エクスペリエンスを訪問者にレンダリングするために使用します。 なお、 `prefetched` コンテンツは、必要に応じてキャッシュし、ユーザーにレンダリングできます。
+応答の `content` のフィールドに、`type`、`selector`、`cssSelector`、`content` などのメタデータをメモします。これらのメタデータは、ユーザーがページに訪問したときに訪問者にエクスペリエンスをレンダリングするために使用されます。 必要に応じて、`prefetched` コンテンツをキャッシュしてユーザーにレンダリングできます。

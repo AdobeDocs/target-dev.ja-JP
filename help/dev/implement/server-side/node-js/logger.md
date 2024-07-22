@@ -1,6 +1,6 @@
 ---
-title: を初期化します。 [!DNL Adobe Target] リクエストをログに記録する Node.js SDK
-description: リクエストを [!DNL Adobe Target] Node.js SDK.
+title: リクエストをログに記録するように  [!DNL Adobe Target] Node.js SDK を初期化します
+description: Node [!DNL Adobe Target] js SDK でリクエストをログに記録する方法を説明します。
 feature: APIs/SDKs
 exl-id: 5db3e301-47b3-4330-b185-c0c03f72e790
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -10,13 +10,13 @@ ht-degree: 2%
 
 ---
 
-# ロガー (Node.js)
+# ロガー（Node.js）
 
 ## 説明
 
-条件 [SDK の初期化](initialize-sdk.md)、 `options.logger` オブジェクトはオプションのオブジェクトです。 ただし、問題が発生した場合にデバッグを効果的におこなうために、 `logger` オブジェクトは、SDK の初期化時に指定する必要があります。
+[SDK を初期化 ](initialize-sdk.md) する場合、`options.logger` オブジェクトはオプションのオブジェクトです。 ただし、問題が発生した場合に効果的にデバッグするには、SDK の初期化時に `logger` オブジェクトを指定する必要があります。
 
-The `logger` オブジェクトには `debug()` および `error()` メソッド。 適切なロガーが指定された場合（例： ） `console`, [!DNL Target] リクエストと応答がログに記録されます。
+`logger` オブジェクトには `debug()` および `error()` メソッドが必要です。 `console` などの適切なロガーを指定すると、[!DNL Target] のリクエストと応答がログに記録されます。
 
 ## 例
 
@@ -44,4 +44,4 @@ const request = {
 const response = await targetClient.getOffers({ request, targetCookie });
 ```
 
-コンソールに要求と応答が印刷されています。
+リクエストと応答がコンソールに印刷されているのが確認できます。

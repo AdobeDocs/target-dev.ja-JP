@@ -1,50 +1,50 @@
 ---
-keywords: at.js リリース， at.js バージョン，シングルページアプリ， spa，クロスドメイン，クロスドメイン
-description: からアップグレードする方法を説明します。 [!DNL Adobe Target] at.js 1.x から at.js 2.x へのアップグレードシステムフロー図を調べ、新しい関数や廃止された関数などを確認します。
-title: at.js バージョン 1.x からバージョン 2.x にアップグレードする方法を教えてください。
+keywords: at.js リリース、at.js バージョン、シングルページアプリ、spa、クロスドメイン、クロスドメイン
+description: at.js 1.x から  [!DNL Adobe Target] .js 2.x にアップグレードする方法を説明します。システムフロー図を調べたり、新しい関数や非推奨の関数などについて説明します。
+title: at.js をバージョン 1.x からバージョン 2.x にアップグレードするにはどうすればよいですか？
 feature: at.js
 exl-id: fbfa5743-0fa5-44c6-89b3-fdee9b50e126
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '2925'
-ht-degree: 73%
+source-wordcount: '2939'
+ht-degree: 57%
 
 ---
 
-# at.js 1.*x* から at.js 2.*x へのアップグレード*
+# at.js からのアップグレード 1.*x* から at.js 2。*x*
 
 at.js の最新バージョンは、次世代のクライアント側のテクノロジーで、パーソナライゼーションを実行するための機能セットを提供します。[!DNL Adobe Target]この新しいバージョンは、シングルページアプリケーション（SPA）と調和したインタラクションを実現するための at.js のアップグレードに焦点を当てています。
 
-以前のバージョンでは利用できない、at.js 2.*x* を使用するメリットを紹介します。
+at.js 2 を使用する利点は次のとおりです。以前のバージョンでは利用できない *x*:
 
 * ページ読み込み時にすべてのオファーをキャッシュし、複数のサーバー呼び出しを単一のサーバー呼び出しに減らす機能。
 * 従来のサーバー呼び出しで発生する遅延時間なしで、キャッシュ経由でオファーが即座に表示されるため、サイトでのエンドユーザーのエクスペリエンスが著しく向上します。
-* 1 行のシンプルなコードと開発者による 1 回限りのセットアップで、マーケターが作成して実行できる [!UICONTROL A/B テスト] および [!UICONTROL エクスペリエンスのターゲット設定] (XT) アクティビティをSPA上の VEC 経由で操作できます。
+* シンプルな 1 行のコードと 1 回限りのデベロッパー設定で、マーケターがSPAの VEC を介して [!UICONTROL A/B Test] and [!UICONTROL Experience Targeting] （XT）アクティビティを作成および実行できるようになります。
 
-## at.js 2.*x* のシステム図
+## at.js 2.*x* システム図
 
-次の図は、ビューを使用した at.js 2.*x* のワークフローと、これが SPA 統合をどのように強化するかについて説明しています。at.js 2.*x* で使用されている概念に関するより詳しい概要については、[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)を参照してください。
+次の図は、at.js 2 のワークフローを理解するのに役立ちます。*x* とビューの統合、およびこれによりSPA統合がどのように強化されるか。 at.js 2 で使用される概念の詳細を理解する。*x* については、[ シングルページアプリケーションの実装 ](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) を参照してください。
 
 （全幅に拡大するには、画像をクリックします）。
 
-![at.js 2.x での Target のフロー](/help/dev/implement/client-side/assets/system-diagram-atjs-20.png "at.js 2.x での Target のフロー"){zoomable=&quot;yes&quot;}
+![at.js 2.x での Target のフロー ](/help/dev/implement/client-side/assets/system-diagram-atjs-20.png "at.js 2.x での Target のフロー "){zoomable="yes"}
 
 | 呼び出し | 詳細 |
 | --- | --- |
-| 1 | 呼び出しによって [!UICONTROL Experience CloudID] ユーザーが認証されると、別の呼び出しが顧客 ID を同期します。 |
-| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<P>at.js は、ページに実装されているスニペットを非表示にするオプションを使用して非同期で読み込むこともできます。 |
+| 1 | 呼び出しユーザーが認証されると、呼び出しが [!UICONTROL Experience Cloud ID]を返し、別の呼び出しが顧客 ID を同期します。 |
+| 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<P>at.js は、ページに実装された事前非表示スニペットオプションを使用して非同期で読み込むこともできます。 |
 | 3 | すべての設定済みパラメーター（MCID、SDID および顧客 ID）を含む、ページ読み込みリクエストがおこなわれます。 |
-| 4 | プロファイルスクリプトが実行されてから、プロファイルストアにフィードされます。ストアは、オーディエンスライブラリから正規のオーディエンスをリクエストします（例えば､[!DNL Adobe Analytics]、[!DNL Audience Manager] などから共有されたオーディエンス）。<P>顧客属性がバッチ処理でプロファイルストアに送信されます。 |
+| 4 | プロファイルスクリプトが実行されてから、プロファイルストアにフィードされます。ストアは、オーディエンスライブラリから選定オーディエンス（[!DNL Adobe Analytics] や [!DNL Audience Manager] などから共有されたオーディエンスなど）をリクエストします。<P>顧客属性がバッチ処理でプロファイルストアに送信されます。 |
 | 5 | URL リクエストパラメーターとプロファイルデータに基づいて、[!DNL Target] が現在のページおよび将来のビューでどのアクティビティおよびエクスペリエンスを訪問者に返すかを決定します。 |
-| 6 | ターゲットコンテンツが（オプションで、追加のパーソナライゼーションに関するプロファイル値を含めて）ページに送り返されます。<P>デフォルトコンテンツがちらつくことなく、可能な限り迅速に現在のページ上のターゲットコンテンツが表示されます。<P>SPA でのユーザーアクションの結果として表示されるビューのターゲットコンテンツは、ブラウザーにキャッシュされます。そのため、`triggerView()` を介してビューがトリガーされたときに追加のサーバー呼び出しをおこなわずに即座にターゲットコンテンツを適用できます。 |
-| 7 | [!UICONTROL Analytics データがデータ収集サーバーに送信されます。] |
-| 8 | ターゲットデータは、 [!UICONTROL Analytics] SDID を介してデータを処理し、 [!UICONTROL Analytics] レポートストレージ。<P>[!UICONTROL Analytics for ]（A4T）レポートを使用して、[!UICONTROL Analytics] データが [!DNL Target]Analytics[!UICONTROL  および ]Target に表示できるようになります。 |
+| 6 | ターゲットコンテンツが（オプションで、追加のパーソナライゼーションに関するプロファイル値を含めて）ページに送り返されます。<P>現在のページ上のターゲットコンテンツは、デフォルトコンテンツのちらつきなしでできるだけ早く表示されます。<P>ブラウザーにキャッシュされるSPAでユーザーアクションの結果として表示されるビューのターゲットコンテンツ。`triggerView()` を介してビューがトリガーされたときに追加のサーバー呼び出しをおこなわずに即座にターゲットコンテンツを適用できます。 |
+| 7 | [!UICONTROL Analytics] データがデータ収集サーバーに送信されます。 |
+| 8 | ターゲットデータは、SDID を介して [!UICONTROL Analytics] データと照合され、[!UICONTROL Analytics] レポートストレージに処理されます。<P>[!UICONTROL Analytics for Target] （A4T）レポートを使用して、[!UICONTROL Analytics] データが [!UICONTROL Analytics] と [!DNL Target] の両方に表示できるようになります。 |
 
 これで、`triggerView()` が SPA のどこに 実装されているかに関わらず、ビューとアクションはキャッシュから取得され、サーバー呼び出しなしでユーザーに表示されるようになります。`triggerView()` は、インプレッション数を増分して記録するために、[!DNL Target] バックエンド に通知リクエストもおこないます。
 
 （全幅に拡大するには、画像をクリックします）。
 
-![Target フローの at.js 2.*x* triggerView](/help/dev/implement/client-side/assets/atjs-20-triggerview.png "Target フローの at.js 2.*x* triggerView"){zoomable=&quot;yes&quot;}
+![Target フロー at.js 2.*x* triggerView](/help/dev/implement/client-side/assets/atjs-20-triggerview.png "Target フロー at.js 2.*x* triggerView"){zoomable="yes"}
 
 | 呼び出し | 詳細 |
 | --- | --- |
@@ -52,34 +52,34 @@ at.js の最新バージョンは、次世代のクライアント側のテク�
 | 2 | ビューのターゲットコンテンツがキャッシュから読み取られます。 |
 | 3 | デフォルトコンテンツがちらつくことなく、可能な限り迅速にターゲットコンテンツが表示されます。 |
 | 4 | 通知リクエストが [!DNL Target] プロファイルストア に送信され、アクティビティで訪問者がカウントされ、指標が増分されます。 |
-| 5 | [!UICONTROL Analytics データがデータ収集サーバーに送信されます。] |
-| 6 | [!DNL Target] データは、SDID を使用して Analytics データに適合され、Analytics レポートストレージへと処理されます。[!UICONTROL A4T レポートを使用して、Analytics データが Analytics for の両方に表示できるようになります。][!DNL Target] |
+| 5 | データ収集サーバーに送信されるデータを [!UICONTROL Analytics] します。 |
+| 6 | [!DNL Target] データは、SDID を介して [!UICONTROL Analytics] データと照合され、[!UICONTROL Analytics] レポートストレージに処理されます。 A4T レポートを使用して、[!UICONTROL Analytics] データが [!UICONTROL Analytics] と [!DNL Target] の両方に表示できるようになります。 |
 
 ## at.js 2.*x*
 
-at.js 2.*x* タグを使用 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 拡張子。
+at.js 2.*x* （[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) 拡張機能のタグを使用）。
 
 >[!NOTE]
 >
->タグを使用した at.js のデプロイ [!DNL Adobe Experience Platform] が推奨される方法です。
+>[!DNL Adobe Experience Platform] のタグを使用した at.js のデプロイは、推奨される方法です。
 >
 >または
 >
->at.js 2.*x* の使用 [!DNL Target] UI と、 [選択する方法](/help/dev/implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md).
+>手動で at.js 2.*x* [!DNL Target] UI を使用し、[ 任意のメソッド ](/help/dev/implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md) を使用してデプロイします。
 
 ## 廃止された at.js 関数
 
-at.js 2.*x* では、いくつかの関数が廃止されました。
+at.js 2 で非推奨（廃止予定）になった関数がいくつかあります。**。
 
 >[!WARNING]
 >
->at.js 2.*x* がデプロイされているときにこれらの廃止された関数がサイトで引き続き使用されている場合、コンソールに警告が表示されます。アップグレードする際に推奨されるアプローチは、ステージング環境で at.js 2.*x* のデプロイメントをテストし、コンソールに記録されているすべての警告を確認し、廃止された関数を at.js 2.*x* で導入された新しい関数に変換することです。
+>at.js 2 時にこれらの非推奨の関数が引き続きサイトで使用される場合。*x* がデプロイされている場合は、コンソールの警告が表示されます。 アップグレードする際の推奨アプローチは、at.js 2 のデプロイメントをテストすることです。*x* ステージング環境では、コンソールに記録されたすべての警告を確認し、非推奨（廃止予定）の関数を at.js 2.で導入された新しい関数に変換します。**。
 
 廃止された関数とそれらに対応する関数は、以下のとおりです。関数の完全なリストについては、[at.js 関数](/help/dev/implement/client-side/atjs/atjs-functions/atjs-functions.md)を参照してください。
 
 >[!NOTE]
 >
->at.js 2.*x* では、`mboxDefault` としてマークされた要素は自動的に非表示にならなくなりました。したがって、サイト上またはタグマネージャーを介して、あらかじめ非表示にするロジックを手動で用意する必要があります。
+>at.js 2.*x* では、マークされた要素をあらかじめ自動的 `mboxDefault` 非表示にしなくなりました。 したがって、サイト上またはタグマネージャーを介して、あらかじめ非表示にするロジックを手動で用意する必要があります。
 
 ### mboxCreate(mbox,params)
 
@@ -190,7 +190,7 @@ at.js 2.*x* では、いくつかの関数が廃止されました。
 
 この関数はサポートされなくなったため、使用しないでください。
 
-## 2 で廃止、新規追加およびサポートされている at.js functio 関数の概要.*x*
+## 2.でサポートされている非推奨（廃止予定）の at.js 関数の概要。*x*
 
 | メソッド | 対応? | 新登場? | 廃止? <P>（デフォルトコンテンツが表示されます） |
 | --- | --- | --- | --- |
@@ -221,17 +221,17 @@ at.js 2.*x* では、いくつかの関数が廃止されました。
 
 `mboxCreate()` を `getOffer()` または `applyOffer()` で置き換えない場合、オファーが配信されない場合があります。
 
-### at.js 2.*x* は、at.js 1.*x* を他のページに配置しますか？
+### at.js 2.*x* は、at.js 1.*x* は他のページにありますか？
 
 できます。訪問者プロファイルは、異なるバージョンやライブラリを使用してページ間で保持されます。Cookie の形式は同じです。
 
-### at.js 2.*x* で使用する新しい API
+### at.js 2 での新しい API の使用。*x*
 
-at.js 2.*x* は、Delivery API と呼ばれる新しい API を使用します。at.js が [!DNL Target] エッジサーバーに正しく接続する場合は、ブラウザーの開発者ツールの「ネットワーク」タブで、「delivery」、「`tt.omtrdc.net`、」、またはクライアントコードが含まれます。 また、[!DNL Target] はキーと値のペアの変わりに JSON ペイロードを送信します。
+at.js 2.*x* では新しい API を使用し、これを Delivery API と呼びます。 at.js が [!DNL Target] エッジサーバーを正しく呼び出しているかどうかをデバッグするには、ブラウザーの開発者ツールの「ネットワーク」タブを「配信」、「`tt.omtrdc.net`」またはクライアントコードにフィルタリングします。 また、[!DNL Target] はキーと値のペアの変わりに JSON ペイロードを送信します。
 
-### [!DNL Target] グローバル mbox の廃止
+### [!DNL Target] グローバル mbox は使用されなくなりました
 
-at.js 2.*x*」と表示されなくなりました。`target-global-mbox`」が表示されます。 代わりに、`target-global-mbox`&quot;構文を&quot;に変更します。`execute > pageLoad`」という名前に変更され、 [!DNL Target] サーバーに割り当てられます。
+at.js 2.*x* では、ネットワーク呼び出しに「`target-global-mbox`」が表示されなくなります。 代わりに、以下に示すように、[!DNL Target] サーバーに送信される JSON ペイロードの「`target-global-mbox`」構文を「`execute > pageLoad`」に置き換えました。
 
 ```json {line-numbers="true"}
 {
@@ -252,7 +252,7 @@ at.js 2.*x*」と表示されなくなりました。`target-global-mbox`」が�
 
 ### at.js のグローバル mbox 名は重要ではなくなりましたか？
 
-のお客様は、 **[!UICONTROL Target]** > **[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL at.js 設定の編集]**. この設定は [!DNL Target] エッジサーバーによって使用され、execute > pageLoad が [!DNL Target] UI に表示されるグローバル mbox 名に変換されます。これにより、ユーザーはサーバーサイド API、フォームベースのコンポーザー、プロファイルスクリプトの使用状況、およびグローバル mbox 名を使用したオーディエンスを引き続き作成できます。同じグローバル mbox 名が **[!UICONTROL 管理]** > **[!UICONTROL Visual Experience Composer]** まだ at.js 1.*x*（以下の図を参照）。
+お客様は、**[!UICONTROL Target]**/**[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Edit at.js Settings]** を使用してグローバル mbox 名を指定できます。 この設定は [!DNL Target] エッジサーバーによって使用され、execute > pageLoad が [!DNL Target] UI に表示されるグローバル mbox 名に変換されます。これにより、ユーザーはサーバーサイド API、フォームベースのコンポーザー、プロファイルスクリプトの使用状況、およびグローバル mbox 名を使用したオーディエンスを引き続き作成できます。at.js 1 を使用するページがまだある場合は、同じグローバル mbox 名が **[!UICONTROL Administration]**/**[!UICONTROL Visual Experience Composer]** ページでも設定されていることを確認することを強くお勧めします。次の図に示すように、*x*。
 
 ![at.js ダイアログの変更](../assets/modify-atjs.png)
 
@@ -260,11 +260,11 @@ at.js 2.*x*」と表示されなくなりました。`target-global-mbox`」が�
 
 ![カスタムグローバル mbox](../assets/custom-global-mbox.png)
 
-### at.js 2.*x* では、自動作成 mbox 設定を有効にする必要がありますか？
+### at.js 2 でグローバル mbox の自動作成をオンにする必要があるか。*x* を使用）
 
-ほとんどの場合では、有効にする必要があります。この設定は、ページ読み込み時に [!DNL Target] エッジサーバーにリクエストを送信するように at.js 2.*x* に指示します。グローバル mbox は execute > pageLoad に変換されているので、ページ読み込み時にリクエストを送信する場合、この設定を有効にする必要があります。
+ほとんどの場合では、有効にする必要があります。この設定は at.js 2 に影響します。*x* ページ読み込み時に [!DNL Target] エッジサーバーにリクエストを送信する。 グローバル mbox は execute > pageLoad に変換されているので、ページ読み込み時にリクエストを送信する場合、この設定を有効にする必要があります。
 
-### at.js 2.*x* で Target のグローバル mbox 名が指定されていない場合でも、既存の VEC アクティビティは引き続き動作しますか？
+### ターゲットグローバル mbox 名を at.js 2 から指定しない場合でも、既存の VEC アクティビティは引き続き機能します。*x* を使用）
 
 動作します。execute > pageLoad は、`target-global-mbox` のような [!DNL Target] バックエンドで処理されるためです。
 
@@ -280,33 +280,33 @@ at.js 2.*x*」と表示されなくなりました。`target-global-mbox`」が�
 | グローバル mbox 自動作成 | ○ |
 | グローバル mbox 名 | ○ |
 
-### at.js 2.x でのクロスドメイントラッキングサポート
+### at.js 2.x でのクロスドメイントラッキングのサポート
 
-クロスドメイントラッキングにより、様々なドメインをまたいで訪問者をスティッチできます。各ドメインに対して新しい Cookie を作成する必要があるので、ドメインからドメインにナビゲートする訪問者を追跡するのは困難です。クロスドメイントラッキングを実現するために、[!DNL Target] は、サードパーティ Cookie を使用してドメインをまたいで訪問者を追跡します。これにより、 [!DNL Target] 次に及ぶ活動 `siteA.com` および `siteB.com` およびの訪問者が一意のドメイン間をナビゲートする際にも、同じエクスペリエンスが維持されます。 この機能は、 [!DNL Target]のサードパーティ Cookie とファーストパーティ Cookie の動作に関連付けられています。
+クロスドメイントラッキングにより、様々なドメインをまたいで訪問者をスティッチできます。各ドメインに対して新しい Cookie を作成する必要があるので、ドメインからドメインにナビゲートする訪問者を追跡するのは困難です。クロスドメイントラッキングを実現するために、[!DNL Target] は、サードパーティ Cookie を使用してドメインをまたいで訪問者を追跡します。これにより、`siteA.com` ーザーと `siteB.com` ーザーにまたがる [!DNL Target] アクティビティを作成し、訪問者が一意のドメインを移動しても同じエクスペリエンスを維持できます。 この機能は、[!DNL Target] のサードパーティ cookie およびファーストパーティ cookie の動作と結び付けられます。
 
 >[!NOTE]
 >
->クロスドメイントラッキングは、at.js 2.10 以降でサポートされますが、at.js 2.1 では標準でサポートされていません。*x* 2.10 より前クロスドメイントラッキングは、at.js 2.*x* で Experience Cloud ID（ECID） ライブラリ v4.3.0 以降を使用するとサポートされます。
+>クロスドメイントラッキングは at.js 2.10 以降でサポートされていますが、at.js 2 では標準でサポートされていません。*x* 2.10 以前。クロスドメイントラッキングは at.js 2 でサポートされます。*x* で Experience Cloud ID（ECID） ライブラリ v4.3.0 以降を使用するとサポートされます。
 
-In [!DNL Target]の場合、サードパーティ Cookie は `<CLIENTCODE>.tt.omtrdc.net`.ファーストパーティ Cookie は、 `clientdomain.com`. 最初のリクエストは、HTTP 応答ヘッダーを返します。このヘッダーによって、`mboxSession` および `mboxPC` という名前のサードパーティ Cookie の設定が試行され、リダイレクトリクエストが追加のパラメーター（`mboxXDomainCheck=true`）と共に返されます。ブラウザーがサードパーティ Cookie を受け入れる場合、リダイレクトリクエストにはそれらの Cookie が含まれており、エクスペリエンスが返されます。このワークフローは、HTTP GET メソッドの使用により可能になっています。
+ま [!DNL Target]、サードパーティ Cookie は `<CLIENTCODE>.tt.omtrdc.net` に保存されます。 ファーストパーティ Cookie は、`clientdomain.com` に格納されます。最初のリクエストは、HTTP 応答ヘッダーを返します。このヘッダーによって、`mboxSession` および `mboxPC` という名前のサードパーティ Cookie の設定が試行され、リダイレクトリクエストが追加のパラメーター（`mboxXDomainCheck=true`）と共に返されます。ブラウザーがサードパーティ Cookie を受け入れる場合、リダイレクトリクエストにはそれらの Cookie が含まれており、エクスペリエンスが返されます。このワークフローは、HTTP GET メソッドの使用により可能になっています。
 
-ただし、at.js 2.*x*&#x200B;の場合、HTTPGETは使用されません。 代わりに、HTTPPOSTは at.js 2.*x* JSON ペイロードをに送信するには、以下を実行します。 [!DNL Target] エッジサーバー。 HTTPPOSTの使用は、ブラウザーがサードパーティ Cookie をサポートしているかどうかを確認するリダイレクトリクエストを意味します。 これは、HTTP GET リクエストがべき等性のあるトランザクションであるのに対し、HTTP POST はべき等性がなく、恣意的に繰り返してはならないためです。したがって、標準設定での at.js 2.*x* （2.10 より前）は、標準ではサポートされていません。 at.js 1.*x* のみ、クロスドメイントラッキングを標準設定でサポートします。
+ただし、at.js 2.*x*、HTTP GETは使用されません。 代わりに、at.js 2 経由で HTTPPOSTが使用されます。*x* :JSON ペイロードをEdge サーバー [!DNL Target] 送信します。 HTTPPOSTを使用すると、ブラウザーがサードパーティ Cookie をサポートしているかどうかを確認するリダイレクトリクエストが機能しなくなります。 これは、HTTP GET リクエストがべき等性のあるトランザクションであるのに対し、HTTP POST はべき等性がなく、恣意的に繰り返してはならないためです。したがって、標準設定での at.js 2.*x* （2.10 より前）は、初期設定ではサポートされていません。 at.js 1.*x* のみ、クロスドメイントラッキングを標準設定でサポートします。
 
-at.js v2.10 以降でクロスドメイントラッキングを使用するには、次のいずれかの操作をおこないます。
+at.js v2.10 以降でクロスドメイントラッキングを使用するには、次のいずれかを実行します。
 
-1. をインストールします。 [ECID ライブラリ v4.3.0 以降](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) と at.js 2.*x* と共にインストールする必要があります。ECID ライブラリは、ドメインをまたいでも訪問者を識別するために使用される永続的な ID を管理するためにあります。ECID ライブラリ v4.3.0 以降および at.js 2.*x* をインストールしたら、一意のドメインにまたがるアクティビティを作成してユーザーを追跡できます。この機能は、セッションの有効期限が切れた後にのみ機能することに注意してください。
+1. [ECID ライブラリ v4.3.0 以降 ](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) を at.js 2 と共にインストールします。*x* と共にインストールする必要があります。ECID ライブラリは、ドメインをまたいでも訪問者を識別するために使用される永続的な ID を管理するためにあります。ECID ライブラリ v4.3.0 以降および at.js 2.*x* をインストールしたら、一意のドメインにまたがるアクティビティを作成してユーザーを追跡できます。この機能は、セッションの有効期限が切れた後にのみ機能することに注意してください。
 
-1. ECID ライブラリをインストールする代わりに、at.js v2.10 以降がある場合は、 [!DNL Target] の UI **[!UICONTROL 管理]** > **[!UICONTROL 実装]**. ( または、 _crossDomain_ 選択肢 _有効_ （at.js コード内）。
+1. at.js v2.10 以降を使用している場合、ECID ライブラリをインストールする代わりに、[!DNL Target] UI の **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** でクロスドメイン設定を有効にすることができます。 （または、at.js コードで「_crossDomain_」オプションを _有効_ に設定できます。）
 
-at.js v2 のバージョンでクロスドメイントラッキングを使用するには、以下を実行します。*x* 2.10 より前に、上記のオプション#1を実装できます（ECID ライブラリをインストール）。
+at.js v2 のバージョンにクロスドメイントラッキングを使用するには：*x* 2.10 より前は、上記のオプション #1 を実装できます（ECID ライブラリをインストールします）。
 
 ### グローバル mbox 自動作成はサポートされています
 
-この設定は、ページ読み込み時に [!DNL Target] エッジサーバーにリクエストを送信するように at.js 2.*x* に指示します。[!DNL Target] エッジサーバーによってグローバル mbox が execute > pageLoad に変換されているので、ページロード時にリクエストを発行する場合、この設定を有効にする必要があります。
+この設定は at.js 2 に影響します。*x*：ページ読み込み時に [!DNL Target] エッジサーバーへのリクエストを実行します。 [!DNL Target] エッジサーバーによってグローバル mbox が execute > pageLoad に変換されているので、ページロード時にリクエストを発行する場合、この設定を有効にする必要があります。
 
 ### グローバル mbox 名はサポートされています
 
-のお客様は、 **[!UICONTROL Target]** > **[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL 編集]**. [!DNL Target] エッジサーバーがこの設定を使用して、execute > pageLoad を入力されたグローバル mbox 名に変換します。これによりユーザーは引き続き、サーバーサイド API、フォームベースのコンポーザー、プロファイルスクリプトの使用状況、およびグローバル mbox をターゲットにしたオーディエンスの作成ができます。
+お客様は、**[!UICONTROL Target]**/**[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Edit]** を使用してグローバル mbox 名を指定できます。 [!DNL Target] エッジサーバーがこの設定を使用して、execute > pageLoad を入力されたグローバル mbox 名に変換します。これによりユーザーは引き続き、サーバーサイド API、フォームベースのコンポーザー、プロファイルスクリプトの使用状況、およびグローバル mbox をターゲットにしたオーディエンスの作成ができます。
 
 ### 以下の at.js カスタムイベントは `triggerView()` に適用できますか？または `applyOffer()` や `applyOffers()` のみですか？
 
@@ -317,17 +317,17 @@ at.js v2 のバージョンでクロスドメイントラッキングを使用�
 
 適用できます。at.js カスタムイベントは `triggerView()` にも適用できます。
 
-### 電話する時に書いてある `triggerView()` &amp;lbrace;`"page" : "true"`&amp;rbrace;、通知を [!DNL Target] バックエンドに追加し、インプレッションを増やします。 これによりプロファイルスクリプトも実行されますか？
+### &amp;lbrace;`"page" : "true"`&amp;rbrace；を使用して `triggerView()` を呼び出すと、[!DNL Target] バックエンドに通知が送信され、インプレッションが増加します。 これによりプロファイルスクリプトも実行されますか？
 
 [!DNL Target] バックエンドに対してプリフェッチ呼び出しが実行されると、プロファイルスクリプトが実行されます。その後、影響を受けたプロファイルデータは暗号化され、クライアント側に返されます。`{"page": "true"}` を使用した `triggerView()` が呼び出されると、通知が暗号化されたプロファイルデータとともに送信されます。このとき、[!DNL Target] バックエンドはプロファイルデータを復号してデータベースに保存します。
 
 ### ちらつきに対処するために、`triggerView()` を呼び出す前に、事前に非表示になるコードを追加する必要がありますか？
 
-不要です。`triggerView()` を呼び出す前に、事前に非表示になるコードを追加する必要はありません。at.js 2.*x* は、ビューが表示および適用される前に、事前非表示およびちらつきのロジックを管理します。
+不要です。`triggerView()` を呼び出す前に、事前に非表示になるコードを追加する必要はありません。at.js 2.*x* は、ビューを表示および適用する前に、事前非表示およびちらつきのロジックを管理します。
 
-### at.js 1.*x* オーディエンス作成用のパラメーターは、at.js 2.*x* を使用）
+### at.js 1.*x* オーディエンスを作成するためのパラメーターは、at.js 2 ではサポートされていません。*x* を使用）
 
-次の at.js 1.x パラメーターは次のとおりです *NOT* 現在、at.js 2.*x*）を示します。
+次の at.js 1.x パラメーターは、at.js 2 を使用する場合のオーディエンスの作成で現在サポートされています *サポートされていません*。*x*）を示します。
 
 * browserHeight
 * browserWidth
@@ -337,45 +337,45 @@ at.js v2 のバージョンでクロスドメイントラッキングを使用�
 * screenOrientation
 * colorDepth
 * devicePixelRatio
-* vst.*パラメーター（以下を参照）
+* vst* パラメーター（後述）
 
-### at.js 2.*x* では、vst を使用したオーディエンスの作成はサポートされていません。*パラメーター
+### at.js 2.*x* では、vst を使用したオーディエンスの作成はサポートされていません。* パラメーター
 
-at.js 1.*x* vst を使用できました。* mbox パラメーターを使用してオーディエンスを作成する必要があります。 これは、at.js 1.*x* mbox パラメーターを [!DNL Target] バックエンド。 at.js 2.*x*&#x200B;の場合、at.js 2.*x* では、mbox パラメーターの送信方法が異なります。
+at.js のユーザー 1.*x* は vst を使用できました。オーディエンスを作成するための* mbox パラメーター。 これは、at.js 1 の仕組みの意図しない副作用でした。*x* は mbox パラメーターを [!DNL Target] バックエンドに送信しました。 at.js 2 への移行後。*x* では、at.js 2.*x* での mbox パラメーターの送信は異なります。
 
 ## at.js の互換性
 
-次の表は、at.js について説明します。 2.*x* 様々なアクティビティタイプ、統合、機能および at.js 関数との互換性。
+次の表で at.js について説明します。 2.*x* 様々なアクティビティタイプ、統合、機能、at.js 関数との互換性
 
 ### アクティビティのタイプ
 
 | タイプ | 対応? |
 | --- | --- |
-| [!UICONTROL A/B テスト] | ○ |
-| [!UICONTROL 自動配分] | ○ |
-| [!UICONTROL 自動ターゲット] | ○ |
-| [!UICONTROL エクスペリエンスのターゲット設定] | ○ |
-| [!UICONTROL 多変量分析テスト] | ○ |
+| [!UICONTROL A/B Test] | ○ |
+| [!UICONTROL Auto-Allocate] | ○ |
+| [!UICONTROL Auto-Target] | ○ |
+| [!UICONTROL Experience Targeting] | ○ |
+| [!UICONTROL Multivariate Test] | ○ |
 | [!UICONTROL Automated Personalization] | ○ |
 | [!DNL Recommendations] | ○ |
 
 >[!NOTE]
 >
->[!UICONTROL 自動ターゲット] アクティビティは at.js 2.*x* VEC( すべての変更が `Page Load Event`. 特定のビューに変更が追加された場合、 [!UICONTROL A/B テスト], [!UICONTROL 自動配分]、および [!UICONTROL エクスペリエンスのターゲット設定] (XT) アクティビティのみがサポートされます。
+>[!UICONTROL Auto-Target] アクティビティは、at.js 2 を通じてサポートされます。*x* およびすべての変更が `Page Load Event` に適用された場合の VEC 特定のビューに変更を追加した場合、[!UICONTROL A/B Test]、[!UICONTROL Auto-Allocate]、[!UICONTROL Experience Targeting] （XT）アクティビティのみがサポートされます。
 
 ### 統合
 
 | タイプ | 対応? |
 | --- | --- |
-| [!UICONTROL Analytics for Target]（A4T） | ○ |
+| [!UICONTROL Analytics for Target] （A4T） | ○ |
 | オーディエンス | ○ |
 | 顧客属性 | ○ |
 | AEM エクスペリエンスフラグメント | ○ |
-| [Adobe Experience Platform拡張機能](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) | ○ |
+| [Adobe Experience Platform拡張機能 ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) | ○ |
 | デバッガー | ○ |
-| Auditor | ルールはまだ at.js 2.*x* 向けに更新されていません。 |
-| のオプトインサポート [GDPR](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) | これは、 [at.js バージョン 2.1.0](/help/dev/implement/client-side/atjs/target-atjs-versions.md#atjs-version-210-june-3-2019) または後で。 |
-| AEM Enhanced Personalization powered by [!DNL Adobe Target] | × |
+| Auditor | at.js 2 のルールはまだ更新されていません。*x* |
+| [GDPR](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) のオプトインサポート | これは [at.js バージョン 2.1.0](/help/dev/implement/client-side/atjs/target-atjs-versions.md#atjs-version-210-june-3-2019) 以降でサポートされています。 |
+| [!DNL Adobe Target] を利用したAEM Enhanced Personalization | × |
 
 ### 機能
 
@@ -391,7 +391,7 @@ at.js 1.*x* vst を使用できました。* mbox パラメーターを使用し
 | クリックの追跡 | ○ |
 | 複数アクティビティ配信 | ○ |
 | targetGlobalSettings | はい（ただし X-Domain は不可） |
-| at.js のメソッド | 次を除くすべてがサポートされています：<P>`mboxCreate()`<P>`mboxUpdate()`<P>`mboxDefine()`<P>デフォルトコンテンツを表示します。 |
+| at.js のメソッド | 以下を除くすべてがサポートされます<P>`mboxCreate()`<P>`mboxUpdate()`<P>`mboxDefine()`<P>デフォルトコンテンツを表示します。 |
 
 ### クエリ文字列パラメーター
 
@@ -407,9 +407,9 @@ at.js 1.*x* vst を使用できました。* mbox パラメーターを使用し
 
 at.js 2.*x* は、at.js 1.*x* と同様に、カスタムイベント `at-request-succeeded` を応答トークンに使用します。`at-request-succeeded` カスタムイベントを使用するコード例については「[応答トークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)」を参照してください。
 
-## at.js 1.*x* のパラメーターから at.js 2.*x* へのペイロードマッピング
+## at.js 1.*x* パラメーターを at.js 2.*x* ペイロードマッピング
 
-ここでは、at.js 1.*x* と at.js 2.*x* 間のマッピングについて説明します。
+ここでは、at.js 1.*x* と at.js 2 の両方について示しています。**。
 
 パラメーターマッピングを詳しく調べる前に、これらのライブラリバージョンが使用しているエンドポイントが変更されています。
 
@@ -419,10 +419,10 @@ at.js 2.*x* は、at.js 1.*x* と同様に、カスタムイベント `at-reques
 もう 1 つの大きな違いは次のとおりです。
 
 * at.js 1.*x* - クライアントコードはパスの一部です
-* at.js 2.*x* - クライアントコードは、次のようなクエリ文字列パラメーターとして送信されます
+* at.js 2.*x* - クライアントコードは、次のようなクエリ文字列パラメーターとして送信されます。
   `http://<client code>.tt.omtrdc.net/rest/v1/delivery?client=democlient`
 
-以下のセクションでは、各 at.js 1.*x* パラメータ、その説明、および対応する 2.*x* JSON ペイロード（該当する場合）:
+以下のセクションでは、各 at.js 1.*x* パラメーター、その説明および対応する 2。*x* JSON ペイロード（該当する場合）:
 
 ### at_property
 
@@ -444,7 +444,7 @@ at.js 2.*x* は、at.js 1.*x* と同様に、カスタムイベント `at-reques
 
 （at.js 1.*x* パラメーター）
 
-ページのドメイン ( [!DNL Target] ライブラリが実行されます。
+[!DNL Target] ライブラリが実行されるページのドメイン。
 
 at.js 2.*x* JSON ペイロード：
 
@@ -652,7 +652,7 @@ at.js 2.*x* JSON ペイロード：
 
 （at.js 1.*x* パラメーター）
 
-異なるリンクに使用する顧客サードパーティ ID [!DNL Target] ID。
+様々なサー [!DNL Target] ー ID をリンクするために使用される顧客のサードパーティ ID。
 
 at.js 2.*x* JSON ペイロード：
 
@@ -688,7 +688,7 @@ at.js 2.*x* JSON ペイロード：
 
 （at.js 1.*x* パラメーター）
 
-[!UICONTROL Analytics トラッキングサーバーです。]`experienceCloud > analytics > trackingServer` に渡される必要があります。
+[!UICONTROL Analytics] トラッキングサーバー。 `experienceCloud > analytics > trackingServer` に渡される必要があります。
 
 at.js 2.*x* JSON ペイロード：
 
@@ -766,10 +766,10 @@ at.js 2.*x* JSON ペイロード：
 
 バージョンは、version パラメーターを使用して、クエリ文字列パラメーターとして送信されます。
 
-## トレーニングビデオ： at.js 2.*x* 建築図 ![概要バッジ](../../assets/overview.png)
+## トレーニングビデオ：at.js 2.*x* アーキテクチャ図 ![ 概要バッジ ](../../assets/overview.png)
 
-at.js 2.*x* Adobeを高める [!DNL Target]はSPAをサポートし、他のExperience Cloudソリューションと統合しています。 このビデオでは、すべてがどのように結び付いているかを説明します。
+at.js 2.*x* は、Adobe[!DNL Target] によるSPAのサポートを強化し、他のExperience Cloudソリューションと統合します。 このビデオでは、すべてがどのように結び付いているかを説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-詳しくは、 [at.js 2.*x* 動作](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html) を参照してください。
+[at.js の方法について 2.*x* works](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html) （詳細情報）

@@ -1,18 +1,18 @@
 ---
-title: の基本を学ぶ [!DNL Adobe Target] .NET SDK
-description: 方法を学ぶ [!DNL Adobe Target] .NET SDK は、お客様がインストール、初期化および使用できます。
+title: ' [!DNL Adobe Target] .NET SDK の基本を学ぶ'
+description: 顧客が.NET SDK [!DNL Adobe Target]  インストール、初期化、使用する方法について説明します。
 feature: APIs/SDKs
 exl-id: 618e9320-f001-4ab4-befc-c7b12bbe7b5f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '105'
 ht-degree: 3%
 
 ---
 
 # .NET SDK の概要
 
-このリファレンスガイドでは、 [!DNL Adobe Target] .NET SDK は、お客様がインストール、初期化および使用できます。
+このリファレンスガイドでは、.NET SDK をインストール、初期化、使用できるお [!DNL Adobe Target] 様を示します。
 
 ## 前提条件
 
@@ -21,20 +21,20 @@ ht-degree: 3%
 
 ## 導入
 
-.NET SDK の使用を開始する方法については、 [[!DNL Target] SDK 入門ガイド](../sdk-guides/getting-started/getting-started.md).
+.NET SDK の使用を開始する方法については、[[!DNL Target] SDK 入門ガイド ](../sdk-guides/getting-started/getting-started.md) に移動してください。
 
 ## サンプルアプリ
 
-テストドライブthe.NET SDK:
+テストドライブ the.NET SDK:
 
-* 次に示すように、 [[!DNL Adobe Target] [!UICONTROL on-device decisioning] デモサイト](https://github.com/adobe/on-device-decisioning-demo-site)
-* 内 [サンプルアプリケーション](../sdk-guides/sample-apps/sample-apps.md).
+* [[!DNL Adobe Target] [!UICONTROL on-device decisioning] デモサイトにアクセスする ](https://github.com/adobe/on-device-decisioning-demo-site)
+* [ サンプルアプリケーション ](../sdk-guides/sample-apps/sample-apps.md) の場合、
 
 ### リファレンス
 
-.NET SDK リファレンスドキュメントの読み方と理解方法については、まず [SDK のインストール](install-sdk.md).
+.NET SDK リファレンスドキュメントを読み、理解するには、[SDK のインストール ](install-sdk.md) から始めます。
 
-## ソースファイル
+## Source ファイル
 
-* [.NET SDK Github Repo](https://github.com/adobe/target-dotnet-sdk)
-* [リリース](https://github.com/adobe/target-dotnet-sdk/releases)
+* [.NET SDK Github リポジトリ ](https://github.com/adobe/target-dotnet-sdk)
+* [ リリース ](https://github.com/adobe/target-dotnet-sdk/releases)

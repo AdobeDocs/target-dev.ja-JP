@@ -1,31 +1,31 @@
 ---
-title: 次の宛先にディスプレイまたはクリック通知を送信： [!DNL Adobe Target] Node.js SDK の使用
-description: sendNotifications() を使用して、通知を送信またはクリックする方法を説明します。 [!DNL Adobe Target] 測定およびレポート用。
+title: Node.js SDK を使用して  [!DNL Adobe Target]  表示またはクリック通知をに送信します。
+description: sendNotifications （）を使用して、測定およびレポート用に表示またはクリック通知を送信する方法  [!DNL Adobe Target]  説明します。
 feature: APIs/SDKs
 exl-id: 84bb6a28-423c-457f-8772-8e3f70e06a6c
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '248'
 ht-degree: 4%
 
 ---
 
-# 通知の送信 (Node.js)
+# 通知の送信（Node.js）
 
 ## 説明
 
-`[!UICONTROL sendNotifications()]` は、ディスプレイまたはクリック通知の送信先に使用されます。 [!DNL Adobe Target] 測定およびレポート用。
+`[!UICONTROL sendNotifications()]` は、測定およびレポート用の [!DNL Adobe Target] に表示またはクリック通知を送信するために使用されます。
 
 >[!NOTE]
 >
->When in an `execute` 必要なパラメーターを含むオブジェクトがリクエスト自体内にある場合、インプレッションは、条件を満たすアクティビティに対して自動的に増分されます。
+>必須のパラメーターを持つ `execute` オブジェクトがリクエスト自体の中にある場合、インプレッションは、条件を満たすアクティビティについて自動的に増分されます。
 
 インプレッションを自動的に増分する SDK メソッドは次のとおりです。
 
 * `getOffers()`
 * `getAttributes()`
 
-When a `prefetch` オブジェクトがリクエスト内で渡された場合、インプレッションは、 `prefetch` オブジェクト。 `sendNotifications()` インプレッション数およびコンバージョン数を増分するために、はプリフェッチされたエクスペリエンスに使用する必要があります。
+リクエスト内で `prefetch` オブジェクトが渡された場合、`prefetch` オブジェクト内の mbox を持つアクティビティに対して、インプレッションが自動的に増分されることはありません。 インプレッション `sendNotifications()` コンバージョンを増分するための、事前読み込みされたエクスペリエンスに使用する必要があります。
 
 ## メソッド
 
@@ -37,7 +37,7 @@ TargetClient.sendNotifications(options: Object): Promise
 
 ### パラメーター
 
-`options` は次の構造を持ちます。
+`options` の構造は以下のとおりです。
 
 | 名前 | タイプ | 必須 | デフォルト |
 | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ TargetClient.sendNotifications(options: Object): Promise
 
 ## 例
 
-まず、ターゲット ID を構築しましょう。のコンテンツをプリフェッチするための配信 API リクエスト `home` および `product1` mbox.
+まず、`home` および `product1` mbox のコンテンツをプリフェッチするための Target Delivery API リクエストを作成します。
 
 ### Node.js
 
@@ -62,7 +62,7 @@ const prefetchMboxesRequest = {
 const targetResponse = await targetClient.getOffers({ request: prefetchMboxesRequest });
 ```
 
-成功した応答には、 [!UICONTROL Target 配信 API] リクエストされた mbox のプリフェッチされたコンテンツを含む応答オブジェクト。 サンプル `targetResponse.response` オブジェクトは次のように表示されます。
+正常な応答には、リクエストされた mbox のプリフェッチされたコンテンツを含む [!UICONTROL Target Delivery API] 応答オブジェクトが含まれます。 `targetResponse.response` オブジェクトの例は次のようになります。
 
 ### Node.js
 
@@ -120,7 +120,7 @@ const targetResponse = await targetClient.getOffers({ request: prefetchMboxesReq
 }
 ```
 
-mbox に注意 `name` および `state` フィールド、および `eventToken` フィールドの [!DNL Target] コンテンツオプション。 これらは、 `sendNotifications()` リクエストを送信します。 例えば、 `product1` mbox がブラウザー以外のデバイスに表示されている。 通知リクエストは次のように表示されます。
+[!DNL Target] の各コンテンツオプションには、mbox の `name` フィールドと `state` フィールド、および `eventToken` フィールドがあります。 これらは、各コンテンツオプションが表示されるとすぐに、`sendNotifications()` リクエストで指定する必要があります。 `product1` mbox がブラウザー以外のデバイスに表示されているとします。 通知リクエストは次のように表示されます。
 
 ### Node.js
 
@@ -139,7 +139,7 @@ const mboxNotificationRequest = {
 };
 ```
 
-mbox の状態と、 [!DNL Target] プリフェッチ応答で配信されたオファー。 通知リクエストを作成したら、に送信できます。 [!DNL Target] 経由 `sendNotifications()` API メソッド：
+プリフェッチ応答で配信された [!DNL Target] オファーに対応する mbox 状態とイベントトークンの両方が含まれていることに注意してください。 通知リクエストを作成したら、`sendNotifications()` の API メソッドを使用して [!DNL Target] に送信できます。
 
 ### Node.js
 

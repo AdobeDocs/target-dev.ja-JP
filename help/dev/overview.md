@@ -1,103 +1,103 @@
 ---
-keywords: target 開発者ガイド；概要；ホーム
-title: Adobe Target Developer Guide
-description: 実装方法と管理方法 [!DNL Adobe Target] とで API や SDK を連携させることはできますか？
+keywords: target デベロッパーガイド；概要；ホーム
+title: Adobe Target開発者ガイド
+description: を実装および管理  [!DNL Adobe Target] 、その API および SDK を操作する方法
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
 source-git-commit: dadc3804da4592dba4ad88b8c5c9f804c56e232b
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '398'
 ht-degree: 5%
 
 ---
 
 # [!DNL Adobe Target] 開発者ガイド
 
-**([表示 [!DNL Target] ドキュメントの更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank})**
+**（[ 表示  [!DNL Target]  ドキュメントのアップデート ](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank}）**
 
-この *[!DNL Adobe Target]開発者ガイド* は、次のリソースとガイドを提供します。 [!DNL Target] 開発者（実装および管理する API や SDK のドキュメントを含む） [!DNL Target].
+この *[!DNL Adobe Target]開発者ガイドでは*[!DNL Target] ールを実装および管理するための API および SDK ドキュメントなど、[!DNL Target] 開発者向けのリソースとガイドを提供します。
 
 >[!NOTE]
 >
 >このガイドに加えて、次の [!DNL Adobe Target] ガイドも使用できます。
 >
->* [*[!DNL Adobe Target] 実務者ガイド&#x200B;*](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja){target=_blank}
+>* [*[!DNL Adobe Target] 実務担当者ガイド *](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja){target=_blank}
 >
 >* [*[!DNL Adobe Target] Tutorials *](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=ja){target=_blank}
 >
->リリース情報については、 [Target リリースノート（現行）](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank} （内） *[!DNL Adobe Target]実務者ガイド*.
+>リリース情報については、[*[!DNL Adobe Target]Business Practitioner Guide」の Target リリースノート（最新） ](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank} を参照してください*。
 
-## 実装の手引き
+## 実装の概要
 
-**[実装する前に](/help/dev/before-implement/considerations-before-you-implement-target.md)**：実装の前に対処すべき考慮事項 [!DNL Adobe Target].
+**[実装する前に](/help/dev/before-implement/considerations-before-you-implement-target.md)**:[!DNL Adobe Target] を実装する前に対処すべき考慮事項。
 
-## クライアント側実装
+## クライアントサイドの実装
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk.md): [!DNL Adobe Experience Platform Web SDK] を使用すると、 [!DNL Experience Cloud] （次を含む） [!DNL Target]) 経由で [!UICONTROL AdobeExperience Edge ネットワーク].
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk.md): [!DNL Adobe Experience Platform Web SDK] を使用すると、[!UICONTROL Adobe Experience Edge Network] を介して、[!DNL Experience Cloud] の様々なサービス（[!DNL Target] など）を操作できます。
 
-[**Target at.js JavaScript ライブラリ**](/help/dev/implement/client-side/overview.md):at.js JavaScript ライブラリは、Web 実装のページ読み込み時間を改善し、セキュリティを強化して、シングルページアプリケーション向けのより優れた実装オプションを提供します。
+[**Target at.js JavaScript ライブラリ**](/help/dev/implement/client-side/overview.md):at.js JavaScript ライブラリは、web 実装のページ読み込み時間を改善し、セキュリティを向上し、シングルページアプリケーション向けのより優れた実装オプションを提供します。
 
-## サーバー側実装
+## サーバーサイドの実装
 
-[**Target SDK の概要**](implement/server-side/server-side-overview.md)：はじめに [!DNL Adobe Target] SDK（On-device decisioning を含む）。
+[**Target SDK の概要**](implement/server-side/server-side-overview.md)：オンデバイス判定を含む、[!DNL Adobe Target] SDK の基本を学びます。
 
-[**Node.js SDK**](implement/server-side/node-js/overview.md)：の使用方法 [!DNL Target] Node.js SDK.
+[**Node.js SDK**](implement/server-side/node-js/overview.md):[!DNL Target] Node.js SDK の使用方法。
 
-[**Java SDK**](implement/server-side/java/overview.md)：の使用方法 [!DNL Target] Java SDK。
+[**Java SDK**](implement/server-side/java/overview.md):[!DNL Target] Java SDK の使用方法。
 
-[**.NET SDK**](implement/server-side/net/overview.md)：の使用方法 [!DNL Target] .NET SDK.
+[**.NET SDK**](implement/server-side/net/overview.md): [!DNL Target] .NET SDK の使用方法。
 
-[**Python SDK**](implement/server-side/python/overview.md)：の使用方法 [!DNL Target] Python SDK。
+[**Python SDK**](implement/server-side/python/overview.md):[!DNL Target] Python SDK の使用方法。
 
 ## ハイブリッド実装
 
-[**ハイブリッドデプロイメント**](implement/hybrid/hybrid-overview.md)：の実装 [!DNL Target] クライアント側とサーバー側の実装の組み合わせを使用する。
+[**ハイブリッドデプロイメント**](implement/hybrid/hybrid-overview.md)：クライアントサイド実装とサーバーサイド実装を組み合わせて、[!DNL Target] を実装します。
 
 ## Recommendations実装
 
-[**Recommendations実装**](implement/recommendations/recommendations.md)：計画と実装 [!DNL Adobe Target Recommendations].
+[**Recommendationsの実装**](implement/recommendations/recommendations.md): [!DNL Adobe Target Recommendations] を計画し、実装します。
 
 ## モバイルアプリの実装
 
-[**AEP Mobile SDK の概要**](implement/mobile/overview.md)：実装方法の概要 [!DNL Adobe Target] 次を使用 [!DNL Adobe Experience Platform] モバイル SDK。
+[**AEP Mobile SDK の概要**](implement/mobile/overview.md):[!DNL Adobe Experience Platform] Mobile SDK を使用して [!DNL Adobe Target] を実装する方法の概要。
 
-[**AEP Mobile SDK リファレンス**](https://developer.adobe.com/client-sdks/documentation/)：の実装 [!DNL Adobe Target] 次を使用 [!DNL Adobe Experience Platform] モバイル SDK。
+[**AEP Mobile SDK リファレンス**](https://developer.adobe.com/client-sdks/documentation/):[!DNL Adobe Experience Platform] Mobile SDK を使用した [!DNL Adobe Target] の実装。
 
 ## メールの実装
 
-[**E メールの概要**](implement/email/overview.md)：実装方法の概要 [!DNL Adobe Target] 電子メール内。
+[**メールの概要**](implement/email/overview.md)：メールに [!DNL Adobe Target] を実装する方法の概要。
 
 ## API ガイド
 
-[**はじめに**](before-administer/target-api-overview.md)：の概要 [!DNL Adobe Target] API
+[**概要**](before-administer/target-api-overview.md):[!DNL Adobe Target] API の概要。
 
-[**[!DNL Target Delivery API]**](/help/dev/implement/delivery-api/overview.md)：を使用します。 [!DNL Adobe Target] Web チャネルとモバイルチャネルをまたいでエクスペリエンスを配信する Delivery API と、接続された TV、キオスク、店内のデジタル画面など、ブラウザーベース以外の IoT デバイス。
+[**[!DNL Target Delivery API]**](/help/dev/implement/delivery-api/overview.md): [!DNL Adobe Target] 配信 API を使用すると、web チャネルやモバイルチャネルをまたいで、接続された TV、キオスク、店舗のデジタル画面などのブラウザー以外のベースの IoT デバイスでもエクスペリエンスを配信できます。
 
-[**[!DNL Target Admin API]**](administer/admin-api/admin-api-overview-new.md)：を使用します。 [!DNL Adobe Target] プロパティ、アクティビティ、オーディエンス、オファー、プロパティ、レポート、mbox、ホスト、環境などを管理するための管理 API。
+[**[!DNL Target Admin API]**](administer/admin-api/admin-api-overview-new.md):[!DNL Adobe Target] 管理 API を使用して、プロパティ、アクティビティ、オーディエンス、オファー、プロパティ、レポート、mbox、ホスト、環境などを管理します。
 
-[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md)：取得 [!DNL Adobe Target] ユーザープロファイル情報。
+[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md)：ユーザープロファイル情報 [!DNL Adobe Target] 取得します。
 
-[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports)：取得 [!UICONTROL A/B テスト] および [!UICONTROL Automated Personalization] アクティビティレポートデータ。
+[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): [!UICONTROL A/B Test] および [!UICONTROL Automated Personalization] アクティビティレポートのデータを取得します。
 
-[**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/)：を使用します。 [!DNL Target Recommendations] API.
+[**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/):[!DNL Target Recommendations] API を使用します。
 
-[**[!DNL Target Models API]**](administer/models-api/models-api-overview.md)：を管ブロックリストに加える理して、 [!DNL Target] 機械学習モデル。
+[**[!DNL Target Models API]**](administer/models-api/models-api-overview.md)：機械学習モデルで使用される機能を定義するブロックリスト[!DNL Target] 管理します。
 
-[**Admin ConsoleAPI**](https://developer.adobe.com/umapi/)：ユーザーユーザー管理 API とユーザー同期 API を使用して、Adobeと製品の使用権限を管理します。
+[**Admin ConsoleAPI**](https://developer.adobe.com/umapi/): User Management API および User Sync API を使用して、ユーザーおよびAdobeの使用権限を管理します。
 
-[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html)：を使用します。 [!DNL Adobe Experience Platform Edge Network Server] 様々なデータ収集、パーソナライゼーション、広告、マーケティングの使用例に対応する API です。
+[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html)：様々なデータ収集、パーソナライゼーション、広告およびマーケティングのユースケースに [!DNL Adobe Experience Platform Edge Network Server] API を使用します。
 
 ## リソース
 
-* [Adobeオープンソースリポジトリ](https://github.com/adobe)
-* [Target Node JS SDK のソース](https://github.com/adobe/target-nodejs-sdk)
-* [Target Node JS SDK の例リポジトリ](https://github.com/adobe/target-nodejs-sdk-samples)
-* [Target Java SDK のソース](https://github.com/adobe/target-java-sdk)
-* [Target Java SDK の例リポジトリ](https://github.com/adobe/target-java-sdk-samples)
+* [Adobeのオープンソースリポジトリ ](https://github.com/adobe)
+* [Target Node JS SDK Source](https://github.com/adobe/target-nodejs-sdk)
+* [Target Node JS SDK の例リポジトリ ](https://github.com/adobe/target-nodejs-sdk-samples)
+* [Target Java SDK Source](https://github.com/adobe/target-java-sdk)
+* [Target Java SDK サンプルリポジトリ ](https://github.com/adobe/target-java-sdk-samples)
 * [Target の実装](./before-implement/prepare-to-implement-target.md)
-* [ターゲット管理](./before-administer/target-api-overview.md)
-* [Adobe Target開発ドキュメント GitHub リポジトリ](https://github.com/AdobeDocs/target-developers)
-* [Adobe Targetリリースノート](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
-* [Adobe Target Business ユーザーガイド](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja)
+* [Target 管理](./before-administer/target-api-overview.md)
+* [Adobe Target開発ドキュメント GitHub リポジトリ ](https://github.com/AdobeDocs/target-developers)
+* [Adobe Target リリースノート ](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
+* [Adobe Target ビジネスユーザーガイド ](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja)
 

@@ -1,55 +1,55 @@
 ---
 title: Adobeモデル API の概要
-description: 機能が機械学習モデルに含まれるのを防ぐために使用できるモデル API の概要です。
+description: Models API の概要です。ユーザーはこの API を使用して、機械学習モデルに機能が含まれないようにすることができます。
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1288'
 ht-degree: 2%
 
 ---
 
-# モデル API の概要
+# Models API の概要
 
-モデル API(API とも呼ばれまブロックリストに加えるす ) を使用すると、の機械学習モデルで使用される機能のリストを表示および管理できます。 [!UICONTROL Automated Personalization] (AP) および [!DNL Auto-Target] (AT) アクティビティ AP または AT アクティビティのモデルでの使用を除外する場合は、モデル API を使用して、その機能を「」に追加できまブロックリストに加えるす。
+ブロックリストに加える Models API （Create API とも呼ばれる）を使用すると、[!UICONTROL Automated Personalization] （AP）と [!DNL Auto-Target] （AT）アクティビティの機械学習モデルで使用する機能のリストを表示および管理できます。 モデルが AP または AT アクティビティに使用する機能を除外する場合は、Models API を使用して、その機能を「ブロックリスト」に追加できます。
 
-A **[!UICONTROL ブロックリストに加える]** によって除外される一連の機能を定義します。 [!DNL Adobe Target] を機械学習モデルから取り出します。 機能について詳しくは、 [使用するデータ [!DNL Target] 機械学習アルゴリズム](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html).
+**[!UICONTROL blocklist]** は、[!DNL Adobe Target] によって機械学習モデルから除外される一連の機能を定義します。 機能について詳しくは、[ 機械学習アルゴリズムで使用されるデータ  [!DNL Target]  参照してください ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html)。
 
-ブロックリストに加えるは、アクティビティ（アクティビティレベル）ごとに、または [!DNL Target] アカウント（グローバルレベル）。
+ブロックリストは、アクティビティ（アクティビティレベル）ごとに定義することも、[!DNL Target] アカウント内のすべてのアクティビティ（グローバルレベル）に対して定義することもできます。
 
 <!-- To get started with the Models API in order to create and manage your blocklist, download the Postman Collection [here](https://git.corp.adobe.com/target/ml-configuration-management-service/tree/nextRelease/rest_api_library). Note this is an Adobe internal link. Need to publish this publicly if want to share with customers. -->
 
 ## モデル API の仕様
 
-モデル API の仕様を表示する [ここ](../administer/models-api/models-api-overview.md).
+Models API の仕様を [ こちら ](../administer/models-api/models-api-overview.md) で確認します。
 
 ## 前提条件
 
-モデル API を使用するには、 [Adobe Developer Console](https://developer.adobe.com/console/home)それは、 [Target 管理 API](../administer/admin-api/admin-api-overview-new.md). 詳しくは、 [認証の設定方法](../before-administer/configure-authentication.md).
+Models API を使用する場合、{Target Admin API](https://developer.adobe.com/console/home) を使用する場合と同様に、{0[Adobe Developer Console](../administer/admin-api/admin-api-overview-new.md) を使用して認証を設定する必要があります。 [詳しくは、[ 認証の設定方法 ](../before-administer/configure-authentication.md) を参照してください。
 
-## モデル API の使用に関するガイドライン
+## Models API 使用ガイドライン
 
-管理の方ブロックリストに加える法
+ブロックリストの管理方法
 
-[**手順 1:**](#step1) アクティビティの機能のリストを表示
+[**手順 1:**](#step1) アクティビティの機能のリストを表示する
 
-[**手順 2:**](#step2) アクティビテブロックリストに加えるィのを確認する
+[**手順 2:**](#step2) アクティビティのブロックリストを確認する
 
-[**手順 3:**](#step3) アクティビティのブロックリストに加えるに機能を追加
+[**手順 3:**](#step3) アクティビティのブロックリストに機能を追加する*
 
 [**手順 4:**](#step4) （オプション）ブロック解除
 
-[**手順 5:**](#step5) （オプション）グローバルの管ブロックリストに加える理
+[**手順 5:**](#step5) （オプション）グローバルブロックリストの管理
 
 
-## 手順 1：アクティビティの機能のリストを表示する {#step1}
+## 手順 1：アクティビティの機能のリストの表示 {#step1}
 
-フィーチャーをブロックリストに加えるする前に、そのアクティビティのモデルに現在含まれているフィーチャーのリストを表示します。
+機能をブロックリストに加えるする前に、そのアクティビティのモデルに現在含まれている機能のリストを表示します。
 
 >[!BEGINTABS]
 
->[!TAB リクエスト]
+>[!TAB 要求]
 
 ```json {line-numbers="true"}
 GET https://mc.adobe.io/<tenant>/target/models/features/<campaignId>
@@ -92,34 +92,34 @@ GET https://mc.adobe.io/<tenant>/target/models/features/<campaignId>
 
 <!-- JUDY: Update codeblock above once you have the complete Response. -->
 
-この例では、ユーザーは、アクティビティ ID が260840のアクティビティについて、モデルで使用されている機能のリストを確認しています。
+ここに示す例では、アクティビティ ID が 260840 のアクティビティについて、モデルで使用されている機能のリストを確認しています。
 
 ![手順 1](assets/models-api-step-1.png)
 
 >[!NOTE]
 >
->アクティビティのアクティビティ ID を確認するには、 [!DNL Target] UI 目的のアクティビティをクリックします。 アクティビティ ID は、結果のアクティビティの概要ページの本文と、そのページの URL の末尾に表示されます。
+>アクティビティのアクティビティ ID を見つけるには、[!DNL Target] UI のアクティビティリストに移動します。 対象となるアクティビティをクリックします。 アクティビティ ID は、結果のアクティビティの概要ページの本文と、そのページの URL の末尾に表示されます。
 
-The **[!UICONTROL externalName]** は、機能のわかりやすい名前です。 作成者 [!DNL Target]に設定され、この値は時間の経過と共に変化する可能性があります。 ユーザーは、 [パーソナライゼーションインサイトレポート](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html).
+**[!UICONTROL externalName]** は、機能のわかりやすい名前です。 [!DNL Target] によって作成され、この値は時間の経過と共に変化する可能性があります。 ユーザーは、[Personalization Insights レポート ](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html) でこれらの名前をわかりやすく表示できます。
 
-The **[!UICONTROL internalName]** は、機能の実際の識別子です。 また、 [!DNL Target]変更できません。 これは、参照するフィーチャを識別するために必要な値でブロックリストに加えるす。
+**[!UICONTROL internalName]** は、機能の実際の識別子です。 [!DNL Target] によっても作成されますが、変更することはできません。 この値を参照して、ブロックリストに加えるする機能を特定する必要があります。
 
-機能リストに値が入力される（null 以外にする）ためには、「 」アクティビティに注意してください。
+機能リストに値を入力するには（つまり、null 以外にするには）、アクティビティに注意してください。
 
-1. ステータス=ライブであるか、以前にアクティベート済みである必要があります
-1. モデルが実行するデータを持つように、キャンペーンアクティビティが存在するのに十分な時間が実行されていた必要があります。
+1. ステータス = ライブであるか、以前にアクティブ化されている必要があります
+1. モデルに実行するデータが含まれるように、キャンペーンアクティビティが存在するのに十分な時間、実行されている必要があります。
 
-## 手順 2：アクティビティのブロックリストに加えるを確認する {#step2}
+## 手順 2：アクティビティのブロックリストを確認する {#step2}
 
-次に、「 」タブを表示しブロックリストに加えるます。 つまり、チェックをオンにして、このアクティビティのモデルへの追加をブロックしている機能（存在する場合）を確認します。
+次に、ブロックリストを表示します。 つまり、現在このアクティビティのモデルに含まれないようにブロックされている機能（ある場合）を確認します。
 
 >[!ERROR]
 >
->注意： `/blockList/` リクエストでは大文字と小文字が区別されます。
+>リクエスト `/blockList/` は大文字と小文字が区別されることに注意してください。
 
 >[!BEGINTABS]
 
->[!TAB リクエスト]
+>[!TAB 要求]
 
 ```json {line-numbers="true"}
 GET https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
@@ -133,44 +133,44 @@ GET https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-ここに示す例では、ユーザーは、アクティビティ ID が260840のアクティビティに対して、ブロックされた機能のリストを確認しています。 結果は空になります。つまり、このアクティビティには現在、機能がされていまブロックリストに加えるせん。
+次に示す例では、アクティビティ ID が 260840 のアクティビティについて、ブロックされる機能のリストを確認しています。 結果は空です。つまり、このアクティビティには現在、ブロックリストに加える機能がありません。
 
 ![手順 2](assets/models-api-step-2.png)
 
 >[!NOTE]
 >
->機能を追加する前に、初めてフルをチェックしたときブロックリストに加えるに、このような空の結果が表示される場合があります。 ただし、から機能を追加（その後削除）するとブロックリストに加える、少し異なる結果が表示され、空の機能配列が返される場合がありまブロックリストに加えるす。 引き続き、 [手順 4](#step4).
+>機能を追加する前に、初めてブロックリスト全体を確認すると、このような空の結果が表示される場合があります。 ただし、ブロックリストブロックリストに加えるから機能を追加（およびその後で削除）すると、空の機能配列が返される結果が少し異なる場合があります。 読み続けて、[ 手順 4](#step4) でこれの例を確認します。
 
-## 手順 3：アクティビティのブロックリストに加えるに機能を追加 {#step3}
+## 手順 3：アクティビティのブロックリストに機能を追加する {#step3}
 
-機能をGETに追加するにブロックリストに加えるは、リクエストをからPUTに変更し、リクエストの本文を変更して、 `blockedFeatureSources` または `blockedFeatures` 必要に応じて。
+ブロックリストに機能を追加するには、リクエストをGETからPUTに変更し、リクエストの本文を必要に応じて `blockedFeatureSources` または `blockedFeatures` を指定します。
 
-* リクエストの本文には、次のいずれかが必要です。 `blockedFeatures` または `blockedFeatureSources`. 両方を含めることができます。
-* 入力 `blockedFeatures` から特定された値を持つ `internalName`. 詳しくは、 [手順 1](#step1).
-* 入力 `blockedFeatureSources` 以下の表の値を使用します。
+* リクエストの本文には、`blockedFeatures` または `blockedFeatureSources` が必要です。 両方を含めることができます。
+* `internalName` から識別された値を `blockedFeatures` に入力します。 [ 手順 1](#step1) を参照してください。
+* 以下の表の値を `blockedFeatureSources` に入力します。
 
-注意： `blockedFeatureSources` フィーチャの元を示します。 の目的でブロックリストに加えるは、機能のグループまたはカテゴリとして機能し、ユーザーは一度に機能のセット全体をブロックできます。 の値 `blockedFeatureSources` は、機能の識別子の最初の文字 (`blockedFeatures` または `internalName` 値 ) の場合は、「フィーチャプレフィックス」と見なされる場合もあります。
+機能の元の場所 `blockedFeatureSources` 示されることに注意してください。 ブロックリストへの登録の目的では、機能のグループまたはカテゴリとして機能し、機能のセット全体を一度にブロックできます。 `blockedFeatureSources` の値は、機能の識別子の最初の文字（`blockedFeatures` または `internalName` の値）に一致するので、「機能プレフィックス」と見なすこともできます。
 
-### のテーブル `blockedFeatureSources` 値 {#table}
+### `blockedFeatureSources` 値テーブル {#table}
 
 | プレフィックス | 説明 |
 | --- | --- |
 | BOX | mbox パラメーター |
-| URL | カスタム — URL パラメーター |
-| ENV | 環境 |
-| SES | 訪問者プロファイル |
-| 地域 | 地域 |
-| PRO | カスタム — プロファイル |
-| SEG | カスタム — レポートセグメント |
-| AAM | カスタム —Experience Cloudセグメント |
+| URL | カスタム - URL パラメーター |
+| 環境 | 環境 |
+| セス | 訪問者プロファイル |
+| 地域 | ジオ位置情報 |
+| PRO | カスタム – プロファイル |
+| セグメント | カスタム – レポートセグメント |
+| AAM | カスタム - Experience Cloudセグメント |
 | 暴徒 | モバイル |
-| CRS | カスタム — 顧客属性 |
-| UPA | カスタム — RT-CDP プロファイル属性 |
+| CRS | カスタム – 顧客属性 |
+| UPA | カスタム - RT-CDP プロファイル属性 |
 | IAC | 訪問者の関心領域 |  |
 
 >[!BEGINTABS]
 
->[!TAB リクエスト]
+>[!TAB 要求]
 
 ```json {line-numbers="true"}
 PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
@@ -197,19 +197,19 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-ここに示す例では、ユーザーは 2 つの機能をブロックしています。 `SES_PREVIOUS_VISIT_COUNT` および `SES_TOTAL_SESSIONS`：アクティビティ ID が260480のアクティビティの機能の完全なリストを問い合わせることで、以前に識別されたものです。詳しくは、 [手順 1](#step1). また、Experience Cloudセグメントからのすべての機能をブロックします。これは、「AAM」というプレフィックスで機能をブロックすることで実現されます。詳しくは、 [表](#table) 上記の
+この例では、ユーザーは `SES_PREVIOUS_VISIT_COUNT` と `SES_TOTAL_SESSIONS` の 2 つの機能をブロックしています。これは、手順 1](#step1) で説明したように、アクティビティ ID が 260480[ のアクティビティの機能の完全なリストをクエリすることで、以前に識別されました。 また、前述の [ 表 ](#table) で説明されているように、「AAM」のプレフィックスで機能をブロックすることで達成される、Experience Cloudセグメントからのすべての機能もブロックします。
 
 ![手順 3](assets/models-api-step-3.png)
 
-機能をブロックリストに加えるした後、 [手順 2](#step2) (GET) を再度追加しまブロックリストに加えるす。 結果が期待どおりに表示されることを確認します ( 結果に、最新のPUTリクエストから追加された機能が含まれていることを確認します )。
+機能をブロックリストに加えるした後で、[ 手順 2](#step2) （GET ブロックリストに加える）を再度実行して、更新されたブロックリストを検証することをお勧めします。 結果が期待どおりに表示されることを確認します（結果に、最新のPUTリクエストから追加された機能が含まれていることを確認します）。
 
-## 手順 4: （オプション）ブロック解除 {#step4}
+## 手順 4:（任意）ブロック解除 {#step4}
 
-すべてのフィーチャのブブロックリストに加えるロックを解除するには、次の値をクリアします。 `blockedFeatureSources` または `blockedFeatures`.
+すべてのブロックリストに加える集合体のブロックを解除するには、`blockedFeatureSources` または `blockedFeatures` の値を消去します。
 
 >[!BEGINTABS]
 
->[!TAB リクエスト]
+>[!TAB 要求]
 
 ```json {line-numbers="true"}
 PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
@@ -231,25 +231,25 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-この例では、アクティビティ ID が260840のアブロックリストに加えるクティビティのをクリアしています。 応答は、ブロックされた機能とそのソースの両方に対して空の配列を確認します。`blockedFeatureSources` および `blockedFeatures`、それぞれ。
+次の例では、アクティビティ ID が 260840 のアクティビティについて、ブロックリストがクリアされています。 応答では、ブロックされた機能とそのソース（それぞれ `blockedFeatureSources` と `blockedFeatures`）の両方で空の配列が確認されることに注意してください。
 
 ![手順 4](assets/models-api-step-4.png)
 
-通常と同様に、を変更した後ブロックリストに加えるは、次の操作を実行することをお勧めします。 [手順 2](#step2) 再び (GETを確認するためのリストには、想定どおりの機能が含まれていまブロックリストに加えるす )。 この例では、ユーザーは、自分のが空になっていることを確認していまブロックリストに加えるす。
+いつものように、ブロックリストを修正した後で、もう一度 [ 手順 2](#step2) を実行することをお勧めします（リストを検証するためのGETブロックリストに加えるは、期待どおりに機能が含まれています）。 ここに示す例では、ユーザーは自分のブロックリストが空であることを確認しています。
 
-![手順 4b](assets/models-api-step-4b.png)
+![ ステップ 4b](assets/models-api-step-4b.png)
 
-質問：すべてではなく一部のを削除するにはどうすればよいでブロックリストに加えるすか。
+質問：ブロックリストのすべてではなく、一部を削除するにはどうすればよいですか？
 
-回答：マルチ機能かブロックリストに加えるら機能の個別のサブセットを削除するにブロックリストに加えるは、ブロックインする機能の更新済みリストを送信するだけです [ブロックリストに加える要求](#step3)を追加する必要がありまブロックリストに加えるす。 つまり、更新された機能リスト ( [手順 3](#step3)) の場合は、削除するフィーチャを必ずから除外しまブロックリストに加えるす。
+回答：マルチフィーチャーブロックリストに加えるからブロックリストに加えるされた機能のサブセットを個別に削除するには、[ リクエスト ](#step3) でブロックしたい機能の更新リストを送信するだけで、全ブロックリストブロックリストに加えるをクリアして必要な機能を追加し直すことはできなくなります。 つまり、更新した機能リストを送信し（[ 手順 3](#step3) を参照）、「削除」する機能は必ずブロックリストから除外します。
 
-## 手順 5:（オプション）グローバルの管ブロックリストに加える理 {#step5}
+## 手順 5:（オプション）グローバルブロックリストの管理 {#step5}
 
-上記の例はすべて、1 つのアクティビティのコンテキストです。 また、各アクティビティに個別にオプションを指定する代わりに、指定したクライアント（テナント）全体のすべてのアクティビティの機能をブブロックリストに加えるロックすることもできます。 グローバルを実ブロックリストに加える行するには、 `/blockList/global` 代わりにを呼び出します。 `blockList/<campaignId>`.
+上記の例はすべて、1 つのアクティビティのコンテキストに含まれていました。 各アクティビティにブロックリストを個別に指定する代わりに、特定のクライアント（テナント）にわたるすべてのアクティビティの機能をブロックすることもできます。 グローバルブロックリストを実行するには、`blockList/<campaignId>` の代わりに `/blockList/global` 呼び出しを使用します。
 
 >[!BEGINTABS]
 
->[!TAB リクエスト]
+>[!TAB 要求]
 
 ```json {line-numbers="true"}
 PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/global
@@ -278,14 +278,14 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/global
 
 >[!ENDTABS]
 
-上記のサンプル要求では、ユーザーは、すべてのアクティビティに対して「AAM_FEATURE_1」と「AAM_FEATURE_2」の 2 つの機能をブロックしています [!DNL Target] アカウント。 つまり、アクティビティに関係なく、「AAM_FEATURE_1」と「AAM_FEATURE_2」はこのアカウントの機械学習モデルに含まれません。 さらに、ユーザーは、プレフィックスが「AAM」、「PRO」、「ENV」のすべての機能をグローバルにブロックします。
+上記のリクエストのサンプルでは、ユーザーが [!DNL Target] アカウント内のすべてのアクティビティで「AAM_FEATURE_1」と「AAM_FEATURE_2」という 2 つの機能をブロックしています。 つまり、アクティビティに関係なく、このアカウントの機械学習モデルには「AAM_FEATURE_1」と「AAM_FEATURE_2」は含まれません。 さらに、ユーザーは、プレフィックスが「AAM」、「PRO」または「ENV」のすべての機能をグローバルにブロックしています。
 
-質問：上記のコードサンプルは、冗長ではありませんか。
+質問：上記のコードサンプルは冗長ではありませんか？
 
-答え：はい。 値が「AAM」で始まる機能をブロックするのに対して、ソースが「AAM」であるすべての機能をブロックするのに対して、冗長です。 最終的な結果として、AAM(Experience Cloudセグメント ) から提供されるすべての機能がブロックされます。 したがって、上記の例では、Experience Cloudセグメントからすべての機能をブロックすることを目的としている場合、「AAM」で始まる特定の機能を個別に指定する必要はありません。
+回答：はい。 「AAM」で始まる値を持つ機能をブロックし、ソースが「AAM」のすべての機能をブロックすることは冗長です。 最終的には、AAM（Experience Cloudセグメント）をソースとするすべての機能がブロックされます。 したがって、Experience Cloudセグメントからすべての機能をブロックすることを目的とする場合、上記の例では、「AAM」で始まる特定の機能を個別に指定する必要はありません。
 
-最後の手順：アクティビティレベルとグローバルレベルのどちらで、変更後にを検証ブロックリストに加えるし、期待する値が含まれていることを確認することをお勧めします。 これをおこなうには、 `PUT` から `GET`.
+最終手順：アクティビティレベルでもグローバルレベルでも、変更後にブロックリストを検証し、期待する値が含まれていることを確認することをお勧めします。 これを行うには、`PUT` を `GET` に変更します。
 
-以下に示すレスポンスのサンプルは [!DNL Target] は、2 つの個々の機能をブロックし、さらに「AAM」、「PRO」、「ENV」から提供されるすべての機能をブロックします。
+以下に示すサンプル応答では、2 つの個別の機能に加え、「AAM」、「PRO」および「ENV」から取得され [!DNL Target] すべての機能がブロックされています。
 
 ![手順 5](assets/models-api-step-5.png)

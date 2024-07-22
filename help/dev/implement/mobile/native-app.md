@@ -1,36 +1,36 @@
 ---
-keywords: モバイルアプリ，aep sdk，ネイティブアプリ，Web ビュー，ネイティブ；swift,adobe experience platform モバイル sdk，モバイル sdk，ネイティブコード
-description: の実装方法を学ぶ [!DNL Adobe Target] と [!DNL AEP Mobile SDK] は、web ビューを含むネイティブアプリで使用されます。
-title: 実装方法 [!DNL Adobe Target] web ビューを持つネイティブコードを使用するモバイルアプリの
+keywords: モバイルアプリ、aep sdk、ネイティブアプリ、web ビュー、ネイティブ；swift、adobe experience platform mobile sdk、mobile sdk、ネイティブコード
+description: Web ビューを使用してネイティブアプリに  [!DNL AEP Mobile SDK]  を実装する方法を説明します  [!DNL Adobe Target]
+title: Web ビュー  [!DNL Adobe Target]  ネイティブコードを使用するモバイルアプリに実装
 feature: Implement Mobile
 role: Developer
-source-git-commit: c0fda36cb5472d71438c47b8b484716003da4214
+exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
 
+# Web ビューを使用したネイティブアプリでの [!DNL AEP Mobile SDK] を使用した [!DNL Target] の実装
 
-# 実装方法 [!DNL Target] と [!DNL AEP Mobile SDK] web ビューを使用するネイティブアプリ内
+この記事では、[!DNL Adobe Experience Platform Mobile SDK] を使用して、ネイティブコードと web ビューを使用するモバイルアプリで [!DNL Adobe Target] を実装するためのベストプラクティスを共有します。
 
-この記事では、の実装に関するベストプラクティスを紹介します [!DNL Adobe Target] を使用して、web ビューでネイティブコードを使用するモバイルアプリの [!DNL Adobe Experience Platform Mobile SDK].
+この記事では、[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank} を使用したサンプル iOS アプリと、[GitHub リポジトリから Swift で記述された [!DNL Target] 統合を使用 ](https://github.com/adobe/aep-sdk-app/){target=_blank} ます。
 
-この記事では、 [[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank} and a [!DNL Target] integration written in [Swift from the GitHub repository](https://github.com/adobe/aep-sdk-app/){target=_blank}.
-
-実際の環境では、エンタープライズアプリはモバイルアプリで Web ビューを使用している可能性が高くなります。 Web ビューは、URL を使用して Web ページを読み込むコンテナです。 コンテナは、コントロールのないブラウザーウィンドウに似ています。 iOSでは、Web ビューコンテナは、Web ページを処理する際に Safari ブラウザーとして機能します。
+実際の世界では、エンタープライズアプリはモバイルアプリで web ビューを使用している可能性が高くなります。 Web ビューは、URL を使用して web ページを読み込むコンテナです。 コンテナは、コントロールのないブラウザーウィンドウに似ています。 iOSでは、web ビューコンテナは、web ページの処理時に Safari ブラウザーとして機能します。
 
 ## 前提条件
 
-を使い始めるには、以下を実行します。 [!DNL Adobe Experience Platform Mobile SDK]を使用する場合は、いくつかの前提条件のタスクを実行する必要があります。
+[!DNL Adobe Experience Platform Mobile SDK] の使用を開始するには、いくつかの前提条件タスクを実行する必要があります。
 
-詳しくは、 [Adobe Target](https://developer.adobe.com/client-sdks/documentation/adobe-target/){target=_blank} in the [[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/){target=_blank} ドキュメント。
+詳しくは、[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/){target=_blank} ドキュメントの [Adobe Target](https://developer.adobe.com/client-sdks/documentation/adobe-target/){target=_blank} を参照してください。
 
-## ネイティブコードを Web ビューと同期
+## ネイティブコードを web ビューと同期
 
-導入時の課題 [!DNL Target] web ビューを持つネイティブアプリでは、 [!DNL Adobe Experience Platform Mobile SDK] には、次に必要なすべての識別子が既に生成されています： [!DNL Adobe] ソリューションをシームレスに動作させます。 ただし、これらの識別子はネイティブプラットフォーム環境上にないので、Web ビューにはまだ識別情報が表示されません。 したがって、訪問者 ID が Web 環境内で保持されるように、Web ビューに一部の SDK 識別子を渡すブリッジを作成する必要があります。 この処理が適切におこなわれないと、訪問が重複してレポートに影響を与えます。
+Web 表示を使用するネイティブアプリで [!DNL Target] を実装する際の課題は、[!DNL Adobe Experience Platform Mobile SDK] がソリューションをシームレスに動作させるために必要なすべての識別子を既に生成してい [!DNL Adobe] ことです。 ただし、これらの識別子はネイティブのプラットフォーム環境にはないので、web ビューではまだ識別子が表示されません。 したがって、訪問者 ID が web 環境に保持されるように、一部の SDK 識別子を web ビューに渡すブリッジを作成する必要があります。 これを適切に行わないと、訪問が重複し、レポートに影響を与えます。
 
-幸いにも、 [!DNL Adobe Experience Platform Mobile SDK] 生成する便利な方法を提供します。 [!DNL Adobe] web ビューが同じ訪問者に対して使用および保持するために必要なパラメーターを次のサンプルコードに示します。
+幸いなことに、[!DNL Adobe Experience Platform Mobile SDK] は、次のサンプルコードに示すように、web ビューが同じ訪問者に対して使用および保持されるために必要な [!DNL Adobe] パラメーターを生成する便利な方法を提供します。
 
 ```swift
 Identity.appendTo(url: URL(string: url), completion: {appendedURL, error in
@@ -43,9 +43,9 @@ Identity.appendTo(url: URL(string: url), completion: {appendedURL, error in
 });
 ```
 
-詳しくは、 `Identity.appendTo` メソッドを参照し、メソッドの使用方法の例については、 [Swift /例](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank} （内） *Mobile SDK ドキュメント*.
+`Identity.appendTo` メソッドの詳細と、メソッドの使用方法の例については、*Mobile SDK ドキュメント* の [Swift/例 ](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank} を参照してください。
 
-使用 `Identity.appendTo`、この URL:
+この URL は、`Identity.appendTo` を使用します。
 
 ```
 https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2
@@ -57,19 +57,19 @@ https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2
 https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2&adobe_mc=TS%3D1660667205%7CMCMID%3D69624092487065093697422606480535692677%7CMCORGID%3DEB9CAE8B56E003697F000101%40AdobeOrg
 ```
 
-ご覧の通り、 `adobe_mc` パラメーターを追加しました。 このパラメーターには、次のエンコードされた値が含まれます。
+このように、URL にパラメーター `adobe_mc` 追加されています。 このパラメーターには、次のエンコードされた値が含まれています。
 
-* TS=1660667205：現在のタイムスタンプ。 このタイムスタンプにより、Web ビューは期限切れの値を受け取らなくなります。
-* MCMID=69624092487065093697422606480535692677: [!UICONTROL Experience CloudID] (ECID) を使用します。 MID とも呼ばれます。 [!UICONTROL Marketing CloudID] 次に必要： [!DNL Adobe] クロスソリューション訪問者特定。
-* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg: [!UICONTROL Adobe組織 ID].
+* TS=1660667205：現在のタイムスタンプ。 このタイムスタンプにより、web ビューに有効期限切れの値が届かなくなります。
+* MCMID=69624092487065093697422606480535692677:[!UICONTROL Experience Cloud ID] （ECID）。 クロスソリューション訪問者の特定に必要な MID または [!UICONTROL Marketing Cloud ID] とも呼ば [!DNL Adobe] ます。
+* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg: [!UICONTROL Adobe Organization ID]。
 
-The `Identity.getUrlVariables` は別の方法です [!DNL Adobe Experience Platform Mobile SDK] メソッドを使用して、適切に形式が設定された文字列 ( [!DNL Experience Cloud Identity Service] URL 変数。 詳しくは、 [getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} （内） *ID API リファレンス*.
+`Identity.getUrlVariables` は、[!DNL Experience Cloud Identity Service] の URL 変数を含んだ適切な形式の文字列を返す代替 [!DNL Adobe Experience Platform Mobile SDK] メソッドです。 詳しくは、[Identity API リファレンス ](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} の *getUrlVariables* を参照してください。
 
-## パス [!DNL Target] 同じセッションエクスペリエンスのセッション ID
+## 同じセッションエクスペリエンスの [!DNL Target] セッション ID を渡す
 
-を作成するには、さらに 1 つの手順が必要です。 [!DNL Target] ユーザージャーニーは、ネイティブビューと web ビューをシームレスにまたいで機能します。 この手順には、 [!DNL Target] からのセッション ID [!DNL Adobe Experience Platform Mobile SDK] をモバイルアプリの web ビューに追加します。
+[!DNL Target] ユーザージャーニーをネイティブビューと web ビューをまたいでシームレスに機能させるには、さらに手順が必要です。 この手順には、[!DNL Target] セッション ID の抽出と、[!DNL Adobe Experience Platform Mobile SDK] からモバイルアプリの web ビューへの渡しが含まれます。
 
-The `Target.getSessionId` は、Web ビューの URL に渡すことのできるセッション ID を `mboxSession` パラメーター：
+`Target.getSessionId` では、web ビュー URL に `mboxSession` パラメーターとして渡すことができるセッション ID を抽出します。
 
 ```swift
 Target.getSessionId { (id, err) in
@@ -79,13 +79,13 @@ Target.getSessionId { (id, err) in
 
 ## Web ビューでのテスト
 
-Web プレビューリンクが [!UICONTROL アクティビティの詳細] ページを開くには、 [[!UICONTROL AdobeQA] リンク](/help/dev/implement/mobile/target-mobile-preview.md) 次のようなポップアップを表示して、各エクスペリエンスのプレビューリンクをコピーします。
+Web プレビューリンクは、[[!UICONTROL Adobe QA] リンクをクリックすると [!UICONTROL Activity detail] ページに生成され ](/help/dev/implement/mobile/target-mobile-preview.md) 次のように、各エクスペリエンスプレビューリンクをコピーするポップアップを表示します。
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true
 ```
 
-Web プレビューリンクには、追加の `at_preview_index` および `at_preview_listed_activities_only` パラメーター。 これらのパラメーターをコピーして、Web リンクパラメーターを使用してモバイルに適したプレビューリンクを作成します。
+Web プレビューリンクには、追加の `at_preview_index` パラメーターと `at_preview_listed_activities_only` パラメーターが含まれています。 これらのパラメーターをコピーして、web リンクパラメーターを含む、モバイルに適したプレビューリンクを作成します。
 
 次に例を示します。
 
@@ -93,7 +93,7 @@ Web プレビューリンクには、追加の `at_preview_index` および `at_
 com.adobe.targetmobile://?at_preview_token=mhFIzJSF7JWb-RsnakpBqhBwj-TiIlZsRTx_1QQuiXLIJFdpSLeEZwKGPUyy57O_&at_preview_index=1_1&at_preview_listed_activities_only=true
 ```
 
-iOS Safari ブラウザーでリンクを開くと、アプリは `AppDelegate` 次の例のようなクラス：
+iOS Safari ブラウザーでリンクを開くと、アプリは次の例のように、`AppDelegate` クラスの URL をキャプチャします。
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -101,14 +101,14 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
   //...
 ```
 
-これで、アプリケーションで必要なすべてのパラメーターを取り込み、必要に応じて Web に渡すことができます。
+必要なパラメーターをすべてアプリに取り込んだので、必要に応じて web に渡すことができます。
 
 ```swift
 Identity.appendTo(url: URL(string: url), completion: {appendedURL, error in
   let urlWithWebPreviewLink = appendedURL + "&" + myPreviewLinkFromAppDelegate
 ```
 
-Web ビューリンクの最終的な出力は、次のようになります。
+Web 表示リンクの最終的な出力は、次のようになります。
 
 ```
 https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2&adobe_mc=TS%3D1660667205%7CMCMID%3D69624092487065093697422606480535692677%7CMCORGID%3DEB9CAE8B56E003697F000101%40AdobeOrg&at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

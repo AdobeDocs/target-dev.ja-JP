@@ -1,41 +1,41 @@
 ---
-title: at.js を使用したRecommendations実装パターン
-description: at.js でRecommendationsの実装パターンを使用する方法を説明します。
+title: at.js を使用したRecommendationsの実装パターン
+description: at.js とRecommendationsの実装パターンの使用方法
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: d568cd1d-acc3-42e0-ae2c-5787e6f361f8
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
 
-# [!DNL Recommendations] at.js を使用した実装パターンの概要
+# at.js を使用した [!DNL Recommendations] 実装パターンの概要
 
-この実装パターンは、 [!DNL Adobe Target Recommendations] を使用する場合の実装 [at.js JavaScript ライブラリ](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md).
+この実装パターンは、[at.js JavaScript library](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) を使用する際に [!DNL Adobe Target Recommendations] 実装を理解し、作成するのに役立ちます。
 
-画像をクリックすると、全画面表示に拡大します。
+「画像」をクリックすると、フルスクリーンに展開できます。
 
-![Adobe Targetのアーキテクチャ図](/help/dev/patterns/assets/architecture-chart.png){width="600" zoomable="yes"}
+![Adobe Targetのアーキテクチャ図 ](/help/dev/patterns/assets/architecture-chart.png){width="600" zoomable="yes"}
 
-画像内の数字は操作の順序を示していません。
+画像内の数値は、操作のシーケンスを示すものではありません。
 
-1. 用のクライアント側 SDK [!DNL Adobe Target] および [!DNL Experience Cloud ID Service]
+1. [!DNL Adobe Target] および [!DNL Experience Cloud ID Service] 用のクライアントサイド SDK
 1. [!DNL Target Delivery API] 呼び出し
-1. [!UICONTROL Experience CloudID] (ECID) 獲得呼び出し
-1. プロファイル一括更新 API および [!DNL Customer Attributes] (CA) サービス
-1. 顧客のデータソースからへのプロファイルデータ取り込み [!DNL Target] プロファイルストア
-1. プロファイルと行動データの収集と、訪問者に表示するエクスペリエンスの決定
-1. エクスペリエンスがページ上にレンダリングされる
-1. at.js によってページ上のエクスペリエンスがレンダリングされます。
+1. [!UICONTROL Experience Cloud ID] （ECID）獲得コール
+1. プロファイル一括更新 API および [!DNL Customer Attributes] （CA）サービス
+1. 顧客のデータソースからプロファイルストアへのプロファイルデータ [!DNL Target] 取り込み
+1. プロファイルと行動データを収集し、訪問者に表示するエクスペリエンスを決定する
+1. エクスペリエンスがページでレンダリングされる
+1. at.js は、ページ上のエクスペリエンスをレンダリングします
 
-各パターンは異なるパーツで構成され、各パーツはお客様の重要な実装要件に対応しています。 [!DNL Target] 実装。
+各パターンは、様 [!DNL Target] な実装の重要な実装要件に対応する様々なパーツで構成されます。
 
-各パーツについては、このガイドの別の記事で説明します。
+このガイドの各パートについては、個別の記事で説明します。
 
-* [SDK を初期化](/help/dev/patterns/recs-atjs/initialize-sdk.md)
+* [SDK の初期化](/help/dev/patterns/recs-atjs/initialize-sdk.md)
 * [データ収集の設定](/help/dev/patterns/recs-atjs/data-collection.md)
-* [エクスペリエンスをレンダリング](/help/dev/patterns/recs-atjs/render-experiences.md)
-* [ターゲットに通知](/help/dev/patterns/recs-atjs/notify-target.md)
-
+* [エクスペリエンスのレンダリング](/help/dev/patterns/recs-atjs/render-experiences.md)
+* [Notify Target](/help/dev/patterns/recs-atjs/notify-target.md)

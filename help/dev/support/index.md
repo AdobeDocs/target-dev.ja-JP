@@ -1,17 +1,17 @@
 ---
-title: サポート — Adobe Analytics
-description: これはAdobe Analyticsのサポートページです
+title: サポート - Adobe Analytics
+description: これは、Adobe Analyticsのサポートページです
 source-git-commit: a5bcf98b586c655a36a9ae8800a8f31978d68646
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 9%
+source-wordcount: '92'
+ht-degree: 6%
 
 ---
 
 
 # サポート
 
-質問、バグの報告、機能リクエストの作成、ディスカッションのスパークを行う場所について説明します。
+質問する場所、バグを報告する場所、機能リクエストを行う場所、ディスカッションを促進する場所について説明します。
 
 ## フィードバック
 
@@ -21,27 +21,27 @@ ht-degree: 9%
 
 ### 開発者フォーラム
 
-[基本を学ぶ](https://adobe.io)
+[ はじめに ](https://adobe.io)
 
-コミュニティの専門家やAdobeスタッフとの議論とサポートを開く。
+コミュニティの専門家やAdobeスタッフとのオープンなディスカッションとサポート。
 
-[Experience league](https://adobe.io)
+[Experience League](https://adobe.io)
 
-Tutorialsやビデオをコミュニティ全体に公開します。
+地域全体のTutorialsやビデオ。
 
-[Experience フォーラム](https://adobe.io)
+[Experience フォーラム ](https://adobe.io)
 
-他のユーザーにヘルプとヘルプを提供するフォーラム
+支援を受けたり他のユーザーを支援したりするためのフォーラム
 
 ## コミュニティ
 
 会話に参加する場所があります。
 
-![スタックオーバーフロー](stack-overflow.png)
+![ スタック オーバーフロー ](stack-overflow.png)
 
-### スタックオーバーフロー
+### スタック オーバーフロー
 
-[参照](https://adobe.io)
+[ 探索 ](https://adobe.io)
 
-特定のタグを使用する開発者 Q&amp;A。
+特定のタグを使用した開発者 Q&amp;A。
 

@@ -13,7 +13,7 @@ ht-degree: 45%
 # Adobe Target開発者ガイド {#developer}
 
 + [Adobe Target開発者ガイド](overview.md)
-+ はじめに {#implementation}
++ 入門 {#implementation}
    + 実装する前に {#before-implement}
       + [実装する前に](before-implement/considerations-before-you-implement-target.md)
       + [Target 実装の準備](before-implement/prepare-to-implement-target.md)
@@ -41,7 +41,7 @@ ht-degree: 45%
    + [サポートされているブラウザー](before-implement/supported-browsers.md)
    + [TLS（Transport Layer Security）暗号化の変更](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME と Adobe Target](before-implement/implement-cname-support-in-target.md)
-+ クライアントサイドの実装 {#client-side}
++ クライアントサイド実装 {#client-side}
    + [概要：Target をクライアント側 web に実装する](implement/client-side/overview.md)
    + [Adobe Experience Platform Web SDK 実装の概要](implement/client-side/aep-web-sdk.md)
    + at.js の実装 {#at-js-implementation}
@@ -90,18 +90,18 @@ ht-degree: 45%
       + [レガシー実装のグローバル mbox の使用](implement/client-side/atjs/global-mbox/mbox-global-target-standard.md)
       + [グローバル mbox へのパラメーターの受け渡し](implement/client-side/atjs/global-mbox/pass-parameters-to-global-mbox.md)
       + [グローバル mbox に関するよくある質問](implement/client-side/atjs/global-mbox/global-mbox-faq.md)
-+ サーバー側の実装 {#server-side}
++ サーバーサイド実装 {#server-side}
    + [サーバー側：Target の実装の概要](implement/server-side/server-side-overview.md)
    + [Target SDK の概要](implement/server-side/sdk-guides/getting-started/getting-started.md)
    + [サンプルアプリ](implement/server-side/sdk-guides/sample-apps/sample-apps.md)
    + [Target の従来の API から Adobe I/O への移行](implement/server-side/transition-from-target-classic-apis.md)
-   + 基本原則 {#core-principles}
+   + の基本原則 {#core-principles}
       + [基本原則の概要](implement/server-side/sdk-guides/core-principles/overview.md)
       + [ユーザー ID とバケット化](implement/server-side/sdk-guides/core-principles/user-identification-and-bucketing.md)
       + [オーディエンスのターゲティング](implement/server-side/sdk-guides/core-principles/audience-targeting.md)
       + [イベントトラッキング](implement/server-side/sdk-guides/core-principles/event-tracking.md)
       + [ユーザー権限とプロパティ](implement/server-side/sdk-guides/core-principles/user-permissions-and-properties.md)
-   + 統合 {#integration}
+   + Integration {#integration}
       + [統合の概要](implement/server-side/sdk-guides/integration-with-experience-cloud/overview.md)
       + [Experience CloudID サービス（ECID）](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
       + [Analytics for Target（A4T）レポート](implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md)
@@ -130,7 +130,7 @@ ht-degree: 45%
       + [SDK イベント（Node.js）](implement/server-side/node-js/sdk-events.md)
       + [ロガー（Node.js）](implement/server-side/node-js/logger.md)
       + [プロキシ設定（Node.js）](implement/server-side/node-js/proxy-configuration.md)
-   + Java SDK リファレンス {#java}
+   + Java SDK Reference {#java}
       + [Java SDK の概要](implement/server-side/java/overview.md)
       + [Java SDK のインストール](implement/server-side/java/install-sdk.md)
       + [Java SDK の初期化](implement/server-side/java/initialize-sdk.md)
@@ -143,7 +143,7 @@ ht-degree: 45%
       + [プロキシ設定（Java）](implement/server-side/java/proxy-configuration.md)
       + [カスタム HTTP クライアント設定（Java）](implement/server-side/java/custom-http-client.md)
       + [ユーティリティメソッド （Java）](implement/server-side/java/utility-methods.md)
-   + .NET SDK リファレンス {#net}
+   + .NET SDK 参照 {#net}
       + [.NET SDK の概要](implement/server-side/net/overview.md)
       + [.Net SDK のインストール](implement/server-side/net/install-sdk.md)
       + [.NET SDK の初期化](implement/server-side/net/initialize-sdk.md)
@@ -171,12 +171,12 @@ ht-degree: 45%
    + [Location Service の使用](implement/mobile/use-location-service.md)
    + [モバイルアプリ用 Target に関する FAQ](implement/mobile/mobile-faq.md)
    + [Web 表示を使用したネイティブアプリでの AEP Mobile SDK を使用した Target の実装](/help/dev/implement/mobile/native-app.md)
-+ メールの実装 {#implement-email}
++ メール実装 {#implement-email}
    + [電子メール：Target の実装の概要](implement/email/overview.md)
    + [画像用 adbox の作成](implement/email/testing-content-with-the-adbox.md)
    + [電子メール画像 adbox のテスト](implement/email/testing-email-image-adbox.md)
    + [リダイレクターの使用](implement/email/working-with-redirectors.md)
-+ API ガイド {#api}
++ の API ガイド {#api}
    + [Target API の概要](/help/dev/before-administer/target-api-overview.md)
    + [Target API の認証の設定](/help/dev/before-administer/configure-authentication.md)
    + 配信 API ガイド {#delivery-api}
@@ -195,14 +195,14 @@ ht-degree: 45%
    + 管理 API {#admin-api}
       + [管理 API の概要](before-administer/admin-api-overview/admin-api-overview.md)
       + [Adobe Target管理 API](/help/dev/administer/admin-api/admin-api-overview-new.md)
-   + プロファイル API {#profile-apis}
+   + Profile API {#profile-apis}
       + [プロファイル API の概要](/help/dev/administer/profile-api/profiles-api.md)
       + [プロファイルの取得](/help/dev/administer/profile-api/profile-fetch.md)
       + [プロファイルを更新](/help/dev/administer/profile-api/profile-api-overview.md)
       + [単一プロファイル更新 API](/help/dev/administer/profile-api/profile-single-api.md)
       + [プロファイル一括更新 API](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [レポート API](/help/dev/administer/reporting-api/reporting-api.md)
-   + RECOMMENDATIONS API {#recommendations-api}
+   + Recommendations API {#recommendations-api}
       + [Recommendations API の概要](before-administer/recs-api/overview.md)
       + [API を使用したカタログの管理](before-administer/recs-api/manage-catalog.md)
       + [カスタム条件の管理](before-administer/recs-api/manage-custom-criteria.md)
@@ -215,7 +215,7 @@ ht-degree: 45%
    + [Adobe Experience Platform Edge Networkサーバー API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
 + 実装パターン {#implementation-patterns}
    + [実装パターンの概要](/help/dev/patterns/pattern-overview.md)
-   + at.js を使用したRecommendationsの実装パターン {#atjs}
+   + at.js {#atjs} を使用したRecommendationsの実装パターン
       + [at.js を使用したRecommendations実装パターンの概要](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [SDK の初期化](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [データ収集の設定](/help/dev/patterns/recs-atjs/data-collection.md)

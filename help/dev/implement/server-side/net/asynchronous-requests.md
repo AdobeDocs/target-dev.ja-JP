@@ -1,6 +1,6 @@
 ---
-title: で非同期リクエストを使用する方法 [!DNL Adobe Target] .NET SDK
-description: 方法を学ぶ [!DNL Target] Java SDK は非同期リクエストをサポートするので、有効なターゲット時間をゼロに抑えることができます。
+title: ' [!DNL Adobe Target] .NET SDK での非同期要求の使用方法'
+description: Java SDK が  [!DNL Target]  非同期リクエストをサポートする方法を説明します。これにより、有効なターゲット時間をゼロに減らすことができます。
 feature: APIs/SDKs
 exl-id: fd36cc7b-a884-4e57-93c2-8aff8256109a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -10,11 +10,11 @@ ht-degree: 4%
 
 ---
 
-# 非同期リクエスト (.NET)
+# 非同期要求（.NET）
 
 ## 説明
 
-サーバー側の統合の利点の 1 つは、並列処理を使用することで、サーバー側で利用可能な大量の帯域幅とコンピューティングリソースを活用できる点です。 [!DNL Target] .NET SDK は非同期リクエストをサポートし、統合が容易になります [!DNL Target] を、アプリの既存の非同期ワークフローに追加します。
+サーバーサイド統合の利点の 1 つは、並列処理を使用することで、サーバーサイドで利用できる膨大な帯域幅とコンピューティングリソースを活用できることです。 .NET SDK[!DNL Target]、非同期リクエストをサポートしており、アプリの既存の非同期ワークフローに [!DNL Target] れを簡単に統合できます。
 
 ## サポートされるメソッド
 
@@ -28,7 +28,7 @@ Task<TargetAttributes> GetAttributesAsync(TargetDeliveryRequest request, params 
 
 ## 例
 
-非同期 SDK API の使用例を次に示します。
+非同期 SDK API の使用例は、次のようになります。
 
 ### \.NET
 
@@ -53,4 +53,4 @@ var notificationRequest = new TargetDeliveryRequest.Builder()
 var notificationResponse = await this.targetClient.SendNotificationsAsync(notificationRequest);
 ```
 
-この例では、 [SDK を初期化しました](initialize-sdk.md).
+この例では、[SDK を初期化した ](initialize-sdk.md) ことを前提としています。

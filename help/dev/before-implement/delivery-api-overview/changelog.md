@@ -1,17 +1,17 @@
 ---
-title: Adobe Target Delivery API 変更ログ
-description: Adobe Target Delivery API 変更ログ
+title: Adobe Target配信 API の変更ログ
+description: Adobe Target配信 API の変更ログ
 keywords: 配信 api
 source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
 workflow-type: tm+mt
-source-wordcount: '32'
+source-wordcount: '25'
 ht-degree: 0%
 
 ---
 
 
-# Changelog
+# 変更ログ
 
-詳しくは、 [changelog](https://experienceleague.adobe.com/docs/target/using/implement-target/server-side/releases-server-side.html) （Delivery API 用）
+配信 API の [changelog](https://experienceleague.adobe.com/docs/target/using/implement-target/server-side/releases-server-side.html) を読み取ります。
 
-&lt;!— JUDY：更新されたリンクが必要 —>
+&lt;!— JUDY: リンクを更新する必要があります – >

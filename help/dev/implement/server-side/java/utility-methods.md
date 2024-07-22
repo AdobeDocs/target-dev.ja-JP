@@ -1,6 +1,6 @@
 ---
-title: でユーティリティメソッドを使用する [!DNL Adobe Target] Java SDK
-description: ヘルパーメソッドを使用する方法を説明します。ヘルパーメソッドはコントローラ間で再利用可能で、別のユーティリティクラスに移動できます。
+title: ' [!DNL Adobe Target] Java SDK でのユーティリティメソッドの使用'
+description: コントローラ間で再利用可能で、別のユーティリティ クラスに移動できるヘルパーメソッドの使用方法を説明します。
 feature: APIs/SDKs
 exl-id: 19418126-c4d8-4e6b-bb84-036b7fe0e6ec
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -10,7 +10,7 @@ ht-degree: 2%
 
 ---
 
-# ユーティリティメソッド (Java)
+# ユーティリティメソッド （Java）
 
 これらのヘルパーメソッドは、コントローラ間で再利用可能で、別のユーティリティクラスに移動できます。
 
