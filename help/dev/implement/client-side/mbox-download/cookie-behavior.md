@@ -4,7 +4,7 @@ description: Target の cookie の動作（ファーストパーティ cookie、
 title: Target の Cookie に関する情報はどこで入手できますか？
 feature: at.js
 role: Developer
-source-git-commit: 34e8625798121e236a04646dfcf049f9c2b6f9d0
+source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 53%
@@ -118,6 +118,7 @@ Cookie には、訪問者がキャンペーンをエクスペリエンスとし�
 |--- |--- |
 | ファーストパーティドメイン | Target のお客様向けの標準実装。 「mbox」Cookie はお客様のドメインで設定されます。 |
 | サードパーティ追跡 | サードパーティトラッキングは、Target およびAdobe Audience Manager（AAM）での広告およびターゲティングのユースケースにとって重要です。 サードパーティトラッキングには、クロスサイトスクリプティング技術が必要です。 Target では、`clientcode.tt.omtrd.net` ドメインで設定される「mboxSession」と「mboxPC」の 2 つの Cookie を使用します。 |
+
 **Apple のアプローチについて**
 
 Apple の発表内容：

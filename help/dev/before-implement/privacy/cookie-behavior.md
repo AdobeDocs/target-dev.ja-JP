@@ -4,7 +4,7 @@ description: cookie の動作（ファーストパーティ cookie [!DNL Target]
 title: ' [!DNL Target] Cookie に関する情報はどこで入手できますか？'
 feature: at.js
 exl-id: d44e02ce-8920-4130-bcad-699ca77c0dad
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
 workflow-type: tm+mt
 source-wordcount: '1581'
 ht-degree: 50%
@@ -120,6 +120,7 @@ Cookie には、訪問者がキャンペーンをエクスペリエンスとし�
 |--- |--- |
 | ファーストパーティドメイン | [!DNL Target] 顧客の標準実装。 「mbox」Cookie はお客様のドメインで設定されます。 |
 | サードパーティ追跡 | サードパーティトラッキングは、[!DNL Target] および [!DNL Adobe Audience Manager] （AAM）における広告とターゲティングのユースケースにとって重要です。 サードパーティトラッキングには、クロスサイトスクリプティング技術が必要です。 [!DNL Target] では、`clientcode.tt.omtrd.net` ドメインに設定された「mboxSession」と「mboxPC」の 2 つの cookie を使用します。 |
+
 **Apple のアプローチについて**
 
 Apple の発表内容：
