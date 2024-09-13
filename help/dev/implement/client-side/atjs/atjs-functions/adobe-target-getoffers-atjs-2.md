@@ -1,13 +1,13 @@
 ---
-keywords: adobe.target.getOffers、getOffers、getoffers、get offers、at.js、関数、関数、$8
-description: '[!UICONTROL adobe.target.getOffers()] 関数とその at.js ライブラリのオプションを使用して  [!DNL Adobe Target]  複数のオファーを取得するリクエストを実行  [!DNL Target]  ます。 （at.js 2.x）'
-title: '[!UICONTROL adobe.target.getOffers()] 関数の使用方法'
+keywords: adobe.target.getOffers, getOffers, getoffers, get offers, at.js, functions, function, $8
+description: '[!UICONTROL adobe.target.getOffers()] 関数とその at.js ライブラリのオプションを使用して  [!DNL Adobe Target]  複数のオファーを取得するリクエストを実行  [!DNL Target]  ます。 (at.js 2.x)'
+title: How Do I Use the [!UICONTROL adobe.target.getOffers()] Function?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1317'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -38,9 +38,9 @@ ht-degree: 62%
 | Request > id > thirdPartyId | × | 最大サイズ = 128。 |  |  |
 | Request > experienceCloud | × |  |  |
 | Request > experienceCloud > analytics | × |  | Adobe Analytics の統合 |
-| Request > experienceCloud > analytics > logging | × | 以下をページに実装する必要があります。<ul><li>訪問者 ID サービス</li><li>Appmeasurement.js</li></ul> | 次の値がサポートされています。<P>**client_side**：指定すると、分析ペイロードが呼び出し元に返されます。これは [!UICONTROL Data Insertion API] 経由で [!UICONTROL Adobe Analytics] に送信するために使用する必要があります。<P>**server_side**：これはデフォルト値で、[!DNL Target] と [!DNL Analytics] バックエンドが SDID を使用してレポート目的で呼び出しをステッチします。 |
+| Request > experienceCloud > analytics > logging | × | 以下をページに実装する必要があります。<ul><li>訪問者 ID サービス</li><li>Appmeasurement.js</li></ul> | 次の値がサポートされています。<P>**client_side**：指定すると、分析ペイロードが呼び出し元に返されます。これは [!UICONTROL Data Insertion API] 経由で [!UICONTROL Adobe Analytics] に送信するために使用する必要があります。<P>**server_side**： これはデフォルト値で、[!DNL Target]と[!DNL Analytics] バックエンドが SDID を使用してレポート目的で呼び出しをステッチします。 |
 | Request > prefetch | × |  |  |
-| Request > prefetch > views | × | 最大数は 50 です。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>値の長さ `<=`5000。<P>名前を「profile」で始めないでください。<P>使用できない名前：「orderId」、「orderTotal」、「productPurchasedId」。 | アクティブなアクティビティで関連するビューを取得するために使用するパラメーターを渡します。 |
+| Request > prefetch > views | × | 最大数は 50 です。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>値の長さ `<=`5000。<P>名前を「profile」で始めないでください。<P> | アクティブなアクティビティで関連するビューを取得するために使用するパラメーターを渡します。 |
 | Request > prefetch > views > profileParameters | × | 最大値は 50 です。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>値の長さ `<=`5000。<P>文字列値のみを使用できます。<P>名前を「profile」で始めないでください。 | アクティブなアクティビティで関連するビューを取得するために使用するプロファイルパラメーターを渡します。 |
 | Request > prefetch > views > product | × |  |  |
 | Request > prefetch > views > product -> id | × | 空白ではありません。<P>最大サイズ = 128。 | アクティブなアクティビティで関連するビューを取得するために使用する製品 ID を渡します。 |
@@ -85,7 +85,7 @@ adobe.target.getOffers({
 });
 ```
 
-## [!UICONTROL getOffers()] に電話してオンデバイス判定を行う
+## [!UICONTROL getOffers()] を呼び出し、オンデバイス判定を行う
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({ 
@@ -204,9 +204,9 @@ adobe.target.getOffers({
 }
 ```
 
-その後、ペイロードは [Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を介して [!DNL Adobe Analytics] に転送できます。
+その後、ペイロードは [ Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を介して [!DNL Adobe Analytics] に転送できます。
 
-## [!UICONTROL getOffers()] および [!UICONTROL applyOffers()] を使用した複数の mbox からのデータの取得とレンダリング
+## [!UICONTROL getOffers()] および [!UICONTROL applyOffers()]を使用した複数の mbox からのデータの取得とレンダリング
 
 at.js 2.x を使用すると、`[!UICONTROL getOffers()]` API を使用して複数の mbox を取得できます。複数の mbox のデータを取得して、`[!UICONTROL applyOffers()]` CSS セレクターによって識別されるさまざまな場所で、データをレンダリングすることもできます。
 
