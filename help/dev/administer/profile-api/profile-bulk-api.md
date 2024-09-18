@@ -4,9 +4,9 @@ description: ' [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] を使�
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 2934fbaa1dc3cd92bc5a434937e5db9a617009a9
+source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '829'
 ht-degree: 8%
 
 ---
@@ -64,7 +64,7 @@ batch=pcId,param1,param2,param3,param4
 * [!UICONTROL Bulk Profile Update API] v2 を使用している場合は、各 `pcId` に対してすべてのパラメーター値を指定する必要はありません。 プロファイルは、[!DNL Target] に見つからない `pcId` または `mbox3rdPartyId` に対して作成されます。 v1 を使用している場合、pcId または mbox3rdPartyIds が見つからないプロファイルは作成されません。
 * バッチファイルの容量は 50 MB 未満にする必要があります。また、合計行数は 500,000 を超えないようにする必要があります。 この制限により、サーバーに大量のリクエストが送られないようにすることができます。
 * 複数のファイルを送信できます。 ただし、1 日に送信するすべてのファイルの行の合計は、各クライアントで 100 万行を超えないようにしてください。
-* アップロードする属性の数に制限はありません。 ただし、システムデータを含むプロファイルの全体のサイズは、2000 KB を超えないようにしてください。 [!DNL Adobe] では、プロファイル属性に使用するストレージは 1,000 KB 未満にすることをお勧めします。
+* アップロードできる属性の数に制限はありません。 ただし、顧客属性、プロファイル API、In-Mbox プロファイルパラメーター、プロファイルスクリプト出力を含む外部プロファイルデータの合計サイズは、64 KB を超えないようにする必要があります。
 * パラメーターと値は、大文字と小文字を区別します。
 
 ## HTTP POSTリクエスト
