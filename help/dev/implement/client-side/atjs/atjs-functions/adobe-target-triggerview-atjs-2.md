@@ -1,13 +1,13 @@
 ---
 keywords: adobe.target.triggerView、triggerView、triggerview、トリガービュー、at.js、関数、function、viewName、viewname、ビュー名、adobe.target.triggerView1
-description: シングルページアプリケーション（SPA）で使用する at [!DNL Adobe Target] js JavaScript ライブラリの adobe.target.triggerView （）関数を使用します。 （at.js 2.x）
+description: シングルページアプリケーション（SPA）で使用する at [!DNL Adobe Target] js JavaScript ライブラリの adobe.target.triggerView （）関数を使用します。 (at.js 2.x)
 title: adobe.target.triggerView （）関数の使用方法
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: fe4e607173c760f782035a10f52936d96e9db300
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 31%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -69,3 +69,29 @@ adobe.target.getOffers({
     console.log('AT: View triggered on : ' + pageView);
 });
 ```
+
+## 例：[!UICONTROL Adobe Visual Editing Helper extension] との `triggerView()` の最適な互換性
+
+[Adobe Visual Editing Helper 拡張機能を使用する場合は、次の点を考慮してください ](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}
+
+[!DNL Googl]e の [!DNL Chrome] 拡張機能の新しい V3 マニフェストポリシーにより、[!UICONTROL Visual Editing Helper extension] は VEC の [!DNL Target] ライブラリを読み込む前に `DOMContentLoaded` イベントを待機する必要があります。 この遅延により、オーサリングライブラリの準備が整う前に web ページで `triggerView()` 呼び出しが実行され、読み込み時にビューが入力されない場合があります。
+
+この問題を軽減するには、ページ `load` イベントのリスナーを使用します。
+
+実装の例を次に示します。
+
+```javascript
+function triggerViewIfLoaded() {
+    adobe.target.triggerView("homeView");
+}
+
+if (document.readyState === "complete") {
+    // If the page is already loaded
+    triggerViewIfLoaded();
+} else {
+    // If the page is not yet loaded, set up an event listener
+    window.addEventListener("load", triggerViewIfLoaded);
+}
+```
+
+
