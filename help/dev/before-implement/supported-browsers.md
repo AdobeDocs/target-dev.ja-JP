@@ -4,10 +4,10 @@ description: インターフェイスとコンテンツ配信  [!DNL Adobe Targe
 title: はどのブラウザ  [!DNL Target]  をサポートしていますか？
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: f194c6de43070443b78c9a69b4233c27d70b8858
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 26%
+source-wordcount: '380'
+ht-degree: 24%
 
 ---
 
@@ -38,6 +38,7 @@ TLS について詳しくは、「[TLS （Transport Layer Security）暗号化�
 
 以下のことに注意してください。
 
+* [!DNL Adobe Experience Platform Web SDK] は、[!DNL Google Chrome]、[!DNL Safari]、[!DNL Firefox] および [!DNL Microsoft Edge Chromium] の最新バージョンで最適に動作するように設計されています。 これらのブラウザーの古いバージョンや、[!DNL Internet Explorer] などの非推奨ブラウザーでは、特定の機能を使用する際に問題が発生する可能性があります。
 * at.js 実装の場合、[!DNL Target] では、以前のバージョンの Internet Explorer と、場合によっては上記のブラウザーの以前のバージョンで、デフォルトコンテンツが表示されます。
 * Internet Explorer では、すべての不明な要素（カスタム要素など）は同じ要素タイプとして処理されます。 その結果、配信はカスタム要素では機能しません。
 * [!DNL Target] は、上記に示されていないブラウザーおよび [ 互換モード ](https://en.wikipedia.org/wiki/Quirks_mode) を使用しているブラウザーで、デフォルトコンテンツを表示します。 at.js には、`<!DOCTYPE html>` など、標準モードでレンダリングを行う doctype が必要です。
