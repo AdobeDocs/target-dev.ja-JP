@@ -4,10 +4,10 @@ description: at [!DNL Adobe Target] js JavaScript ライブラリの各バージ
 title: at.js の各バージョンには何が含まれますか？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 3deeee2838d02d578bb653a4911313463b962050
 workflow-type: tm+mt
-source-wordcount: '4967'
-ht-degree: 65%
+source-wordcount: '4994'
+ht-degree: 64%
 
 ---
 
@@ -26,6 +26,10 @@ ht-degree: 65%
 >いずれかの 1 の最新バージョンにアップグレードする必要があります。*x* または 2。*x* 対応するメジャーバージョンの以前のマイナーバージョンで検出された問題に対するバグ修正とセキュリティパッチを取得します。
 
 at.js をアップグレードする場合は、[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) のタグをお勧めします。 拡張機能開発者は、拡張機能に新しい機能を継続的に追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンへとパッケージ化され、アップグレードとしてAdobe Experience Platform カタログ内で使用できるようになります。 詳しくは、[ タグの概要 ](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) ガイドの *拡張機能のアップグレード* を参照してください。
+
+## at.js バージョン 2.11.7 （2025 年 2 月 26 日）
+
+* `localStorage` が利用できない場合のテレメトリのロギングを修正しました。 テレメトリは、ブラウザーで無効に `localStorage` っている一部のお客様に問題を引き起こしていました。
 
 ## at.js バージョン 2.11.6（2024年9月29日（PT））
 
@@ -54,7 +58,7 @@ at.js をアップグレードする場合は、[Adobe Experience Platform](/hel
 
 ## at.js バージョン 2.11.0（2023年10月10日（PT））
 
-* カスタム [!DNL Adobe Experience Platform] （AEP） `sandboxId` および `sandboxName` を `targetGlobalSettings` で設定するサポートを追加しました。この設定は、`getOffer/getOffers` 呼び出し時に配信 API に渡されます。
+* `targetGlobalSettings` でカスタム [!DNL Adobe Experience Platform] （AEP） `sandboxId` および `sandboxName` を設定できるようになりました。この設定は、`getOffer/getOffers` 呼び出し時に配信 API に渡されます。
 * セレクターで `:eq()` を連結するためのシャドウ DOM 修正。
 
 ## at.js バージョン 2.10.3（2023年9月12日（PT））
@@ -100,7 +104,7 @@ at.js をアップグレードする場合は、[Adobe Experience Platform](/hel
 
 このリリースには、次の変更が含まれています。
 
-* `window.default` または `reactor-document` を設定しているお客様に対してPlatform launchビルドが正しく機能するように、`reactor-window` および `document-default` のAdobe Experience Platform Launch モジュールを削除しました。
+* `window.default` または `reactor-document` を設定しているお客様に対してAdobe Experience Platform Launch ビルドが正しく機能するように、`reactor-window` および `document-default` のPlatform Launch モジュールを削除しました。
 * at.js 1.8.3 で `Samesite=None` と `Secure` を明示的に設定して、サードパーティのドメイン cookie が正しく設定されるようになりました。
 
 ## at.js 2.6.1（2021 年 8 月 16 日）
@@ -115,7 +119,7 @@ at.js をアップグレードする場合は、[Adobe Experience Platform](/hel
 * `prefetch` リクエストを使用したときに、[!UICONTROL Analytics for Target]（A4T）のクリック指標の詳細が正しく返されます。
 * UUID の生成では、`Math.random()` を使用しなくなり、`window.crypto` に基づくようになりました。
 * `sessionId` cookie の有効期限は、すべてのネットワーク呼び出しで正しく延長されます。
-* シングルページアプリケーション（SPA）ビューキャッシュの初期化が正しく処理され、`viewsEnabled` の設定に従うようになりました。 `viewsEnabled` を `false` 値に設定すると、`triggerView()` 関数が無効になりました。 [ 最初のページ読み込みの操作順序 ](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order) を参照してください。
+* 単一ページアプリケーション（SPA）ビューキャッシュの初期化が正しく処理され、`viewsEnabled` 設定に従うようになりました。 `viewsEnabled` を `false` 値に設定すると、`triggerView()` 関数が無効になりました。 [ 最初のページ読み込みの操作順序 ](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order) を参照してください。
 
 ## at.js 2.5.0 （2021 年 5 月 13 日）
 
@@ -185,7 +189,7 @@ at.js のこのリリースはメンテナンスリリースで、次の機能�
 at.js のこのリリースには、次の機能強化および修正が含まれています。
 
 * [!DNL Adobe Analytics] のコードがページ要素に存在しない場合に、クリック追跡で [!DNL Analytics for Target] のコンバージョン数（A4T）がレポートされない問題を修正しました。
-* Web ページでExperience CloudID サービス（ECID） v4.4 と at.js 2.2 の両方を使用する場合のパフォーマンスが向上しました。
+* Web ページでExperience Cloud ID サービス（ECID） v4.4 と at.js 2.2 の両方を使用する場合のパフォーマンスが向上しました。
 * 以前は、ECID は、at.js がエクスペリエンスを取得する前に、2 回のブロック呼び出しをおこなっていました。これが 1 回の呼び出しに短縮され、パフォーマンスが大幅に向上しました。
 * デフォルトオファーのイベントトークンが送信済み通知に含まれていない、誤ったプリフェッチされたビュー処理を修正しました。
 
@@ -193,13 +197,13 @@ at.js のこのリリースには、次の機能強化および修正が含ま�
 >
 >このパフォーマンス強化を利用するには、ECID 拡張機能を v4.4 にアップグレードします。
 
-* at.js バージョン 2.2 には、`serverState` という新しい設定も用意されています。 この設定は、[!DNL Target] のハイブリッド統合が実装されている場合にページのパフォーマンスを最適化するために使用できます。 ハイブリッド統合とは、at.js v2.2 以降（クライアントサイド）と、配信 API または [!DNL Target] SDK （サーバーサイド）の両方を使用してエクスペリエンスを提供することを意味します。 `serverState` には、at.js v2.2 以降で、サーバーサイドで取得したコンテンツからエクスペリエンスを直接適用し、提供されるページの一部としてクライアントに返す機能が備わっています。 詳細は、[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate) の「serverState」を参照してください。
+* at.js バージョン 2.2 には、`serverState` という新しい設定も用意されています。 この設定は、[!DNL Target] のハイブリッド統合が実装されている場合にページのパフォーマンスを最適化するために使用できます。 ハイブリッド統合とは、at.js v2.2 以降（クライアントサイド）と、配信 API または [!DNL Target] SDK（サーバーサイド）の両方を使用してエクスペリエンスを提供することを意味します。 `serverState` には、at.js v2.2 以降で、サーバーサイドで取得したコンテンツからエクスペリエンスを直接適用し、提供されるページの一部としてクライアントに返す機能が備わっています。 詳細は、[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate) の「serverState」を参照してください。
 
 ## at.js バージョン 1.8.0（2019年10月10日（PT））
 
 at.js のこのリリースには、次の機能強化および修正が含まれています。
 
-* Web ページでExperience CloudID サービス（ECID） v4.4 と at.js 1.8 の両方を使用する場合のパフォーマンスが向上しました。
+* Web ページでExperience Cloud ID サービス（ECID） v4.4 と at.js 1.8 の両方を使用する場合のパフォーマンスが向上しました。
 * 以前は、ECID は、at.js がエクスペリエンスを取得する前に、2 回のブロック呼び出しをおこなっていました。これが 1 回の呼び出しに短縮され、パフォーマンスが大幅に向上しました。
 
 >[!NOTE]
@@ -288,7 +292,7 @@ at.js 2 x の導入に伴い、次の関数が廃止されました。
 
 >[!NOTE]
 >
->[EU 一般データ保護規則 ](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) （GDPR）のAdobeオプトインサポートが必要な場合は、現在 at.js 1.7.0 または at.js 2.1.0 以降を使用する必要があります。
+>[EU 一般データ保護規則 ](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) （GDPR）のAdobe オプトインサポートが必要な場合は、現在 at.js 1.7.0 または at.js 2.1.0 以降を使用する必要があります。
 
 ## at.js バージョン 1.7.0
 
@@ -300,7 +304,7 @@ Adobe Opt-in に関する詳細については、「[プライバシーと一般
 
 >[!NOTE]
 >
->GDPR のAdobeオプトインサポートが必要な場合は、現在 at.js 1.7.0 または at.js 2.1.0 以降を使用する必要があります。
+>GDPR のAdobe オプトインサポートが必要な場合は、現在 at.js 1.7.0 または at.js 2.1.0 以降を使用する必要があります。
 
 ## at.js バージョン 1.6.4
 
