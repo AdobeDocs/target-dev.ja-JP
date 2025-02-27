@@ -1,9 +1,9 @@
 ---
-title: リクエストをログに記録する  [!DNL Adobe Target] Java SDK の初期化
-description: Java SDK でリクエストをログに記録する方法  [!DNL Adobe Target]  説明します。
+title: ' [!DNL Adobe Target] Java SDKを初期化してリクエストをログに記録する'
+description: ' [!DNL Adobe Target] Java SDKでリクエストをログに記録する方法を説明します。'
 feature: APIs/SDKs
 exl-id: 85d1a6ef-0b08-4948-8133-740b7d6141dd
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 526445fccee9b778b7ac0d7245338f235f11d333
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 4%
@@ -14,14 +14,14 @@ ht-degree: 4%
 
 ## 説明
 
-[SDK の初期化 ](initialize-sdk.md) 時に、`ClientConfig` オブジェクトにはいくつかのオプションがあり、リクエストをログに記録するように設定できます。
+[SDKの初期化 ](initialize-sdk.md) 時には、`ClientConfig` オブジェクトに複数のオプションがあり、リクエストをログに記録するように設定できます。
 
 | オプション | 説明 |
 | --- | --- |
 | `logRequests` | リクエスト本文全体と応答本文をログに記録します。 |
 | `logRequestStatus` | リクエストの url、ステータスおよび応答時間をログに記録します。 |
 
-Java SDK[!DNL Target]、`slf4j` ログを使用します。 `java.util.logging`、`logback`、`log4j` などのロガーを実装する必要があります。 詳しくは、[http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html) を参照してください。 すべてのログが `debug` に印刷されます。
+Java SDK[!DNL Target]、`slf4j` ログを使用します。 `java.util.logging`、`logback`、`log4j` などのロガーを実装する必要があります。 詳しくは、[https://www.slf4j.org/manual.html](https://www.slf4j.org/manual.html) を参照してください。 すべてのログが `debug` に印刷されます。
 
 ## 例
 

@@ -1,27 +1,27 @@
 ---
-title: 配信 API を使用してRecommendationsを取得する方法
+title: 配信 API を使用してレコメンデーションを取得する方法
 description: この記事では、Adobe Target配信 API を使用して Recommendations コンテンツを取得するために必要な手順について開発者に説明します。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
+source-git-commit: 526445fccee9b778b7ac0d7245338f235f11d333
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1286'
 ht-degree: 1%
 
 ---
 
-# 配信 API を使用したRecommendationsの取得
+# 配信 API を使用したレコメンデーションの取得
 
-Adobe Target API とAdobe Target Recommendations API を使用すると、web ページへの応答を配信できますが、アプリ、画面、コンソール、メール、キオスクなどのディスプレイデバイスなど、HTMLー以外のエクスペリエンスでも使用できます。 つまり、Target ライブラリとJavaScriptを使用できない場合でも、[Target 配信 API](/help/dev/implement/delivery-api/overview.md) を使用すれば、引き続き Target の全機能にアクセスして、パーソナライズされたエクスペリエンスを提供できます。
+Adobe Target API およびAdobe Target Recommendations API を使用すると、web ページに対する応答を提供できますが、アプリ、画面、コンソール、メール、キオスクおよびその他のディスプレイデバイスなど、HTML以外のエクスペリエンスでも使用できます。 つまり、Target ライブラリとJavaScriptを使用できない場合でも、[Target 配信 API](/help/dev/implement/delivery-api/overview.md) を使用すれば、引き続き Target の全機能にアクセスして、パーソナライズされたエクスペリエンスを提供できます。
 
 >[!NOTE]
 >
 >実際のレコメンデーションを含んだコンテンツ（推奨製品または推奨項目）をリクエストする場合は、Target 配信 API を使用します。
 
-レコメンデーションを取得するには、適切なコンテキスト情報を含んだAdobe Target Delivery API POST呼び出しを送信します。この情報には、ユーザー ID （最近閲覧したユーザーの項目などのプロファイル固有のレコメンデーションで使用する）、関連する mbox 名、mbox パラメーター、プロファイルパラメーター、その他の属性などが含まれます。 このレスポンスには、推奨される entity.ids （および他のエンティティデータを含む）が JSON 形式またはHTML形式で含まれ、デバイスに表示できます。
+レコメンデーションを取得するには、適切なコンテキスト情報を含んだAdobe Target Delivery API POST 呼び出しを送信します。この情報には、ユーザー ID （最近閲覧したユーザーの項目などのプロファイル固有のレコメンデーションで使用する）、関連する mbox 名、mbox パラメーター、プロファイルパラメーター、その他の属性などが含まれます。 応答には、推奨される entity.ids （および他のエンティティデータを含む場合があります）が JSON 形式またはHTML形式で含まれ、デバイスに表示できます。
 
 Adobe Target用 [ 配信 API](/help/dev/implement/delivery-api/overview.md) は、標準の Target リクエストが提供する既存の機能をすべて公開します。
 
@@ -35,7 +35,7 @@ Adobe Target用 [ 配信 API](/help/dev/implement/delivery-api/overview.md) は�
 
 配信 API を使用して、レコメンデーションを含む Target エクスペリエンスを配信するには、次の手順に従います。
 
-1. Visual Experience Composer ではなくフォームベースのコンポーザーを使用して、Target アクティビティ（A/B、XT、AP またはRecommendations）を作成します。
+1. Visual Experience Composer ではなくフォームベースのコンポーザーを使用して、Target アクティビティ（A/B、XT、AP、Recommendations）を作成します。
 1. 配信 API を使用して、作成した Target アクティビティによって生成されたリクエストに対する応答を取得します。
 
 &lt;!— Q：この方法にはなぜ両方のステップが必要なのでしょうか。 mbox に対してフォームベースのレコメンデーションを定義した場合、の配信 API ステップを使用して結果を取得する利点は何ですか？ フォームベースの Rec を使用して宛先デバイスに結果を配信するだけでは、なぜできないのでしょうか…?? A：以下のユースケースを参照してください。結果を表示する前にさらに作業をおこなうために、保留中の結果を「インターセプト」する場合です。 在庫レベルに対するリアルタイム比較などがあります。 —>
@@ -76,28 +76,26 @@ Adobe Target用 [ 配信 API](/help/dev/implement/delivery-api/overview.md) は�
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
 この応答には、キー ID と推奨エンティティのエンティティ ID が含まれます。
 
-この方法で配信 API をRecommendationsと共に使用すると、HTML以外のデバイスで訪問者にレコメンデーションを表示する前に、さらに手順を実行できます。 例えば、配信 API から応答を受け取って、最終結果を表示する前に別のシステム（CMS、PIM、e コマースプラットフォームなど）からエンティティ属性の詳細（在庫、価格、評価など）を追加でリアルタイムに参照できます。
+この方法で配信 API と Recommendations を使用すると、HTML以外のデバイスで訪問者にレコメンデーションを表示する前に、追加の手順を実行できます。 例えば、配信 API からの応答を受けて、最終結果を表示する前に別のシステム（CMS、PIM、e コマースプラットフォームなど）のエンティティ属性の詳細（在庫、価格、評価など）をリアルタイムで参照できます。
 
 このガイドで概要を説明しているアプローチを使用すると、任意のアプリケーションを取得して、Target からの応答を活用し、パーソナライズされたレコメンデーションを提供できます。
 
 ## 実装例
 
-以下のリソースでは、HTMLに焦点を当てていない様々な実装例を示しています。 関係するシステムとデバイスにより、すべての実装は一意であることに注意してください。
+次のリソースでは、HTML以外に焦点を当てた様々な実装例を示しています。 関係するシステムとデバイスにより、すべての実装は一意であることに注意してください。
 
 | リソース | 詳細 |
 | --- | --- |
-| [ あらゆる場所でAdobe Target - サーバーサイドまたは IoT に実装 ](https://expleague.azureedge.net/labs/L733/index.html) | Adobe Target サーバーサイド API を活用した React Adobe Summitの実践的なエクスペリエンスを提供するアプリケーション 2019 ラボ。 |
-| [AdobeSDK のないモバイルアプリでのAdobe Target](https://community.tealiumiq.com/t5/Universal-Data-Hub/Adobe-Target-in-a-Mobile-App-Without-the-Adobe-SDK/ta-p/26753) | このガイドでは、AdobeSDK をインストールせずに、モバイルアプリでAdobe Targetを設定する方法について説明します。 このソリューションでは、Tealium SDK web ビューとリモートコマンドモジュールを使用して、Adobe訪問者 API （Experience Cloud）とAdobe Target API に対してリクエストを送受信します。 |
-| [Experience Platform Launchでの Target 拡張機能の設定と Target API の実装 ](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | Experience Platform Launchで Target 拡張機能を設定し、Target 拡張機能をアプリに追加し、Target API を実装してアクティビティをリクエストし、オファーをプリフェッチし、視覚的なプレビューモードに入る手順。 |
+| [Experience Platform Launch での Target 拡張機能の設定と Target API の実装 ](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | Experience Platform Launch で Target 拡張機能を設定し、Target 拡張機能をアプリに追加し、Target API を実装してアクティビティをリクエストし、オファーをプリフェッチし、視覚的なプレビューモードに入る手順。 |
 | [Adobe Target ノードクライアント ](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) | オープンソース Target Node.js SDK v1.0 |
-| [ サーバーサイドの概要 ](../../implement/server-side/server-side-overview.md) | Adobe Target サーバーサイド配信 API、サーバーサイドバッチ配信 API、Node.js SDK およびAdobe Target Recommendations API に関する情報です。 |
-| [ メールでのAdobe Campaign コンテンツRecommendations](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | Adobe CampaignのAdobe TargetとAdobe I/O Runtimeを使用して、メールでコンテンツレコメンデーションを活用する方法を説明するブログです。 |
+| [ サーバーサイドの概要 ](../../implement/server-side/server-side-overview.md) | Adobe Target サーバーサイド配信 API、サーバーサイドバッチ配信 API、Node.js SDKおよびAdobe Target Recommendations API に関する情報です。 |
+| [ メールでのAdobe Campaign コンテンツレコメンデーション ](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | Adobe CampaignのAdobe TargetとAdobe I/O Runtimeを使用して、メールでコンテンツレコメンデーションを活用する方法を説明するブログです。 |
 
-## API を使用したRecommendations設定の管理
+## API を使用した Recommendations 設定の管理
 
 ほとんどの場合、レコメンデーションはAdobe Target UI で設定され、前述のような理由で、Target API を介して使用またはアクセスされます。 この UI と API の調整は共通です。 ただし、ユーザーは、設定と結果の使用の両方で、API を使用してすべてのアクションを実行したい場合があります。 それほど一般的ではありませんが、ユーザーは API を使用して、レコメンデーションの結果を完全に設定、実行 *および* 活用できます。
 
-Adobe Target Recommendations エンティティを管理し、サーバーサイドで配信する方法について ](manage-catalog.md) 前の節 [ で説明しました。 同様に、[Adobe Developer Console](https://developer.adobe.com/console/home) を使用すると、Adobe Targetにログインしなくても、条件、プロモーション、コレクション、デザインテンプレートを管理できます。 すべてのRecommendations API の完全なリストは [ こちら ](https://developer.adobe.com/target/administer/recommendations-api/) 見つかりますが、参照用の概要を以下に示します。
+[ 前の節 ](manage-catalog.md)Adobe Target Recommendations エンティティを管理し、サーバーサイドで配信する方法を学びました。 同様に、[Adobe Developer Console](https://developer.adobe.com/console/home) を使用すると、Adobe Targetにログインしなくても、条件、プロモーション、コレクション、デザインテンプレートを管理できます。 すべての Recommendations API の完全なリストは [ こちら ](https://developer.adobe.com/target/administer/recommendations-api/) 見つかりますが、参照用の概要はこちらを参照してください。
 
 | リソース | 詳細 |
 | --- | --- |
@@ -124,4 +122,4 @@ Adobe Target Recommendations エンティティを管理し、サーバーサイ
 おめでとうございます。 このガイドでは、次の方法について説明します。
 * [Recommendations API を使用したカタログの管理](manage-catalog.md)
 * [Recommendations API を使用したカスタム条件の管理](manage-custom-criteria.md)
-* [Recommendationsでの配信 API の使用](fetch-recs-server-side-delivery-api.md)
+* [Recommendations での配信 API の使用](fetch-recs-server-side-delivery-api.md)
