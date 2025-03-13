@@ -4,10 +4,10 @@ description: インターフェイスとコンテンツ配信  [!DNL Adobe Targe
 title: はどのブラウザ  [!DNL Target]  をサポートしていますか？
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
-source-git-commit: f194c6de43070443b78c9a69b4233c27d70b8858
+source-git-commit: 1b6dcb24d677b758ed1daf85dc0a7e9e5b42680d
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 24%
+source-wordcount: '421'
+ht-degree: 21%
 
 ---
 
@@ -21,10 +21,24 @@ TLS について詳しくは、「[TLS （Transport Layer Security）暗号化�
 
 [!DNL Target] インターフェイスは、次のブラウザーとデバイスをサポートしています。
 
+>[!NOTE]
+>
+>Target では、リストされている各ブラウザーの最新バージョンと、最新バージョンから 1 を引いたバージョンがサポートされています。
+
+
 | デバイスタイプ | ブラウザーのバージョン |
 |--- |--- |
-| Windows | <ul><li>Microsoft Edge</li><li>GoogleChrome（最新、最新–1）</li><li>Mozilla Firefox （最新、最新–1）</li></ul> |
-| Mac | <ul><li>Firefox （最新、最新–1）</li><li>Chrome（最新、最新–1）</li></ul> |
+| [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+
+## ビジュアル編集の要件
+
+[!UICONTROL Visual Experience Composer] （VEC）で web ページを確実に開いて作成、プレビューするには、[Adobe Experience Cloud Visual Editing Helper ブラウザー拡張機能が web ブラウザーにインストールされているか ](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} 使用している必要 [!UICONTROL Enhanced Experience Composer (EEC)] あります。
+
+>[!NOTE]
+>
+>現在、[!DNL Adobe Target] での web ページのビジュアル編集をサポートしているブラウザーは、[!DNL Google Chrome] と [!DNL Microsoft Edge] のみです。
+
 
 ## コンテンツ配信
 
