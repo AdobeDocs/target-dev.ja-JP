@@ -4,9 +4,9 @@ description: at [!DNL Adobe Target] js JavaScript ライブラリの各バージ
 title: at.js の各バージョンには何が含まれますか？
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 3deeee2838d02d578bb653a4911313463b962050
+source-git-commit: 1a9b43142319ace8fa04aff209b8b639c7512e3f
 workflow-type: tm+mt
-source-wordcount: '4994'
+source-wordcount: '5018'
 ht-degree: 64%
 
 ---
@@ -26,6 +26,10 @@ ht-degree: 64%
 >いずれかの 1 の最新バージョンにアップグレードする必要があります。*x* または 2。*x* 対応するメジャーバージョンの以前のマイナーバージョンで検出された問題に対するバグ修正とセキュリティパッチを取得します。
 
 at.js をアップグレードする場合は、[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) のタグをお勧めします。 拡張機能開発者は、拡張機能に新しい機能を継続的に追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンへとパッケージ化され、アップグレードとしてAdobe Experience Platform カタログ内で使用できるようになります。 詳しくは、[ タグの概要 ](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) ガイドの *拡張機能のアップグレード* を参照してください。
+
+## at.js バージョン 2.11.8 （2025 年 3 月 31 日）
+
+* サイズ変更および移動操作中のエッジケースを防ぐために、文字列サフィックス検証で CodeQL が識別する脆弱性を解決しました。 （TNT-51516）
 
 ## at.js バージョン 2.11.7 （2025 年 2 月 26 日）
 
