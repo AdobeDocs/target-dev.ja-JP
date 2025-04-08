@@ -4,9 +4,9 @@ description: '[!UICONTROL Adobe Client Care] と連携して CNAME （正規名�
 title: Target での CNAME の使用方法
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: a36826202c5baa47f95a88c7b29c0d114901e6fa
+source-git-commit: 1a78a1e2750ae906338e91ff24ac16cdc99323ba
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1165'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,7 @@ Apple Intelligent Tracking Prevention （ITP）バージョン 2.3 では、CNAM
 
 ### CNAME 実装で使用されるキーの種類と証明書の署名アルゴリズムは何ですか？
 
-すべての証明書は RSA SHA-256 で、キーはデフォルトで RSA 2048 ビットです。 2048 ビットを超えるキーサイズは、現在サポートされていません。
+すべての証明書は RSA SHA-256 で、キーはデフォルトで RSA 2048 ビットです。 2048 ビットを超えるキーサイズは、[!UICONTROL Customer Care] を使用して明示的にリクエストする必要があります。
 
 ### CNAME 実装がトラフィックに対して準備されていることを検証するにはどうすればよいですか？
 
