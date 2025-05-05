@@ -31,7 +31,7 @@ ht-degree: 59%
 
 次のメリットは、[!DNL Adobe Experience Platform] のタグを使用して at.js を実装する場合にのみ当てはまります。したがって、Adobeでは、at.js の手動実装ではなく、[!DNL Adobe Experience Platform] でタグを使用することを強くお勧めします。
 
-* **[!DNL Adobe Analytics] と [!DNL Target] の競合状態の解消：**[!DNL Analytics] 呼び出しは [!DNL Target] 呼び出しより先に実行される可能性があるので、[!DNL Target] 呼び出しは [!DNL Analytics] 呼び出しには結合されません。これにより、データが正しくなくなるおそれがあります。[!DNL Target] 拡張機能では、[!DNL Target] 呼び出しが成否に関わらず完了するまで [!DNL Analytics] ビーコン呼び出しが待機します。[!DNL Adobe Experience Platform] でタグを使用すると、手動で実装する場合に発生する可能性のあるデータ不整合の問題を解決できます。
+* **[!DNL Adobe Analytics] と [!DNL Target] の競合状態の解消：**&#x200B;[!DNL Analytics] 呼び出しは [!DNL Target] 呼び出しより先に実行される可能性があるので、[!DNL Target] 呼び出しは [!DNL Analytics] 呼び出しには結合されません。これにより、データが正しくなくなるおそれがあります。[!DNL Target] 拡張機能では、[!DNL Target] 呼び出しが成否に関わらず完了するまで [!DNL Analytics] ビーコン呼び出しが待機します。[!DNL Adobe Experience Platform] でタグを使用すると、手動で実装する場合に発生する可能性のあるデータ不整合の問題を解決できます。
 
   >[!NOTE]
   >

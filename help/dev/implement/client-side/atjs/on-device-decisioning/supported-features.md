@@ -17,7 +17,7 @@ ht-degree: 12%
 
 ## サポートされているアクティビティのタイプ
 
-次の表は、[ フォームベースの Experience Composer[ または [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) （VEC）で作成された ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) アクティビティタイプ ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) が、[!UICONTROL on-device decisioning] でサポートされている（またはサポートされていない）ことを示しています。
+次の表は、[&#128279;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) フォームベースの Experience Composer[&#128279;](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) または [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) （VEC）で作成された  アクティビティタイプ  が、[!UICONTROL on-device decisioning] でサポートされている（またはサポートされていない）ことを示しています。
 
 | アクティビティタイプ | 対応? |
 | --- | --- |

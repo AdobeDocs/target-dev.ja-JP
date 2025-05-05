@@ -26,7 +26,7 @@ Models API の仕様を [ こちら ](../administer/models-api/models-api-overvi
 
 ## 前提条件
 
-Models API を使用する場合、{Target Admin API](https://developer.adobe.com/console/home) を使用する場合と同様に、{0[Adobe Developer Console](../administer/admin-api/admin-api-overview-new.md) を使用して認証を設定する必要があります。 [詳しくは、[ 認証の設定方法 ](../before-administer/configure-authentication.md) を参照してください。
+Models API を使用する場合、&lbrace;Target Admin API[&#128279;](https://developer.adobe.com/console/home) を使用する場合と同様に、&lbrace;0[Adobe Developer Console](../administer/admin-api/admin-api-overview-new.md) を使用して認証を設定する必要があります。 詳しくは、[ 認証の設定方法 ](../before-administer/configure-authentication.md) を参照してください。
 
 ## Models API 使用ガイドライン
 
@@ -197,7 +197,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-この例では、ユーザーは `SES_PREVIOUS_VISIT_COUNT` と `SES_TOTAL_SESSIONS` の 2 つの機能をブロックしています。これは、手順 1](#step1) で説明したように、アクティビティ ID が 260480[ のアクティビティの機能の完全なリストをクエリすることで、以前に識別されました。 また、前述の [ 表 ](#table) で説明されているように、「AAM」のプレフィックスで機能をブロックすることで達成される、Experience Cloudセグメントからのすべての機能もブロックします。
+この例では、ユーザーは `SES_PREVIOUS_VISIT_COUNT` と `SES_TOTAL_SESSIONS` の 2 つの機能をブロックしています。これは、手順 1[&#128279;](#step1) で説明したように、アクティビティ ID が 260480 のアクティビティの機能の完全なリストをクエリすることで、以前に識別されました。 また、前述の [ 表 ](#table) で説明されているように、「AAM」のプレフィックスで機能をブロックすることで達成される、Experience Cloudセグメントからのすべての機能もブロックします。
 
 ![手順 3](assets/models-api-step-3.png)
 

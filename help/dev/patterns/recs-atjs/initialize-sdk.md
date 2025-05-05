@@ -59,7 +59,7 @@ ht-degree: 5%
 
 **前提条件**
 
-* 訪問者 ID/API サービスを使用するには、[!DNL Adobe Experience Cloud] に対して会社が有効になっており、[!UICONTROL Organization ID] が付与されている必要があります。 詳しくは、{ID サービスのヘルプ ](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} ガイドの {0 *Experience Cloud要件：組織 ID* を参照してください。[
+* 訪問者 ID/API サービスを使用するには、[!DNL Adobe Experience Cloud] に対して会社が有効になっており、[!UICONTROL Organization ID] が付与されている必要があります。 詳しくは、&lbrace;ID サービスのヘルプ [&#128279;](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} ガイドの &lbrace;0 *Experience Cloud要件：組織 ID* を参照してください。
 * `VisitorAPI.js` ファイルが必要です。 既に実装されている場合は、このファイルが既に存在しているはず [!DNL Adobe Analytics] す。 このファイルは、[[!DNL Adobe Experience Platform] tags extension](https://experienceleague.adobe.com/docs/tags.html){target=_blank} を使用して追加することも、[Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank} からダウンロードすることもできます。
 
 **VisitorAPI.js の設定と参照**

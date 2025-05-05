@@ -107,7 +107,7 @@ function targetPageParams() {
 }
 ```
 
-買い物かごベースの Recommendations について詳しくは、『買い物かごベースのビジネス実践者ガイド ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based) の [ 買い物かごベース *を参照し*[!DNL Adobe Target] ください。
+買い物かごベースの Recommendations について詳しくは、『買い物かごベースのビジネス実践者ガイド [&#128279;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based) の  買い物かごベース *を参照し*[!DNL Adobe Target] ください。
 
 ### 訪問者の買い物かごにすでに入っている品目を除く
 
@@ -125,7 +125,7 @@ function targetPageParams() {
 
 ### 購入/注文確認ページ
 
-購入イベントが発生したら、購入した品目の ID を渡します。 [at.js のデプロイ方法 ](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)/タグマネージャーを使用しない [!UICONTROL Target] の実装 ](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md) 記事の [ コンバージョンの追跡を参照してください。
+購入イベントが発生したら、購入した品目の ID を渡します。 [at.js のデプロイ方法 ](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)/タグマネージャーを使用しない [!UICONTROL Target] の実装 [&#128279;](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md) 記事の  コンバージョンの追跡を参照してください。
 
 ## 4. グローバル除外の設定
 

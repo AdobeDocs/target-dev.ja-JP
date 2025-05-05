@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## プリフェッチされた mbox の通知
 
-1 回の配信呼び出しで 1 つまたは複数の通知を送信できます。 通知の `type` を正しく反映させるために、追跡する必要がある指標が mbox ごとに `click` または `display` のいずれであるかを判断します。 また、[!UICONTROL  Adobe Target Delivery API] 経由で通知が正しく送信されたかどうかを判断できるように、通知ごとに `id` を渡します。 また、`timestamp` は、レポート目的で特定の mbox に対して `click` または `display` がいつ発生したかを示すために、[!DNL Target] に転送することが重要です。
+1 回の配信呼び出しで 1 つまたは複数の通知を送信できます。 通知の `type` を正しく反映させるために、追跡する必要がある指標が mbox ごとに `click` または `display` のいずれであるかを判断します。 また、[!UICONTROL &#x200B; Adobe Target Delivery API] 経由で通知が正しく送信されたかどうかを判断できるように、通知ごとに `id` を渡します。 また、`timestamp` は、レポート目的で特定の mbox に対して `click` または `display` がいつ発生したかを示すために、[!DNL Target] に転送することが重要です。
 
 ```
 curl -X POST \

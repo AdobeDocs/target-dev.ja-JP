@@ -334,6 +334,6 @@ Target は、メタデータ、ルールおよび条件で構成されるアー�
 
    最初の JSON ルールのアーティファクトの生成には、最大 10 分かかることがあります。
 
-1. [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) でサポートされている [ アクティビティタイプを作成してアクティブ化し、適格 [!UICONTROL on-device decisioning] あることを確認します。
+1. [!UICONTROL on-device decisioning][&#128279;](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) でサポートされている  アクティビティタイプを作成してアクティブ化し、適格 [!UICONTROL on-device decisioning] あることを確認します。
 1. at.js 設定 UI を使用して、**[!UICONTROL Decisioning Method]** を **[!UICONTROL "Hybrid"]** または **[!UICONTROL "On-device only"]** に設定します。
 1. At.js 2.5.0 以降をダウンロードしてページにデプロイします。

@@ -215,7 +215,7 @@ ht-degree: 45%
    + [Adobe Experience Platform Edge Networkサーバー API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
 + 実装パターン {#implementation-patterns}
    + [実装パターンの概要](/help/dev/patterns/pattern-overview.md)
-   + at.js {#atjs} を使用したRecommendationsの実装パターン
+   + at.js を使用したRecommendationsの実装パターン {#atjs}
       + [at.js を使用したRecommendations実装パターンの概要](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [SDK の初期化](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [データ収集の設定](/help/dev/patterns/recs-atjs/data-collection.md)

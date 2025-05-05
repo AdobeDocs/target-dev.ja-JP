@@ -35,7 +35,7 @@ ht-degree: 0%
 
 | リソース | 詳細 |
 | --- | --- |
-| Postman | これらの手順を正常に完了するには、お使いのオペレーティングシステムに対応する ](https://www.postman.com/downloads/)0}Postman アプリ } を取得します。 [Postman basic は無料でアカウントを作成できます。 Postmanは、[!DNL Adobe Target] API を一般的に使用するために必要なものではありませんが、API ワークフローを容易にし、API の実行や [!DNL Adobe Target] の動作の学習に役立つ複数のPostman コレクションを提供しています。 このガイドの残りの部分では、Postmanに関する実務知識を前提としています。 サポートについては、[Postmanのドキュメント ](https://learning.getpostman.com/) を参照してください。 |
+| Postman | これらの手順を正常に完了するには、お使いのオペレーティングシステムに対応する [&#128279;](https://www.postman.com/downloads/)0&rbrace;Postman アプリ &rbrace; を取得します。 Postman basic は無料でアカウントを作成できます。 Postmanは、[!DNL Adobe Target] API を一般的に使用するために必要なものではありませんが、API ワークフローを容易にし、API の実行や [!DNL Adobe Target] の動作の学習に役立つ複数のPostman コレクションを提供しています。 このガイドの残りの部分では、Postmanに関する実務知識を前提としています。 サポートについては、[Postmanのドキュメント ](https://learning.getpostman.com/) を参照してください。 |
 | 参照 | このガイドの残りの部分では、次のリソースに慣れていることを前提としています。<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Target 管理者およびプロファイル API のドキュメント ](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API ドキュメント ](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## Adobe I/Oプロジェクトの作成

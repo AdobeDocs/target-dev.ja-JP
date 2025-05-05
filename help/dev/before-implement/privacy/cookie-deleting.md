@@ -39,7 +39,7 @@ ht-degree: 3%
 
 1. **[!UICONTROL Firefox]** メニュー/**[!UICONTROL Preferences]** をクリックします。
 1. 「**[!UICONTROL Privacy and Security]**」タブをクリックします。
-1. [**Cookies and Site Data*] の下の [**[!UICONTROL Manage Data]**] をクリックします。
+1. [**Cookies and Site Data*] の下の [**&#x200B;[!UICONTROL Manage Data]**] をクリックします。
 1. `adobe.com` サイトを選択し、「**[!UICONTROL Remove Selected]**」をクリックします。
 
 >[!WARNING]

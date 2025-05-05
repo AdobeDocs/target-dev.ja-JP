@@ -1,6 +1,6 @@
 ---
 keywords: 実装，javascript ライブラリ，js, atjs, オンデバイス判定，オンデバイス判定，ルールアーティファクト，$8
-description: '[!UICONTROL on-device decisioning]] で使用される JSON ルールアーティファクトについて説明します。'
+description: '[!UICONTROL on-device decisioning]&rbrack; で使用される JSON ルールアーティファクトについて説明します。'
 title: オンデバイス判定で JSON ルールアーティファクトは何を行いますか？
 feature: at.js
 exl-id: 14413ccf-b55e-48a8-a474-4401eb1b50fc
