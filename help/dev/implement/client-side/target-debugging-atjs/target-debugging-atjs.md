@@ -25,12 +25,12 @@ ht-degree: 7%
 
 ### Adobe Experience Cloud Debugger 拡張機能 ![ 概要バッジ ](../../assets/overview.png) を追加します
 
->[!VIDEO](https://video.tv.adobe.com/v/23114/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/34063/?quality=12&captions=jpn)
 
 ### Adobe Target Debugger を使用した基本的なAdobe Experience Cloudのデバッグ ![ 概要バッジ ](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23115/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/34064/?quality=12&captions=jpn)
 
 ### Mbox Trace![ 概要バッジ ](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23113/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/34065/?quality=12&captions=jpn)

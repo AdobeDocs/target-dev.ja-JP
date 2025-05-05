@@ -315,12 +315,12 @@ at.js 2.x API を使用すると、様々な方法で [!DNL Target] 実装をカ
 
 ### SPA での at.js 2.x の実装
 
->[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/35058/?quality=12&captions=jpn)
 
 詳しくは、[ シングルページアプリケーション（SPA）でのAdobe Targetの at.js 2.x の実装 ](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=ja) を参照してください。
 
 ### [!DNL Adobe Target] でのSPA用 VEC の使用
 
->[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/35062/?quality=12&captions=jpn)
 
 詳しくは、[Adobe Target でのシングルページアプリケーション Visual Experience Composer（SPA VEC）の使用](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=ja)を参照してください。
