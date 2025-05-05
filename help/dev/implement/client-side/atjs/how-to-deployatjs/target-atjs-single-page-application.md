@@ -220,7 +220,7 @@ SPA用の [!DNL Adobe Target] VEC では、ビューと呼ばれる新しい概�
 
 ## シングルページアプリケーションの Visual Experience Composer
 
-at.js 2.x のインストールを完了し、サイトに `triggerView()` を追加した後、VEC を使用して A/B および XT アクティビティを実行します。詳細については、「[シングルページアプリケーション（SPA）の Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html)」を参照してください。
+at.js 2.x のインストールを完了し、サイトに `triggerView()` を追加した後、VEC を使用して A/B および XT アクティビティを実行します。詳細については、「[シングルページアプリケーション（SPA）の Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=ja)」を参照してください。
 
 >[!NOTE]
 >
@@ -228,7 +228,7 @@ at.js 2.x のインストールを完了し、サイトに `triggerView()` を�
 
 ## トリガービューを使用して、A4T が at.js 2.x およびSPAで正しく動作することを確認します
 
-[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) （A4T）が at.js 2.x で正しく動作することを確認するには、[!DNL Target] リクエストと [!DNL Analytics] リクエストで同じ SDID を送信してください。
+[Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) （A4T）が at.js 2.x で正しく動作することを確認するには、[!DNL Target] リクエストと [!DNL Analytics] リクエストで同じ SDID を送信してください。
 
 SPA に関するベストプラクティスは次のとおりです。
 
@@ -311,16 +311,16 @@ at.js 2.x API を使用すると、様々な方法で [!DNL Target] 実装をカ
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-詳しくは、[at.js 2.x の仕組みについて](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)を参照してください。
+詳しくは、[at.js 2.x の仕組みについて](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=ja)を参照してください。
 
 ### SPA での at.js 2.x の実装
 
 >[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
 
-詳しくは、[ シングルページアプリケーション（SPA）でのAdobe Targetの at.js 2.x の実装 ](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html) を参照してください。
+詳しくは、[ シングルページアプリケーション（SPA）でのAdobe Targetの at.js 2.x の実装 ](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=ja) を参照してください。
 
 ### [!DNL Adobe Target] でのSPA用 VEC の使用
 
 >[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
 
-詳しくは、[Adobe Target でのシングルページアプリケーション Visual Experience Composer（SPA VEC）の使用](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html)を参照してください。
+詳しくは、[Adobe Target でのシングルページアプリケーション Visual Experience Composer（SPA VEC）の使用](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=ja)を参照してください。

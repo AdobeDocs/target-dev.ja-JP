@@ -39,7 +39,7 @@ adbox は mbox と似ていますが、JavaScript ではなく URL によって�
 
      URL エンコードをおこない、絶対参照にする必要があります。[HTML URL エンコーディング参照 ](https://www.w3schools.com/tags/ref_urlencode.asp) を使用して、URL をすばやくエンコードできます。
 
-1. 各代替画像の[リダイレクトオファー](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html)を作成します。
+1. 各代替画像の[リダイレクトオファー](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=ja)を作成します。
 
    >[!NOTE]
    >

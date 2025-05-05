@@ -15,13 +15,13 @@ ht-degree: 66%
 
 クライアントサイドで [!DNL Adobe Target] を実装するには、at.js JavaScript ライブラリを使用する必要があります。
 
-クライアント側での [!DNL Adobe Target] の実装では、[!DNL Target] アクティビティに関連付けられたエクスペリエンスをクライアントブラウザーに直接配信します。ブラウザーは、表示するエクスペリエンスを決定して表示します。クライアント側の実装では、WYSIWYG エディターの [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) （VEC）または非ビジュアルインターフェイスである[フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) を使用して、テストエクスペリエンスとパーソナライゼーションエクスペリエンスを作成できます。
+クライアント側での [!DNL Adobe Target] の実装では、[!DNL Target] アクティビティに関連付けられたエクスペリエンスをクライアントブラウザーに直接配信します。ブラウザーは、表示するエクスペリエンスを決定して表示します。クライアント側の実装では、WYSIWYG エディターの [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) （VEC）または非ビジュアルインターフェイスである[フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja) を使用して、テストエクスペリエンスとパーソナライゼーションエクスペリエンスを作成できます。
 
 ## at.js について
 
 at.js ライブラリは、[!DNL Adobe Target] のクライアントサイド実装用の実装ライブラリです。 at.js ライブラリは、Web 実装のページ読み込み時間を改善し、シングルページアプリケーション向けのより優れた実装オプションを提供します。at.js は推奨される実装ライブラリであり、頻繁にアップデートされて新しい機能が追加されます。すべてのお客様に、[at.js の最新バージョン ](/help/dev/implement/client-side/atjs/target-atjs-versions.md) を実装または移行することをお勧めします。
 
-詳細については、[Target JavaScript ライブラリ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#libraries)を参照してください。
+詳細については、[Target JavaScript ライブラリ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=ja#libraries)を参照してください。
 
 以下に示す [!DNL Target] 実装では、[!DNL Analytics]、Target および [!DNL Audience Manager] のAdobe Experience Cloud ソリューションが実装されています。 さらに、[!DNL Adobe Experience Platform]、[!UICONTROL Audiences]、[!UICONTROL Visitor ID Service] の [!DNL Experience Cloud] コアサービスが実装されています。
 
@@ -74,7 +74,7 @@ at.js 2.x は、Adobe Target の SAP のサポートを強化し、Adobe Target 
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-詳しくは、[at.js 2.x の仕組みについて](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)を参照してください。
+詳しくは、[at.js 2.x の仕組みについて](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=ja)を参照してください。
 
 ## at.js 1.x の図
 

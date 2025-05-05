@@ -15,4 +15,4 @@ ht-degree: 0%
 
 お使いの [!DNL Adobe Target] at.js の実装で、今後サードパーティ cookie が廃止される予定を確認します。
 
-詳しくは、Adobe Target コミュニティの [Adobe Target（at.js）でのサードパーティ Cookie の廃止の影響 ](https://experienceleaguecommunities.adobe.com/t5/adobe-target-blogs/the-impact-of-third-party-cookie-deprecation-on-adobe-target-at/ba-p/661615?search=Third%20Party%20Cookie%20Deprecation){target=_blank} を参照してください。
+詳しくは、Adobe Target コミュニティの [Adobe Target（at.js）でのサードパーティ Cookie の廃止の影響 ](https://experienceleaguecommunities.adobe.com/t5/adobe-target-blogs/the-impact-of-third-party-cookie-deprecation-on-adobe-target-at/ba-p/661615?profile.language=ja&search=Third%20Party%20Cookie%20Deprecation){target=_blank} を参照してください。

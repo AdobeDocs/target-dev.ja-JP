@@ -26,7 +26,7 @@ ht-degree: 43%
 iOSおよびAndroid Mobile SDK でプリフェッチメソッドを使用する場合は、次の制限事項を考慮してください。
 
 * プリフェッチコンテンツは、起動間で保持されません。プリフェッチコンテンツは、アプリケーションが稼働しているか `clearPrefetchCache()` 、メソッドが呼び出されるまでキャッシュされます。
-* プリフェッチ機能は、[!UICONTROL Auto-Allocate] および [!UICONTROL Auto-Target] のトラフィック割り当て方法、[!UICONTROL Automated Personalization] または [!UICONTROL Recommendations] のアクティビティタイプ、または [A/B または XT アクティビティ内の Recommendations オファー ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html) ではサポートされていません。
+* プリフェッチ機能は、[!UICONTROL Auto-Allocate] および [!UICONTROL Auto-Target] のトラフィック割り当て方法、[!UICONTROL Automated Personalization] または [!UICONTROL Recommendations] のアクティビティタイプ、または [A/B または XT アクティビティ内の Recommendations オファー ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html?lang=ja) ではサポートされていません。
 
 プリフェッチメソッド、パブリッククラス、コードサンプルなどについて詳しくは、以下のドキュメントを参照してください。
 

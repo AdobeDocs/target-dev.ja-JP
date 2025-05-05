@@ -102,7 +102,7 @@ ht-degree: 58%
 
   at.js 2.5 以降が実装され web プロパティにデプロイされる場合に標準で設定されているデフォルトの判定方法はサーバー側のみです。
 
-  サーバーサイドのみをデフォルト設定として使用すると、すべての決定は [!DNL Target] エッジネットワーク上で行われます。これにはブロッキングサーバーコールが必要になります。 このアプローチでは、待ち時間が徐々に増えるおそれがありますが、[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) （AP）および [ 自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) のアクティビティなど、[!DNL Target] の機械学習機能を適用する機能を提供するなど、大きなメリットもあります。
+  サーバーサイドのみをデフォルト設定として使用すると、すべての決定は [!DNL Target] エッジネットワーク上で行われます。これにはブロッキングサーバーコールが必要になります。 このアプローチでは、待ち時間が徐々に増えるおそれがありますが、[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=ja)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja) （AP）および [ 自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=ja) のアクティビティなど、[!DNL Target] の機械学習機能を適用する機能を提供するなど、大きなメリットもあります。
 
   さらに、すべてのセッションやチャネルにわたって永続化された [!DNL Target] のユーザープロファイルを使用して、パーソナライズされたエクスペリエンスを強化することで、ビジネスに大きな成果をもたらすことができます。
 
@@ -284,8 +284,8 @@ window.targetGlobalSettings = {
 
 | ビデオ | 説明 |
 |--- |--- |
-| [Adobe Target でのデータプロバイダーの使用](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) | データプロバイダーは、サードパーティから Target へデータを簡単に渡すことのできる機能です。サードパーティとしては、気象予報サービス、DMP、自社の Web サービスなども利用可能です。このデータを利用して、オーディエンスやターゲットコンテンツを構築したり、訪問者プロファイルを充実させることができます。 |
-| [Adobe Target でのデータプロバイダーの実装](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html) | 実装の詳細と、Adobe [!DNL Target] の dataProviders 機能を使用して、サードパーティのデータプロバイダーからデータを取得し、[!DNL Target] リクエストで渡す方法の例です。 |
+| [Adobe Target でのデータプロバイダーの使用](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=ja) | データプロバイダーは、サードパーティから Target へデータを簡単に渡すことのできる機能です。サードパーティとしては、気象予報サービス、DMP、自社の Web サービスなども利用可能です。このデータを利用して、オーディエンスやターゲットコンテンツを構築したり、訪問者プロファイルを充実させることができます。 |
+| [Adobe Target でのデータプロバイダーの実装](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=ja) | 実装の詳細と、Adobe [!DNL Target] の dataProviders 機能を使用して、サードパーティのデータプロバイダーからデータを取得し、[!DNL Target] リクエストで渡す方法の例です。 |
 
 `window.targetGlobalSettings.dataProviders` 設定は、データプロバイダーの配列です。
 

@@ -29,7 +29,7 @@ Transport Layer Security（TLS）は、ネットワークを介してデータ�
 
 アドビはお客様に TLS 1.2へと段階的に移行していただく予定です。ドメインが既に 1.2 に対応しているお客様は、何の変更もおこなわずに TLS 1.2 へと移行いただけます。ほとんどの顧客ドメインはすでに TLS 1.2 をサポートしていますが、ドメインが TLS 1.2 をサポートしていない場合、これらのドメインは本日（2020 年 3 月まで）のように TLS 1.1 に保持されます。
 
-この移行期間中は問題は発生しないはずです。以前に機能していたサイトの読み込みが VEC で停止した場合は、[ クライアントケアチケットを開いて ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C) この移行が原因である可能性を考えてください。
+この移行期間中は問題は発生しないはずです。以前に機能していたサイトの読み込みが VEC で停止した場合は、[ クライアントケアチケットを開いて ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja&#reference_ACA3391A00EF467B87930A450050077C) この移行が原因である可能性を考えてください。
 
 ただし、TLS 1.2 をサポートせずに TSL 1.1 を使用しているお客様の 1 人である場合は、ドメイン/インフラストラクチャを TLS 1.2 に移動する計画を立てる必要があります。TLS 1.1 プロトコルは、2020 年 3 月 1 日（PT）まで引き続きサポートされます。 2020 年 3 月 1 日（PT）以降、[!DNL Target] は拡張 Experience Composer 機能を介した VEC で使用される TLS 1.1 プロトコルをサポートしなくなります。
 

@@ -19,7 +19,7 @@ ht-degree: 39%
 
 アカウント全体で使用できるグローバル mbox は 1 つだけです。
 
-アクティビティに URL ルールを追加することで、アクティビティの実行場所を制限できます。詳しくは、[ 類似のページに同じエクスペリエンスを含める ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html) を参照してください。
+アクティビティに URL ルールを追加することで、アクティビティの実行場所を制限できます。詳しくは、[ 類似のページに同じエクスペリエンスを含める ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=ja) を参照してください。
 
 [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) を使用してページでパラメーターを渡し、そのパラメーターを [!UICONTROL Visual Experience Composer] （VEC）の「URL を設定」セクションで選択するか、[!UICONTROL Form-Based Experience Composer] でパラメーターを「絞り込み」として追加することもできます。
 

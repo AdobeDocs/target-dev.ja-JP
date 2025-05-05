@@ -44,7 +44,7 @@ ht-degree: 0%
 
 &lt;! – （1. [ 認証に関するドキュメント ](https://developer.adobe.com/developer-console/docs/guides/authentication/) に従って、秘密鍵と公開証明書を生成します。// [//]:#（[Adobe IO の設定方法：認証 – 手順 ](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html) の **手順 1** で説明します。 手順 1 を完了したら、このガイドに戻り、次の手順 2 に進みます。//このステップの結果は、`private.key` ファイルと `certificate_pub.crt` ファイルの作成になります。 これら 2 つのファイルを生成したら、このガイドに戻ります。） – >
 
-1. [Adobe Admin Console](https://adminconsole.adobe.com/) で、お使いの [!DNL Adobe] ユーザーアカウントに [!DNL Target] に対する [ 製品管理者 ](https://helpx.adobe.com/enterprise/using/admin-roles.html) レベルおよび [ 開発者 ](https://helpx.adobe.com/enterprise/using/manage-developers.html) レベルのアクセス権の両方が付与されていることを確認します。
+1. [Adobe Admin Console](https://adminconsole.adobe.com/) で、お使いの [!DNL Adobe] ユーザーアカウントに [!DNL Target] に対する [ 製品管理者 ](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html) レベルおよび [ 開発者 ](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html) レベルのアクセス権の両方が付与されていることを確認します。
 
 1. [Adobe Developer Console](https://developer.adobe.com/console/home) で、この統合を作成する [!UICONTROL Experience Cloud Organization] を選択します。 （1 つの [!UICONTROL Experience Cloud Organization] ージにのみアクセスできる可能性があります）。
 
@@ -95,7 +95,7 @@ Postmanでは多くの方法でプロジェクトの詳細を指定できます�
 
 >[!NOTE]
 >
->[!DNL Target] を含む任意のExperience Cloudソリューションに適用できるビデオ手順については、[Experience Platform API でのPostmanの使用 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html) を参照してください。 次の節は、[!DNL Target] API に関連しています。1. Experience PlatformAPI を作成してPostman 2 に書き出します。 Postmanでアクセストークンを生成します。 これらの手順は、以下でも説明します。
+>[!DNL Target] を含む任意のExperience Cloudソリューションに適用できるビデオ手順については、[Experience Platform API でのPostmanの使用 ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=ja) を参照してください。 次の節は、[!DNL Target] API に関連しています。1. Experience PlatformAPI を作成してPostman 2 に書き出します。 Postmanでアクセストークンを生成します。 これらの手順は、以下でも説明します。
 
 1. 引き続き [Adobe Developer Console](https://developer.adobe.com/console/home) で、新しいプロジェクトの **[!UICONTROL Service Account (JWT)]** 資格情報を表示するために移動します。 図に示すように、左側のナビゲーションまたは **[!UICONTROL Credentials]** のセクションを使用します。
 

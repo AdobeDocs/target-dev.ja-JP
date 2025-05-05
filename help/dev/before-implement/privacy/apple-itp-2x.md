@@ -33,8 +33,8 @@ Apple ITP 2.x は、次の領域の [!DNL Target] に影響します。
 | --- | --- |
 | 個別訪問者数が増加する可能性 | 有効期限が 7 日（ITP 2.1 の場合）と 1 日（ITP 2.2 および ITP 2.3 の場合）に設定されているので、Safari ブラウザーからのユニーク訪問者が増加する可能性があります。 訪問者が 7 日後（ITP 2.1）または 1 日後（ITP 2.2 および ITP 2.3）にドメインを再訪問した場合、[!DNL Target] は、期限切れの cookie の代わりに新しい [!DNL Target] cookie をドメインに配置することを余儀なくされます。 新しい [!DNL Target] Cookie は、ユーザーが同じであっても、新しい個別訪問者と解釈されます。 |
 | [!DNL Target] アクティビティのルックバック期間の短縮 | [!DNL Target] アクティビティの訪問者プロファイルは、決定のためのルックバック期間が短縮した可能性があります。[!DNL Target] Cookie は、訪問者を特定するために活用され、パーソナライゼーション用にユーザープロファイル属性を格納します。Safari では、[!DNL Target] cookie が 7 日間（ITP 2.1）または 1 日（ITP 2.2 および 2.3）後に期限切れになる可能性があるので、パージされた [!DNL Target] cookie に関連付けられたユーザープロファイルデータを決定に使用することはできません。 |
-| サードパーティ ID に基づくプロファイルスクリプト | 有効期限が 7 日（ITP 2.1 を使用）と 1 日（ITP 2.2 と ITP 2.3 を使用）に設定されているため、サードパーティ ID cookie に基づく [ プロファイルスクリプト ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html) は、有効期限が切れると機能しなくなります。 |
-| iOS デバイスでの QA／プレビュー URL | 有効期限は 7 日（ITP 2.1 を使用）に設定され、1 日（ITP 2.2 および ITP 2.3 を使用）であるため、URL がサードパーティ ID cookie に基づいているので、有効期限が切れると [QA/プレビュー URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html) は機能しなくなります。 |
+| サードパーティ ID に基づくプロファイルスクリプト | 有効期限が 7 日（ITP 2.1 を使用）と 1 日（ITP 2.2 と ITP 2.3 を使用）に設定されているため、サードパーティ ID cookie に基づく [ プロファイルスクリプト ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=ja) は、有効期限が切れると機能しなくなります。 |
+| iOS デバイスでの QA／プレビュー URL | 有効期限は 7 日（ITP 2.1 を使用）に設定され、1 日（ITP 2.2 および ITP 2.3 を使用）であるため、URL がサードパーティ ID cookie に基づいているので、有効期限が切れると [QA/プレビュー URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=ja) は機能しなくなります。 |
 
 ## 現在の [!DNL Target] の実装は影響を受けますか？
 

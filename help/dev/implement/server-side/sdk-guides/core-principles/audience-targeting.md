@@ -14,11 +14,11 @@ ht-degree: 26%
 
 ## 概要
 
-オーディエンスを使用すると、実験およびパーソナライゼーションアクティビティのターゲットを設定できます。 [!DNL Adobe Target] は、すぐに使用できる無数の強力なオーディエンスターゲット設定機能をサポートしています。 [ オーディエンスターゲティング ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html) には、次の属性を使用できます。
+オーディエンスを使用すると、実験およびパーソナライゼーションアクティビティのターゲットを設定できます。 [!DNL Adobe Target] は、すぐに使用できる無数の強力なオーディエンスターゲット設定機能をサポートしています。 [ オーディエンスターゲティング ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html?lang=ja) には、次の属性を使用できます。
 
 ### [!DNL Target] Library
 
-詳しくは、[[!DNL Target]  ライブラリ ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html) を参照してください。
+詳しくは、[[!DNL Target]  ライブラリ ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=ja) を参照してください。
 &#x200B;
 * Bing から
 * Chrome ブラウザー
@@ -36,7 +36,7 @@ ht-degree: 26%
 
 ### 地域
 
-詳しくは、[ 地域 ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) を参照してください。
+詳しくは、[ 地域 ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=ja) を参照してください。
 &#x200B;&#x200B;
 * 国 / 地域
 * 都道府県
@@ -49,7 +49,7 @@ ht-degree: 26%
 
 ### ネットワーク
 
-詳しくは、「[ ネットワーク ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html)」を参照してください。
+詳しくは、「[ ネットワーク ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=ja)」を参照してください。
 
 * ISP
 * ドメイン名
@@ -57,7 +57,7 @@ ht-degree: 26%
 
 ### モバイル
 
-詳しくは、[モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html)を参照してください。
+詳しくは、[モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=ja)を参照してください。
 
 * デバイスのマーケティング名
 * デバイスモデル
@@ -71,13 +71,13 @@ ht-degree: 26%
 
 ### カスタム
 
-詳しくは、[ カスタムパラメーター ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) を参照してください。
+詳しくは、[ カスタムパラメーター ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) を参照してください。
 
 * 任意のキーと値のペア
 
 ### オペレーティングシステム
 
-詳しくは、[ オペレーティングシステム ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) を参照してください。
+詳しくは、[ オペレーティングシステム ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=ja) を参照してください。
 
 * Linux
 * Macintosh
@@ -85,7 +85,7 @@ ht-degree: 26%
 
 ### サイトのページ
 
-詳しくは、「[ サイトのページ ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html)」を参照してください。
+詳しくは、「[ サイトのページ ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=ja)」を参照してください。
 
 * 現在のページ
 * 前のページ
@@ -94,7 +94,7 @@ ht-degree: 26%
 
 ### ブラウザー
 
-詳しくは、[ ブラウザー ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) を参照してください。
+詳しくは、[ ブラウザー ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=ja) を参照してください。
 
 * タイプ
 * 言語
@@ -102,13 +102,13 @@ ht-degree: 26%
 
 ### 訪問者プロファイル
 
-詳しくは、[ 訪問者プロファイル ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) を参照してください。
+詳しくは、[ 訪問者プロファイル ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja) を参照してください。
 
 * 永続する任意のキーと値のペア
 
 ### トラフィックソース
 
-詳しくは、[ トラフィックソース ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) を参照してください。
+詳しくは、[ トラフィックソース ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=ja) を参照してください。
 
 * Baidu から
 * Bing から
@@ -120,7 +120,7 @@ ht-degree: 26%
 
 ### 時間枠
 
-詳しくは、[時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html)を参照してください。
+詳しくは、[時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=ja)を参照してください。
 
 * 開始日 / 終了日
 
@@ -197,17 +197,17 @@ TargetDeliveryRequest request = TargetDeliveryRequest.builder()
 
 | オーディエンスルール | オンデバイス判定 |
 | --- | --- |
-| [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | ○ |
-| [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | × |
-| [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | × |
-| [ カスタムパラメーター ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | ○ |
-| [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | ○ |
-| [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | ○ |
-| [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | ○ |
-| [訪問者プロファイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | × |
-| [トラフィックソース](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | × |
-| [時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | ○ |
-| [Experience Cloudオーディエンス ](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) （Adobe Audience Manager、Adobe AnalyticsおよびAdobe Experience Managerのオーディエンス） | × |
+| [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=ja) | ○ |
+| [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=ja) | × |
+| [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=ja) | × |
+| [ カスタムパラメーター ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) | ○ |
+| [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=ja) | ○ |
+| [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=ja) | ○ |
+| [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=ja) | ○ |
+| [訪問者プロファイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja) | × |
+| [トラフィックソース](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=ja) | × |
+| [時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=ja) | ○ |
+| [Experience Cloudオーディエンス ](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=ja) （Adobe Audience Manager、Adobe AnalyticsおよびAdobe Experience Managerのオーディエンス） | × |
 
 ### オンデバイス判定のためのジオターゲティング
 
@@ -324,14 +324,14 @@ public class TargetRequestUtils {
 
 | オーディエンスルール | サーバー側決定 |
 | --- | --- |
-| [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | ○ |
-| [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | ○ |
-| [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | ○ |
-| [ カスタムパラメーター ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | ○ |
-| [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | ○ |
-| [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | ○ |
-| [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | ○ |
-| [訪問者プロファイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | ○ |
-| [トラフィックソース](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | ○ |
-| [時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | ○ |
-| [Experience Cloudオーディエンス ](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) （Adobe Audience Manager、Adobe AnalyticsおよびAdobe Experience Managerのオーディエンス） | ○ |
+| [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=ja) | ○ |
+| [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=ja) | ○ |
+| [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=ja) | ○ |
+| [ カスタムパラメーター ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) | ○ |
+| [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=ja) | ○ |
+| [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=ja) | ○ |
+| [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=ja) | ○ |
+| [訪問者プロファイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja) | ○ |
+| [トラフィックソース](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=ja) | ○ |
+| [時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=ja) | ○ |
+| [Experience Cloudオーディエンス ](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=ja) （Adobe Audience Manager、Adobe AnalyticsおよびAdobe Experience Managerのオーディエンス） | ○ |

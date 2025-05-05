@@ -58,8 +58,8 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 **使用可能なオプション**
 
 * ID で昇格
-* [ コレクションで昇格 ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
-* [ 属性別に昇格 ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [ コレクションで昇格 ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=ja){target=_blank}
+* [ 属性別に昇格 ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=ja){target=_blank}
 
 **必要なエンティティ パラメーター**
 
@@ -67,7 +67,7 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 
 **読み取り**
 
-* [ プロモーションの追加 ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
+* [ プロモーションの追加 ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=ja){target=_blank}
 
 +++
 
@@ -91,7 +91,7 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 
 **読み取り**
 
-* [ 買い物かごベース ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [ 買い物かごベース ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -120,7 +120,7 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 
 **読み取り**
 
-* [ 人気度ベース ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [ 人気度ベース ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -146,7 +146,7 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 
 **読み取り**
 
-* [ 項目ベース ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [ 項目ベース ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -169,7 +169,7 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 
 **読み取り**
 
-* [ ユーザーベース ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [ ユーザーベース ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -191,7 +191,7 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 
 **読み取り**
 
-* [ カスタム条件 ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [ カスタム条件 ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -203,7 +203,7 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 
 **読み取り**
 
-* [ 動的および静的インクルージョンルールの使用 ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
+* [ 動的および静的インクルージョンルールの使用 ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=ja){target=_blank}
 
 +++
 
@@ -217,7 +217,7 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 
 **読み取り**
 
-* [ エンティティを動的に除外することはできますか？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
+* [ エンティティを動的に除外することはできますか？](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=ja#exclude){target=_blank}
 
 +++
 
@@ -229,9 +229,9 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 
 **読み取り**
 
-* [ エンティティの属性 ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [ エンティティの属性 ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=ja){target=_blank}
 
-また、[!DNL Target] UI を使用して [ 製品フィード ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} を作成し、[!DNL Recommendations] の製品カタログを更新することで、この手順を実行することもできます。
+また、[!DNL Target] UI を使用して [ 製品フィード ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=ja){target=_blank} を作成し、[!DNL Recommendations] の製品カタログを更新することで、この手順を実行することもできます。
 
 +++
 
@@ -245,7 +245,7 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 
 **読み取り**
 
-* [ プロファイル属性 ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
+* [ プロファイル属性 ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=ja){target=_blank}
 
 +++
 
@@ -253,7 +253,7 @@ at.js で使用できる自動標準のちらつき処理は、[!UICONTROL Autom
 
 ## 3.11：ページ読み込みリクエストの実行 {#fire}
 
-この手順では、リクエストで `execute` / `pageLoad` ペイロードを含む [!DNL Delivery API] 呼び出しをトリガーにします。 `getOffers()` メソッドは、エクスペリエンスを取得し、ページ上 `applyOffers()` エクスペリエンスをレンダリングします。 [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} （VEC）で作成されたエクスペリエンスをレンダリングするには、`pageLoad` リクエストが必要です。
+この手順では、リクエストで `execute` / `pageLoad` ペイロードを含む [!DNL Delivery API] 呼び出しをトリガーにします。 `getOffers()` メソッドは、エクスペリエンスを取得し、ページ上 `applyOffers()` エクスペリエンスをレンダリングします。 [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja){target=_blank} （VEC）で作成されたエクスペリエンスをレンダリングするには、`pageLoad` リクエストが必要です。
 
 +++詳細を見る
 

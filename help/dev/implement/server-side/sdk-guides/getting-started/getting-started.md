@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->**[!UICONTROL On-Device Decisioning]** の切り替えを有効または無効にするには、**[!UICONTROL Admin]** または **[!UICONTROL Approver]** [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) を持っている必要があります。
+>**[!UICONTROL On-Device Decisioning]** の切り替えを有効または無効にするには、**[!UICONTROL Admin]** または **[!UICONTROL Approver]** [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) を持っている必要があります。
 
 「**[!UICONTROL On-Device Decisioning]**」切替スイッチを有効 [!DNL Adobe Target] すると、クライアントの [ ルールアーティファクト ](../on-device-decisioning/rule-artifact-overview.md) の生成を開始します。
 
@@ -388,6 +388,6 @@ target_client.send_notifications({
 
    >[!NOTE]
    >
-   >この手順を実行するには、**[!UICONTROL Approver]** または **[!UICONTROL Publisher]** [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) を持っている必要があります。
+   >この手順を実行するには、**[!UICONTROL Approver]** または **[!UICONTROL Publisher]** [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) を持っている必要があります。
 
    ![alt 画像 ](assets/asset-activate.png)

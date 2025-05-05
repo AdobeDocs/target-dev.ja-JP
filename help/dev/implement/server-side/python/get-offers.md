@@ -51,7 +51,7 @@ target_client_instance.get_offers(options)
 | target_location_hint_cookie | dict | [!DNL Target] location hint cookie |
 | analytics_details | list[AnalyticsResponse] | Analytics ペイロード（クライアントサイド Analytics を使用する場合） |
 | trace | list[dict] | すべてのリクエスト mbox/ビューの集計トレースデータ |
-| response_tokens | list[dict] | &#x200B;応答トークン [ リスト ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
+| response_tokens | list[dict] | &#x200B;応答トークン [ リスト ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) |
 | meta | dict | オンデバイス判定で使用する追加の判定メタデータ |
 
 データをブラウザーに戻すために使用される `target_cookie` および `target_location_hint_cookie` オブジェクトは、次の構造を持っています。

@@ -37,7 +37,7 @@ Adobeは、個人を特定できる情報（PII）やその他の機密情報を
 
 ### 外部ドメインの下でサイトが iFrame として埋め込まれるのを許可または禁止するにはどうすればよいですか？
 
-[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} （VEC）が web サイトを iFrame に埋め込めるようにするには、web サーバー設定で CSP （設定されている場合）を変更する必要があります。 ドメイン [!DNL Adobe]、許可リストに登録して設定する必要があります。
+[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja){target=_blank} （VEC）が web サイトを iFrame に埋め込めるようにするには、web サーバー設定で CSP （設定されている場合）を変更する必要があります。 ドメイン [!DNL Adobe]、許可リストに登録して設定する必要があります。
 
 セキュリティ上の理由から、サイトが外部ドメインの下に iFrame として埋め込まれないようにする場合があります。
 

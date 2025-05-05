@@ -315,7 +315,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 結合プロファイル
 
-`tntId`、`thirdPartyID`、`marketingCloudVisitorId` を同じリクエストで組み合わせることができます。 このシナリオ [!DNL Adobe Target] は、これらすべての ID のマッピングを維持し、訪問者にピン留めします。 様々な識別子を使用してプロファイルを [ リアルタイムで結合および同期 ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) する方法について説明します。
+`tntId`、`thirdPartyID`、`marketingCloudVisitorId` を同じリクエストで組み合わせることができます。 このシナリオ [!DNL Adobe Target] は、これらすべての ID のマッピングを維持し、訪問者にピン留めします。 様々な識別子を使用してプロファイルを [ リアルタイムで結合および同期 ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=ja) する方法について説明します。
 
 >[!BEGINTABS]
 

@@ -36,11 +36,11 @@ ht-degree: 28%
 
    * 管理者の役割または少なくとも承認者の権限がある
 
-     Target Standardのお客様の詳細については、「*ユーザー* の [ 役割と権限の指定 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions) を参照してください。 [!DNL Target Premium]ユーザーの詳細については、[エンタープライズ権限の設定](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)を参照してください。
+     Target Standardのお客様の詳細については、「*ユーザー* の [ 役割と権限の指定 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=ja#roles-permissions) を参照してください。 [!DNL Target Premium]ユーザーの詳細については、[エンタープライズ権限の設定](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=ja)を参照してください。
 
    * ワークスペース／製品プロファイルレベルでの管理者の役割
 
-     Workspaces は[!DNL Target Premium]のお客様のみが利用できます。詳しくは、 [エンタープライズの権限の設定](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)を参照してください。
+     Workspaces は[!DNL Target Premium]のお客様のみが利用できます。詳しくは、 [エンタープライズの権限の設定](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=ja)を参照してください。
 
    * [!DNL Adobe Target]製品レベルの管理者権限（Sysadmin 権限）
 

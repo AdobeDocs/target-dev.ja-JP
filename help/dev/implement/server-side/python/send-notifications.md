@@ -61,7 +61,7 @@ target_client.send_notifications(options)
 | target_location_hint_cookie | dict | [!DNL Target] location hint cookie |
 | analytics_details | list[AnalyticsResponse] | [!DNL Analytics] ペイロード（クライアントサイド [!DNL Analytics] を使用する場合） |
 | trace |  | list[dict] | すべてのリクエスト mbox/ビューの集計トレースデータ |
-| response_tokens | list[dict] | [ 応答トークン&#x200B;のリスト ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
+| response_tokens | list[dict] | [ 応答トークン&#x200B;のリスト ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) |
 | meta | dict | オンデバイス判定で使用する追加の判定メタデータ |
 
 ## 例

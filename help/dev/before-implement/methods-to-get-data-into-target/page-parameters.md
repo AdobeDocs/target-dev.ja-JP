@@ -68,8 +68,8 @@ targetPageParams（ページのグローバル mbox にパラメーターを追�
 
 ## 関連情報へのリンク
 
-Recommendations：[ページタイプに従った実装](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html)
+Recommendations：[ページタイプに従った実装](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html?lang=ja)
 
 注文の確認：[コンバージョンの追跡](../../implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)
 
-カテゴリ親和性：[カテゴリ親和性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html)
+カテゴリ親和性：[カテゴリ親和性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html?lang=ja)

@@ -25,7 +25,7 @@ Adobe Experience Platform Mobile SDK は現在、iOS、Androidおよび React �
 
 ## 緯度と経度の検証の観点から、位置ベースの機能の頻度はどれくらいですか？
 
-詳しくは、[Adobe場所のドキュメント ](https://experienceleague.adobe.com/docs/places/using/home.html){target=_blank} を参照してください。
+詳しくは、[Adobe場所のドキュメント ](https://experienceleague.adobe.com/docs/places/using/home.html?lang=ja){target=_blank} を参照してください。
 
 ## Adobe Experience Platform Mobile SDK が機能するには at.js が必要ですか。
 
@@ -33,8 +33,8 @@ Adobe Experience Platform Mobile SDK は現在、iOS、Androidおよび React �
 
 ## [!DNL Target] Mobile は [!DNL Adobe Target] Premium 製品 SKU のみの機能ですか？
 
-いいえ。[!DNL Adobe Target Standard] のお客様は、アドビの Mobile SDK を [!UICONTROL A/B Test] および [!UICONTROL Experience Targeting] （XT）アクティビティに使用できるのは、[!DNL Target Standard] Mobile アプリアドオンを使用する場合のみです。 モバイルアプリで [!UICONTROL Recommendations] または AI を利用した機能を使用する場合は、[Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html#premium) ライセンスが必要です。
+いいえ。[!DNL Adobe Target Standard] のお客様は、アドビの Mobile SDK を [!UICONTROL A/B Test] および [!UICONTROL Experience Targeting] （XT）アクティビティに使用できるのは、[!DNL Target Standard] Mobile アプリアドオンを使用する場合のみです。 モバイルアプリで [!UICONTROL Recommendations] または AI を利用した機能を使用する場合は、[Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=ja#premium) ライセンスが必要です。
 
 ## [!DNL Adobe Experience Manager] （AEM）と [!DNL Target] のモバイルアクティビティの間にモバイルアプリの統合はありますか。
 
-現在、JSON[ エクスペリエンスフラグメント ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html){target=_blank} をAEMから [!DNL Target] に共有でき、モバイルアプリアクティビティで使用する可能性があります。
+現在、JSON[ エクスペリエンスフラグメント ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=ja){target=_blank} をAEMから [!DNL Target] に共有でき、モバイルアプリアクティビティで使用する可能性があります。

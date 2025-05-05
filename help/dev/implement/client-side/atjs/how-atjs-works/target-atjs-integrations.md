@@ -21,12 +21,12 @@ ht-degree: 52%
 
 | 統合 | 詳細 |
 |--- |--- |
-| [!UICONTROL Analytics for Target] （A4T） | 「[Adobe Target のレポートソースとしての Adobe Analytics（A4T）](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)」を参照してください。 |
+| [!UICONTROL Analytics for Target] （A4T） | 「[Adobe Target のレポートソースとしての Adobe Analytics（A4T）](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja)」を参照してください。 |
 | [!UICONTROL Profiles & Audiences] （P&amp;A） | [ コアサービスユーザーガイド ](https://experienceleague.adobe.com/docs/core-services/interface/audiences/audience-library.html?lang=ja) の *オーディエンス* を参照してください。 |
-| [!UICONTROL Experience Cloud ID Service] | [Adobe Experience Cloud ID サービスのドキュメント](https://experienceleague.adobe.com/docs/id-service/using/home.html)を参照してください。 |
+| [!UICONTROL Experience Cloud ID Service] | [Adobe Experience Cloud ID サービスのドキュメント](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)を参照してください。 |
 | [!UICONTROL Tags in Adobe Experience Platform] | [!DNL Adobe] の次世代タグ管理機能は [!UICONTROL Tags in Adobe Experience Platform] のとおりです。 関連 [!UICONTROL Tags] る顧客体験を強化するために必要な分析、マーケティングおよび広告タグをデプロイおよび管理するためのシンプルな方法を顧客に提供します。 [Adobe Experience Platformを使用した実装  [!DNL Target]  を参照してください ](../how-to-deployatjs/implement-target-using-adobe-launch.md)。 |
 | [!UICONTROL Adobe Experience Manager] （AEM）Cloud Service | [!UICONTROL AEM Cloud Service] を使用すると、AEM ワークフロー内に [!UICONTROL A/B Test] アクティビティと [!UICONTROL Experience Targeting] アクティビティを作成できます。 FP-11577 （またはそれ以降）を使用する [!UICONTROL Adobe Experience Manager] 6.2 での at.js をサポート。 詳しくは、[ との統合  [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja) を参照し、AEMのバージョンを選択します。 |
-| [!UICONTROL AEM Experience Fragments] | AEMで作成したエクスペリエンスフラグメントを [!DNL Target] アクティビティで使用すると、AEMの使いやすさと機能を、強力な自動インテリジェンス（AI）機能および機械学習（ML）機能と組み合わせて、エクスペリエンスを大規模にテストおよびパーソナライズで [!DNL Target] ます。  AEM では、パーソナライゼーション戦略に生かせるよう、すべてのコンテンツとアセットが一元化されます。AEM では、コードを記述しなくても、デスクトップ、タブレット、モバイルデバイス向けのコンテンツを 1 か所で簡単に作成できます。デバイスごとにページを作成する必要はありません。AEMはコンテンツを使用して、各デバイスのエクスペリエンスを自動調整します。  「[AEM エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html)」を参照してください。 |
+| [!UICONTROL AEM Experience Fragments] | AEMで作成したエクスペリエンスフラグメントを [!DNL Target] アクティビティで使用すると、AEMの使いやすさと機能を、強力な自動インテリジェンス（AI）機能および機械学習（ML）機能と組み合わせて、エクスペリエンスを大規模にテストおよびパーソナライズで [!DNL Target] ます。  AEM では、パーソナライゼーション戦略に生かせるよう、すべてのコンテンツとアセットが一元化されます。AEM では、コードを記述しなくても、デスクトップ、タブレット、モバイルデバイス向けのコンテンツを 1 か所で簡単に作成できます。デバイスごとにページを作成する必要はありません。AEMはコンテンツを使用して、各デバイスのエクスペリエンスを自動調整します。  「[AEM エクスペリエンスフラグメント](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=ja)」を参照してください。 |
 
 ## サポートされない統合
 

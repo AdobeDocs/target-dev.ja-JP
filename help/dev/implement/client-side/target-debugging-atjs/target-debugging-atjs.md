@@ -17,7 +17,7 @@ ht-degree: 7%
 
 ライブラリ設定をすばやく表示したり、リクエストを調べてカスタムパラメーターが正しく渡されていることを確認したり、コンソールログをオンにしたり、すべての [!DNL Target] リクエストを無効にしたりできます。 [!DNL Experience Cloud] への認証をおこなうと、強力な mbox Trace ツールを使用して、アクティビティ、オーディエンスの選定、訪問者プロファイルを調べることができます。
 
-[Adobe Experience Cloud Debugger の概要 ](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html){target=_blank} を確認します。
+[Adobe Experience Cloud Debugger の概要 ](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=ja){target=_blank} を確認します。
 
 ## トレーニングビデオ
 

@@ -15,7 +15,7 @@ ht-degree: 59%
 
 この関数は、クリックやコンバージョンなどのユーザーアクションを報告するリクエストを実行します。応答でアクティビティを配信することはありません。
 
-そのため、これらのイベント追跡 mbox 呼び出しは、アクティビティで指標を定義するのに使用できます。詳細については、「[成功指標](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)」および「[コンバージョンの追跡](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)」を参照してください。
+そのため、これらのイベント追跡 mbox 呼び出しは、アクティビティで指標を定義するのに使用できます。詳細については、「[成功指標](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=ja)」および「[コンバージョンの追跡](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)」を参照してください。
 
 API の詳細を次に示します。
 

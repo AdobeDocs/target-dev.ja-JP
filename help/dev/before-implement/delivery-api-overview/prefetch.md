@@ -124,7 +124,7 @@ curl -X POST \
 
 ## [!UICONTROL Analytics for Target] を使用する際の `clickTrack` 指標を含む mbox のプリフェッチ（A4T）
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} （A4T）は、コンバージョン指標とオーディエンスセグメントに基づいてアクティビティを作成でき [!DNL Analytics] クロスソリューション統合環境です。
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja){target=_blank} （A4T）は、コンバージョン指標とオーディエンスセグメントに基づいてアクティビティを作成でき [!DNL Analytics] クロスソリューション統合環境です。
 
 次のコードスニペットは、オファーがクリックされたことを [!DNL Analytics] ーザーに通知する、`clickTrack` の指標を含む mbox のプリフェッチからの応答です。
 
@@ -169,7 +169,7 @@ curl -X POST \
 
 ## ビューをプリフェッチ
 
-ビューは、シングルページアプリケーション（SPA）とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、SPA エクスペリエンスまたはモバイルエクスペリエンスを構成するビジュアル要素の論理的なグループと見なすことができます。 これで、配信 API を通じて、VEC で作成した [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} アクティビティと、[SPAのビュー ](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) に変更を加えた [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} （X） T アクティビティをプリフェッチできるようになりました。
+ビューは、シングルページアプリケーション（SPA）とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、SPA エクスペリエンスまたはモバイルエクスペリエンスを構成するビジュアル要素の論理的なグループと見なすことができます。 これで、配信 API を通じて、VEC で作成した [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja){target=_blank} アクティビティと、[SPAのビュー ](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) に変更を加えた [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=ja){target=_blank} （X） T アクティビティをプリフェッチできるようになりました。
 
 ```shell  {line-numbers="true"}
 curl -X POST \

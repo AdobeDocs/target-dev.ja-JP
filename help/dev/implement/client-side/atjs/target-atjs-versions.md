@@ -25,7 +25,7 @@ ht-degree: 64%
 >
 >いずれかの 1 の最新バージョンにアップグレードする必要があります。*x* または 2。*x* 対応するメジャーバージョンの以前のマイナーバージョンで検出された問題に対するバグ修正とセキュリティパッチを取得します。
 
-at.js をアップグレードする場合は、[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) のタグをお勧めします。 拡張機能開発者は、拡張機能に新しい機能を継続的に追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンへとパッケージ化され、アップグレードとしてAdobe Experience Platform カタログ内で使用できるようになります。 詳しくは、[ タグの概要 ](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) ガイドの *拡張機能のアップグレード* を参照してください。
+at.js をアップグレードする場合は、[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) のタグをお勧めします。 拡張機能開発者は、拡張機能に新しい機能を継続的に追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンへとパッケージ化され、アップグレードとしてAdobe Experience Platform カタログ内で使用できるようになります。 詳しくは、[ タグの概要 ](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html?lang=ja) ガイドの *拡張機能のアップグレード* を参照してください。
 
 ## at.js バージョン 2.11.8 （2025 年 3 月 31 日）
 
@@ -130,7 +130,7 @@ at.js をアップグレードする場合は、[Adobe Experience Platform](/hel
 at.js のこのリリースには、次の機能強化および変更が含まれています。
 
 * at.js の[オンデバイス判定](/help/dev/implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md)のサポート。
-* Automated Personalization アクティビティでの[プレビューリンク](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html)のサポート
+* Automated Personalization アクティビティでの[プレビューリンク](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=ja)のサポート
 
 このリリースでは、Microsoft Internet Explorer 10 以降のバージョンのサポートも削除されます。
 
@@ -242,7 +242,7 @@ at.js のこのリリースはメンテナンスリリースで、次の機能�
 
 * **クライアントサイド分析ログ**：クライアントサイドとサーバーサイドとを問わず、分析データの [!DNL Adobe Analytics] への送信方法を完全に制御できるようにします。
 
-  詳しくは、[ クライアントサイド  [!DNL Analytics]  ログ ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html#client-side) を参照してください。
+  詳しくは、[ クライアントサイド  [!DNL Analytics]  ログ ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?lang=ja#client-side) を参照してください。
 
 * **通知の送信**：`applyOffer()` または `applyOffers()` を使用する代わりにコードでエクスペリエンスがレンダリングされる場合、開発者は通知を送信できます。
 
@@ -359,7 +359,7 @@ at.js バージョン 1.5.0 がリリースされました。
 * `at-request-succeeded` イベントの詳細には、リダイレクトフラグが含まれています。このフラグを使用すると、ページが別の URL にリダイレクトされるかどうかを判断することができます。その URL を知る必要がある場合は、subscribe to `at-content-rendering-redirect` をサブスクライブします。（TNT-29834）
 * `window.targetGlobalSettings.enabled` を false に設定すると失敗して実行時例外が発生する原因となっていた問題を修正しました。（TNT-29829）
 * グローバル mbox リクエストを発行したり本文を非表示にしたりすると、Visual Experience Composer（VEC）への読み込み中にページが失敗する原因となっていた問題を修正しました。（TNT-29795）
-* `screenOrientation`、`devicePixelRatio`、および `webGLRenderer` のサポートを追加しました。これらの新しい [!DNL Target] リクエストパラメーターは、iPhone X やその他の最新のデバイス検出に使用されます。 詳しくは、[モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html)を参照してください。（TNT-29781）
+* `screenOrientation`、`devicePixelRatio`、および `webGLRenderer` のサポートを追加しました。これらの新しい [!DNL Target] リクエストパラメーターは、iPhone X やその他の最新のデバイス検出に使用されます。 詳しくは、[モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=ja)を参照してください。（TNT-29781）
 * Adobe Audience Manager（AAM）のロケーションヒントが送信されないことがある問題を修正しました。（TNT-29695）
 * これをサポートしているブラウザーの場合、at.js 1.5.0 はセレクターポーリングの際に MutationObserver に切り替わります。at.js 1.0.0 以前のバージョンでは、MutationObserver ポリフィルを使用していましたが、これは問題があることがわかっていました。ポリフィルの問題を回避するために、バージョン 1.5.0 では次の擬似コードを使用して、どのスケジューリングメカニズムを使用するかを決定しています。
 
@@ -401,7 +401,7 @@ at.js バージョン 1.3.0 がリリースされました。
 
 at.js バージョン 1.2.3 がリリースされました。
 
-* JSON オファーのサポートを追加しました。JSON オファーは、フォームベースの Experience Composer を使用して作成されたアクティビティでのみ利用できます。現時点で JSON オファーを使用できる方法は、直接の API 呼び出しのみとなっています。「[JSON オファーの作成](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html)」を参照してください。
+* JSON オファーのサポートを追加しました。JSON オファーは、フォームベースの Experience Composer を使用して作成されたアクティビティでのみ利用できます。現時点で JSON オファーを使用できる方法は、直接の API 呼び出しのみとなっています。「[JSON オファーの作成](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=ja)」を参照してください。
 
 ## at.js バージョン 1.2.2
 
@@ -439,7 +439,7 @@ at.js バージョン 1.2 は、主にバグ修正を含むメンテナンスリ
 
 at.js バージョン 1.1 には、次の機能強化および修正が含まれています。
 
-* レスポンストークンの処理を追加しました。詳しくは、[レスポンストークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)を参照してください。
+* レスポンストークンの処理を追加しました。詳しくは、[レスポンストークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)を参照してください。
 * 問題を解消し、`document.currentScript polyfill` が Angular 1.X に干渉しないようにしました。
 * 変更を加え、クリック追跡が visibility プロパティに干渉しないようにしました。クリック追跡要素が、`at-element-click-tracking` ではなく `at-element-marker` の CSS クラスに分類されます。
 
@@ -473,7 +473,7 @@ at.js バージョン 0.9.7 には、次の機能強化および修正が含ま�
 
 at.js バージョン 0.9.6 には、次の機能強化および修正が含まれています。
 
-* A4T のリダイレクトオファーのサポート。at.js バージョン 0.9.6 をダウンロードしてインストールした後、[!UICONTROL Adobe Analytics as the Reporting Source for Target] （A4T）を使用するアクティビティでリダイレクトオファーを使用できます。 at.js バージョン 0.9.6 の他に、リダイレクトオファーおよび A4T を使用するために実装が満たす必要がある最小要件があります。 詳細および追加の重要な情報については、[リダイレクトオファー - A4T に関する FAQ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html) を参照してください。
+* A4T のリダイレクトオファーのサポート。at.js バージョン 0.9.6 をダウンロードしてインストールした後、[!UICONTROL Adobe Analytics as the Reporting Source for Target] （A4T）を使用するアクティビティでリダイレクトオファーを使用できます。 at.js バージョン 0.9.6 の他に、リダイレクトオファーおよび A4T を使用するために実装が満たす必要がある最小要件があります。 詳細および追加の重要な情報については、[リダイレクトオファー - A4T に関する FAQ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=ja) を参照してください。
 * at.js 0.9.6 以前は、訪問者 API がページにあり、`visitorApiTimeout` 設定が厳しすぎた場合、[!DNL Target] リクエストで MCID データが送信されない状況が発生する可能性が [!DNL Target] りました。 その結果、A4T を使用しているときに、[!DNL Analytics] で未関連付けヒットなどの問題が発生することがありました。
 
   この動作は at.js 0.9.6 で変更されました。`visitorApiTimeout` が 1 ミリ秒に設定されている場合でも、[!DNL Target] は SDID、トラッキングサーバー、顧客 ID のデータを収集し、[!DNL Target] リクエストで送信しようとします。

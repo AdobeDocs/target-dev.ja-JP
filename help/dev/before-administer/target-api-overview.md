@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Target API の概要
 
-この記事では、管理 API とプロファイル API に固有の要件に焦点を当てる前に、様々な Target API 全般について説明します。 UI を使用して Target を管理する場合は、*Adobe Target ビジネスユーザーガイドの [ 管理*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en) の節を参照してください。
+この記事では、管理 API とプロファイル API に固有の要件に焦点を当てる前に、様々な Target API 全般について説明します。 UI を使用して Target を管理する場合は、*Adobe Target ビジネスユーザーガイドの [ 管理*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=ja) の節を参照してください。
 
 ## API タイプ
 

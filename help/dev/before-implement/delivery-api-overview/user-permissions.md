@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # ユーザー権限（Premium）
 
-[!DNL Adobe] を使用すると、ユーザーがAdobe Targetを使用する際にユーザーの権限を管理できます。 [!UICONTROL Adobe Target Delivery API] 呼び出しを成功させるには、適切な権限を持つトークンを API 呼び出し内で渡す必要があります。 ユーザー権限とトークンの取得方法について詳しくは、[ このドキュメント ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) を参照してください。
+[!DNL Adobe] を使用すると、ユーザーがAdobe Targetを使用する際にユーザーの権限を管理できます。 [!UICONTROL Adobe Target Delivery API] 呼び出しを成功させるには、適切な権限を持つトークンを API 呼び出し内で渡す必要があります。 ユーザー権限とトークンの取得方法について詳しくは、[ このドキュメント ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=ja) を参照してください。
 
 ```
 curl -X POST \

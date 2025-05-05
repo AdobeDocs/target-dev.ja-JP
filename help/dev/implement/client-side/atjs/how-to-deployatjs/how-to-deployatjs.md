@@ -21,7 +21,7 @@ ht-degree: 28%
 
 >[!NOTE]
 >
-> [!DNL Adobe Experience Platform Launch] は、[!DNL Adobe Experience Platform] のデータ収集テクノロジーのスイートとしてリブランドされました。その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更に関する参照の一覧については、次の[ドキュメント ](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html)を参照してください。
+> [!DNL Adobe Experience Platform Launch] は、[!DNL Adobe Experience Platform] のデータ収集テクノロジーのスイートとしてリブランドされました。その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更に関する参照の一覧については、次の[ドキュメント ](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=ja)を参照してください。
 
 * **[タグマネージャーを使用しない実装  [!DNL Target] ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)**：タグマネージャー（[!DNL Adobe Experience Platform] のタグなど）を使用せずに [!DNL Target] を実装できます。
 * **サードパーティのタグマネージャーを使用した [!DNL Target] の実装**:[Adobe Experience Platformのタグ ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) は、[!DNL Target] を実装する場合に推奨される方法です。ただし、Tealium、Enghten、Google Tag などのサードパーティのタグマネージャーを使用して、[!DNL Target] を実装することもできます。 Launch を使用する利点のリストについては、[ 拡張機能を使用して at.js を実装する利点  [!DNL Adobe Target]  を参照してください ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md#advantages-of-implementing-atjs-using-the-target-extension)。

@@ -24,6 +24,6 @@ ht-degree: 62%
 | 標準の mbox は、通常、`<DIV>` タグでコンテンツを囲みます。 | グローバル mbox は、「空」で、コンテンツを囲みません。 |
 | 1 つのアクティビティのみからのコンテンツは、1 つの標準の mbox に配信できます。 | 複数のアクティビティからのコンテンツは、1 つのグローバル mbox への 1 回の応答で配信できます。 |
 
-複数のアクティビティがグローバル mbox または複数の通常の mbox で配信される場合、Target は [ 優先度を決定 ](https://experienceleague.adobe.com/docs/target/using/activities/priority.html) し、それによってアクティビティ（またはアクティビティ）が web ページに配信されます。
+複数のアクティビティがグローバル mbox または複数の通常の mbox で配信される場合、Target は [ 優先度を決定 ](https://experienceleague.adobe.com/docs/target/using/activities/priority.html?lang=ja) し、それによってアクティビティ（またはアクティビティ）が web ページに配信されます。
 
 追加のページレベルのデータは、[!DNL Target] 関数を使用することで、グローバル mbox と共に `[!UICONTROL targetPageParams]` に送信できます。これは、mbox パラメーターの機能と同様です。詳しくは、「[グローバル mbox にパラメーターを渡す](/help/dev/implement/client-side/atjs/global-mbox/pass-parameters-to-global-mbox.md)」を参照してください。

@@ -52,7 +52,7 @@ TargetClient.getOffers(options: Object): Promise
 | targetCookie | オブジェクト | [!DNL Target] cookie |
 | targetLocationHintCookie | オブジェクト | [!DNL Target] location hint cookie |
 | analyticsDetails | 配列 | Analytics ペイロード（クライアントサイド Analytics を使用する場合） |
-| responseTokens | 配列 | [ 応答トークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?) のリスト。 |
+| responseTokens | 配列 | [ 応答トークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja&) のリスト。 |
 | trace | 配列 | すべてのリクエスト mbox/ビューの集計トレースデータ |
 | status | オブジェクト | 応答のステータスを含むオブジェクト。 |
 | decisioningMethod | 文字列 | 使用する判定方法を決定します（[ オンデバイス ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、サーバーサイド、ハイブリッド） |

@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # at.js の [!UICONTROL On-device decisioning]
 
-バージョン 2.5.0 以降、at.js は [!UICONTROL on-device decisioning] を提供します。 [!UICONTROL On-device decisioning] を使用すると、ブラウザー上で [A/B テスト ](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html) および [ エクスペリエンスのターゲット設定 ](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) （XT）アクティビティをキャッシュして、[!DNL Adobe Target] Edge Networkへのネットワークリクエストをブロックすることなく、インメモリ判定を実行できます。
+バージョン 2.5.0 以降、at.js は [!UICONTROL on-device decisioning] を提供します。 [!UICONTROL On-device decisioning] を使用すると、ブラウザー上で [A/B テスト ](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja) および [ エクスペリエンスのターゲット設定 ](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=ja) （XT）アクティビティをキャッシュして、[!DNL Adobe Target] Edge Networkへのネットワークリクエストをブロックすることなく、インメモリ判定を実行できます。
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ ht-degree: 4%
 * **驚くほど高速な意思決定とエクスペリエンスを実現します。** バケッティングと決定は、ネットワークリクエストがブロックされるのを回避するために、メモリ内およびブラウザーで実行されます。
 * **アプリケーションのパフォーマンスの向上。** 実験を実行し、エンドユーザーのエクスペリエンスを損なうことなく、顧客とユーザーにパーソナライゼーションを提供します。
 * **Google サイトの品質スコアが向上します。** インメモリで意思決定が行われるので、オンラインビジネスのGoogle サイト品質スコアを向上させて、消費者がより多くの情報を見つけられるようにします。
-* **リアルタイム分析から説明します。** [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) （A4T）レポートを使用して、アクティビティのパフォーマンスからリアルタイムでインサイトを得ます。 A4T を使用すると、重要な瞬間に戦略を転換できます。
+* **リアルタイム分析から説明します。** [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) （A4T）レポートを使用して、アクティビティのパフォーマンスからリアルタイムでインサイトを得ます。 A4T を使用すると、重要な瞬間に戦略を転換できます。
 
 ## サポートされる機能
 
@@ -56,7 +56,7 @@ ht-degree: 4%
 
 at.js 2.5.0 以降が実装され web プロパティにデプロイされる場合に標準で設定されているデフォルトの判定方法はサーバー側のみです。
 
-サーバーサイドのみをデフォルト設定として使用すると、すべての決定は [!DNL Target] エッジネットワーク上で行われます。これにはブロッキングサーバーコールが必要になります。 このアプローチでは、待ち時間が徐々に増えるおそれがありますが、[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) （AP）および [ 自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) のアクティビティなど、[!DNL Target] の機械学習機能を適用する機能を提供するなど、大きなメリットもあります。
+サーバーサイドのみをデフォルト設定として使用すると、すべての決定は [!DNL Target] エッジネットワーク上で行われます。これにはブロッキングサーバーコールが必要になります。 このアプローチでは、待ち時間が徐々に増えるおそれがありますが、[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=ja)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja) （AP）および [ 自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=ja) のアクティビティなど、[!DNL Target] の機械学習機能を適用する機能を提供するなど、大きなメリットもあります。
 
 さらに、すべてのセッションやチャネルにわたって永続化された [!DNL Target] のユーザープロファイルを使用して、パーソナライズされたエクスペリエンスを強化することで、ビジネスに大きな成果をもたらすことができます。
 
@@ -72,7 +72,7 @@ at.js 2.5.0 以降が実装され web プロパティにデプロイされる場
 
 | 手順 | 説明 |
 | --- | --- |
-| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html?) から取得されます。 |
+| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja&) から取得されます。 |
 | 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />   at.js ライブラリは、ページに実装されたオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
 | 3 | at.js ライブラリは、ちらつきを防ぐために本文を非表示にします。 |
 | 4 | ページ読み込みリクエストは、すべての設定済みパラメーター（ECID、顧客 ID、カスタムパラメーター、ユーザープロファイルなど）を含めて行われます。 |
@@ -111,7 +111,7 @@ at.js 2.5.0 以降が実装され web プロパティにデプロイされる場
 
 | 手順 | 説明 |
 | --- | --- |
-| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html) から取得されます。 |
+| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja) から取得されます。 |
 | 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されたオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
 | 3 | at.js ライブラリは、ちらつきを防ぐために本文を非表示にします。 |
 | 4 | at.js ライブラリは、訪問者に最も近い Akamai CDN から JSON ルールアーティファクトを取得するリクエストを行います。 |
@@ -138,7 +138,7 @@ at.js 2.5.0 以降が実装され web プロパティにデプロイされる場
 
 | 手順 | 説明 |
 | --- | --- |
-| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html) から取得されます。 |
+| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja) から取得されます。 |
 | 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されたオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
 | 3 | at.js ライブラリは、ちらつきを防ぐために本文を非表示にします。 |
 | 4 | at.js ライブラリは、JSON ルールアーティファクトを解釈し、エクスペリエンスを取得するためにメモリ内の決定を実行します。 |
@@ -173,7 +173,7 @@ JSON ルールアーティファクトには、mbox がサーバー側アクテ�
 
 | 手順 | 説明 |
 | --- | --- |
-| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html) から取得されます。 |
+| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja) から取得されます。 |
 | 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されたオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
 | 3 | at.js ライブラリは、ちらつきを防ぐために本文を非表示にします。 |
 | 4 | （ECID、顧客 ID、カスタムパラメーター、ユーザープロファイルなどの）設定済みのすべてのパラメーターを含むページ読み込みリクエストが [!DNL Adobe Target] Edge Networkに対して実行されます。 |
@@ -203,7 +203,7 @@ JSON ルールアーティファクトには、mbox がサーバー側アクテ�
 
 | 手順 | 説明 |
 | --- | --- |
-| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html) から取得されます。 |
+| 1 | Experience Cloud訪問者 ID は、[Adobe Experience Cloud ID サービス ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja) から取得されます。 |
 | 2 | at.js ライブラリがドキュメント本文を同期的に読み込み、非表示にします。<br />at.js ライブラリは、ページに実装されたオプションの事前非表示スニペットを使用して非同期で読み込むこともできます。 |
 | 3 | at.js ライブラリは、ちらつきを防ぐために本文を非表示にします。 |
 | 4 | エクスペリエンスを取得するリクエストが作成されます。 |
@@ -223,7 +223,7 @@ JSON ルールアーティファクトには、mbox がサーバー側アクテ�
 
 >[!NOTE]
 >
->オンデバイス判定の切り替えを有効または無効にするには、管理者または承認者 [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) が必要です。
+>オンデバイス判定の切り替えを有効または無効にするには、管理者または承認者 [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) が必要です。
 
 1. **[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Account details]** をクリックします。
 1. **[!UICONTROL Account details]** の下で、**[!UICONTROL On-Device Decisioning]** トグルを「オン」の位置にスライドします。

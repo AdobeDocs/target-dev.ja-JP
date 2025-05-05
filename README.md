@@ -15,13 +15,13 @@ Adobe のコミュニティやドキュメントチーム以外の従業員か�
 
 ## Adobe コンテンツへの貢献について
 
-[Adobeドキュメント投稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)を参照してください。
+[Adobeドキュメント投稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ja)を参照してください。
 
 どのように貢献するかは、貢献者の技術経験度と、貢献者がどのような変更に貢献したいかによって異なります。
 
 ### マイナーな変更
 
-善意でマイナーな更新を行う場合は、その記事にアクセスして、**「編集」** リンクをクリックすると、その記事のGitHubソースに移動します。その後、GitHub UIを使用してアップデートを行います。詳しくは、一般的な[Adobe ドキュメントの投稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)を参照してください。
+善意でマイナーな更新を行う場合は、その記事にアクセスして、**「編集」** リンクをクリックすると、その記事のGitHubソースに移動します。その後、GitHub UIを使用してアップデートを行います。詳しくは、一般的な[Adobe ドキュメントの投稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ja)を参照してください。
 
 このリポジトリのドキュメントおよびコード例について送信したマイナーな修正や説明は、アドビの利用条件の適用を受けます。
 
@@ -43,7 +43,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 
 コミュニティの貢献者は、GitHub UI を使用して、基本的な編集をしたり、リポジトリを分岐させたりして、大きな貢献をすることができます。
 
-詳しくは、[Adobe ドキュメント投稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)を参照してください。
+詳しくは、[Adobe ドキュメント投稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ja)を参照してください。
 
 ## マークダウンを使用してトピックをフォーマットする方法
 

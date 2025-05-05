@@ -15,7 +15,7 @@ ht-degree: 0%
 
 エッジの許可リストに役立つホストの情報と最新のリスト [!DNL Adobe Target] 表示されます。
 
-エッジは、コンテンツをリクエストするエンドユーザーの場所に関係なく、最適な応答時間を確保する、地理的に分散された配信アーキテクチャです。 各エッジノードには、ユーザーのコンテンツリクエストに応答し、そのリクエストに関する分析データを追跡するために必要な情報がすべて含まれています。 ユーザーリクエストは、最寄りのエッジノードにルーティングされます。 詳しくは、[Edge ネットワーク ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934) を参照してください。
+エッジは、コンテンツをリクエストするエンドユーザーの場所に関係なく、最適な応答時間を確保する、地理的に分散された配信アーキテクチャです。 各エッジノードには、ユーザーのコンテンツリクエストに応答し、そのリクエストに関する分析データを追跡するために必要な情報がすべて含まれています。 ユーザーリクエストは、最寄りのエッジノードにルーティングされます。 詳しくは、[Edge ネットワーク ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=ja#concept_0AE2ED8E9DE64288A8B30FCBF1040934) を参照してください。
 
 必要に応じて、[!DNL Target] のエッジノードを許可リストに加えるできます。
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >この記事で取り上げた [!DNL Target] エッジおよび [!DNL Target] エッジ IP アドレスの Network Address Translation （NAT; ネットワーク アドレス変換） IP アドレスを許可リストに加えるするだけでなく、すべての [!DNL Adobe Analytics] IP アドレス ブロックを許可リストに加えるする必要もあります。
 >
->詳しくは、*Adobe Analytics テクニカルノート [ ドキュメントの ](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=en#all-adobe-analytics-ip-address-blocks){target=_blank} すべてのAdobe Analytics IP アドレスブロック* を参照してください。
+>詳しくは、*Adobe Analytics テクニカルノート [ ドキュメントの ](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=ja#all-adobe-analytics-ip-address-blocks){target=_blank} すべてのAdobe Analytics IP アドレスブロック* を参照してください。
 >
 >インフラストラクチャ [!DNL Adobe Target] 更新中であり、アドレスを許可リストに加えるしたいお客様は両方の IP セットを使用する必要があります。 失敗すると、エクスペリエンスを取得するための Target API 呼び出しが、許可リストを使用するように設定されたファイアウォールの背後にあるネットワークから発信される、サーバーサイド実装またはハイブリッド実装を使用しているお客様に影響を与えます。
 >
