@@ -30,5 +30,5 @@ iOSおよびAndroid Mobile SDK でプリフェッチメソッドを使用する�
 
 プリフェッチメソッド、パブリッククラス、コードサンプルなどについて詳しくは、以下のドキュメントを参照してください。
 
-* **iOS:**&#x200B;[Mobile Services iOS SDK ヘルプ ](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html) の *iOSでのオファーコンテンツのプリフェッチ*。
-* **Android:**&#x200B;[Mobile Services Android SDK ヘルプ ](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html) の *Androidでのオファーコンテンツのプリフェッチ*。
+* **iOS:**&#x200B;[Mobile Services iOS SDK ヘルプ ](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html?lang=ja) の *iOSでのオファーコンテンツのプリフェッチ*。
+* **Android:**&#x200B;[Mobile Services Android SDK ヘルプ ](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=ja) の *Androidでのオファーコンテンツのプリフェッチ*。

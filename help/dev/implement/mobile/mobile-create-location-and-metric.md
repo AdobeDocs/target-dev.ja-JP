@@ -21,11 +21,11 @@ ht-degree: 66%
 >
 >[ モバイルアプリ用Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank} は、モバイルアプリで [!DNL Adobe Experience Cloud] のソリューションおよびサービスを強化するための推奨ソリューションです。
 
-この節では、アプリのテンプレートとして使用できるサンプルコードを紹介します。この節のサンプルには、iOS 用のコードがあります。Android でも同じパターンを使用します。Android固有の構文については、[Android SDK 4.x for Experience Cloudソリューション ](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html) ガイドを参照してください。
+この節では、アプリのテンプレートとして使用できるサンプルコードを紹介します。この節のサンプルには、iOS 用のコードがあります。Android でも同じパターンを使用します。Android固有の構文については、[Android SDK 4.x for Experience Cloudソリューション ](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=ja) ガイドを参照してください。
 
 >[!NOTE]
 >
->使用可能なすべての [!DNL Target] メソッドのリストについては、[ モバイルドキュメント ](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html) を参照してください。
+>使用可能なすべての [!DNL Target] メソッドのリストについては、[ モバイルドキュメント ](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html?lang=ja) を参照してください。
 
 アプリに [!DNL Target] しい場所を作成してリクエストするには、主に次の 2 つの方法があります。
 
