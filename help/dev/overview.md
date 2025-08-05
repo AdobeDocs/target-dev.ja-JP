@@ -26,7 +26,7 @@ ht-degree: 6%
 >
 >* [*[!DNL Adobe Target] チュートリアル *](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=ja){target=_blank}
 >
->リリース情報については、[](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank} Business Practitioner Guide」の Target リリースノート（最新） *[!DNL Adobe Target]を参照してください*。
+>リリース情報については、[&#128279;](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank} Business Practitioner Guide」の Target リリースノート（最新） *[!DNL Adobe Target]を参照してください*。
 
 ## 実装の概要
 
