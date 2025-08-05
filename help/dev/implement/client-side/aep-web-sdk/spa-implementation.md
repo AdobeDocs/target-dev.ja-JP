@@ -1,9 +1,9 @@
 ---
-title: '[!DNL &#x200B; Adobe Experience Platform Web SDK] のシングルページアプリケーションの実装'
+title: '[!DNL Adobe Experience Platform Web SDK] のシングルページアプリケーションの実装'
 description: ' [!DNL Adobe Experience Platform Web SDK]using [!DNL Target] の単一ページアプリケーション（SPA）実装を作成する方法を説明します。'
 keywords: target;adobe target;xdm ビュー；ビュー；単一ページアプリケーション；SPA;SPA ライフサイクル；クライアントサイド；AB テスト；AB；エクスペリエンスのターゲット設定；XT;VEC
 feature: AEP Web SDK
-source-git-commit: f4e0e1b202863eb9fddb40836cf53d2df7cdbebe
+source-git-commit: 9a2c35b2d150638fbda00be866f84d2a6faa4300
 workflow-type: tm+mt
 source-wordcount: '1680'
 ht-degree: 2%
@@ -61,7 +61,7 @@ ht-degree: 2%
 
 [!UICONTROL XDM Views] を [!DNL Target] で活用すると、マーケターが [!UICONTROL Visual Experience Composer] を介して SPA で A/B テストと XT テストを実行できるようになります。 これを行うには、1 回限りの開発者セットアップを完了するために、次の手順を実行する必要があります。
 
-1. [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/install/overview) をインストールします。
+1. [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview) をインストールします。
 2. パーソナライズする単一ページアプリケーション内のすべての [!UICONTROL XDM Views] を決定します。
 3. [!UICONTROL XDM Views] を定義した後、A/B または XT VEC アクティビティを配信するには、`sendEvent()` に設定した `renderDecisions` 関数と、シングルページアプリケーションで対応す `true`[!UICONTROL XDM View] を実装します。 [!UICONTROL XDM View] は `xdm.web.webPageDetails.viewName` で渡す必要があります。 この手順を使用すると、マーケターは [!UICONTROL Visual Experience Composer] を活用して、これらの XDM に対して A/B テストと XT テストを開始できます。
 
@@ -221,7 +221,7 @@ class Checkout extends Component {
 
 >[!NOTE]
 >
->SPA で VEC を使用するには、{Firefox[ または ](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)2}Chrome VEC Helper Extension[ をインストールして有効化する必要があります。](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)
+>SPA で VEC を使用するには、{Firefox[ または ](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)2}Chrome VEC Helper Extension[ をインストールして有効化する必要があります。](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)
 
 ### [!UICONTROL Modifications] パネル
 
@@ -284,6 +284,6 @@ VEC でこれらの更新を行うには、次の手順が必要です。
 
 >[!NOTE]
 >
->「チェックアウトエクスプレス」 [!UICONTROL View] は、「速達 [!UICONTROL Modifications] ラジオボタンが選択されるまで、**ールパネルに表示され** せん。 これは、`sendEvent()` 関数が、「高速配信 **&#x200B;**&#x200B;ラジオボタンが選択されたときに実行されるため、VEC は、ラジオボタンが選択されるまで「checkout-express」 [!UICONTROL View] を認識しません。
+>「チェックアウトエクスプレス」 [!UICONTROL View] は、「速達 [!UICONTROL Modifications] ラジオボタンが選択されるまで、**ールパネルに表示され** せん。 これは、`sendEvent()` 関数が、「高速配信 **** ラジオボタンが選択されたときに実行されるため、VEC は、ラジオボタンが選択されるまで「checkout-express」 [!UICONTROL View] を認識しません。
 
 ![ 配信環境設定セレクターを表示する Visual Experience Composer。](/help/dev/implement/client-side/aep-web-sdk/assets/vec-delivery-preference.png)
