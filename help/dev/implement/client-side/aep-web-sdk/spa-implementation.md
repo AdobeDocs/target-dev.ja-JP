@@ -1,5 +1,5 @@
 ---
-title: '[!DNL  Adobe Experience Platform Web SDK] のシングルページアプリケーションの実装'
+title: '[!DNL &#x200B; Adobe Experience Platform Web SDK] のシングルページアプリケーションの実装'
 description: ' [!DNL Adobe Experience Platform Web SDK]using [!DNL Target] の単一ページアプリケーション（SPA）実装を作成する方法を説明します。'
 keywords: target;adobe target;xdm ビュー；ビュー；単一ページアプリケーション；SPA;SPA ライフサイクル；クライアントサイド；AB テスト；AB；エクスペリエンスのターゲット設定；XT;VEC
 feature: AEP Web SDK
@@ -284,6 +284,6 @@ VEC でこれらの更新を行うには、次の手順が必要です。
 
 >[!NOTE]
 >
->「チェックアウトエクスプレス」 [!UICONTROL View] は、「速達 [!UICONTROL Modifications] ラジオボタンが選択されるまで、**ールパネルに表示され** せん。 これは、`sendEvent()` 関数が、「高速配信 **** ラジオボタンが選択されたときに実行されるため、VEC は、ラジオボタンが選択されるまで「checkout-express」 [!UICONTROL View] を認識しません。
+>「チェックアウトエクスプレス」 [!UICONTROL View] は、「速達 [!UICONTROL Modifications] ラジオボタンが選択されるまで、**ールパネルに表示され** せん。 これは、`sendEvent()` 関数が、「高速配信 **&#x200B;**&#x200B;ラジオボタンが選択されたときに実行されるため、VEC は、ラジオボタンが選択されるまで「checkout-express」 [!UICONTROL View] を認識しません。
 
 ![ 配信環境設定セレクターを表示する Visual Experience Composer。](/help/dev/implement/client-side/aep-web-sdk/assets/vec-delivery-preference.png)
