@@ -5,7 +5,7 @@ description: を実装および管理  [!DNL Adobe Target] 、その API およ�
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: dadc3804da4592dba4ad88b8c5c9f804c56e232b
+source-git-commit: 599aa4c965e331bb2681523d50708a03fc933875
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 6%
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # [!DNL Adobe Target] 開発者ガイド
 
-**（[ 表示  [!DNL Target]  ドキュメントのアップデート ](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=ja){target=_blank}）**
+**（[ 表示  [!DNL Target]  ドキュメントのアップデート ](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank}）**
 
 この *[!DNL Adobe Target]Developer Guide では*[!DNL Target] を実装および管理するための API およびSDK ドキュメントなど、[!DNL Target] 開発者向けのリソースとガイドを提供します。
 
@@ -26,7 +26,7 @@ ht-degree: 6%
 >
 >* [*[!DNL Adobe Target] チュートリアル *](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=ja){target=_blank}
 >
->リリース情報については、[*[!DNL Adobe Target]Business Practitioner Guide」の Target リリースノート（最新） ](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=ja){target=_blank} を参照してください*。
+>リリース情報については、[](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank} Business Practitioner Guide」の Target リリースノート（最新） *[!DNL Adobe Target]を参照してください*。
 
 ## 実装の概要
 
@@ -34,7 +34,7 @@ ht-degree: 6%
 
 ## クライアントサイドの実装
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk.md)：この [!DNL Adobe Experience Platform Web SDK] を使用すると、[!UICONTROL Adobe Experience Edge Network] を介して、[!DNL Experience Cloud] の様々なサービス（[!DNL Target] など）を操作できます。
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)：この [!DNL Adobe Experience Platform Web SDK] を使用すると、[!DNL Experience Cloud] を介して、[!DNL Target] の様々なサービス（[!UICONTROL Adobe Experience Edge Network] など）を操作できます。
 
 [**Target at.js JavaScript ライブラリ**](/help/dev/implement/client-side/overview.md):at.js JavaScript ライブラリは、web 実装のページ読み込み時間を改善し、セキュリティを向上し、シングルページアプリケーション向けのより優れた実装オプションを提供します。
 
@@ -60,9 +60,9 @@ ht-degree: 6%
 
 ## モバイルアプリの実装
 
-[**AEP Mobile SDKの概要**](implement/mobile/overview.md):[!DNL Adobe Experience Platform] Mobile SDK を使用して [!DNL Adobe Target] を実装する方法の概要。
+[**AEP Mobile SDKの概要**](implement/mobile/overview.md):[!DNL Adobe Target] Mobile SDK を使用して [!DNL Adobe Experience Platform] を実装する方法の概要。
 
-[**AEP Mobile SDK リファレンス**](https://developer.adobe.com/client-sdks/documentation/):[!DNL Adobe Experience Platform] Mobile SDK を使用して [!DNL Adobe Target] を実装します。
+[**AEP Mobile SDK リファレンス**](https://developer.adobe.com/client-sdks/documentation/):[!DNL Adobe Target] Mobile SDK を使用して [!DNL Adobe Experience Platform] を実装します。
 
 ## メールの実装
 
@@ -86,7 +86,7 @@ ht-degree: 6%
 
 [**Admin Console API**](https://developer.adobe.com/umapi/): Adobe User Management および User Sync API を使用して、ユーザーおよび製品の使用権限を管理します。
 
-[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=ja)：様々なデータ収集、パーソナライゼーション、広告およびマーケティングのユースケースに [!DNL Adobe Experience Platform Edge Network Server] API を使用します。
+[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html)：様々なデータ収集、パーソナライゼーション、広告およびマーケティングのユースケースに [!DNL Adobe Experience Platform Edge Network Server] API を使用します。
 
 ## リソース
 
@@ -98,6 +98,6 @@ ht-degree: 6%
 * [Target の実装](./before-implement/prepare-to-implement-target.md)
 * [Target 管理](./before-administer/target-api-overview.md)
 * [Adobe Target開発ドキュメント GitHub リポジトリ ](https://github.com/AdobeDocs/target-developers)
-* [Adobe Target リリースノート ](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=ja)
+* [Adobe Target リリースノート ](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
 * [Adobe Target ビジネスユーザーガイド ](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja)
 
