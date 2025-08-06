@@ -2,9 +2,9 @@
 user-guide-title: Adobe Target開発者ガイド
 breadcrumb-title: Target デベロッパーガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: 697822cd7c5afcaac988d61035af56491301dc74
+source-git-commit: 777feec0cd9b2bd6a9c7167acf1371fa1184af89
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '788'
 ht-degree: 43%
 
 ---
@@ -45,49 +45,50 @@ ht-degree: 43%
    + [概要：Target をクライアント側 web に実装する](implement/client-side/overview.md)
    + Adobe Experience Platform Web SDKの実装 {#aep}
       + [Adobe Experience Platform Web SDKの実装の概要](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
-      + [パーソナライゼーションへのAdobe Targetと Platform Web SDKの使用](/help/dev/implement/client-side/aep-web-sdk/target-overview.md)
+      + [パーソナライゼーションへのAdobe Targetと web SDKの使用](/help/dev/implement/client-side/aep-web-sdk/target-overview.md)
       + [シングルページアプリケーションの実装](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
       + [レスポンストークンへのアクセス](/help/dev/implement/client-side/aep-web-sdk/accessing-response-tokens.md)
-      + [mbox サードパーティ ID の使用](/help/dev/implement/client-side/aep-web-sdk/using-mbox-3rdpartyid.md)
-      + [at.js ライブラリと web SDKの比較](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)
-   + at.js の仕組み {#at-js}
-      + [at.js JavaScript ライブラリの概要](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md)
-      + [at.js works の概要](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
-      + [at.js によるちらつきの制御方法](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)
-      + [at.js の統合](/help/dev/implement/client-side/atjs/how-atjs-works/target-atjs-integrations.md)
-   + at.js のデプロイ方法 {#deploy-at-js}
-      + [at.js のデプロイ方法](implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md)
-      + [Adobe Experience Platform を使用した Target の実装](implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)
-      + [タグマネージャーを使用しない Target の実装](implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
-      + [Dynamic Tag Manager（DTM）を使用した Target の実装](implement/client-side/atjs/how-to-deployatjs/implement-target-using-dtm.md)
-      + [シングルページアプリケーション（SPA）への Target の実装](implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)
-   + オンデバイス判定 {#on-device-decisioning}
-      + [オンデバイス判定の概要](implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md)
-      + [サポートされる機能](implement/client-side/atjs/on-device-decisioning/supported-features.md)
-      + [ルールアーティファクト](implement/client-side/atjs/on-device-decisioning/rule-artifact.md)
-      + [トラブルシューティング](implement/client-side/atjs/on-device-decisioning/troubleshooting-on-device-decisioning.md)
-   + at.js 関数 {#functions-overview}
-      + [at.ｊs 関数の概要](implement/client-side/atjs/atjs-functions/atjs-functions.md)
-      + [adobe.target.getOffer()](implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md)
-      + [adobe.target.getOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)
-      + [adobe.target.applyOffer()](implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md)
-      + [adobe.target.applyOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)
-      + [adobe.target.triggerView() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)
-      + [adobe.target.trackEvent()](implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-      + [mboxCreate() - at.js 1.x](implement/client-side/atjs/atjs-functions/mboxcreate-atjs.md)
-      + [targetGlobalSettings()](implement/client-side/atjs/atjs-functions/targetglobalsettings.md)
-      + [mboxDefine() と mboxUpdate() - at.js 1.x](implement/client-side/atjs/atjs-functions/mboxdefine-mboxupdate-atjs-1x.md)
-      + [targetPageParams()](implement/client-side/atjs/atjs-functions/targetpageparams.md)
-      + [targetPageParamsAll()](implement/client-side/atjs/atjs-functions/targetpageparamsall.md)
-      + [registerExtension() - at.js 1.x](implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)
-      + [sendNotifications() - at.js 2.1](implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)
-      + [at.js カスタムイベント](implement/client-side/atjs/atjs-functions/atjs-custom-events.md)
-      + [Adobe Experience Cloud デバッガーを使用した at.js のデバッグ](implement/client-side/target-debugging-atjs/target-debugging-atjs.md)
-      + [Target でのクラウドベースのインスタンスの使用](implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)
-   + [at.js の FAQ](implement/client-side/atjs/target-atjs-faq.md)
-   + [at.js のバージョンの詳細](implement/client-side/atjs/target-atjs-versions.md)
-   + [at.js 1.x から at.js 2.x へのアップグレード](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
-   + [at.js の cookie](implement/client-side/atjs/atjs-cookies.md)
+      + [mbox3rdPartyId の使用](/help/dev/implement/client-side/aep-web-sdk/using-mbox-3rdpartyid.md)
+      + [at.js ライブラリと Platform web SDKの比較](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)
+   + at.js の実装 {#at-js-implementation}
+      + at.js の仕組み {#at-js}
+         + [at.js JavaScript ライブラリの概要](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md)
+         + [at.js works の概要](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
+         + [at.js によるちらつきの制御方法](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)
+         + [at.js の統合](/help/dev/implement/client-side/atjs/how-atjs-works/target-atjs-integrations.md)
+      + at.js のデプロイ方法 {#deploy-at-js}
+         + [at.js のデプロイ方法](implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md)
+         + [Adobe Experience Platform を使用した Target の実装](implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)
+         + [タグマネージャーを使用しない Target の実装](implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
+         + [Dynamic Tag Manager（DTM）を使用した Target の実装](implement/client-side/atjs/how-to-deployatjs/implement-target-using-dtm.md)
+         + [シングルページアプリケーション（SPA）への Target の実装](implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)
+      + オンデバイス判定 {#on-device-decisioning}
+         + [オンデバイス判定の概要](implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md)
+         + [サポートされる機能](implement/client-side/atjs/on-device-decisioning/supported-features.md)
+         + [ルールアーティファクト](implement/client-side/atjs/on-device-decisioning/rule-artifact.md)
+         + [トラブルシューティング](implement/client-side/atjs/on-device-decisioning/troubleshooting-on-device-decisioning.md)
+      + at.js 関数 {#functions-overview}
+         + [at.ｊs 関数の概要](implement/client-side/atjs/atjs-functions/atjs-functions.md)
+         + [adobe.target.getOffer()](implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md)
+         + [adobe.target.getOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)
+         + [adobe.target.applyOffer()](implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md)
+         + [adobe.target.applyOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)
+         + [adobe.target.triggerView() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)
+         + [adobe.target.trackEvent()](implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
+         + [mboxCreate() - at.js 1.x](implement/client-side/atjs/atjs-functions/mboxcreate-atjs.md)
+         + [targetGlobalSettings()](implement/client-side/atjs/atjs-functions/targetglobalsettings.md)
+         + [mboxDefine() と mboxUpdate() - at.js 1.x](implement/client-side/atjs/atjs-functions/mboxdefine-mboxupdate-atjs-1x.md)
+         + [targetPageParams()](implement/client-side/atjs/atjs-functions/targetpageparams.md)
+         + [targetPageParamsAll()](implement/client-side/atjs/atjs-functions/targetpageparamsall.md)
+         + [registerExtension() - at.js 1.x](implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)
+         + [sendNotifications() - at.js 2.1](implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)
+         + [at.js カスタムイベント](implement/client-side/atjs/atjs-functions/atjs-custom-events.md)
+         + [Adobe Experience Cloud デバッガーを使用した at.js のデバッグ](implement/client-side/target-debugging-atjs/target-debugging-atjs.md)
+         + [Target でのクラウドベースのインスタンスの使用](implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)
+      + [at.js の FAQ](implement/client-side/atjs/target-atjs-faq.md)
+      + [at.js のバージョンの詳細](implement/client-side/atjs/target-atjs-versions.md)
+      + [at.js 1.x から at.js 2.x へのアップグレード](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
+      + [at.js の cookie](implement/client-side/atjs/atjs-cookies.md)
    + [User-agent と client hints](implement/client-side/atjs/user-agent-and-client-hints.md)
    + グローバル mbox について {#global-mbox}
       + [グローバル mbox の概要について](implement/client-side/atjs/global-mbox/global-mbox-overview.md)
@@ -226,5 +227,3 @@ ht-degree: 43%
       + [データ収集の設定](/help/dev/patterns/recs-atjs/data-collection.md)
       + [エクスペリエンスのレンダリング](/help/dev/patterns/recs-atjs/render-experiences.md)
       + [Notify Target](/help/dev/patterns/recs-atjs/notify-target.md)
-
-
