@@ -1,11 +1,11 @@
 ---
-title: at.js を使用したRecommendationsの実装パターン
-description: at.js とRecommendationsの実装パターンの使用方法
+title: at.js を使用した Recommendations 実装パターン
+description: at.js を使用した Recommendations の実装パターンの使用方法について
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: d568cd1d-acc3-42e0-ae2c-5787e6f361f8
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3b0bc0b67800ed4b1da6ba2bfa05c677147a78ba
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # at.js を使用した [!DNL Recommendations] 実装パターンの概要
 
-この実装パターンは、[at.js JavaScript library](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) を使用する際に [!DNL Adobe Target Recommendations] 実装を理解し、作成するのに役立ちます。
+この実装パターンは、[!DNL Adobe Target Recommendations]at.js JavaScript library[ を使用する際に ](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md) 実装を理解し、作成するのに役立ちます。
 
 「画像」をクリックすると、フルスクリーンに展開できます。
 

@@ -4,7 +4,7 @@ description: Adobe Target Profile API を使用して訪問者データを  [!DN
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: 315e8fbe67938588c3c9a0135e0cd85fa1f12187
+source-git-commit: 3b0bc0b67800ed4b1da6ba2bfa05c677147a78ba
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 各訪問者のプロファイル情報は、Cookie またはサードパーティアプリに保存されます。
 
-Web ページが [!DNL Target] コード（[at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) または [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)）を実装している場合、プロファイルパラメーターを使用して cookie からのプロファイル情報が [!DNL Target] に渡されます。 [!DNL Target] は、訪問者の cookie で生成される `pcID` を通じて、各訪問者を一意に識別します。 ただし、`mbox3rdPartyIds` を使用して、外部アプリから mbox 呼び出しを通じてプロファイルパラメーターを渡すことができます。
+Web ページが [!DNL Target] コード（[at.js](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md) または [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)）を実装している場合、プロファイルパラメーターを使用して cookie からのプロファイル情報が [!DNL Target] に渡されます。 [!DNL Target] は、訪問者の cookie で生成される `pcID` を通じて、各訪問者を一意に識別します。 ただし、`mbox3rdPartyIds` を使用して、外部アプリから mbox 呼び出しを通じてプロファイルパラメーターを渡すことができます。
 
 [!DNL Adobe Target] プロファイル API は、訪問者に関するプロファイルデータがある場合に使用します。このデータは、[!DNL Target] とのページベースの統合の一環として送信できない、または送信したくない [!DNL Target] に送信します。 これは、ページで利用できない顧客関係管理（CRM）または販売時点（POS）システムのデータである可能性があります。 または、このデータは、ページに渡しても意味がない、より機密性の高い性質の場合があります。
 
