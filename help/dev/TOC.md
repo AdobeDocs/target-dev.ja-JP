@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target開発者ガイド
 breadcrumb-title: Target デベロッパーガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: ac5531cfda1c47248160d18ffc501bf2e70c9d0e
+source-git-commit: 524eb6aea6141d69eb7f30795d6b16a3f07cccd9
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 45%
+source-wordcount: '777'
+ht-degree: 44%
 
 ---
 
@@ -46,6 +46,8 @@ ht-degree: 45%
    + Adobe Experience Platform Web SDKの実装 {#aep}
       + [Adobe Experience Platform Web SDKの実装の概要](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
       + [シングルページアプリケーションの実装](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
+      + [レスポンストークンへのアクセス](/help/dev/implement/client-side/aep-web-sdk/accessing-response-tokens.md)
+      + [at.js ライブラリと Platform Web SDKの比較](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)
    + at.js の実装 {#at-js-implementation}
       + [at.js の概要](implement/client-side/atjs/how-atjs-works/overview.md)
       + at.js の仕組み {#at-js}
