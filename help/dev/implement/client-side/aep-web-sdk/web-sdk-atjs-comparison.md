@@ -814,7 +814,7 @@ Analytics のクライアントサイドログは、at.js 設定で `analyticsLo
 }
 ```
 
-その後、ペイロードは [!DNL Analytics] を介して [!DNL  Data Insertion API] に転送できます。
+その後、ペイロードは [!DNL Analytics] を介して [!DNL &#x200B; Data Insertion API] に転送できます。
 
 例 2：すべての `getOffers` 関数で設定する
 
