@@ -4,10 +4,10 @@ description: ' [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] を使�
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 39f0ab4a6b06d0b3415be850487552714f51b4a2
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 8%
+source-wordcount: '929'
+ht-degree: 7%
 
 ---
 
@@ -24,9 +24,13 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->[!UICONTROL Bulk Profile Update API] のバージョン 2 （v2）は現在のバージョンです。 ただし、[!DNL Target] はバージョン 1 （v1）を引き続きサポートします。
+>[!DNL Bulk Profile Update API] のバージョン 2 （v2）は現在のバージョンです。 ただし、[!DNL Target] は引き続きバージョン 1 （v1）をサポートします。
+>
+>* **`PCID` に依存しないスタンドアロン実装では、バージョン 2 を使用します**:[!DNL Target] 実装で [!DNL Experience Cloud ID] （ECID）を匿名訪問者のプロファイル識別子の 1 つとして使用する場合、バージョン 2 （v2）バッチファイルのキーとして `pcId` を使用しないでください。 `pcId` のバージョン 2 で [!DNL Bulk Profile Update API] を使用するのは、[!DNL Target] に依存しないスタンドアロン `ECID` 実装を目的としています。
+>
+>* **`thirdPartID` に依存する実装では、バージョン 1 を使用します**:`ECID` をプロファイルの識別に使用する実装で、`pcId` をバッチファイルのキーとして使用する場合は、API のバージョン 1 （v1）を使用する必要があります。 実装でプロファイルの識別に `thirdPartyId` を使用する場合は、`thirdPartyId` をキーとしてバージョン 2 （v2）をお勧めします。
 
-## Bulk Profile Update API の利点
+## [!UICONTROL Bulk Profile Update API] のメリット
 
 * プロファイル属性の数に上限がありません。
 * サイトを介して送信されたプロファイル属性は、API を使用して更新できます。その逆も可能です。
@@ -43,37 +47,37 @@ ht-degree: 8%
 
 プロファイルデータを一括更新するには、バッチファイルを作成します。 バッチファイルは、次のサンプルファイルと同様に、コンマで区切られた値を持つテキストファイルです。
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
 >`batch=` パラメーターは必須であり、ファイルの先頭で指定する必要があります。
 
-このファイルは、[!DNL Target] サーバーへのPOST呼び出しで参照し、ファイルを処理します。 バッチファイルを作成する場合は、次の点を考慮してください。
+このファイルは、[!DNL Target] サーバーへの POST 呼び出しで参照し、ファイルを処理します。 バッチファイルを作成する場合は、次の点を考慮してください。
 
 * ファイルの最初の行では、列ヘッダーを指定する必要があります。
-* 最初のヘッダーは、`pcId` または `thirdPartyId` にする必要があります。 [!UICONTROL Marketing Cloud visitor ID] はサポートされていません。 [!UICONTROL pcId] は、[!DNL Target] で生成された visitorID です。 `thirdPartyId` は、クライアントアプリケーションによって指定された ID で、`mbox3rdPartyId` として mbox 呼び出しを通じて [!DNL Target] に渡されます。 ここでは、`thirdPartyId` と呼ぶ必要があります。
+* 最初のヘッダーは、`pcId` または `thirdPartyId` にする必要があります。 [!UICONTROL Marketing Cloud visitor ID] はサポートされていません。 [!UICONTROL pcId] は、[!DNL Target] で生成された visitorID です。 `thirdPartyId` は、クライアントアプリケーションによって指定された ID で、[!DNL Target] として mbox 呼び出しを通じて `mbox3rdPartyId` に渡されます。 ここでは、`thirdPartyId` と呼ぶ必要があります。
 * セキュリティ上の理由から、バッチファイルで指定するパラメーターと値は、UTF-8 を使用して URL エンコードする必要があります。 パラメーターと値は、HTTP リクエストを通じて処理するために他のエッジノードに転送できます。
-* パラメーターは、`paramName` の形式のみにする必要があります。 パラメーターは、`profile.paramName` のように [!DNL Target] に表示されます。
-* [!UICONTROL Bulk Profile Update API] v2 を使用している場合は、各 `pcId` に対してすべてのパラメーター値を指定する必要はありません。 プロファイルは、[!DNL Target] に見つからない `pcId` または `mbox3rdPartyId` に対して作成されます。 v1 を使用している場合、pcId または mbox3rdPartyIds が見つからないプロファイルは作成されません。
+* パラメーターは、`paramName` の形式のみにする必要があります。 パラメーターは、[!DNL Target] のように `profile.paramName` に表示されます。
+* [!UICONTROL Bulk Profile Update API] v2 を使用している場合は、各 `pcId` に対してすべてのパラメーター値を指定する必要はありません。 プロファイルは、`pcId` に見つからない `mbox3rdPartyId` または [!DNL Target] に対して作成されます。 v1 を使用している場合、pcId または mbox3rdPartyIds が見つからないプロファイルは作成されません。
 * バッチファイルの容量は 50 MB 未満にする必要があります。また、合計行数は 500,000 を超えないようにする必要があります。 この制限により、サーバーに大量のリクエストが送られないようにすることができます。
 * 複数のファイルを送信できます。 ただし、1 日に送信するすべてのファイルの行の合計は、各クライアントで 100 万行を超えないようにしてください。
 * アップロードできる属性の数に制限はありません。 ただし、顧客属性、プロファイル API、In-Mbox プロファイルパラメーター、プロファイルスクリプト出力を含む外部プロファイルデータの合計サイズは、64 KB を超えないようにする必要があります。
 * パラメーターと値は、大文字と小文字を区別します。
 
-## HTTP POSTリクエスト
+## HTTP POST リクエスト
 
-[!DNL Target] エッジサーバーに HTTPPOSTリクエストを送信して、ファイルを処理します。 curl コマンドを使用した batch.txt ファイルの HTTPPOSTリクエストの例を次に示します。
+[!DNL Target] エッジサーバーに HTTP POST リクエストを送信して、ファイルを処理します。 curl コマンドを使用した batch.txt ファイルの HTTP POST リクエストの例を次に示します。
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 要素の説明：
 
@@ -81,7 +85,7 @@ BATCH.TXT はファイル名です。 CLIENTCODE は、[!DNL Target] のクラ�
 
 クライアントコードがわからない場合は、[!DNL Target] ユーザーインターフェイスで **[!UICONTROL Administration]**/**[!UICONTROL Implementation]** をクリックします。 クライアントコードは [!UICONTROL Account Details] セクションに表示されます。
 
-### 応答をInspect
+### 応答を調べる
 
 プロファイル API は、「batchStatus」の下にあるリンクと共に、処理対象のバッチの送信ステータスを、特定のバッチジョブの全体的なステータスを表示する別の URL に返します。
 
@@ -117,7 +121,7 @@ BATCH.TXT はファイル名です。 CLIENTCODE は、[!DNL Target] のクラ�
 
 ### 詳細なバッチステータス URL 応答
 
-上記の `batchStatus` の URL にパラメーター `showDetails=true` を渡すことで、より詳細な応答を取得できます。
+上記の `showDetails=true` の URL にパラメーター `batchStatus` を渡すことで、より詳細な応答を取得できます。
 
 次に例を示します。
 
