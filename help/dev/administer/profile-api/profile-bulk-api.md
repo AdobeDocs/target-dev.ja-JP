@@ -49,13 +49,13 @@ ht-degree: 7%
 
 プロファイルデータを一括更新するには、バッチファイルを作成します。 バッチファイルは、次のサンプルファイルと同様に、コンマで区切られた値を持つテキストファイルです。
 
-``````
+``` ```
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``````
+``` ```
 
 >[!NOTE]
 >
@@ -77,9 +77,9 @@ batch=pcId,param1,param2,param3,param4
 
 [!DNL Target] エッジサーバーに HTTP POST リクエストを送信して、ファイルを処理します。 curl コマンドを使用した batch.txt ファイルの HTTP POST リクエストの例を次に示します。
 
-``````
+``` ```
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``````
+``` ```
 
 要素の説明：
 
