@@ -4,7 +4,7 @@ description: ' [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] を使�
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 39f0ab4a6b06d0b3415be850487552714f51b4a2
+source-git-commit: 8cab20a7842b0a05c5b2a845662a7ab5f60393bd
 workflow-type: tm+mt
 source-wordcount: '929'
 ht-degree: 7%
@@ -26,7 +26,7 @@ ht-degree: 7%
 >
 >[!DNL Bulk Profile Update API] のバージョン 2 （v2）は現在のバージョンです。 ただし、[!DNL Target] は引き続きバージョン 1 （v1）をサポートします。
 >
->* **`PCID` に依存しないスタンドアロン実装では、バージョン 2 を使用します**:[!DNL Target] 実装で [!DNL Experience Cloud ID] （ECID）を匿名訪問者のプロファイル識別子の 1 つとして使用する場合、バージョン 2 （v2）バッチファイルのキーとして `pcId` を使用しないでください。 `pcId` のバージョン 2 で [!DNL Bulk Profile Update API] を使用するのは、[!DNL Target] に依存しないスタンドアロン `ECID` 実装を目的としています。
+>* **`ECID` に依存しないスタンドアロン実装では、バージョン 2 を使用します**:[!DNL Target] 実装で [!DNL Experience Cloud ID] （ECID）を匿名訪問者のプロファイル識別子の 1 つとして使用する場合、バージョン 2 （v2）バッチファイルのキーとして `pcId` を使用しないでください。 `pcId` のバージョン 2 で [!DNL Bulk Profile Update API] を使用するのは、[!DNL Target] に依存しないスタンドアロン `ECID` 実装を目的としています。
 >
 >* **`thirdPartID` に依存する実装では、バージョン 1 を使用します**:`ECID` をプロファイルの識別に使用する実装で、`pcId` をバッチファイルのキーとして使用する場合は、API のバージョン 1 （v1）を使用する必要があります。 実装でプロファイルの識別に `thirdPartyId` を使用する場合は、`thirdPartyId` をキーとしてバージョン 2 （v2）をお勧めします。
 
@@ -47,13 +47,13 @@ ht-degree: 7%
 
 プロファイルデータを一括更新するには、バッチファイルを作成します。 バッチファイルは、次のサンプルファイルと同様に、コンマで区切られた値を持つテキストファイルです。
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -75,9 +75,9 @@ batch=pcId,param1,param2,param3,param4
 
 [!DNL Target] エッジサーバーに HTTP POST リクエストを送信して、ファイルを処理します。 curl コマンドを使用した batch.txt ファイルの HTTP POST リクエストの例を次に示します。
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 要素の説明：
 
