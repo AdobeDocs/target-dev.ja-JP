@@ -4,9 +4,9 @@ description: '[!UICONTROL Adobe Client Care] と連携して CNAME （正規名�
 title: Target での CNAME の使用方法
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: f894122217529cb40369c003a3b4ed5419fb0505
+source-git-commit: 353597cbbd3478e9598bd42303619440b3b478fd
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
    >
    >Adobeの証明機関 DigiCert は、この手順が完了するまで証明書を発行できません。 そのため、Adobeは、この手順が完了するまで、CNAME 実装のリクエストを実行できません。
 
-1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx) [CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja&#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
+1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx)[CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
 
    * [!DNL Adobe Target] クライアントコード：
    * SSL 証明書のホスト名（例：`target.example.com target.example.org`）:
@@ -96,8 +96,6 @@ Apple Intelligent Tracking Prevention （ITP）バージョン 2.3 では、CNAM
 次の一連のコマンドを使用します（macOSまたは Linux コマンドラインターミナルで、bash と curl >=7.49 を使用）。
 
 1. この bash 関数をコピーして端末に貼り付けるか、bash 起動スクリプトファイル（通常は `~/.bash_profile` または `~/.bashrc`）に貼り付けて、端末セッション全体で関数を使用できるようにします。
-
-   +++ 詳細を表示
 
    ```bash {line-numbers="true"}
     function adobeTargetCnameValidation {
@@ -242,8 +240,6 @@ Apple Intelligent Tracking Prevention （ITP）バージョン 2.3 では、CNAM
      echo
    }
    ```
-
-   +++
 
 1. 次のコマンドを貼り付けます（`target.example.com` をホスト名に置き換えます）。
 
