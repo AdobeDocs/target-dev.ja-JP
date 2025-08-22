@@ -31,7 +31,7 @@ ht-degree: 1%
    >
    >Adobeの証明機関 DigiCert は、この手順が完了するまで証明書を発行できません。 そのため、Adobeは、この手順が完了するまで、CNAME 実装のリクエストを実行できません。
 
-1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx)[CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
+1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx) [CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
 
    * [!DNL Adobe Target] クライアントコード：
    * SSL 証明書のホスト名（例：`target.example.com target.example.org`）:
@@ -315,7 +315,7 @@ Apple Intelligent Tracking Prevention （ITP）バージョン 2.3 では、CNAM
        🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
    ```
 
-+++
+   +++
 
 >[!NOTE]
 >
