@@ -4,9 +4,9 @@ description: '[!UICONTROL Adobe Client Care] と連携して CNAME （正規名�
 title: Target での CNAME の使用方法
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 1a78a1e2750ae906338e91ff24ac16cdc99323ba
+source-git-commit: 04dfc34bcd3e7efbf73cd167334b440d42cafd1b
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1169'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
    >
    >Adobeの証明機関 DigiCert は、この手順が完了するまで証明書を発行できません。 そのため、Adobeは、この手順が完了するまで、CNAME 実装のリクエストを実行できません。
 
-1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx) [CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja&#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
+1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx)[CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
 
    * [!DNL Adobe Target] クライアントコード：
    * SSL 証明書のホスト名（例：`target.example.com target.example.org`）:
@@ -49,7 +49,7 @@ ht-degree: 1%
 
    実装の準備が整うと、Adobe Client Care から通知が届きます。
 
-1. `serverDomain` [ ドキュメント ](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain) を新しい CNAME ホスト名に更新し、at.js 設定の `false` [ ドキュメント ](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver) に `overrideMboxEdgeServer` 定します。
+1. `serverDomain` [ ドキュメント ](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain) を新しい CNAME ホスト名に更新し、at.js 設定の `overrideMboxEdgeServer` `false` ドキュメント [ に ](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver) 定します。
 
 ## よくある質問
 
@@ -96,6 +96,8 @@ Apple Intelligent Tracking Prevention （ITP）バージョン 2.3 では、CNAM
 次の一連のコマンドを使用します（macOSまたは Linux コマンドラインターミナルで、bash と curl >=7.49 を使用）。
 
 1. この bash 関数をコピーして端末に貼り付けるか、bash 起動スクリプトファイル（通常は `~/.bash_profile` または `~/.bashrc`）に貼り付けて、端末セッション全体で関数を使用できるようにします。
+
+   +++詳細を表示
 
    ```
    function adobeTargetCnameValidation {
@@ -240,13 +242,15 @@ Apple Intelligent Tracking Prevention （ITP）バージョン 2.3 では、CNAM
    }
    ```
 
+   +++
+
 1. 次のコマンドを貼り付けます（`target.example.com` をホスト名に置き換えます）。
 
-   ```
-   adobeTargetCnameValidation target.example.com
-   ```
+   ```adobeTargetCnameValidation target.example.com```
 
-   実装の準備が整ったら、次のような出力が表示されます。 重要な部分は、すべての検証ステータス行に `🚫` ではなく `✅` が表示されることです。 各 Target Edge CNAME シャードは、要求された証明書のプライマリ ホスト名に一致する `CN=target.example.com` を表示する必要があります（この出力には、証明書の追加の SAN ホスト名は出力されません）。
+   実装の準備が整ったら、次のような出力が表示されます。 重要な部分は、すべての検証ステータス行に `✅` ではなく `🚫` が表示されることです。 各 Target Edge CNAME シャードは、要求された証明書のプライマリ ホスト名に一致する `CN=target.example.com` を表示する必要があります（この出力には、証明書の追加の SAN ホスト名は出力されません）。
+
+   +++詳細を表示
 
    ```
    $ adobeTargetCnameValidation target.example.com
@@ -310,6 +314,8 @@ Apple Intelligent Tracking Prevention （ITP）バージョン 2.3 では、CNAM
        🔎  DNS A records:     https://whatsmydns.net/#A/target.example.com
        🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
    ```
+
++++
 
 >[!NOTE]
 >
