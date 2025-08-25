@@ -168,4 +168,4 @@ function targetPageParams() {
 
 ## &#x200B;6. （任意）管理 API を使用した [!UICONTROL Recommendations] の管理
 
-[ 用の [!UICONTROL Recommendations] 管理 API と配信 API を設定および使用する方法については、](../../before-administer/recs-api/overview.md)[!UICONTROL Target] API の使用 [!UICONTROL Recommendations] 実践ガイドを参照してください。
+[ 用の [!UICONTROL Recommendations] 管理 API と配信 API を設定および使用する方法については、](../../before-administer/recs-api/overview.md) [!UICONTROL Target] API の使用 [!UICONTROL Recommendations] 実践ガイドを参照してください。
