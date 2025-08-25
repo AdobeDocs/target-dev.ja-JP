@@ -4,10 +4,10 @@ description: '[!UICONTROL Adobe Client Care] と連携して CNAME （正規名�
 title: Target での CNAME の使用方法
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 353597cbbd3478e9598bd42303619440b3b478fd
+source-git-commit: 17caf4e54d2efa372ebc6f3916f120a37d39d4a5
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 0%
+source-wordcount: '1169'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 0%
    >
    >Adobeの証明機関 DigiCert は、この手順が完了するまで証明書を発行できません。 そのため、Adobeは、この手順が完了するまで、CNAME 実装のリクエストを実行できません。
 
-1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx) [CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja&#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
+1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx)[CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
 
    * [!DNL Adobe Target] クライアントコード：
    * SSL 証明書のホスト名（例：`target.example.com target.example.org`）:
@@ -96,6 +96,8 @@ Apple Intelligent Tracking Prevention （ITP）バージョン 2.3 では、CNAM
 次の一連のコマンドを使用します（macOSまたは Linux コマンドラインターミナルで、bash と curl >=7.49 を使用）。
 
 1. この bash 関数をコピーして端末に貼り付けるか、bash 起動スクリプトファイル（通常は `~/.bash_profile` または `~/.bashrc`）に貼り付けて、端末セッション全体で関数を使用できるようにします。
+
+   +++ 詳細を表示
 
    ```bash {line-numbers="true"}
     function adobeTargetCnameValidation {
@@ -241,51 +243,53 @@ Apple Intelligent Tracking Prevention （ITP）バージョン 2.3 では、CNAM
    }
    ```
 
+   +++
+
 1. 次のコマンドを貼り付けます（`target.example.com` をホスト名に置き換えます）。
 
-   ```adobeTargetCnameValidation target.example.com```
+   `adobeTargetCnameValidation target.example.com`
 
-実装の準備が整ったら、次のような出力が表示されます。 重要な部分は、すべての検証ステータス行に `✅` ではなく `🚫` が表示されることです。 各 Target Edge CNAME シャードは、要求された証明書のプライマリ ホスト名に一致する `CN=target.example.com` を表示する必要があります（この出力には、証明書の追加の SAN ホスト名は出力されません）。
+   実装の準備が整ったら、次のような出力が表示されます。 重要な部分は、すべての検証ステータス行に `✅` ではなく `🚫` が表示されることです。 各 Target Edge CNAME シャードは、要求された証明書のプライマリ ホスト名に一致する `CN=target.example.com` を表示する必要があります（この出力には、証明書の追加の SAN ホスト名は出力されません）。
 
-    +++詳細を参照 
-    
-    &quot;&#39;bash {line-numbers=&quot;true&quot;}
-    $ adobeTargetCnameValidation
-    target.example.com====================================================================================Adobe Target CNAME 実装のホスト名target.example.com target.example.com target.example.com:
-    ✅ の DNSCNAME 認証を認証に渡する 
-    ✅DNSCNAME 認証をに渡渡す TLSTLS およびにを渡渡す 
-    ✅target.example.com地域 IND1
-    ✅ target.example.comは地域 SIN
-    ✅ target.example.comは地域 SYD
-    ✅ target.example.comは地域 SYD
-    ✅ target.example.comは地域 VA
-    ✅ target.example.comは地域 TYO の TLS および HTTP 応答の検証を渡します 
-    ✅ target.example.comは次の 7 つのエッジシャードについてシャード検証を渡します：===== ✅ target.example.com [edge shard: IRL1-pool.data.adobedc.net] ==*
-     有効期限：2 月 20 日 23:59:59 2026 GMT
-    *発行者：C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
-    *件名：C=US; ST=California; L=San Jose; O=Adobe Systems Inc; CN=target.example.com===== ✅ target.example.com [edge shard: ind1-pool.data.adobedc.net] ====
-     :59: 
-     
-     ✅ 
-     :59: 
-     
-     ✅ 
-     :59: 
-     
-     ✅ 
-     :59: 
-     
-     ✅ 
-     :59: 
-     
-     ✅ 
-     :59: 
-     
-    *有効期限：2023 年 2 月 20 日 2359 2026 GMTs 発行者：C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1* subject: C=US; ST=California; L=San Jose; O=Adobe Systems 組み込み；CN=target.example.com===== target.example.com [edge shard: SIN-pool.data.adobedc.net] ====有効期限日：20 2359 2026 GMT の日付：C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1 subject: C=US; ST カリフォルニア州；L=サンノゼ；O=Adobe Systems Inc; CN=target.example.com===== target.example.com target.example.com target.example.com target.example.com [edge shard: OR-pool.data.adobedc.net] =====有効期限：2026 年 2 月 20 日 GMT26 GMT* issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA2562020 CN=target.example.com===== [edge shard: SYD-pool.data.adobedc.net] ====有効期限：2026 年 2 月 20 日（PT）; C=US; ST=California; L=San Jose; O=Adobe Systems Inc; CN=target.example.com SHA256 2020 CA15* subject: C=US; ST=California; L=San Jose; O=Adobe Systems Inc; CN=target.example.com===== cn=DigiCert Global G2 TLS RSA SHA256 2020 CA1* subject: C=US; ST=California; L=San Jose; O=Adobe Systems Inc; CN=target.example.com===== C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1* subject: C=US; ST=California; L=San Jose; O=Adobe Systems Inc; CN=target.example.com==========================================================追加の TLS/SSL 検証については、SSL ショッパーを参照してください。    🔎 https://www.sslshopper.com/ssl-checker.html#hostname=target.example.com世界中での DNS の伝播を確認するには、whatsmydns.netを参照してください。    🔎 DNS A レコード：     https://whatsmydns.net/#A/target.example.com
-    🔎 DNS CNAME レコード：https://whatsmydns.net/#CNAME/target.example.com
-    &quot;&#39;
-    
-    ++
++++ 詳細を表示
+
+```bash {line-numbers="true"}
+  $ adobeTargetCnameValidation 
+  target.example.com==========================================================Adobe Target CNAME implementation validation for hostname target.example.com:
+  ✅ target.example.com passes DNS CNAME validation
+  ✅ target.example.com passes TLS and HTTP response validation for region IRL1
+  ✅ target.example.com passes TLS and HTTP response validation for region IND1
+  ✅ target.example.com passes TLS and HTTP response validation for region SIN
+  ✅ target.example.com passes TLS and HTTP response validation for region OR
+  ✅ target.example.com passes TLS and HTTP response validation for region SYD
+  ✅ target.example.com passes TLS and HTTP response validation for region VA
+  ✅ target.example.com passes TLS and HTTP response validation for region TYO
+  ✅ target.example.com passes shard validation for the following 7 edge shards:===== ✅ target.example.com [edge shard: IRL1-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: IND1-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: SIN-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: OR-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: SYD-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: VA-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: TYO-pool.data.adobedc.net] =====
+  *  expire date: Feb 20 23:59:59 2026 GMT
+  *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+  *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com==========================================================  For additional TLS/SSL validation, see SSL Shopper:    🔎  https://www.sslshopper.com/ssl-checker.html#hostname=target.example.com  To check DNS propagation around the world, see whatsmydns.net:    🔎  DNS A records:     https://whatsmydns.net/#A/target.example.com
+      🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
+```
+
++++
 
 >[!NOTE]
 >
