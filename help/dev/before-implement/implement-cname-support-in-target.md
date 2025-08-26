@@ -4,7 +4,7 @@ description: '[!UICONTROL Adobe Client Care] と連携して CNAME （正規名�
 title: Target での CNAME の使用方法
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: d803ee9ddb58c73e089e938773ba264e03ef9b1b
+source-git-commit: 71a8a2d9d324cd31452a4400d76052432efbfdd4
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ht-degree: 1%
    >
    >Adobeの証明機関 DigiCert は、この手順が完了するまで証明書を発行できません。 そのため、Adobeは、この手順が完了するまで、CNAME 実装のリクエストを実行できません。
 
-1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx) [CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja&#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
+1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx)[CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
 
    * [!DNL Adobe Target] クライアントコード：
    * SSL 証明書のホスト名（例：`target.example.com target.example.org`）:
