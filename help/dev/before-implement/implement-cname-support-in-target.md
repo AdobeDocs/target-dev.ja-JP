@@ -4,7 +4,7 @@ description: '[!UICONTROL Adobe Client Care] と連携して CNAME （正規名�
 title: Target での CNAME の使用方法
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 71a8a2d9d324cd31452a4400d76052432efbfdd4
+source-git-commit: 4f28018a55d484f45ebbbce319d580450d3db68b
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%
@@ -31,12 +31,13 @@ ht-degree: 1%
    >
    >Adobeの証明機関 DigiCert は、この手順が完了するまで証明書を発行できません。 そのため、Adobeは、この手順が完了するまで、CNAME 実装のリクエストを実行できません。
 
-1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx) [CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja&#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
+1. [ このフォームに入力し ](assets/FPC_Request_Form.xlsx)[CNAME サポートをリクエストするAdobe クライアントケアチケットを開く ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C) 際に含めます。
 
    * [!DNL Adobe Target] クライアントコード：
    * SSL 証明書のホスト名（例：`target.example.com target.example.org`）:
    * SSL 証明書購入者（Adobeを強くお勧めします。FAQ を参照してください）:Adobe/お客様
    * お客様が証明書（「Bring Your Own Certificate」（BYOC）とも呼ばれる）を購入する場合は、次の詳細を入力します。
+
       * 証明書組織（例：Example Company Inc）:
       * 証明書の組織単位（オプション、例：マーケティング）:
       * 証明書の国（例：米国）:
@@ -306,3 +307,4 @@ CNAME を使用している場合、オプトアウトリンクには&quot;clien
 
 * CNAME および at.js 1.x はサードパーティの cookie に基づいているので、QA モードは動的に変更されます。 これを回避するには、移動先の各 URL にプレビューパラメーターを追加します。 CNAME および at.js 2.x を使用している場合、QA モードは sticky です。
 * CNAME を使用すると、[!DNL Target] 呼び出しの cookie ヘッダーのサイズが増加する可能性が高くなります。 Adobeでは、cookie のサイズを 8 KB 未満に抑えることをお勧めします。
+
