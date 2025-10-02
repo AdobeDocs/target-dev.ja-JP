@@ -19,7 +19,7 @@ ht-degree: 1%
 ## [!DNL Target] での CNAME サポートのリクエスト
 
 1. SSL 証明書に必要なホスト名のリストを決定します（以下の FAQ を参照）。
-1. [ このフォームに入力し ](/help/dev/implement/assets/FPC_Request_Form.xlsx)[CNAME サポートをリクエストするクライアントケアチケットを開く  [!DNL Adobe]  際に含めます ](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)。
+1. [&#x200B; このフォームに入力し &#x200B;](/help/dev/implement/assets/FPC_Request_Form.xlsx) [CNAME サポートをリクエストするクライアントケアチケットを開く  [!DNL Adobe]  際に含めます &#x200B;](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C)。
 
    * [!DNL Adobe Target] クライアントコード：
    * SSL 証明書のホスト名（例：`target.example.com target.example.org`）:
@@ -72,7 +72,7 @@ ht-degree: 1%
 2026 年 3 月 15 日（PT）現在、TLS 証明書の最大有効期間は 200 日です。
 2027 年 3 月 15 日（PT）現在、TLS 証明書の最大有効期間は 100 日です。
 2029 年 3 月 15 日（PT）現在、TLS 証明書の最大有効期間は 47 日です。
-詳しくは、[ 証明書の有効期間の短縮に関する DigiCert の記事 ](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days) を参照してください。
+詳しくは、[&#x200B; 証明書の有効期間の短縮に関する DigiCert の記事 &#x200B;](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days) を参照してください。
 
 ### どのホスト名を選択すればよいですか？ ドメインごとに何個のホスト名を選択すればよいですか？
 
@@ -334,14 +334,14 @@ Apple Intelligent Tracking Prevention （ITP）バージョン 2.3 では、CNAM
 
    >[!NOTE]
    >
-   >この検証コマンドが DNS 検証時に失敗しても、必要な DNS 変更を既に行っている場合は、DNS 更新が完全に反映されるまで待つ必要がある可能性があります。 DNS レコードには、レコードの DNS 返信のキャッシュ有効期限を指示する [TTL （time-to-live） ](https://en.wikipedia.org/wiki/Time_to_live#DNS_records) が関連付けられています。 その結果、少なくとも TTL の期間は待機する必要がある場合があります。 `dig target.example.com` コマンドまたは [G Suite ツールボックス ](https://toolbox.googleapps.com/apps/dig/#CNAME) を使用して、特定の TTL を検索できます。 世界中での DNS の伝播を確認するには、[whatsmydns.net](https://whatsmydns.net/#CNAME) を参照してください。
+   >この検証コマンドが DNS 検証時に失敗しても、必要な DNS 変更を既に行っている場合は、DNS 更新が完全に反映されるまで待つ必要がある可能性があります。 DNS レコードには、レコードの DNS 返信のキャッシュ有効期限を指示する [TTL （time-to-live） &#x200B;](https://en.wikipedia.org/wiki/Time_to_live#DNS_records) が関連付けられています。 その結果、少なくとも TTL の期間は待機する必要がある場合があります。 `dig target.example.com` コマンドまたは [G Suite ツールボックス &#x200B;](https://toolbox.googleapps.com/apps/dig/#CNAME) を使用して、特定の TTL を検索できます。 世界中での DNS の伝播を確認するには、[whatsmydns.net](https://whatsmydns.net/#CNAME) を参照してください。
 
 ### CNAME でのオプトアウトリンクの使用方法
 
 CNAME を使用している場合、オプトアウトリンクには&quot;client=`clientcode` パラメーターを含める必要があります。次に例を示します。
 `https://my.cname.domain/optout?client=clientcode`。
 
-`clientcode` をお客様のクライアントコードに置き換えてから、この [ オプトアウト URL](/help/dev/before-implement/privacy/privacy.md) にリンクさせるテキストまたは画像を追加します。
+`clientcode` をお客様のクライアントコードに置き換えてから、この [&#x200B; オプトアウト URL](/help/dev/before-implement/privacy/privacy.md) にリンクさせるテキストまたは画像を追加します。
 
 ## 既知の制限事項
 
