@@ -19,7 +19,7 @@ ht-degree: 66%
 
 ## at.js について
 
-at.js ライブラリは、[!DNL Adobe Target] のクライアントサイド実装用の実装ライブラリです。 at.js ライブラリは、Web 実装のページ読み込み時間を改善し、シングルページアプリケーション向けのより優れた実装オプションを提供します。at.js は推奨される実装ライブラリであり、頻繁にアップデートされて新しい機能が追加されます。すべてのお客様に、[at.js の最新バージョン ](/help/dev/implement/client-side/atjs/target-atjs-versions.md) を実装または移行することをお勧めします。
+at.js ライブラリは、[!DNL Adobe Target] のクライアントサイド実装用の実装ライブラリです。 at.js ライブラリは、Web 実装のページ読み込み時間を改善し、シングルページアプリケーション向けのより優れた実装オプションを提供します。at.js は推奨される実装ライブラリであり、頻繁にアップデートされて新しい機能が追加されます。すべてのお客様に、[at.js の最新バージョン &#x200B;](/help/dev/implement/client-side/atjs/target-atjs-versions.md) を実装または移行することをお勧めします。
 
 詳細については、[Target JavaScript ライブラリ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=ja#libraries)を参照してください。
 
@@ -40,7 +40,7 @@ at.js ライブラリは、[!DNL Adobe Target] のクライアントサイド実
 
 （全幅に拡大するには、画像をクリックします）。
 
-![at.js 2.x での Target のフロー ](/help/dev/implement/client-side/assets/system-diagram-atjs-20.png "at.js 2.x での Target のフロー "){zoomable="yes"}
+![at.js 2.x での Target のフロー &#x200B;](/help/dev/implement/client-side/assets/system-diagram-atjs-20.png "at.js 2.x での Target のフロー "){zoomable="yes"}
 
 | 手順 | 詳細 |
 | --- | --- |

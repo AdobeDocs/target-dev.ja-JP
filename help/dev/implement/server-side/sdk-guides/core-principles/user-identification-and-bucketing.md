@@ -21,7 +21,7 @@ ht-degree: 3%
 | `tntID` | `tntId` は、ユーザーの [!DNL Target] のプライマリ識別子です。 この ID を指定できます。指定しない [!DNL Target]、リクエストに ID が含まれていない場合は自動生成されます。 |
 | `thirdPartyId` | `thirdPartyId` は、ユーザーに対する会社の識別子で、呼び出しごとに送信できます。 ユーザーが会社のサイトにログインすると、会社は通常、訪問者のアカウント、ロイヤルティカード、メンバーシップ番号、またはその会社に適用されるその他の識別子に関連付けられた ID を作成します。 |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId` は、異なるAdobeソリューション間でデータを結合して共有するために使用されます。 marketingCloudVisitorId は、Adobe AnalyticsおよびAdobe Audience Managerとの統合に必要です。 |
-| `customerIds` | Experience Cloudの訪問者 ID と共に、追加の [ 顧客 ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja) および各訪問者の認証済みステータスも利用できます。 |
+| `customerIds` | Experience Cloudの訪問者 ID と共に、追加の [&#x200B; 顧客 ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja) および各訪問者の認証済みステータスも利用できます。 |
 
 ## [!DNL Target] ID （tntID）
 
@@ -233,7 +233,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 顧客 ID （customerIds）
 
-[ 顧客 ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja) は、Experience Cloudの訪問者 ID に追加したり、関連付けたりできます。 `customerIds` を送信する場合は常に、`marketingCloudVisitorId` も指定する必要があります。 さらに、各訪問者毎に、各 `customerId` と共に認証状況を提供することができる。 次の認証ステータスを使用できます。
+[&#x200B; 顧客 ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja) は、Experience Cloudの訪問者 ID に追加したり、関連付けたりできます。 `customerIds` を送信する場合は常に、`marketingCloudVisitorId` も指定する必要があります。 さらに、各訪問者毎に、各 `customerId` と共に認証状況を提供することができる。 次の認証ステータスを使用できます。
 
 | 認証状態 | ユーザーステータス |
 | --- | --- |
@@ -311,11 +311,11 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-上の例は、`authenticatedState` を持つ `customerId` を送信する方法を示しています。 `customerId` を送信する場合、`integrationCode`、`id`、`authenticatedState` および `marketingCloudVisitorId` が必要です。 `integrationCode` は、CRS で指定した [ 顧客属性ファイル ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=ja) のエイリアスです。
+上の例は、`authenticatedState` を持つ `customerId` を送信する方法を示しています。 `customerId` を送信する場合、`integrationCode`、`id`、`authenticatedState` および `marketingCloudVisitorId` が必要です。 `integrationCode` は、CRS で指定した [&#x200B; 顧客属性ファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=ja) のエイリアスです。
 
 ## 結合プロファイル
 
-`tntId`、`thirdPartyID`、`marketingCloudVisitorId` を同じリクエストで組み合わせることができます。 このシナリオ [!DNL Adobe Target] は、これらすべての ID のマッピングを維持し、訪問者にピン留めします。 様々な識別子を使用してプロファイルを [ リアルタイムで結合および同期 ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=ja) する方法について説明します。
+`tntId`、`thirdPartyID`、`marketingCloudVisitorId` を同じリクエストで組み合わせることができます。 このシナリオ [!DNL Adobe Target] は、これらすべての ID のマッピングを維持し、訪問者にピン留めします。 様々な識別子を使用してプロファイルを [&#x200B; リアルタイムで結合および同期 &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=ja) する方法について説明します。
 
 >[!BEGINTABS]
 

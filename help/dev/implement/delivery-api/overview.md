@@ -25,4 +25,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->引き続き [ 従来の/v1/mbox および/v2/batchmbox API ドキュメント ](https://developers.adobetarget.com/api/legacy-api/index.html) にアクセスできます。 ただし、機能は（ここで説明しているように）配信 API で開発され、レガシー API には移植されません。
+>引き続き [&#x200B; 従来の/v1/mbox および/v2/batchmbox API ドキュメント &#x200B;](https://developers.adobetarget.com/api/legacy-api/index.html) にアクセスできます。 ただし、機能は（ここで説明しているように）配信 API で開発され、レガシー API には移植されません。

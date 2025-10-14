@@ -22,7 +22,7 @@ ht-degree: 2%
 
 データレイヤーは、ページ読み込み中またはページ読み込み後のデータレイヤー変更の準備が整いました。
 
-[SDK の初期化フェーズ ](/help/dev/patterns/recs-atjs/initialize-sdk.md) で既にデータをマッピングしている場合、次の場合はこの図の手順を実行する必要があります。
+[SDK の初期化フェーズ &#x200B;](/help/dev/patterns/recs-atjs/initialize-sdk.md) で既にデータをマッピングしている場合、次の場合はこの図の手順を実行する必要があります。
 
 * データレイヤーは同じページ上で任意の方法で拡張され、その追加データを [!DNL Target] に送信します
 * 製品カタログデータを [!DNL Target Recommendations] に送信する
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 次の図のステップ番号は、以下のセクションに対応しています。
 
-![ データ収集図 ](/help/dev/patterns/recs-atjs/assets/data-collection-diagram.png){width="600" zoomable="yes"}
+![&#x200B; データ収集図 &#x200B;](/help/dev/patterns/recs-atjs/assets/data-collection-diagram.png){width="600" zoomable="yes"}
 
 次のリンクをクリックして、目的のセクションに移動します。
 
@@ -45,7 +45,7 @@ ht-degree: 2%
 
 +++詳細を見る
 
-![ データマッピング図の設定 ](/help/dev/patterns/recs-atjs/assets/configure-data-mapping-combined.png){width="400" zoomable="yes"}
+![&#x200B; データマッピング図の設定 &#x200B;](/help/dev/patterns/recs-atjs/assets/configure-data-mapping-combined.png){width="400" zoomable="yes"}
 
 **前提条件**
 
@@ -71,11 +71,11 @@ ht-degree: 2%
 
 **読み取り**
 
-* [ エンティティの属性 ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=ja){target=_blank}
+* [&#x200B; エンティティの属性 &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=ja){target=_blank}
 
 **注意点**
 
-* エンティティ属性を渡す別の方法は、[!DNL Target] UI の商品カタログを更新して [Recommendations商品フィード ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=ja){target=_blank} を使用することです。
+* エンティティ属性を渡す別の方法は、[!DNL Target] UI の商品カタログを更新して [Recommendations商品フィード &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=ja){target=_blank} を使用することです。
 * エンティティ属性の受け渡しは、製品カタログデータをデータレイヤーで使用できるページにのみ適用できます。
 * 任意の呼び出しで `entity.event.detailsOnly=true` パラメーターを渡す場合は、が優先されます。
 
@@ -89,11 +89,11 @@ ht-degree: 2%
 
 +++詳細を見る
 
-![Fire Adobe Target Track API の図 ](/help/dev/patterns/recs-atjs/assets/fire-track-api-combined.png){width="400" zoomable="yes"}
+![Fire Adobe Target Track API の図 &#x200B;](/help/dev/patterns/recs-atjs/assets/fire-track-api-combined.png){width="400" zoomable="yes"}
 
 **前提条件**
 
-* すべてのデータマッピングは、[targetPageParams 関数 ](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) を使用しておこなう必要があります。
+* すべてのデータマッピングは、[targetPageParams 関数 &#x200B;](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) を使用しておこなう必要があります。
 
 **読み取り**
 
@@ -101,10 +101,10 @@ ht-degree: 2%
 
 **アクション**
 
-[adobe.target.trackEvent （） メソッド ](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) を使用して、[!DNL Target] に送信する必要のあるすべてのデータを送信します。
+[adobe.target.trackEvent （） メソッド &#x200B;](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) を使用して、[!DNL Target] に送信する必要のあるすべてのデータを送信します。
 
 +++
 
 [このページの上部の図に戻ります。](#diagram)
 
-手順 3:[ エクスペリエンスのレンダリング ](/help/dev/patterns/recs-atjs/render-experiences.md) に進みます。
+手順 3:[&#x200B; エクスペリエンスのレンダリング &#x200B;](/help/dev/patterns/recs-atjs/render-experiences.md) に進みます。

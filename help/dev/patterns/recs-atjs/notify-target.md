@@ -26,7 +26,7 @@ ht-degree: 1%
 
 次の図のステップ番号は、以下の節に対応しています。
 
-![ ターゲット図への通知 ](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
+![&#x200B; ターゲット図への通知 &#x200B;](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
 
 ## 4.1:Fire [!DNL Adobe Target] Track API
 
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 +++詳細を見る
 
-![Fire Adobe Target Track API の図 ](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
+![Fire Adobe Target Track API の図 &#x200B;](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 以下の *前提条件* セクションで説明されているように、注文コンバージョン属性を送信します。 mbox の名前は重要ではありませんが、変換には `orderConfirmPage` を使用します。
 
@@ -49,16 +49,16 @@ ht-degree: 1%
    * `orderTotal`：購入の注文合計。
    * `orderId`：購入の注文 ID。
 
-  次の図は、[!UICONTROL Confirmation] ページでのみ実行する [ [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=ja){target=_blank} のルールを示しています。
+  次の図は、[!UICONTROL Confirmation] ページでのみ実行する [&#x200B; [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=ja){target=_blank} のルールを示しています。
 
-  ![ アクション設定ページ ](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
+  ![&#x200B; アクション設定ページ &#x200B;](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
 * 買い物かごへの追加についてイベントをトラッキングしている場合は、`cartIds` をパラメーターとして送信します。 `cardIds` に製品 ID のコンマ区切りリストを渡すことができます。
 
 **読み取り**
 
 * [adobe.target.trackEvent （） メソッド](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [ 買い物かごベースの条件の cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=ja#cart-based){target=_blank}
+* [&#x200B; 買い物かごベースの条件の cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=ja#cart-based){target=_blank}
 
 **アクション**
 

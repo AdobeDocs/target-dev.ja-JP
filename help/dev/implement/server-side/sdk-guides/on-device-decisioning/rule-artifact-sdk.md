@@ -95,7 +95,7 @@ npm i @adobe/target-nodejs-sdk -P
 1. ここに示すように、**[!UICONTROL Administration]** / **[!UICONTROL Implementation]** に移動すると、client と organizationId の両方を [!DNL Adobe Target] から取得できます。
 
    &lt;!— image-client-code.png を挿入 – >
-   ![Target 管理の実装ページ ](assets/asset-rule-artifact-3.png)
+   ![Target 管理の実装ページ &#x200B;](assets/asset-rule-artifact-3.png)
 
 ## 3. ルールアーティファクトの保存と使用
 
@@ -146,7 +146,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->上記のコードサンプルでは、`TargetClient` オブジェクトは、メモリ内ルールアーティファクトへの参照を保持します。 このオブジェクトを標準 SDK メソッドの呼び出しに使用する場合、決定にはメモリ内ルールアーティファクトが使用されます。 クライアントリクエストを初期化してリッスンするファイル以外のファイルで SDK メソッドを呼び出す必要がある構造のアプリケーションで、それらのファイルが TargetClient オブジェクトにアクセスできない場合、JSON ペイロードをダウンロードしてローカル JSON ファイルに保存し、他のファイルで使用して SDK を初期化する必要があるファイルに保存できます。 これについては、次の節 [JSON ペイロードを使用したルールアーティファクトのダウンロード ](rule-artifact-json.md) で説明します。
+>上記のコードサンプルでは、`TargetClient` オブジェクトは、メモリ内ルールアーティファクトへの参照を保持します。 このオブジェクトを標準 SDK メソッドの呼び出しに使用する場合、決定にはメモリ内ルールアーティファクトが使用されます。 クライアントリクエストを初期化してリッスンするファイル以外のファイルで SDK メソッドを呼び出す必要がある構造のアプリケーションで、それらのファイルが TargetClient オブジェクトにアクセスできない場合、JSON ペイロードをダウンロードしてローカル JSON ファイルに保存し、他のファイルで使用して SDK を初期化する必要があるファイルに保存できます。 これについては、次の節 [JSON ペイロードを使用したルールアーティファクトのダウンロード &#x200B;](rule-artifact-json.md) で説明します。
 
 [!DNL Adobe Target] SDK を初期化した後に web アプリケーションを開始する例を次に示します。
 

@@ -52,10 +52,10 @@ TargetClient.getOffers(options: Object): Promise
 | targetCookie | オブジェクト | [!DNL Target] cookie |
 | targetLocationHintCookie | オブジェクト | [!DNL Target] location hint cookie |
 | analyticsDetails | 配列 | Analytics ペイロード（クライアントサイド Analytics を使用する場合） |
-| responseTokens | 配列 | [ 応答トークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja&) のリスト。 |
+| responseTokens | 配列 | [&#x200B; 応答トークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja&) のリスト。 |
 | trace | 配列 | すべてのリクエスト mbox/ビューの集計トレースデータ |
 | status | オブジェクト | 応答のステータスを含むオブジェクト。 |
-| decisioningMethod | 文字列 | 使用する判定方法を決定します（[ オンデバイス ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、サーバーサイド、ハイブリッド） |
+| decisioningMethod | 文字列 | 使用する判定方法を決定します（[&#x200B; オンデバイス &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、サーバーサイド、ハイブリッド） |
 
 データをブラウザーに戻すために使用される `targetCookie` および `targetLocationHintCookie` オブジェクトは、次の構造を持っています。
 
@@ -70,7 +70,7 @@ TargetClient.getOffers(options: Object): Promise
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
 | status | 数値 | HTTP ステータスコード |
-| message | 文字列 | 応答に関するメッセージ。 例えば、応答が決定されたかどうか [ オンデバイス ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) またはサーバーサイドか）を示します |
+| message | 文字列 | 応答に関するメッセージ。 例えば、応答が決定されたかどうか [&#x200B; オンデバイス &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) またはサーバーサイドか）を示します |
 | remoteMbox | 配列 | Decisioning メソッドが `on-device` の場合、オンデバイスで完全に決定できなかった mbox 名の配列が提供されます。 つまり、[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストが必要です。 |
 
 ## 例

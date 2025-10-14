@@ -26,11 +26,11 @@ ht-degree: 0%
 
 オンデバイス判定を有効にすることで、A/B アクティビティがほぼゼロの待ち時間で実行されるようになります。 この機能を有効にするには、[!DNL Adobe Target] で **[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Account details]** に移動し、「**[!UICONTROL On-Device Decisioning]**」トグルを有効にします。
 
-![alt 画像 ](assets/asset-odd-toggle.png)
+![alt 画像 &#x200B;](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->[!UICONTROL On-Device Decisioning] の切り替えを有効または無効にするには、管理者または承認者 [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) が必要です。
+>[!UICONTROL On-Device Decisioning] の切り替えを有効または無効にするには、管理者または承認者 [&#x200B; ユーザーの役割 &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) が必要です。
 
 「[!UICONTROL On-Device Decisioning]」切替スイッチを有効 [!DNL Adobe Target] すると、クライアントの *ルールアーティファクト* の生成を開始します。
 
@@ -38,33 +38,33 @@ ht-degree: 0%
 
 1. [!DNL Adobe Target] で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]**/**[!UICONTROL A/B test]** を選択します。
 
-   ![alt 画像 ](assets/asset-ab.png)
+   ![alt 画像 &#x200B;](assets/asset-ab.png)
 
 1. **[!UICONTROL Create A/B Test Activity]** モーダルでは、デフォルトの **[!UICONTROL Web]** オプションを選択した状態（1）のままにし、experience composer として **[!UICONTROL Form]** を選択し（2）、**[!UICONTROL No Property Restrictions]** を使用して **[!UICONTROL Default Workspace]** を選択し（3）、**[!UICONTROL Next]** をクリックします（4）。
 
-   ![alt 画像 ](assets/asset-form.png)
+   ![alt 画像 &#x200B;](assets/asset-form.png)
 
 ## 3.機能の定義とロールアウト設定
 
 アクティビティ作成の **[!UICONTROL Experiences]** の手順で、アクティビティの名前を指定します（1）。 機能のロールアウトを管理するアプリケーション内の場所（2）の名前を入力します。 例えば、`ondevice-rollout` や `homepage-addtocart-rollout` は、機能ロールアウトを管理する宛先を示すロケーション名です。 次の例で、`ondevice-rollout` はエクスペリエンス A に対して定義された場所です。オプションで、オーディエンスの絞り込み（4）を追加して、アクティビティの選定を制限できます。
 
-![alt 画像 ](assets/asset-location-rollout.png)
+![alt 画像 &#x200B;](assets/asset-location-rollout.png)
 
 1. 同じページの「**[!UICONTROL Content]**」セクションで、次に示すように、ドロップダウンの「**[!UICONTROL Create JSON Offer]** （1）」を選択します。
 
-   ![alt 画像 ](assets/asset-offer.png)
+   ![alt 画像 &#x200B;](assets/asset-offer.png)
 
 1. 表示される **[!UICONTROL JSON Data]** テキストボックスで、有効な JSON オブジェクト（2）を使用して、Experience A （1）でこのアクティビティとともにロールアウトする機能の機能フラグ変数を入力します。
 
-   ![alt 画像 ](assets/asset-json-a-rollout.png)
+   ![alt 画像 &#x200B;](assets/asset-json-a-rollout.png)
 
 1. **[!UICONTROL Next]** （1）をクリックして、アクティビティ作成の **[!UICONTROL Targeting]** のステップに進みます。
 
-   ![alt 画像 ](assets/asset-next-2-t-rollout.png)
+   ![alt 画像 &#x200B;](assets/asset-next-2-t-rollout.png)
 
 1. **[!UICONTROL Targeting]** の手順では、簡単にするために、**[!UICONTROL All Visitors]** オーディエンス（1）を残します。 ただし、トラフィック配分（2）を 10% に調整します。 これにより、機能がサイト訪問者の 10% のみに制限されます。 次へ（3）をクリックして、**[!UICONTROL Goals & Settings]** のステップに進みます。
 
-   ![alt 画像 ](assets/asset-next-2-g-rollout.png)
+   ![alt 画像 &#x200B;](assets/asset-next-2-g-rollout.png)
 
 1. **[!UICONTROL Goals & Settings]** の手順で、[!DNL Adobe Target] UI でアクティビティの結果を表示する **[!UICONTROL Reporting Source]** として **[!UICONTROL Adobe Target]** （1）を選択します。
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 1. **[!UICONTROL Save & Close]** （3）をクリックして、アクティビティを保存します。
 
-   ![alt 画像 ](assets/asset-conv-rollout.png)
+   ![alt 画像 &#x200B;](assets/asset-conv-rollout.png)
 
 ## 4. アプリケーションで機能を実装しレンダリングする
 
@@ -157,7 +157,7 @@ else {
 
 ## 6. ロールアウトアクティビティの有効化
 
-![alt 画像 ](assets/asset-activate-rollout.png)
+![alt 画像 &#x200B;](assets/asset-activate-rollout.png)
 
 ## 7.必要に応じたロールアウトとトラフィック割り当ての調整
 
@@ -165,4 +165,4 @@ else {
 
 最初のロールアウトが正常に行われるので、トラフィック割り当てを 10% から 50% に増やします。
 
-![alt 画像 ](assets/asset-adjust-rollout.png)
+![alt 画像 &#x200B;](assets/asset-adjust-rollout.png)

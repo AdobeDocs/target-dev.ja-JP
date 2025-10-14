@@ -120,7 +120,7 @@ curl -X POST \
 }
 ```
 
-応答内には、特定の `mbox` ーザーの訪問者に表示するエクスペリエンスを含む `content` フィールドが表示されます。 これは、サーバーにキャッシュされている場合に非常に便利です。訪問者がセッション内で web アプリケーションやモバイルアプリケーションを操作し、アプリケーションの特定のページで `mbox` を訪問すると、別の [!UICONTROL Adobe Target Delivery API] 呼び出しを行う代わりに、キャッシュからエクスペリエンスを配信できます。 ただし、エクスペリエンスが `mbox` ージから訪問者に配信されると、配信 API 呼び出しを介してエクスペリ `notification` ンスが送信され、インプレッションログが発生します。 これは、`prefetch` 呼び出しの応答がキャッシュされ、訪問者が `prefetch` 呼び出し発生時にエクスペリエンスを確認していないためです。 `notification` のプロセスについて詳しくは、[ 通知 ](notifications.md) を参照してください。
+応答内には、特定の `mbox` ーザーの訪問者に表示するエクスペリエンスを含む `content` フィールドが表示されます。 これは、サーバーにキャッシュされている場合に非常に便利です。訪問者がセッション内で web アプリケーションやモバイルアプリケーションを操作し、アプリケーションの特定のページで `mbox` を訪問すると、別の [!UICONTROL Adobe Target Delivery API] 呼び出しを行う代わりに、キャッシュからエクスペリエンスを配信できます。 ただし、エクスペリエンスが `mbox` ージから訪問者に配信されると、配信 API 呼び出しを介してエクスペリ `notification` ンスが送信され、インプレッションログが発生します。 これは、`prefetch` 呼び出しの応答がキャッシュされ、訪問者が `prefetch` 呼び出し発生時にエクスペリエンスを確認していないためです。 `notification` のプロセスについて詳しくは、[&#x200B; 通知 &#x200B;](notifications.md) を参照してください。
 
 ## [!UICONTROL Analytics for Target] を使用する際の `clickTrack` 指標を含む mbox のプリフェッチ（A4T）
 
@@ -169,7 +169,7 @@ curl -X POST \
 
 ## ビューをプリフェッチ
 
-ビューは、シングルページアプリケーション（SPA）とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、SPA エクスペリエンスまたはモバイルエクスペリエンスを構成するビジュアル要素の論理的なグループと見なすことができます。 これで、配信 API を通じて、VEC で作成した [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja){target=_blank} アクティビティと、[SPAのビュー ](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) に変更を加えた [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=ja){target=_blank} （X） T アクティビティをプリフェッチできるようになりました。
+ビューは、シングルページアプリケーション（SPA）とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、SPA エクスペリエンスまたはモバイルエクスペリエンスを構成するビジュアル要素の論理的なグループと見なすことができます。 これで、配信 API を通じて、VEC で作成した [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja){target=_blank} アクティビティと、[SPAのビュー &#x200B;](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) に変更を加えた [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=ja){target=_blank} （X） T アクティビティをプリフェッチできるようになりました。
 
 ```shell  {line-numbers="true"}
 curl -X POST \

@@ -21,20 +21,20 @@ ht-degree: 4%
 
 ## 導入
 
-Java SDK の使用を開始する方法については、[[!DNL Target] SDK 入門ガイド ](../sdk-guides/getting-started/getting-started.md) を参照してください。
+Java SDK の使用を開始する方法については、[[!DNL Target] SDK 入門ガイド &#x200B;](../sdk-guides/getting-started/getting-started.md) を参照してください。
 
 ## サンプルアプリ
 
 Java SDK のテストドライブ：
 
-* [[!DNL Adobe Target] [!UICONTROL on-device decisioning] デモサイトにアクセスする ](https://github.com/adobe/on-device-decisioning-demo-site)
-* [ サンプルアプリケーション ](../sdk-guides/sample-apps/sample-apps.md) の場合、
+* [[!DNL Adobe Target] [!UICONTROL on-device decisioning] デモサイトにアクセスする &#x200B;](https://github.com/adobe/on-device-decisioning-demo-site)
+* [&#x200B; サンプルアプリケーション &#x200B;](../sdk-guides/sample-apps/sample-apps.md) の場合、
 
 ## リファレンス
 
-Java SDK リファレンスドキュメントを読んで理解するには、[SDK のインストール ](install-sdk.md) から始めます。
+Java SDK リファレンスドキュメントを読んで理解するには、[SDK のインストール &#x200B;](install-sdk.md) から始めます。
 
 ## Source ファイル
 
-* [Java SDK Github リポジトリ ](https://github.com/adobe/target-java-sdk)
-* [ 変更ログ ](https://github.com/adobe/target-java-sdk/blob/master/CHANGELOG.md)
+* [Java SDK Github リポジトリ &#x200B;](https://github.com/adobe/target-java-sdk)
+* [&#x200B; 変更ログ &#x200B;](https://github.com/adobe/target-java-sdk/blob/master/CHANGELOG.md)

@@ -16,25 +16,25 @@ ht-degree: 5%
 
 ## 前提条件
 
-現在メンテナンスされている Node.js のバージョンはすべてサポートされています（LTS のバージョンも含む）。[Node.js リリース ](https://en.wikipedia.org/wiki/Node.js#Releases) を参照してください。
+現在メンテナンスされている Node.js のバージョンはすべてサポートされています（LTS のバージョンも含む）。[Node.js リリース &#x200B;](https://en.wikipedia.org/wiki/Node.js#Releases) を参照してください。
 
 ## 導入
 
-Node.js SDK の使用を開始する方法については、「[Target SDK 入門ガイド ](../sdk-guides/getting-started/getting-started.md)」を参照してください。
+Node.js SDK の使用を開始する方法については、「[Target SDK 入門ガイド &#x200B;](../sdk-guides/getting-started/getting-started.md)」を参照してください。
 
 ## サンプルアプリ
 
 Node.js SDK のテストドライブ：
 
-* [[!DNL Adobe Target]  オンデバイス判定デモサイト ](https://github.com/adobe/on-device-decisioning-demo-site) にアクセスします
-* [ サンプルアプリケーション ](../sdk-guides/sample-apps/sample-apps.md) の場合、
+* [[!DNL Adobe Target]  オンデバイス判定デモサイト &#x200B;](https://github.com/adobe/on-device-decisioning-demo-site) にアクセスします
+* [&#x200B; サンプルアプリケーション &#x200B;](../sdk-guides/sample-apps/sample-apps.md) の場合、
 
 ## リファレンス
 
-Node.js SDK リファレンスドキュメントを読んで理解するには、[SDK のインストール ](install-sdk.md) から始めます。
+Node.js SDK リファレンスドキュメントを読んで理解するには、[SDK のインストール &#x200B;](install-sdk.md) から始めます。
 
 ## Source ファイル
 
-* [Node.js SDK Github リポジトリ ](https://github.com/adobe/target-nodejs-sdk)
-* [ 変更ログ ](https://github.com/adobe/target-nodejs-sdk/blob/main/CHANGELOG.md)
+* [Node.js SDK Github リポジトリ &#x200B;](https://github.com/adobe/target-nodejs-sdk)
+* [&#x200B; 変更ログ &#x200B;](https://github.com/adobe/target-nodejs-sdk/blob/main/CHANGELOG.md)
 &#x200B;&#x200B;

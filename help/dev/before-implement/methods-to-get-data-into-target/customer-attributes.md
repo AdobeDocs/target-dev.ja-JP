@@ -43,8 +43,8 @@ Experience Cloud ID（ECID）の実装が必要です。
 
 ## コードの例
 
-詳しくは、[ 顧客属性ソースの作成とデータファイルのアップロード ](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=ja) を参照してください。
+詳しくは、[&#x200B; 顧客属性ソースの作成とデータファイルのアップロード &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=ja) を参照してください。
 
 ### 関連情報へのリンク
 
-[ 顧客属性ソースの作成とデータファイルのアップロード ](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=ja)。
+[&#x200B; 顧客属性ソースの作成とデータファイルのアップロード &#x200B;](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=ja)。

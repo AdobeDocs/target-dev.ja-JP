@@ -15,5 +15,5 @@ ht-degree: 0%
 
 ルールアーティファクトは、[!DNL Adobe Target] [!UICONTROL on-device decisioning] アクティビティの JSON 表現です。 ルールアーティファクトは [!DNL Target] によって生成され、Akamai CDN に伝播され、訪問者にできるだけ近いルールアーティファクトが使用可能であることを確認します。 ルールアーティファクトには、アクティビティの正確な実行と配信を保証し、イベントトラッキングを使用したリアルタイム分析も可能にするメタデータが含まれています。
 
-* ルールアーティファクトについて詳しくは、[ ここ ](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) をクリックしてください。
-* JSON ルールアーティファクトの例を表示するには、[ ここ ](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-example.md) をクリックします。
+* ルールアーティファクトについて詳しくは、[&#x200B; ここ &#x200B;](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) をクリックしてください。
+* JSON ルールアーティファクトの例を表示するには、[&#x200B; ここ &#x200B;](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-example.md) をクリックします。

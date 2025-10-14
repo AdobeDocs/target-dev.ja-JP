@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # at.js を使用した [!DNL Recommendations] 実装パターンの概要
 
-この実装パターンは、[!DNL Adobe Target Recommendations]at.js JavaScript library[ を使用する際に ](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md) 実装を理解し、作成するのに役立ちます。
+この実装パターンは、[!DNL Adobe Target Recommendations]at.js JavaScript library[&#x200B; を使用する際に &#x200B;](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md) 実装を理解し、作成するのに役立ちます。
 
 「画像」をクリックすると、フルスクリーンに展開できます。
 
-![Adobe Targetのアーキテクチャ図 ](/help/dev/patterns/assets/architecture-chart.png){width="600" zoomable="yes"}
+![Adobe Targetのアーキテクチャ図 &#x200B;](/help/dev/patterns/assets/architecture-chart.png){width="600" zoomable="yes"}
 
 画像内の数値は、操作のシーケンスを示すものではありません。
 

@@ -43,4 +43,4 @@ ht-degree: 20%
 
 ### グローバル mbox が読み込まれない理由や、ページの読み込み時にグローバル mbox の読み込みに遅延が発生する理由は何ですか？
 
-at.js の参照が、そのページでの最初のJavaScript呼び出しであることを確認します。 この問題に対する他の解決策については、[ グローバル mbox に関するよくある質問 ](/help/dev/implement/client-side/atjs/global-mbox/global-mbox-faq.md) を参照してください。
+at.js の参照が、そのページでの最初のJavaScript呼び出しであることを確認します。 この問題に対する他の解決策については、[&#x200B; グローバル mbox に関するよくある質問 &#x200B;](/help/dev/implement/client-side/atjs/global-mbox/global-mbox-faq.md) を参照してください。

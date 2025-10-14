@@ -15,11 +15,11 @@ ht-degree: 9%
 
 次世代の [!DNL Adobe Target] SDK で [!UICONTROL on-device decisioning] が提供されるようになりました。これにより、サーバー上の A/B およびエクスペリエンスターゲット （XT） キャンペーンをキャッシュし、[!DNL Adobe Target] のEdge Networkへのネットワークリクエストをブロックすることなく、ほぼゼロの待ち時間でインメモリ判定を実行できます。
 
-また、[!DNL Adobe Target] は、ライブサーバー呼び出しを介して、実験や機械学習によるパーソナライゼーションキャンペーンから最も関連性が高い最新のエクスペリエンスを提供する柔軟性も備えています。 つまり、パフォーマンスが最も重要な場合は、[!UICONTROL on-device decisioning] の機能を利用できますが、最も関連性が高く最新のエクスペリエンスが必要な場合は、代わりにサーバー呼び出しを行うことができます。 1 つを重ねて使用する必要があるユースケースについては、[ オンデバイス判定とエッジ判定を使用するタイミング ](../../sdk-guides/on-device-decisioning/supported-features.md) を参照してください。
+また、[!DNL Adobe Target] は、ライブサーバー呼び出しを介して、実験や機械学習によるパーソナライゼーションキャンペーンから最も関連性が高い最新のエクスペリエンスを提供する柔軟性も備えています。 つまり、パフォーマンスが最も重要な場合は、[!UICONTROL on-device decisioning] の機能を利用できますが、最も関連性が高く最新のエクスペリエンスが必要な場合は、代わりにサーバー呼び出しを行うことができます。 1 つを重ねて使用する必要があるユースケースについては、[&#x200B; オンデバイス判定とエッジ判定を使用するタイミング &#x200B;](../../sdk-guides/on-device-decisioning/supported-features.md) を参照してください。
 
 >[!NOTE]
 >
->オンデバイス判定は、クライアントサイド実装とサーバーサイド実装の両方で使用できます。 この記事では、サーバーサイドの [!UICONTROL on-device decisioning] について説明します。 クライアントサイドの [!UICONTROL on-device decisioning] について詳しくは、クライアントサイドの実装に関するドキュメント [ こちら ](../../../client-side/atjs/on-device-decisioning/on-device-decisioning.md) を参照してください。
+>オンデバイス判定は、クライアントサイド実装とサーバーサイド実装の両方で使用できます。 この記事では、サーバーサイドの [!UICONTROL on-device decisioning] について説明します。 クライアントサイドの [!UICONTROL on-device decisioning] について詳しくは、クライアントサイドの実装に関するドキュメント [&#x200B; こちら &#x200B;](../../../client-side/atjs/on-device-decisioning/on-device-decisioning.md) を参照してください。
 
 ## 仕組み
 
@@ -29,7 +29,7 @@ ht-degree: 9%
 
 （全幅に拡大するには、画像をクリックします）。
 
-![ オンデバイス判定アーキテクチャ図 ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/assets/asset-sdk-local-decisioning-architecture-diagram.png " オンデバイス判定アーキテクチャ図 "){zoomable="yes"}
+![&#x200B; オンデバイス判定アーキテクチャ図 &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/assets/asset-sdk-local-decisioning-architecture-diagram.png " オンデバイス判定アーキテクチャ図 "){zoomable="yes"}
 
 ## メリットは何ですか？
 
@@ -42,7 +42,7 @@ ht-degree: 9%
 
 ### アクティビティ
 
-オンデバイス判定では、[ フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja) で作成された次のアクティビティタイプをサポートしています。
+オンデバイス判定では、[&#x200B; フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja) で作成された次のアクティビティタイプをサポートしています。
 
 * [!UICONTROL A/B Test]
 * [!UICONTROL Experience Targeting] （XT）
@@ -62,14 +62,14 @@ ht-degree: 9%
 | [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=ja) | ○<P>オンデバイス判定を使用する場合、次の地域属性がサポートされます。<ul><li>国 / 地域</li><li>市区町村</li><li>緯度</li><li>経度</li></ul> |
 | [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=ja) | × |
 | [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=ja) | × |
-| [ カスタムパラメーター ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) | ○ |
+| [&#x200B; カスタムパラメーター &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) | ○ |
 | [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=ja) | ○ |
 | [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=ja) | ○ |
 | [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=ja) | ○ |
 | [訪問者プロファイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja) | × |
 | [トラフィックソース](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=ja) | × |
 | [時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=ja) | ○ |
-| [Experience Cloudオーディエンス ](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=ja) （Adobe Audience Manager、Adobe AnalyticsおよびAdobe Experience Managerのオーディエンス） | × |
+| [Experience Cloudオーディエンス &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=ja) （Adobe Audience Manager、Adobe AnalyticsおよびAdobe Experience Managerのオーディエンス） | × |
 
 ## [!UICONTROL on-device decisioning] を使用するようにクライアントをプロビジョニングするにはどうすればよいですか？
 
@@ -79,7 +79,7 @@ ht-degree: 9%
 >
 >[!UICONTROL On-Device Decisioning] の切り替えを有効または無効にするには、管理者または承認者 *ユーザーの役割* が必要です。
 
-![alt 画像 ](assets/asset-odd-toggle.png)
+![alt 画像 &#x200B;](assets/asset-odd-toggle.png)
 
 オンデバイス判定トグルを有効に [!DNL Adobe Target] ると、クライアントの *ルールアーティファクト* の生成と伝播が開始されます。
 
@@ -97,11 +97,11 @@ ht-degree: 9%
 
 アクティビティを作成すると、アクティビティの詳細ページに表示される **[!UICONTROL Decisioning Method]** というラベルが、そのアクティビティが [!UICONTROL on-device decisioning] 能かどうかを示します。
 
-![alt 画像 ](assets/asset-odd9.png)
+![alt 画像 &#x200B;](assets/asset-odd9.png)
 
 また、アクティビティのリストに列 **[!UICONTROL Decisioning Method]** を追加すると、**[!UICONTROL Activities]** ページで [!UICONTROL on-device decisioning] 能なすべてのアクティビティを表示することもできます。
 
-![alt 画像 ](assets/asset-odd7.png)
+![alt 画像 &#x200B;](assets/asset-odd7.png)
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ ht-degree: 9%
 1. コードに `getOffers()` または `getAttributes()` を実装して、オンデバイスでエクスペリエンスを取得します。
 1. コードのデプロイ。
 
-上記の手順 1～3 を開始する方法を示す例については、[ はじめに ](../getting-started/getting-started.md) の節を参照してください。
+上記の手順 1～3 を開始する方法を示す例については、[&#x200B; はじめに &#x200B;](../getting-started/getting-started.md) の節を参照してください。
 
 
 ## その他のリソース
@@ -148,8 +148,8 @@ ht-degree: 9%
 
 ### Adobeテクニカルブログ – パート 1:Edge Platform[!DNL Adobe Target] 実験とパーソナライゼーションをおこなうために NodeJS SDK を実行する（Akamai Edge Workers）
 
-[ ブログ投稿にアクセスするにはここをクリック ](https://medium.com/adobetech/part-1-run-adobe-target-nodejs-sdk-for-experimentation-and-personalization-on-edge-platforms-4d8660964ed9)。
+[&#x200B; ブログ投稿にアクセスするにはここをクリック &#x200B;](https://medium.com/adobetech/part-1-run-adobe-target-nodejs-sdk-for-experimentation-and-personalization-on-edge-platforms-4d8660964ed9)。
 
 ### Adobe Tech Blog - パート 2：Edge Platform で実験とパーソナライゼーションを行うために [!DNL Adobe Target] NodeJS SDK を実行する（AWS Lambda@Edge）
 
-[ ブログ投稿にアクセスするにはここをクリック ](https://medium.com/adobetech/part-2-run-adobe-target-nodejs-sdk-for-experimentation-and-personalization-on-edge-platforms-aws-4d6bdac24563)。
+[&#x200B; ブログ投稿にアクセスするにはここをクリック &#x200B;](https://medium.com/adobetech/part-2-run-adobe-target-nodejs-sdk-for-experimentation-and-personalization-on-edge-platforms-aws-4d6bdac24563)。

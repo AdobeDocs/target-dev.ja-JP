@@ -37,10 +37,10 @@ TargetClient.create(options)
 | ロガー | object | × | 情報ロガー |  | デフォルトの INFO ロガーを置き換えます |
 | target_location_hint | str | × | None | [!DNL Target] location hint |
 | property_token | str | × | None | [!DNL Target] プロパティトークン。 ここで指定した場合、すべての get_offers 呼び出しでこの値が使用されます。 |
-| decisioning_method | str | × | server-side | 使用する判定方法を決定します（[ オンデバイス ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、サーバーサイド、ハイブリッド） |
-| polling_interval | int | × | 300000 （5 分） | [ オンデバイス判定ルールアーティファクト ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) のポーリング間隔（ミリ秒） |
-| artifact_location | str | × | None | [ オンデバイス判定ルールアーティファクト ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) への完全修飾 URL。 内部的に決定された場所を上書きします。 |
-| artifact_payload | object | × | None | [ オンデバイス判定ルールアーティファクト ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) の JSON ペイロード。 指定した場合、URL からリクエストする代わりに使用されます。 |
+| decisioning_method | str | × | server-side | 使用する判定方法を決定します（[&#x200B; オンデバイス &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、サーバーサイド、ハイブリッド） |
+| polling_interval | int | × | 300000 （5 分） | [&#x200B; オンデバイス判定ルールアーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) のポーリング間隔（ミリ秒） |
+| artifact_location | str | × | None | [&#x200B; オンデバイス判定ルールアーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) への完全修飾 URL。 内部的に決定された場所を上書きします。 |
+| artifact_payload | object | × | None | [&#x200B; オンデバイス判定ルールアーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) の JSON ペイロード。 指定した場合、URL からリクエストする代わりに使用されます。 |
 | [events](sdk-events.md) | dict &lt;str, callable> | × | None | イベント名のキーとコールバック関数の値を含むオプションのオブジェクト |
 | environment_id | int | × | 実稼動 | [!DNL Target] 環境 ID |
 | 環境 | str | × | 実稼動 | [!DNL Target] 環境名 |

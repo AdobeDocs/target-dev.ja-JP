@@ -30,7 +30,7 @@ target_client_instance.get_attributes(mbox_names, options)
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
 | mbox_names | list[str] | ○ | None | mbox 名のリスト |
-| options | dict | × | None | [ オファーを取得 ](get-offers.md) に使用するオプションと同じ |
+| options | dict | × | None | [&#x200B; オファーを取得 &#x200B;](get-offers.md) に使用するオプションと同じ |
 
 ## AttributesProvider
 

@@ -52,4 +52,4 @@ mboxes = [MboxRequest(name="a1-serverside-ab", index=1)]
 return asyncio.run(get_target_delivery_response(mboxes)
 ```
 
-この例では、Python 3.9 以降を使用していることを前提としています。 古いバージョンの Python を使用している場合でも、`get_offers` に `options.callback` を渡すことで非同期リクエストを送信できます。 コールバックまたは async/await を使用した非同期実行について詳しくは、サンプル Flask アプリを参照してください [ こちら ](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py)。
+この例では、Python 3.9 以降を使用していることを前提としています。 古いバージョンの Python を使用している場合でも、`get_offers` に `options.callback` を渡すことで非同期リクエストを送信できます。 コールバックまたは async/await を使用した非同期実行について詳しくは、サンプル Flask アプリを参照してください [&#x200B; こちら &#x200B;](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py)。

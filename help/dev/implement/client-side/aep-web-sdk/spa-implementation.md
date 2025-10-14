@@ -19,7 +19,7 @@ ht-degree: 2%
 
 代わりに、単一ページアプリケーションなどの最新の web アプリケーションは、ブラウザー UI レンダリングの迅速な使用を推進するモデルを採用しています。これは、多くの場合、ページリロードに依存しません。 これらのエクスペリエンスは、スクロール、クリック、カーソル移動など、顧客のインタラクションによってトリガーされます。 最新の web のパラダイムが進化するにつれ、パーソナライゼーションと実験をデプロイするための、ページの読み込みなどの従来の汎用イベントの関連性は機能しなくなりました。
 
-![ 従来のページライフサイクルと比較した SPA のライフサイクルを示す図。](/help/dev/implement/client-side/aep-web-sdk/assets/spa-vs-traditional-lifecycle.png)
+![&#x200B; 従来のページライフサイクルと比較した SPA のライフサイクルを示す図。](/help/dev/implement/client-side/aep-web-sdk/assets/spa-vs-traditional-lifecycle.png)
 
 ## SPA 向け [!DNL Experience Platform Web SDK] のメリット
 
@@ -37,23 +37,23 @@ ht-degree: 2%
 
 ホームページに移動すると、ヒーロー画像がイースターの販売とサイトで利用可能な最新の製品を宣伝します。 この場合、ホーム画面全体に対して [!UICONTROL View] を定義できます。 この [!UICONTROL View] は単に「家」と呼んでもよいでしょう。
 
-![ ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像 ](/help/dev/implement/client-side/aep-web-sdk/assets/example-views.png)
+![&#x200B; ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/example-views.png)
 
 ビジネスで販売されている製品に対するお客様の関心が高まるにつれ、お客様は **製品** リンクをクリックすることにします。 ホームサイトと同様に、製品サイト全体を [!UICONTROL View] として定義できます。 この [!UICONTROL View] は、「products-all」という名前を付けることができます。
 
-![ ブラウザーウィンドウに、すべての製品が表示された単一ページアプリケーションのサンプル画像 ](/help/dev/implement/client-side/aep-web-sdk/assets/example-products-all.png)
+![&#x200B; ブラウザーウィンドウに、すべての製品が表示された単一ページアプリケーションのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/example-products-all.png)
 
 [!UICONTROL View] は、サイト全体またはサイト上の視覚要素のグループとして定義できるからです。 製品サイトに表示される 4 つの製品は、グループ化され、[!UICONTROL View] と見なすことができます。 このビューには、「products」という名前を付けることができます。
 
-![ ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像。表示例は製品です。](/help/dev/implement/client-side/aep-web-sdk/assets/example-products.png)
+![&#x200B; ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像。表示例は製品です。](/help/dev/implement/client-side/aep-web-sdk/assets/example-products.png)
 
 この場合、顧客が **さらに読み込む** ボタンをクリックしてサイト上のより多くの製品を参照することにしても、web サイトの URL は変更されません。 ただし、ここで [!UICONTROL View] を作成して、表示される 2 行目の製品のみを表すことができます。 [!UICONTROL View] の名前は「products-page-2」になります。
 
-![ ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像。追加のページに表示されるサンプル製品が含まれます。](/help/dev/implement/client-side/aep-web-sdk/assets/example-load-more.png)
+![&#x200B; ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像。追加のページに表示されるサンプル製品が含まれます。](/help/dev/implement/client-side/aep-web-sdk/assets/example-load-more.png)
 
 お客様は、サイトからいくつかの製品を購入することを決定し、チェックアウト画面に進みます。 チェックアウトサイトでは、顧客は通常の配信または速達を選択するオプションを提供されます。 [!UICONTROL View] は、サイト上の任意の視覚要素のグループにすることができ、配信環境設定用の [!UICONTROL View] を作成して「配信環境設定」と呼ぶこともできます。
 
-![ ブラウザーウィンドウに表示される単一ページアプリケーションのチェックアウトページのサンプル画像 ](/help/dev/implement/client-side/aep-web-sdk/assets/example-check-out.png)
+![&#x200B; ブラウザーウィンドウに表示される単一ページアプリケーションのチェックアウトページのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/example-check-out.png)
 
 [!UICONTROL Views] の概念は、このシナリオよりもはるかに拡張できます。 これらのシナリオは、サイトで定義できる [!UICONTROL Views] の例のほんの一部です。
 
@@ -90,7 +90,7 @@ ht-degree: 2%
 
 マーケティングチームは、ホームページ全体で A/B テストを実行したいと考えています。
 
-![ ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像 ](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-1.png)
+![&#x200B; ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-1.png)
 
 ホームサイト全体で A/B テストを実行するには、XDM `sendEvent()` を `viewName` に設定して `home` を呼び出す必要があります。
 
@@ -134,7 +134,7 @@ history.listen(onViewChange);
 
 マーケティングチームは、ユーザーが **さらに読み込む** をクリックした後で価格ラベルのカラーを赤に変更して、2 行目にある製品をパーソナライズしたいと考えています。
 
-![ パーソナライズされたオファーを表示する、ブラウザーウィンドウ内の単一ページアプリケーションのサンプル画像 ](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-2.png)
+![&#x200B; パーソナライズされたオファーを表示する、ブラウザーウィンドウ内の単一ページアプリケーションのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-2.png)
 
 ```jsx
 function onViewChange(viewName) { 
@@ -172,7 +172,7 @@ class Products extends Component {
 
 マーケティングチームは、「**高速配信**」が選択されている場合に、ボタンの色を青から赤に変更するかどうかを確認するために、A/B テストを実行します。 チームは、（両方の配信オプションでボタンの色を青に保つのではなく）この変更によってコンバージョンが向上すると考えています。
 
-![A/B テストを使用したブラウザーウィンドウ内の単一ページアプリケーションのサンプル画像 ](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-3.png)
+![A/B テストを使用したブラウザーウィンドウ内の単一ページアプリケーションのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-3.png)
 
 選択した配信環境設定に応じてサイトのコンテンツをパーソナライズするために、配信環境設定ごとに [!UICONTROL View] を作成できます。 **通常配信** が選択されている場合、[!UICONTROL View] ージに「checkout-normal」という名前を付けることができます。 **高速配信** が選択されている場合、[!UICONTROL View] ージに「checkout-express」という名前を付けることができます。
 
@@ -221,7 +221,7 @@ class Checkout extends Component {
 
 >[!NOTE]
 >
->SPA で VEC を使用するには、{Firefox[ または ](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)2}Chrome VEC Helper Extension[ をインストールして有効化する必要があります。](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)
+>SPA で VEC を使用するには、{Firefox[&#x200B; または &#x200B;](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)2}Chrome VEC Helper Extension[&#x200B; をインストールして有効化する必要があります。](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)
 
 ### [!UICONTROL Modifications] パネル
 
@@ -252,7 +252,7 @@ class Checkout extends Component {
 
 VEC でこれらの更新を行うには、「作成 **を選択し、その変更を「ホーム** ビューに適用します。
 
-![Visual Experience Composer のサンプルページ ](/help/dev/implement/client-side/aep-web-sdk/assets/vec-home.png)
+![Visual Experience Composer のサンプルページ &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/vec-home.png)
 
 ### 例 2：製品ラベルを変更する
 
@@ -266,7 +266,7 @@ VEC でこれらの更新を行うには、次の手順が必要です。
 4. VEC で「**作成**」を選択します。
 5. アクションを適用して、テキストラベルを **販売価格** に、カラーを赤に変更します。
 
-![ 製品ラベルを使用した Visual Experience Composer サンプルページ ](/help/dev/implement/client-side/aep-web-sdk/assets/vec-products-page-2.png)
+![&#x200B; 製品ラベルを使用した Visual Experience Composer サンプルページ &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/vec-products-page-2.png)
 
 ### 例 3：配信環境設定のスタイル設定をパーソナライズ
 
@@ -286,4 +286,4 @@ VEC でこれらの更新を行うには、次の手順が必要です。
 >
 >「チェックアウトエクスプレス」 [!UICONTROL View] は、「速達 [!UICONTROL Modifications] ラジオボタンが選択されるまで、**ールパネルに表示され** せん。 これは、`sendEvent()` 関数が、「高速配信 **&#x200B;**&#x200B;ラジオボタンが選択されたときに実行されるため、VEC は、ラジオボタンが選択されるまで「checkout-express」 [!UICONTROL View] を認識しません。
 
-![ 配信環境設定セレクターを表示する Visual Experience Composer。](/help/dev/implement/client-side/aep-web-sdk/assets/vec-delivery-preference.png)
+![&#x200B; 配信環境設定セレクターを表示する Visual Experience Composer。](/help/dev/implement/client-side/aep-web-sdk/assets/vec-delivery-preference.png)

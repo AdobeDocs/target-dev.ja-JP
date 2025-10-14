@@ -28,7 +28,7 @@ TargetAttributes TargetClient.GetAttributes(TargetDeliveryRequest targetRequest,
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | × | null | [ オファーを取得&#x200B;](get-offers.md) に使用するのと同じ [!DNL Target] リクエスト |
+| targetRequest | TargetDeliveryRequest | × | null | [&#x200B; オファーを取得&#x200B;](get-offers.md) に使用するのと同じ [!DNL Target] リクエスト |
 | mboxNames | params 文字列 [] | × | null | mbox 名のパラメーター配列 |
 
 ## 結果

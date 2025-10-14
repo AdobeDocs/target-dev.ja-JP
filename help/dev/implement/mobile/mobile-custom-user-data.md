@@ -19,7 +19,7 @@ ht-degree: 55%
 >
 >[!DNL Adobe Mobile] バージョン 4 のサポート。*x* SDK は 2021 年 8 月 31 日（PT）をもって終了し、[!DNL Adobe Target] モバイルユーザーには推奨されなくなりました。
 >
->[ モバイルアプリ用Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank} は、モバイルアプリで [!DNL Adobe Experience Cloud] のソリューションおよびサービスを強化するための推奨ソリューションです。
+>[&#x200B; モバイルアプリ用Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank} は、モバイルアプリで [!DNL Adobe Experience Cloud] のソリューションおよびサービスを強化するための推奨ソリューションです。
 
 この情報は、カスタムオーディエンス（例えば、25,000 マイルを超えたユーザー）の構築とレポートで使用できます。
 
@@ -69,6 +69,6 @@ ht-degree: 55%
 
       （全幅に拡大するには、画像をクリックします）。
 
-      ![ デバッグコンソールのターゲットの場所 ](/help/dev/implement/mobile/assets/mobile-debug.png " デバッグコンソールのターゲットの場所 "){zoomable="yes"}
+      ![&#x200B; デバッグコンソールのターゲットの場所 &#x200B;](/help/dev/implement/mobile/assets/mobile-debug.png " デバッグコンソールのターゲットの場所 "){zoomable="yes"}
 
    これらのパラメーターを [!DNL Target] 用して、オーディエンスを作成し、コンテンツの表示を制限またはターゲットにすることができます。

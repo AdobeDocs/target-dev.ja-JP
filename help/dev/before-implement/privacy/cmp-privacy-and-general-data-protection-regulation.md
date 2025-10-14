@@ -30,9 +30,9 @@ Adobe Experience Cloudではデータ管理者向けの GDPR に対応した API
 
 詳しくは、次を参照してください。
 
-* [AdobePrivacy Serviceの概要 ](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=ja)
-* [Privacy ServiceAPI ガイド ](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=ja)
-* [Privacy ServiceUI の概要 ](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=ja)
+* [AdobePrivacy Serviceの概要 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=ja)
+* [Privacy ServiceAPI ガイド &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=ja)
+* [Privacy ServiceUI の概要 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=ja)
 
 ## カリフォルニア州消費者プライバシー法（CCPA）の概要
 
@@ -53,7 +53,7 @@ Adobe Experience Cloudではデータ管理者向けの GDPR に対応した API
 
 ## Adobe TargetとAdobe Experience Platformのオプトイン
 
-Target では、お客様の同意管理戦略を支援できるように、Adobe Experience Platformのタグを介してオプトイン機能がサポートされています。 オプトイン機能を使用すると、Target タグを実行する方法とタイミングを制御できます。Adobe Experience Platformから Target タグを事前承認するオプションもあります。 の Target at.js ライブラリでオプトインを使用する機能を有効にするには、`targetGlobalSettings` を使用して、`optinEnabled=true` 設定を追加する必要があります。 Adobe Experience Platformで、拡張機能インストール表示の「GDPR オプトイン」ドロップダウンリストから「有効」を選択します。 詳しくは、[Adobe Experience Platformを使用した Target の実装 ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) を参照してください。
+Target では、お客様の同意管理戦略を支援できるように、Adobe Experience Platformのタグを介してオプトイン機能がサポートされています。 オプトイン機能を使用すると、Target タグを実行する方法とタイミングを制御できます。Adobe Experience Platformから Target タグを事前承認するオプションもあります。 の Target at.js ライブラリでオプトインを使用する機能を有効にするには、`targetGlobalSettings` を使用して、`optinEnabled=true` 設定を追加する必要があります。 Adobe Experience Platformで、拡張機能インストール表示の「GDPR オプトイン」ドロップダウンリストから「有効」を選択します。 詳しくは、[Adobe Experience Platformを使用した Target の実装 &#x200B;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) を参照してください。
 
 次のコードスニペットに、`optinEnabled=true` 設定を有効にする方法を示します。
 
@@ -119,7 +119,7 @@ Target を含むExperience Cloudソリューションに関する GDPR および
 
 ### データ主体/ユーザーのリクエストに応じてAdobeで顧客が削除できる情報には何がありますか？
 
-個々の訪問者に関する Target 内の情報は、Target 訪問者プロファイルに格納されています。顧客は Target を使用して、訪問者プロファイル内の特定 ID に関連づけられたすべてのデータを削除できます。 プロファイルデータターゲットストアの例については、[ 訪問者プロファイル ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja) を参照してください。
+個々の訪問者に関する Target 内の情報は、Target 訪問者プロファイルに格納されています。顧客は Target を使用して、訪問者プロファイル内の特定 ID に関連づけられたすべてのデータを削除できます。 プロファイルデータターゲットストアの例については、[&#x200B; 訪問者プロファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja) を参照してください。
 
 個人を特定しない集約化されたあるいは匿名化されたデータ（レポートデータなど）または特定の個人に関連しないデータ（コンテンツデータなど）は、ユーザーからの削除要請の範疇外となります。
 
@@ -147,7 +147,7 @@ GDPR および CCPA では、いつ同意の取得が必要となるかに関す
 
 Target では、お客様の同意管理戦略を支援できるように、Adobe Experience Platformを介してオプトイン機能がサポートされています。 オプトイン機能を使用すると、Target タグを実行する方法とタイミングを制御できます。Adobe Experience Platformから Target タグを事前承認するオプションもあります。 Adobe Experience Platformを使用したオプトインの管理は、推奨されるアプローチです。 Adobe Experience Platformではオプトインをきめ細かく制御でき、Target による処理が許可されるまでページ内の特定の要素を非表示にすることができるので、お客様の同意戦略の一環として役立ちます。
 
-GDPR、CCPA およびAdobe Experience Platformについて詳しくは、[Adobeプライバシーに関するJavaScript ライブラリと一般データ保護規則 ](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=ja&) を参照してください。 また、前述の *Adobe Target と Adobe Experience Platform のオプトイン*&#x200B;の節も参照してください。
+GDPR、CCPA およびAdobe Experience Platformについて詳しくは、[Adobeプライバシーに関するJavaScript ライブラリと一般データ保護規則 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=ja&) を参照してください。 また、前述の *Adobe Target と Adobe Experience Platform のオプトイン*&#x200B;の節も参照してください。
 
 ### `AdobePrivacy.js` は情報を GDPR API に送信しますか？
 

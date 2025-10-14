@@ -20,7 +20,7 @@ ht-degree: 13%
 
 ## アクティビティのタイプ
 
-次の表に、[ フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=ja) を使用して作成された [ アクティビティタイプ ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja&) が、[!UICONTROL on-device decisioning] でサポートされているかサポートされていないかを示します。
+次の表に、[&#x200B; フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=ja) を使用して作成された [&#x200B; アクティビティタイプ &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja&) が、[!UICONTROL on-device decisioning] でサポートされているかサポートされていないかを示します。
 
 | アクティビティタイプ | 対応 |
 | --- | --- |
@@ -43,14 +43,14 @@ ht-degree: 13%
 | [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=ja) | ○ |
 | [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=ja) | × |
 | [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=ja) | × |
-| [ カスタムパラメーター ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) | ○ |
+| [&#x200B; カスタムパラメーター &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) | ○ |
 | [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=ja) | ○ |
 | [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=ja) | ○ |
 | [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=ja) | ○ |
 | [訪問者プロファイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja) | × |
 | [トラフィックソース](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=ja) | × |
 | [時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=ja) | ○ |
-| [Experience Cloudオーディエンス ](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=ja) （Adobe Audience Manager、Adobe AnalyticsおよびAdobe Experience Managerのオーディエンス） | × |
+| [Experience Cloudオーディエンス &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=ja) （Adobe Audience Manager、Adobe AnalyticsおよびAdobe Experience Managerのオーディエンス） | × |
 
 ### [!UICONTROL on-device decisioning] のジオターゲティング
 
@@ -170,5 +170,5 @@ public class TargetRequestUtils {
 | 配分方法 | 対応 |
 | --- | --- |
 | 手動 | ○ |
-| [ 最適なエクスペリエンスへの自動配分 ](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html?lang=ja) | × |
-| [ パーソナライズされたエクスペリエンスの自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target-to-optimize.html?lang=ja) | × |
+| [&#x200B; 最適なエクスペリエンスへの自動配分 &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html?lang=ja) | × |
+| [&#x200B; パーソナライズされたエクスペリエンスの自動ターゲット &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-target-to-optimize.html?lang=ja) | × |

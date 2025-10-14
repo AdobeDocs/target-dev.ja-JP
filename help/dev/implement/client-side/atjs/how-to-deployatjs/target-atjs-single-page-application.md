@@ -317,7 +317,7 @@ at.js 2.x API を使用すると、様々な方法で [!DNL Target] 実装をカ
 
 >[!VIDEO](https://video.tv.adobe.com/v/35058/?quality=12&captions=jpn)
 
-詳しくは、[ シングルページアプリケーション（SPA）でのAdobe Targetの at.js 2.x の実装 ](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=ja) を参照してください。
+詳しくは、[&#x200B; シングルページアプリケーション（SPA）でのAdobe Targetの at.js 2.x の実装 &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=ja) を参照してください。
 
 ### [!DNL Adobe Target] でのSPA用 VEC の使用
 

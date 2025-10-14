@@ -47,7 +47,7 @@ https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046
 
 [!DNL Adobe Target] プロファイルは、独自の識別子（CRM ID、`uuid`、メンバーシップ番号など）で拡張できます。
 
-プロファイルに `thirdPartyId` を添付する方法については、[ プロファイルの更新 ](/help/dev/administer/profile-api/profile-api-overview.md) を参照してください。
+プロファイルに `thirdPartyId` を添付する方法については、[&#x200B; プロファイルの更新 &#x200B;](/help/dev/administer/profile-api/profile-api-overview.md) を参照してください。
 
 `thirdPartyId` を使用してプロファイルを取得するリクエストの形式の例を次に示します。
 
@@ -65,7 +65,7 @@ https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3r
 
 ## Authentication
 
-[!DNL Target Profile API] は、ここで説明するように、[!DNL Target] UI から認証をオンにすることで保護できます。 認証をオンにすると、すべてのプロファイル API リクエストのリクエストヘッダーにプロファイル認証トークンが設定される必要があります。 トークン自体は、[!DNL Target] UI を使用するか、前述の [ プロファイル認証トークン ](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} の節で説明している手順を使用して生成できます。
+[!DNL Target Profile API] は、ここで説明するように、[!DNL Target] UI から認証をオンにすることで保護できます。 認証をオンにすると、すべてのプロファイル API リクエストのリクエストヘッダーにプロファイル認証トークンが設定される必要があります。 トークン自体は、[!DNL Target] UI を使用するか、前述の [&#x200B; プロファイル認証トークン &#x200B;](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} の節で説明している手順を使用して生成できます。
 
 ## 計測
 

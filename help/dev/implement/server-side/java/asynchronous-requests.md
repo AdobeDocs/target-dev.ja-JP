@@ -73,6 +73,6 @@ public class TargetRestController {
 }
 ```
 
-この例では、SDK を [ 初期化 ](initialize-sdk.md) して Spring Bean とし、[ ユーティリティメソッド ](utility-methods.md) を使用できることを前提としています。
+この例では、SDK を [&#x200B; 初期化 &#x200B;](initialize-sdk.md) して Spring Bean とし、[&#x200B; ユーティリティメソッド &#x200B;](utility-methods.md) を使用できることを前提としています。
 
 [!DNL Target] リクエストは `simulateIO` の前に実行され、実行される時点で、ターゲット結果も準備が整っています。 そうでない場合でも、ほとんどの場合、大幅に節約できます。

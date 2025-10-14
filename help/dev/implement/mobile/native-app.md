@@ -16,7 +16,7 @@ ht-degree: 0%
 
 この記事では、[!DNL Adobe Experience Platform Mobile SDK] を使用して、ネイティブコードと web ビューを使用するモバイルアプリで [!DNL Adobe Target] を実装するためのベストプラクティスを共有します。
 
-この記事では、[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank} を使用したサンプル iOS アプリと、[GitHub リポジトリから Swift で記述された [!DNL Target] 統合を使用 ](https://github.com/adobe/aep-sdk-app/){target=_blank} ます。
+この記事では、[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank} を使用したサンプル iOS アプリと、[GitHub リポジトリから Swift で記述された [!DNL Target] 統合を使用 &#x200B;](https://github.com/adobe/aep-sdk-app/){target=_blank} ます。
 
 実際の世界では、エンタープライズアプリはモバイルアプリで web ビューを使用している可能性が高くなります。 Web ビューは、URL を使用して web ページを読み込むコンテナです。 コンテナは、コントロールのないブラウザーウィンドウに似ています。 iOSでは、web ビューコンテナは、web ページの処理時に Safari ブラウザーとして機能します。
 
@@ -43,7 +43,7 @@ Identity.appendTo(url: URL(string: url), completion: {appendedURL, error in
 });
 ```
 
-`Identity.appendTo` メソッドの詳細と、メソッドの使用方法の例については、*Mobile SDK ドキュメント* の [Swift/例 ](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank} を参照してください。
+`Identity.appendTo` メソッドの詳細と、メソッドの使用方法の例については、*Mobile SDK ドキュメント* の [Swift/例 &#x200B;](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank} を参照してください。
 
 この URL は、`Identity.appendTo` を使用します。
 
@@ -63,7 +63,7 @@ https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2&adobe_m
 * MCMID=69624092487065093697422606480535692677:[!UICONTROL Experience Cloud ID] （ECID）。 クロスソリューション訪問者の特定に必要な MID または [!UICONTROL Marketing Cloud ID] とも呼ば [!DNL Adobe] ます。
 * MCORGID=EB9CAE8B56E003697F000101@AdobeOrg: [!UICONTROL Adobe Organization ID]。
 
-`Identity.getUrlVariables` は、[!DNL Experience Cloud Identity Service] の URL 変数を含んだ適切な形式の文字列を返す代替 [!DNL Adobe Experience Platform Mobile SDK] メソッドです。 詳しくは、[Identity API リファレンス ](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} の *getUrlVariables* を参照してください。
+`Identity.getUrlVariables` は、[!DNL Experience Cloud Identity Service] の URL 変数を含んだ適切な形式の文字列を返す代替 [!DNL Adobe Experience Platform Mobile SDK] メソッドです。 詳しくは、[Identity API リファレンス &#x200B;](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} の *getUrlVariables* を参照してください。
 
 ## 同じセッションエクスペリエンスの [!DNL Target] セッション ID を渡す
 
@@ -79,7 +79,7 @@ Target.getSessionId { (id, err) in
 
 ## Web ビューでのテスト
 
-Web プレビューリンクは、[[!UICONTROL Adobe QA] リンクをクリックすると [!UICONTROL Activity detail] ページに生成され ](/help/dev/implement/mobile/target-mobile-preview.md) 次のように、各エクスペリエンスプレビューリンクをコピーするポップアップを表示します。
+Web プレビューリンクは、[[!UICONTROL Adobe QA] リンクをクリックすると [!UICONTROL Activity detail] ページに生成され &#x200B;](/help/dev/implement/mobile/target-mobile-preview.md) 次のように、各エクスペリエンスプレビューリンクをコピーするポップアップを表示します。
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

@@ -27,7 +27,7 @@ ht-degree: 64%
 
 * 最もコンバージョン率の高いランディングページの発見
 
-適切な設定を決定するためのヘルプについては、[JavaScript以外の実装 ](/help/dev/implement/email/overview.md) を参照してください。
+適切な設定を決定するためのヘルプについては、[JavaScript以外の実装 &#x200B;](/help/dev/implement/email/overview.md) を参照してください。
 
 ## リダイレクタの作成
 
@@ -52,7 +52,7 @@ ht-degree: 64%
 
    * `http%3A%2F%2Fwww%2Eyourcompany%2Ecom%2Fusualdestination%2Ehtm` はデフォルトの宛先です。
 
-     URL エンコードをおこない、絶対参照にする必要があります。[HTML URL エンコーディング参照 ](https://www.w3schools.com/tags/ref_urlencode.asp) を使用すると、URL をすばやくエンコードできます。
+     URL エンコードをおこない、絶対参照にする必要があります。[HTML URL エンコーディング参照 &#x200B;](https://www.w3schools.com/tags/ref_urlencode.asp) を使用すると、URL をすばやくエンコードできます。
 
    >[!WARNING]
    >

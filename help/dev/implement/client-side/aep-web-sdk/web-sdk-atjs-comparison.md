@@ -27,7 +27,7 @@ ht-degree: 5%
 
 事前ビルドバージョンは CDN で使用できます。 CDN のライブラリをページで直接参照するか、ダウンロードして独自のインフラストラクチャにホストすることができます。 縮小形式と非縮小形式で利用できます。 デバッグの目的では、非縮小バージョンが役立ちます。
 
-詳しくは [JavaScript ライブラリを使用した web SDKのインストール ](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/install/library) を参照してください。
+詳しくは [JavaScript ライブラリを使用した web SDKのインストール &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/install/library) を参照してください。
 
 ## ライブラリの設定
 
@@ -436,7 +436,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-`applyOffers` コマンドについて詳しくは、[ 専用ドキュメント ](https://experienceleague.adobe.com/ja/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2) を参照してください。
+`applyOffers` コマンドについて詳しくは、[&#x200B; 専用ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2) を参照してください。
 
 ### [!DNL Platform Web SDK] の使用
 
@@ -450,7 +450,7 @@ alloy("applyPropositions", {
 });
 ```
 
-`applyPropositions` コマンドについて詳しくは、[ 専用ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) を参照してください。
+`applyPropositions` コマンドについて詳しくは、[&#x200B; 専用ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) を参照してください。
 
 ## イベントの追跡方法
 
@@ -686,7 +686,7 @@ alloy("sendEvent", {
 
 ## [!UICONTROL Response Tokens] の活用方法
 
-[!DNL Target] から返されるPersonalization コンテンツには [ レスポンストークン ](https://experienceleague.adobe.com/ja/docs/target/using/administer/response-tokens) が含まれます。 応答トークンとは、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細のことです。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
+[!DNL Target] から返されるPersonalization コンテンツには [&#x200B; レスポンストークン &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/administer/response-tokens) が含まれます。 応答トークンとは、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細のことです。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
 
 ### at.js の使用
 
@@ -869,7 +869,7 @@ adobe.target.getOffers({
 }
 ```
 
-[!DNL Analytics] ペイロード（`tnta` トークン）は、[!DNL Analytics]Data Insertion API[ を使用して、](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) ヒットに含める必要があります。
+[!DNL Analytics] ペイロード（`tnta` トークン）は、[!DNL Analytics]Data Insertion API[&#x200B; を使用して、](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) ヒットに含める必要があります。
 
 #### [!DNL Analytics] サーバーサイドログ
 
@@ -877,9 +877,9 @@ adobe.target.getOffers({
 
 その後、データは次のようにフローします。
 
-![Analytics サーバーサイドログのワークフローを示す図 ](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
+![Analytics サーバーサイドログのワークフローを示す図 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
 
-[ 詳細情報 ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=ja)
+[&#x200B; 詳細情報 &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=ja)
 
 ### [!DNL Platform Web SDK] の使用
 
@@ -892,9 +892,9 @@ Web SDKは、次の項目もサポートしています。
 
 [!DNL Analytics] クライアントサイドログは、DataStream 設定で [!DNL Adobe Analytics] が無効になっている場合に有効になります。
 
-![Analytics クライアントサイドログのワークフローを示す図 ](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-disabled-datastream-config.png)
+![Analytics クライアントサイドログのワークフローを示す図 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-disabled-datastream-config.png)
 
-顧客は [!DNL Analytics] トークン（`tnta`）にアクセスできます。このトークンは、[!DNL Analytics]Data Insertion API[ を使用して ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) と共有する必要があります。`sendEvent` コマンドを連鎖し、結果として得られる提案配列を繰り返し処理します。
+顧客は [!DNL Analytics] トークン（`tnta`）にアクセスできます。このトークンは、[!DNL Analytics]Data Insertion API[&#x200B; を使用して &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) と共有する必要があります。`sendEvent` コマンドを連鎖し、結果として得られる提案配列を繰り返し処理します。
 
 **例**
 
@@ -929,7 +929,7 @@ alloy("sendEvent", {
 
 次の図は、クライアントサイドが有効な場合のデータフロー [!DNL Analytics] 示しています。
 
-![Analytics クライアントサイドログのデータフロー図 ](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-client-side-logging.png)
+![Analytics クライアントサイドログのデータフロー図 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-client-side-logging.png)
 
 #### [!DNL Analytics] サーバーサイドログ
 
@@ -941,7 +941,7 @@ alloy("sendEvent", {
 
 サーバーサイド分析ログが有効な場合のシステムへのデータのフローは次のとおりです。
 
-![ サーバーサイド分析ログのデータフローを示す図 ](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-server-side-logging.png)
+![&#x200B; サーバーサイド分析ログのデータフローを示す図 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-server-side-logging.png)
 
 ## グローバル設定 [!DNL Target] 設定方法
 
@@ -1151,7 +1151,7 @@ window.targetPageParams = function() {
 
 1. データストリーム設定ページで、[!DNL Target] のサードパーティ ID を含む名前空間を設定します。
 
-![ 「ターゲットサードパーティ ID 名前空間」フィールドを示すデータストリーム UI](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
+![&#x200B; 「ターゲットサードパーティ ID 名前空間」フィールドを示すデータストリーム UI](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
 
 1. 次のように、すべての `sendEvent` コマンドで、その ID 名前空間を送信します。
 
@@ -1259,7 +1259,7 @@ at.js ライブラリは、次のデバッグ機能を公開します。
 [!DNL Platform Web SDK] を使用する場合、複数のデバッグ機能があります。
 
 * [Assurance](https://experienceleague.adobe.com/ja/docs/experience-platform/assurance/home) の使用
-* [Web SDKのデバッグが有効になりました ](https://experienceleague.adobe.com/ja/docs/experience-platform/assurance/home)
-* [Web SDK モニタリングフック ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks) の使用
+* [Web SDKのデバッグが有効になりました &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/assurance/home)
+* [Web SDK モニタリングフック &#x200B;](https://github.com/adobe/alloy/wiki/Monitoring-Hooks) の使用
 * [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/ja/docs/experience-platform/debugger/home) の使用
 * ターゲット トレース

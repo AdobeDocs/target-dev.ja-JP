@@ -115,7 +115,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## ユーザーが [!DNL Adobe Target] から分析ペイロードを取得します
 
-ユーザーは、指定された mbox の [!DNL Adobe Analytics] ペイロードを取得し、[!DNL Adobe Analytics]Data Insertion API[ を介して ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) に送信できます。 [!DNL Adobe Target] リクエストが発生したら、`client_side` をリクエストの `logging` フィールドに渡します。 このリクエストは、[!DNL Analytics] をレポートソースとして使用しているアクティビティに指定された mbox が存在する場合、ペイロードを返します。
+ユーザーは、指定された mbox の [!DNL Adobe Analytics] ペイロードを取得し、[!DNL Adobe Analytics]Data Insertion API[&#x200B; を介して &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) に送信できます。 [!DNL Adobe Target] リクエストが発生したら、`client_side` をリクエストの `logging` フィールドに渡します。 このリクエストは、[!DNL Analytics] をレポートソースとして使用しているアクティビティに指定された mbox が存在する場合、ペイロードを返します。
 
 >[!BEGINTABS]
 

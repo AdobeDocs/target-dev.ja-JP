@@ -15,4 +15,4 @@ ht-degree: 0%
 
 [!UICONTROL Adobe User Management] および [!UICONTROL User Sync API] を使用して、ユーザーと製品の使用権限を管理します。
 
-詳しくは、*Adobe Developer[ web サイトの ](https://developer.adobe.com/umapi/){target=_blank} ユーザーと製品の使用権限の管理、API 方式* を参照してください。
+詳しくは、*Adobe Developer[&#x200B; web サイトの &#x200B;](https://developer.adobe.com/umapi/){target=_blank} ユーザーと製品の使用権限の管理、API 方式* を参照してください。

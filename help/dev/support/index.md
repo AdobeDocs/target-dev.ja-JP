@@ -21,7 +21,7 @@ ht-degree: 6%
 
 ### 開発者フォーラム
 
-[ はじめに ](https://adobe.io)
+[&#x200B; はじめに &#x200B;](https://adobe.io)
 
 コミュニティの専門家やAdobeスタッフとのオープンなディスカッションとサポート。
 
@@ -29,7 +29,7 @@ ht-degree: 6%
 
 地域全体のTutorialsやビデオ。
 
-[Experience フォーラム ](https://adobe.io)
+[Experience フォーラム &#x200B;](https://adobe.io)
 
 支援を受けたり他のユーザーを支援したりするためのフォーラム
 
@@ -37,11 +37,11 @@ ht-degree: 6%
 
 会話に参加する場所があります。
 
-![ スタック オーバーフロー ](stack-overflow.png)
+![&#x200B; スタック オーバーフロー &#x200B;](stack-overflow.png)
 
 ### スタック オーバーフロー
 
-[ 探索 ](https://adobe.io)
+[&#x200B; 探索 &#x200B;](https://adobe.io)
 
 特定のタグを使用した開発者 Q&amp;A。
 

@@ -38,7 +38,7 @@ ht-degree: 13%
 
 ## Server Side Delivery API
 
-リンク：[ サーバーサイド配信 API](/help/dev/implement/delivery-api/overview.md)
+リンク：[&#x200B; サーバーサイド配信 API](/help/dev/implement/delivery-api/overview.md)
 
 `/rest/v1/delivery`
 
@@ -66,12 +66,12 @@ ht-degree: 13%
 * ユーザーがビジネスに関与したチャネルやデバイスに関係なく、**機械学習（ML）駆動のパーソナライズされたエクスペリエンス** をユーザーに提供します。
 * **Adobe Experience Cloudとシームレスに統合** サーバー側から **Adobe Analytics**、**Adobe Audience Manager**、**Experience CloudID サービス** などの製品を利用できます。
 
-[ オンデバイス判定 ](sdk-guides/getting-started/getting-started.md) を使用して、シンプルな機能フラグ設定のユースケースを実行する方法については、[ はじめに ](sdk-guides/on-device-decisioning/overview.md) ページを参照してください。
+[&#x200B; オンデバイス判定 &#x200B;](sdk-guides/getting-started/getting-started.md) を使用して、シンプルな機能フラグ設定のユースケースを実行する方法については、[&#x200B; はじめに &#x200B;](sdk-guides/on-device-decisioning/overview.md) ページを参照してください。
 
-楽しく遊ぶには、[ サンプルアプリ ](sdk-guides/sample-apps/sample-apps.md) をチェックしてください。
+楽しく遊ぶには、[&#x200B; サンプルアプリ &#x200B;](sdk-guides/sample-apps/sample-apps.md) をチェックしてください。
 
 ## [!DNL Target Recommendations] API
 
-リンク：[Target Recommendations API](https://developers.adobetarget.com/api/recommendations) および [Adobe Recommendations API の概要 ](../../before-administer/recs-api/overview.md)。
+リンク：[Target Recommendations API](https://developers.adobetarget.com/api/recommendations) および [Adobe Recommendations API の概要 &#x200B;](../../before-administer/recs-api/overview.md)。
 
 Recommendations API を使用すると、[!DNL Target] Recommendations サーバーとプログラムによってやり取りできます。 これらの API は様々なアプリケーションスタックと統合して、通常 [!DNL Target] ユーザーインターフェイスからおこなわれる関数を実行できます。

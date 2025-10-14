@@ -39,7 +39,7 @@ TargetClient.getAttributes(mboxNames: Array, options: Object): Promise
 | --- | --- | --- |
 | getValue （mboxName, key） | 任意 | 指定された mbox 名と属性キーの値を返します |
 | asObject （mboxName） | オブジェクト | キーと値のペアを持つ単純な json オブジェクトを返します |
-| getResponse （） | [getOffers 応答 ](https://github.com/jasonwaters/target-nodejs-sdk#targetclientgetoffers) | 通常 `getOffers` によって返される応答オブジェクトを返します |
+| getResponse （） | [getOffers 応答 &#x200B;](https://github.com/jasonwaters/target-nodejs-sdk#targetclientgetoffers) | 通常 `getOffers` によって返される応答オブジェクトを返します |
 
 ## 例
 

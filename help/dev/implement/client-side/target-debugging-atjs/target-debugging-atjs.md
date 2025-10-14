@@ -17,20 +17,20 @@ ht-degree: 7%
 
 ライブラリ設定をすばやく表示したり、リクエストを調べてカスタムパラメーターが正しく渡されていることを確認したり、コンソールログをオンにしたり、すべての [!DNL Target] リクエストを無効にしたりできます。 [!DNL Experience Cloud] への認証をおこなうと、強力な mbox Trace ツールを使用して、アクティビティ、オーディエンスの選定、訪問者プロファイルを調べることができます。
 
-[Adobe Experience Cloud Debugger の概要 ](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=ja){target=_blank} を確認します。
+[Adobe Experience Cloud Debugger の概要 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=ja){target=_blank} を確認します。
 
 ## トレーニングビデオ
 
 次のビデオでは、デバッグプロセスの手順について説明しています。
 
-### Adobe Experience Cloud Debugger 拡張機能 ![ 概要バッジ ](../../assets/overview.png) を追加します
+### Adobe Experience Cloud Debugger 拡張機能 ![&#x200B; 概要バッジ &#x200B;](../../assets/overview.png) を追加します
 
 >[!VIDEO](https://video.tv.adobe.com/v/34063/?quality=12&captions=jpn)
 
-### Adobe Target Debugger を使用した基本的なAdobe Experience Cloudのデバッグ ![ 概要バッジ ](../../assets/overview.png)
+### Adobe Target Debugger を使用した基本的なAdobe Experience Cloudのデバッグ ![&#x200B; 概要バッジ &#x200B;](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/34064/?quality=12&captions=jpn)
 
-### Mbox Trace![ 概要バッジ ](../../assets/overview.png)
+### Mbox Trace![&#x200B; 概要バッジ &#x200B;](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/34065/?quality=12&captions=jpn)

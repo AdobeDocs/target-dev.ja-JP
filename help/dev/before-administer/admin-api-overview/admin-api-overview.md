@@ -12,17 +12,17 @@ ht-degree: 2%
 
 # Target 管理 API の概要
 
-この記事では、[!DNL Adobe Target Admin API] を正常に理解して使用するために必要な背景情報の概要を説明します。 次のコンテンツは、[!DNL Adobe Target Admin API]s の [ 認証を設定 ](../configure-authentication.md) する方法を理解していることを前提としています。
+この記事では、[!DNL Adobe Target Admin API] を正常に理解して使用するために必要な背景情報の概要を説明します。 次のコンテンツは、[!DNL Adobe Target Admin API]s の [&#x200B; 認証を設定 &#x200B;](../configure-authentication.md) する方法を理解していることを前提としています。
 
 >[!NOTE]
 >
->UI を使用して [!DNL Target] を管理する場合は、*Adobe Target ビジネス実践者ガイドの [ 管理*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=ja) の節を参照してください。
+>UI を使用して [!DNL Target] を管理する場合は、*Adobe Target ビジネス実践者ガイドの [&#x200B; 管理*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=ja) の節を参照してください。
 >
 >管理 API とプロファイル API は多くの場合、「管理 API とプロファイル API」と総称されますが、別に「管理 API」と「プロファイル API」とも呼ばれることもあります。 Recommendations API は、[!DNL Target] 管理 API の具体的な実装です。
 
 ## 始める前に
 
-[ 管理 API](../../administer/admin-api/admin-api-overview-new.md) に用意されているすべてのコード例で、{tenant} をテナント値に、`your-bearer-token` を JWT で生成するアクセストークンに、[Adobe Developer Console](https://developer.adobe.com/console/home) の API キーに `your-api-key` します。 テナントと JWT について詳しくは、管理 API を使用したAdobeの [ 認証の設定 ](../configure-authentication.md) 方法に関する記事を参照し [!DNL Target] ください。
+[&#x200B; 管理 API](../../administer/admin-api/admin-api-overview-new.md) に用意されているすべてのコード例で、{tenant} をテナント値に、`your-bearer-token` を JWT で生成するアクセストークンに、[Adobe Developer Console](https://developer.adobe.com/console/home) の API キーに `your-api-key` します。 テナントと JWT について詳しくは、管理 API を使用したAdobeの [&#x200B; 認証の設定 &#x200B;](../configure-authentication.md) 方法に関する記事を参照し [!DNL Target] ください。
 
 ## バージョン管理
 
@@ -56,7 +56,7 @@ ht-degree: 2%
 
 Admin Postman Collection
 
-Postmanは、API 呼び出しを簡単に実行できるアプリケーションです。 この [Target 管理 API Postman コレクション ](https://developers.adobetarget.com/api/#admin-postman-collection) には、アクティビティ、オーディエンス、オファー、レポート、Mbox および環境を使用した認証を必要とするすべての Target 管理 API 呼び出しが含まれています
+Postmanは、API 呼び出しを簡単に実行できるアプリケーションです。 この [Target 管理 API Postman コレクション &#x200B;](https://developers.adobetarget.com/api/#admin-postman-collection) には、アクティビティ、オーディエンス、オファー、レポート、Mbox および環境を使用した認証を必要とするすべての Target 管理 API 呼び出しが含まれています
 
 ## 応答コード
 
@@ -65,10 +65,10 @@ Target 管理 API の一般的な応答コードを次に示します。
 | ステータス | 意味 | 説明 |
 | --- | --- | --- |
 | 200 | [OK](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | OK |  |
-| 400 | [ 無効なリクエスト ](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | リクエストが正しくありません。 おそらく、リクエストで指定されたデータは無効です。 |  |
-| 401 | [ 未認証 ](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | ユーザーはこの操作を実行できません。 |  |
-| 403 | [ 禁止 ](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | このリソースへのアクセスは禁止されています。 |  |
-| 404 | [ 見つかりません ](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 参照されたリソースが見つかりませんでした。 |  |
+| 400 | [&#x200B; 無効なリクエスト &#x200B;](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | リクエストが正しくありません。 おそらく、リクエストで指定されたデータは無効です。 |  |
+| 401 | [&#x200B; 未認証 &#x200B;](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | ユーザーはこの操作を実行できません。 |  |
+| 403 | [&#x200B; 禁止 &#x200B;](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | このリソースへのアクセスは禁止されています。 |  |
+| 404 | [&#x200B; 見つかりません &#x200B;](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 参照されたリソースが見つかりませんでした。 |  |
 
 ## アクティビティ
 
@@ -78,7 +78,7 @@ Target 管理 API の一般的な応答コードを次に示します。
 * [エクスペリエンスのターゲット設定（XT）](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=ja)
 * [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=ja)
 * [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja)
-* [ 多変量分析テスト（MVT） ](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=ja)
+* [&#x200B; 多変量分析テスト（MVT） &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=ja)
 
 ## バッチ更新
 

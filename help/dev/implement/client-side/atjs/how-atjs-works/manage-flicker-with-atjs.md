@@ -33,13 +33,13 @@ ht-degree: 57%
 
 （全幅に拡大するには、画像をクリックします）。
 
-![ ターゲットフロー：at.js ページ読み込みリクエスト ](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png " ターゲットフロー：at.js ページ読み込みリクエスト "){zoomable="yes"}
+![&#x200B; ターゲットフロー：at.js ページ読み込みリクエスト &#x200B;](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png " ターゲットフロー：at.js ページ読み込みリクエスト "){zoomable="yes"}
 
 **at.js 1.*x***
 
 （全幅に拡大するには、画像をクリックします）。
 
-![ ターゲットフロー：自動作成されたグローバル mbox](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "arget フロー：自動作成されたグローバル mbox"){zoomable="yes"}
+![&#x200B; ターゲットフロー：自動作成されたグローバル mbox](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "arget フロー：自動作成されたグローバル mbox"){zoomable="yes"}
 
 `bodyHiddenStyle` オーバーライドについて詳しくは、「[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)」を参照してください。
 

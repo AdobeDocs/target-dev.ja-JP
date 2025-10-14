@@ -24,11 +24,11 @@ ht-degree: 28%
 1. **[!UICONTROL Administration]**／**[!UICONTROL Implementation]**&#x200B;をクリックします。
 1. スライド **[!UICONTROL Profile API]** 下で、**[!UICONTROL Require Authentication]** の切り替えを有効または無効の位置に切り替えます。
 
-   ![alt 画像 ](assets/profile_api_settings.png)
+   ![alt 画像 &#x200B;](assets/profile_api_settings.png)
 
 1. （条件付き）認証要件を有効にした場合は、「**[!UICONTROL Generate New Profile Authentication Token]**」をクリックします。
 
-   ![alt 画像 ](assets/profile_api_settings_2.png)
+   ![alt 画像 &#x200B;](assets/profile_api_settings_2.png)
 
    トークンの有効期限は、「有効期限」ボックスに表示されている時間によって決まります。
 
@@ -36,7 +36,7 @@ ht-degree: 28%
 
    * 管理者の役割または少なくとも承認者の権限がある
 
-     Target Standardのお客様の詳細については、「*ユーザー* の [ 役割と権限の指定 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=ja#roles-permissions) を参照してください。 [!DNL Target Premium]ユーザーの詳細については、[エンタープライズ権限の設定](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=ja)を参照してください。
+     Target Standardのお客様の詳細については、「*ユーザー* の [&#x200B; 役割と権限の指定 &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=ja#roles-permissions) を参照してください。 [!DNL Target Premium]ユーザーの詳細については、[エンタープライズ権限の設定](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=ja)を参照してください。
 
    * ワークスペース／製品プロファイルレベルでの管理者の役割
 
@@ -44,7 +44,7 @@ ht-degree: 28%
 
    * [!DNL Adobe Target]製品レベルの管理者権限（Sysadmin 権限）
 
-API を使用してプロファイル認証トークンを生成もできます。詳しくは、[Adobe Target管理者およびプロファイル API ガイド ](../../administer/admin-api/admin-api-overview-new.md) の「プロファイル」を参照してください。
+API を使用してプロファイル認証トークンを生成もできます。詳しくは、[Adobe Target管理者およびプロファイル API ガイド &#x200B;](../../administer/admin-api/admin-api-overview-new.md) の「プロファイル」を参照してください。
 
 1. トークンをコピーし、「Authorization」 : 「Bearer」の形式でリクエストのヘッダーに含めます。
 

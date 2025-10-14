@@ -36,7 +36,7 @@ ht-degree: 0%
 
    既存のパターンの改善や修正を提案するには、該当する記事の下部までスクロールして、フィードバックオプション モーダルを表示します。
 
-   ![Experience Leagueのフィードバックオプションモデル ](/help/dev/patterns/assets/feedback-options.png)
+   ![Experience Leagueのフィードバックオプションモデル &#x200B;](/help/dev/patterns/assets/feedback-options.png)
 
    >[!TIP]
    >

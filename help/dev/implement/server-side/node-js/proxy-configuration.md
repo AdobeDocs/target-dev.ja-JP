@@ -34,5 +34,5 @@ client = TargetClient.create({
 ```
 
 これは、ノードのデフォルト `fetch` であるノードバージョン 18.2 以降 `undici.fetch` のみ機能することに注意してください。
-[Node SDK サンプルリポジトリ ](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration) を参照してください。
+[Node SDK サンプルリポジトリ &#x200B;](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration) を参照してください。
 （古いバージョンのノードのプロキシ設定の例やその他詳細情報）。

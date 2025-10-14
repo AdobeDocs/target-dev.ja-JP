@@ -14,7 +14,7 @@ ht-degree: 5%
 
 ## 説明
 
-[SDK を初期化 ](initialize-sdk.md) する際に、`ClientConfig` オブジェクトにオプションの `OnDeviceDecisioningHandler` オブジェクトを指定できます。 SDK 内で発生する様々なイベントをサブスクライブするために使用できます。 例えば、`onDeviceDecisioningReady` イベントは、SDK がメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
+[SDK を初期化 &#x200B;](initialize-sdk.md) する際に、`ClientConfig` オブジェクトにオプションの `OnDeviceDecisioningHandler` オブジェクトを指定できます。 SDK 内で発生する様々なイベントをサブスクライブするために使用できます。 例えば、`onDeviceDecisioningReady` イベントは、SDK がメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
 
 ## Events
 

@@ -62,11 +62,11 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 
 1. [!DNL Experience Cloud] の [!DNL Target]UI に移動します。
 
-   ![alt 画像 ](assets/asset-target-ui-1.png)
+   ![alt 画像 &#x200B;](assets/asset-target-ui-1.png)
 
 1. **[!UICONTROL Administration]**/**[!UICONTROL Implementation]** に移動し、「**[!UICONTROL Generate New Authorization Token]**」をクリックします。
 
-   ![alt 画像 ](assets/asset-target-ui-2.png)
+   ![alt 画像 &#x200B;](assets/asset-target-ui-2.png)
 
 1. 新しく生成された認証トークンをクリップボードにコピーし、[!DNL Target]request に追加します。
 
@@ -139,19 +139,19 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 
 1. Experience Cloudの UI[!DNL Target] 移動します。
 
-   ![alt 画像 ](assets/asset-target-ui-1.png)
+   ![alt 画像 &#x200B;](assets/asset-target-ui-1.png)
 
 1. フォームベースの Experience Composer を使用して、新しい XT アクティビティを作成します。
 
-   ![alt 画像 ](assets/asset-form-base-composer-ui.png)
+   ![alt 画像 &#x200B;](assets/asset-form-base-composer-ui.png)
 
 1. [!DNL Target] リクエストで使用される mbox 名を XT アクティビティの場所として入力します（開発目的で特別に一意の mbox 名にする必要があります）。
 
-   ![alt 画像 ](assets/asset-mbox-location-ui.png)
+   ![alt 画像 &#x200B;](assets/asset-mbox-location-ui.png)
 
 1. コンテンツをHTMLオファーまたは JSON オファーに変更します。 これは、[!DNL Target] リクエストでアプリケーションに返されます。 アクティビティのターゲティングは「すべての訪問者」のままにし、必要な指標を選択します。 アクティビティに名前を付け、保存してからアクティブ化して、使用中の mbox/場所が開発専用であることを確認します。
 
-   ![alt 画像 ](assets/asset-target-content-ui.png)
+   ![alt 画像 &#x200B;](assets/asset-target-content-ui.png)
 
 1. アプリケーションに、リクエストからの応答で受信したコンテンツのログステートメント [!DNL Target] 追加します
 
@@ -239,7 +239,7 @@ client = TargetClient.create({
 
 ## 一般的なトラブルシューティングシナリオ
 
-問題が発生した場合は、[!UICONTROL on-device decisioning] に [ サポートされる機能 ](supported-features.md) を確認してください。
+問題が発生した場合は、[!UICONTROL on-device decisioning] に [&#x200B; サポートされる機能 &#x200B;](supported-features.md) を確認してください。
 
 ### サポートされていないオーディエンスまたはアクティビティが原因で、オンデバイス判定アクティビティが実行されない
 
@@ -282,7 +282,7 @@ client = TargetClient.create({
 
 オーディエンスで使用されるルールをレビューし、サポートされている前述のルールのみを使用するようにします。 さらに、アクティビティタイプが A/B または XT であることも確認します。
 
-![alt 画像 ](assets/asset-target-audience-ui.png)
+![alt 画像 &#x200B;](assets/asset-target-audience-ui.png)
 
 ### オーディエンスが選定されていないので、オンデバイス判定アクティビティが実行されない
 
@@ -474,7 +474,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 （4） `campaignId` をレビューして、実行を予定しているアクティビティが評価されていることを確認します。 この `campaignId` は、[!DNL Target]UI の「アクティビティの概要」タブのアクティビティ ID と一致します。
 
-![alt 画像 ](assets/asset-activity-id-target-ui.png)
+![alt 画像 &#x200B;](assets/asset-activity-id-target-ui.png)
 
 （5） `matchedRuleConditions` と `unmatchedRuleConditions` をレビューして、特定のアクティビティのオーディエンスルールの絞り込みに関する問題を特定します。
 

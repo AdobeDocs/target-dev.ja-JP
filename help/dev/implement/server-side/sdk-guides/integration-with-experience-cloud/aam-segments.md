@@ -57,7 +57,7 @@ Cookie は、リクエストと [!DNL Adobe Target] リクエスト [!DNL Adobe 
 
 #### Node.js
 
-このサンプルは、[express、Node.js web フレームワーク ](https://expressjs.com/) に基づいています。
+このサンプルは、[express、Node.js web フレームワーク &#x200B;](https://expressjs.com/) に基づいています。
 
 >[!BEGINTABS]
 
@@ -175,7 +175,7 @@ app.listen(3000, function () {
 
 #### Java
 
-このサンプルでは、[spring、Java web フレームワーク ](https://spring.io/) を使用します。
+このサンプルでは、[spring、Java web フレームワーク &#x200B;](https://spring.io/) を使用します。
 
 >[!BEGINTABS]
 
@@ -298,4 +298,4 @@ public class TargetClientService {
 
 >[!ENDTABS]
 
-`TargetRequestUtils.java` の詳細については、[ ユーティリティメソッド（Java） ](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html?lang=ja){target=_blank} を参照してください
+`TargetRequestUtils.java` の詳細については、[&#x200B; ユーティリティメソッド（Java） &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html?lang=ja){target=_blank} を参照してください

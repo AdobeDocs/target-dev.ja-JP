@@ -116,7 +116,7 @@ npm i @adobe/target-nodejs-sdk -P
 1. ここに示すように、**[!UICONTROL Administration]**/**[!UICONTROL Implementation]** に移動すると、[!DNL Adobe Target] からクライアントと `organizationId` の両方を取得できます。
 
    &lt;!— image-client-code.png を挿入 – >
-   ![alt 画像 ](assets/asset-rule-artifact-3.png)
+   ![alt 画像 &#x200B;](assets/asset-rule-artifact-3.png)
 
 ## 3. JSON ペイロードを保存して rse する
 

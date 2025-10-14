@@ -14,7 +14,7 @@ ht-degree: 5%
 
 ## 説明
 
-[SDK を初期化 ](initialize-sdk.md) する際に、オプションの `OnDeviceDecisioningReady` デリゲートを `TargetClientConfig` オブジェクトに指定できます。このオブジェクトは、SDK がオンデバイスメソッド呼び出しの準備ができたときに呼び出されます。 [!UICONTROL on-device decisioning] アーティファクトのダウンロードを処理するために使用できるその他のデリゲートもいくつかあります。
+[SDK を初期化 &#x200B;](initialize-sdk.md) する際に、オプションの `OnDeviceDecisioningReady` デリゲートを `TargetClientConfig` オブジェクトに指定できます。このオブジェクトは、SDK がオンデバイスメソッド呼び出しの準備ができたときに呼び出されます。 [!UICONTROL on-device decisioning] アーティファクトのダウンロードを処理するために使用できるその他のデリゲートもいくつかあります。
 
 ## Events
 

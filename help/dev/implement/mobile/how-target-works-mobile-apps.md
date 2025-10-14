@@ -18,15 +18,15 @@ ht-degree: 22%
 >
 >[!DNL Adobe Mobile] バージョン 4 のサポート。*x* SDK は 2021 年 8 月 31 日（PT）をもって終了し、[!DNL Adobe Target] モバイルユーザーには推奨されなくなりました。
 >
->[ モバイルアプリ用Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank} は、モバイルアプリで [!DNL Adobe Experience Cloud] のソリューションおよびサービスを強化するための推奨ソリューションです。
+>[&#x200B; モバイルアプリ用Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank} は、モバイルアプリで [!DNL Adobe Experience Cloud] のソリューションおよびサービスを強化するための推奨ソリューションです。
 
 ## [!DNL Target] の場所と成功指標
 
 *ターゲットの場所* はmboxとも呼ばれます。アプリで識別した場所は、テストとパーソナライゼーション（例えば、ホーム画面のようこそメッセージ）のために有効になります。これらの場所は、テスト作成プロセスの間に識別されます。
 
-*[成功指標 ](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=ja)* は、特定のアクティビティが成功したかどうか（新規登録、購入、チケットの予約など）を識別するためにユーザーが実行するアクションです。
+*[成功指標 &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=ja)* は、特定のアクティビティが成功したかどうか（新規登録、購入、チケットの予約など）を識別するためにユーザーが実行するアクションです。
 
-![alt 画像 ](assets/mobile-target-location.png)
+![alt 画像 &#x200B;](assets/mobile-target-location.png)
 
 * **[!DNL Target]location:** 登録ボタンの下に表示されるコンテンツ。
 
@@ -36,4 +36,4 @@ ht-degree: 22%
 
 **SDK での [!DNL Target] の仕組みについて**
 
-![alt 画像 ](assets/how-target-mobile-works.png)
+![alt 画像 &#x200B;](assets/how-target-mobile-works.png)

@@ -23,12 +23,12 @@ ht-degree: 12%
 | --- | --- |
 | [A/B テスト](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja) | ○ |
 | [自動配分](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html?lang=ja) | × |
-| [ 自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=ja)![Premium](../../../assets/premium.png) | × |
+| [&#x200B; 自動ターゲット &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=ja)![Premium](../../../assets/premium.png) | × |
 | [多変量分析テスト](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=ja) （MVT） | × |
 | [エクスペリエンスのターゲット設定](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=ja)（XT） | ○ |
 | [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja) ![Premium](../../../assets/premium.png) | × |
 | [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=ja) ![Premium](../../../assets/premium.png) | × |
-| [Analytics for Target を使用したアクティビティ ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja&) （A4T） | ○ |
+| [Analytics for Target を使用したアクティビティ &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja&) （A4T） | ○ |
 
 ## オーディエンスのターゲティング
 
@@ -97,5 +97,5 @@ window.adobe.target.getOffers({
 | 配分方法 | 対応? |
 | --- | --- |
 | 手動 | ○ |
-| [ 最適なエクスペリエンスへの自動配分 ](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html?lang=ja) | × |
-| [ パーソナライズされたエクスペリエンスの自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=ja) | × |
+| [&#x200B; 最適なエクスペリエンスへの自動配分 &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html?lang=ja) | × |
+| [&#x200B; パーソナライズされたエクスペリエンスの自動ターゲット &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=ja) | × |

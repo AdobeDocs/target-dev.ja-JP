@@ -19,7 +19,7 @@ ht-degree: 29%
 >
 >[!DNL Adobe Mobile] バージョン 4 のサポート。*x* SDK は 2021 年 8 月 31 日（PT）をもって終了し、[!DNL Adobe Target] モバイルユーザーには推奨されなくなりました。
 >
->[ モバイルアプリ用Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank} は、モバイルアプリで [!DNL Adobe Experience Cloud] のソリューションおよびサービスを強化するための推奨ソリューションです。
+>[&#x200B; モバイルアプリ用Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/){target=_blank} は、モバイルアプリで [!DNL Adobe Experience Cloud] のソリューションおよびサービスを強化するための推奨ソリューションです。
 
 1. Adobe Mobile Services SDK がアプリにインストールされていない場合は、Analytics またはExperience Cloudの資格情報を使用し、[Adobe Mobile Services](https://mobilemarketing.adobe.com/) Web サイトから SDK をダウンロードします。
 
@@ -33,11 +33,11 @@ ht-degree: 29%
 
    [!DNL Target] クライアントコードとタイムアウトを追加します。 クライアントコードは、それぞれのアカウントまたは会社で一意になります。タイムアウトは、デフォルトのコンテンツを表示 [!DNL Target] るまで応答を待機する時間（秒単位）です。 AdobeMobile Services のアプリ設定を管理ページで「**[!UICONTROL Use HTTPS]**」オプションがオンになっていることを確認します。 HTTPS が有効になっていない場合、[!DNL Target] サーバーをiOSしない限り、許可リストに加える9+でのすべての呼び出しはブロックされます。
 
-   ![alt 画像 ](assets/mobile-clientcode.png)
+   ![alt 画像 &#x200B;](assets/mobile-clientcode.png)
 
 1. アプリを作成または配置したら、アプリ設定を見つけて、目的の SDK をダウンロードします。
 
-   ![alt 画像 ](assets/download-sdk.png)
+   ![alt 画像 &#x200B;](assets/download-sdk.png)
 
 >[!WARNING]
 >

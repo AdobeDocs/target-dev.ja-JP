@@ -64,7 +64,7 @@ TargetDeliveryRequest.Builder TargetDeliveryRequest.Builder()
 | trackingServerSecure | 文字列 | × | [!DNL Adobe Target] と [!DNL Adobe Analytics] がデータを正しく結び付けるための [!UICONTROL Adobe Analytics Secure Server]。 |
 | decisioningMethod | DecisioningMethod | × | オンデバイス判定のために ON_DEVICE または HYBRID Decisioning メソッドを明示的に設定する場合に使用できます |
 
-各フィールドの値は、[ ターゲット配信 API](/help/dev/implement/delivery-api/overview.md) リクエストの仕様に準拠する必要があります。
+各フィールドの値は、[&#x200B; ターゲット配信 API](/help/dev/implement/delivery-api/overview.md) リクエストの仕様に準拠する必要があります。
 
 ## 応答
 
@@ -72,8 +72,8 @@ TargetDeliveryRequest.Builder TargetDeliveryRequest.Builder()
 
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
-| リクエスト | TargetDeliveryRequest &#x200B; | [ ターゲット配信 API](/help/dev/implement/delivery-api/overview.md) リクエスト |
-| 応答 | DeliveryResponse&#x200B; | [ ターゲット配信 API](/help/dev/implement/delivery-api/overview.md)*応答 |
+| リクエスト | TargetDeliveryRequest &#x200B; | [&#x200B; ターゲット配信 API](/help/dev/implement/delivery-api/overview.md) リクエスト |
+| 応答 | DeliveryResponse&#x200B; | [&#x200B; ターゲット配信 API](/help/dev/implement/delivery-api/overview.md)*応答 |
 | ステータス | HttpStatusCode | 応答 HTTP ステータスコード |
 | メッセージ | string | 応答ステータスメッセージまたはエラーメッセージ |
 | 場所 | 場所 | [!DNL Target] ロケーション名（グローバル mbox 名および remote decisioning のみ使用可能な mbox/ビューを含む） |

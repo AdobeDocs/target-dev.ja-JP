@@ -14,12 +14,12 @@ ht-degree: 0%
 
 ルールアーティファクトは、[!DNL Adobe Target] [!UICONTROL on-device decisioning] アクティビティの JSON 表現です。 ルールは [!DNL Adobe Target] によって生成され、Akamai CDN に伝播されて、エンドユーザーにできるだけ近いルールアーティファクトが提供されるようにします。 アクティビティの正確な実行と配信を保証すると同時に、イベントトラッキングによるリアルタイム分析を可能にするメタデータが含まれています。 [!DNL Adobe Target] SDK は、ルールアーティファクトを自動管理できる方法で設定できます。これにより、ユーザー指定の時間間隔に従って SDK をダウンロードまたは更新できます。 さらに、[Memcached](https://memcached.org/) などの分散メモリキャッシュシステムを使用して、ルールアーティファクトの独自のローカルコピーを維持し、[!DNL Adobe Target] SDK を初期化することもできます。これにより、ステートレスサーバーがリクエストをすぐに処理できます。 これらのオプションについて詳しくは、次のガイドを参照してください。
 
-* [ [!DNL Adobe Target] SDK を使用したルールアーティファクトの自動ダウンロード、保存および更新](rule-artifact-sdk.md)
+* [&#x200B; [!DNL Adobe Target] SDK を使用したルールアーティファクトの自動ダウンロード、保存および更新](rule-artifact-sdk.md)
 * [JSON ペイロードを使用したルールアーティファクトのダウンロード、保存、更新](rule-artifact-json.md)
 
 ## ルールアーティファクトの例
 
-[ ルールアーティファクト ](rule-artifact-example.md) の例については、ここをクリックしてください。
+[&#x200B; ルールアーティファクト &#x200B;](rule-artifact-example.md) の例については、ここをクリックしてください。
 
 ## クライアントのルールアーティファクトの表示方法
 
@@ -28,12 +28,12 @@ ht-degree: 0%
 1. Target UI に移動します。
 
    &lt;!— image-target-ui-1.png の挿入 – >
-   ![alt 画像 ](assets/asset-rule-artifact-1.png)
+   ![alt 画像 &#x200B;](assets/asset-rule-artifact-1.png)
 
 1. **[!UICONTROL Administration]**/**[!UICONTROL Implementation]** に移動し、「**[!UICONTROL Generate New Authorization Token]**」をクリックします。
 
    &lt;!— image-target-ui-2.png の挿入 – >
-   ![alt 画像 ](assets/asset-rule-artifact-2.png)
+   ![alt 画像 &#x200B;](assets/asset-rule-artifact-2.png)
 
 1. 新しく生成された認証トークンをクリップボードにコピーし、Target リクエストに追加します。
 

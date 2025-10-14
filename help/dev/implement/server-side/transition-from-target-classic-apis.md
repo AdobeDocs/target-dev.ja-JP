@@ -17,14 +17,14 @@ ht-degree: 38%
 
 [!DNL Adobe Target Classic] の廃止措置により、[!DNL Target Classic] アカウントに接続されている API も使用できなくなりました。 この記事は、[!DNL Target Classic] API ベースの統合を、[[!DNL Adobe Developer Console]](https://developer.adobe.com/console/home) を使用した [!DNL Target] API に移行する際に役立ちます。
 
-[!DNL Target] API について詳しくは、[[!DNL Target] API](/help/dev/before-administer/target-api-overview.md) を参照してください。 [!DNL Target] SDK について詳しくは、[[!DNL Target]  サーバーサイド実装 ](/help/dev/implement/server-side/server-side-overview.md) を参照してください
+[!DNL Target] API について詳しくは、[[!DNL Target] API](/help/dev/before-administer/target-api-overview.md) を参照してください。 [!DNL Target] SDK について詳しくは、[[!DNL Target]  サーバーサイド実装 &#x200B;](/help/dev/implement/server-side/server-side-overview.md) を参照してください
 
 ## 用語
 
 | 用語 | 説明 |
 |--- |--- |
 | クラシック API | [!DNL Target Classic] アカウントにリンクされている API。 これらの API の呼び出しは、ユーザー名とパスワードによる認証に基づいており、ホスト名は `testandtarget.omniture.com` を使用します。API 呼び出しにリクエスト URL にユーザー名とパスワードが含まれている場合は、[!DNL Adobe Developer Console] の API に移行する必要があります。 |
-| [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/home) | [!DNL Adobe Developer Console] は、[!DNL Target] API のゲートウェイです。 これらの API は [!DNL Target Standard/Premium] アカウントに接続されています。 [!DNL Adobe Developer Console] 上の [!DNL Target] API は、安全なエンタープライズ API の業界標準である [JWT ベースの認証 ](../../before-administer/configure-authentication.md) を使用しています。 |
+| [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/home) | [!DNL Adobe Developer Console] は、[!DNL Target] API のゲートウェイです。 これらの API は [!DNL Target Standard/Premium] アカウントに接続されています。 [!DNL Adobe Developer Console] 上の [!DNL Target] API は、安全なエンタープライズ API の業界標準である [JWT ベースの認証 &#x200B;](../../before-administer/configure-authentication.md) を使用しています。 |
 
 ## 今後の予定
 
@@ -57,7 +57,7 @@ ht-degree: 38%
 |  | オファーリスト | [オファーのリスト](https://developers.adobetarget.com/api/#list-offers) |  |
 |  | フォルダーリスト | 該当なし | [!DNL Target Standard/Premium] ではフォルダーはサポートされていません |
 | レポート | キャンペーンのパフォーマンスレポート | [AB パフォーマンスレポートの取得](https://developers.adobetarget.com/api/#get-ab-performance-report)<P>[XT パフォーマンスレポートの取得](https://developers.adobetarget.com/api/#get-xt-performance-report) |  |
-|  | 監査レポート | [ 監査レポートの取得 ](https://developers.adobetarget.com/api/#get-audit-report) |  |
+|  | 監査レポート | [&#x200B; 監査レポートの取得 &#x200B;](https://developers.adobetarget.com/api/#get-audit-report) |  |
 |  | 1:1 コンテンツレポート | [AP パフォーマンスレポートの取得](https://developers.adobetarget.com/api/#get-ap-activity-performance-report) |  |
 | アカウントの設定 | ホストグループの取得 | [環境のリスト](https://developers.adobetarget.com/api/#list-environments) |  |
 

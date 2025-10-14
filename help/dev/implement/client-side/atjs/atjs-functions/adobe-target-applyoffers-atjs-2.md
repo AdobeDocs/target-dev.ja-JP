@@ -28,7 +28,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->以下に示すすべてのフィールドで使用可能なタイプについて詳しくは、[ 配信 API ドキュメント ](/help/dev/implement/delivery-api/overview.md) を参照してください。
+>以下に示すすべてのフィールドで使用可能なタイプについて詳しくは、[&#x200B; 配信 API ドキュメント &#x200B;](/help/dev/implement/delivery-api/overview.md) を参照してください。
 
 | フィールド名 | 説明 |
 | --- | --- |
@@ -116,7 +116,7 @@ adobe.target.getOffers({...})
 .catch(error => console.log("Error", error));
 ```
 
-getOffers （）の使用方法のその他の例については、getOffers [ ドキュメントを参照してください ](adobe-target-getoffers-atjs-2.md)
+getOffers （）の使用方法のその他の例については、getOffers [&#x200B; ドキュメントを参照してください &#x200B;](adobe-target-getoffers-atjs-2.md)
 
 ### ページ読み込みリクエストの例
 

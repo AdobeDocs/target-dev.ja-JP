@@ -40,10 +40,10 @@ TargetClient.create(options: Object): TargetClient
 | targetLocationHint | 文字列 | × | None | ターゲットの場所のヒント |
 | fetchApi | 関数 | × | global.fetch または window.fetch | [fetch](https://fetch.spec.whatwg.org/) は、SDK で http リクエストに使用されます。 デフォルトでは、node-fetch またはブラウザー実装の fetch が使用されます。 ただし、`fetchApi` を使用して代替実装を指定することもできます |
 | propertyToken | 文字列 | × | None | **ターゲットプロパティトークン**。 ここで指定した場合、すべての `getOffers` 呼び出しでこの値が使用されます。 **オンデバイス判定の場合**、SDK は、`propertyToken` で設定されたプロパティトークンの対象アクティビティを含んだアーティファクトのみをダウンロードします |
-| decisioningMethod | 文字列 | × | server-side | 使用する判定方法を決定します（[ オンデバイス ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、サーバーサイド、ハイブリッド） |
-| pollingInterval | 数値 | × | 300000 （5 分） | [ オンデバイス判定ルールアーティファクト ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) のポーリング間隔（ミリ秒） |
-| artifactLocation | 文字列 | × | None | [ オンデバイス判定ルールアーティファクト ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) への完全修飾 URL。 内部的に決定された場所を上書きします。 |
-| artifactPayload | オブジェクト | × | None | [ オンデバイス判定ルールアーティファクト ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) の JSON ペイロード。 指定した場合、URL からリクエストする代わりに使用されます。 |
+| decisioningMethod | 文字列 | × | server-side | 使用する判定方法を決定します（[&#x200B; オンデバイス &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、サーバーサイド、ハイブリッド） |
+| pollingInterval | 数値 | × | 300000 （5 分） | [&#x200B; オンデバイス判定ルールアーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) のポーリング間隔（ミリ秒） |
+| artifactLocation | 文字列 | × | None | [&#x200B; オンデバイス判定ルールアーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) への完全修飾 URL。 内部的に決定された場所を上書きします。 |
+| artifactPayload | オブジェクト | × | None | [&#x200B; オンデバイス判定ルールアーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) の JSON ペイロード。 指定した場合、URL からリクエストする代わりに使用されます。 |
 | [events](sdk-events.md) | Object&lt;String,Function> | × | None | イベント名のキーとコールバック関数の値を含むオプションのオブジェクト |
 | telemetryEnabled | ブール値 | × | true | 有効化すると、Adobeは SDK 機能の使用状況とパフォーマンスのテレメトリデータを収集します。 個人データは収集されません。  |
 

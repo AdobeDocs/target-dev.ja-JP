@@ -19,20 +19,20 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->この記事に加えて、[Adobe Target ビジネス実践者ガイド ](https://experienceleague.adobe.com/ja/docs/target/using/target-home){target=_blank} には [Target Recommendations](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/recommendations){target=_blank} に関する詳細が含まれています。
+>この記事に加えて、[Adobe Target ビジネス実践者ガイド &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/target-home){target=_blank} には [Target Recommendations](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/recommendations){target=_blank} に関する詳細が含まれています。
 
 [!DNL Adobe Target] で最初の [!UICONTROL Recommendations] アクティビティを設定する前に、次の手順を実行します。
 
-1. [ ユーザーの行動のキャプチャとレコメンデーションの配信に使用する [!UICONTROL Target]](#implement-target) を web およびモバイルアプリのサーフェスに実装します。
-1. ユーザーにレコメンデーションする製品またはコンテンツの [[!UICONTROL Recommendations] カタログを設定 ](#set-up-your-recommendations-catalog) します。
-1. [ 行動情報とコンテキストを渡す ](#pass-behavioral-information-and-context) を [!DNL Target Recommendations] に渡して、パーソナライズされたレコメンデーションを提供できるようにします。
-1. [ グローバル除外を設定 ](#configure-global-exclusions) します。
-1. [[!UICONTROL Recommendations] 設定を構成します ](#configure-recommendations-settings)。
-1. （任意） [ 管理 API を使用して [!UICONTROL Recommendations] を管理します ](#administer-recommendations-using-admin-apis)。
+1. [&#x200B; ユーザーの行動のキャプチャとレコメンデーションの配信に使用する [!UICONTROL Target]](#implement-target) を web およびモバイルアプリのサーフェスに実装します。
+1. ユーザーにレコメンデーションする製品またはコンテンツの [[!UICONTROL Recommendations] カタログを設定 &#x200B;](#set-up-your-recommendations-catalog) します。
+1. [&#x200B; 行動情報とコンテキストを渡す &#x200B;](#pass-behavioral-information-and-context) を [!DNL Target Recommendations] に渡して、パーソナライズされたレコメンデーションを提供できるようにします。
+1. [&#x200B; グローバル除外を設定 &#x200B;](#configure-global-exclusions) します。
+1. [[!UICONTROL Recommendations] 設定を構成します &#x200B;](#configure-recommendations-settings)。
+1. （任意） [&#x200B; 管理 API を使用して [!UICONTROL Recommendations] を管理します &#x200B;](#administer-recommendations-using-admin-apis)。
 
 ## 1. [!UICONTROL Target] の実装
 
-[!DNL Target Recommendations] では、[!DNL Adobe Experience Platform Web SDK] または at.js 0.9.2 （以降）を実装する必要があります。 詳しくは、[[!UICONTROL Target] クライアントサイド実装ガイド ](../client-side/overview.md) 参照してください。
+[!DNL Target Recommendations] では、[!DNL Adobe Experience Platform Web SDK] または at.js 0.9.2 （以降）を実装する必要があります。 詳しくは、[[!UICONTROL Target] クライアントサイド実装ガイド &#x200B;](../client-side/overview.md) 参照してください。
 
 ## 2. [!UICONTROL Recommendations] カタログを設定する
 
@@ -46,9 +46,9 @@ ht-degree: 20%
 
 | メソッド | 概要 | 使用するタイミング | 追加情報 |
 | --- | --- | --- | --- |
-| カタログフィード | アップロードして毎日取り込むフィード（CSV、[!DNL Google] Product XML または [!UICONTROL Analytics Product Classifications]）のスケジュールを設定します。 | 一度に複数の項目に関する情報を送信する場合。 変更の頻度が低い情報を送信する。 | [ フィード ](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/entities/feeds) を参照してください。 |
-| エンティティ API | API を呼び出して、1 つの項目の最新の最新情報を送信します。 | 一度に 1 つの項目に関する更新を送信する場合。 頻繁に変更される情報（価格、在庫/在庫レベルなど）の送信。 | 詳しくは、[Entities API 開発者向けドキュメント ](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) を参照してください。 |
-| ページで更新を渡す | ページ上でJavaScriptを使用するか、配信 API を使用して、1 つの項目に関する最新の情報を送信します。 | 一度に 1 つの項目に関する更新を送信する場合。 頻繁に変更される情報（価格、在庫/在庫レベルなど）の送信。 | 以下の [ 項目表示/製品ページ ](#item-views-or-product-pages) を参照してください。 |
+| カタログフィード | アップロードして毎日取り込むフィード（CSV、[!DNL Google] Product XML または [!UICONTROL Analytics Product Classifications]）のスケジュールを設定します。 | 一度に複数の項目に関する情報を送信する場合。 変更の頻度が低い情報を送信する。 | [&#x200B; フィード &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/entities/feeds) を参照してください。 |
+| エンティティ API | API を呼び出して、1 つの項目の最新の最新情報を送信します。 | 一度に 1 つの項目に関する更新を送信する場合。 頻繁に変更される情報（価格、在庫/在庫レベルなど）の送信。 | 詳しくは、[Entities API 開発者向けドキュメント &#x200B;](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) を参照してください。 |
+| ページで更新を渡す | ページ上でJavaScriptを使用するか、配信 API を使用して、1 つの項目に関する最新の情報を送信します。 | 一度に 1 つの項目に関する更新を送信する場合。 頻繁に変更される情報（価格、在庫/在庫レベルなど）の送信。 | 以下の [&#x200B; 項目表示/製品ページ &#x200B;](#item-views-or-product-pages) を参照してください。 |
 
 ほとんどのお客様は、1 つ以上のフィードを実装する必要があります。 その後、エンティティ API またはページ上で実行するメソッドを使用して、頻繁に変更される属性や項目の更新で、フィードを補完することを選択できます。
 
@@ -127,7 +127,7 @@ function targetPageParams() {
 
 ### 購入/注文確認ページ
 
-購入イベントが発生したら、購入した品目の ID を渡します。 [at.js のデプロイ方法 ](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)/タグマネージャーを使用しない [!UICONTROL Target] の実装 [&#128279;](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md) 記事の  コンバージョンの追跡を参照してください。
+購入イベントが発生したら、購入した品目の ID を渡します。 [at.js のデプロイ方法 &#x200B;](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)/タグマネージャーを使用しない [!UICONTROL Target] の実装 [&#128279;](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md) 記事の  コンバージョンの追跡を参照してください。
 
 ## 4. グローバル除外の設定
 
@@ -139,7 +139,7 @@ function targetPageParams() {
 
 **[!UICONTROL Recommendations Settings]** のオプションにアクセスするには、[!DNL Adobe Experience Cloud] で [!DNL Target] を開き、**[!UICONTROL Administration]** > **[!UICONTROL Recommendations]** をクリックします。
 
-![Recommendations設定ページ ](/help/dev/implement/recommendations/assets/recs-settings-new.png)
+![Recommendations設定ページ &#x200B;](/help/dev/implement/recommendations/assets/recs-settings-new.png)
 
 次のオプションを設定します。
 
@@ -157,7 +157,7 @@ function targetPageParams() {
 
 [!DNL Recommendations Admin] API を含む [!DNL Adobe Target] 管理 API は、許可されたユーザーのみが [!DNL Adobe Target] へのアクセスに使用できるように、認証で保護されています。 [Adobe Developer Console](https://developer.adobe.com/console/home) を使用して、[!DNL Adobe Target] を含むすべての [!DNL Adobe Experience Cloud solutions] に対してこの認証を管理します。
 
-詳しくは、[Adobe Target API の認証の設定 ](/help/dev/before-administer/configure-authentication.md) を参照してください。
+詳しくは、[Adobe Target API の認証の設定 &#x200B;](/help/dev/before-administer/configure-authentication.md) を参照してください。
 
 >[!WARNING]
 >
@@ -169,7 +169,7 @@ function targetPageParams() {
 
 [!DNL Recommendations] の条件は、事前に定義された訪問者の行動に基づいて、どの製品やコンテンツをレコメンデーションするかを決定するルールです。 条件は、人気のあるトレンド、訪問者の現在および過去の行動、類似の製品およびコンテンツに基づくことができます。 複数の条件を追加することで、複数のレコメンデーションタイプを相互にテストすることができます。
 
-詳しくは、*Adobe Target ビジネス実践者ガイドの [ 条件 ](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/criteria/algorithms){target=_blank} を参照してください。*
+詳しくは、*Adobe Target ビジネス実践者ガイドの [&#x200B; 条件 &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/criteria/algorithms){target=_blank} を参照してください。*
 
 [!UICONTROL Criteria] のセクションでは、次の設定を使用できます。
 
@@ -219,7 +219,7 @@ Adobeでは、タグ管理ソリューションを使用する場合、このオ
 * 除外を作成ダイアログボックス（**[!UICONTROL Recommendations]**/**[!UICONTROL Exclusions]**/**[!UICONTROL Create exclusion]**）
 * 除外を更新ダイアログボックス（**[!UICONTROL Recommendations]**/**[!UICONTROL Exclusions]**/**[!UICONTROL Edit]**）
 
-詳しくは、『 *[!DNL Adobe Target]Business Practitioner Guide[ の ](https://experienceleague.adobe.com/ja/docs/target/using/administer/hosts){target=_blank} ホスト* を参照してください。
+詳しくは、『 *[!DNL Adobe Target]Business Practitioner Guide[&#x200B; の &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/administer/hosts){target=_blank} ホスト* を参照してください。
 
 #### [!UICONTROL Thumbnail Base]
 
@@ -239,4 +239,4 @@ Adobeでは、タグ管理ソリューションを使用する場合、このオ
 
 ## 6. （任意）管理 API を使用した [!UICONTROL Recommendations] の管理
 
-[!UICONTROL Recommendations] 用の [!UICONTROL Target] 管理 API と配信 API を設定および使用する方法については、[[!UICONTROL Recommendations] API の使用 ](../../before-administer/recs-api/overview.md) 実践ガイドを参照してください。
+[!UICONTROL Recommendations] 用の [!UICONTROL Target] 管理 API と配信 API を設定および使用する方法については、[[!UICONTROL Recommendations] API の使用 &#x200B;](../../before-administer/recs-api/overview.md) 実践ガイドを参照してください。

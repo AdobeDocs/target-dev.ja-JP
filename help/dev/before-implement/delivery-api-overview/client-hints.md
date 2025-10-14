@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Client Hints は、オファーリクエストで [!DNL Adobe Target] に送信する必要があります。
 
-通常は、使用可能なすべての Client Hints を [!DNL Target] に送信することをお勧めします。 詳しくは、[ クライアントサイド実装 ](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md) の節の [User-agent and Client Hints](../../implement/client-side/overview.md) を参照してください。
+通常は、使用可能なすべての Client Hints を [!DNL Target] に送信することをお勧めします。 詳しくは、[&#x200B; クライアントサイド実装 &#x200B;](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md) の節の [User-agent and Client Hints](../../implement/client-side/overview.md) を参照してください。
 
 ## 配信 API の直接呼び出し
 

@@ -34,11 +34,11 @@ ht-degree: 0%
 
 オンデバイス判定を有効にすることで、A/B アクティビティがほぼゼロの待ち時間で実行されるようになります。 この機能を有効にするには、[!DNL Adobe Target] で **[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Account details]** に移動し、「**[!UICONTROL On-Device Decisioning]**」トグルを有効にします。
 
-![alt 画像 ](assets/asset-odd-toggle.png)
+![alt 画像 &#x200B;](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->**[!UICONTROL On-Device Decisioning]** の切り替えを有効または無効にするには、管理者または承認者 [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) が必要です。
+>**[!UICONTROL On-Device Decisioning]** の切り替えを有効または無効にするには、管理者または承認者 [&#x200B; ユーザーの役割 &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) が必要です。
 
 「**[!UICONTROL On-Device Decisioning]**」切替スイッチを有効 [!DNL Adobe Target] すると、クライアントの *ルールアーティファクト* の生成を開始します。
 
@@ -46,17 +46,17 @@ ht-degree: 0%
 
 1. [!DNL Adobe Target] で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]**/**[!UICONTROL A/B test]** を選択します。
 
-   ![alt 画像 ](assets/asset-ab.png)
+   ![alt 画像 &#x200B;](assets/asset-ab.png)
 
 1. **[!UICONTROL Create A/B Test Activity]** モーダルでは、デフォルトの **[!UICONTROL Web]** オプションを選択した状態（1）のままにし、experience composer として **[!UICONTROL Form]** を選択し（2）、**[!UICONTROL No Property Restrictions]** を使用して **[!UICONTROL Default Workspace]** を選択し（3）、**[!UICONTROL Next]** をクリックします（4）。
 
-   ![alt 画像 ](assets/asset-form.png)
+   ![alt 画像 &#x200B;](assets/asset-form.png)
 
 ## 3. A と B を定義する
 
 1. アクティビティ作成の **[!UICONTROL Experiences]** の手順で、アクティビティの名前を指定し（1）、「エクスペリ **[!UICONTROL Add Experience]** ンス」（2） ボタンをクリックして、2 つ目のエクスペリエンスとして「エクスペリエンス B」を追加します。 属性を使用した機能テストを実行する、アプリケーション内の場所の名前（3）を入力します。 次の例では、エクスペリエンス A に対して定義された場所は `product-results-page` です（エクスペリエンス B に対しても定義された場所です）。
 
-   ![alt 画像 ](assets/asset-location.png)
+   ![alt 画像 &#x200B;](assets/asset-location.png)
 
    **[!UICONTROL Experience A]** には、以下を行うためのビジネスロジックを示す JSON が含まれます。
 
@@ -66,7 +66,7 @@ ht-degree: 0%
 
 1. エクスペリエンス A で、をクリックし、以下に示すように（1） **[!UICONTROL Create JSON Offer]** 選択して、コンテンツを **[!UICONTROL Default Content]** から JSON に変更します。
 
-   ![alt 画像 ](assets/asset-offer.png)
+   ![alt 画像 &#x200B;](assets/asset-offer.png)
 
 1. `test_sorting`、`sorting_algorithm`、`pagination_limit` のフラグと属性を使用して、ページネーション制限 50 製品で、推奨される並べ替えアルゴリズムを開始するために使用される JSON を定義します。
 
@@ -74,7 +74,7 @@ ht-degree: 0%
    >
    >エクスペリエンス A を表示する [!DNL Adobe Target] めにユーザーをグループ化すると、例で定義された属性を含む JSON が返されます。 コードでは、機能フラグ `test_sorting` の値をチェックして、並べ替え機能をオンにする必要があるかどうかを確認します。 その場合は、`sorting_algorithm` 属性の推奨値を使用して、製品リスト表示で推奨製品を表示します。 アプリケーションに表示する製品の制限は 50 です。これは、`pagination_limit` 属性の値であるからです。
 
-   ![alt 画像 ](assets/asset-sorting.png)
+   ![alt 画像 &#x200B;](assets/asset-sorting.png)
 
    次の **[!UICONTROL Experience B]** 順を実行するように、ビジネスロジックを示す JSON を定義します。
 
@@ -86,31 +86,31 @@ ht-degree: 0%
    >
    >[!DNL Adobe Target] がユーザーをバケット化してエクスペリエンス B を表示すると、例で定義された属性を含む JSON が返されます。 コードでは、機能フラグ `test_sorting` の値をチェックして、並べ替え機能をオンにする必要があるかどうかを確認します。 その場合は、`sorting_algorithm` 属性の `best_sellers` 値を使用して、製品リスト表示で最も売れた製品を表示します。 アプリケーションに表示する製品の制限は 50 です。これは、`pagination_limit` 属性の値であるからです。
 
-   ![alt 画像 ](assets/asset-sorting-b.png)
+   ![alt 画像 &#x200B;](assets/asset-sorting-b.png)
 
 ## 4. オーディエンスの追加
 
 **[!UICONTROL Targeting]** の手順では、**[!UICONTROL All Visitors]** オーディエンスを保持します。 これにより、並べ替え機能の影響と、結果に最適なアルゴリズムと項目数を把握できます。
 
-![alt 画像 ](assets/asset-audience-b.png)
+![alt 画像 &#x200B;](assets/asset-audience-b.png)
 
 ## 5. トラフィック配分の設定
 
 並べ替えアルゴリズムとページネーション戦略をテストする、訪問者の割合を定義します。 つまり、このテストをロールアウトするユーザーの割合を指定します。 この例では、すべてのログインユーザーにこのテストをデプロイするには、トラフィックの割り当てを 100% に保ちます。
 
-![alt 画像 ](assets/asset-allocation-100.png)
+![alt 画像 &#x200B;](assets/asset-allocation-100.png)
 
 ## 6. トラフィック配分をバリエーションに設定する
 
 推奨される製品とベストセラーの並べ替えアルゴリズムを表示する訪問者の割合を定義します。ページあたり 50 製品という制限があります。 この例では、エクスペリエンス A と B の間でトラフィック配分を 50/50 に分割します。
 
-![alt 画像 ](assets/asset-variations-50.png)
+![alt 画像 &#x200B;](assets/asset-variations-50.png)
 
 ## 7. レポートの設定
 
 **[!UICONTROL Goals & Settings]** の手順で、[!DNL Adobe Target] UI で A/B テストの結果を表示する **[!UICONTROL Reporting Source]** として **[!UICONTROL Adobe Target]** を選択するか、Adobe Analytics UI で表示する **[!UICONTROL Adobe Analytics]** を選択します。
 
-![alt 画像 ](assets/asset-reporting-b.png)
+![alt 画像 &#x200B;](assets/asset-reporting-b.png)
 
 ## 8. KPI を追跡するための指標を追加する
 
@@ -244,4 +244,4 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 ## 11.属性を使用した機能テストのアクティブ化
 
-![alt 画像 ](assets/asset-activate.png)
+![alt 画像 &#x200B;](assets/asset-activate.png)

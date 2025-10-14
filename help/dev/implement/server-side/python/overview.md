@@ -16,24 +16,24 @@ ht-degree: 3%
 
 ## 前提条件
 
-現在保守されている Python のバージョンはすべてサポートされています。[Python リリース ](https://www.python.org/downloads/) を参照してください。
+現在保守されている Python のバージョンはすべてサポートされています。[Python リリース &#x200B;](https://www.python.org/downloads/) を参照してください。
 
 ## 導入
 
-Python SDK の使用を開始する方法については、[[!DNL Target] SDK 入門ガイド ](../sdk-guides/getting-started/getting-started.md) を参照してください。
+Python SDK の使用を開始する方法については、[[!DNL Target] SDK 入門ガイド &#x200B;](../sdk-guides/getting-started/getting-started.md) を参照してください。
 
 ## サンプルアプリ
 
 Python SDK のテストドライブ：
 
-* [[!DNL Adobe Target] [!UICONTROL on-device decisioning] デモサイトにアクセスする ](https://github.com/adobe/on-device-decisioning-demo-site)
-* [ サンプルアプリケーション ](../sdk-guides/sample-apps/sample-apps.md) の場合、
+* [[!DNL Adobe Target] [!UICONTROL on-device decisioning] デモサイトにアクセスする &#x200B;](https://github.com/adobe/on-device-decisioning-demo-site)
+* [&#x200B; サンプルアプリケーション &#x200B;](../sdk-guides/sample-apps/sample-apps.md) の場合、
 
 ## リファレンス
 
-Python SDK リファレンスドキュメントを読み、理解するには、[SDK のインストール ](install-sdk.md) から始めます。
+Python SDK リファレンスドキュメントを読み、理解するには、[SDK のインストール &#x200B;](install-sdk.md) から始めます。
 
 ## Source ファイル
 
-* [Python SDK Github リポジトリ ](https://github.com/adobe/target-python-sdk)
-* [ 変更ログ ](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md)
+* [Python SDK Github リポジトリ &#x200B;](https://github.com/adobe/target-python-sdk)
+* [&#x200B; 変更ログ &#x200B;](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md)

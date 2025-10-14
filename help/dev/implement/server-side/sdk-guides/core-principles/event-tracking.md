@@ -20,7 +20,7 @@ ht-degree: 2%
 
 1. UI で、目標指標を使用して [!DNL Adobe Target] アクティビティを作成してアクティブ化します。
 
-   ![alt 画像 ](./assets/report-settings.png)
+   ![alt 画像 &#x200B;](./assets/report-settings.png)
 
 ## 目標指標とイベント
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 ## インプレッションがトリガーされる仕組み
 
-Target SDK は、基になる [ 配信 API](/help/dev/implement/delivery-api/overview.md) を呼び出します。 必須のパラメーターを持つ実行オブジェクトがリクエスト自体の中にある場合、インプレッションは、条件を満たすアクティビティに対して自動的に増分されます。 インプレッションを自動的に増分する SDK メソッドは次のとおりです。
+Target SDK は、基になる [&#x200B; 配信 API](/help/dev/implement/delivery-api/overview.md) を呼び出します。 必須のパラメーターを持つ実行オブジェクトがリクエスト自体の中にある場合、インプレッションは、条件を満たすアクティビティに対して自動的に増分されます。 インプレッションを自動的に増分する SDK メソッドは次のとおりです。
 
 * getOffers（）
 * getAttributes （）

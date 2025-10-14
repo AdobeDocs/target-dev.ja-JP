@@ -30,11 +30,11 @@ ht-degree: 0%
 
 1. オンデバイス判定を有効にすることで、A/B アクティビティがほぼゼロの待ち時間で実行されるようになります。 この機能を有効にするには、[!DNL Adobe Target] で **[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Account details]** に移動し、「**[!UICONTROL On-Device Decisioning]**」トグルを有効にします。
 
-   ![alt 画像 ](assets/asset-odd-toggle.png)
+   ![alt 画像 &#x200B;](assets/asset-odd-toggle.png)
 
    >[!NOTE]
    >
-   >[!UICONTROL On-Device Decisioning] の切り替えを有効または無効にするには、管理者または承認者 [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) が必要です。
+   >[!UICONTROL On-Device Decisioning] の切り替えを有効または無効にするには、管理者または承認者 [&#x200B; ユーザーの役割 &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) が必要です。
 
    「**[!UICONTROL On-Device Decisioning]**」切替スイッチを有効 [!DNL Adobe Target] すると、クライアントの *ルールアーティファクト* の生成を開始します。
 
@@ -42,41 +42,41 @@ ht-degree: 0%
 
 1. [!DNL Adobe Target] で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]**/**[!UICONTROL Experience Targeting]** を選択します。
 
-   ![alt 画像 ](assets/asset-xt.png)
+   ![alt 画像 &#x200B;](assets/asset-xt.png)
 
 1. **[!UICONTROL Create Experience Targeting Activity]** モーダルでは、デフォルトの **[!UICONTROL Web]** オプションを選択した状態（1）のままにし、experience composer として **[!UICONTROL Form]** を選択し（2）、ワークスペースとプロパティを選択し（3）、「**[!UICONTROL Next]**」（4）をクリックします。
 
-   ![alt 画像 ](assets/asset-xt-next.png)
+   ![alt 画像 &#x200B;](assets/asset-xt-next.png)
 
 ## 3. オーディエンスごとにパーソナライズされたエクスペリエンスを定義する
 
 1. アクティビティ作成の **[!UICONTROL Experiences]** の手順で、「**[!UICONTROL Change Audience]**」をクリックし、カリフォルニア州サンフランシスコへの旅行を希望する訪問者のオーディエンスを作成します。
 
-   ![alt 画像 ](assets/asset-change-audience.png)
+   ![alt 画像 &#x200B;](assets/asset-change-audience.png)
 
 1. **[!UICONTROL Create Audience]** モーダルで、`destinationCity = San Francisco` の場所にカスタムルールを定義します。 これは、サンフランシスコに旅行したいユーザーのグループを定義します。
 
-   ![alt 画像 ](assets/asset-audience-sf.png)
+   ![alt 画像 &#x200B;](assets/asset-audience-sf.png)
 
 1. **[!UICONTROL Experiences]** の手順で、ゴールデンゲートBridgeに関する特別なオファーをレンダリングするアプリケーション内の場所の名前（1）を入力します。 次の例では、ホームページは、HTMLオファー（2）に対して選択された場所であり、**[!UICONTROL Content]** の領域で定義されています。
 
-   ![alt 画像 ](assets/asset-content-sf.png)
+   ![alt 画像 &#x200B;](assets/asset-content-sf.png)
 
 1. 「**[!UICONTROL Add Experience Targeting]**」をクリックして、別のターゲティングオーディエンスを追加します。 今回は、`destinationCity = New York` のオーディエンスルールを定義して、ニューヨークに旅行するオーディエンスをターゲットにします。 エンパイアステートビルに関する特別なオファーをレンダリングする場所を、アプリケーション内で定義します。 ここに示す例では、`homepage` はHTMLオファー（2）に対して選択された場所であり、**[!UICONTROL Content]** 領域で定義されています。
 
-   ![alt 画像 ](assets/asset-content-ny.png)
+   ![alt 画像 &#x200B;](assets/asset-content-ny.png)
 
 ## 4. オーディエンスごとにパーソナライズされたエクスペリエンスを検証する
 
 **[!UICONTROL Targeting]** の手順では、オーディエンスごとに目的のパーソナライズされたエクスペリエンスを設定したことを確認します。
 
-![alt 画像 ](assets/asset-verify-sf-ny.png)
+![alt 画像 &#x200B;](assets/asset-verify-sf-ny.png)
 
 ## 5. レポートの設定
 
 **[!UICONTROL Goals & Settings]** の手順で、[!DNL Adobe Target] UI でアクティビティの結果を表示する **[!UICONTROL Reporting Source]** として **[!UICONTROL Adobe Target]** を選択するか、Adobe Analytics UI で表示する **[!UICONTROL Adobe Analytics]** を選択します。
 
-![alt 画像 ](assets/asset-reporting-sf-ny.png)
+![alt 画像 &#x200B;](assets/asset-reporting-sf-ny.png)
 
 ## 6. KPI を追跡するための指標の追加
 
@@ -221,4 +221,4 @@ notificationDeliveryService.sendNotification(request);
 
 ## 9. エクスペリエンスのターゲット設定（XT）アクティビティをアクティブ化する
 
-![alt 画像 ](assets/asset-xt-activate.png)
+![alt 画像 &#x200B;](assets/asset-xt-activate.png)

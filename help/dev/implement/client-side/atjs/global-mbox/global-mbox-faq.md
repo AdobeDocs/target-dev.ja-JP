@@ -19,7 +19,7 @@ ht-degree: 39%
 
 アカウント全体で使用できるグローバル mbox は 1 つだけです。
 
-アクティビティに URL ルールを追加することで、アクティビティの実行場所を制限できます。詳しくは、[ 類似のページに同じエクスペリエンスを含める ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=ja) を参照してください。
+アクティビティに URL ルールを追加することで、アクティビティの実行場所を制限できます。詳しくは、[&#x200B; 類似のページに同じエクスペリエンスを含める &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=ja) を参照してください。
 
 [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) を使用してページでパラメーターを渡し、そのパラメーターを [!UICONTROL Visual Experience Composer] （VEC）の「URL を設定」セクションで選択するか、[!UICONTROL Form-Based Experience Composer] でパラメーターを「絞り込み」として追加することもできます。
 
@@ -33,11 +33,11 @@ target-global-mbox の売上高および注文情報を収集するには、「m
 
 また、以下に示すように、注文確認ページが表示された際に target-global-mbox に対するコンバージョンのみがカウントされるよ [!DNL Target] に、コンバージョンピースにターゲティングを追加することもできます。
 
-![alt 画像 ](assets/revenue1.png)
+![alt 画像 &#x200B;](assets/revenue1.png)
 
 上図の「サイトのページ」セクションの選択内容は、「現在のページ」、「URL」、「次を含む」、「orderconfirm」となっています。
 
-![alt 画像 ](assets/revenue2.png)
+![alt 画像 &#x200B;](assets/revenue2.png)
 
 上図のオプションは、以下の設定で構成されています。
 

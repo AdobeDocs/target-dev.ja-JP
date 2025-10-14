@@ -21,7 +21,7 @@ JavaScript関数を呼び出すコードは、グローバル mbox が at.js の
 
 >[!NOTE]
 >
->グローバル mbox だけでなく、ページ上のすべての mbox にパラメーターを追加する場合は、[targetPageParamsAll （） ](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md) 関数を使用します。
+>グローバル mbox だけでなく、ページ上のすべての mbox にパラメーターを追加する場合は、[targetPageParamsAll （） &#x200B;](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md) 関数を使用します。
 
 次のいずれかの方法で、`targetPageParams()` 関数を使用して `target-global-mbox` にパラメーターを渡せます。
 

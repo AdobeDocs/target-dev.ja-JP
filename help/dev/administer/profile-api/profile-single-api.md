@@ -27,9 +27,9 @@ ht-degree: 3%
 * [!UICONTROL Single Profile Update API] は、24 時間のローリングで 100 万回の更新を実行するように制限されています。
 * 更新は通常 1 時間以内に行われますが、反映されるまでに 24 時間かかる場合があります。
 
-  さらに多くの更新を送信する必要がある場合、または更新を短時間で処理する必要がある場合は、クライアントサイドの更新（推奨）または [!DNL Adobe Target] サーバーサイド [ 配信 API](/help/dev/implement/delivery-api/overview.md) を使用して、トランザクションプロファイルの更新を送信することを検討します。
+  さらに多くの更新を送信する必要がある場合、または更新を短時間で処理する必要がある場合は、クライアントサイドの更新（推奨）または [!DNL Adobe Target] サーバーサイド [&#x200B; 配信 API](/help/dev/implement/delivery-api/overview.md) を使用して、トランザクションプロファイルの更新を送信することを検討します。
 
-* [!UICONTROL Single Profile Update API] はサーバー間 API であり、web ページ内で動作するように設計されていません。 Web ページ内から訪問者プロファイルを更新するには、[trackEvent （） ](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) 関数または [ 配信 API](/help/dev/implement/delivery-api/overview.md) を使用します。
+* [!UICONTROL Single Profile Update API] はサーバー間 API であり、web ページ内で動作するように設計されていません。 Web ページ内から訪問者プロファイルを更新するには、[trackEvent （） &#x200B;](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) 関数または [&#x200B; 配信 API](/help/dev/implement/delivery-api/overview.md) を使用します。
 
 ## 形式
 

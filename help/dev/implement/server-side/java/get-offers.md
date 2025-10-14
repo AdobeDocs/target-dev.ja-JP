@@ -66,7 +66,7 @@ TargetDeliveryRequestBuilder TargetDeliveryRequest.builder()
 | trackingServerSecure | 文字列 | × | [!DNL Adobe Target] と [!DNL Adobe Analytics] がデータを正しく結び付けるための [!UICONTROL Adobe Analytics Secure Server]。 |
 | decisioningMethod | DecisioningMethod | × | オンデバイス判定のために ON_DEVICE または HYBRID Decisioning メソッドを明示的に設定する場合に使用できます |
 
-各フィールドの値は、リクエストの仕様に準拠 *[!UICONTROL Target View Delivery API]* ている必要があります。 *[!UICONTROL Target View Delivery API]* について詳しくは、[http://developers.adobetarget.com/api/#view-delivery-overviewを参照してください ](http://developers.adobetarget.com/api/#view-delivery-overview)
+各フィールドの値は、リクエストの仕様に準拠 *[!UICONTROL Target View Delivery API]* ている必要があります。 *[!UICONTROL Target View Delivery API]* について詳しくは、[http://developers.adobetarget.com/api/#view-delivery-overviewを参照してください &#x200B;](http://developers.adobetarget.com/api/#view-delivery-overview)
 
 
 ## 応答

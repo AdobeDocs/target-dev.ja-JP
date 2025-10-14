@@ -15,17 +15,17 @@ ht-degree: 0%
 
 # API を使用したRecommendations カタログの管理
 
-[Recommendations API を使用するための要件 ](/help/dev/before-administer/recs-api/overview.md#prerequisites) を満たしていることを確認しながら、JWT 認証フローを使用して [ アクセストークンを生成 ](/help/dev/before-administer/configure-authentication.md) し、[Adobe Developer Consoleで [!DNL Adobe Target] 管理 API を使用する方法を学びました ](https://developer.adobe.com/console/home)。
+[Recommendations API を使用するための要件 &#x200B;](/help/dev/before-administer/recs-api/overview.md#prerequisites) を満たしていることを確認しながら、JWT 認証フローを使用して [&#x200B; アクセストークンを生成 &#x200B;](/help/dev/before-administer/configure-authentication.md) し、[Adobe Developer Consoleで [!DNL Adobe Target] 管理 API を使用する方法を学びました &#x200B;](https://developer.adobe.com/console/home)。
 
 [Recommendations API](https://developer.adobe.com/target/administer/recommendations-api/) を使用して、Recommendations カタログのアイテムを追加、更新、削除できるようになりました。 その他のAdobe Target管理 API と同様に、Recommendations API には認証が必要です。
 
 >[!NOTE]
 >
->24 時間後に期限切れになるので、認証用にアクセストークンを更新する必要がある場合は、いつでも **[!UICONTROL IMS: JWT Generate + Auth via User Token]** リクエストを送信します。 手順については、[AdobeAPI 認証の設定 ](../configure-authentication.md) を参照してください。
+>24 時間後に期限切れになるので、認証用にアクセストークンを更新する必要がある場合は、いつでも **[!UICONTROL IMS: JWT Generate + Auth via User Token]** リクエストを送信します。 手順については、[AdobeAPI 認証の設定 &#x200B;](../configure-authentication.md) を参照してください。
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-続行する前に、[Recommendations Postman コレクション ](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman) を取得します。
+続行する前に、[Recommendations Postman コレクション &#x200B;](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman) を取得します。
 
 ## エンティティ保存 API を使用した項目の作成と更新
 
@@ -149,7 +149,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
    >[!NOTE]
    >
-   >環境が明示的に指定されていない場合、Get Entity は自分の [ デフォルト環境 ](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=ja) からのみエンティティの取得を試みます。 デフォルト環境以外の環境から取り込む場合は、環境 ID を指定する必要があります。
+   >環境が明示的に指定されていない場合、Get Entity は自分の [&#x200B; デフォルト環境 &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=ja) からのみエンティティの取得を試みます。 デフォルト環境以外の環境から取り込む場合は、環境 ID を指定する必要があります。
 
 1. 必要に応じて、`environmentId` パラメーターを追加し、リクエストを再送信します。
 
@@ -163,7 +163,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
 ## エンティティ削除 API を使用した項目の削除
 
-カタログから項目を削除するには、[ エンティティ削除 API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteEntities) を使用します。 構文は次のとおりです。
+カタログから項目を削除するには、[&#x200B; エンティティ削除 API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteEntities) を使用します。 構文は次のとおりです。
 
 ```
 DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimited-entity-ids]&environment=[environmentId]
@@ -201,4 +201,4 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
 おめでとうございます。 Recommendations API を使用して、カタログ内のエンティティの詳細を作成、更新、削除および取得できるようになりました。 次の節では、カスタム条件の管理方法について説明します。
 
-&lt;!— [ 次の「カスタム条件の管理」 >](manage-custom-criteria.md) —>
+&lt;!— [&#x200B; 次の「カスタム条件の管理」 >](manage-custom-criteria.md) —>

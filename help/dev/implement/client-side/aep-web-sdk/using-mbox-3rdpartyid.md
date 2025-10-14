@@ -20,14 +20,14 @@ ht-degree: 16%
 
 ### 手順 1:`Target Third Party ID Namespace` を設定する
 
-mbox サードパーティ ID として使用する ID 名前空間を使用して、`Target Third Party ID Namespace` データストリーム [ の ](https://experienceleague.adobe.com/ja/docs/experience-platform/datastreams/overview) を設定します。 [ID 名前空間の詳細情報 ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja)
+mbox サードパーティ ID として使用する ID 名前空間を使用して、`Target Third Party ID Namespace` データストリーム [&#x200B; の &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/datastreams/overview) を設定します。 [ID 名前空間の詳細情報 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=ja)
 
 ![Target サードパーティ ID 名前空間フィールドを示すExperience Platform UI。](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
 
 ### 手順 2:`mbox3rdpartyId` を [!DNL Target] に送信する
 
 手順 1 で設定した ID 名前空間を使用して、`mbox3rdpartyId` コマンドで [!DNL Target] に `sendEvent` を送信します。
-[ID の送信の詳細情報 ](/help/dev/implement/client-side/aep-web-sdk/using-mbox-3rdpartyid.md)
+[ID の送信の詳細情報 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/using-mbox-3rdpartyid.md)
 
 ```javascript
 alloy("sendEvent", {

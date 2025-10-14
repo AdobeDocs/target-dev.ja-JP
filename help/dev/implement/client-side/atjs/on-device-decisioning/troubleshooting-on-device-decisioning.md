@@ -30,7 +30,7 @@ AT: LD.ArtifactProvider artifact received - status=200
 
 （全幅に拡大するには、画像をクリックします）。
 
-![ アーティファクト メッセージを含むコンソール ログ ](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png " アーティファクト メッセージを含むコンソール ログ "){zoomable="yes"}
+![&#x200B; アーティファクト メッセージを含むコンソール ログ &#x200B;](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png " アーティファクト メッセージを含むコンソール ログ "){zoomable="yes"}
 
 ## 手順 2：ブラウザーの「ネットワーク」タブでルールアーティファクトのダウンロードを確認する
 
@@ -44,7 +44,7 @@ AT: LD.ArtifactProvider artifact received - status=200
 
    さらに、「/delivery|rules.json/」でフィルタリングすると、すべての Target 呼び出しとアーティファクトの rules.json を表示できます。
 
-   ![Google Chromeの「ネットワーク」タブ ](assets/rule-json.png)
+   ![Google Chromeの「ネットワーク」タブ &#x200B;](assets/rule-json.png)
 
 ## 手順 3:at.js カスタムイベントを使用したルールアーティファクトのダウンロードの検証
 

@@ -21,20 +21,20 @@ ht-degree: 3%
 
 ## 導入
 
-.NET SDK の使用を開始する方法については、[[!DNL Target] SDK 入門ガイド ](../sdk-guides/getting-started/getting-started.md) に移動してください。
+.NET SDK の使用を開始する方法については、[[!DNL Target] SDK 入門ガイド &#x200B;](../sdk-guides/getting-started/getting-started.md) に移動してください。
 
 ## サンプルアプリ
 
 テストドライブ the.NET SDK:
 
-* [[!DNL Adobe Target] [!UICONTROL on-device decisioning] デモサイトにアクセスする ](https://github.com/adobe/on-device-decisioning-demo-site)
-* [ サンプルアプリケーション ](../sdk-guides/sample-apps/sample-apps.md) の場合、
+* [[!DNL Adobe Target] [!UICONTROL on-device decisioning] デモサイトにアクセスする &#x200B;](https://github.com/adobe/on-device-decisioning-demo-site)
+* [&#x200B; サンプルアプリケーション &#x200B;](../sdk-guides/sample-apps/sample-apps.md) の場合、
 
 ### リファレンス
 
-.NET SDK リファレンスドキュメントを読み、理解するには、[SDK のインストール ](install-sdk.md) から始めます。
+.NET SDK リファレンスドキュメントを読み、理解するには、[SDK のインストール &#x200B;](install-sdk.md) から始めます。
 
 ## Source ファイル
 
-* [.NET SDK Github リポジトリ ](https://github.com/adobe/target-dotnet-sdk)
-* [ リリース ](https://github.com/adobe/target-dotnet-sdk/releases)
+* [.NET SDK Github リポジトリ &#x200B;](https://github.com/adobe/target-dotnet-sdk)
+* [&#x200B; リリース &#x200B;](https://github.com/adobe/target-dotnet-sdk/releases)

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # レスポンストークンへのアクセス
 
-[!DNL Adobe Target] から返されるPersonalization コンテンツには [ レスポンストークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) が含まれます。レスポンストークンは、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細です。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
+[!DNL Adobe Target] から返されるPersonalization コンテンツには [&#x200B; レスポンストークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) が含まれます。レスポンストークンは、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細です。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
 
 任意のパーソナライゼーションコンテンツにアクセスするには、イベントの送信時にコールバック関数を指定します。 このコールバックは、SDKがサーバーから正常に応答を受け取った後に呼び出されます。 コールバックには `result` オブジェクトが提供され、このオブジェクトには、返されたパーソナライゼーションコンテンツを含む `propositions` プロパティが含まれている場合があります。 コールバック関数の提供例を以下に示します。
 
@@ -27,7 +27,7 @@ alloy("sendEvent", {
   });
 ```
 
-この例では、`result.propositions` が存在する場合、はイベントに関連するパーソナライゼーションの提案を含む配列です。 パーソナライゼーションコンテンツのコンテンツについて詳しくは、[ パーソナライゼーションコンテ ](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) のレンダリング `result.propositions.` を参照してください
+この例では、`result.propositions` が存在する場合、はイベントに関連するパーソナライゼーションの提案を含む配列です。 パーソナライゼーションコンテンツのコンテンツについて詳しくは、[&#x200B; パーソナライゼーションコンテ &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) のレンダリング `result.propositions.` を参照してください
 
 Web SDKによって自動的にレンダリングされたすべての提案からすべてのアクティビティ名を収集し、1 つの配列にプッシュするとします。 その後、単一のアレイをサードパーティに送信できます。 この場合の解決策は、次のとおりです。
 

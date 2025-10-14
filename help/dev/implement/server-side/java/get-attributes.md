@@ -28,7 +28,7 @@ Attributes TargetClient.getAttributes(TargetDeliveryRequest targetRequest, Strin
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | ○ | None | [ オファーを取得&#x200B;](get-offers.md) に使用するのと同じターゲットリクエスト |
+| targetRequest | TargetDeliveryRequest | ○ | None | [&#x200B; オファーを取得&#x200B;](get-offers.md) に使用するのと同じターゲットリクエスト |
 | mboxNames | var-args 配列 | × | None | mbox 名の var-args 配列 |
 
 

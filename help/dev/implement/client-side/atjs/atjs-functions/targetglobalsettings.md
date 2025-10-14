@@ -35,7 +35,7 @@ ht-degree: 58%
 
 * **型**：String
 * **デフォルト値**：なし
-* **説明**: [ オンデバイス判定ルールアーティファクトへの完全修飾 URL](../../../server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
+* **説明**: [&#x200B; オンデバイス判定ルールアーティファクトへの完全修飾 URL](../../../server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
 
 ### bodyHiddenStyle
 
@@ -102,7 +102,7 @@ ht-degree: 58%
 
   at.js 2.5 以降が実装され web プロパティにデプロイされる場合に標準で設定されているデフォルトの判定方法はサーバー側のみです。
 
-  サーバーサイドのみをデフォルト設定として使用すると、すべての決定は [!DNL Target] エッジネットワーク上で行われます。これにはブロッキングサーバーコールが必要になります。 このアプローチでは、待ち時間が徐々に増えるおそれがありますが、[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=ja)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja) （AP）および [ 自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=ja) のアクティビティなど、[!DNL Target] の機械学習機能を適用する機能を提供するなど、大きなメリットもあります。
+  サーバーサイドのみをデフォルト設定として使用すると、すべての決定は [!DNL Target] エッジネットワーク上で行われます。これにはブロッキングサーバーコールが必要になります。 このアプローチでは、待ち時間が徐々に増えるおそれがありますが、[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=ja)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja) （AP）および [&#x200B; 自動ターゲット &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=ja) のアクティビティなど、[!DNL Target] の機械学習機能を適用する機能を提供するなど、大きなメリットもあります。
 
   さらに、すべてのセッションやチャネルにわたって永続化された [!DNL Target] のユーザープロファイルを使用して、パーソナライズされたエクスペリエンスを強化することで、ビジネスに大きな成果をもたらすことができます。
 
@@ -172,7 +172,7 @@ ht-degree: 58%
 
 * **タイプ**：ブール値
 * **デフォルト値**：false
-* **説明**:[!DNL Target] では、お客様の同意管理戦略を支援できるように、Adobe Experience Platformを介したオプトイン機能がサポートされています。 オプトイン機能を使用すると、[!DNL Target] タグを実行する方法とタイミングを制御できます。Adobe Experience Platformから [!DNL Target] タグを事前承認するオプションもあります。 [!DNL Target] の at.js ライブラリでオプトインを使用する機能を有効にするには、`optinEnabled=true` 設定を追加する必要があります。Adobe Experience Platformで、拡張機能インストール表示の「GDPR オプトイン」ドロップダウンリストから「有効」を選択する必要があります。 詳しくは、[Adobe Experience Platform ドキュメント ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)を参照してください。 この設定は、EU 一般データ保護規則（GDPR）やカリフォルニア州消費者プライバシー法（CCPA）など、プライバシーおよびデータ保護規則に関連するので、詳しくは [ プライバシーおよびデータ保護規則 ](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) を参照してください。
+* **説明**:[!DNL Target] では、お客様の同意管理戦略を支援できるように、Adobe Experience Platformを介したオプトイン機能がサポートされています。 オプトイン機能を使用すると、[!DNL Target] タグを実行する方法とタイミングを制御できます。Adobe Experience Platformから [!DNL Target] タグを事前承認するオプションもあります。 [!DNL Target] の at.js ライブラリでオプトインを使用する機能を有効にするには、`optinEnabled=true` 設定を追加する必要があります。Adobe Experience Platformで、拡張機能インストール表示の「GDPR オプトイン」ドロップダウンリストから「有効」を選択する必要があります。 詳しくは、[Adobe Experience Platform ドキュメント &#x200B;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)を参照してください。 この設定は、EU 一般データ保護規則（GDPR）やカリフォルニア州消費者プライバシー法（CCPA）など、プライバシーおよびデータ保護規則に関連するので、詳しくは [&#x200B; プライバシーおよびデータ保護規則 &#x200B;](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) を参照してください。
 
 ### optoutEnabled
 
@@ -420,7 +420,7 @@ window.targetGlobalSettings = {
 
 [!DNL Target] のハイブリッド統合が必要です。
 
-* **サーバーサイド**:[ 配信 API](/help/dev/implement/delivery-api/overview.md) または [Target SDK](/help/dev/implement/server-side/sdk-guides/getting-started/getting-started.md) を使用する必要があります。
+* **サーバーサイド**:[&#x200B; 配信 API](/help/dev/implement/delivery-api/overview.md) または [Target SDK](/help/dev/implement/server-side/sdk-guides/getting-started/getting-started.md) を使用する必要があります。
 * **クライアント側**：[at.js バージョン 2.2 以降](/help/dev/implement/client-side/atjs/target-atjs-versions.md)を使用する必要があります。
 
 ### コードサンプル

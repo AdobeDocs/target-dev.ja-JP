@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # [!DNL Adobe Target] 開発者ガイド
 
-**（[ 表示  [!DNL Target]  ドキュメントのアップデート ](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=ja){target=_blank}）**
+**（[&#x200B; 表示  [!DNL Target]  ドキュメントのアップデート &#x200B;](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=ja){target=_blank}）**
 
 この *[!DNL Adobe Target]Developer Guide では*[!DNL Target] を実装および管理するための API およびSDK ドキュメントなど、[!DNL Target] 開発者向けのリソースとガイドを提供します。
 
@@ -90,14 +90,14 @@ ht-degree: 6%
 
 ## リソース
 
-* [Adobe オープンソースリポジトリ ](https://github.com/adobe)
+* [Adobe オープンソースリポジトリ &#x200B;](https://github.com/adobe)
 * [Target Node JS SDK Source](https://github.com/adobe/target-nodejs-sdk)
-* [Target Node JS SDKのサンプルリポジトリ ](https://github.com/adobe/target-nodejs-sdk-samples)
+* [Target Node JS SDKのサンプルリポジトリ &#x200B;](https://github.com/adobe/target-nodejs-sdk-samples)
 * [Target Java SDK Source](https://github.com/adobe/target-java-sdk)
-* [Target Java SDKのサンプルリポジトリ ](https://github.com/adobe/target-java-sdk-samples)
+* [Target Java SDKのサンプルリポジトリ &#x200B;](https://github.com/adobe/target-java-sdk-samples)
 * [Target の実装](./before-implement/prepare-to-implement-target.md)
 * [Target 管理](./before-administer/target-api-overview.md)
-* [Adobe Target開発ドキュメント GitHub リポジトリ ](https://github.com/AdobeDocs/target-developers)
-* [Adobe Target リリースノート ](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=ja)
-* [Adobe Target ビジネスユーザーガイド ](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja)
+* [Adobe Target開発ドキュメント GitHub リポジトリ &#x200B;](https://github.com/AdobeDocs/target-developers)
+* [Adobe Target リリースノート &#x200B;](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=ja)
+* [Adobe Target ビジネスユーザーガイド &#x200B;](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja)
 

@@ -53,4 +53,4 @@ var notificationRequest = new TargetDeliveryRequest.Builder()
 var notificationResponse = await this.targetClient.SendNotificationsAsync(notificationRequest);
 ```
 
-この例では、[SDK を初期化した ](initialize-sdk.md) ことを前提としています。
+この例では、[SDK を初期化した &#x200B;](initialize-sdk.md) ことを前提としています。

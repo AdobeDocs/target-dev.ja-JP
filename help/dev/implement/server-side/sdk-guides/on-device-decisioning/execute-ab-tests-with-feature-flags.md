@@ -34,11 +34,11 @@ ht-degree: 0%
 オンデバイス判定を有効にすることで、A/B アクティビティがほぼゼロの待ち時間で実行されるようになります。 この機能を有効にするには、[!DNL Adobe Target] で **[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Account details]** に移動し、「**[!UICONTROL On-Device Decisioning]**」トグルを有効にします。
 
 &lt;!— image-odd4.png を挿入 – >
-![alt 画像 ](assets/asset-odd-toggle.png)
+![alt 画像 &#x200B;](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->オンデバイス判定の切り替えを有効または無効にするには、管理者または承認者 [ ユーザーの役割 ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) が必要です。
+>オンデバイス判定の切り替えを有効または無効にするには、管理者または承認者 [&#x200B; ユーザーの役割 &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) が必要です。
 
 「**[!UICONTROL On-Device Decisioning]**」切替スイッチを有効 [!DNL Adobe Target] すると、クライアントのルールアーティファクトの生成が開始されます。
 
@@ -46,11 +46,11 @@ ht-degree: 0%
 
 [!DNL Adobe Target] で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]**/**[!UICONTROL A/B test]** を選択します。
 
-![alt 画像 ](assets/asset-ab.png)
+![alt 画像 &#x200B;](assets/asset-ab.png)
 
 **[!UICONTROL Create A/B Test Activity]** モーダルでは、デフォルトの **[!UICONTROL Web]** オプションを選択したままにし（1）、experience composer として **[!UICONTROL Form]** を選択し（2）、「**[!UICONTROL Property Restrictions]** なし」の **[!UICONTROL Default Workspace]** を選択し（3）、「**[!UICONTROL Next]**」（4）をクリックします。
 
-![alt 画像 ](assets/asset-form.png)
+![alt 画像 &#x200B;](assets/asset-form.png)
 
 ## 3. A と B を定義する
 
@@ -58,15 +58,15 @@ ht-degree: 0%
 
    エクスペリエンス A は、現在のホームページデザインであるコントロールを定義します。
 
-   ![alt 画像 ](assets/asset-exp-a.png)
+   ![alt 画像 &#x200B;](assets/asset-exp-a.png)
 
    エクスペリエンス B は、新しくデザインされたホームページを表すチャレンジャーを定義します。 クリックすると、既定のコンテンツ （1）を変更できます。
 
-   ![alt 画像 ](assets/asset-exp-b.png)
+   ![alt 画像 &#x200B;](assets/asset-exp-b.png)
 
 1. エクスペリエンス B で、をクリックし、以下に示す（1）を選択して、コンテンツを **[!UICONTROL Default Content]** から再設計されたコンテンツに変更 **[!UICONTROL Create JSON Offer]** ます。
 
-   ![alt 画像 ](assets/asset-offer.png)
+   ![alt 画像 &#x200B;](assets/asset-offer.png)
 
 1. ビジネスロジックが、実稼動環境の現在のホームページではなく、新しく再設計されたホームページをレンダリングできるように、フラグとして利用される属性を使用して JSON を定義します。
 
@@ -75,7 +75,7 @@ ht-degree: 0%
    >
    >[!DNL Adobe Target] がユーザーをバケット化してエクスペリエンス B （再設計されたホームページ）を表示すると、例で定義されている属性を含んだ JSON が返されます。 コードでは、属性値を確認して、再設計されたホームページをレンダリングするためにビジネスロジックを実行するかどうかを決定する必要があります。 この JSON 応答では、名前、値、属性の数を定義できます。
 
-   ![alt 画像 ](assets/asset-homepage.png)
+   ![alt 画像 &#x200B;](assets/asset-homepage.png)
 
 ## 4. オーディエンスの追加
 
@@ -83,29 +83,29 @@ ht-degree: 0%
 
 1. **[!UICONTROL Targeting]** の手順で、をクリックして、**[!UICONTROL All Visitors]** オーディエンスを置き換えます（下図を参照）。
 
-   ![alt 画像 ](assets/asset-all-audiences.png)
+   ![alt 画像 &#x200B;](assets/asset-all-audiences.png)
 
 1. **[!UICONTROL Create Audience]** モーダルで、`logged-in = true` の場所にカスタムルールを定義します。 ログインしているユーザーのグループを定義します。 このオーディエンスをアクティビティで使用します。
 
-   ![alt 画像 ](assets/asset-audience.png)
+   ![alt 画像 &#x200B;](assets/asset-audience.png)
 
 ## 5. トラフィック配分の設定
 
 新しいホームページのデザインをテストする、ログインユーザーの割合を定義します。 つまり、このテストをロールアウトするユーザーの割合を指定します。 この例では、すべてのログインユーザーにこのテストをデプロイするには、トラフィックの割り当てを 100% に保ちます。
 
-![alt 画像 ](assets/asset-allocation.png)
+![alt 画像 &#x200B;](assets/asset-allocation.png)
 
 ## 6. トラフィック配分をバリエーションに設定する
 
 ホームページの現在のデザインまたはまったく新しいデザインを表示する、ログインユーザーの割合を定義します。 この例では、エクスペリエンス A と B の間でトラフィック配分を 50/50 に分割します。
 
-![alt 画像 ](assets/asset-traffic-distribution.png)
+![alt 画像 &#x200B;](assets/asset-traffic-distribution.png)
 
 ## 7. レポートの設定
 
 **[!UICONTROL Goals & Settings]** の手順で、[!DNL Adobe Target] UI でアクティビティの結果を表示する **[!UICONTROL Reporting Source]** として **[!UICONTROL Adobe Target]** を選択するか、Adobe Analytics UI で表示する **[!UICONTROL Adobe Analytics]** を選択します。
 
-![alt 画像 ](assets/asset-reporting.png)
+![alt 画像 &#x200B;](assets/asset-reporting.png)
 
 ## 8. KPI を追跡するための指標を追加する
 
@@ -167,4 +167,4 @@ String flag = attributes.getString("homepage", "feature-flag");
 
 ## 10.機能フラグを使用して A/B テストをアクティブ化する
 
-![alt 画像 ](assets/asset-activate.png)
+![alt 画像 &#x200B;](assets/asset-activate.png)
