@@ -12,7 +12,7 @@ ht-degree: 9%
 
 # [!DNL Experience Cloud] との統合：概要
 
-[!DNL Adobe Target] サーバーサイド SDK は、[Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html) および [Adobe Audience Manager](https://business.adobe.com/products/audience-manager/adobe-audience-manager.html) とのシームレスな統合をサポートしており、[!DNL Adobe Experience Cloud] の機能を活用できます。
+[!DNL Adobe Target] サーバーサイド SDK は、[Adobe Analytics](https://business.adobe.com/jp/products/analytics/adobe-analytics.html) および [Adobe Audience Manager](https://business.adobe.com/jp/products/audience-manager/adobe-audience-manager.html) とのシームレスな統合をサポートしており、[!DNL Adobe Experience Cloud] の機能を活用できます。
 
 これらの統合について詳しくは、以下の参照を参照してください。
 
