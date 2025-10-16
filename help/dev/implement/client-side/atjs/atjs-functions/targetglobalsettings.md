@@ -23,13 +23,13 @@ ht-degree: 58%
 
 * **型**：String
 * **デフォルト値**:null
-* **説明**：サンドボックス ID を送信して [!DNL Adobe Experience Platform] デフォルト以外のサンドボックスで作成された宛先 [!DNL Adobe Experience Platform][!DNL Target] と共有するために使用するオプションのパラメーターです。 `aepSandboxId` が null 以外の場合、`aepSandboxName` も指定する必要があります。
+* **説明**：サンドボックス ID を送信して [!DNL Adobe Experience Platform] デフォルト以外のサンドボックスで作成された宛先 [!DNL Adobe Experience Platform]&#x200B;[!DNL Target] と共有するために使用するオプションのパラメーターです。 `aepSandboxId` が null 以外の場合、`aepSandboxName` も指定する必要があります。
 
 ### aepSandboxName
 
 * **型**：String
 * **デフォルト値**:null
-* **説明**：サンドボックス名を送信して [!DNL Adobe Experience Platform] デフォルト以外のサンドボックスで作成された宛先 [!DNL Adobe Experience Platform][!DNL Target] と共有するために使用するオプションのパラメーターです。 `aepSandboxName` が null 以外の場合、`aepSandboxId` も指定する必要があります。
+* **説明**：サンドボックス名を送信して [!DNL Adobe Experience Platform] デフォルト以外のサンドボックスで作成された宛先 [!DNL Adobe Experience Platform]&#x200B;[!DNL Target] と共有するために使用するオプションのパラメーターです。 `aepSandboxName` が null 以外の場合、`aepSandboxId` も指定する必要があります。
 
 ### artifactLocation
 

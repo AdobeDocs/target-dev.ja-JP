@@ -149,7 +149,7 @@ function targetPageParams() {
 
 #### [!UICONTROL Client code]
 
-[!DNL Target][!UICONTROL client code]。
+[!DNL Target]&#x200B;[!UICONTROL client code]。
 
 [!UICONTROL client code] が不明な場合は、[!DNL Target] ユーザーインターフェイスで **[!UICONTROL Administration]**/**[!UICONTROL Implementation]** をクリックします。 この [!UICONTROL client code] については、[!UICONTROL Account Details] の節を参照してください。
 
