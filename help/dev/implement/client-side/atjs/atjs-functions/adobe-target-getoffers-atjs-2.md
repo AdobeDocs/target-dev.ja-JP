@@ -30,7 +30,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->以下に示すすべてのフィールドで使用可能なタイプについて詳しくは、[ 配信 API ドキュメント ](/help/dev/implement/delivery-api/overview.md) を参照してください。
+>以下に示すすべてのフィールドで使用可能なタイプについて詳しくは、[&#x200B; 配信 API ドキュメント &#x200B;](/help/dev/implement/delivery-api/overview.md) を参照してください。
 
 | フィールド名 | 必須？ | 制限事項 | 説明 |
 | --- | --- | --- | --- |
@@ -204,7 +204,7 @@ adobe.target.getOffers({
 }
 ```
 
-その後、ペイロードは [ Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を介して [!DNL Adobe Analytics] に転送できます。
+その後、ペイロードは [&#x200B; Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を介して [!DNL Adobe Analytics] に転送できます。
 
 ## [!UICONTROL getOffers()] および [!UICONTROL applyOffers()]を使用した複数の mbox からのデータの取得とレンダリング
 

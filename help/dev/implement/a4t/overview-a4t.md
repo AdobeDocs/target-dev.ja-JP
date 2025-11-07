@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Adobe Analytics for Target] への [!DNL Experience Platform Web SDK] （A4T）のログイン
 
-パーソナライゼーションに [!DNL Adobe Target] を使用する場合、パフォーマンス測定に使用するシステムを選択できます。 各 [Target アクティビティ ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) を使用すると、レポートを作成する [!DNL Target] とAdobe [!DNL Analytics] レポートを選択できます。
+パーソナライゼーションに [!DNL Adobe Target] を使用する場合、パフォーマンス測定に使用するシステムを選択できます。 各 [Target アクティビティ &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) を使用すると、レポートを作成する [!DNL Target] とAdobe [!DNL Analytics] レポートを選択できます。
 
 [!DNL Analytics] レポートを使用する場合は、[!DNL Target] に次の [!DNL Analytics] とを伝える必要があります。
 
@@ -28,11 +28,11 @@ ht-degree: 0%
 | ログメソッド | 説明 |
 | --- | --- |
 | サーバーサイド [!DNL Analytics] ログ | Edge Networkを介して送信される [!DNL Analytics] のすべてのヒットは、ヒットのステッチプロセスを経ることなく、サーバー側で [!DNL Target] の詳細で拡張されます。 |
-| クライアントサイド [!DNL Analytics] ログ | [!DNL Target] のデータはクライアントサイドで返されるので、[!DNL Analytics]Data Insertion API[ を使用して手動でデータを補強し、](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) に送信できます。 |
+| クライアントサイド [!DNL Analytics] ログ | [!DNL Target] のデータはクライアントサイドで返されるので、[!DNL Analytics]Data Insertion API[&#x200B; を使用して手動でデータを補強し、](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) に送信できます。 |
 
-ログの方法は、設定した [!DNL Adobe Analytics]datastream[ で ](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview) が有効になっているかどうかによって決まります。
+ログの方法は、設定した [!DNL Adobe Analytics]datastream[&#x200B; で &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview) が有効になっているかどうかによって決まります。
 
-![ メソッドの決定フローの記録 ](/help/dev/implement/a4t/assets/analytics-logging.png)
+![&#x200B; メソッドの決定フローの記録 &#x200B;](/help/dev/implement/a4t/assets/analytics-logging.png)
 
 ## 次の手順
 
