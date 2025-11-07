@@ -4,10 +4,10 @@ description: '[!UICONTROL adobe.target.getOffers()] 関数とその at.js ライ
 title: How Do I Use the [!UICONTROL adobe.target.getOffers()] Function?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
-workflow-type: ht
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+workflow-type: tm+mt
 source-wordcount: '1317'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -35,12 +35,12 @@ ht-degree: 100%
 | フィールド名 | 必須？ | 制限事項 | 説明 |
 | --- | --- | --- | --- |
 | request > id | × |  | `tntId`、`thirdPartyId`、または `marketingCloudVisitorId` のいずれか 1 つが必須です。 |
-| Request > id > thirdPartyId | × | 最大サイズ = 128。 |  |  |
+| Request > id > thirdPartyId | × | 最大サイズ = 128。 |  |
 | Request > experienceCloud | × |  |  |
 | Request > experienceCloud > analytics | × |  | Adobe Analytics の統合 |
 | Request > experienceCloud > analytics > logging | × | 以下をページに実装する必要があります。<ul><li>訪問者 ID サービス</li><li>Appmeasurement.js</li></ul> | 次の値がサポートされています。<P>**client_side**：指定すると、分析ペイロードが呼び出し元に返されます。これは [!UICONTROL Data Insertion API] 経由で [!UICONTROL Adobe Analytics] に送信するために使用する必要があります。<P>**server_side**： これはデフォルト値で、[!DNL Target]と[!DNL Analytics] バックエンドが SDID を使用してレポート目的で呼び出しをステッチします。 |
 | Request > prefetch | × |  |  |
-| Request > prefetch > views | × | 最大数は 50 です。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>値の長さ `<=`5000。<P>名前を「profile」で始めないでください。<P> | アクティブなアクティビティで関連するビューを取得するために使用するパラメーターを渡します。 |
+| Request > prefetch > views | × | 最大数は 50 です。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>値の長さ `<=`5000。<P>名前を「profile」で始めないでください。<P>Not allowed names: &quot;orderId&quot;, &quot;orderTotal&quot;, &quot;productPurchasedId&quot;. | アクティブなアクティビティで関連するビューを取得するために使用するパラメーターを渡します。 |
 | Request > prefetch > views > profileParameters | × | 最大値は 50 です。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>値の長さ `<=`5000。<P>文字列値のみを使用できます。<P>名前を「profile」で始めないでください。 | アクティブなアクティビティで関連するビューを取得するために使用するプロファイルパラメーターを渡します。 |
 | Request > prefetch > views > product | × |  |  |
 | Request > prefetch > views > product -> id | × | 空白ではありません。<P>最大サイズ = 128。 | アクティブなアクティビティで関連するビューを取得するために使用する製品 ID を渡します。 |
@@ -61,7 +61,7 @@ ht-degree: 100%
 | Request > execute > pageLoad > order > total | × | 0`>=`。 | ページ読み込み時に、指定された注文の合計を使用してオファーを取得します。 |
 | Request > execute > pageLoad > order > purchasedProductIds | × | 空白の値はありません。<P>各値の最大長は 50 です。<P>コンマで連結および区切ります。<P>商品 ID の長さ `<=` 合計 250。 | ページ読み込み時に、指定された購入 ID を使用してオファーを取得します。 |
 | Request > execute > mboxes | × | 最大サイズ = 50。<P>null 要素がありません。 |  |
-| Request > execute > mboxes>mbox | ○ | 空白ではありません。<P>「– クリック」サフィックスはありません。<P>最大サイズ = 250。<P>使用できる文字：`'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'` | mbox の名前。 |
+| Request > execute > mboxes>mbox | ○ | 空白ではありません。<P>「– クリック」サフィックスはありません。<P>最大サイズ = 250。<P>使用できる文字：`'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'`\|mbox の名前。 |
 | Request > execute > mboxes>mbox>index | ○ | null ではありません。<P>一意。<P>0`>=`。 | 注意： インデックスは、mbox が処理される順序を表すものではありません。複数のリージョナル mbox を持つ Web ページと同様、mbox が処理される順序は指定できません。 |
 | Request > execute > mboxes > mbox > parameters | × | 最大数= 50。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>文字列値のみを使用できます。<P>値の長さ `<=`5000。<P>名前を「profile」で始めないでください。<P>使用できない名前：「orderId」、「orderTotal」、「productPurchasedId」。 | 指定されたパラメーターを使用して特定の mbox のオファーを取得します。 |
 | Request > execute > mboxes>mbox>profileParameters | × | 最大数= 50。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>文字列値のみを使用できます。<P>値の長さ `<=`256。<P>名前を「profile」で始めないでください。 | 指定されたプロファイルパラメーターを使用して特定の mbox のオファーを取得します。 |

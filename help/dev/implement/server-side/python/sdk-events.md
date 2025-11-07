@@ -1,9 +1,9 @@
 ---
-title: Python SDK でのイベント  [!DNL Adobe Target]  登録
-description: '[!UICONTROL OnDeviceDecisioningHandler] オブジェクトを使用して Python SDK 内で発生する様々なイベントを登録する方法を説明します。'
+title: Python SDKでのイベント  [!DNL Adobe Target]  登録
+description: '[!UICONTROL OnDeviceDecisioningHandler] オブジェクトを使用して、Python SDK内で発生する様々なイベントを登録する方法を説明します。'
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## 説明
 
-[SDK を初期化 &#x200B;](initialize-sdk.md) する際、`options["events"]` dict は、イベント名キーとコールバック関数値を持つオプションのオブジェクトです。 SDK 内で発生する様々なイベントをサブスクライブするために使用できます。 例えば、`client_ready` イベントは、SDK がメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
+[SDKの初期化 ](initialize-sdk.md) 時、`options["events"]` dict は、イベント名キーとコールバック関数値を持つオプションのオブジェクトです。 これを使用すると、SDK内で発生する様々なイベントを登録できます。 例えば、`client_ready` イベントは、SDKがメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
 
 `callback` 関数が呼び出されると、イベントオブジェクトが渡されます。 各イベントにはイベント名に対応する `type` があり、一部のイベントには関連情報を含む追加のプロパティが含まれています。
 
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 | イベント名（タイプ） | 説明 | その他のイベントプロパティ |
 | --- | --- | --- |
-| client_ready | アーティファクトがダウンロードされ、SDK が get_offers 呼び出しの準備が整うと発行されます。 を使用する場合に推奨 | オンデバイス判定方法。 | None |
+| client_ready | アーティファクトがダウンロードされ、SDKが get_offers 呼び出しの準備ができたときに発行されます。 オンデバイス判定方法を使用する場合に推奨されます。 | None |
 | artifact_download_successful | 新しいアーティファクトがダウンロードされるたびに発行されます。 | artifact_payload, artifact_location |
 | artifact_download_failed | アーティファクトのダウンロードに失敗するたびに生成されます。 | artifact_location, エラー |
 

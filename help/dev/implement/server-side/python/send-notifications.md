@@ -1,9 +1,9 @@
 ---
-title: Python SDK を使用して、にディスプレイまたはク  [!DNL Adobe Target]  ック通知を送信する
+title: Python SDKを使用して、にディスプレイまたはク  [!DNL Adobe Target]  ック通知を送信する
 description: sendNotifications （）を使用して、測定およびレポート用に表示またはクリック通知を送信する方法  [!DNL Adobe Target]  説明します。
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 8%
@@ -20,7 +20,7 @@ ht-degree: 8%
 >
 >必須のパラメーターを持つ `execute` オブジェクトがリクエスト自体の中にある場合、インプレッションは、条件を満たすアクティビティについて自動的に増分されます。
 
-インプレッションを自動的に増分する SDK メソッドは次のとおりです。
+インプレッションを自動的に増分するSDKのメソッドは次のとおりです。
 
 * `get_offers()`
 * `get_attributes()`
@@ -52,7 +52,7 @@ target_client.send_notifications(options)
 
 ## Returns
 
-同期的に呼び出される場合は `TargetDeliveryResponse` （デフォルト）、コールバックで呼び出される場合は `AsyncResult` を `Returns` します。 `TargetDeliveryResponse` の構造は以下のとおりです。
+同期的に呼び出される場合は `Returns` （デフォルト）、コールバックで呼び出される場合は `TargetDeliveryResponse` を `AsyncResult` します。 `TargetDeliveryResponse` の構造は以下のとおりです。
 
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
@@ -60,13 +60,13 @@ target_client.send_notifications(options)
 | target_cookie | dict | [!DNL Target] cookie |
 | target_location_hint_cookie | dict | [!DNL Target] location hint cookie |
 | analytics_details | list[AnalyticsResponse] | [!DNL Analytics] ペイロード（クライアントサイド [!DNL Analytics] を使用する場合） |
-| trace |  | list[dict] | すべてのリクエスト mbox/ビューの集計トレースデータ |
-| response_tokens | list[dict] | [&#x200B; 応答トークン&#x200B;のリスト &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) |
+| trace | list[dict] | すべてのリクエスト mbox/ビューの集計トレースデータ |
+| response_tokens | list[dict] | [ 応答トークン&#x200B;のリスト ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
 | meta | dict | オンデバイス判定で使用する追加の判定メタデータ |
 
 ## 例
 
-まず、`home` および `product1` mbox のコンテンツをプリフェッチするための [!UICONTROL Target Delivery API] リクエストを作成します。
+まず、[!UICONTROL Target Delivery API] および `home` mbox のコンテンツをプリフェッチするための `product1` リクエストを作成します。
 
 ### Python
 
@@ -155,7 +155,7 @@ notification = Notification(
 notification_request = DeliveryRequest(notifications=[notification])
 ```
 
-プリフェッチ応答で配信された [!DNL Target] オファーに対応する mbox 状態とイベントトークンの両方が含まれていることに注意してください。 通知リクエストを作成したら、`send_notifications()` の API メソッドを使用して [!DNL Target] に送信できます。
+プリフェッチ応答で配信された [!DNL Target] オファーに対応する mbox 状態とイベントトークンの両方が含まれていることに注意してください。 通知リクエストを作成したら、[!DNL Target] の API メソッドを使用して `send_notifications()` に送信できます。
 
 ### Python
 
