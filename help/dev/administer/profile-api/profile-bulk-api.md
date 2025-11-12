@@ -49,13 +49,13 @@ ht-degree: 6%
 
 プロファイルデータを一括更新するには、バッチファイルを作成します。 バッチファイルは、次のサンプルファイルと同様に、コンマで区切られた値を持つテキストファイルです。
 
-``````
+``` ```
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``````
+``` ```
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ batch=pcId,param1,param2,param3,param4
 * 最初のヘッダーは、`pcId` または `thirdPartyId` にする必要があります。 [!UICONTROL Marketing Cloud visitor ID] はサポートされていません。 [!UICONTROL pcId] は、[!DNL Target] で生成された visitorID です。 `thirdPartyId` は、クライアントアプリケーションによって指定された ID で、[!DNL Target] として mbox 呼び出しを通じて `mbox3rdPartyId` に渡されます。 ここでは、`thirdPartyId` と呼ぶ必要があります。
 * セキュリティ上の理由から、バッチファイルで指定するパラメーターと値は、UTF-8 を使用して URL エンコードする必要があります。 パラメーターと値は、HTTP リクエストを通じて処理するために他のエッジノードに転送できます。
 * パラメーターは、`paramName` の形式のみにする必要があります。 パラメーターは、[!DNL Target] のように `profile.paramName` に表示されます。
-* [!UICONTROL Bulk Profile Update API] v2 を使用している場合は、各 `pcId` に対してすべてのパラメーター値を指定する必要はありません。 プロファイルは、`pcId` に見つからない `mbox3rdPartyId` または [!DNL Target] に対して作成されます。 v1 を使用している場合、pcId または mbox3rdPartyIds が見つからないプロファイルは作成されません。 詳しくは、以下の [ での空の値の処理  [!DNL Bulk Profile Update API]](#empty) を参照してください。
+* [!UICONTROL Bulk Profile Update API] v2 を使用している場合は、各 `pcId` に対してすべてのパラメーター値を指定する必要はありません。 プロファイルは、`pcId` に見つからない `mbox3rdPartyId` または [!DNL Target] に対して作成されます。 v1 を使用している場合、pcId または mbox3rdPartyIds が見つからないプロファイルは作成されません。 詳しくは、以下の [&#x200B; での空の値の処理  [!DNL Bulk Profile Update API]](#empty) を参照してください。
 * バッチファイルの容量は 50 MB 未満にする必要があります。また、合計行数は 500,000 を超えないようにする必要があります。 この制限により、サーバーに大量のリクエストが送られないようにすることができます。
 * アップロードできる属性の数に制限はありません。 ただし、顧客属性、プロファイル API、In-Mbox プロファイルパラメーター、プロファイルスクリプト出力を含む外部プロファイルデータの合計サイズは、64 KB を超えないようにする必要があります。
 * パラメーターと値は、大文字と小文字を区別します。
@@ -76,9 +76,9 @@ batch=pcId,param1,param2,param3,param4
 
 [!DNL Target] エッジサーバーに HTTP POST リクエストを送信して、ファイルを処理します。 curl コマンドを使用した batch.txt ファイルの HTTP POST リクエストの例を次に示します。
 
-``````
+``` ```
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``````
+``` ```
 
 要素の説明：
 
