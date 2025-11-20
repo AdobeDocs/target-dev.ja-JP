@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # [!DNL Adobe Target] 開発者ガイド
 
-**（[&#x200B; 表示  [!DNL Target]  ドキュメントのアップデート &#x200B;](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=ja){target=_blank}）**
+**（[ 表示  [!DNL Target]  ドキュメントのアップデート ](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank}）**
 
 この *[!DNL Adobe Target]Developer Guide では*[!DNL Target] を実装および管理するための API およびSDK ドキュメントなど、[!DNL Target] 開発者向けのリソースとガイドを提供します。
 
@@ -26,7 +26,7 @@ ht-degree: 6%
 >
 >* [*[!DNL Adobe Target] チュートリアル *](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=ja){target=_blank}
 >
->リリース情報については、[&#128279;](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=ja){target=_blank} Business Practitioner Guide」の Target リリースノート（最新） *[!DNL Adobe Target]を参照してください*。
+>リリース情報については、[](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank} Business Practitioner Guide」の Target リリースノート（最新） *[!DNL Adobe Target]を参照してください*。
 
 ## 実装の概要
 
@@ -86,18 +86,18 @@ ht-degree: 6%
 
 [**Admin Console API**](https://developer.adobe.com/umapi/): Adobe User Management および User Sync API を使用して、ユーザーおよび製品の使用権限を管理します。
 
-[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=ja)：様々なデータ収集、パーソナライゼーション、広告およびマーケティングのユースケースに [!DNL Adobe Experience Platform Edge Network Server] API を使用します。
+[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html)：様々なデータ収集、パーソナライゼーション、広告およびマーケティングのユースケースに [!DNL Adobe Experience Platform Edge Network Server] API を使用します。
 
 ## リソース
 
-* [Adobe オープンソースリポジトリ &#x200B;](https://github.com/adobe)
+* [Adobe オープンソースリポジトリ ](https://github.com/adobe)
 * [Target Node JS SDK Source](https://github.com/adobe/target-nodejs-sdk)
-* [Target Node JS SDKのサンプルリポジトリ &#x200B;](https://github.com/adobe/target-nodejs-sdk-samples)
+* [Target Node JS SDKのサンプルリポジトリ ](https://github.com/adobe/target-nodejs-sdk-samples)
 * [Target Java SDK Source](https://github.com/adobe/target-java-sdk)
-* [Target Java SDKのサンプルリポジトリ &#x200B;](https://github.com/adobe/target-java-sdk-samples)
+* [Target Java SDKのサンプルリポジトリ ](https://github.com/adobe/target-java-sdk-samples)
 * [Target の実装](./before-implement/prepare-to-implement-target.md)
 * [Target 管理](./before-administer/target-api-overview.md)
-* [Adobe Target開発ドキュメント GitHub リポジトリ &#x200B;](https://github.com/AdobeDocs/target-developers)
-* [Adobe Target リリースノート &#x200B;](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=ja)
-* [Adobe Target ビジネスユーザーガイド &#x200B;](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja)
+* [Adobe Target開発ドキュメント GitHub リポジトリ ](https://github.com/AdobeDocs/target-developers)
+* [Adobe Target リリースノート ](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
+* [Adobe Target ビジネスユーザーガイド ](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja)
 
