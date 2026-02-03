@@ -13,13 +13,13 @@ ht-degree: 2%
 
 # SDK
 
-[!DNL Adobe Target] では、[ ーバーとやり取りし、](../../implement/server-side/server-side-overview.md) や [!DNL Target Delivery API] などの他の [!UICONTROL Target] ソリューションとの [!DNL Adobe Experience Cloud] 統合を容易にする [!UICONTROL Adobe Analytics] サーバーサイド SDK[!DNL Adobe Audience Manager] を提供しています。
+[!DNL Adobe Target] では、[&#x200B; ーバーとやり取りし、](../../implement/server-side/server-side-overview.md) や [!DNL Target Delivery API] などの他の [!UICONTROL Target] ソリューションとの [!DNL Adobe Experience Cloud] 統合を容易にする [!UICONTROL Adobe Analytics] サーバーサイド SDK[!DNL Adobe Audience Manager] を提供しています。
 
 SDK は、セッションと Cookie を管理する際に、ベストプラクティスに従うのに役立ちます。 SDKを利用して、複雑さを取り除き、API の誤った使用を防ぐことを強くお勧めします。
 
 ## Node.js SDK
 
-詳しくは、[Node.js SDKの概要 ](/help/dev/implement/server-side/node-js/overview.md) を参照してください。
+詳しくは、[Node.js SDKの概要 &#x200B;](/help/dev/implement/server-side/node-js/overview.md) を参照してください。
 
 [Node.js SDK](https://github.com/adobe/target-nodejs-sdk) は、オープンソースで、Github 内で管理されています。ドキュメントと使用手順を参照してください。
 
@@ -27,19 +27,19 @@ Node.js SDKの [changelog](https://github.com/adobe/target-nodejs-sdk/blob/main/
 
 ## Java SDK
 
-詳しくは、[Java SDKの概要 ](/help/dev/implement/server-side/java/overview.md) を参照してください。
+詳しくは、[Java SDKの概要 &#x200B;](/help/dev/implement/server-side/java/overview.md) を参照してください。
 
 [Java SDK](https://github.com/adobe/target-java-sdk) は、オープンソースで、Github 内で管理されています。ドキュメントと使用手順を参照してください。
 
-詳しくは、Java SDKの [ 変更ログ ](https://github.com/adobe/target-java-sdk/blob/main/CHANGELOG.md) を参照してください。
+詳しくは、Java SDKの [&#x200B; 変更ログ &#x200B;](https://github.com/adobe/target-java-sdk/blob/main/CHANGELOG.md) を参照してください。
 
 ## .NET SDK
 
-詳しくは、[.Net SDKの概要を参照してください ](/help/dev/implement/server-side/net/overview.md)。
+詳しくは、[.Net SDKの概要を参照してください &#x200B;](/help/dev/implement/server-side/net/overview.md)。
 
 [.NET SDK](https://github.com/adobe/target-dotnet-sdk) は、オープンソースで、Github 内で管理されています。ドキュメントと使用手順を参照してください。
 
-.NET SDK [ リリース ](https://github.com/adobe/target-dotnet-sdk/releases) に関する情報
+.NET SDK [&#x200B; リリース &#x200B;](https://github.com/adobe/target-dotnet-sdk/releases) に関する情報
 
 ## Python SDK
 
@@ -47,6 +47,6 @@ Node.js SDKの [changelog](https://github.com/adobe/target-nodejs-sdk/blob/main/
 
 [Python SDK](https://github.com/adobe/target-python-sdk) は、オープンソースで、Github 内で管理されています。ドキュメントと使用手順を参照してください。
 
-Python SDKの [ 変更ログ ](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) を読んでください。
+Python SDKの [&#x200B; 変更ログ &#x200B;](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) を読んでください。
 
 &lt;!— ジュディ：このページを削除または変更しますか？ 他の場所で十分にカバーされていますか？ または、.NET および Python SDK の類似情報へのリンクを追加しますか？ —>
