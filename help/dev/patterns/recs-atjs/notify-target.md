@@ -5,10 +5,10 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3301d88bc47208ab5439c1a9f7933e99c22a4521
 workflow-type: tm+mt
 source-wordcount: '346'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -26,19 +26,21 @@ ht-degree: 1%
 
 次の図のステップ番号は、以下の節に対応しています。
 
-![&#x200B; ターゲット図への通知 &#x200B;](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
+![ ターゲット図への通知 ](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
 
 ## 4.1:Fire [!DNL Adobe Target] Track API
 
 この手順は、[!DNL Target] に送信する必要のあるすべてのイベントを、`trackEvent` メソッドを使用して確実に送信するのに役立ちます。
 
-+++詳細を見る
++++詳細を表示
 
-![Fire Adobe Target Track API の図 &#x200B;](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
+![Fire Adobe Target Track API の図 ](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 以下の *前提条件* セクションで説明されているように、注文コンバージョン属性を送信します。 mbox の名前は重要ではありませんが、変換には `orderConfirmPage` を使用します。
 
-この呼び出しに注文コンバージョン属性を含める必要はありません。 これらの呼び出しは理想的に、メインコンバージョンイベントの前にミニコンバージョンイベントと考えられる成功指標を記録します。 `Add to Cart` イベントに基づいて、買い物かごベースのレコメンデーションに `CardIds` を含める必要があります。
+この呼び出しに注文コンバージョン属性を含める必要はありません。 これらの呼び出しは理想的に、メインコンバージョンイベントの前にミニコンバージョンイベントと考えられる成功指標を記録します。 `CardIds` イベントに基づいて、買い物かごベースのレコメンデーションに `Add to Cart` を含める必要があります。
+
++++
 
 **前提条件**
 
@@ -49,16 +51,16 @@ ht-degree: 1%
    * `orderTotal`：購入の注文合計。
    * `orderId`：購入の注文 ID。
 
-  次の図は、[!UICONTROL Confirmation] ページでのみ実行する [&#x200B; [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=ja){target=_blank} のルールを示しています。
+  次の図は、[ ページでのみ実行する  [!DNL tags]  [!DNL Experience Platform]in](https://experienceleague.adobe.com/docs/tags.html){target=_blank}[!UICONTROL Confirmation] のルールを示しています。
 
-  ![&#x200B; アクション設定ページ &#x200B;](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
+  ![ アクション設定ページ ](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
 * 買い物かごへの追加についてイベントをトラッキングしている場合は、`cartIds` をパラメーターとして送信します。 `cardIds` に製品 ID のコンマ区切りリストを渡すことができます。
 
 **読み取り**
 
 * [adobe.target.trackEvent （） メソッド](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [&#x200B; 買い物かごベースの条件の cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=ja#cart-based){target=_blank}
+* [ 買い物かごベースの条件の cartIds](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
 
 **アクション**
 
