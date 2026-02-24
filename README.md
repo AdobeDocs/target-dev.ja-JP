@@ -7,4 +7,4 @@ ht-degree: 0%
 ---
 # アーカイブ済み
 
-このリポジトリは <https://github.com/Adobe-Enterprise-Docs/target-dev.en> に移行されます。
+このリポジトリは <https://github.com/Adobe-Enterprise-Docs/target-dev.ja-JP> に移行されます。
