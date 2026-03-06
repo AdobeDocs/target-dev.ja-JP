@@ -174,7 +174,7 @@ ht-degree: 41%
    + [Experience Platform Web SDKでの A4T データのクライアントサイドログ](/help/dev/implement/a4t/client-side-logging.md)
    + [Experience Platform Web SDKでの A4T データのサーバーサイドログ](/help/dev/implement/a4t/server-side-a4t.md)
 + [Recommendations の実装](implement/recommendations/recommendations.md)
-+ {hide-from-toc}[Recommendations 実装ベータ版 ](/help/dev/implement/recommendations/recommendations-beta.md)
++ [hide-from-tocRecommendations 実装ベータ版 &#x200B;](/help/dev/implement/recommendations/recommendations-beta.md)
 + モバイルアプリの実装 {#mobile-apps}
    + [モバイルアプリのための Target の概要](implement/mobile/overview.md)
    + [Target モバイルのプレビュー](implement/mobile/target-mobile-preview.md)
