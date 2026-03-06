@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target開発者ガイド
 breadcrumb-title: Target デベロッパーガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: b1b0424bfe61fb8b4e88723e6bb2c565d75f8351
+source-git-commit: d161a60be0e9acbdd217f1acde5987b839dd78de
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 41%
@@ -174,7 +174,7 @@ ht-degree: 41%
    + [Experience Platform Web SDKでの A4T データのクライアントサイドログ](/help/dev/implement/a4t/client-side-logging.md)
    + [Experience Platform Web SDKでの A4T データのサーバーサイドログ](/help/dev/implement/a4t/server-side-a4t.md)
 + [Recommendations の実装](implement/recommendations/recommendations.md)
-+ [Recommendations 実装ベータ版](/help/dev/implement/recommendations/recommendations-beta.md)
++ [hide-from-tocRecommendations 実装ベータ版 &#x200B;](/help/dev/implement/recommendations/recommendations-beta.md)
 + モバイルアプリの実装 {#mobile-apps}
    + [モバイルアプリのための Target の概要](implement/mobile/overview.md)
    + [Target モバイルのプレビュー](implement/mobile/target-mobile-preview.md)
