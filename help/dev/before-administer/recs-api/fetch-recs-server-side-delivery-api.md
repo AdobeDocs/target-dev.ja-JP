@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+source-git-commit: 0681f89bbebb9e79ab042ae6cfbab989d846cb70
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1243'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ Adobe Target用 [&#x200B; 配信 API](/help/dev/implement/delivery-api/overview.
    * この例では、*api_charter* を場所名としてリストしています
    * このレコメンデーションは、現在のアイテムキーを Target に渡す必要があるコンテンツの類似性に基づいているので、entity.id が指定されています。
      ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
-クエリパラメーターを正しく設定することを忘れないでください。 例えば、必要に応じて `{{CLIENT_CODE}}` を指定します。 &lt;!— Q：更新された呼び出し構文では、以前のバージョンのように、entity.id が mboxParameter ではなく profileParameter としてリストされています。 —> &lt;!— Q：古い画像 ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) 古い付随するテキスト：「この推奨事項は、mboxParameters を介して送信された entity.id に基づくコンテンツ類似製品に基づいています。」 – >
+クエリパラメーターを正しく設定することを忘れないでください。 例えば、必要に応じて `{{CLIENT_CODE}}` を指定します。<!-- Q: In the updated call syntax, entity.id is listed as a profileParameter instead of an mboxParameter as in older versions. Q: Old image ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Old accompanying text: "Note this recommendation is based on Content Similar products based on the entity.id sent via mboxParameters." -->
      ![client-code3](assets/client-code3.png)
 1. リクエストを送信します。 これは、アクティブなレコメンデーションが実行されている *api_charter* の場所に対して実行されます。この場所は、推奨されるエンティティのリストを出力する JSON デザインで定義されています。
 1. JSON デザインに基づいて応答を受け取ります。
@@ -115,7 +115,7 @@ Adobe Target用 [&#x200B; 配信 API](/help/dev/implement/delivery-api/overview.
 ## リファレンスドキュメント
 
 * [Adobe Target配信 API ドキュメント](/help/dev/implement/delivery-api/overview.md)
-* [Recommendations とメールの統合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=ja)
+* [レコメンデーションとメールの統合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=ja)
 
 ## 概要とレビュー
 
