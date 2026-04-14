@@ -18,7 +18,7 @@ ht-degree: 18%
 
 >[!NOTE]
 >
->この記事に加えて、[Adobe Target Business Practitioner Guide](https://experienceleague.adobe.com/en/docs/target/using/target-home){target=_blank}には、[Target Recommendations](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations){target=_blank}に関する詳細な情報が含まれています。
+>この記事に加えて、[Adobe Target Business Practitioner Guide](https://experienceleague.adobe.com/ja/docs/target/using/target-home){target=_blank}には、[Target Recommendations](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/recommendations){target=_blank}に関する詳細な情報が含まれています。
 
 [!UICONTROL Recommendations]で最初の[!DNL Adobe Target] アクティビティを設定する前に、次の手順を実行します。
 
@@ -45,7 +45,7 @@ ht-degree: 18%
 
 | メソッド | 現状 | 使用するタイミング | 追加情報 |
 | --- | --- | --- | --- |
-| カタログフィード | フィード（CSV、[!DNL Google]製品XML、または[!UICONTROL Analytics Product Classifications]）のアップロードと取り込みを毎日スケジュールします。 | 一度に複数の項目に関する情報を送信します。 情報の送信に使用できます。 | [&#x200B; フィード &#x200B;](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/feeds)を参照してください。 |
+| カタログフィード | フィード（CSV、[!DNL Google]製品XML、または[!UICONTROL Analytics Product Classifications]）のアップロードと取り込みを毎日スケジュールします。 | 一度に複数の項目に関する情報を送信します。 情報の送信に使用できます。 | [&#x200B; フィード &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/entities/feeds)を参照してください。 |
 | エンティティ API | APIを呼び出して、1つの項目の最新更新を送信します。 | アップデートを送信する機能です。 頻繁に変更される情報（価格、在庫/在庫レベルなど）の送信用。 | [Entities API開発者ドキュメント &#x200B;](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities)を参照してください。 |
 | ページの更新を渡します | ページ上のJavaScriptや配信APIを使用して、1つの商品の最新情報を送信できます。 | アップデートを送信する機能です。 頻繁に変更される情報（価格、在庫/在庫レベルなど）の送信用。 | 以下の[&#x200B; アイテムビュー/製品ページ &#x200B;](#item-views-or-product-pages)を参照してください。 |
 
@@ -108,7 +108,7 @@ function targetPageParams() {
 }
 ```
 
-カートベースのレコメンデーションについて詳しくは、「[&#x200B; Business Practitioner Guide](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)」の「*[!DNL Adobe Target]カートベース*」を参照してください。
+カートベースのレコメンデーションについて詳しくは、「[&#x200B; Business Practitioner Guide](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based)」の「*[!DNL Adobe Target]カートベース*」を参照してください。
 
 ### 訪問者の買い物かごにすでに入っている品目を除く
 
@@ -130,7 +130,7 @@ function targetPageParams() {
 
 ## &#x200B;4. グローバル除外の設定
 
-訪問者に推奨したくないグローバルレベルの項目を除外します。 [&#x200B; Business Practitioner Guide](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/exclusions)の&#x200B;*[!DNL Adobe Target]Exclusions*&#x200B;を参照してください。
+訪問者に推奨したくないグローバルレベルの項目を除外します。 [&#x200B; Business Practitioner Guide](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/entities/exclusions)の&#x200B;*[!DNL Adobe Target]Exclusions*&#x200B;を参照してください。
 
 ## &#x200B;5. [!UICONTROL Recommendations]設定の構成
 
@@ -168,7 +168,7 @@ function targetPageParams() {
 
 [!DNL Recommendations]の条件は、事前に決められた訪問者の行動セットに基づいて、推奨する製品またはコンテンツを決定するルールです。 基準は、人気の高いトレンド、訪問者の現在および過去の行動、類似の製品やコンテンツなどにもとづいて設定できます。 複数の条件を追加することで、複数のレコメンデーションタイプを相互にテストすることができます。
 
-詳しくは、[Adobe Target Business Practitioner Guideの](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/algorithms){target=_blank}条件&#x200B;*を参照してください。*
+詳しくは、[Adobe Target Business Practitioner Guideの](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/criteria/algorithms){target=_blank}条件&#x200B;*を参照してください。*
 
 [!UICONTROL Criteria] セクションでは、次の設定を使用できます。
 
@@ -191,7 +191,7 @@ function targetPageParams() {
 
 Adobeでは、タグ管理ソリューションを使用する場合は、このオプションを無効にすることをお勧めします。
 
-このオプションについて詳しくは、「[[!UICONTROL Recommendations] Business Practitioner Guide](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}」の「*[!DNL Adobe Target]FAQ*」を参照してください。
+このオプションについて詳しくは、「[[!UICONTROL Recommendations] Business Practitioner Guide](https://experienceleague.adobe.com/ja/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank}」の「*[!DNL Adobe Target]FAQ*」を参照してください。
 
 ### [!UICONTROL Product Catalog]
 
@@ -218,7 +218,7 @@ Adobeでは、タグ管理ソリューションを使用する場合は、この
 * 除外を作成ダイアログボックス （**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Create exclusion]**）
 * 除外を更新ダイアログボックス （**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**）
 
-詳しくは、「[&#x200B; Business Practitioner Guide](https://experienceleague.adobe.com/en/docs/target/using/administer/hosts){target=_blank}」の「*[!DNL Adobe Target]Hosts*」を参照してください。
+詳しくは、「[&#x200B; Business Practitioner Guide](https://experienceleague.adobe.com/ja/docs/target/using/administer/hosts){target=_blank}」の「*[!DNL Adobe Target]Hosts*」を参照してください。
 
 #### [!UICONTROL Thumbnail Base]
 
