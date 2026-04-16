@@ -405,7 +405,7 @@ at.js 1の顧客。*x*&#x200B;はvstを使用できました。* オーディエ
 
 ## レスポンストークン
 
-at.js 2.*x* は、at.js 1.*x* と同様に、カスタムイベント `at-request-succeeded` を応答トークンに使用します。`at-request-succeeded` カスタムイベントを使用するコード例については「[応答トークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)」を参照してください。
+at.js 2.*x* は、at.js 1.*x* と同様に、カスタムイベント `at-request-succeeded` を応答トークンに使用します。`at-request-succeeded` カスタムイベントを使用するコード例については「[応答トークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)」を参照してください。
 
 ## at.js 1.*x*&#x200B;個のパラメーターをat.js 2に変換します。*x* ペイロードマッピング
 
@@ -772,5 +772,5 @@ at.js 2.*x*&#x200B;は、SPAに対するAdobe [!DNL Target]のサポートを強
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-「[at.js 2の使用方法について」を参照してください。詳細については、*x*&#x200B;は](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)に対応しています。
+「[at.js 2の使用方法について」を参照してください。詳細については、*x*&#x200B;は](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=ja)に対応しています。
 
