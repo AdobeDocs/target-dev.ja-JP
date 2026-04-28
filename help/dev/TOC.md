@@ -2,10 +2,11 @@
 user-guide-title: Adobe Target開発者ガイド
 breadcrumb-title: Target開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
-source-git-commit: 04de08103591059481ee996123f4c5bae8e1fa0a
+nudge: true
+source-git-commit: ca53593287a5a58e6e0b9fe02b6e8b28788f9ff9
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 41%
+source-wordcount: '850'
+ht-degree: 42%
 
 ---
 
