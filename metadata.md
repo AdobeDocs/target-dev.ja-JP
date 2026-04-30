@@ -1,7 +1,8 @@
 ---
 cloud: Experience Cloud
 solution: Target
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
 product: target
 type: Documentation
 feature-set: Target
@@ -21,4 +22,4 @@ ht-degree: 0%
 
 metadata.md ファイルには、リポジトリ内のユーザーガイド TOC.md ファイルに渡されるリポジトレベルのメタデータが含まれています。 任意のユーザーガイドのmetadata.md コンテンツを変更する場合は、任意のTOC.md ファイルで変更します。
 
-**solution**、**product**、**type**&#x200B;の有効な値のリストについては、[ メタデータ ](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html)を参照してください。
+**solution**、**product**、**type**&#x200B;の有効な値のリストについては、[&#x200B; メタデータ &#x200B;](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html)を参照してください。
