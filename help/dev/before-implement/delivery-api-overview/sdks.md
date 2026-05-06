@@ -5,7 +5,7 @@ keywords: Delivery API
 exl-id: fc3996e6-8945-437c-9574-cc3f1a406f54
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 100%
 
