@@ -49,4 +49,4 @@ Java SDK の [changelog](https://github.com/adobe/target-java-sdk/blob/main/CHAN
 
 Python SDK の [changelog](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) を読み取ります。
 
-&lt;!--- Judy : このページを削除または変更しますか？ 他の場所で十分に説明されていますか？ または、.NET と Python SDK に関する類似の情報へのリンクを追加しますか？ --->
+&lt;!-- Judy: remove or modify this page? 他の場所で十分に説明されていますか？ または、.NET と Python SDK に関する類似の情報へのリンクを追加しますか？ -->
