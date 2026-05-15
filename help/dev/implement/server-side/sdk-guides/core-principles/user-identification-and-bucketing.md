@@ -4,9 +4,13 @@ description: ユーザーの特定とグループ化
 exl-id: 4fcf235b-6a58-442c-ae13-9d05ec1033fc
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/V9hK5oj7F-SV2wou2sz-Ve3RVJ1EMsFJDmcNF4ctV5o
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: f7c7de77-382f-4f48-8b36-61a170f06d3d
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1172
@@ -315,7 +319,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-上記の例は、`authenticatedState`を含む`customerId`を送信する方法を示しています。 `customerId`を送信する場合、`integrationCode`、`id`、`authenticatedState`および`marketingCloudVisitorId`が必要です。 `integrationCode`は、CRSを通じて指定した[顧客属性ファイル ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=ja)のエイリアスです。
+上記の例は、`authenticatedState`を含む`customerId`を送信する方法を示しています。 `customerId`を送信する場合、`integrationCode`、`id`、`authenticatedState`および`marketingCloudVisitorId`が必要です。 `integrationCode`は、CRSを通じて指定した[顧客属性ファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=ja)のエイリアスです。
 
 ## 結合プロファイル
 

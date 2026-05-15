@@ -6,11 +6,18 @@ feature: Privacy & Security
 role: Developer
 exl-id: bf533771-6d46-48ba-964c-3ad9ce9f7352
 TQID: https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1313
@@ -25,7 +32,7 @@ ht-degree: 1%
 ## [!DNL Target]でのCNAME サポートのリクエスト
 
 1. SSL証明書に必要なホスト名のリストを決定します（以下のFAQを参照）。
-1. [このフォーム ](/help/dev/implement/assets/FPC_Request_Form.xlsx)に入力し、CNAME サポートをリクエストする [!DNL Adobe]  クライアントケアチケットを[開いたときにフォームを含めます](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
+1. [このフォーム &#x200B;](/help/dev/implement/assets/FPC_Request_Form.xlsx)に入力し、CNAME サポートをリクエストする [!DNL Adobe]  クライアントケアチケットを[開いたときにフォームを含めます](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] クライアント コード：
    * SSL証明書ホスト名（例：`target.example.com target.example.org`）:
@@ -326,14 +333,14 @@ To check DNS propagation around the world, see whatsmydns.net:
 
 >[!NOTE]
 >
->この検証コマンドがDNS検証で失敗したが、必要なDNS変更を既に行っている場合は、DNS更新が完全に反映されるのを待つ必要がある場合があります。 DNS レコードには、これらのレコードのDNS応答のキャッシュ有効期限を決定する[TTL （有効期間） ](https://en.wikipedia.org/wiki/Time_to_live#DNS_records)が関連付けられています。 その結果、少なくともTTLに対応できる限り待つ必要があるかもしれません。 `dig target.example.com` コマンドまたは[G Suite Toolbox](https://toolbox.googleapps.com/apps/dig/#CNAME)を使用して、特定のTTLを検索できます。 世界中のDNSの伝播を確認するには、[whatsmydns.net](https://whatsmydns.net/#CNAME)を参照してください。
+>この検証コマンドがDNS検証で失敗したが、必要なDNS変更を既に行っている場合は、DNS更新が完全に反映されるのを待つ必要がある場合があります。 DNS レコードには、これらのレコードのDNS応答のキャッシュ有効期限を決定する[TTL （有効期間） &#x200B;](https://en.wikipedia.org/wiki/Time_to_live#DNS_records)が関連付けられています。 その結果、少なくともTTLに対応できる限り待つ必要があるかもしれません。 `dig target.example.com` コマンドまたは[G Suite Toolbox](https://toolbox.googleapps.com/apps/dig/#CNAME)を使用して、特定のTTLを検索できます。 世界中のDNSの伝播を確認するには、[whatsmydns.net](https://whatsmydns.net/#CNAME)を参照してください。
 
 ### CNAME でのオプトアウトリンクの使用方法
 
 CNAMEを使用している場合、オプトアウトリンクには「client=`clientcode`」パラメーターを含める必要があります。例：
 `https://my.cname.domain/optout?client=clientcode`.
 
-`clientcode`をクライアントコードに置き換え、[ オプトアウト URL](/help/dev/before-implement/privacy/privacy.md)にリンクするテキストまたは画像を追加します。
+`clientcode`をクライアントコードに置き換え、[&#x200B; オプトアウト URL](/help/dev/before-implement/privacy/privacy.md)にリンクするテキストまたは画像を追加します。
 
 ## 既知の制限事項
 

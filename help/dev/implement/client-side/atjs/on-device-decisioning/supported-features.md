@@ -5,11 +5,20 @@ title: On-Device Decisioningでサポートされている機能
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
 TQID: https://experienceleague.adobe.com/ummFURb6WnrNCbiQNDtzWmtZq05am9CMn9UXL0SPaXo
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 720
@@ -23,18 +32,18 @@ ht-degree: 8%
 
 ## サポートされているアクティビティのタイプ
 
-次の表は、[ フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)または[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) （VEC）によって作成された[ アクティビティタイプ ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)が、[!UICONTROL on-device decisioning]でサポートされているか、サポートされていないかを示しています。
+次の表は、[&#x200B; フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)または[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) （VEC）によって作成された[&#x200B; アクティビティタイプ &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)が、[!UICONTROL on-device decisioning]でサポートされているか、サポートされていないかを示しています。
 
 | アクティビティタイプ | 対応? |
 | --- | --- |
 | [A/B テスト](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html) | ○ |
 | [自動配分](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | × |
-| [自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) ![ プレミアム ](../../../assets/premium.png) | × |
+| [自動ターゲット &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) ![&#x200B; プレミアム &#x200B;](../../../assets/premium.png) | × |
 | [多変量分析テスト](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html) （MVT） | × |
 | [エクスペリエンスのターゲット設定](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)（XT） | ○ |
-| [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) ![ プレミアム ](../../../assets/premium.png) | × |
-| [おすすめ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html) ![ プレミアム ](../../../assets/premium.png) | × |
-| [Analytics for Targetを使用したアクティビティ ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?) （A4T） | ○ |
+| [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) ![&#x200B; プレミアム &#x200B;](../../../assets/premium.png) | × |
+| [おすすめ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html) ![&#x200B; プレミアム &#x200B;](../../../assets/premium.png) | × |
+| [Analytics for Targetを使用したアクティビティ &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?) （A4T） | ○ |
 
 ## オーディエンスターゲティング
 
@@ -104,4 +113,4 @@ window.adobe.target.getOffers({
 | --- | --- |
 | 手動 | ○ |
 | [最適なエクスペリエンスに自動割り当て](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | × |
-| [ パーソナライズされたエクスペリエンスの自動ターゲティング ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) | × |
+| [&#x200B; パーソナライズされたエクスペリエンスの自動ターゲティング &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) | × |

@@ -5,10 +5,17 @@ keywords: Delivery API
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 548
@@ -174,7 +181,7 @@ curl -X POST \
 
 ## 先行取得
 
-ビューは、シングルページアプリケーション（SPA）とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、SPAまたはモバイルエクスペリエンスを構成するビジュアル要素の論理的なグループとして見ることができます。 これで、配信APIを通じて、VECが作成した[[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank}および[[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} （X） T アクティビティと、SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)の[ ビューの変更をプリフェッチできるようになりました。
+ビューは、シングルページアプリケーション（SPA）とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、SPAまたはモバイルエクスペリエンスを構成するビジュアル要素の論理的なグループとして見ることができます。 これで、配信APIを通じて、VECが作成した[[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank}および[[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} （X） T アクティビティと、SPA[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)の ビューの変更をプリフェッチできるようになりました。
 
 ```shell  {line-numbers="true"}
 curl -X POST \

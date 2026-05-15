@@ -5,10 +5,23 @@ title: オンデバイス判定とは何ですか？
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649
 TQID: https://experienceleague.adobe.com/-HHGn3lG5fOh2GLXQ6jOLRQmX7H24lN-2fseOg4y5H4
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1233
@@ -34,7 +47,7 @@ ht-degree: 8%
 
 （画像をクリックして全幅に拡大します）。
 
-![ オンデバイス判定アーキテクチャ図](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/assets/asset-sdk-local-decisioning-architecture-diagram.png " オンデバイス判定アーキテクチャ図"){zoomable="yes"}
+![&#x200B; オンデバイス判定アーキテクチャ図](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/assets/asset-sdk-local-decisioning-architecture-diagram.png " オンデバイス判定アーキテクチャ図"){zoomable="yes"}
 
 ## どのようなメリットがあるでしょうか？
 
@@ -47,7 +60,7 @@ ht-degree: 8%
 
 ### アクティビティ
 
-オンデバイス決定では、[ フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)によって作成された次のアクティビティタイプをサポートしています。
+オンデバイス決定では、[&#x200B; フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)によって作成された次のアクティビティタイプをサポートしています。
 
 * [!UICONTROL A/B Test]
 * [!UICONTROL Experience Targeting] （XT）
@@ -67,7 +80,7 @@ ht-degree: 8%
 | [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | ○<P>オンデバイス決定を使用する場合、次の位置情報の属性がサポートされます。<ul><li>国 / 地域</li><li>市区町村</li><li>緯度</li><li>経度</li></ul> |
 | [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | × |
 | [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | × |
-| [ カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | ○ |
+| [&#x200B; カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | ○ |
 | [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | ○ |
 | [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | ○ |
 | [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | ○ |
@@ -149,7 +162,7 @@ ht-degree: 8%
 
 >[!VIDEO](https://video.tv.adobe.com/v/329032/?quality=12)
 
-詳細なビデオとチュートリアルについては、[[!DNL Adobe Target]  チュートリアル ](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=ja)を参照してください。
+詳細なビデオとチュートリアルについては、[[!DNL Adobe Target]  チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=ja)を参照してください。
 
 ### Adobe技術ブログ – パート 1: エッジプラットフォームでの実験とパーソナライゼーションのために[!DNL Adobe Target] NodeJS SDKを実行する（Akamai Edge Workers）
 

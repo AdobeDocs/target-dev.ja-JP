@@ -5,10 +5,14 @@ feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 4e022db3-215f-461b-9222-38ce2f2dbc28
 TQID: https://experienceleague.adobe.com/HEjGkrgixufe9wQvaPAljSlZRSaF-idgwKYWs3cuoJ0
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 361
@@ -34,7 +38,7 @@ ht-degree: 4%
 
   さらに更新を送信する必要がある場合、または更新を短い時間枠で処理する必要がある場合は、クライアントサイドの更新（推奨）または[!DNL Adobe Target] サーバーサイド [配信API](/help/dev/implement/delivery-api/overview.md)を介してトランザクションプロファイルの更新を送信することを検討してください。
 
-* [!UICONTROL Single Profile Update API]はサーバー間APIであり、web ページ内で動作するように設計されていません。 Web ページ内から訪問者プロファイルを更新するには、[trackEvent （） ](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)関数または[配信API](/help/dev/implement/delivery-api/overview.md)を使用できます。
+* [!UICONTROL Single Profile Update API]はサーバー間APIであり、web ページ内で動作するように設計されていません。 Web ページ内から訪問者プロファイルを更新するには、[trackEvent （） &#x200B;](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)関数または[配信API](/help/dev/implement/delivery-api/overview.md)を使用できます。
 
 ## 形式
 
@@ -42,15 +46,15 @@ ht-degree: 4%
 
 `pcId`のプロファイルを更新するには、次を使用します。
 
-``````
-https://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
-``````
+``` ```
+https://&lt;your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
+``` ```
 
 `mbox3rdPartyId`のプロファイルを更新するには、次を使用します。
 
-``````
-shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
-``````
+``` ```
+shell http://&lt;your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
+``` ```
 
 [!UICONTROL Single Profile Update API]は更新用です。 何も見つからない場合は、プロファイルは作成されません。
 

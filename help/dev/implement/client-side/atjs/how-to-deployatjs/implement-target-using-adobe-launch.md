@@ -5,11 +5,18 @@ title: ' [!DNL Adobe Experience Platform] を使用して  [!DNL Target]  を実
 feature: Implement Server-side
 exl-id: 0a325871-194a-479c-a3bf-294e3dde3e9a
 TQID: https://experienceleague.adobe.com/5dXJlXYYvlu5sskrNED2j55SNmeggtWTb1jLgXRXAEo
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 446
@@ -23,7 +30,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、[!DNL Adobe Experience Platform]でデータ収集テクノロジースイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更に関する参照の一覧については、次の[ドキュメント ](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?)を参照してください。
+>Adobe Experience Platform Launchは、[!DNL Adobe Experience Platform]でデータ収集テクノロジースイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更に関する参照の一覧については、次の[ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?)を参照してください。
 
 詳細な情報を取得できる様々なソースを次の表に示します。
 
@@ -37,7 +44,7 @@ ht-degree: 61%
 
 次のメリットは、[!DNL Adobe Experience Platform] のタグを使用して at.js を実装する場合にのみ当てはまります。 そのため、Adobeでは、at.jsを手動で実装するのではなく、[!DNL Adobe Experience Platform]でタグを使用することを強くお勧めします。
 
-* **[!DNL Adobe Analytics] と [!DNL Target] の競合状態の解消：**[!DNL Analytics] 呼び出しは [!DNL Target] 呼び出しより先に実行される可能性があるので、[!DNL Target] 呼び出しは [!DNL Analytics] 呼び出しには結合されません。 これにより、データが正しくなくなるおそれがあります。 [!DNL Target] 拡張機能では、[!DNL Target] 呼び出しが成否に関わらず完了するまで [!DNL Analytics] ビーコン呼び出しが待機します。 [!DNL Adobe Experience Platform] でタグを使用すると、手動で実装する場合に発生する可能性のあるデータ不整合の問題を解決できます。
+* **[!DNL Adobe Analytics] と [!DNL Target] の競合状態の解消：**&#x200B;[!DNL Analytics] 呼び出しは [!DNL Target] 呼び出しより先に実行される可能性があるので、[!DNL Target] 呼び出しは [!DNL Analytics] 呼び出しには結合されません。 これにより、データが正しくなくなるおそれがあります。 [!DNL Target] 拡張機能では、[!DNL Target] 呼び出しが成否に関わらず完了するまで [!DNL Analytics] ビーコン呼び出しが待機します。 [!DNL Adobe Experience Platform] でタグを使用すると、手動で実装する場合に発生する可能性のあるデータ不整合の問題を解決できます。
 
   >[!NOTE]
   >

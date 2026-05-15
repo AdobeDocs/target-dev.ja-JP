@@ -4,10 +4,16 @@ description: このアプローチは、SDK メソッドを使用する各ファ
 feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
 TQID: https://experienceleague.adobe.com/knFQFgPKL-DBOtBnWUIz2-7usi35DPtxd-FSINqHHhY
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e7840a7b-a94f-4256-aed0-4e94b08e157bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e7840a7b-a94f-4256-aed0-4e94b08e157b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 298

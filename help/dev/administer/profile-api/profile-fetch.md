@@ -5,8 +5,10 @@ contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
 TQID: https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 294
@@ -50,7 +52,7 @@ https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046
 
 [!DNL Adobe Target] プロファイルは、独自の識別子（CRM ID、`uuid`、メンバーシップ番号など）で強化できます。
 
-プロファイルに`thirdPartyId`を添付する方法については、[ プロファイルの更新](/help/dev/administer/profile-api/profile-api-overview.md)を参照してください。
+プロファイルに`thirdPartyId`を添付する方法については、[&#x200B; プロファイルの更新](/help/dev/administer/profile-api/profile-api-overview.md)を参照してください。
 
 次の例は、`thirdPartyId`を使用してプロファイルを取得するリクエスト形式を示しています。
 
@@ -68,7 +70,7 @@ https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3r
 
 ## Authentication
 
-[!DNL Target Profile API]は、[!DNL Target] UIから認証をオンにすることで保護できます（こちらを参照）。 認証がオンになると、すべてのプロファイル API リクエストにリクエストヘッダーでプロファイル認証トークンを設定する必要があります。 トークン自体は、[!DNL Target] UIを使用するか、[ プロファイル認証トークン ](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} セクションで前述した手順を使用して生成できます。
+[!DNL Target Profile API]は、[!DNL Target] UIから認証をオンにすることで保護できます（こちらを参照）。 認証がオンになると、すべてのプロファイル API リクエストにリクエストヘッダーでプロファイル認証トークンを設定する必要があります。 トークン自体は、[!DNL Target] UIを使用するか、[&#x200B; プロファイル認証トークン &#x200B;](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} セクションで前述した手順を使用して生成できます。
 
 ## 計量
 

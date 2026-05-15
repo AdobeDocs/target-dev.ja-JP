@@ -4,10 +4,17 @@ description: Adobe Target SDKの使用方法
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
 TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 622
@@ -17,7 +24,7 @@ ht-degree: 1%
 
 # [!DNL Target] SDKの概要
 
-最初に、お好みの言語で最初の[ オンデバイス決定](../on-device-decisioning/overview.md)機能フラグアクティビティを作成することをお勧めします。
+最初に、お好みの言語で最初の[&#x200B; オンデバイス決定](../on-device-decisioning/overview.md)機能フラグアクティビティを作成することをお勧めします。
 
 * Node.js
 * Java
@@ -42,13 +49,13 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->**[!UICONTROL On-Device Decisioning]**&#x200B;切り替えを有効または無効にするには、**[!UICONTROL Admin]**&#x200B;または&#x200B;**[!UICONTROL Approver]** [ ユーザー役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
+>**[!UICONTROL On-Device Decisioning]**&#x200B;切り替えを有効または無効にするには、**[!UICONTROL Admin]**&#x200B;または&#x200B;**[!UICONTROL Approver]** [&#x200B; ユーザー役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
 
-**[!UICONTROL On-Device Decisioning]** トグルを有効にすると、[!DNL Adobe Target]は、クライアントの[ ルールアーティファクト ](../on-device-decisioning/rule-artifact-overview.md)の生成を開始します。
+**[!UICONTROL On-Device Decisioning]** トグルを有効にすると、[!DNL Adobe Target]は、クライアントの[&#x200B; ルールアーティファクト &#x200B;](../on-device-decisioning/rule-artifact-overview.md)の生成を開始します。
 
 ## &#x200B;2. SDKのインストール
 
-Node.js、Java、Pythonの場合は、ターミナルのプロジェクトディレクトリで次のコマンドを実行します。 .NETの場合、NuGet](https://www.nuget.org/packages/Adobe.Target.Client)から[ インストールして依存関係として追加します。
+Node.js、Java、Pythonの場合は、ターミナルのプロジェクトディレクトリで次のコマンドを実行します。 .NETの場合、NuGet[&#128279;](https://www.nuget.org/packages/Adobe.Target.Client)から インストールして依存関係として追加します。
 
 >[!BEGINTABS]
 
@@ -393,6 +400,6 @@ target_client.send_notifications({
 
    >[!NOTE]
    >
-   >この手順を実行するには、**[!UICONTROL Approver]**&#x200B;または&#x200B;**[!UICONTROL Publisher]** [ ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
+   >この手順を実行するには、**[!UICONTROL Approver]**&#x200B;または&#x200B;**[!UICONTROL Publisher]** [&#x200B; ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
 
    ![alt画像](assets/asset-activate.png)

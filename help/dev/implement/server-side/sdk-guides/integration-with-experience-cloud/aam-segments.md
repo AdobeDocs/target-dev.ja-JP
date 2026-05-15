@@ -5,10 +5,15 @@ keywords: 配信api, サーバーサイド，サーバーサイド，統合，au
 exl-id: c21e0200-23ba-4a0b-adf4-38e03c087f00
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/mc55SxaUU8BJ81hKLji9xi0-OHCux3W4R0syuVoGrIo
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 431
@@ -62,7 +67,7 @@ Cookieは、[!DNL Adobe Audience Manager]件のリクエストと[!DNL Adobe Tar
 
 #### Node.js
 
-このサンプルは、Node.js web フレームワーク ](https://expressjs.com/)である[expressに依存しています。
+このサンプルは、Node.js web フレームワーク [&#128279;](https://expressjs.com/)であるexpressに依存しています。
 
 >[!BEGINTABS]
 
@@ -180,7 +185,7 @@ app.listen(3000, function () {
 
 #### Java
 
-このサンプルでは、Java web フレームワーク ](https://spring.io/)である[springを使用しています。
+このサンプルでは、Java web フレームワーク [&#128279;](https://spring.io/)であるspringを使用しています。
 
 >[!BEGINTABS]
 
@@ -303,4 +308,4 @@ public class TargetClientService {
 
 >[!ENDTABS]
 
-`TargetRequestUtils.java`について詳しくは、[ ユーティリティ メソッド （Java） ](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}を参照してください
+`TargetRequestUtils.java`について詳しくは、[&#x200B; ユーティリティ メソッド （Java） &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}を参照してください
