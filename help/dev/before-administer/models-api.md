@@ -25,7 +25,7 @@ ht-degree: 2%
 
 Models APIは、ブロックリストに加えるAPIとも呼ばれ、[!UICONTROL Automated Personalization] （AP）および[!DNL Auto-Target] （AT）アクティビティのマシンラーニングモデルで使用される機能のリストを表示および管理できます。 APまたはAT アクティビティのモデルで使用されるフィーチャーを除外する場合は、Models APIを使用して、そのフィーチャーを「モデルブロックリスト」に追加できます。
 
-**[!UICONTROL blocklist]**&#x200B;は、[!DNL Adobe Target]によって機械学習モデルから除外される一連の機能を定義します。 機能について詳しくは、 [!DNL Target] 機械学習アルゴリズム [&#128279;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html)によって使用される データを参照してください。
+**[!UICONTROL blocklist]**&#x200B;は、[!DNL Adobe Target]によって機械学習モデルから除外される一連の機能を定義します。 機能について詳しくは、 [!DNL Target] 機械学習アルゴリズム [&#128279;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=ja)によって使用される データを参照してください。
 
 ブロックリストは、アクティビティ（アクティビティレベル）ごとに定義することも、[!DNL Target] アカウント内のすべてのアクティビティ（グローバルレベル）に定義することもできます。
 
@@ -111,7 +111,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/<campaignId>
 >
 >アクティビティのアクティビティ IDを見つけるには、[!DNL Target] UIのアクティビティ リストに移動します。 目的のアクティビティをクリックします。 アクティビティ IDは、結果のアクティビティの概要ページの本文と、そのページのURLの末尾に表示されます。
 
-**[!UICONTROL externalName]**&#x200B;は、機能の使いやすい名前です。 これは[!DNL Target]によって作成され、この値が時間の経過とともに変更される可能性があります。 ユーザーは、[Personalization インサイト レポート &#x200B;](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html)でこれらの使いやすい名前を確認できます。
+**[!UICONTROL externalName]**&#x200B;は、機能の使いやすい名前です。 これは[!DNL Target]によって作成され、この値が時間の経過とともに変更される可能性があります。 ユーザーは、[Personalization インサイト レポート &#x200B;](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=ja)でこれらの使いやすい名前を確認できます。
 
 **[!UICONTROL internalName]**&#x200B;は、機能の実際のIDです。 [!DNL Target]さんも作成していますが、変更できません。 これは、ブロックリストに加えるする機能を特定するために参照する必要がある値です。
 

@@ -81,11 +81,11 @@ ht-degree: 1%
 
 **読み取り**
 
-* [エンティティの属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [エンティティの属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=ja){target=_blank}
 
 **注意点**
 
-* エンティティ属性を渡す別の方法として、[!DNL Target] UIで製品カタログを更新して、[推奨事項](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}を使用する方法があります。
+* エンティティ属性を渡す別の方法として、[!DNL Target] UIで製品カタログを更新して、[推奨事項](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=ja){target=_blank}を使用する方法があります。
 * エンティティ属性の渡しは、製品カタログデータがデータレイヤーで使用可能なページにのみ適用されます。
 * 任意の呼び出しで`entity.event.detailsOnly=true` パラメーターを渡すことは優先されます。
 

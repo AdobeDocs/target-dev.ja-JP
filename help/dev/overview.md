@@ -40,7 +40,7 @@ ht-degree: 11%
 
 # [!DNL Adobe Target] 開発者ガイド
 
-**（[表示 [!DNL Target]  ドキュメントの更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank}）**
+**（[表示 [!DNL Target]  ドキュメントの更新](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=ja){target=_blank}）**
 
 この&#x200B;*[!DNL Adobe Target]開発者ガイド*&#x200B;では、[!DNL Target]を実装および管理するためのAPIおよびSDK ドキュメントなど、[!DNL Target]の開発者に関するリソースとガイドを提供しています。
 
@@ -52,7 +52,7 @@ ht-degree: 11%
 >
 >* [*[!DNL Adobe Target] チュートリアル *](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=ja){target=_blank}
 >
->リリース情報については、「*[!DNL Adobe Target]Business Practitioner Guide*」の「[Target リリースノート （最新） &#x200B;](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank}」を参照してください。
+>リリース情報については、「*[!DNL Adobe Target]Business Practitioner Guide*」の「[Target リリースノート （最新） &#x200B;](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=ja){target=_blank}」を参照してください。
 
 ## 入門ガイド
 
@@ -112,7 +112,7 @@ ht-degree: 11%
 
 [**Admin Console API**](https://developer.adobe.com/umapi/): Adobe User Management APIとUser Sync APIを使用して、ユーザーと製品の使用権限を管理します。
 
-[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html): データ収集、パーソナライゼーション、広告、マーケティングの様々なユースケースに[!DNL Adobe Experience Platform Edge Network Server] APIを使用します。
+[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=ja): データ収集、パーソナライゼーション、広告、マーケティングの様々なユースケースに[!DNL Adobe Experience Platform Edge Network Server] APIを使用します。
 
 ## リソース
 
@@ -124,6 +124,6 @@ ht-degree: 11%
 * [Targetの実装](./before-implement/prepare-to-implement-target.md)
 * [Targetの管理](./before-administer/target-api-overview.md)
 * [Adobe Target Dev Docs GitHub リポジトリ](https://github.com/AdobeDocs/target-developers)
-* [Adobe Target リリースノート](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
+* [Adobe Target リリースノート](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=ja)
 * [Adobe Target ビジネスユーザーガイド](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=ja)
 

@@ -49,7 +49,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->**[!UICONTROL On-Device Decisioning]**&#x200B;切り替えを有効または無効にするには、**[!UICONTROL Admin]**&#x200B;または&#x200B;**[!UICONTROL Approver]** [&#x200B; ユーザー役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
+>**[!UICONTROL On-Device Decisioning]**&#x200B;切り替えを有効または無効にするには、**[!UICONTROL Admin]**&#x200B;または&#x200B;**[!UICONTROL Approver]** [&#x200B; ユーザー役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja)が必要です。
 
 **[!UICONTROL On-Device Decisioning]** トグルを有効にすると、[!DNL Adobe Target]は、クライアントの[&#x200B; ルールアーティファクト &#x200B;](../on-device-decisioning/rule-artifact-overview.md)の生成を開始します。
 
@@ -400,6 +400,6 @@ target_client.send_notifications({
 
    >[!NOTE]
    >
-   >この手順を実行するには、**[!UICONTROL Approver]**&#x200B;または&#x200B;**[!UICONTROL Publisher]** [&#x200B; ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
+   >この手順を実行するには、**[!UICONTROL Approver]**&#x200B;または&#x200B;**[!UICONTROL Publisher]** [&#x200B; ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja)が必要です。
 
    ![alt画像](assets/asset-activate.png)

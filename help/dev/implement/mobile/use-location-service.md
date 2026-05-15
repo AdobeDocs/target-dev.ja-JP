@@ -24,4 +24,4 @@ ht-degree: 4%
 
 [!DNL Location Service]と[!DNL Target]を使用すると、Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja)の タグを持つルールを活用して、[!UICONTROL Places] データを[!DNL Adobe Target]個のSDK イベントに添付できます。
 
-詳しくは、[Adobe Experience Platform Location Service ガイド &#x200B;](https://experienceleague.adobe.com/docs/places/using/home.html)の「[!UICONTROL Location Service]を [!DNL Adobe Target][&#128279;](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html)で使用する」を参照してください。
+詳しくは、[Adobe Experience Platform Location Service ガイド &#x200B;](https://experienceleague.adobe.com/docs/places/using/home.html?lang=ja)の「[!UICONTROL Location Service]を [!DNL Adobe Target][&#128279;](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html?lang=ja)で使用する」を参照してください。

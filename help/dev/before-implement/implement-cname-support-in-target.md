@@ -32,7 +32,7 @@ ht-degree: 1%
 ## [!DNL Target]でのCNAME サポートのリクエスト
 
 1. SSL証明書に必要なホスト名のリストを決定します（以下のFAQを参照）。
-1. [このフォーム &#x200B;](/help/dev/implement/assets/FPC_Request_Form.xlsx)に入力し、CNAME サポートをリクエストする [!DNL Adobe]  クライアントケアチケットを[開いたときにフォームを含めます](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
+1. [このフォーム &#x200B;](/help/dev/implement/assets/FPC_Request_Form.xlsx)に入力し、CNAME サポートをリクエストする [!DNL Adobe]  クライアントケアチケットを[開いたときにフォームを含めます](https://experienceleague.adobe.com/ja/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] クライアント コード：
    * SSL証明書ホスト名（例：`target.example.com target.example.org`）:

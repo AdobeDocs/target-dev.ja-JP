@@ -27,4 +27,4 @@ ht-degree: 7%
 
 [!DNL Adobe Target]は、クライアントサイドとサーバーサイドの実装を組み合わせることで、パーソナライゼーションのための独自のハイブリッド展開モデルを提供します。 このハイブリッドモデルでは、技術的な知識がなくても、WYSIWYG [!UICONTROL Visual Experience Composer] （VEC）を使用して実験アクティビティやパーソナライゼーションアクティビティをオーサリングし、エクスペリエンスをサーバーサイドで実行、配信、レンダリングして、パフォーマンスの高い配信を実現できます。
 
-詳しくは、[Adobe チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=ja)の[Adobe Target ハイブリッドデプロイメント &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html)を参照してください。
+詳しくは、[Adobe チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=ja)の[Adobe Target ハイブリッドデプロイメント &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html?lang=ja)を参照してください。

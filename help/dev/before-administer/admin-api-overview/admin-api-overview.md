@@ -28,7 +28,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->UIを使用して[!DNL Target]を管理する場合は、*Adobe Target Business Practitioner Guide*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)の管理セクションを参照してください。
+>UIを使用して[!DNL Target]を管理する場合は、*Adobe Target Business Practitioner Guide*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=ja)の管理セクションを参照してください。
 >
 >Admin APIとProfile APIは、多くの場合、まとめて参照されますが（「Admin and Profile API」）、個別に参照することもできます（「Admin API」と「Profile API」）。 Recommendations APIは、[!DNL Target]管理APIの特定の実装です。
 
@@ -86,11 +86,11 @@ Target Admin APIの一般的な応答コードを次に示します。
 
 アクティビティを使用すると、ユーザーのコンテンツをテストまたはパーソナライズできます。 アクティビティは、次のいずれかのタイプになります。
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [エクスペリエンスのターゲット設定（XT）](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
-* [レコメンデーション](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
-* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [多変量分析テスト（MVT）](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja)
+* [エクスペリエンスのターゲット設定（XT）](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=ja)
+* [レコメンデーション](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=ja)
+* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja)
+* [多変量分析テスト（MVT）](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=ja)
 
 ## 更新のバッチ
 
