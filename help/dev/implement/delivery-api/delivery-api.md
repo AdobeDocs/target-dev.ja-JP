@@ -1,18 +1,21 @@
 ---
-title: Adobe Target配信 API
-description: Adobe Target配信 API
-keywords: 配信 api
+title: Adobe Target Delivery API
+description: Adobe Target Delivery API
+keywords: Delivery API
 feature: APIs/SDKs
 exl-id: c01b79d7-a14b-49d9-8f28-753fa85a5b39
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/ptESus-uzATX0Vyr0B-Av5aH6Ur-KKaIhDaHsNMMNN8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '19'
-ht-degree: 10%
+source-wordcount: 29
+ht-degree: 13%
 
 ---
 
 # 配信 API
 
-[!DNL Adobe Target Delivery API] は次の場所にあります。
+[!DNL Adobe Target Delivery API]は、次の場所にあります。
 
 * [https://developer.adobe.com/target/implement/delivery-api/](https://developer.adobe.com/target/implement/delivery-api/){target=_blank}

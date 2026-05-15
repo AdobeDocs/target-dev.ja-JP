@@ -1,20 +1,23 @@
 ---
-title: ' [!DNL Adobe Target] .NET SDK でのイベントのサブスクライブ'
-description: '[!UICONTROL OnDeviceDecisioningHandler] オブジェクトを使用して.NET SDK 内で発生する様々なイベントを購読する方法について説明します。'
+title: ' [!DNL Adobe Target] .NET SDKのイベントの購読'
+description: '[!UICONTROL OnDeviceDecisioningHandler] オブジェクトを使用して、.NET SDK内で発生するさまざまなイベントを購読する方法を説明します。'
 feature: APIs/SDKs
 exl-id: 7578033f-3de5-4d13-9739-46ad1269ec5f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/oeGknU-pW1-XjVrxn8JNEPoFBF8Gntt-vaVnqjdyTC8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: 120
 ht-degree: 5%
 
 ---
 
-# SDK イベント （.NET）
+# SDK Events （.NET）
 
 ## 説明
 
-[SDK を初期化 &#x200B;](initialize-sdk.md) する際に、オプションの `OnDeviceDecisioningReady` デリゲートを `TargetClientConfig` オブジェクトに指定できます。このオブジェクトは、SDK がオンデバイスメソッド呼び出しの準備ができたときに呼び出されます。 [!UICONTROL on-device decisioning] アーティファクトのダウンロードを処理するために使用できるその他のデリゲートもいくつかあります。
+SDK](initialize-sdk.md)を[初期化する際に、オプションの`OnDeviceDecisioningReady` デリゲートを`TargetClientConfig` オブジェクトで指定できます。これは、SDKがオンデバイス メソッド呼び出しの準備ができたときに呼び出されます。 [!UICONTROL on-device decisioning] アーティファクトのダウンロードを処理するために使用できる他のデリゲートもいくつかあります。
 
 ## Events
 
@@ -22,8 +25,8 @@ ht-degree: 5%
 
 | 名前 | 引数 | 説明 |
 | --- | --- | --- |
-| OnDeviceDecisioningReady | None | クライアントの [!UICONTROL on-device decisioning] ークフロー準備が初めて完了したときにのみ呼び出されます。 |
-| ArtifactDownloadSuccessful | アーティファクトファイルの文字列コンテンツ | [!UICONTROL on-device decisioning] アーティファクトがダウンロードされるたびに呼び出されます。 |
+| OnDeviceDecisioningReady | None | クライアントが初めて[!UICONTROL on-device decisioning]の準備が整ったときに一度だけ呼び出されます |
+| ArtifactDownloadSucceeded | アーティファクトファイルの文字列コンテンツ | [!UICONTROL on-device decisioning] アーティファクトがダウンロードされるたびに呼び出されます |
 | ArtifactDownloadFailed | 例外 | [!UICONTROL on-device decisioning] アーティファクトのダウンロードに失敗するたびに呼び出されます |
 
 ## 例

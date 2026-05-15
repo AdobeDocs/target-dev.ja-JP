@@ -1,19 +1,25 @@
 ---
-keywords: adobe.target.sendNotifications, sendNotifications, sendnotifications, send notifications, notifications, at.js, functions, function, $9
-description: '[!UICONTROL applyOffer] を使用せずにエクスペリエンスがレンダリングされた場合に、[!UICONTROL adobe.target.sendNotifications()] for at.js を使用して  [!DNL Target] edge に通知を送信します。 （at.js.2.1 以降）'
-title: adobe.target.sendNotifications （）関数の使用方法
+keywords: adobe.target.sendNotifications, sendNotifications, sendnotifications，送信通知，通知，at.js，関数，関数，$9
+description: '[!UICONTROL applyOffer]を使用しないエクスペリエンスがレンダリングされたときに [!DNL Target]  エッジに通知を送信するには、at.jsに[!UICONTROL adobe.target.sendNotifications()]を使用します。 （at.js.2.1 +）'
+title: adobe.target.sendNotifications （）関数の使用方法を教えてください。
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/QprkTK-0WGq-fzJ9e3FUSAZAandaZFiUY62-zQ6ajY8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: 638
 ht-degree: 83%
 
 ---
 
 # [!UICONTROL adobe.target.sendNotifications(options)]
 
-この関数は、`[!UICONTROL adobe.target.applyOffer()]` または `[!UICONTROL adobe.target.applyOffers()]` を使用せずにエクスペリエンス [!DNL Target] レンダリングされたときにエッジに通知を送信します。
+`[!UICONTROL adobe.target.applyOffer()]`または`[!UICONTROL adobe.target.applyOffers()]`を使用せずにエクスペリエンスをレンダリングすると、この関数は[!DNL Target] エッジに通知を送信します。
 
 >[!NOTE]
 >
@@ -21,9 +27,9 @@ ht-degree: 83%
 
 | キー | タイプ | 必須？ | 説明 |
 | --- | --- | --- | --- |
-| consumerId | 文字列 | × | 指定しない場合、デフォルト値はクライアントのグローバル mbox です。このキーは、A4T 統合に使用される補助的なデータ ID を生成するために使用されます。 |
+| consumerId | 文字列 | × | 指定しない場合、デフォルト値はクライアントのグローバル mbox です。 このキーは、A4T 統合に使用される補助的なデータ ID を生成するために使用されます。 |
 | リクエスト | オブジェクト | ○ | 下の「リクエスト」の表を参照してください。 |
-| timeout | 数値 | × | リクエストのタイムアウト。指定しない場合、at.js のデフォルトのタイムアウトが使用されます。 |
+| timeout | 数値 | × | リクエストのタイムアウト。 指定しない場合、at.js のデフォルトのタイムアウトが使用されます。 |
 
 ## リクエスト
 
@@ -43,20 +49,20 @@ ht-degree: 83%
 | Request > notifications > product > id | 文字列 | × | `<=` 128 文字。空にできない。 | 製品 ID。 |
 | Request > notifications > product > categoryId | 文字列 | × | `<=` 128 文字。空にできない。 | カテゴリ ID. |
 | Request > notifications > id | 文字列 | ○ | `<=` 200 文字。 | 通知 ID は応答で返され、通知が正常に処理されたことを示す。 |
-| Request > notifications > impressionId | 文字列 | × | `<= 128` 文字。 | インプレッション ID が、現在の通知を以前の通知とスティッチ（リンク）したり、リクエストを実行したりするのに使用される。それらの両方が一致する場合、2 番目以降のクエストはアクティビティまたはエクスペリエンスに新しいインプレッションを生成しません。 |
-| Request > notifications > type | 文字列 | ○ | 「クリック」または「ディスプレイ」がサポートされています。 | 通知タイプ。 |
+| Request > notifications > impressionId | 文字列 | × | `<= 128` 文字。 | インプレッション ID が、現在の通知を以前の通知とスティッチ（リンク）したり、リクエストを実行したりするのに使用される。 それらの両方が一致する場合、2 番目以降のクエストはアクティビティまたはエクスペリエンスに新しいインプレッションを生成しません。 |
+| Request > notifications > type | 文字列 | ○ | 「クリック」または「表示」がサポートされています。 | 通知タイプ。 |
 | Request > notifications > timestamp | 数値 `<int64>` | ○ |  | UNIX エポックから経過したミリ秒で示す通知のタイムスタンプ。 |
 | Request > notifications > tokens | 文字列の配列 | ○ |  | 通知のタイプに基づく、表示されたコンテンツまたはクリックされたセクターのトークンのリスト。 |
 | Request > notifications > mbox | オブジェクト | × |  | mbox の通知。 |
-| Request > notifications > mbox > name | 文字列 | × | 空の値は許可されない。<p>許可される文字：この表の後のメモを参照してください。 | mbox 名。 |
+| Request > notifications > mbox > name | 文字列 | × | 空の値は許可されない。<p>使用可能なグラフ：次の表に示すメモを参照してください。 | mbox 名。 |
 | Request > notifications > mbox > state | 文字列 | × |  | mbox 状態トークン。 |
 | Request > notifications > view | オブジェクト | × |  |  |
-| Request > notifications > view > id | 整数 `<int64>` | × |  | ビュー ID。ビューがビュー API で作成された際にビューに割り当てられた ID。 |
+| Request > notifications > view > id | 整数 `<int64>` | × |  | ビュー ID。 ビューがビュー API で作成された際にビューに割り当てられた ID。 |
 | Request > notifications > view > name | 文字列 | × | `<= 128` 文字。 | ビューの名前。 |
-| Request > notifications > view > key | 文字列 | × | `<=` 512 文字。 | ビューキー。API でビューに設定されたキー。 |
+| Request > notifications > view > key | 文字列 | × | `<=` 512 文字。 | ビューキー。 API でビューに設定されたキー。 |
 | Request > notifications > view > state | 文字列 | × |  | ビュー状態トークン。 |
 
-**注意**：次の文字は `Request > notifications > mbox > name` では使用できません *使用できません*。
+**注**：次の文字は`Request > notifications > mbox > name`に対して&#x200B;*not*&#x200B;許可されています：
 
 ```
 - '-, ./=`:;&!@#$%^&*()+|?~[]{}'
@@ -118,4 +124,4 @@ adobe.target.getOffers({
 
 >[!NOTE]
 >
->[!DNL Adobe Analytics]、`[!UICONTROL getOffers()]` を prefetch のみおよび `[!UICONTROL sendNotifications()]` と共に使用している場合は、`[!UICONTROL sendNotifications()]` の実行後に [!DNL Analytics] リクエストを実行する必要があります。 この目的は、`[!UICONTROL sendNotifications()]` によって生成された SDID が、[!DNL Analytics] と [!DNL Target] に送信された SDID と一致することを確認することです。
+>プリフェッチのみ`[!UICONTROL sendNotifications()]`で[!DNL Adobe Analytics]、`[!UICONTROL getOffers()]`を使用している場合、`[!UICONTROL sendNotifications()]`の実行後に[!DNL Analytics] リクエストを実行する必要があります。 この目的は、`[!UICONTROL sendNotifications()]`によって生成されたSDIDが、[!DNL Analytics]および[!DNL Target]に送信されたSDIDと一致することを確認することです。

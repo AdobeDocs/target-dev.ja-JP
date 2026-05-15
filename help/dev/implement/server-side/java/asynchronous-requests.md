@@ -1,11 +1,14 @@
 ---
-title: ' [!DNL Adobe Target] Java SDK での非同期要求の使用方法'
-description: Java SDK が  [!DNL Target]  非同期リクエストをサポートする方法を説明します。これにより、有効なターゲット時間をゼロに減らすことができます。
+title: ' [!DNL Adobe Target] Java SDKでの非同期リクエストの使用方法'
+description: ' [!DNL Target] Java SDKが非同期リクエストをサポートする方法を説明します。これにより、効果的な目標時間を0に短縮できます。'
 feature: APIs/SDKs
 exl-id: e11f8d16-76f6-4d39-822a-34a1cf7f623f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/Y9oTl8aU4-4HpMajdmy5KfvAwEFOpV0y9vUg7BdBRk8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: 130
 ht-degree: 3%
 
 ---
@@ -14,7 +17,7 @@ ht-degree: 3%
 
 ## 説明
 
-サーバーサイド統合の利点の 1 つは、並列処理を使用することで、サーバーサイドで利用できる膨大な帯域幅とコンピューティングリソースを活用できる点です。 Java SDK[!DNL Target]、非同期リクエストをサポートしており、有効ターゲット時間をゼロに減らすことができます。
+サーバーサイド統合の利点の1つは、並列処理を使用して、サーバーサイドで利用可能な巨大な帯域幅とコンピューティングリソースを活用できることです。[!DNL Target] Java SDKは非同期リクエストをサポートしており、これにより効果的なターゲットタイムをゼロにすることができます。
 
 ## サポートされるメソッド
 
@@ -28,9 +31,9 @@ CompletableFuture<Attributes> getAttributesAsync(TargetDeliveryRequest targetReq
 
 ## 例
 
-`Spring` アプリケーションコントローラーの例は次のようになります。
+サンプル `Spring` アプリケーション コントローラーは次のようになります。
 
-### サンプル コントローラ
+### サンプルコントローラー
 
 ```javascript {line-numbers="true"}
 @RestController
@@ -73,6 +76,6 @@ public class TargetRestController {
 }
 ```
 
-この例では、SDK を [&#x200B; 初期化 &#x200B;](initialize-sdk.md) して Spring Bean とし、[&#x200B; ユーティリティメソッド &#x200B;](utility-methods.md) を使用できることを前提としています。
+この例では、[SDK](initialize-sdk.md)をスプリング Beanとして初期化しており、[ ユーティリティメソッド ](utility-methods.md)が使用可能であると仮定します。
 
-[!DNL Target] リクエストは `simulateIO` の前に実行され、実行される時点で、ターゲット結果も準備が整っています。 そうでない場合でも、ほとんどの場合、大幅に節約できます。
+[!DNL Target] リクエストは`simulateIO`の前に実行され、実行されるまでにターゲット結果も準備が整っている必要があります。 そうでなくても、ほとんどの場合、大幅な節約になります。

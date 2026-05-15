@@ -1,11 +1,14 @@
 ---
-title: リクエストをログに記録するように  [!DNL Adobe Target] Node.js SDK を初期化します
-description: Node [!DNL Adobe Target] js SDK でリクエストをログに記録する方法を説明します。
+title: ' [!DNL Adobe Target] Node.js SDKを初期化してリクエストをログに記録'
+description: ' [!DNL Adobe Target] Node.js SDKでリクエストをログに記録する方法について説明します。'
 feature: APIs/SDKs
 exl-id: 5db3e301-47b3-4330-b185-c0c03f72e790
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/tC6xT-eAHOO17h1BK-PwWTBmwg3Dy0Wj8KYrV3W-VR4
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '85'
+source-wordcount: 83
 ht-degree: 2%
 
 ---
@@ -14,9 +17,9 @@ ht-degree: 2%
 
 ## 説明
 
-[SDK を初期化 &#x200B;](initialize-sdk.md) する場合、`options.logger` オブジェクトはオプションのオブジェクトです。 ただし、問題が発生した場合に効果的にデバッグするには、SDK の初期化時に `logger` オブジェクトを指定する必要があります。
+SDK](initialize-sdk.md)を[初期化する場合、`options.logger` オブジェクトはオプションのオブジェクトです。 ただし、問題が発生したときに効果的にデバッグするには、SDKの初期化時に`logger` オブジェクトを指定する必要があります。
 
-`logger` オブジェクトには `debug()` および `error()` メソッドが必要です。 `console` などの適切なロガーを指定すると、[!DNL Target] のリクエストと応答がログに記録されます。
+`logger` オブジェクトには`debug()`と`error()` メソッドが必要です。 `console`などの適切なロガーを指定すると、[!DNL Target]要求と応答がログに記録されます。
 
 ## 例
 
@@ -44,4 +47,4 @@ const request = {
 const response = await targetClient.getOffers({ request, targetCookie });
 ```
 
-リクエストと応答がコンソールに印刷されているのが確認できます。
+リクエストと応答がコンソールに出力されます。

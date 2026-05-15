@@ -1,20 +1,23 @@
 ---
-title: Adobe Target配信 API のユーザー権限
-description: Adobe Target配信 API のユーザー権限
+title: Adobe Target Delivery APIのユーザー権限
+description: Adobe Target Delivery APIのユーザー権限
 badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=ja#premium newtab=true" tooltip="Target Premium に含まれる機能を確認してください。"
-keywords: 配信 api
+keywords: Delivery API
 exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/V7F8WjDNUMJJySyep0nVCg0wMK05ZfdV4XPtMjXOBvM
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 6%
+source-wordcount: 180
+ht-degree: 11%
 
 ---
 
-# ユーザー権限（Premium）
+# ユーザー権限（プレミアム）
 
-[!DNL Adobe] を使用すると、ユーザーがAdobe Targetを使用する際にユーザーの権限を管理できます。 [!UICONTROL Adobe Target Delivery API] 呼び出しを成功させるには、適切な権限を持つトークンを API 呼び出し内で渡す必要があります。 ユーザー権限とトークンの取得方法について詳しくは、[&#x200B; このドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=ja) を参照してください。
+[!DNL Adobe]では、お客様がAdobe Targetを使用する際に、ユーザーの権限を管理できます。 [!UICONTROL Adobe Target Delivery API]呼び出しを成功させるには、API呼び出し内で適切な権限を持つトークンを渡す必要があります。 ユーザーの許可とトークンの取得方法について詳しくは、[このドキュメント ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)を参照してください。
 
 ```
 curl -X POST \
@@ -49,7 +52,7 @@ curl -X POST \
     }'
 ```
 
-対応するトークンを取得したら、実行されるすべての API 呼び出しで `property` -> `token` に渡します。 すべての API 呼び出し内で `property` -> `token` が渡されない場合、Adobe Targetから `content` が返されることはありません。
+対応するトークンを取得したら、作成したすべてのAPI呼び出しについて、`property` -> `token`に渡します。 すべてのAPI呼び出し内で`property` -> `token`が渡されない場合、Adobe Targetから`content`は返されません。
 
 ```
 {
@@ -71,4 +74,4 @@ curl -X POST \
 }
 ```
 
-上記のように、`property` -> `token` を渡さずに、コンテンツを取得することはできません。 API 呼び出しからコンテンツを期待しても、応答からコンテンツが取得されない場合、`property` -> `token` が指定されていないか、正しい権限なしで渡されていることが原因である可能性が高いです。
+上記のように、`property` -> `token`を渡さずにコンテンツを返すことはできません。 API呼び出しからコンテンツを期待するが、応答からコンテンツを取得しない場合は、`property` -> `token`が提供されていないか、正しい権限なしで渡されている可能性が高くなります。

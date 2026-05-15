@@ -1,40 +1,43 @@
 ---
-title: ' [!DNL Adobe Target] .NET SDK の基本を学ぶ'
-description: 顧客が.NET SDK [!DNL Adobe Target]  インストール、初期化、使用する方法について説明します。
+title: ' [!DNL Adobe Target] .NET SDKの基本を学ぶ'
+description: ' [!DNL Adobe Target] お客様が.NET SDKをインストール、初期化、使用する方法について説明します。'
 feature: APIs/SDKs
 exl-id: 618e9320-f001-4ab4-befc-c7b12bbe7b5f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/FWbHAWmYHTVTKdfk0mRek1U6ymrmZ7ioB7plWmnndSk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 3%
+source-wordcount: 140
+ht-degree: 12%
 
 ---
 
-# .NET SDK の概要
+# .NET SDKの概要
 
-このリファレンスガイドでは、.NET SDK をインストール、初期化、使用できるお [!DNL Adobe Target] 様を示します。
+このリファレンスガイドでは、[!DNL Adobe Target]のお客様が.NET SDKをインストール、初期化、使用する方法について説明します。
 
 ## 前提条件
 
-* 少なくとも [.NET Standard 2.0](https://github.com/dotnet/standard/blob/v2.1.0/docs/versions/netstandard2.0.md)
-* 推奨 [.NET 5](https://github.com/dotnet/core/blob/main/release-notes/5.0/README.md)
+* 少なくとも[.NET Standard 2.0](https://github.com/dotnet/standard/blob/v2.1.0/docs/versions/netstandard2.0.md)
+* おすすめの[.NET 5](https://github.com/dotnet/core/blob/main/release-notes/5.0/README.md)
 
 ## 導入
 
-.NET SDK の使用を開始する方法については、[[!DNL Target] SDK 入門ガイド &#x200B;](../sdk-guides/getting-started/getting-started.md) に移動してください。
+.NET SDKの使用方法については、[[!DNL Target] SDK入門ガイド ](../sdk-guides/getting-started/getting-started.md)を参照してください。
 
 ## サンプルアプリ
 
-テストドライブ the.NET SDK:
+the.NET SDKをテストします。
 
-* [[!DNL Adobe Target] [!UICONTROL on-device decisioning] デモサイトにアクセスする &#x200B;](https://github.com/adobe/on-device-decisioning-demo-site)
-* [&#x200B; サンプルアプリケーション &#x200B;](../sdk-guides/sample-apps/sample-apps.md) の場合、
+* [[!DNL Adobe Target] [!UICONTROL on-device decisioning] デモサイト ](https://github.com/adobe/on-device-decisioning-demo-site)にアクセスすると
+* [ サンプルアプリケーション ](../sdk-guides/sample-apps/sample-apps.md)で。
 
 ### リファレンス
 
-.NET SDK リファレンスドキュメントを読み、理解するには、[SDK のインストール &#x200B;](install-sdk.md) から始めます。
+.NET SDKのリファレンスドキュメントを読み、理解するには、[SDKのインストール ](install-sdk.md)から始めます。
 
 ## Source ファイル
 
-* [.NET SDK Github リポジトリ &#x200B;](https://github.com/adobe/target-dotnet-sdk)
-* [&#x200B; リリース &#x200B;](https://github.com/adobe/target-dotnet-sdk/releases)
+* [.NET SDK Github リポジトリ](https://github.com/adobe/target-dotnet-sdk)
+* [リリース](https://github.com/adobe/target-dotnet-sdk/releases)

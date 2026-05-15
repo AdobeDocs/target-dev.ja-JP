@@ -1,23 +1,29 @@
 ---
-keywords: コンテンツセキュリティポリシー，csp, at.js, ホワイトリスト，^許可リスト，ちらつき，事前非表示，事前非表示，事前非表示，コンテンツセキュリティポリシー，iFrame, iframe
-description: ' [!DNL Adobe Target] を使用する際に追加する必要があるコンテンツセキュリティポリシー（CSP）指令について説明します。'
+keywords: content security policy, csp, at.js, whitelist, 許可リストに加える, flicker, pre-hide, pre-hide, prehiding, content security policy, iFrame, iframe
+description: ' [!DNL Adobe Target]を使用する際に追加する必要があるContent Security Policy （CSP） ディレクティブについて説明します。'
 title: ' [!DNL Target]  では、コンテンツセキュリティポリシー（CSP）にどのように対応しますか？'
 feature: Privacy & Security
 exl-id: ec6942e5-36d8-4f88-b3d6-47f9eaca03a8
-source-git-commit: c43c79b29768694eac534e22047b5ee6a3d0ccd5
+TQID: https://experienceleague.adobe.com/gGNgYyblw6-D-RiHBtzAtrOOdhVOsIzYQ-HhkhCtyuI
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: 610
 ht-degree: 28%
 
 ---
 
 # コンテンツセキュリティポリシー（CSP）指令
 
-[&#x200B; コンテンツセキュリティポリシー &#x200B;](https://en.wikipedia.org/wiki/Content_Security_Policy) （CSP）を [!DNL Adobe Target] の実装に使用する場合、[at.js 2.1 以降 &#x200B;](../../implement/client-side/atjs/target-atjs-versions.md) を使用する際は以下の CSP 指令を追加する必要があります。
+[!DNL Adobe Target]実装に[Content Security Policy](https://en.wikipedia.org/wiki/Content_Security_Policy) （CSP）を使用している場合、[at.js 2.1以降](../../implement/client-side/atjs/target-atjs-versions.md)を使用する際には、次のCSP ディレクティブを追加する必要があります。
 
-* `connect-src` と `*.tt.omtrdc.net` 許可リスト。[!DNL Target] エッジへのネットワークリクエストを許可するために必要です。
-* `style-src unsafe-inline`をインストールします。事前非表示およびちらつき制御に必要です。
-* `script-src unsafe-inline`HTML オファーの一部となる JavaScript の実行を許可するために必要です。
+* `connect-src` と `*.tt.omtrdc.net` 許可リスト。 [!DNL Target] エッジへのネットワークリクエストを許可するために必要です。
+* `style-src unsafe-inline`. 事前非表示およびちらつき制御に必要です。
+* `script-src unsafe-inline`. HTML オファーの一部となる JavaScript の実行を許可するために必要です。
 
 ## よくある質問（FAQ）
 
@@ -25,76 +31,76 @@ ht-degree: 28%
 
 ### クロスオリジンリソース共有（CORS）と Flash クロスドメインポリシーには、セキュリティの問題がありますか？
 
-CORS ポリシーを実装する推奨方法は、信頼済みのドメインの許可リストを介して、アクセスを必要とする信頼されたオリジンだけにアクセスを許可することです。Flash クロスドメインポリシーについても同じことがいえます。一部の [!DNL Target] のお客様は、Target でのドメインに対するワイルドカード文字の使用を心配しています。 ユーザーがアプリケーションにログインし、ポリシーで許可されたドメインを訪問した場合に、そのドメインで実行されている悪意のあるコンテンツがアプリケーションから機密コンテンツを取得し、ログインしているユーザーのセキュリティコンテキスト内でアクションを実行する可能性があるという懸念があります。 これは、一般に、クロスサイトリクエストフォージェリ（CSRF）と呼ばれます。
+CORS ポリシーを実装する推奨方法は、信頼済みのドメインの許可リストを介して、アクセスを必要とする信頼されたオリジンだけにアクセスを許可することです。 Flash クロスドメインポリシーについても同じことがいえます。 一部の[!DNL Target]のお客様は、Targetのドメインにワイルドカード文字を使用することを懸念しています。 懸念されるのは、ユーザーがアプリケーションにログインし、ポリシーで許可されているドメインにアクセスした場合、そのドメインで実行されている悪意のあるコンテンツは、アプリケーションから機密コンテンツを取得し、ログインしたユーザーのセキュリティコンテキスト内でアクションを実行する可能性があることです。 この状況は、一般的にクロスサイトリクエストフォージェリー（CSRF）と呼ばれます。
 
-ただし、[!DNL Target] 実装では、これらのポリシーは、セキュリティの問題にはならないはずです。
+ただし、[!DNL Target]の実装では、これらのポリシーはセキュリティの問題を表すものではありません。
 
-「adobe.tt.omtrdc.net」は、アドビが所有するドメインです。[!DNL Adobe Target] は、テストとパーソナライゼーションのツールです。[!DNL Target] は、認証を必要とせずに、どこからでもリクエストを受け取り、処理できることが期待されます。これらのリクエストには、A/B テスト、レコメンデーション、コンテンツのパーソナライゼーションに使用されるキーと値のペアが含まれています。
+「adobe.tt.omtrdc.net」は、アドビが所有するドメインです。 [!DNL Adobe Target] は、テストとパーソナライゼーションのツールです。[!DNL Target] は、認証を必要とせずに、どこからでもリクエストを受け取り、処理できることが期待されます。 これらのリクエストには、A/B テスト、レコメンデーション、コンテンツのパーソナライゼーションに使用されるキーと値のペアが含まれています。
 
-Adobeは、個人を特定できる情報（PII）やその他の機密情報を、「adobe.tt.omtrdc.net」で指定される [!DNL Adobe Target] エッジサーバー上に格納しません。
+Adobeは、「adobe.tt.omtrdc.net」が指す[!DNL Adobe Target] エッジサーバーに個人情報（PII）またはその他の機密情報を保存しません。
 
-これにより、JavaScript 呼び出しを使用してどのドメインからでも [!DNL Target] にアクセスできることが期待されます。このアクセスを許可する唯一の方法は、ワイルドカードと共に「Access-Control-Allow-Origin」を適用することです。
+これにより、JavaScript 呼び出しを使用してどのドメインからでも [!DNL Target] にアクセスできることが期待されます。 このアクセスを許可する唯一の方法は、「Access-Control-Allow-Origin」をワイルドカードに適用することです。
 
-### 外部ドメインの下でサイトが iFrame として埋め込まれるのを許可または禁止するにはどうすればよいですか？
+### サイトをiFrameとして外部ドメインに埋め込むのを許可または防止するにはどうすればよいですか？
 
-[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja){target=_blank} （VEC）が web サイトを iFrame に埋め込めるようにするには、web サーバー設定で CSP （設定されている場合）を変更する必要があります。 ドメイン [!DNL Adobe]、許可リストに登録して設定する必要があります。
+[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} （VEC）がWeb サイトをiFrameに埋め込むようにするには、Web サーバー設定でCSP （設定されている場合）を変更する必要があります。 [!DNL Adobe] ドメインはホワイトリストに登録して設定する必要があります。
 
-セキュリティ上の理由から、サイトが外部ドメインの下に iFrame として埋め込まれないようにする場合があります。
+セキュリティ上の理由から、サイトが外部ドメインにiFrameとして埋め込まれるのを防ぐ必要がある場合があります。
 
-次の節では、VEC による iFrame へのサイトの埋め込みを許可または禁止する方法について説明します。
+次の節では、VECがiFrameにサイトを埋め込むのを許可または禁止する方法について説明します。
 
-#### VEC による iFrame へのサイトの埋め込みを許可
+#### VECがiFrameにサイトを埋め込むことを許可する
 
-VEC を使用して web サイトを iFrame に埋め込む最も簡単な解決策は、最も広いワイルドカードである `*.adobe.com` を許可することです。
+VECがWeb サイトをiFrameに埋め込めるようにするための最も簡単な方法は、最も広いワイルドカードである`*.adobe.com`を許可することです。
 
 次に例を示します。
 
 `Content-Security-Policy: frame-ancestors 'self' *.adobe.com`
 
-次の図のように（クリックすると拡大できます）。
+次の図のように（クリックして拡大）:
 
 
-![&#x200B; 最も広範なワイルドカードを使用した CSP](/help/dev/before-implement/privacy/assets/csp-adobe.png){width="600" zoomable="yes"}
+最も広いワイルドカードを含む![CSP](/help/dev/before-implement/privacy/assets/csp-adobe.png){width="600" zoomable="yes"}
 
-実際の [!DNL Adobe] サービスのみを許可することもできます。 このシナリオは、`*.experiencecloud.adobe.com + https://experiencecloud.adobe.com` を使用することで達成できます。
+実際の[!DNL Adobe] サービスのみを許可することができます。 このシナリオは、`*.experiencecloud.adobe.com + https://experiencecloud.adobe.com`を使用することで実現できます。
 
 次に例を示します。
 
 `Content-Security-Policy: frame-ancestors 'self' https://*.experiencecloud.adobe.com https://experiencecloud.adobe.com https://experience.adobe.com`
 
-次の図のように（クリックすると拡大できます）。
+次の図のように（クリックして拡大）:
 
-![ExperienceCloud スコープの CSP](/help/dev/before-implement/privacy/assets/csp-experiencecloud.png){width="600" zoomable="yes"}
+![ExperienceCloud スコープ付きCSP](/help/dev/before-implement/privacy/assets/csp-experiencecloud.png){width="600" zoomable="yes"}
 
-会社のアカウントに対する最も厳しいアクセスは、`https://<Client Code>.experiencecloud.adobe.com https://experience.adobe.com` を使用して実現できます。`<Client Code>` は特定のクライアントコードを表します。
+会社のアカウントへの最も制限的なアクセスは、`https://<Client Code>.experiencecloud.adobe.com https://experience.adobe.com`を使用することで実現できます。ここで、`<Client Code>`は特定のクライアントコードを表します。
 
 次に例を示します。
 
 `Content-Security-Policy: frame-ancestors 'self'  https://ags118.experiencecloud.adobe.com https://experience.adobe.com`
 
-次の図のように（クリックすると拡大できます）。
+次の図のように（クリックして拡大）:
 
-![&#x200B; クライアントコードスコープの CSP](/help/dev/before-implement/privacy/assets/csp-clientcode.png){width="600" zoomable="yes"}
+クライアントコードのスコープが指定された![CSP](/help/dev/before-implement/privacy/assets/csp-clientcode.png){width="600" zoomable="yes"}
 
 >[!NOTE]
 >
->[Launch/Tag](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) を実装している場合は、ロックも解除する必要があります。
+>[Launch/Tag](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)が実装されている場合は、ロックも解除する必要があります。
 >
 >次に例を示します。
 >
 > `Content-Security-Policy: frame-ancestors 'self' *.adobe.com *.assets.adobedtm.com;`
 
-#### VEC が iFrame にサイトを埋め込まないようにする
+#### VECがiFrameにサイトを埋め込むのを防ぐ
 
-VEC が iFrame にサイトを埋め込まないようにするには、「self」のみに制限します。
+VECがiFrameにサイトを埋め込むのを防ぐには、「自分」のみに制限できます。
 
 次に例を示します。
 
 `Content-Security-Policy: frame-ancestors 'self'`
 
-次の図に示します（クリックすると拡大できます）。
+次の図に示すように（クリックして拡大）:
 
-![CSP エラー &#x200B;](/help/dev/before-implement/privacy/assets/csp-error.png){width="600" zoomable="yes"}
+![CSP エラー](/help/dev/before-implement/privacy/assets/csp-error.png){width="600" zoomable="yes"}
 
 次のエラーメッセージが表示されます。
 

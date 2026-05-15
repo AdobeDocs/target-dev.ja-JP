@@ -1,50 +1,54 @@
 ---
-title: Adobe Recommendations API とは
-description: このガイドでは、Adobe Target Recommendations API を使用したRecommendations カタログとカスタム条件の設定と管理および配信 API を使用したレコメンデーションコンテンツの取得に関する実践について開発者に順を追って説明します。
+title: Adobe Recommendations APIとは何ですか？
+description: このガイドでは、Adobe Target Recommendations APIを使用して、Recommendations カタログとカスタム条件を設定および管理し、Delivery APIを使用してレコメンデーションコンテンツを取得する実践的な方法について、開発者に説明します。
 feature: APIs/SDKs, Recommendations, Administration & Configuration, Overview
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 0d03c650-0b00-44b8-a794-10e5d738e42c
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/-bWsxWNZK7LXp0VvKZmsZc68jXcit57v7Wki9hR3wH4
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 2%
+source-wordcount: 343
+ht-degree: 3%
 
 ---
 
-# Adobe Recommendations API の概要
+# Adobe Recommendations APIの概要
 
-Recommendationsに関連する API には、次の操作を可能にする [&#x200B; 管理 API](../../before-administer/target-api-overview.md) が含まれています。
+Recommendationsに関連するAPIには、[管理者API](../../before-administer/target-api-overview.md)が含まれており、次のことが可能です。
 
-* お勧めの製品やコンテンツのカタログを管理する
-* Recommendationsのアルゴリズムとアクティビティの管理
+* 商品カタログやコンテンツのレコメンデーションを管理
+* レコメンデーションのアルゴリズムとアクティビティの管理
 
-Target [&#x200B; 配信 API](../../implement/delivery-api/overview.md) をRecommendationsと併用すると、次の操作も可能です。
+RecommendationsでTarget [配信API](../../implement/delivery-api/overview.md)を使用すると、次の操作も実行できます。
 
-* Web、モバイル、メール、Internet of Things （IOT）などのチャネルに表示できるように、レコメンデーションを JSON、HTML、XML オブジェクトで取得します。
+* レコメンデーションをJSON、HTML、XML オブジェクトで取得し、web、モバイル、電子メール、IOT （モノのインターネット）などのチャネルで表示できます。
 
 ## 説明
 
-Recommendations API に関するこのガイドでは、Recommendations API を使用してRecommendations カタログとカスタム条件を設定および管理したり、配信 API を使用してレコメンデーションコンテンツを取得したりするための実践的なプラクティスについて説明します。 最終的には、次のことが可能になります。
+Recommendations APIに関するこのガイドでは、Recommendations APIを使用してRecommendations カタログとカスタム条件を設定および管理し、Delivery APIを使用してレコメンデーションコンテンツを取得する実習を開発者に説明します。 最終的には、次のことが可能になります。
 
-* Recommendations API を使用したエンティティの設定と管理
-* Recommendations API を使用したカスタム条件の設定と管理
-* Recommendationsと配信 API を使用して、レコメンデーションの結果をHTML以外のデバイスで使用する方法を説明します
+* Recommendations APIを使用したエンティティの設定と管理
+* Recommendations APIを使用したカスタム条件の設定と管理
+* HTML以外のデバイスでRecommendations APIを使用してRecommendationsの結果を使用する方法について説明します
 
 ## オーディエンス
 
-このガイドは、Target API またはRecommendations API を初めて使用する開発者向けです。
+このガイドは、Target APIまたはRecommendations APIを初めて使用する開発者を対象としています。
 
 ## 前提条件 {#prerequisites}
 
-Target 管理 API には、[Adobe認証の設定 &#x200B;](../configure-authentication.md) が必要です。 Recommendations API を使用する前に、これが設定されていることを確認してください。
+Target管理APIには[Adobe認証の設定](../configure-authentication.md)が必要です。 Recommendations APIを使用する前に、これが設定されていることを確認してください。
 
 ## リソース
 
-このガイドを理解して正しく実行するために必要な、次のリソースに注意してください。
+このガイドを理解し、それに従うために必要な次のリソースに注意してください。
 
 | リソース | 詳細 |
 | --- | --- |
-| Postman | お使いのオペレーティングシステム用の [&#128279;](https://www.postman.com/downloads/)0&rbrace;Postman アプリ &rbrace; を入手します。 Postman basic は無料でアカウントを作成できます。 Adobe Target API を一般的に使用するために必要なものではありませんが、Postmanを使用すると API ワークフローが容易になり、Adobe Targetには API の実行と操作方法の学習に役立つPostman コレクションが複数用意されています。 このガイドの残りの部分では、Postmanに関する実務知識を前提としています。 サポートについては、[Postmanのドキュメント &#x200B;](https://learning.getpostman.com/) を参照してください。 |
-| 参照 | このガイドの残りの部分では、次のリソースに慣れていることを前提としています。<UL><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Target 管理者およびプロファイル API のドキュメント &#x200B;](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API ドキュメント &#x200B;](https://developer.adobe.com/target/administer/recommendations-api/)</li></UL> |
+| Postman | お使いのオペレーティング システム用の[Postman アプリ ](https://www.postman.com/downloads/)を入手します。 Postman basicはアカウント作成機能を無料で利用できます。 Adobe Target APIを一般的に使用する場合は不要ですが、PostmanではAPI ワークフローが簡単になり、Adobe TargetにはAPIの実行と動作の学習に役立つPostman コレクションがいくつか用意されています。 このガイドの残りの部分では、Postmanに関する実務的な知識を前提としています。 サポートが必要な場合は、[Postman ドキュメント ](https://learning.getpostman.com/)を参照してください。 |
+| 参照 | このガイドの残りの部分では、次のリソースについて理解していることを前提としています。<UL><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Target管理者とプロファイル API ドキュメント ](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API ドキュメント ](https://developer.adobe.com/target/administer/recommendations-api/)</li></UL> |

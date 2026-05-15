@@ -1,13 +1,19 @@
 ---
 keywords: mboxCreate, mboxcreate, mbox create, at.js，関数，関数
-description: at.js JavaScript ライブラリの [!UICONTROL mboxCreate()] 関数を使用して  [!DNL Adobe Target] mboxDefault クラス名を持つ最も近い DIV にオファーを適用します。 （at.js 1.x）
-title: '[!UICONTROL mboxCreate()] 関数の使用方法'
+description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL mboxCreate()]関数を使用して、mboxDefault クラス名を持つ最も近いDIVにオファーを適用します。 （at.js 1.x）'
+title: How Do I Use the [!UICONTROL mboxCreate()] Function?
 feature: at.js
 exl-id: 86eba1fc-4e1d-4793-94e7-898bf81f8945
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/hCEKL9RPtqIbMVEouzObjU6dc7TKl1hBtKZ1jEdicRE
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 52%
+source-wordcount: 211
+ht-degree: 44%
 
 ---
 
@@ -17,9 +23,9 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->この関数は、at.js バージョン 1 で使用できます。*x* のみで使用できます。この関数は at.js 2.x のリリースで廃止されました。at.js 2.x で使用する場合、この関数はデフォルトコンテンツを返します。
+>この関数は、at.js バージョン 1.*x*&#x200B;でのみ使用できます。 この関数は、at.js 2.xのリリースで廃止されました。 この関数は、at.js 2.xで使用した場合、デフォルトコンテンツを返します。
 
-この関数は、mbox.js （現在は非推奨）から at.js への移行を容易にするために、主に at.js に組み込まれています。 新しく `[!UICONTROL mboxCreate()]` に代わるものは、`[!UICONTROL adobe.target.applyOffer()]`/`[!UICONTROL adobe.target.getOffer()]` または Angular ディレクティブです。
+この関数は、主にmbox.js （現在は非推奨）からat.jsへの移行を容易にするためにat.jsに組み込まれています。 新しく `[!UICONTROL mboxCreate()]` に代わるものは、`[!UICONTROL adobe.target.applyOffer()]`/`[!UICONTROL adobe.target.getOffer()]` または Angular ディレクティブです。
 
 ## 例
 
@@ -34,15 +40,15 @@ ht-degree: 52%
 
 ## メモ
 
-`mboxCreate()` は、「標準」エンドポイントではなく「json」エンドポイントを使用し、非同期で実行されます。理由は以下のとおりです。
+`mboxCreate()` は、「標準」エンドポイントではなく「json」エンドポイントを使用し、非同期で実行されます。 理由は以下のとおりです。
 
 * [デバッグ](/help/dev/implement/client-side/target-debugging-atjs/target-debugging-atjs.md) が少し異なる。
 * オファーコードが同期を必要としたり、呼び出しをブロックするのを避ける。
 
   例えば、サイトコードまたは後でページに表示される他の mbox によって使用される JavaScript 変数を設定するオファー。
 
-* at.js では追加されないので、`[!UICONTROL mboxCreate()]` を呼び出す前に `<div class="mboxDefault"></div>` を必ず用意してください。
+* `[!UICONTROL mboxCreate()]`を呼び出す前に、`<div class="mboxDefault"></div>`を必ず用意してください。at.jsでは追加されないからです。
 
 * 空の、ページの先頭にある `[!UICONTROL mboxCreate()]` 関数は、グローバル mbox としてお勧めしません。
 
-  at.js に自動作成されたグローバル mbox は、`<head>` から起動してコンテンツを以前に返す可能性があるので、より優れたオプションです。
+  at.jsの自動作成グローバル mboxは、`<head>`から起動し、コンテンツを早く返すことができるため、より優れたオプションです。

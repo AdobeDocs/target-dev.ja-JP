@@ -1,40 +1,45 @@
 ---
-keywords: モバイルアプリ，よくある質問，faq, target モバイルアプリ
-description: モバイルアプリに関するよくある質問とその回答  [!DNL Adobe Target]  表示します。
-title: モバイルアプリに関するよくある質問  [!DNL About Target]  何ですか？
+keywords: モバイルアプリ、よくある質問、faq、ターゲットモバイルアプリ
+description: モバイルアプリに関するよくある質問と [!DNL Adobe Target] に対する回答を表示します。
+title: モバイルアプリに関するよくある質問 [!DNL About Target] は何ですか？
 feature: Implement Mobile
 exl-id: 06cae3de-83a4-4018-a832-66fb292a1d0f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/DvyEuK-o-3qAJDKVI3tSe9ZirSQa0my6vbIhJQP9EU4
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 1%
+source-wordcount: 310
+ht-degree: 3%
 
 ---
 
-# モバイルアプリ用 [!DNL Target] に関する FAQ
+# モバイルアプリ向け[!DNL Target]に関するFAQ
 
-モバイルアプリの [!DNL Target] についてのよくある質問のリストです。
+モバイルアプリの[!DNL Target]に関するよくある質問の一覧。
 
-## SDK をデプロイするには [!DNL Adobe Experience Platform] のタグを使用する必要がありますか。Launch を使用せずに SDK をデプロイできますか。
+## [!DNL Adobe Experience Platform]のタグを使用してSDKをデプロイする必要がありますか。それとも、Launchを使用せずにSDKをデプロイできますか？
 
-SDK は [Adobe Marketing Cloud Git](https://github.com/Adobe-Marketing-Cloud/acp-sdks/){target=_blank} で利用できます。 [Adobe Experience Platformのタグ &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja){target=_blank} を使用しない場合は、独自の設定ファイルを管理し、アプリで管理する必要があります。
+SDKは、[Adobe Marketing Cloud Git](https://github.com/Adobe-Marketing-Cloud/acp-sdks/){target=_blank}で利用できます。 Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja){target=_blank}で[ タグを使用しない場合は、独自の設定ファイルを管理し、アプリで管理する必要があります。
 
-## 現在利用可能な SDK はどれですか？
+## 現在、どのSDKが利用できますか？
 
-Adobe Experience Platform Mobile SDK は現在、iOS、Androidおよび React をサポートしています。 詳しくは、[Adobe Experience Cloud Platform Mobile SDK ガイド &#x200B;](https://experienceleague.adobe.com/docs/mobile.html?lang=ja){target=_blank} を参照してください。
+Adobe Experience Platform Mobile SDKは現在、iOS、Android、Reactをサポートしています。 詳しくは、[Adobe Experience Cloud Platform Mobile SDK ガイド ](https://experienceleague.adobe.com/docs/mobile.html?lang=ja){target=_blank}を参照してください。
 
-## 緯度と経度の検証の観点から、位置ベースの機能の頻度はどれくらいですか？
+## 緯度と経度に関する検証の観点から、ロケーションベースの機能の頻度は何ですか？
 
-詳しくは、[Adobe場所のドキュメント &#x200B;](https://experienceleague.adobe.com/docs/places/using/home.html?lang=ja){target=_blank} を参照してください。
+詳しくは、[Adobe Places ドキュメント ](https://experienceleague.adobe.com/docs/places/using/home.html){target=_blank}を参照してください。
 
-## Adobe Experience Platform Mobile SDK が機能するには at.js が必要ですか。
+## Adobe Experience Platform Mobile SDKが機能するためにat.jsが必要ですか？
 
-いいえ。at.js で Mobile SDK を使用する必要はありません。 at.js は、web サイト用の [!DNL Target] JavaScript ライブラリです。 Adobe Experience Platform Mobile SDK は、モバイルアプリ用です。
+いいえ、モバイル SDKを使用するためにat.jsは必要ありません。 at.jsは、web サイト用の[!DNL Target] JavaScript ライブラリです。 Adobe Experience Platform Mobile SDKはモバイルアプリ用です。
 
-## [!DNL Target] Mobile は [!DNL Adobe Target] Premium 製品 SKU のみの機能ですか？
+## [!DNL Target] モバイルは[!DNL Adobe Target] プレミアム製品SKUの機能ですか？
 
-いいえ。[!DNL Adobe Target Standard] のお客様は、アドビの Mobile SDK を [!UICONTROL A/B Test] および [!UICONTROL Experience Targeting] （XT）アクティビティに使用できるのは、[!DNL Target Standard] Mobile アプリアドオンを使用する場合のみです。 モバイルアプリで [!UICONTROL Recommendations] または AI を利用した機能を使用する場合は、[Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=ja#premium) ライセンスが必要です。
+いいえ。 [!DNL Adobe Target Standard]のお客様は、[!DNL Target Standard] モバイルアプリアドオンでのみ、[!UICONTROL A/B Test]および[!UICONTROL Experience Targeting] （XT）アクティビティにMobile SDKを使用できます。 [!UICONTROL Recommendations]またはAIを活用した機能をモバイルアプリで使用する場合は、[Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html#premium) ライセンスが必要です。
 
-## [!DNL Adobe Experience Manager] （AEM）と [!DNL Target] のモバイルアクティビティの間にモバイルアプリの統合はありますか。
+## [!DNL Adobe Experience Manager] （AEM）と[!DNL Target] モバイルアクティビティの間にモバイルアプリの統合はありますか？
 
-現在、JSON[&#x200B; エクスペリエンスフラグメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=ja){target=_blank} をAEMから [!DNL Target] に共有でき、モバイルアプリアクティビティで使用する可能性があります。
+現在、AEMから[!DNL Target]までJSON [ エクスペリエンスフラグメント ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html){target=_blank}を共有でき、モバイルアプリアクティビティで使用する可能性があります。

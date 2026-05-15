@@ -1,30 +1,35 @@
 ---
-title: Adobe Target配信 API クライアントヒント
-description: Client Hints を in [!DNL Adobe Target] Delivery API で使用する方法
+title: Adobe Target Delivery API クライアントヒント
+description: ' [!DNL Adobe Target] 配信APIでクライアントヒントを使用するにはどうすればよいですか？'
 exl-id: 317b9d7d-5b98-464e-9113-08b899ee1455
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ijbOsWitZdNHpjNduh8xtPyEYdw2tsWz2rB6jZ5JbQA
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: ff2b9b37-92e0-45fc-b853-379d44c08c89
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: 278
 ht-degree: 0%
 
 ---
 
-# Client Hints と [!UICONTROL Adobe Target Delivery API]
+# クライアントヒントと[!UICONTROL Adobe Target Delivery API]
 
-Client Hints は、オファーリクエストで [!DNL Adobe Target] に送信する必要があります。
+クライアントヒントは、オファーリクエストで[!DNL Adobe Target]に送信する必要があります。
 
-通常は、使用可能なすべての Client Hints を [!DNL Target] に送信することをお勧めします。 詳しくは、[&#x200B; クライアントサイド実装 &#x200B;](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md) の節の [User-agent and Client Hints](../../implement/client-side/overview.md) を参照してください。
+通常、使用可能なすべてのクライアントヒントを[!DNL Target]に送信することをお勧めします。 詳しくは、「[ クライアントサイド実装](../../implement/client-side/overview.md)」セクションの「[User-agent and Client Hints](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md)」を参照してください。
 
-## 配信 API の直接呼び出し
+## 配信API ダイレクトコール
 
 ### ブラウザーから
 
-この場合、ブラウザーは低エントロピーの Client Hints を送信し、リクエストヘッダーを介して自動的に [!DNL Target] します。 ただし、この実装にはブラウザーレベルのいくつかの制限があります。 最初 – リクエストが https で行われない限り、Client Hints ヘッダーはブラウザーから送信されません。 2 番目 – ページに [!DNL Target] まれる最初のリクエストでは Client Hints は送信されません。 Client Hints ヘッダーは、2 番目のリクエスト以降のすべてのリクエストでのみ送信されます。 つまり、オーディエンスのセグメント化とパーソナライゼーションは、[!DNL Target] ーザーが最初のページ訪問では実行できません。 これらの両方の制限を回避するには、ブラウザーで User Agent Client Hints API を使用して、Client Hints を直接収集し、リクエストペイロードで送信することを強くお勧めします。
+この場合、ブラウザーはリクエストヘッダーを介して、低エントロピーのクライアントヒントを自動的に[!DNL Target]に送信します。 しかし、この実装にはブラウザーレベルの制限がいくつかあります。 最初 – リクエストがhttps経由で行われていない限り、クライアントヒントヘッダーはブラウザーから送信されません。 2番目 – ページ上の[!DNL Target]への最初のリクエストでは、クライアントヒントは送信されません。 クライアントヒントヘッダーは、2回目のリクエストとその後のすべてのリクエストでのみ送信されます。 つまり、[!DNL Target]様が最初のページ訪問時にオーディエンスのセグメント化とパーソナライゼーションを実行することはできません。 これらの制限を回避するには、ブラウザーでUser Agent Client Hints APIを使用してクライアントヒントを直接収集し、リクエストペイロードに送信することを強くお勧めします。
 
 ### サーバーから
 
-この場合、Client Hints は、配信 API リクエストに応じて、ブラウザーから [!DNL Target] に手動で転送する必要があります。
+この場合、クライアントヒントは、Delivery API リクエストでブラウザーから[!DNL Target]に手動で転送する必要があります。
 
 ```
 curl -X POST 'http://mboxedge28.tt.omtrdc.net/rest/v1/delivery?client=myClientCode&sessionId=abcdefghijkl00014' -d '{
@@ -52,4 +57,4 @@ curl -X POST 'http://mboxedge28.tt.omtrdc.net/rest/v1/delivery?client=myClientCo
 
 ## 形式
 
-クライアントヒントヘッダー Sec-CH-UA および Sec-CH-UA-Full-Version-List の形式は、クライアントヒントブラウザー API （navigator.userAgentData.brands/navigator.userAgentData.getHighEntropyValues）の結果とは異なります。 これらの形式は両方とも、配信 API で受け入れられます。 配信 API は、値をリクエストヘッダーで使用される形式に正規化します。これは、プロファイルスクリプトで Client Hints にアクセスする場合に注意する必要があります。
+クライアントヒントヘッダーSec-CH-UAおよびSec-CH-UA-Full-Version-Listの形式は、クライアントヒントブラウザーAPI （navigator.userAgentData.brands/navigator.userAgentData.getHighEntropyValues）の結果とは異なります。 これらの形式は両方ともDelivery APIで受け入れられます。 Delivery APIは、値をリクエストヘッダーで使用される形式に正規化します。これは、プロファイルスクリプトでクライアントヒントにアクセスする場合に注意が必要です。

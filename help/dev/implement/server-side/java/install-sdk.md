@@ -1,18 +1,21 @@
 ---
-title: Java SDK のインストール
-description: ' [!DNL Adobe Target] Java SDK のインストール方法を説明します。'
+title: Java SDKのインストール
+description: ' [!DNL Adobe Target] Java SDKのインストール方法について説明します。'
 feature: APIs/SDKs
 exl-id: 5828d5b3-c487-49bf-9458-7ef94374e32d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/NJ8oBLe6fuxcU67YGBg8dFFg32YzBX2jB1HNFegcaGk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '46'
+source-wordcount: 51
 ht-degree: 0%
 
 ---
 
-# Java SDK のインストール
+# Java SDKのインストール
 
-Java SDK は、[Maven Central](https://search.maven.org/artifact/com.adobe.target/target-java-sdk) によって配布されます。 開始するには、`gradle` または `maven` にをインストールして、依存関係として追加します。
+Java SDKは[Maven Central](https://search.maven.org/artifact/com.adobe.target/target-java-sdk)によって配布されます。 開始するには、`gradle`または`maven`にインストールして、依存関係として追加します。
 
 >[!BEGINTABS]
 
@@ -34,4 +37,4 @@ compile 'com.adobe.target:java-sdk:1.0'
 
 >[!ENDTABS]
 
-オープンソースコードは、<https://github.com/adobe/target-java-sdk> にあります。
+開いているソース コードは<https://github.com/adobe/target-java-sdk>にあります。

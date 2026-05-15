@@ -1,12 +1,15 @@
 ---
-title: Node.js SDK を使用する場合は、[!UICONTROL getOffers()] in [!DNL Adobe Target]  を使用します
-description: '[!UICONTROL getOffers()] を使用して決定を実行し、 [!DNL Adobe Target] からエクスペリエンスを取得する方法を説明します。'
+title: Node.js SDKの使用時に [!DNL Adobe Target] で[!UICONTROL getOffers()]を使用
+description: '[!UICONTROL getOffers()]を使用して決定を実行し、 [!DNL Adobe Target]からエクスペリエンスを取得する方法を説明します。'
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 22%
+source-wordcount: 326
+ht-degree: 21%
 
 ---
 
@@ -14,7 +17,7 @@ ht-degree: 22%
 
 ## 説明
 
-`[!UICONTROL getOffers()]` を使用して、決定を実行し、[!DNL Adobe Target] からエクスペリエンスを取得します。
+`[!UICONTROL getOffers()]`は、決定を実行し、[!DNL Adobe Target]からエクスペリエンスを取得するために使用されます。
 
 
 ## メソッド
@@ -31,47 +34,47 @@ TargetClient.getOffers(options: Object): Promise
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- |--- | --- | --- | --- |
-| リクエスト | オブジェクト | ○ | None | [[!DNL Target]  配信 API](/help/dev/implement/delivery-api/overview.md) リクエストに準拠 |
+| リクエスト | オブジェクト | ○ | None | [[!DNL Target] 配信API](/help/dev/implement/delivery-api/overview.md)要求に準拠しています |
 | visitorCookie | 文字列 | × | None | ECID （VisitorId） cookie |
-| targetCookie | 文字列 | × | None | [!DNL Target] cookie |
-| targetLocationHint | 文字列 | × | None | [!DNL Target] location hint |
-| consumerId | 文字列 | × | None | [!UICONTROL Analytics for Target] （A4T）ステッチの consumerIds |
-| CustomerIds | 配列 | × | None | VisitorId 互換フォーマットの顧客 ID |
-| sessionId | 文字列 | × | None | 複数の [!DNL Target] リクエストのリンクに使用 |
-| 訪問者 | オブジェクト | × | new VisitorId | 外部 VisitorId インスタンスの指定 |
+| targetCookie | 文字列 | × | None | [!DNL Target] Cookie |
+| targetLocationHint | 文字列 | × | None | [!DNL Target]場所のヒント |
+| consumerId | 文字列 | × | None | [!UICONTROL Analytics for Target] （A4T）ステッチ用のconsumerId |
+| CustomerId | 配列 | × | None | VisitorIdと互換性のある形式の顧客ID |
+| sessionId | 文字列 | × | None | 複数の[!DNL Target]要求のリンクに使用 |
+| 訪問者 | オブジェクト | × | 新しい訪問者ID | 外部VisitorId インスタンスの指定 |
 
 ## 約束
 
-返される `Promise` は次の構造になっています。
+返された`Promise`の構造は次のとおりです。
 
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
 | request | オブジェクト | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエスト |
-| response | オブジェクト | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) response |
-| visitorState | オブジェクト | Visitor API `getInstance()` に渡す必要があるオブジェクト |
-| targetCookie | オブジェクト | [!DNL Target] cookie |
-| targetLocationHintCookie | オブジェクト | [!DNL Target] location hint cookie |
-| analyticsDetails | 配列 | Analytics ペイロード（クライアントサイド Analytics を使用する場合） |
-| responseTokens | 配列 | [&#x200B; 応答トークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja&) のリスト。 |
-| trace | 配列 | すべてのリクエスト mbox/ビューの集計トレースデータ |
+| 応答 | オブジェクト | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)件の応答 |
+| visitorState | オブジェクト | 訪問者API `getInstance()`に渡すオブジェクト |
+| targetCookie | オブジェクト | [!DNL Target] Cookie |
+| targetLocationHintCookie | オブジェクト | [!DNL Target]の場所ヒント Cookie |
+| analyticsDetails | 配列 | Analytics ペイロード（クライアントサイドのAnalytics使用の場合） |
+| responseTokens | 配列 | [応答トークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?)のリスト。 |
+| trace | 配列 | すべてのリクエスト mbox/ビューのトレース データを集約しました |
 | status | オブジェクト | 応答のステータスを含むオブジェクト。 |
-| decisioningMethod | 文字列 | 使用する判定方法を決定します（[&#x200B; オンデバイス &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、サーバーサイド、ハイブリッド） |
+| decisioningMethod | 文字列 | 使用する決定方法を決定します（[ オンデバイス ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、サーバーサイド、ハイブリッド） |
 
-データをブラウザーに戻すために使用される `targetCookie` および `targetLocationHintCookie` オブジェクトは、次の構造を持っています。
+ブラウザーにデータを渡すために使用される`targetCookie`および`targetLocationHintCookie` オブジェクトの構造は次のとおりです。
 
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
 | name | 文字列 | cookie 名 |
-| value | 任意 | Cookie の値。は文字列に変換されます |
-| maxAge | 数値 | `maxAge` オプションは、現在の時刻（秒）を基準に有効期限を設定する場合に便利です |
+| value | 任意 | Cookie値の場合、は文字列に変換されます |
+| maxAge | 数値 | `maxAge` オプションは、現在の時間に対して秒単位で有効期限を設定するのに便利です |
 
-ターゲット応答のステータスを示すために使用される `status` オブジェクトは、次の構造を持ちます。
+ターゲット応答のステータスを示すために使用される`status` オブジェクトの構造は次のとおりです。
 
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
 | status | 数値 | HTTP ステータスコード |
-| message | 文字列 | 応答に関するメッセージ。 例えば、応答が決定されたかどうか [&#x200B; オンデバイス &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) またはサーバーサイドか）を示します |
-| remoteMbox | 配列 | Decisioning メソッドが `on-device` の場合、オンデバイスで完全に決定できなかった mbox 名の配列が提供されます。 つまり、[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストが必要です。 |
+| message | 文字列 | 応答に関するメッセージ。 例えば、応答が[ オンデバイス ](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)またはサーバーサイドのどちらに決定されたかを示す場合があります |
+| remoteMboxes | 配列 | 決定方法が`on-device`の場合、オンデバイスで完全に決定できなかったmbox名の配列が与えられます。 つまり、[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストが必要です。 |
 
 ## 例
 

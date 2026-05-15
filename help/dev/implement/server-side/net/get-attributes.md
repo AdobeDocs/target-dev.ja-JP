@@ -1,20 +1,24 @@
 ---
-title: .NET SDK での getAttributes [!DNL Adobe Target]  使用
-description: getAttributes （）を使用して、実験とパーソナライズされたエクスペリエンスをから取得し、属性値を抽出する方法  [!DNL Target]  説明します。
+title: .NET SDKで [!DNL Adobe Target] のgetAttributesを使用する
+description: getAttributes （）を使用して、 [!DNL Target] から実験とパーソナライズされたエクスペリエンスを取得し、属性値を抽出する方法を説明します。
 feature: APIs/SDKs
 exl-id: 808da83d-3077-468b-a2ad-e35c25905f7d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/aflHPozCwJ-6fB7X-2jLaBvs42Ohz6OzwZ7AvkahCE8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: 209
 ht-degree: 10%
 
 ---
 
-# 属性を取得（.NET）
+# 属性（.NET）を取得
 
 ## 説明
 
-`GetAttributes()` を使用して、[!DNL Target] から実験とパーソナライズされたエクスペリエンスを取得し、属性値を抽出します。
+`GetAttributes()`は、[!DNL Target]から実験とパーソナライズされたエクスペリエンスを取得し、属性値を抽出するために使用されます。
 
 ## メソッド
 
@@ -28,23 +32,23 @@ TargetAttributes TargetClient.GetAttributes(TargetDeliveryRequest targetRequest,
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | × | null | [&#x200B; オファーを取得&#x200B;](get-offers.md) に使用するのと同じ [!DNL Target] リクエスト |
-| mboxNames | params 文字列 [] | × | null | mbox 名のパラメーター配列 |
+| targetRequest | TargetDeliveryRequest | × | null | [ オファーの取得](get-offers.md)に使用したものと同じ&#x200B;[!DNL Target] リクエスト |
+| mboxNames | パラメーター文字列[] | × | null | mbox名のパラメーター配列 |
 
 ## 結果
 
-`TargetAttributes` オブジェクトが、次のプロパティとメソッドを持つ `TargetClient.GetAttributes()` から返されます。
+次のプロパティとメソッドを持つ`TargetAttributes` オブジェクトが`TargetClient.GetAttributes()`から返されます。
 
 | プロパティ/メソッド | 戻り値の型 | 説明 |
 | --- | --- | --- |
-| 応答 | TargetDeliveryResponse | [Get Offers](get-offers.md) によって通常返される応答オブジェクトを返します |
-| ToDictionary | DirectOnlyDictionary | mbox 名でグループ化されたキーと値のペアを持つ辞書の辞書を返します |
-| ToMboxDictionary （mboxName） | DirectOnlyDictionary | 指定された mbox のキーと値のペアを含む辞書を返します |
-| GetBoolean （mboxName, key, defaultValue） | ブール | 指定された mbox 名と属性キーの値を返します |
-| GetString （mboxName, key, defaultValue） | string | 指定された mbox 名と属性キーの値を返します |
-| GetInteger （mboxName, key, defaultValue） | int | 指定された mbox 名と属性キーの値を返します |
-| GetDouble （mboxName, key, defaultValue） | double | 指定された mbox 名と属性キーの値を返します |
-| GetValue （mboxName, key, defaultValue） | T | 指定された mbox 名と属性キーの値を返します |
+| 応答 | TargetDeliveryResponse | 通常、[Get Offers](get-offers.md)によって返される応答オブジェクトを返します |
+| ToDictionary | IReadOnlyDictionary | mbox名でグループ化されたキー値のペアを持つ辞書を返します |
+| ToMboxDictionary （mboxName） | IReadOnlyDictionary | 指定されたmboxのキー値のペアを持つ辞書を返します |
+| GetBoolean （mboxName, key, defaultValue） | ブール | 指定したmbox名と属性キーの値を返します |
+| GetString （mboxName, key, defaultValue） | string | 指定したmbox名と属性キーの値を返します |
+| GetInteger （mboxName, key, defaultValue） | int | 指定したmbox名と属性キーの値を返します |
+| GetDouble （mboxName, key, defaultValue） | double | 指定したmbox名と属性キーの値を返します |
+| GetValue （mboxName, key, defaultValue） | T | 指定したmbox名と属性キーの値を返します |
 
 ## 例
 

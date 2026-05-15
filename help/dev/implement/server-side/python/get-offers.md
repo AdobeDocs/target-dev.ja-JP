@@ -1,11 +1,15 @@
 ---
-title: Python SDK を使用する場合は、getOffers （）  [!DNL Adobe Target]  使用してください。
-description: getOffers （）を使用して決定を実行し、 [!DNL Adobe Target] からエクスペリエンスを取得する方法を説明します。
+title: Python SDKを使用する場合は、 [!DNL Adobe Target] でgetOffers （）を使用します
+description: getOffers （）を使用して決定を実行し、 [!DNL Adobe Target]からエクスペリエンスを取得する方法を説明します。
 feature: APIs/SDKs
 exl-id: 9539b806-e070-430e-80cf-cf632ce3f207
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/b7t1NfE5Gcsj86w4u3Cfl5-Eb7a6HG1Hg8vi6-ViQFg
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: 357
 ht-degree: 12%
 
 ---
@@ -14,7 +18,7 @@ ht-degree: 12%
 
 ## 説明
 
-`get_offers()` を使用して、決定を実行し、[!DNL Adobe Target] からエクスペリエンスを取得します。
+`get_offers()`は、決定を実行し、[!DNL Adobe Target]からエクスペリエンスを取得するために使用されます。
 
 
 ## メソッド
@@ -27,48 +31,48 @@ target_client_instance.get_offers(options)
 
 ## パラメーター
 
-`options` dict の構造は次のとおりです。
+`options` ディクトの構造は次のとおりです。
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| request | DeliveryRequest | ○ | None | [[!DNL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストに準拠しています |
-| target_cookie | str | いいえ | None | [!DNL Target] cookie |
-| target_location_hint | str | いいえ | None | [!DNL Target] location hint |
-| consumer_id | str | いいえ | None | 複数の呼び出しをステッチする場合、異なる消費者 ID を指定する必要があります |
-| customer_ids | list[CustomerId] | いいえ | None | VisitorId 互換の形式の顧客 ID のリスト |
-| session_id | str | いいえ | None | 複数のリクエストのリンクに使用 |
-| callback | 呼び出し | いいえ | None | リクエストを非同期で処理する場合、応答の準備が整うとコールバックが呼び出されます |
-| err_callback | 呼び出し | いいえ | None | リクエストを非同期で処理する場合、例外が発生するとエラーコールバックが呼び出されます |
+| request | DeliveryRequest | ○ | None | [[!DNL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストに準拠 |
+| target_cookie | str | いいえ | None | [!DNL Target] Cookie |
+| target_location_hint | str | いいえ | None | [!DNL Target]場所のヒント |
+| consumer_id | str | いいえ | None | 複数の呼び出しをステッチする場合は、異なる消費者IDを指定する必要があります |
+| customer_ids | リスト [顧客ID] | いいえ | None | VisitorIdと互換性のある形式の顧客IDのリスト |
+| session_id | str | いいえ | None | 複数のリクエストをリンクするために使用 |
+| callback | コール可能 | いいえ | None | リクエストを非同期的に処理する場合、応答の準備ができたときにコールバックが呼び出されます |
+| err_callback | コール可能 | いいえ | None | リクエストを非同期的に処理する場合、例外が発生したときにエラーコールバックが呼び出されます |
 
-## Returns
+## 返品
 
-同期的に呼び出される場合は `TargetDeliveryResponse` を返し（デフォルト）、コールバックで呼び出される場合は `AsyncResult` を返します。 `TargetDeliveryResponse` の構造は以下のとおりです。
+同期で呼び出された場合は`TargetDeliveryResponse`、コールバックで呼び出された場合は`AsyncResult`を返します。 `TargetDeliveryResponse`の構造は次のとおりです。
 
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
-| response | DeliveryResponse | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) 応答に準拠しています |
-| target_cookie | dict | [!DNL Target] cookie |
-| target_location_hint_cookie | dict | [!DNL Target] location hint cookie |
-| analytics_details | list[AnalyticsResponse] | Analytics ペイロード（クライアントサイド Analytics を使用する場合） |
-| trace | list[dict] | すべてのリクエスト mbox/ビューの集計トレースデータ |
-| response_tokens | list[dict] | &#x200B;応答トークン [&#x200B; リスト &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) |
+| 応答 | DeliveryResponse | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)の応答に準拠しています |
+| target_cookie | dict | [!DNL Target] Cookie |
+| target_location_hint_cookie | dict | [!DNL Target]の場所ヒント Cookie |
+| analytics_details | list[AnalyticsResponse] | Analytics ペイロード（クライアントサイドのAnalyticsの使用の場合） |
+| trace | リスト [辞書] | すべてのリクエスト mbox/ビューのトレース データを集約しました |
+| response_tokens | リスト [辞書] | &#x200B;[応答トークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)のリスト |
 | meta | dict | オンデバイス判定で使用する追加の判定メタデータ |
 
-データをブラウザーに戻すために使用される `target_cookie` および `target_location_hint_cookie` オブジェクトは、次の構造を持っています。
+ブラウザーにデータを渡すために使用される`target_cookie`および`target_location_hint_cookie` オブジェクトの構造は次のとおりです。
 
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
 | name | str | cookie 名 |
-| value | any | Cookie の値。値は文字列に変換されます |
-| max_age | int | `max_age option` は、現在の時刻（秒）を基準に有効期限を設定する場合に便利です |
+| value | any | Cookie値の場合、値は文字列に変換されます |
+| max_age | int | `max_age option`は、現在の時間に対して秒単位で有効期限が切れる設定に便利です |
 
-ターゲット応答のステータスを示すために使用される `meta` オブジェクトは、次の構造を持ちます。
+ターゲット応答のステータスを示すために使用される`meta` オブジェクトの構造は次のとおりです。
 
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
-| decisioning_method | str | 使用された判定方法：オンデバイスまたはサーバーサイド |
-| remote_mbox | リスト `[str]` | Decisioning メソッドが `on-device` の場合、オンデバイスで完全に決定できなかった mbox 名の配列が提供されます。 つまり、[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストが必要です。 |
-| remote_views | リスト `[str]` | 判定方法がオンデバイスの場合、オンデバイスで完全に決定できなかったビュー名の配列が与えられます。 つまり、[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストが必要です。 |
+| decisioning_method | str | 使用された決定方法：オンデバイスまたはサーバーサイド |
+| remote_mboxes | リスト `[str]` | 決定方法が`on-device`の場合、オンデバイスで完全に決定できなかったmbox名の配列が与えられます。 つまり、[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストが必要です。 |
+| remote_views | リスト `[str]` | 決定方法がオンデバイスの場合、オンデバイスで完全に決定できなかったビュー名の配列が与えられます。 つまり、[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストが必要です。 |
 
 ## 例
 

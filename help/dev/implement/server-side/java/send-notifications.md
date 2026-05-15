@@ -1,11 +1,15 @@
 ---
-title: Java SDK を使用した、への表示またはク  [!DNL Adobe Target]  ック通知の送信
-description: sendNotifications （）を使用して、測定およびレポート用に表示またはクリック通知を送信する方法  [!DNL Adobe Target]  説明します。
+title: Java SDKを使用してディスプレイまたはクリック通知を [!DNL Adobe Target] に送信する
+description: sendNotifications （）を使用して、測定とレポート用にディスプレイ通知またはクリック通知を [!DNL Adobe Target] に送信する方法を説明します。
 feature: APIs/SDKs
 exl-id: 9231b480-f50f-40d1-ab06-0b9f2a2d79e3
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/aoa6x9BkuaC-6XaqU03mvWXqWucNSF9eJAk41Bk0-nE
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: 229
 ht-degree: 2%
 
 ---
@@ -14,18 +18,18 @@ ht-degree: 2%
 
 ## 説明
 
-`sendNotifications()` は、測定およびレポート用の [!DNL Adobe Target] に表示またはクリック通知を送信するために使用されます。
+`sendNotifications()`は、測定とレポート用にディスプレイまたはクリック通知を[!DNL Adobe Target]に送信するために使用されます。
 
 >[!NOTE]
 >
->必須のパラメーターを持つ `execute` オブジェクトがリクエスト自体の中にある場合、インプレッションは、条件を満たすアクティビティについて自動的に増分されます。
+>必須パラメーターを持つ`execute` オブジェクトがリクエスト自体の中にある場合、適格なアクティビティに対してインプレッションが自動的に増分されます。
 
-インプレッションを自動的に増分する SDK メソッドは次のとおりです。
+インプレッションを自動的に増分するSDK メソッドは次のとおりです。
 
 * `getOffers()`
 * `getAttributes()`
 
-リクエスト内で `prefetch` オブジェクトが渡された場合、`prefetch` オブジェクト内の mbox を持つアクティビティに対して、インプレッションが自動的に増分されることはありません。 インプレッション `sendNotifications()` コンバージョンを増分するための、事前読み込みされたエクスペリエンスに使用する必要があります。
+`prefetch` オブジェクトがリクエスト内で渡されると、`prefetch` オブジェクト内のmboxを持つアクティビティに対して、インプレッションが自動的に増分されません。 インプレッションとコンバージョンを増やすには、プリフェッチされたエクスペリエンスに`sendNotifications()`を使用する必要があります。
 
 ## メソッド
 
@@ -37,9 +41,9 @@ ResponseStatus TargetClient.sendNotifications(TargetDeliveryRequest request)
 
 ## 例
 
-まず、`home` および `product1` mbox のコンテンツをプリフェッチするための [!DNL Target Delivery API] リクエストを作成します。
+まず、`home`と`product1`のmboxのコンテンツをプリフェッチするための[!DNL Target Delivery API] リクエストを作成します。
 
-### プリフェッチ
+### 先行取得
 
 ```javascript {line-numbers="true"}
 List<MboxRequest> mboxRequests = new ArrayList<>();
@@ -51,7 +55,7 @@ PrefetchRequest prefetchMboxesRequest = new PrefetchRequest().setMboxes(mboxRequ
 TargetDeliveryResponse targetResponse = targetJavaClient.getOffers(targetDeliveryRequest);
 ```
 
-正常な応答には、リクエストされた mbox のプリフェッチされたコンテンツを含む [!UICONTROL Target Delivery API] 応答オブジェクトが含まれます。 `targetResponse.response` オブジェクトの例は次のとおりです。
+正常な応答には、要求されたmboxのプリフェッチされたコンテンツを含む[!UICONTROL Target Delivery API]応答オブジェクトが含まれます。 サンプル `targetResponse.response` オブジェクトは次のようになります。
 
 ### 応答
 
@@ -109,7 +113,7 @@ TargetDeliveryResponse targetResponse = targetJavaClient.getOffers(targetDeliver
 }
 ```
 
-[!DNL Target] の各コンテンツオプションには、mbox の `name` フィールドと `state` フィールド、および `eventToken` フィールドがあります。 これらは、各コンテンツオプションが表示されるとすぐに、`sendNotifications()` リクエストで指定する必要があります。 `product1` mbox がブラウザー以外のデバイスに表示されているとします。 通知リクエストは次のようになります。
+[!DNL Target] コンテンツの各オプションで、mbox `name`および`state` フィールドと`eventToken` フィールドに注意してください。 これらは、各コンテンツオプションが表示されるとすぐに、`sendNotifications()` リクエストで提供する必要があります。 `product1` mboxがブラウザー以外のデバイスに表示されているとします。 通知リクエストは次のようになります。
 
 ### リクエスト
 
@@ -128,7 +132,7 @@ TargetDeliveryRequest mboxNotificationRequest = TargetDeliveryRequest.builder().
 }}).build();
 ```
 
-プリフェッチ応答で配信された [!DNL Target] オファーに対応する mbox 状態とイベントトークンの両方が含まれていることに注意してください。 通知リクエストを作成したら、API メソッドを使用して [!DNL Target] に送信でき `sendNotifications()` す。
+プリフェッチ応答で配信された[!DNL Target] オファーに対応するmbox状態とイベントトークンの両方が含まれていることに注意してください。 通知リクエストを作成したら、`sendNotifications()` API メソッドを介して[!DNL Target]に送信できます。
 
 ### 応答
 

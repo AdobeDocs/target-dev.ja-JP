@@ -1,12 +1,15 @@
 ---
 title: サンプルアプリの概要
-description: Node.js [!DNL Adobe Target] Java、.NET、Python 用のサンプルアプリを参照してください。
+description: Node.js、Java、.NET、およびPythonのサンプルアプリ  [!DNL Adobe Target] を参照してください。
 feature: APIs/SDKs
 exl-id: 69aad6e4-82d6-4e1a-87f3-a5a7cb45beb6
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/Nq9SYQ-FTmKIpYhQKY7ASV9re6p9AfYz-exQMrOxsJI
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 3%
+source-wordcount: 109
+ht-degree: 1%
 
 ---
 
@@ -14,20 +17,20 @@ ht-degree: 3%
 
 ## Node.js
 
-[React ショッピングカートデモアプリ &#x200B;](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/react-shopping-cart-demo)
+[React ショッピングカートのデモアプリ ](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/react-shopping-cart-demo)
 
-[&#x200B; サーバーサイドレンダリング（SSR）デモアプリ &#x200B;](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/next-server-side-rendering-demo)
+[サーバーサイドレンダリング（SSR）デモアプリ](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/next-server-side-rendering-demo)
 
-[&#x200B; オンデバイス判定デモアプリ &#x200B;](https://github.com/adobe/on-device-decisioning-demo-site)
+[オンデバイス判定デモアプリ](https://github.com/adobe/on-device-decisioning-demo-site)
 
 ## Java
 
-[&#x200B; スタンドアロン Spring Boot Java アプリ &#x200B;](https://github.com/adobe/target-java-sdk-samples)
+[スタンドアロンのSpring Boot Java アプリ](https://github.com/adobe/target-java-sdk-samples)
 
 ## .NET
 
-[.NET SDK 使用アプリのサンプル &#x200B;](https://github.com/adobe/target-dotnet-sdk/blob/main/SampleApp)
+[.NET SDK使用アプリのサンプル](https://github.com/adobe/target-dotnet-sdk/blob/main/SampleApp)
 
 ## Python
 
-[Python SDK 使用アプリのサンプル &#x200B;](https://github.com/adobe/target-python-sdk/blob/main/samples)
+[サンプル Python SDK使用アプリ](https://github.com/adobe/target-python-sdk/blob/main/samples)

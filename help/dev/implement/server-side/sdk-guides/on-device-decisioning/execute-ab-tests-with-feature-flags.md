@@ -1,117 +1,122 @@
 ---
-title: 機能フラグとオンデバイス判定を使用して A/B テストを実行します。
-description: オンデバイス判定を使用して、機能フラグを指定して A/B テストを実行します。
+title: 機能フラグとデバイス上の意思決定により、A/B テストを実施
+description: オンデバイス判定を使用して、機能フラグによるA/B テストを実行します。
 feature: APIs/SDKs
 exl-id: abf66e00-742d-4d40-9b6e-9bd71638c31a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/OnRFP7WgNvPy-9v8Ea8te3v5QAUlcR2WUlD7yGB-QzQ
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 0%
+source-wordcount: 749
+ht-degree: 1%
 
 ---
 
-# 機能フラグを使用した A/B テストの実行
+# 機能フラグによるA/B テストの実施
 
 ## 手順の概要
 
-1. 組織の [!UICONTROL on-device decisioning] を有効にする
+1. 組織の[!UICONTROL on-device decisioning]を有効にする
 1. [!UICONTROL A/B Test] アクティビティの作成
-1. A と B の定義
-1. オーディエンスを追加
+1. AとBの定義
+1. オーディエンスの追加
 1. トラフィック配分の設定
-1. トラフィック配分をバリエーションに設定
+1. バリエーションへのトラフィック配分の設定
 1. レポートの設定
-1. KPI を追跡するための指標の追加
-1. 機能フラグを使用して A/B テストを実行するコードの実装
-1. 機能フラグを使用した A/B テストのアクティブ化
+1. KPIを追跡するための指標の追加
+1. 機能フラグを使用してA/B テストを実行するコードを実装する
+1. 機能フラグでA/B テストを有効化
 
 >[!NOTE]
 >
->ホームページの秋をテーマにしたデザインの修正がユーザーに好評かどうかを判断するとします。 [!DNL Adobe Target] で A/B 実験を実行して、テストを行うことにします。 また、ユーザーエクスペリエンスがマイナスになったり遅くなったりしても結果がゆがんだりしないように、実験が優れたパフォーマンスで提供されるようにします。
+>例えば、秋をテーマにしたホームページのリニューアルが、オーディエンスに好評かどうかを判断したいとします。 [!DNL Adobe Target]でA/B実験を実行してテストすることにしました。 また、ネガティブなユーザーエクスペリエンスや遅いユーザーエクスペリエンスが結果をゆがめないように、実験が優れたパフォーマンスで配信されるようにします。
 
-## 1.組織の [!UICONTROL on-device decisioning] を有効にする
+## &#x200B;1. 組織の[!UICONTROL on-device decisioning]を有効にする
 
-オンデバイス判定を有効にすることで、A/B アクティビティがほぼゼロの待ち時間で実行されるようになります。 この機能を有効にするには、[!DNL Adobe Target] で **[!UICONTROL Administration]**/**[!UICONTROL Implementation]**/**[!UICONTROL Account details]** に移動し、「**[!UICONTROL On-Device Decisioning]**」トグルを有効にします。
+オンデバイス判定を有効にすると、A/B アクティビティがほぼゼロの遅延で実行されます。 この機能を有効にするには、[!DNL Adobe Target]で&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**&#x200B;に移動し、**[!UICONTROL On-Device Decisioning]**&#x200B;切り替えを有効にします。
 
-&lt;!— image-odd4.png を挿入 – >
-![alt 画像 &#x200B;](assets/asset-odd-toggle.png)
+&lt;!— image-odd4.pngを挿入 – >
+![alt画像](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->オンデバイス判定の切り替えを有効または無効にするには、管理者または承認者 [&#x200B; ユーザーの役割 &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) が必要です。
+>オンデバイス決定トグルを有効または無効にするには、管理者または承認者[ ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
 
-「**[!UICONTROL On-Device Decisioning]**」切替スイッチを有効 [!DNL Adobe Target] すると、クライアントのルールアーティファクトの生成が開始されます。
+**[!UICONTROL On-Device Decisioning]** トグルを有効にすると、[!DNL Adobe Target]はクライアントのルールアーティファクトの生成を開始します。
 
-## 2. [!UICONTROL A/B Test] アクティビティの作成
+## &#x200B;2. [!UICONTROL A/B Test] アクティビティの作成
 
-[!DNL Adobe Target] で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]**/**[!UICONTROL A/B test]** を選択します。
+[!DNL Adobe Target]で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**&#x200B;を選択します。
 
-![alt 画像 &#x200B;](assets/asset-ab.png)
+![alt画像](assets/asset-ab.png)
 
-**[!UICONTROL Create A/B Test Activity]** モーダルでは、デフォルトの **[!UICONTROL Web]** オプションを選択したままにし（1）、experience composer として **[!UICONTROL Form]** を選択し（2）、「**[!UICONTROL Property Restrictions]** なし」の **[!UICONTROL Default Workspace]** を選択し（3）、「**[!UICONTROL Next]**」（4）をクリックします。
+**[!UICONTROL Create A/B Test Activity]** モーダルで、デフォルトの&#x200B;**[!UICONTROL Web]** オプションを選択したままにし（1）、エクスペリエンスコンポーザー（2）として&#x200B;**[!UICONTROL Form]**&#x200B;を選択し、**[!UICONTROL Default Workspace]**&#x200B;を選択して&#x200B;**[!UICONTROL Property Restrictions]**&#x200B;なし（3）を選択し、**[!UICONTROL Next]** （4）をクリックします。
 
-![alt 画像 &#x200B;](assets/asset-form.png)
+![alt画像](assets/asset-form.png)
 
-## 3. A と B を定義する
+## &#x200B;3. AとBの定義
 
-1. アクティビティ作成の **[!UICONTROL Experiences]** の手順で、アクティビティの名前を指定し（1）、「エクスペリ **[!UICONTROL Add Experience]** ンス」（2） ボタンをクリックして、2 つ目のエクスペリエンスとして「エクスペリエンス B」を追加します。 A/B テストを実行するアプリケーション内の場所の名前（3）を入力します。 次の例では、ホームページは、エクスペリエンス A に対して定義された場所です（また、エクスペリエンス B に対して定義された場所でもあります）。
+1. アクティビティ作成の&#x200B;**[!UICONTROL Experiences]** ステップで、アクティビティの名前（1）を入力し、**[!UICONTROL Add Experience]** （2） ボタンをクリックして、2番目のエクスペリエンスであるエクスペリエンス Bを追加します。 A/B テストを実行するアプリケーション内の場所（3）の名前を入力します。 以下の例では、ホームページはエクスペリエンス A用に定義された場所です。 （これは、エクスペリエンス Bに定義された場所でもあります）。
 
-   エクスペリエンス A は、現在のホームページデザインであるコントロールを定義します。
+   エクスペリエンス Aは、現在のホームページのデザインであるコントロールを定義します。
 
-   ![alt 画像 &#x200B;](assets/asset-exp-a.png)
+   ![alt画像](assets/asset-exp-a.png)
 
-   エクスペリエンス B は、新しくデザインされたホームページを表すチャレンジャーを定義します。 クリックすると、既定のコンテンツ （1）を変更できます。
+   エクスペリエンス Bがチャレンジャーを定義します。チャレンジャーは、再設計されたホームページで表されます。 クリックして、デフォルトコンテンツ（1）を変更します。
 
-   ![alt 画像 &#x200B;](assets/asset-exp-b.png)
+   ![alt画像](assets/asset-exp-b.png)
 
-1. エクスペリエンス B で、をクリックし、以下に示す（1）を選択して、コンテンツを **[!UICONTROL Default Content]** から再設計されたコンテンツに変更 **[!UICONTROL Create JSON Offer]** ます。
+1. Experience Bで、クリックしてコンテンツを&#x200B;**[!UICONTROL Default Content]**&#x200B;から再設計されたコンテンツに変更し、次に示すように&#x200B;**[!UICONTROL Create JSON Offer]**&#x200B;を選択します（1）。
 
-   ![alt 画像 &#x200B;](assets/asset-offer.png)
+   ![alt画像](assets/asset-offer.png)
 
-1. ビジネスロジックが、実稼動環境の現在のホームページではなく、新しく再設計されたホームページをレンダリングできるように、フラグとして利用される属性を使用して JSON を定義します。
+1. フラグとして使用される属性を使用してJSONを定義し、ビジネスロジックが実稼動環境の現在のホームページではなく、新しく再設計されたホームページをレンダリングできるようにします。
 
 
    >[!NOTE]
    >
-   >[!DNL Adobe Target] がユーザーをバケット化してエクスペリエンス B （再設計されたホームページ）を表示すると、例で定義されている属性を含んだ JSON が返されます。 コードでは、属性値を確認して、再設計されたホームページをレンダリングするためにビジネスロジックを実行するかどうかを決定する必要があります。 この JSON 応答では、名前、値、属性の数を定義できます。
+   >[!DNL Adobe Target]がユーザーにバケットを割り当ててExperience B （再設計されたホームページ）を表示すると、例で定義された属性を持つJSONが返されます。 コードでは、属性値を確認して、再設計されたホームページをレンダリングするためにビジネスロジックを実行するかどうかを決定する必要があります。 このJSON応答で、名前、値、属性の数を定義できます。
 
-   ![alt 画像 &#x200B;](assets/asset-homepage.png)
+   ![alt画像](assets/asset-homepage.png)
 
-## 4. オーディエンスの追加
+## &#x200B;4. オーディエンスの追加
 
-最初に、常連客を対象に再設計をテストするとします。常連客は、ログインしているかどうかに基づいて特定できます。
+最初に、ロイヤルティの高い顧客に対して再設計をテストする場合は、ログインしているかどうかに基づいて識別できます。
 
-1. **[!UICONTROL Targeting]** の手順で、をクリックして、**[!UICONTROL All Visitors]** オーディエンスを置き換えます（下図を参照）。
+1. **[!UICONTROL Targeting]** ステップで、「**[!UICONTROL All Visitors]**」オーディエンスをクリックして置換します（図を参照）。
 
-   ![alt 画像 &#x200B;](assets/asset-all-audiences.png)
+   ![alt画像](assets/asset-all-audiences.png)
 
-1. **[!UICONTROL Create Audience]** モーダルで、`logged-in = true` の場所にカスタムルールを定義します。 ログインしているユーザーのグループを定義します。 このオーディエンスをアクティビティで使用します。
+1. **[!UICONTROL Create Audience]** モーダルで、`logged-in = true`というカスタム ルールを定義します。 これにより、ログインしているユーザーのグループが定義されます。 このオーディエンスをアクティビティで使用します。
 
-   ![alt 画像 &#x200B;](assets/asset-audience.png)
+   ![alt画像](assets/asset-audience.png)
 
-## 5. トラフィック配分の設定
+## &#x200B;5. トラフィック配分の設定
 
-新しいホームページのデザインをテストする、ログインユーザーの割合を定義します。 つまり、このテストをロールアウトするユーザーの割合を指定します。 この例では、すべてのログインユーザーにこのテストをデプロイするには、トラフィックの割り当てを 100% に保ちます。
+新しいホームページのデザインをテストするログインユーザーの割合を定義します。 つまり、このテストを実施したいユーザーの割合は？ この例では、このテストをすべてのログイン ユーザーにデプロイするには、トラフィック配分を100%に保ちます。
 
-![alt 画像 &#x200B;](assets/asset-allocation.png)
+![alt画像](assets/asset-allocation.png)
 
-## 6. トラフィック配分をバリエーションに設定する
+## &#x200B;6. バリエーションへのトラフィック配分の設定
 
-ホームページの現在のデザインまたはまったく新しいデザインを表示する、ログインユーザーの割合を定義します。 この例では、エクスペリエンス A と B の間でトラフィック配分を 50/50 に分割します。
+ホームページの現在のデザインまたは完全に新しい再設計を表示するログインユーザーの割合を定義します。 この例では、エクスペリエンス AとBの間のトラフィック分布を50/50の割合で維持します。
 
-![alt 画像 &#x200B;](assets/asset-traffic-distribution.png)
+![alt画像](assets/asset-traffic-distribution.png)
 
-## 7. レポートの設定
+## &#x200B;7. レポートの設定
 
-**[!UICONTROL Goals & Settings]** の手順で、[!DNL Adobe Target] UI でアクティビティの結果を表示する **[!UICONTROL Reporting Source]** として **[!UICONTROL Adobe Target]** を選択するか、Adobe Analytics UI で表示する **[!UICONTROL Adobe Analytics]** を選択します。
+**[!UICONTROL Goals & Settings]** ステップで、**[!UICONTROL Reporting Source]**&#x200B;として&#x200B;**[!UICONTROL Adobe Target]**&#x200B;を選択して[!DNL Adobe Target] UIでアクティビティの結果を表示するか、**[!UICONTROL Adobe Analytics]**&#x200B;を選択してAdobe Analytics UIでアクティビティの結果を表示します。
 
-![alt 画像 &#x200B;](assets/asset-reporting.png)
+![alt画像](assets/asset-reporting.png)
 
-## 8. KPI を追跡するための指標を追加する
+## &#x200B;8. KPIを追跡するための指標の追加
 
-A/B テストを測定する **[!UICONTROL Goal Metric]** を選択します。 この例では、コンバージョンの成功は、ユーザーがページの下部に達したかどうかに基づいて行われ、エンゲージメントを示します。 したがって、ユーザー **[!UICONTROL Conversion]** ページの下部という名前の場所を表示したかどうかに基づいてステータスが決定されます。
+A/B テストを測定するには、**[!UICONTROL Goal Metric]**&#x200B;を選択します。 この例では、コンバージョンの成功は、利用者がページの下部に到達し、エンゲージメントを示しているかどうかに基づいています。 したがって、**[!UICONTROL Conversion]**&#x200B;は、ユーザーがページの下部という名前の場所を閲覧したかどうかに基づいて決定されます。
 
-## 9.機能フラグを使用した A/B テストをアプリケーションに実行するコードを実装する
+## &#x200B;9. 機能フラグを使用してA/B テストを実行するコードをアプリケーションに実装します
 
 >[!BEGINTABS]
 
@@ -165,6 +170,6 @@ String flag = attributes.getString("homepage", "feature-flag");
 
 >[!ENDTABS]
 
-## 10.機能フラグを使用して A/B テストをアクティブ化する
+## &#x200B;10. 機能フラグでA/B テストを有効化
 
-![alt 画像 &#x200B;](assets/asset-activate.png)
+![alt画像](assets/asset-activate.png)

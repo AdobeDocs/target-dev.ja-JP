@@ -1,69 +1,74 @@
 ---
-title: '[!DNL Adobe Experience Platform Web SDK] のシングルページアプリケーションの実装'
-description: ' [!DNL Adobe Experience Platform Web SDK]using [!DNL Target] の単一ページアプリケーション（SPA）実装を作成する方法を説明します。'
-keywords: target;adobe target;xdm ビュー；ビュー；単一ページアプリケーション；SPA;SPA ライフサイクル；クライアントサイド；AB テスト；AB；エクスペリエンスのターゲット設定；XT;VEC
+title: '[!DNL Adobe Experience Platform Web SDK]のシングルページアプリケーションの実装'
+description: ' [!DNL Target]を使用して [!DNL Adobe Experience Platform Web SDK]のシングルページアプリケーション （SPA）実装を作成する方法について説明します。'
+keywords: target;adobe target;xdm ビュー；ビュー；シングルページアプリケーション；SPA;SPA;SPA ライフサイクル；クライアントサイド；AB テスト；AB；エクスペリエンスターゲティング；XT;VEC
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: 1747
 ht-degree: 2%
 
 ---
 
-# シングルページアプリケーションの実装
+# シングルページアプリケーションの導入
 
-[!DNL Adobe Experience Platform Web SDK] は、単一ページアプリケーション（SPA）などの次世代のクライアントサイドテクノロジーでパーソナライゼーションを実行できる豊富な機能を提供します。
+[!DNL Adobe Experience Platform Web SDK]には、シングルページアプリケーション （SPA）などの次世代のクライアントサイド技術でパーソナライゼーションを実行するための豊富な機能が用意されています。
 
-従来の Web サイトでは、複数ページアプリケーションとも呼ばれる「ページからページ」ナビゲーションモデルを使用しました。 これらの web サイトでは、デザインは URL に緊密にリンクされているので、ページ間を移動するにはページ全体を読み込む必要があります。
+従来のweb サイトでは、「ページ間」ナビゲーションモデルを使用していました。これは、マルチページアプリケーションとも呼ばれます。 これらのweb サイトでは、デザインはURLと密接にリンクされており、ページ間を移動するにはページ全体の読み込みが必要です。
 
-代わりに、単一ページアプリケーションなどの最新の web アプリケーションは、ブラウザー UI レンダリングの迅速な使用を推進するモデルを採用しています。これは、多くの場合、ページリロードに依存しません。 これらのエクスペリエンスは、スクロール、クリック、カーソル移動など、顧客のインタラクションによってトリガーされます。 最新の web のパラダイムが進化するにつれ、パーソナライゼーションと実験をデプロイするための、ページの読み込みなどの従来の汎用イベントの関連性は機能しなくなりました。
+代わりに、シングルページアプリケーションなどの最新のweb アプリケーションでは、ブラウザーUI レンダリングを迅速に使用できるモデルが採用されています。このモデルは、ページのリロードに依存しないことが多いです。 スクロール、クリック、カーソルの移動など、顧客とのやり取りによってトリガーされます。 現代のwebのパラダイムが進化するにつれ、パーソナライゼーションと実験を展開するための、ページ読み込みなどの従来の一般的なイベントの関連性はもはや機能しません。
 
-![&#x200B; 従来のページライフサイクルと比較した SPA のライフサイクルを示す図。](/help/dev/implement/client-side/aep-web-sdk/assets/spa-vs-traditional-lifecycle.png)
+![従来のページ ライフサイクルとSPA ライフサイクルを比較した図。](/help/dev/implement/client-side/aep-web-sdk/assets/spa-vs-traditional-lifecycle.png)
 
-## SPA 向け [!DNL Experience Platform Web SDK] のメリット
+## SPAの[!DNL Experience Platform Web SDK]の利点
 
-単一ページアプリケーションで [!DNL Adobe Experience Platform Web SDK] を使用する利点は次のとおりです。
+シングルページアプリケーションに[!DNL Adobe Experience Platform Web SDK]を使用するメリットを以下に示します。
 
 * ページ読み込み時にすべてのオファーをキャッシュし、複数のサーバー呼び出しを単一のサーバー呼び出しに減らす機能。
-* 従来のサーバーコールで生じるタイムラグのないキャッシュでオファーが即座に表示されるので、サイトでのユーザーエクスペリエンスが向上します。
-* 1 行のコードと 1 回限りのデベロッパー設定を使用すると、マーケターは、SPA の [!UICONTROL A/B Test] （VEC）を介して [!UICONTROL Experience Targeting] and [!UICONTROL Visual Experience Composer] （XT）アクティビティを作成および実行できます。
+* オファーは従来のサーバーコールによって生じるラグ時間なしにキャッシュを介してすぐに表示されるため、サイトのユーザーエクスペリエンスが向上します。
+* 1行のコードと1回限りの開発者セットアップにより、マーケターはSPA上の[!UICONTROL Visual Experience Composer] （VEC）を介して[!UICONTROL A/B Test]および[!UICONTROL Experience Targeting] （XT）アクティビティを作成して実行できます。
 
 ## XDM ビューとシングルページアプリケーション
 
-[!UICONTROL Adobe Target] VEC for SPA では、[!UICONTROL Views] と呼ばれる概念を利用します。これは、SPA エクスペリエンスを構成するビジュアル要素の論理的なグループです。 したがって、単一ページアプリケーションは、ユーザーのインタラクションに基づいて、URL ではなくビューを通じた移行と見なすことができます。 [!UICONTROL View] は通常、サイト全体またはサイト内のグループ化された視覚的要素を表すことができます。
+SPA用[!UICONTROL Adobe Target] VECは、[!UICONTROL Views]という概念を利用しています。これは、SPA エクスペリエンスを構成する視覚要素の論理グループです。 したがって、単一ページアプリケーションは、ユーザーのインタラクションに基づいて、URLではなくビューを介して移行と見なすことができます。 [!UICONTROL View]は通常、サイト全体またはサイト内のグループ化されたビジュアル要素を表します。
 
-ビューとは何かを詳しく説明するために、次の例では、[!DNL React] で実装された架空のオンライン e コマースサイトを使用して、[!UICONTROL Views] の例を調べています。
+ビューの詳細を説明するために、次の例では、[!DNL React]に実装された仮想的なオンライン e コマースサイトを使用して、例[!UICONTROL Views]を調べます。
 
-ホームページに移動すると、ヒーロー画像がイースターの販売とサイトで利用可能な最新の製品を宣伝します。 この場合、ホーム画面全体に対して [!UICONTROL View] を定義できます。 この [!UICONTROL View] は単に「家」と呼んでもよいでしょう。
+ホームサイトに移動すると、ヒーロー画像がイースターセールと、サイトで利用可能な最新の製品を宣伝します。 この場合、ホーム画面全体に[!UICONTROL View]を定義できます。 この[!UICONTROL View]は単に「ホーム」と呼ぶことができます。
 
-![&#x200B; ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/example-views.png)
+![ ブラウザーウィンドウでのシングルページアプリケーションのサンプル画像。](/help/dev/implement/client-side/aep-web-sdk/assets/example-views.png)
 
-ビジネスで販売されている製品に対するお客様の関心が高まるにつれ、お客様は **製品** リンクをクリックすることにします。 ホームサイトと同様に、製品サイト全体を [!UICONTROL View] として定義できます。 この [!UICONTROL View] は、「products-all」という名前を付けることができます。
+顧客が販売している商品に関心を持つようになると、**商品** リンクをクリックすることにしました。 ホームサイトと同様に、製品サイト全体を[!UICONTROL View]として定義できます。 この[!UICONTROL View]には「products-all」という名前を付けることができます。
 
-![&#x200B; ブラウザーウィンドウに、すべての製品が表示された単一ページアプリケーションのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/example-products-all.png)
+![すべての製品が表示されたブラウザーウィンドウでの単一ページアプリケーションのサンプル画像。](/help/dev/implement/client-side/aep-web-sdk/assets/example-products-all.png)
 
-[!UICONTROL View] は、サイト全体またはサイト上の視覚要素のグループとして定義できるからです。 製品サイトに表示される 4 つの製品は、グループ化され、[!UICONTROL View] と見なすことができます。 このビューには、「products」という名前を付けることができます。
+[!UICONTROL View]は、サイト全体またはサイト上の視覚要素のグループとして定義できます。 製品サイトに表示される4つの製品はグループ化され、[!UICONTROL View]と見なすことができます。 このビューには「products」という名前を付けることができます。
 
-![&#x200B; ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像。表示例は製品です。](/help/dev/implement/client-side/aep-web-sdk/assets/example-products.png)
+![ ブラウザーウィンドウ内の単一ページアプリケーションのサンプル画像。サンプル製品が表示されている](/help/dev/implement/client-side/aep-web-sdk/assets/example-products.png)
 
-この場合、顧客が **さらに読み込む** ボタンをクリックしてサイト上のより多くの製品を参照することにしても、web サイトの URL は変更されません。 ただし、ここで [!UICONTROL View] を作成して、表示される 2 行目の製品のみを表すことができます。 [!UICONTROL View] の名前は「products-page-2」になります。
+お客様が「**さらに読み込む**」ボタンをクリックしてサイト上の他の製品を検索する場合、web サイトのURLは変更されません。 ただし、ここに[!UICONTROL View]を作成して、表示されている製品の2行目のみを表すことができます。 [!UICONTROL View]名は「products-page-2」である可能性があります。
 
-![&#x200B; ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像。追加のページに表示されるサンプル製品が含まれます。](/help/dev/implement/client-side/aep-web-sdk/assets/example-load-more.png)
+![ ブラウザーウィンドウ内の単一ページアプリケーションのサンプル画像。追加ページにサンプル製品が表示されている](/help/dev/implement/client-side/aep-web-sdk/assets/example-load-more.png)。
 
-お客様は、サイトからいくつかの製品を購入することを決定し、チェックアウト画面に進みます。 チェックアウトサイトでは、顧客は通常の配信または速達を選択するオプションを提供されます。 [!UICONTROL View] は、サイト上の任意の視覚要素のグループにすることができ、配信環境設定用の [!UICONTROL View] を作成して「配信環境設定」と呼ぶこともできます。
+顧客はサイトから商品を購入し、チェックアウト画面に進みます。 チェックアウトサイトでは、通常の配送とエクスプレス配送のどちらかを選択できるオプションが顧客に提供されます。 [!UICONTROL View]は、サイト上の任意のグループのビジュアル要素になることができるため、配信環境設定のために[!UICONTROL View]を作成し、「配信環境設定」と呼ぶことができます。
 
-![&#x200B; ブラウザーウィンドウに表示される単一ページアプリケーションのチェックアウトページのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/example-check-out.png)
+![ ブラウザーウィンドウでのシングルページアプリケーションのチェックアウトページのサンプル画像。](/help/dev/implement/client-side/aep-web-sdk/assets/example-check-out.png)
 
-[!UICONTROL Views] の概念は、このシナリオよりもはるかに拡張できます。 これらのシナリオは、サイトで定義できる [!UICONTROL Views] の例のほんの一部です。
+[!UICONTROL Views]の概念は、このシナリオよりもはるかに拡張できます。 これらのシナリオは、サイトで定義できる[!UICONTROL Views]の例のほんの一部です。
 
-## [!UICONTROL XDM Views] の実装
+## [!UICONTROL XDM Views]を実装しています
 
-[!UICONTROL XDM Views] を [!DNL Target] で活用すると、マーケターが [!UICONTROL Visual Experience Composer] を介して SPA で A/B テストと XT テストを実行できるようになります。 これを行うには、1 回限りの開発者セットアップを完了するために、次の手順を実行する必要があります。
+[!UICONTROL XDM Views]を[!DNL Target]で活用すると、マーケターは[!UICONTROL Visual Experience Composer]を介してSPAでA/B テストとXT テストを実行できます。 これを行うには、1回限りの開発者セットアップを完了するために、次の手順を実行する必要があります。
 
-1. [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/install/overview) をインストールします。
-2. パーソナライズする単一ページアプリケーション内のすべての [!UICONTROL XDM Views] を決定します。
-3. [!UICONTROL XDM Views] を定義した後、A/B または XT VEC アクティビティを配信するには、`sendEvent()` に設定した `renderDecisions` 関数と、シングルページアプリケーションで対応す `true`[!UICONTROL XDM View] を実装します。 [!UICONTROL XDM View] は `xdm.web.webPageDetails.viewName` で渡す必要があります。 この手順を使用すると、マーケターは [!UICONTROL Visual Experience Composer] を活用して、これらの XDM に対して A/B テストと XT テストを開始できます。
+1. [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview)をインストールします。
+2. パーソナライズするシングルページアプリケーションのすべての[!UICONTROL XDM Views]を決定します。
+3. [!UICONTROL XDM Views]を定義した後、A/BまたはXT VEC アクティビティを配信するには、`renderDecisions`が`true`に設定され、対応する[!UICONTROL XDM View]が単一ページアプリケーションに設定された`sendEvent()`関数を実装します。 [!UICONTROL XDM View]は`xdm.web.webPageDetails.viewName`で渡す必要があります。 このステップでは、マーケターは[!UICONTROL Visual Experience Composer]を活用して、これらのXDMのA/B テストおよびXT テストを開始できます。
 
    ```javascript
    alloy("sendEvent", { 
@@ -80,19 +85,19 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->最初の `sendEvent()` 呼び出しで、エンドユーザーにレンダリングする必要があるすべての [!UICONTROL XDM Views] ータが取得され、キャッシュされます。 `sendEvent()` が渡された後続の [!UICONTROL XDM Views] 呼び出しは、キャッシュから読み取られ、サーバーコールなしでレンダリングされます。
+>最初の`sendEvent()`呼び出しでは、エンドユーザーにレンダリングされるすべての[!UICONTROL XDM Views]が取得され、キャッシュされます。 [!UICONTROL XDM Views]が渡された後続の`sendEvent()`呼び出しは、キャッシュから読み取られ、サーバーコールなしでレンダリングされます。
 
-## `sendEvent()` 関数の例
+## `sendEvent()`関数の例
 
-この節では、模擬 e コマース SPA 用に React で `sendEvent()` 関数を呼び出す方法を示す 3 つの例について説明します。
+この節では、仮想e コマース SPAに対してReactで`sendEvent()`関数を呼び出す方法を示す3つの例の概要を説明します。
 
-### 例 1:A/B テストのホームページ
+### 例1:A/B テストのホームページ
 
-マーケティングチームは、ホームページ全体で A/B テストを実行したいと考えています。
+マーケティング部門は、ホームページ全体でA/B テストを実施したいと考えている。
 
-![&#x200B; ブラウザーウィンドウに表示される単一ページアプリケーションのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-1.png)
+![ ブラウザーウィンドウでのシングルページアプリケーションのサンプル画像。](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-1.png)
 
-ホームサイト全体で A/B テストを実行するには、XDM `sendEvent()` を `viewName` に設定して `home` を呼び出す必要があります。
+ホームサイト全体でA/B テストを実行するには、XDM `viewName`を`home`に設定して`sendEvent()`を呼び出す必要があります。
 
 ```jsx
 function onViewChange() { 
@@ -130,11 +135,11 @@ history.listen(onViewChange);
 <Router history={hashHistory} onUpdate={onViewChange} > 
 ```
 
-### 例 2：パーソナライズされた製品
+### 例2：パーソナライズされた商品
 
-マーケティングチームは、ユーザーが **さらに読み込む** をクリックした後で価格ラベルのカラーを赤に変更して、2 行目にある製品をパーソナライズしたいと考えています。
+マーケティングチームは、ユーザーが「**さらに読み込む**」をクリックした後、価格ラベルの色を赤に変更して、2行目の商品をパーソナライズしたいと考えています。
 
-![&#x200B; パーソナライズされたオファーを表示する、ブラウザーウィンドウ内の単一ページアプリケーションのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-2.png)
+![ パーソナライズされたオファーを表示する、ブラウザーウィンドウ内の単一ページアプリケーションのサンプル画像。](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-2.png)
 
 ```jsx
 function onViewChange(viewName) { 
@@ -168,13 +173,13 @@ class Products extends Component {
 } 
 ```
 
-### 例 3:A/B テスト配信の環境設定
+### 例3:A/B テスト配信の環境設定
 
-マーケティングチームは、「**高速配信**」が選択されている場合に、ボタンの色を青から赤に変更するかどうかを確認するために、A/B テストを実行します。 チームは、（両方の配信オプションでボタンの色を青に保つのではなく）この変更によってコンバージョンが向上すると考えています。
+マーケティング部門は、**Express Delivery**&#x200B;が選択されている場合に、ボタンの色を青から赤に変更するかどうかを確認するためにA/B テストを実行したいと考えています。 チームは、この変更が（両方の配信オプションでボタンの色を青に保つのではなく）コンバージョンを高めることができると考えています。
 
-![A/B テストを使用したブラウザーウィンドウ内の単一ページアプリケーションのサンプル画像 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-3.png)
+![A/B テストを行ったブラウザーウィンドウでの単一ページアプリケーションのサンプル画像。](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-3.png)
 
-選択した配信環境設定に応じてサイトのコンテンツをパーソナライズするために、配信環境設定ごとに [!UICONTROL View] を作成できます。 **通常配信** が選択されている場合、[!UICONTROL View] ージに「checkout-normal」という名前を付けることができます。 **高速配信** が選択されている場合、[!UICONTROL View] ージに「checkout-express」という名前を付けることができます。
+選択されている配信設定に応じてサイト上のコンテンツをパーソナライズするには、配信設定ごとに[!UICONTROL View]を作成できます。 **通常の配信**&#x200B;を選択すると、[!UICONTROL View]に「checkout-normal」という名前を付けることができます。 **Express Delivery**&#x200B;が選択されている場合、[!UICONTROL View]には「checkout-express」という名前を付けることができます。
 
 ```jsx
 function onViewChange(viewName) { 
@@ -215,75 +220,75 @@ class Checkout extends Component {
 } 
 ```
 
-## SPA での [!UICONTROL Visual Experience Composer] の使用
+## SPAに[!UICONTROL Visual Experience Composer]を使用する
 
-[!UICONTROL XDM Views] の定義が完了し、渡された `sendEvent()` を使用して [!UICONTROL XDM Views] を実装したら、VEC は、これらの [!UICONTROL Views] を検出し、ユーザーが A/B または XT アクティビティのアクションと変更を作成できるようにします。
+[!UICONTROL XDM Views]の定義が完了し、それらの[!UICONTROL XDM Views]が渡された`sendEvent()`を実装すると、VECはこれらの[!UICONTROL Views]を検出し、ユーザーがA/BまたはXT アクティビティのアクションと変更を作成できるようにします。
 
 >[!NOTE]
 >
->SPA で VEC を使用するには、{Firefox[&#x200B; または &#x200B;](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)2}Chrome VEC Helper Extension[&#x200B; をインストールして有効化する必要があります。](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)
+>SPAにVECを使用するには、[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)または[Chrome VEC Helper Extension](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)のいずれかをインストールしてアクティベートする必要があります。
 
 ### [!UICONTROL Modifications] パネル
 
-[!UICONTROL Modifications] パネルには、特定の [!UICONTROL View] ーザーに対して作成されたアクションが取り込まれます。 [!UICONTROL View] ージのすべてのアクションは、その [!UICONTROL View] ージの下にグループ化されます。
+[!UICONTROL Modifications] パネルは、特定の[!UICONTROL View]に対して作成されたアクションをキャプチャします。 [!UICONTROL View]のすべてのアクションは、その[!UICONTROL View]の下にグループ化されます。
 
 ### アクション
 
-アクションをクリックすると、このアクションが適用されるサイト上の要素がハイライト表示されます。 [!UICONTROL View] で作成された各 VEC アクションには、**情報**、**編集**、**クローン**、**移動**、**削除** のアイコンがあります。 これらのアイコンについて詳しくは、次の表を参照してください。
+アクションをクリックすると、このアクションが適用されるサイト上の要素がハイライト表示されます。 [!UICONTROL View]の下に作成された各VEC アクションには、次のアイコンがあります：**情報**、**編集**、**クローン**、**移動**、**削除**。 これらのアイコンについては、次の表で詳しく説明します。
 
 | アイコン | 説明 |
 |---|---|
 | 情報 | アクションの詳細を表示します。 |
 | 編集 | アクションのプロパティを直接編集できます。 |
-| 複製 | [!UICONTROL Views] パネルに存在する 1 つ以上の [!UICONTROL Modifications]、または VEC で参照および移動した 1 つ以上の [!UICONTROL Views] にアクションのクローンを作成します。 アクションは、必ずしも [!UICONTROL Modifications] パネルに存在する必要はありません。<br/><br/>**注意：** 複製操作を行ったら、[!UICONTROL View] を使用して VEC の [!UICONTROL Browse] に移動し、複製されたアクションが有効な操作かどうかを確認します。 アクションを [!UICONTROL View] に適用できない場合は、エラーが表示されます。 |
-| 移動 | アクションを、[!UICONTROL Page Load Event] パネルに既に存在する [!UICONTROL View] ージまたはその他の [!UICONTROL Modifications] ージに移動します。<br/><br/>**ページの読み込みイベント：** ページの読み込みイベントに対応するアクションが web アプリケーションの最初のページ読み込みに適用されます。 <br/><br/>**注意：** 移動操作を行ったら、[!UICONTROL View] を使用して VEC の [!UICONTROL Browse] に移動し、移動が有効な操作かどうかを確認します。 アクションを [!UICONTROL View] に適用できない場合は、エラーが表示されます。 |
+| 複製 | アクションを、[!UICONTROL Modifications] パネルに存在する1つ以上の[!UICONTROL Views]またはVECで参照して移動した1つ以上の[!UICONTROL Views]に複製します。 アクションは、[!UICONTROL Modifications] パネルに必ずしも存在する必要はありません。<br/><br/>**注意：** クローン操作が行われた後、VECの[!UICONTROL View]に[!UICONTROL Browse]経由で移動して、クローン操作が有効な操作であったかどうかを確認する必要があります。 アクションを[!UICONTROL View]に適用できない場合は、エラーが表示されます。 |
+| 移動 | アクションを[!UICONTROL Page Load Event]または[!UICONTROL Modifications] パネルに既に存在するその他の[!UICONTROL View]に移動します。<br/><br/>**ページ読み込みイベント：** ページ読み込みイベントに対応するすべてのアクションは、web アプリケーションの最初のページ読み込み時に適用されます。 <br/><br/>**メモ：**&#x200B;移動操作を行った後、[!UICONTROL Browse]経由でVECの[!UICONTROL View]に移動して、移動が有効な操作であったかどうかを確認する必要があります。 アクションを[!UICONTROL View]に適用できない場合は、エラーを参照してください。 |
 | 削除 | アクションを削除します。 |
 
-## SPA への VEC の使用の例
+## SPAの例にVECを使用する
 
-この節では、[!UICONTROL Visual Experience Composer] を使用して A/B または XT アクティビティのアクションと変更を作成する 3 つの例について説明します。
+この節では、[!UICONTROL Visual Experience Composer]を使用してA/BまたはXT アクティビティのアクションと変更を作成する3つの例について説明します。
 
-### 例 1:「home」ビューを更新する
+### 例1: 「ホーム」ビューの更新
 
-この記事の前半では、「home」という [!UICONTROL View] がホームサイト全体に対して定義されました。 マーケティングチームは、次のように「ホーム」ビューを更新します。
+この記事の前に、「ホーム」という名前の[!UICONTROL View]がホームサイト全体に対して定義されました。 さて、マーケティング部門は次の方法で「ホーム」ビューを更新したいと考えています。
 
-* **買い物かごに追加** ボタンと **いいね** ボタンを、より明るい青色に変更します。 この変更は、ヘッダーのコンポーネントを変更する必要があるので、ページの読み込み中に発生する必要があります。
-* **2026 年の最新製品** ラベルを **2026 年の最もホットな製品** に変更し、テキストの色を紫色に変更します。
+* **買い物かごに追加** ボタンと&#x200B;**いいね** ボタンを青色に変更します。 この変更は、ヘッダーのコンポーネントを変更する必要があるため、ページの読み込み中に行う必要があります。
+* 「**2026**」ラベルの最新製品を「**2026**」の最新製品に変更し、テキストの色を紫色に変更します。
 
-VEC でこれらの更新を行うには、「作成 **を選択し、その変更を「ホーム** ビューに適用します。
+VECでこれらの更新を行うには、**作成**&#x200B;を選択し、これらの変更を「ホーム」ビューに適用します。
 
-![Visual Experience Composer のサンプルページ &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/vec-home.png)
+![Visual Experience Composer サンプル ページ。](/help/dev/implement/client-side/aep-web-sdk/assets/vec-home.png)
 
-### 例 2：製品ラベルを変更する
+### 例2：製品ラベルの変更
 
-「products-page-2」の [!UICONTROL View] については、マーケティングチームは **Price** ラベルを **Sale Price** に変更し、ラベルの色を赤に変更します。
+「products-page-2」 [!UICONTROL View]の場合、マーケティング部門は&#x200B;**価格** ラベルを&#x200B;**販売価格**&#x200B;に変更し、ラベルの色を赤に変更します。
 
-VEC でこれらの更新を行うには、次の手順が必要です。
+VECでこれらの更新を行うには、次の手順が必要です。
 
-1. VEC で **参照** を選択します。
+1. VECで「**参照**」を選択します。
 2. サイトの上部ナビゲーションで「**製品**」を選択します。
-3. **さらに読み込み** を 1 回選択して、製品の 2 行目を表示します。
-4. VEC で「**作成**」を選択します。
-5. アクションを適用して、テキストラベルを **販売価格** に、カラーを赤に変更します。
+3. 「**さらに読み込む**」を1回選択すると、2行目の商品が表示されます。
+4. VECで「**作成**」を選択します。
+5. アクションを適用して、テキストラベルを&#x200B;**販売価格**&#x200B;に変更し、色を赤に変更します。
 
-![&#x200B; 製品ラベルを使用した Visual Experience Composer サンプルページ &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/vec-products-page-2.png)
+製品ラベルを含む![Visual Experience Composer サンプルページ。](/help/dev/implement/client-side/aep-web-sdk/assets/vec-products-page-2.png)
 
-### 例 3：配信環境設定のスタイル設定をパーソナライズ
+### 例3：配信設定スタイルのパーソナライズ
 
-状態 [!UICONTROL Views] ラジオボタンからのオプションなど、詳細なレベルで定義することができます。 この記事の前半では、配信の環境設定、「checkout-normal」および「checkout-express」について [!UICONTROL Views] が定義されていました。 マーケティングチームは、「checkout-express」表示のボタンの色を赤に変更したいと考えています。
+[!UICONTROL Views]は、状態やラジオボタンのオプションなど、詳細レベルで定義できます。 この記事の前の記事[!UICONTROL Views]では、配信設定の「checkout-normal」および「checkout-express」について定義しました。 「checkout-express」ビューのボタンの色を赤に変更したいと考えています。
 
-VEC でこれらの更新を行うには、次の手順が必要です。
+VECでこれらの更新を行うには、次の手順が必要です。
 
-1. VEC で **参照** を選択します。
-2. サイト上の買い物かごに商品を追加します。
-3. サイトの右上隅にある「買い物かご」アイコンを選択します。
-4. **注文をチェックアウト** を選択します。
-5. **配信環境設定** の下の **高速配信** ラジオボタンを選択します。
-6. VEC で「**作成**」を選択します。
-7. **Pay** ボタンのカラーを赤に変更します。
+1. VECで「**参照**」を選択します。
+2. サイトのカートに商品を追加します。
+3. サイトの右上隅にあるカートアイコンを選択します。
+4. **ご注文のチェックアウト**&#x200B;を選択します。
+5. **配信設定**&#x200B;の下の&#x200B;**Express配信** ラジオボタンを選択します。
+6. VECで「**作成**」を選択します。
+7. **支払い** ボタンの色を赤に変更します。
 
 >[!NOTE]
 >
->「チェックアウトエクスプレス」 [!UICONTROL View] は、「速達 [!UICONTROL Modifications] ラジオボタンが選択されるまで、**ールパネルに表示され** せん。 これは、`sendEvent()` 関数が、「高速配信 **&#x200B;**&#x200B;ラジオボタンが選択されたときに実行されるため、VEC は、ラジオボタンが選択されるまで「checkout-express」 [!UICONTROL View] を認識しません。
+>**Express Delivery** ラジオボタンが選択されるまで、「checkout-express」 [!UICONTROL View]が[!UICONTROL Modifications] パネルに表示されません。 これは、**Express Delivery** ラジオボタンが選択されている場合に`sendEvent()`関数が実行されるため、ラジオボタンが選択されるまで、VECは「checkout-express」 [!UICONTROL View]を認識しません。
 
-![&#x200B; 配信環境設定セレクターを表示する Visual Experience Composer。](/help/dev/implement/client-side/aep-web-sdk/assets/vec-delivery-preference.png)
+![配信設定セレクターを表示するVisual Experience Composer。](/help/dev/implement/client-side/aep-web-sdk/assets/vec-delivery-preference.png)

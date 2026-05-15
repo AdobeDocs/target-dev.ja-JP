@@ -1,11 +1,14 @@
 ---
-title: ' [!DNL Adobe Target] .NET SDK での非同期要求の使用方法'
-description: Java SDK が  [!DNL Target]  非同期リクエストをサポートする方法を説明します。これにより、有効なターゲット時間をゼロに減らすことができます。
+title: ' [!DNL Adobe Target] .NET SDKでの非同期リクエストの使用方法'
+description: ' [!DNL Target] Java SDKが非同期リクエストをサポートする方法を説明します。これにより、効果的な目標時間を0に短縮できます。'
 feature: APIs/SDKs
 exl-id: fd36cc7b-a884-4e57-93c2-8aff8256109a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/E9rNmPdXe7HYg7XlIffpC4opGM9X6fFoHK-u0oLI-XE
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: 91
 ht-degree: 4%
 
 ---
@@ -14,7 +17,7 @@ ht-degree: 4%
 
 ## 説明
 
-サーバーサイド統合の利点の 1 つは、並列処理を使用することで、サーバーサイドで利用できる膨大な帯域幅とコンピューティングリソースを活用できることです。 .NET SDK[!DNL Target]、非同期リクエストをサポートしており、アプリの既存の非同期ワークフローに [!DNL Target] れを簡単に統合できます。
+サーバーサイド統合の利点の1つは、並列処理を使用して、サーバーサイドで利用可能な巨大な帯域幅とコンピューティングリソースを活用できることです。[!DNL Target] .NET SDKは非同期リクエストをサポートしているため、[!DNL Target]をアプリの既存の非同期ワークフローに簡単に統合できます。
 
 ## サポートされるメソッド
 
@@ -28,7 +31,7 @@ Task<TargetAttributes> GetAttributesAsync(TargetDeliveryRequest request, params 
 
 ## 例
 
-非同期 SDK API の使用例は、次のようになります。
+非同期SDK APIの使用例は、次のように表示されます。
 
 ### \.NET
 
@@ -53,4 +56,4 @@ var notificationRequest = new TargetDeliveryRequest.Builder()
 var notificationResponse = await this.targetClient.SendNotificationsAsync(notificationRequest);
 ```
 
-この例では、[SDK を初期化した &#x200B;](initialize-sdk.md) ことを前提としています。
+この例では、[様がSDK](initialize-sdk.md)を初期化していることを前提としています。
