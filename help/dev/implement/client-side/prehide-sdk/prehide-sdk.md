@@ -24,7 +24,7 @@ ht-degree: 1%
 
 1. `<head>`の最上部にインラインで埋め込みます。
 
-   インライン `<script>` タグ内に`prehide.min.js`の内容を`<head>`の最初の子として直接貼り付けます。 インラインが推奨される理由については、[ インラインと外部](#inline-vs-external)を参照してください。
+   インライン `<script>` タグ内に`prehide.min.js`の内容を`<head>`の最初の子として直接貼り付けます。 インラインが推奨される理由については、[&#x200B; インラインと外部](#inline-vs-external)を参照してください。
 
    ```html
    <!-- 1. Prehide SDK: must be FIRST in <head> and BEFORE any Adobe SDK -->
