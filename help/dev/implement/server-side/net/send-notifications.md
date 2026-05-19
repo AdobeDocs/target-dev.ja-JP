@@ -1,31 +1,39 @@
 ---
-title: .NET SDK を使用して  [!DNL Adobe Target]  にディスプレイまたはクリック通知を送信
-description: sendNotifications （）を使用して、測定およびレポート用に表示またはクリック通知を送信する方法  [!DNL Adobe Target]  説明します。
+title: .NET SDKを使用してディスプレイまたはクリック通知を [!DNL Adobe Target] に送信する
+description: sendNotifications （）を使用して、測定とレポート用にディスプレイ通知またはクリック通知を [!DNL Adobe Target] に送信する方法を説明します。
 feature: APIs/SDKs
 exl-id: 724e787c-af53-4152-8b20-136f7b5452e1
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/4lJvfqWv6vDehZ-CmO7xj61-ZFS9-3nOAcA7vlbg-3c
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: 230
 ht-degree: 1%
 
 ---
 
-# 通知の送信（.NET）
+# 送信通知（.NET）
 
 ## 説明
 
-`SendNotifications()` は、測定およびレポート用の [!DNL Adobe Target] に表示またはクリック通知を送信するために使用されます。
+`SendNotifications()`は、測定とレポート用にディスプレイまたはクリック通知を[!DNL Adobe Target]に送信するために使用されます。
 
 >[!NOTE]
 >
->必須のパラメーターを持つ `Execute` オブジェクトがリクエスト自体の中にある場合、インプレッションは、条件を満たすアクティビティについて自動的に増分されます。
+>必須パラメーターを持つ`Execute` オブジェクトがリクエスト自体の中にある場合、適格なアクティビティに対してインプレッションが自動的に増分されます。
 
-インプレッションを自動的に増分する SDK メソッドは次のとおりです。
+インプレッションを自動的に増分するSDK メソッドは次のとおりです。
 
 * `GetOffers()`
 * `GetAttributes()`
 
-リクエスト内で `Prefetch` オブジェクトが渡された場合、`Prefetch` オブジェクト内の mbox を持つアクティビティに対して、インプレッションが自動的に増分されることはありません。 インプレッション `SendNotifications()` コンバージョンを増分するための、事前読み込みされたエクスペリエンスに使用する必要があります。
+`Prefetch` オブジェクトがリクエスト内で渡されると、`Prefetch` オブジェクト内のmboxを持つアクティビティに対して、インプレッションが自動的に増分されません。 インプレッションとコンバージョンを増やすには、プリフェッチされたエクスペリエンスに`SendNotifications()`を使用する必要があります。
 
 ## メソッド
 
@@ -37,7 +45,7 @@ TargetDeliveryResponse TargetClient.SendNotifications(TargetDeliveryRequest requ
 
 ## 例
 
-まず、`home` および `product1` mbox のコンテンツをプリフェッチするための [!UICONTROL Target Delivery API] リクエストを作成します。
+まず、`home`と`product1`のmboxのコンテンツをプリフェッチするための[!UICONTROL Target Delivery API] リクエストを作成します。
 
 ### \.NET
 
@@ -56,7 +64,7 @@ var targetDeliveryRequest = new TargetDeliveryRequest.Builder()
 var targetResponse = targetClient.GetOffers(targetDeliveryRequest);
 ```
 
-正常な応答には、リクエストされた mbox のプリフェッチされたコンテンツを含む [!DNL Target Delivery API] 応答オブジェクトが含まれます。 `targetResponse.Response` オブジェクトの例は次のようになります。
+正常な応答には、要求されたmboxのプリフェッチされたコンテンツを含む[!DNL Target Delivery API]応答オブジェクトが含まれます。 サンプル `targetResponse.Response` オブジェクトは次のように表示されます。
 
 ### \.NET
 
@@ -114,7 +122,7 @@ var targetResponse = targetClient.GetOffers(targetDeliveryRequest);
 }
 ```
 
-[!DNL Target] の各コンテンツオプションには、`mbox` 名フィールドと `state` フィールド、および `eventToken` フィールドがあります。 これらは、各コンテンツオプションが表示されるとすぐに、`SendNotifications()` リクエストで指定する必要があります。 `product1` mbox がブラウザー以外のデバイスに表示されているとします。 通知リクエストは次のように表示されます。
+[!DNL Target]の各コンテンツオプションに、`mbox`の名前と`state`のフィールド、および`eventToken`のフィールドを記録します。 これらは、各コンテンツオプションが表示されるとすぐに、`SendNotifications()` リクエストで提供する必要があります。 `product1` mboxがブラウザー以外のデバイスに表示されているとします。 通知リクエストは次のように表示されます。
 
 ### \.NET
 
@@ -131,7 +139,7 @@ var mboxNotificationRequest = new TargetDeliveryRequest.Builder()
     .Build();
 ```
 
-プリフェッチ応答で配信された [!DNL Target] オファーに対応する mbox 状態とイベントトークンの両方が含まれていることに注意してください。 通知リクエストを作成したら、`SendNotifications()` の API メソッドを使用して [!DNL Target] に送信できます。
+プリフェッチ応答で配信された[!DNL Target] オファーに対応するmbox状態とイベントトークンの両方が含まれていることに注意してください。 通知リクエストを作成したら、`SendNotifications()` API メソッドを介して[!DNL Target]に送信できます。
 
 ### \.NET
 

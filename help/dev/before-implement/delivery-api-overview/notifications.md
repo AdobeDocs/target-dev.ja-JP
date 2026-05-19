@@ -1,25 +1,32 @@
 ---
-title: Adobe Target配信 API の通知
-description: '[!UICONTROL Adobe Target Delivery API] を使用して通知を送信するにはどうすればよいですか？'
-keywords: 配信 api
+title: Adobe Target Delivery APIの通知
+description: '[!UICONTROL Adobe Target Delivery API]を使用して通知を送信するにはどうすればよいですか？'
+keywords: Delivery API
 exl-id: 711388fd-2c1f-4ca4-939f-c56dc4bdc04a
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/rooWLG-bh7lu7eBELTQys3KoNtS-6ZicxfHoQcU6TU0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: 414
 ht-degree: 0%
 
 ---
 
 # 通知
 
-プリフェッチされた mbox またはビューがエンドユーザーに訪問またはレンダリングされた場合、通知を実行する必要があります。
+プリフェッチされたmboxまたはビューが訪問されたり、エンドユーザーにレンダリングされたりした場合は、通知を実行する必要があります。
 
-適切な mbox またはビューに対して通知を送信するには、各 mbox またはビューに対応する `eventToken` を必ず追跡してください。 レポートを正しく反映するには、対応する mbox またはビューに対して正しい `eventToken` を持つ通知を実行する必要があります。
+適切なmboxまたはビューに対して通知を送信するには、mboxまたはビューごとに対応する`eventToken`を必ず追跡してください。 レポートを正しく反映するには、対応するmboxまたはビューに対して正しい`eventToken`の通知を実行する必要があります。
 
-## プリフェッチされた mbox の通知
+## プリフェッチ済みMboxの通知
 
-1 回の配信呼び出しで 1 つまたは複数の通知を送信できます。 通知の `type` を正しく反映させるために、追跡する必要がある指標が mbox ごとに `click` または `display` のいずれであるかを判断します。 また、[!UICONTROL &#x200B; Adobe Target Delivery API] 経由で通知が正しく送信されたかどうかを判断できるように、通知ごとに `id` を渡します。 また、`timestamp` は、レポート目的で特定の mbox に対して `click` または `display` がいつ発生したかを示すために、[!DNL Target] に転送することが重要です。
+1回の配信呼び出しを使用して、1つまたは複数の通知を送信できます。 追跡する必要のある指標が、通知の`type`を正しく反映できるように、各mboxの`click`または`display`のどちらかであるかを判断します。 また、通知ごとに`id`を渡して、通知が[!UICONTROL &#x200B; Adobe Target Delivery API]を通じて正しく送信されたかどうかを判断できるようにします。 `timestamp`は、レポート用に特定のmboxで`click`または`display`がいつ発生したかを示すために[!DNL Target]に転送することも重要です。
 
 ```
 curl -X POST \
@@ -81,7 +88,7 @@ curl -X POST \
   }'
 ```
 
-上記の呼び出し例では、`notifications` リクエストが正常に処理されたことを示す応答が返されます。
+上記の呼び出しの例では、`notifications` リクエストが正常に処理されたことを示す応答が返されます。
 
 ```
 {
@@ -106,11 +113,11 @@ curl -X POST \
 }
 ```
 
-[!DNL Target] に送信されたすべての `notifications` が正しく処理されると、応答の `notifications` 配列に表示されます。 ただし、`notifications` `id` が見つからない場合、その特定の `notification` は通過しませんでした。 このシナリオでは、成功した `notification` 応答が取得されるまで、再試行ロジックを導入できます。 API 呼び出しがブロックされず、パフォーマンスの遅延が発生しないように、再試行ロジックにタイムアウトが指定されていることを確認します。
+[!DNL Target]に送信されたすべての`notifications`が正しく処理されると、応答の`notifications`配列に表示されます。 ただし、`notifications` `id`が見つからない場合、その特定の`notification`は処理されませんでした。 このシナリオでは、正常な`notification`応答が取得されるまで、再試行ロジックを配置できます。 API呼び出しがブロックされず、パフォーマンス遅延が発生しないように、再試行ロジックにタイムアウトが指定されていることを確認します。
 
-## プリフェッチされたビューの通知
+## プリフェッチビューの通知
 
-1 回の配信呼び出しで 1 つまたは複数の通知を送信できます。 通知のタイプを正しく反映するために、追跡する必要がある指標が mbox ごとに `click` または `display` のいずれであるかを判断します。 また、通知ごとに `id` を渡して、[!UICONTROL Adobe Target Delivery API] 経由で通知が正しく送信されたかどうかを判断できるようにします。 また、タイムスタンプは、レポート目的で特定のビューに対して `click` または `display` がいつ発生したかを示すために、[!DNL Target] に転送する必要があります。
+1回の配信呼び出しを使用して、1つまたは複数の通知を送信できます。 追跡する必要のある指標が、通知のタイプを正しく反映できるように、各mboxの`click`または`display`のどちらかであるかを判断します。 また、通知ごとに`id`を渡して、通知が[!UICONTROL Adobe Target Delivery API]を通じて正しく送信されたかどうかを判断できるようにします。 タイムスタンプは、レポート用に特定のビューで`click`または`display`がいつ発生したかを示すために[!DNL Target]に転送することも重要です。
 
 ```
 curl -X POST \
@@ -161,7 +168,7 @@ curl -X POST \
 }'
 ```
 
-上記の呼び出し例では、`notifications` リクエストが正常に処理されたことを示す応答が返されます。
+上記の呼び出しの例では、`notifications` リクエストが正常に処理されたことを示す応答が返されます。
 
 ```
 {
@@ -186,4 +193,4 @@ curl -X POST \
 }
 ```
 
-[!DNL Target] に送信されたすべての `notifications` が正しく処理されると、応答の `notifications` 配列に表示されます。 ただし、`notifications` `id` が見つからない場合、その特定の通知は送信されませんでした。 このシナリオでは、成功した通知応答が取得されるまで、再試行ロジックを導入できます。 API 呼び出しがブロックされず、パフォーマンスの遅延が発生しないように、再試行ロジックにタイムアウトが指定されていることを確認します。
+[!DNL Target]に送信されたすべての`notifications`が正しく処理されると、応答の`notifications`配列に表示されます。 ただし、`notifications` `id`が見つからない場合、その特定の通知は実行されませんでした。 このシナリオでは、正常な通知の応答が取得されるまで、再試行ロジックを配置できます。 API呼び出しがブロックされず、パフォーマンス遅延が発生しないように、再試行ロジックにタイムアウトが指定されていることを確認します。

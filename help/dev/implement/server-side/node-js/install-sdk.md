@@ -1,20 +1,25 @@
 ---
-title: Node.js SDK のインストール
-description: Node [!DNL Adobe Target] js SDK のインストール方法を説明します。
+title: Node.js SDKのインストール
+description: ' [!DNL Adobe Target] Node.js SDKのインストール方法について説明します。'
 feature: APIs/SDKs
 exl-id: 29d4da84-25a0-4f7a-a6d9-ddd1db51c093
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/clcSvN6HMbcEdhoP4x9suJ9gx2n7158xiPi0dJ2sKMI
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '45'
+source-wordcount: 50
 ht-degree: 4%
 
 ---
 
-# Node js をインストールします。 SDK
+# Node jsをインストールします。 SDK
 
-Node.js SDK は、[npm](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) によって配布されます。
+Node.js SDKは[npm](https://www.npmjs.com/package/@adobe/target-nodejs-sdk)によって配布されています。
 
-開始するには、NPM からをインストールして、依存関係として追加します。
+開始するには、NPMからインストールして依存関係として追加します。
 
 ## Install
 
@@ -22,4 +27,4 @@ Node.js SDK は、[npm](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) 
 npm i @adobe/target-nodejs-sdk -P
 ```
 
-オープンソースコードは、<https://github.com/adobe/target-nodejs-sdk> にあります。
+開いているソース コードは<https://github.com/adobe/target-nodejs-sdk>にあります。

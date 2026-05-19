@@ -1,61 +1,74 @@
 ---
-keywords: 実装，実装，許可リスト，ホワイトリスト，許可リスト, 許可リスト, edge, edge, $9
-description: 許可リスト [!DNL Adobe Target]  エッジ（エンドユーザーの応答時間を最適化する地理的に分散されたサービングノード）に役立つホストのリストを表示します。
-title: 'Edgeノードの許可リストを設定する方法 [!DNL Target] '
+keywords: 実装、実装、ホワイトリスト、ホワイトリスト、許可リスト、エッジ、エッジ、9 ドル
+description: ホストのリストを表示して、 [!DNL Adobe Target] edge （最適な応答時間を確保する地理的に分散されたサービスノード）を許可リストに加えるできます。
+title: 'Edge ノードを許可リストに加えるするにはどうすればよいですか？ [!DNL Target] '
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-source-git-commit: 662d415bc3c216bcd038f07dcaa0fd83f6518690
+TQID: https://experienceleague.adobe.com/-XCVJpuvQ1xV9vQBZbomDKU3F-60b5FS-LU8lIBp4GQ
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: a94ced60-8199-4549-b453-ede2acb4101e
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: 373
 ht-degree: 0%
 
 ---
 
-# エッジノード [!DNL Target]許可リスト
+# [!DNL Target]個のエッジ ノードを許可リストに加える
 
-エッジの許可リストに役立つホストの情報と最新のリスト [!DNL Adobe Target] 表示されます。
+[!DNL Adobe Target] エッジを許可リストに加えるするのに役立つ情報と最新のホストのリスト。
 
-エッジは、コンテンツをリクエストするエンドユーザーの場所に関係なく、最適な応答時間を確保する、地理的に分散された配信アーキテクチャです。 各エッジノードには、ユーザーのコンテンツリクエストに応答し、そのリクエストに関する分析データを追跡するために必要な情報がすべて含まれています。 ユーザーリクエストは、最寄りのエッジノードにルーティングされます。 詳しくは、[Edge ネットワーク &#x200B;](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=ja#concept_0AE2ED8E9DE64288A8B30FCBF1040934) を参照してください。
+エッジとは、コンテンツをリクエストするエンドユーザーの場所に関係なく、最適な応答時間を確保する、地理的に分散したサービスアーキテクチャのことです。 各エッジノードには、ユーザーのコンテンツリクエストに応答し、そのリクエストで分析データを追跡するために必要なすべての情報が含まれています。 ユーザーリクエストは、最も近いエッジノードにルーティングされます。 詳細については、[&#x200B; エッジ ネットワーク &#x200B;](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=ja#concept_0AE2ED8E9DE64288A8B30FCBF1040934)を参照してください。
 
-必要に応じて、[!DNL Target] のエッジノードを許可リストに加えるできます。
+必要に応じて、[!DNL Target]個のエッジノードを許可リストに加えるできます。
 
 >[!IMPORTANT]
 >
->この記事で取り上げた [!DNL Target] エッジおよび [!DNL Target] エッジ IP アドレスの Network Address Translation （NAT; ネットワーク アドレス変換） IP アドレスを許可リストに加えるするだけでなく、すべての [!DNL Adobe Analytics] IP アドレス ブロックを許可リストに加えるする必要もあります。
+>記事で説明した[!DNL Target] エッジと[!DNL Target] エッジ IP アドレスのNetwork Address Translation （NAT） IP アドレスを許可リストに加えるすることに加えて、[!DNL Adobe Analytics] IP アドレスブロックをすべて許可リストに加えるする必要があります。
 >
->詳しくは、[Adobe Analytics テクニカルノート &#x200B;](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=ja#all-adobe-analytics-ip-address-blocks){target=_blank} ドキュメントの *すべてのAdobe Analytics IP アドレスブロック* を参照してください。
+>詳しくは、*Adobe Analytics テクニカルノート*&#x200B;のドキュメントの[すべてのAdobe Analytics IP アドレスブロック &#x200B;](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=ja#all-adobe-analytics-ip-address-blocks){target=_blank}を参照してください。
 >
->インフラストラクチャ [!DNL Adobe Target] 更新中であり、アドレスを許可リストに加えるしたいお客様は両方の IP セットを使用する必要があります。 失敗すると、エクスペリエンスを取得するための Target API 呼び出しが、許可リストを使用するように設定されたファイアウォールの背後にあるネットワークから発信される、サーバーサイド実装またはハイブリッド実装を使用しているお客様に影響を与えます。
+>[!DNL Adobe Target]個のインフラストラクチャを更新中です。アドレスを許可リストに加えるするお客様は、両方のIP セットを使用する必要があります。 これを行わないと、エクスペリエンスの取得を行うためのTarget API呼び出しが、ファイアウォールの背後にあるネットワーク内から発生するサーバーサイド実装またはハイブリッド実装を使用しているお客様に影響が及びます。この実装は、ファイアウォールを使用するように設定されています。
 
-[!DNL Target] を介した [!DNL Experience Edge Connector] への中断のないアクセスを確保するために、プロキシサービスへのトラフィックを許可するようにネットワーク設定を更新できます。
+[!DNL Experience Edge Connector]を介した[!DNL Target]への中断のないアクセスを確保するために、お客様はネットワーク設定を更新して、プロキシサービスへのトラフィックを許可できます。
 
 ## プロキシサービスの概要
 
 * **サービス エンドポイント**: `https://tnt-web-proxy.adobe.io`。
-* **インフラストラクチャ**:[!DNL Adobe] Ethos プラットフォームでホストされています。
-* **注意**：このサービスは、待ち時間ベースの DNS ルーティングを使用しており、静的 IP アドレスには依存しません。
+* **インフラストラクチャ**: [!DNL Adobe] Ethos プラットフォームでホストされています。
+* **メモ**：このサービスでは、レイテンシーベースのDNS ルーティングが使用されており、静的IP アドレスには依存しません。
 
 ## CNAME ターゲット
 
-プロキシサービスは、CNAME レコードを使用して、複数の地域にわたってトラフィックを動的にルーティングします。 現在のターゲットは次のとおりです。
+プロキシサービスは、CNAME レコードを使用して、複数の地域をまたいでトラフィックを動的にルーティングします。 現在の目標は次のとおりです。
 
-| Edgeの場所 | エグレス IP アドレス |
+| Edge場所 | エグレス IP アドレス |
 | --- | --- |
 | 地域 | CNAME ターゲット |
-| ヨーロッパ （eu-west-1） | `ethos.pub.ethos11-prod-nld2.ethos.adobe.net` |
+| 欧州（eu-west-1） | `ethos.pub.ethos11-prod-nld2.ethos.adobe.net` |
 | 米国東部（us-east-2） | `ethos.pub.ethos11-prod-va7.ethos.adobe.net` |
 | 米国東部（us-east-1） | `ethos.pub.ethos11-prod-aus5.ethos.adobe.net` |
 
-## 推奨される許可リスト項目
+## 推奨されるエントリの許可リストに加える
 
-確実な接続性を確保するには、次のホスト名を許可リストに加えるします。
+信頼性の高い接続性を確保するには、次のホスト名を許可リストに加えるします。
 
 * `ethos.pub.ethos11-prod-nld2.ethos.adobe.net`
 * `ethos.pub.ethos11-prod-va7.ethos.adobe.net`
 * `ethos.pub.ethos11-prod-aus5.ethos.adobe.net`
 
-## オプション：IP 検出
+## オプション：IP検出
 
-ネットワークポリシーで IP ベースの許可リストに加えるが必要な場合は、このツールを使用して、プロキシサービスに関連付けられている現在のパブリック IP アドレスを確認できます。
+ネットワークポリシーでIP ベースの許可リストに加えるが必要な場合は、次のツールを使用して、プロキシサービスに関連付けられている現在のパブリック IP アドレスを表示できます。
 
 * `DNSChecker – A Record Lookup for tnt-web-proxy.adobe.io`

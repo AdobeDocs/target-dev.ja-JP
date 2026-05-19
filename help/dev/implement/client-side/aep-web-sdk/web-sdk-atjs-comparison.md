@@ -1,39 +1,56 @@
 ---
-title: at.js とExperience Platform web SDKの比較
-description: at.js 機能と  [!DNL Experience Platform Web SDK] の比較を説明します。
-keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースの Experience Composer;xdm；オーディエンス；決定；範囲；スキーマ；システム図；図
+title: at.jsとExperience Platform Web SDKの比較
+description: at.js機能と [!DNL Experience Platform Web SDK]の比較について説明します。
+keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示のスニペット；vec；フォームベースのExperience Composer;xdm;audiences;decisions；スコープ；スキーマ；システム図；図
 feature: AEP Web SDK
 exl-id: 31c9722b-5d92-4653-aa20-4183d166c097
-source-git-commit: 158c45b824df8d3bd565ac7c654b65f1fd631e2c
+TQID: https://experienceleague.adobe.com/Ly2ytp87gfQ5mCES-43K5tU4-4fhTjdcdk-OxRRL-II
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2006'
-ht-degree: 5%
+source-wordcount: 2303
+ht-degree: 9%
 
 ---
 
-# at.js ライブラリと [!DNL Adobe Experience Platform Web SDK] の比較
+# at.js ライブラリと[!DNL Adobe Experience Platform Web SDK]の比較
 
 ## 概要
 
-ここでは、`at.js` ライブラリとExperience Platform Web SDKの違いの概要を説明します。
+この記事では、`at.js` ライブラリとExperience Platform Web SDKの違いについて説明します。
 
 ## ライブラリのインストール
 
-### at.js のインストール
+### at.jsのインストール
 
-お客様 [!DNL Adobe]、[!DNL Adobe Experience Cloud] の「」タブから直接ライブラリをダウンロード [!UICONTROL Implementation] きます。 at.js ライブラリは、顧客が持つ設定（clientCode、imsOrgId など）によってカスタマイズされます。
+[!DNL Adobe]では、[!DNL Adobe Experience Cloud]、[!UICONTROL Implementation] タブから直接ライブラリをダウンロードできます。 at.js ライブラリは、顧客がclientCode、imsOrgIdなどの設定でカスタマイズされます。
 
 ### Web SDKのインストール
 
-事前ビルドバージョンは CDN で使用できます。 CDN のライブラリをページで直接参照するか、ダウンロードして独自のインフラストラクチャにホストすることができます。 縮小形式と非縮小形式で利用できます。 デバッグの目的では、非縮小バージョンが役立ちます。
+ビルド済みのバージョンは、CDNで利用できます。 CDN上のライブラリをページ上で直接参照するか、独自のインフラストラクチャでダウンロードしてホストできます。 最小化された形式と最小化されていない形式で使用できます。 最小化されていないバージョンは、デバッグの目的に役立ちます。
 
-詳しくは [JavaScript ライブラリを使用した web SDKのインストール &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/install/library) を参照してください。
+詳しくは、[JavaScript ライブラリを使用したWeb SDKのインストール &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/install/library)を参照してください。
 
 ## ライブラリの設定
 
-### at.js の設定
+### at.jsの設定
 
-すべての at.js ファイルの末尾に、[!DNL Adobe] がインスタンス化して設定オブジェクトを渡すセクションが表示されます。 このセクションはカスタマイズ可能で、ダウンロード時に、Adobeによって現在のお客様の設定がセクションに入力されます。
+すべてのat.js ファイルの最後に、[!DNL Adobe]がインスタンス化して設定オブジェクトを渡すセクションが表示されます。 カスタマイズ可能で、ダウンロード時にAdobeはそのセクションに現在のお客様の設定を入力します。
 
 ```javascript
 window.adobe.target.init(window, document, {
@@ -73,19 +90,19 @@ window.adobe.target.init(window, document, {
 
 ### Platform Web SDKの設定
 
-SDKの設定は、[`configure`](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/commands/configure/overview) コマンドで行います。 `configure` コマンドは *常に* 最初に呼び出されます。
+SDKの設定は、[`configure`](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/commands/configure/overview) コマンドを使用して行います。 `configure` コマンドは、最初に呼び出された&#x200B;*always*&#x200B;です。
 
-## ページ読み込み [!DNL Target] オファーをリクエストし自動的にレンダリングする方法
+## ページ読み込み[!DNL Target] オファーをリクエストして自動的にレンダリングする方法
 
-### at.js の使用
+### at.jsの使用
 
-at.js 2.x では、ライブラリトリガー`pageLoadEnabled,` 設定を有効にすると、[!DNL Target] を使用したEdge`execute -> pageLoad` の呼び出しが実行されます。 すべての設定がデフォルト値に設定されている場合、カスタムコーディングは必要ありません。 at.js がページに追加され、ブラウザーによって読み込まれると、[!DNL Target] Edge呼び出しが実行されます。
+at.js 2.xを使用して、設定`pageLoadEnabled,`を有効にすると、ライブラリは[!DNL Target] Edgeへの呼び出しを`execute -> pageLoad`でトリガーします。 すべての設定がデフォルト値に設定されている場合、カスタムコーディングは必要ありません。 at.jsがページに追加され、ブラウザーによって読み込まれると、[!DNL Target] Edge呼び出しが実行されます。
 
-### [!DNL PLatform Web SDK] の使用
+### [!DNL PLatform Web SDK]の使用中
 
-[!DNL Target] [Visual Experience Composer](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/visual-experience-composer) 内で作成されたコンテンツは、SDKによって自動的に取得およびレンダリングできます。
+[!DNL Target] [Visual Experience Composer](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/visual-experience-composer)内で作成されたコンテンツは、SDKで自動的に取得およびレンダリングできます。
 
-[!DNL Target] オファーをリクエストして自動的にレンダリングするには、`sendEvent` コマンドを使用し、「`renderDecisions`」オプションを「`true.`」に設定します。これにより、自動レンダリングの対象となるパーソナライズされたコンテンツがSDKで自動的にレンダリングされます。
+[!DNL Target]件のオファーをリクエストして自動的にレンダリングするには、`sendEvent` コマンドを使用し、`renderDecisions` オプションを`true.`に設定します。これにより、SDKは、自動レンダリングの対象となるパーソナライズされたコンテンツを自動的にレンダリングします。
 
 例：
 
@@ -105,7 +122,7 @@ alloy("sendEvent", {
 });
 ```
 
-[!DNL Experience Platform Web SDK] によって実行されたオファーを含む通知を自動的に送信し [!DNL Platform WEB SDK] す。 次に、通知リクエストペイロードの例を示します。
+[!DNL Experience Platform Web SDK]は、[!DNL Platform WEB SDK]によって実行されたオファーを含む通知を自動的に送信します。 通知リクエストペイロードの例を次に示します。
 
 ```json
 {
@@ -185,13 +202,13 @@ alloy("sendEvent", {
 
 [詳細情報](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
-## ページ読み込み Target オファーをリクエストおよび *NOT* 自動的にレンダリングする方法
+## ページ読み込みターゲットのオファーを自動的にレンダリングする方法と&#x200B;*NOT*
 
-### at.js の使用
+### at.jsの使用
 
-ページ読み込み用にオファーを取得するEdge[!DNL Target] 呼び出しを実行する方法は 2 つあります。
+ページ読み込みのオファーを取得する[!DNL Target] Edgeへの呼び出しを実行するには、2つの方法があります。
 
-例 1:
+例1:
 
 ```javascript
 adobe.target.getOffer({
@@ -201,7 +218,7 @@ adobe.target.getOffer({
 });
 ```
 
-例 2:
+例2:
 
 ```javascript
 adobe.target.getOffers({
@@ -215,13 +232,13 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[詳細情報](https://experienceleague.adobe.com/ja/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
+[詳細情報](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-`sendEvent`: `decisionScopes` の下で、特別なスコープを持つ `__view__` コマンドを実行します。 [!DNL Adobe] は、このスコープをシグナルとして使用し、[!DNL Target] からすべてのページ読み込みアクティビティを取得し、すべてのビューをプリフェッチします。 また、[!DNL Platform Web SDK] は、すべての VEC ビューベースのアクティビティの評価も試みます。 ビューのプリフェッチの無効化は、現在 [!DNL Platform Web SDK] ではサポートされていません。
+`decisionScopes`の下に特別なスコープを持つ`sendEvent` コマンドを実行します：`__view__`。 [!DNL Adobe]は、このスコープをシグナルとして使用して、[!DNL Target]からすべてのページ読み込みアクティビティを取得し、すべてのビューを先行取得します。 [!DNL Platform Web SDK]は、すべてのVEC ビューベースのアクティビティを評価しようとしています。 ビューの先行取得を無効にすることは、現在[!DNL Platform Web SDK]ではサポートされていません。
 
-パーソナライゼーションコンテンツにアクセスするには、コールバック関数を指定します。この関数は、SDKがサーバーから正常に応答を受け取った後に呼び出されます。 コールバックには、返されたパーソナライゼーションコンテンツを含む propositions プロパティを含む結果オブジェクトが提供されます。
+パーソナライゼーションコンテンツにアクセスするには、コールバック関数を指定します。これは、SDKがサーバーから正常なレスポンスを受け取った後に呼び出されます。 コールバックには結果オブジェクトが指定されます。このオブジェクトには、返されたパーソナライゼーションコンテンツを含むpropositions プロパティが含まれている場合があります。
 
 例：
 
@@ -264,13 +281,13 @@ alloy("sendEvent", {
 
 [詳細情報](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
-## 特定のフォームベースのターゲット mbox のリクエスト方法
+## 特定のフォームベースのTarget mboxをリクエストする方法
 
-### at.js の使用
+### at.jsの使用
 
-`getOffer` の関数を使用して、f アクティビティを取得できます。
+`getOffer`関数を使用してアクティビティを取得できます。
 
-例 1:
+例1:
 
 ```javascript
 adobe.target.getOffer({
@@ -280,7 +297,7 @@ adobe.target.getOffer({
 });
 ```
 
-例 2:
+例2:
 
 ```javascript
 adobe.target.getOffers({
@@ -300,11 +317,11 @@ adobe.target.getOffers({
 
 [詳細情報](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions.html?lang=ja)
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-[!UICONTROL Form-Based Composer] コマンドを使用して、`sendEvent` オプションの下にある mbox 名を渡すことで、`decisionScopes` ベースのアクティビティを取得できます。 `sendEvent` コマンドは、リクエストされたアクティビティ/提案を含むオブジェクトで解決される promise を返します。
+[!UICONTROL Form-Based Composer] ベースのアクティビティを取得するには、`sendEvent` コマンドを使用し、`decisionScopes` オプションの下にmbox名を渡します。 `sendEvent` コマンドは、要求されたアクティビティまたは提案を含むオブジェクトで解決されるプロミスを返します。
 
-このコードスニペットは、`propositions` 配列がどのように表示されるかを示しています。
+このコードスニペットは、`propositions`配列がどのように見えるかです。
 
 ```javascript
 [
@@ -423,9 +440,9 @@ alloy("sendEvent", {
 
 ## [!DNL Target] アクティビティの適用方法
 
-### at.js の使用
+### at.jsの使用
 
-[!DNL Target] の関数を使用して、`applyOffers` のアクティビティを適用できます。`adobe.target.applyOffer(options).`
+`applyOffers`関数を使用して[!DNL Target] アクティビティを適用できます：`adobe.target.applyOffer(options).`
 
 例：
 
@@ -436,11 +453,11 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-`applyOffers` コマンドについて詳しくは、[&#x200B; 専用ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2) を参照してください。
+`applyOffers` コマンドについて詳しくは、[専用ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2)を参照してください。
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-[!DNL Target] コマンドを使用して、`applyPropositions` アクティビティを適用できます。
+`applyPropositions` コマンドを使用して、[!DNL Target] アクティビティを適用できます。
 
 例：
 
@@ -450,15 +467,15 @@ alloy("applyPropositions", {
 });
 ```
 
-`applyPropositions` コマンドについて詳しくは、[&#x200B; 専用ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) を参照してください。
+`applyPropositions` コマンドについて詳しくは、[専用ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)を参照してください。
 
 ## イベントの追跡方法
 
-### at.js の使用
+### at.jsの使用
 
-`trackEvent` 関数を使用するか `sendNotifications.` を使用すると、イベントを追跡できます
+イベントは、`trackEvent`関数を使用するか、`sendNotifications.`を使用して追跡できます
 
-この関数は、クリックやコンバージョンなどのユーザーアクションを報告するリクエストを実行します。この関数は、応答内のアクティビティを配信しません。
+この関数は、クリックやコンバージョンなどのユーザーアクションを報告するリクエストを実行します。 この関数は、応答でアクティビティを配信しません。
 
 **例 1**
 
@@ -486,18 +503,18 @@ adobe.target.sendNotifications({
 });
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-イベントおよびユーザーアクションを追跡するには、`sendEvent` コマンドを呼び出し、`_experience.decisioning.propositions` XDM `fieldgroup` にデータを入力し、`eventType` を 2 つの値のいずれかに設定します。
+`sendEvent` コマンドを呼び出し、`_experience.decisioning.propositions` XDM `fieldgroup`を入力し、`eventType`を2つの値のいずれかに設定することで、イベントとユーザーアクションを追跡できます。
 
-* `decisioning.propositionDisplay`: [!DNL Target] アクティビティのレンダリングをシグナルで通知します。
-* `decisioning.propositionInteract`：マウスクリックなど、アクティビティに対するユーザーのインタラクションを示します。
+* `decisioning.propositionDisplay`: [!DNL Target] アクティビティのレンダリングを通知します。
+* `decisioning.propositionInteract`: マウスのクリックなど、アクティビティに対するユーザーの操作を示します。
 
-`_experience.decisioning.propositions` XDM `fieldgroup` はオブジェクトの配列です。 各オブジェクトのプロパティは、`result.propositions` のコマンドで返される `sendEvent` から派生します。`{ id, scope, scopeDetails }.`
+`_experience.decisioning.propositions` XDM `fieldgroup`はオブジェクトの配列です。 各オブジェクトのプロパティは、`sendEvent` コマンドで返される`result.propositions`から派生します：`{ id, scope, scopeDetails }.`
 
-**例 1 - アクティビティのレンダリング後に `decisioning.propositionDisplay` イベントを追跡**
+**例1 - アクティビティのレンダリング後に`decisioning.propositionDisplay` イベントを追跡**
 
 ```javascript
 alloy("sendEvent", {
@@ -557,7 +574,7 @@ alloy("sendEvent", {
 });
 ```
 
-**例 2 - クリック指標が発生した後の `decisioning.propositionInteract` イベントの追跡**
+**例2 - クリック指標が発生した後の`decisioning.propositionInteract` イベントの追跡**
 
 ```javascript
 alloy("sendEvent", {
@@ -606,10 +623,10 @@ alloy("sendEvent", {
 
 [詳細情報](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
 
-**例 3 - アクションを実行した後に発生したイベントの追跡**
+**例3 - アクションの実行後に発生したイベントの追跡**
 
-この例では、ボタンのクリックなど、特定のアクションの実行後に発生したイベントを追跡します。
-`__adobe.target` データオブジェクトを介して、追加のカスタムパラメーターを追加できます。
+次の使用例は、ボタンのクリックなど、特定のアクションを実行した後に発生したイベントを追跡します。
+`__adobe.target` データオブジェクトを使用して、追加のカスタムパラメーターを追加できます。
 
 `commerce` XDM オブジェクトを追加することもできます。
 
@@ -651,9 +668,9 @@ alloy("sendEvent", {
 
 ## シングルページアプリケーションでビューの変更をトリガーする方法
 
-### at.js の使用
+### at.jsの使用
 
-`adobe.target.triggerView` 関数を使用します。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。`adobe.target.triggerView()` 関数は、[!UICONTROL Visual Experience Composer] （VEC）を使用して [!UICONTROL A/B Test] and [!UICONTROL Experience Targeting] （XT）アクティビティを作成するために、単一ページアプリケーション（SPA）に実装する必要があります。 `adobe.target.triggerView()` がサイトに実装されていない場合、VEC は SPA には使用できません。
+`adobe.target.triggerView`関数を使用します。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`関数は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B Test]および[!UICONTROL Experience Targeting] （XT）アクティビティを作成するシングルページアプリケーション （SPA）に対して実装する必要があります。 `adobe.target.triggerView()`がサイトに実装されていない場合、VECをSPAに使用することはできません。
 
 **例**
 
@@ -663,9 +680,9 @@ adobe.target.triggerView("homeView")
 
 [詳細情報](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-シングルページアプリケーション [!UICONTROL View Change] ードをトリガーまたはシグナルで送信するには、`web.webPageDetails.viewName` コマンドの `xdm` オプションで `sendEvent` プロパティを設定します。 [!DNL Platform Web SDK] は、で指定されたビューにオファーがある場合、ビューのキャッシ `viewName` を確認 `sendEvent`、そのオファーを実行して表示通知イベントを送信します。
+シングルページアプリケーション [!UICONTROL View Change]をトリガーまたはシグナルするには、`sendEvent` コマンドの`xdm` オプションの下に`web.webPageDetails.viewName` プロパティを設定します。 [!DNL Platform Web SDK]は、`sendEvent`で指定された`viewName`に対するオファーがある場合、ビューキャッシュをチェックし、それらを実行して表示通知イベントを送信します。
 
 **例**
 
@@ -684,13 +701,13 @@ alloy("sendEvent", {
 
 [詳細情報](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
 
-## [!UICONTROL Response Tokens] の活用方法
+## [!UICONTROL Response Tokens]の活用方法
 
-[!DNL Target] から返されるPersonalization コンテンツには [&#x200B; レスポンストークン &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/administer/response-tokens) が含まれます。 応答トークンとは、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、地域情報などに関する詳細のことです。 これらの詳細は、サードパーティのツールと共有したり、デバッグに使用したりできます。 レスポンストークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
+[!DNL Target]から返されたPersonalization コンテンツには、[応答トークン &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/administer/response-tokens)が含まれています。 応答トークンには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、位置情報などの詳細が含まれます。 これらの詳細は、サードパーティのツールと共有することも、デバッグに使用することもできます。 応答トークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
 
-### at.js の使用
+### at.jsの使用
 
-at.js カスタムイベントを使用して [!DNL Target] 応答をリッスンし、応答トークンを読み取ります。
+at.js カスタムイベントを使用して、[!DNL Target]応答をリッスンし、応答トークンを読み取ります。
 
 **例**
 
@@ -702,13 +719,13 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 
 [詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
 >[!IMPORTANT]
 >
->[!DNL Experience Platform Web SDK] バージョン 2.6.0 以降を使用していることを確認します。
+>[!DNL Experience Platform Web SDK] バージョン 2.6.0以降を使用していることを確認してください。
 
-応答トークンは、`propositions` コマンドの結果で公開される `sendEvent` の一部として返されます。 各提案には `items,` の配列が含まれ、`meta` 管理 UI で有効になっている場合、各項目には応答トークンが入力された [!DNL Target] オブジェクトがあります。 [詳細情報](https://experienceleague.adobe.com/ja/docs/target/using/administer/response-tokens)
+応答トークンは、`sendEvent` コマンドの結果で公開される`propositions`の一部として返されます。 各提案には`items,`の配列が含まれ、各項目には`meta` オブジェクトが含まれており、対応トークンが[!DNL Target]管理UIで有効になっている場合は、応答トークンが入力されます。 [詳細情報](https://experienceleague.adobe.com/ja/docs/target/using/administer/response-tokens)
 
 **例**
 
@@ -749,20 +766,20 @@ alloy("sendEvent", {
 
 ## フリッカーの管理方法
 
-### at.js の使用
+### at.jsの使用
 
-at.js を使用すると、at.js が処理するように `bodyHidingEnabled: true` を設定することで、ちらつきを管理できます
-dom の変更を取得して適用する前に、パーソナライズされたコンテナを事前に非表示にします。
+at.jsを使用すると、at.jsが処理できるように`bodyHidingEnabled: true`を設定することで、ちらつきを管理できます
+DOMの変更を取得して適用する前に、パーソナライズされたコンテナを事前に非表示にします。
 
-パーソナライズされたコンテンツを含むページセクションは、at.js `bodyHiddenStyle.` を上書きすることで事前に非表示にすることができます
+パーソナライズされたコンテンツを含むページセクションは、at.js `bodyHiddenStyle.`を上書きすることで事前非表示にできます
 
-デフォルトでは、`bodyHiddenStyle` はHTML `body.` ージ全体を非表示にします
+既定では、`bodyHiddenStyle`はHTML `body.`全体を非表示にします
 
-どちらの設定も `window.targetGlobalSettings.`at.js を読み込む前に指定す `window.targetGlobalSettings` 必要があるため、上書きできます。
+両方の設定は、`window.targetGlobalSettings.` `window.targetGlobalSettings`を使用して上書きできます。これらは、at.jsを読み込む前に配置する必要があります。
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-[!DNL Platform Web SDK] を使用すると、次の例のように、configure コマンドで事前非表示スタイルを設定できます。
+[!DNL Platform Web SDK]を使用すると、次の例のように、configure コマンドで事前非表示スタイルを設定できます。
 
 ```javascript
 alloy("configure", {
@@ -773,7 +790,7 @@ alloy("configure", {
 });
 ```
 
-[!DNL Platform Web SDK] async を読み込む場合、[!DNL Adobe] では、次のスニペットを、挿入する前にページに挿入するこ [!DNL Platform Web SDK] をお勧めします。
+[!DNL Platform Web SDK]非同期を読み込む場合、[!DNL Adobe]は、[!DNL Platform Web SDK]を挿入する前に、次のスニペットをページに挿入することをお勧めします。
 
 ```html
 <script>
@@ -787,20 +804,20 @@ alloy("configure", {
 </script>
 ```
 
-## A4T の処理方法
+## A4Tはどのように扱われているのか
 
-### at.js の使用
+### at.jsの使用
 
-at.js を使用してサポートされている A4T ログには、次の 2 種類があります。
+at.jsを使用してサポートされるA4T ログには、次の2種類があります。
 
-* Analytics クライアントサイドログ
-* Analytics サーバーサイドログ
+* Analytics クライアントサイドロギング
+* Analytics Server Side Logging
 
-#### Analytics クライアントサイドログ
+#### Analytics クライアントサイドロギング
 
-**例 1：グローバル設定 [!DNL Target] 使用**
+**例1: [!DNL Target] グローバル設定の使用**
 
-Analytics のクライアントサイドログは、at.js 設定で `analyticsLogging: client_side` を設定するか、`window.targetglobalSettings` オブジェクトを上書きすることで有効にできます。
+Analytics クライアント側ログは、at.js設定で`analyticsLogging: client_side`を設定するか、`window.targetglobalSettings` オブジェクトを上書きすることで有効にできます。
 
 このオプションを設定すると、返されるペイロードの形式は次のようになります。
 
@@ -815,9 +832,9 @@ Analytics のクライアントサイドログは、at.js 設定で `analyticsLo
 }
 ```
 
-その後、ペイロードは [!DNL Analytics] を介して [!DNL &#x200B; Data Insertion API] に転送できます。
+次に、ペイロードを[!DNL &#x200B; Data Insertion API]経由で[!DNL Analytics]に転送できます。
 
-例 2：すべての `getOffers` 関数で設定する
+例2: `getOffers`関数ごとに設定する：
 
 ```javascript
 adobe.target.getOffers({
@@ -838,7 +855,7 @@ adobe.target.getOffers({
     .then(console.log)
 ```
 
-このコードスニペットは、応答ペイロードを次のように表示します。
+このコードスニペットは、応答ペイロードがどのように表示されるかです。
 
 ```json
 {
@@ -869,32 +886,32 @@ adobe.target.getOffers({
 }
 ```
 
-[!DNL Analytics] ペイロード（`tnta` トークン）は、[!DNL Analytics]Data Insertion API[&#x200B; を使用して、](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) ヒットに含める必要があります。
+[!DNL Analytics] ペイロード （`tnta` トークン）は、[&#x200B; データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を使用して[!DNL Analytics] ヒットに含める必要があります。
 
-#### [!DNL Analytics] サーバーサイドログ
+#### [!DNL Analytics] サーバーサイドのログ
 
-[!DNL Analytics] サーバーサイドログは、at.js 設定で `analyticsLogging: server_side` を設定するか、`window.targetglobalSettings` オブジェクトを上書きすることで有効にできます。
+[!DNL Analytics] サーバー側ログは、at.js設定で`analyticsLogging: server_side`を設定するか、`window.targetglobalSettings` オブジェクトを上書きすることで有効にできます。
 
-その後、データは次のようにフローします。
+その後、データは次のように流れます。
 
-![Analytics サーバーサイドログのワークフローを示す図 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
+Analytics Server Side Logging ワークフローを示す![図](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
 
-[&#x200B; 詳細情報 &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=ja)
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-Web SDKは、次の項目もサポートしています。
+Web SDKでは、次の機能もサポートしています。
 
 * Analytics クライアントサイドログ
-* Analytics サーバーサイドログ
+* Analytics Server Side ログ
 
-#### [!DNL Analytics] クライアントサイドログ
+#### [!DNL Analytics] クライアント側ログ
 
-[!DNL Analytics] クライアントサイドログは、DataStream 設定で [!DNL Adobe Analytics] が無効になっている場合に有効になります。
+[!DNL Analytics] Client Side Loggingは、そのDataStream設定で[!DNL Adobe Analytics]が無効になっている場合に有効になります。
 
-![Analytics クライアントサイドログのワークフローを示す図 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-disabled-datastream-config.png)
+Analytics クライアント側のログ記録ワークフローを示す![図](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-disabled-datastream-config.png)
 
-顧客は [!DNL Analytics] トークン（`tnta`）にアクセスできます。このトークンは、[!DNL Analytics]Data Insertion API[&#x200B; を使用して &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) と共有する必要があります。`sendEvent` コマンドを連鎖し、結果として得られる提案配列を繰り返し処理します。
+お客様は、`sendEvent` コマンドをチェーンして[!DNL Analytics] データ挿入API[&#128279;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を使用してと共有する必要がある[!DNL Analytics] トークン （`tnta`）にアクセスし、結果として得られる提案の配列を繰り返します。
 
 **例**
 
@@ -927,29 +944,29 @@ alloy("sendEvent", {
 });
 ```
 
-次の図は、クライアントサイドが有効な場合のデータフロー [!DNL Analytics] 示しています。
+[!DNL Analytics] Client Sideが有効になっている場合のデータの流れを示す図を次に示します。
 
-![Analytics クライアントサイドログのデータフロー図 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-client-side-logging.png)
+Analytics クライアントサイドの![&#x200B; データフロー図のログ &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-client-side-logging.png)
 
-#### [!DNL Analytics] サーバーサイドログ
+#### [!DNL Analytics] サーバーサイドのログ
 
-[!DNL Analytics] サーバーサイドログは、その DataStream 設定に対して [!DNL Analytics] が有効になっている場合に有効になります。
+[!DNL Analytics] サーバー側ログは、そのDataStream設定で[!DNL Analytics]が有効になっている場合に有効になります。
 
-![Analytics 設定を示すデータストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-enabled-datastream-config.png)
+Analytics設定を示す![&#x200B; データストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-enabled-datastream-config.png)
 
-サーバーサイド [!DNL Analytics] ログが有効な場合、[!DNL Analytics] レポートが正しいインプレッション数を示し、コンバージョンがEdge Network レベルで共有されるように、[!DNL Analytics] と共有する必要がある A4T ペイロードを指定します。これにより、お客様は追加の処理を行う必要がなくなります。
+サーバーサイド [!DNL Analytics] ログが有効になっている場合、[!DNL Analytics] レポートに正しいインプレッションとコンバージョンが表示されるように、[!DNL Analytics]と共有する必要があるA4T ペイロードがEdge Network レベルで共有されるので、お客様は追加の処理を行う必要はありません。
 
-サーバーサイド分析ログが有効な場合のシステムへのデータのフローは次のとおりです。
+サーバーサイド分析ログが有効になっている場合、システムにデータが流れ込む方法は次のとおりです。
 
-![&#x200B; サーバーサイド分析ログのデータフローを示す図 &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-server-side-logging.png)
+![&#x200B; サーバーサイド分析ログのデータフローを示す図](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-server-side-logging.png)
 
-## グローバル設定 [!DNL Target] 設定方法
+## [!DNL Target] グローバル設定の設定方法
 
-### at.js の使用
+### at.jsの使用
 
-`window.targetGlobalSettings,` UI や REST API を使用して設定を構成する代わりに、[!DNL Target] を使用して at.js ライブラリの設定を上書きできます。
+at.js ライブラリの設定は、[!DNL Target] UIやREST APIを使用して設定を設定するのではなく、`window.targetGlobalSettings,`を使用して上書きできます。
 
-上書きは、at.js が読み込まれる前か、管理/実装/at.js 設定を編集/コード設定/ライブラリヘッダーで定義する必要があります。
+オーバーライドは、at.jsが読み込まれる前に、または管理/実装/at.js設定を編集/コード設定/ライブラリヘッダーで定義する必要があります。
 
 例：
 
@@ -961,15 +978,15 @@ window.targetGlobalSettings = {
 };
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-この機能は Web SDKではサポートされていません。
+この機能は、Web SDKではサポートされていません。
 
-## プロファイル属性 [!DNL Target] 更新方法
+## [!DNL Target] プロファイル属性の更新方法
 
-### at.js の使用
+### at.jsの使用
 
 **例 1**
 
@@ -1004,9 +1021,9 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-[!DNL Target] プロファイルを更新するには、`sendEvent` コマンドを使用して、`data.__adobe.target` を使用してキー名のプレフィックスとして `profile.` プロパティを設定します
+[!DNL Target] プロファイルを更新するには、`sendEvent` コマンドを使用して`data.__adobe.target` プロパティを設定し、`profile.`を使用してキー名の先頭に付けます
 
 **例**
 
@@ -1024,9 +1041,9 @@ alloy("sendEvent", {
 });
 ```
 
-## [!DNL Target Recommendations] の使用方法
+## [!DNL Target Recommendations]の使用方法
 
-### at.js の使用
+### at.jsの使用
 
 **例 1**
 
@@ -1061,11 +1078,11 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-[!DNL Recommendations] データを送信するには、`sendEvent` コマンドを使用して、`data.__adobe.target` プロパティを設定し、`entity.` を使用してキー名のプレフィックスを指定します
+[!DNL Recommendations] データを送信するには、`sendEvent` コマンドを使用して`data.__adobe.target` プロパティを設定し、`entity.`を使用してキー名の先頭に付けます
 
 **例**
 
@@ -1083,11 +1100,11 @@ alloy("sendEvent", {
 });
 ```
 
-## サードパーティ ID の使用方法
+## サードパーティ IDの使用方法
 
-### at.js の使用
+### at.jsの使用
 
-at.js の使用 `mbox3rdPartyId` または `getOffer,` を使用して `getOffers` を送信する方法は複数あります。
+at.jsを使用すると、`getOffer,`または`getOffers`を使用して`mbox3rdPartyId`を送信する方法が複数あります。
 
 **例 1**
 
@@ -1119,11 +1136,11 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-または、`mbox3rdPartyId` または `targetPageParams` のいずれかで `targetPageParamsAll.` を設定する方法があります
+または、`targetPageParams`または`targetPageParamsAll.`のいずれかで`mbox3rdPartyId`を設定する方法があります
 
-`targetPageParams` を設定すると、は、`target-global-mbox` とも呼ばれる `pag-lLoad` のリクエストを送信します。
+`targetPageParams`を設定すると、`pag-lLoad`とも呼ばれる`target-global-mbox`のリクエストが送信されます。
 
-レコメンデーションは、`targetPageParamsAll` リクエストのたびに送信されるので、[!DNL Target] を使用して設定する必要があります。 `targetPageParamsAll` を使用する利点は、ページ上で `mbox3rdPartyId` を 1 回定義して、すべての [!DNL Target] リクエストが適切な `mbox3rdPartyId.` を持つようにできることです
+レコメンデーションは、[!DNL Target] リクエストごとに送信されるため、`targetPageParamsAll`を使用して設定する必要があります。 `targetPageParamsAll`を使用する利点は、ページ上の`mbox3rdPartyId`を1回定義して、すべての[!DNL Target] リクエストに適切な`mbox3rdPartyId.`を割り当てることができることです
 
 ```javascript
 window.targetPageParamsAll = function() {
@@ -1141,19 +1158,19 @@ window.targetPageParams = function() {
 };
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-[!DNL Platform Web SDK] はサードパーティ ID[!DNL Target] サポートしています。 ただし、もう 2、3 の手順が必要です。
+[!DNL Platform Web SDK]は[!DNL Target]のサードパーティ IDをサポートしています。 しかし、それにはいくつかの手順が必要です。
 
-顧客は ID マップを使用して複数の ID を送信できます。 すべての ID に名前空間が設定されています。 各名前空間には、1 つ以上の ID を設定できます。 特定の ID をプライマリとしてマークできます。 この知識を念頭に置くと、[!DNL Platform Web SDK] サードパーティ ID を使用するために [!DNL Target] を設定するために必要な手順を確認できます。
+ID マップを使用すると、顧客は複数のIDを送信できます。 すべてのIDには名前空間が設定されています。 各名前空間には、1つ以上のIDを含めることができます。 特定のIDをプライマリとしてマークできます。 この知識を念頭に置いて、[!DNL Platform Web SDK]で[!DNL Target]のサードパーティ IDを使用するために必要な手順を確認できます。
 
-1. データストリーム設定ページで、[!DNL Target] のサードパーティ ID を含む名前空間を設定します。
+1. データストリーム設定ページで[!DNL Target] サードパーティ IDを含む名前空間を設定します。
 
-![&#x200B; 「ターゲットサードパーティ ID 名前空間」フィールドを示すデータストリーム UI](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
+![&#x200B; ターゲット サードパーティ ID名前空間フィールドを表示するデータストリーム UI](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
 
-1. 次のように、すべての `sendEvent` コマンドで、その ID 名前空間を送信します。
+1. 次のように、`sendEvent` コマンドごとにID名前空間を送信します。
 
 ```javascript
 alloy("sendEvent", {
@@ -1173,9 +1190,9 @@ alloy("sendEvent", {
 
 ## プロパティトークンの設定方法
 
-### at.js の使用
+### at.jsの使用
 
-at.js を使用してプロパティトークンを設定するには、`targetPageParams` を使用するか、`targetPageParamsAll.` を使用します。`targetPageParams` を使用すると、`target-global-mbox` 呼び出しにプロパティトークンが追加されますが、`targetPageParamsAll` を使用すると、[!DNL Target] のすべての呼び出しにトークンが追加されます。
+at.jsを使用してプロパティトークンを設定する方法は2つあります。`targetPageParams`または`targetPageParamsAll.`を使用して`targetPageParams`を使用すると、`target-global-mbox`呼び出しにプロパティトークンが追加されますが、`targetPageParamsAll`を使用すると、[!DNL Target]呼び出しすべてにトークンが追加されます。
 
 **例 1**
 
@@ -1197,19 +1214,19 @@ window.targetPageParams = function() {
     };
 ```
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-[!DNL Platform Web SDK] を使用すると、お客様は、データストリーム設定を設定する際に、[!DNL Adobe Target] の名前空間の下に、より高いレベルでプロパティを設定できます。
+[!DNL Platform Web SDK]を使用している顧客は、データストリーム設定を設定する際に、[!DNL Adobe Target]名前空間の下でプロパティをより高いレベルで設定できます。
 
-![Adobe Targetの設定を示すデータストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/at-property-setup.png)
+Adobe Targetの設定を示す![&#x200B; データストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/at-property-setup.png)
 
-つまり、その特定のデータストリーム設定に対するすべての [!DNL Target] 呼び出しには、そのプロパティトークンが含まれます。
+つまり、特定のデータストリーム設定に対する[!DNL Target]呼び出しごとに、そのプロパティトークンが含まれています。
 
-## mbox をプリフェッチする方法
+## mboxのプリフェッチ方法
 
-### at.js の使用
+### at.jsの使用
 
-この機能は at.js 2.x でのみ使用できます。at.js 2.x には、`getOffers` という名前の新しい関数があります。 `getOffers` 関数を使用すると、1 つ以上の mbox のコンテンツをプリフェッチできます。 次に例を示します。
+この機能は、at.js 2.xでのみ使用できます。 at.js 2.xには、`getOffers`という名前の新しい関数があります。 `getOffers`関数を使用すると、1つ以上のmboxのコンテンツを先行取得できます。 次に例を示します。
 
 ```javascript
 adobe.target.getOffers({
@@ -1234,32 +1251,32 @@ adobe.target.getOffers({
 
 >[!NOTE]
 >
->Adobeでは、`mbox` 配列のすべての `mboxes` に独自のインデックスを設定することをお勧めします。 通常、最初の mbox は次の mbox を `index=0` し、それ以降も同様 `index=1,` 処理を行います。
+>Adobeでは、`mboxes`配列内のすべての`mbox`に独自のインデックスがあることを確認することをお勧めします。 通常、最初のmboxには`index=0`、次のmboxには`index=1,`などが含まれます。
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-この機能は、現在 [!DNL Platform Web SDK] ではサポートされていません。
+この機能は現在[!DNL Platform Web SDK]ではサポートされていません。
 
-## [!DNL Target] 実装をデバッグする方法
+## [!DNL Target]実装のデバッグ方法
 
-### at.js の使用
+### at.jsの使用
 
 at.js ライブラリは、次のデバッグ機能を公開します。
 
-* mbox 無効化 – [!DNL Target] が取得とレンダリングを無効にして、インタラクションを行わずにページが破損しているかどうか [!DNL Target] 確認します
-* mbox のデバッグ - at.js はすべてのアクションをログに記録します
-* Target Trace – 決定プロセスに関与した詳細を含むトレースオブジェクトで生成された mbox トレーストークンを使用すると、オブジェクトの下で使用でき `window.___target_trace` す。
+* Mbox無効 – [!DNL Target]の取得とレンダリングを無効にして、[!DNL Target]の操作なしでページが壊れているかどうかを確認します
+* Mbox デバッグ - at.jsはアクションごとにログを記録します
+* ターゲット トレース – 決定プロセスに参加した詳細を含むトレース オブジェクトで生成されたmbox トレース トークンは、`window.___target_trace` オブジェクトで利用できます。
 
 >[!NOTE]
 >
->これらすべてのデバッグ機能は、[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) の拡張機能で利用できます。
+>これらのデバッグ機能はすべて、[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)の強化機能で使用できます。
 
-### [!DNL Platform Web SDK] の使用
+### [!DNL Platform Web SDK]の使用中
 
-[!DNL Platform Web SDK] を使用する場合、複数のデバッグ機能があります。
+[!DNL Platform Web SDK]を使用する場合、複数のデバッグ機能があります：
 
-* [Assurance](https://experienceleague.adobe.com/ja/docs/experience-platform/assurance/home) の使用
-* [Web SDKのデバッグが有効になりました &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/assurance/home)
-* [Web SDK モニタリングフック &#x200B;](https://github.com/adobe/alloy/wiki/Monitoring-Hooks) の使用
-* [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/ja/docs/experience-platform/debugger/home) の使用
-* ターゲット トレース
+* [Assurance](https://experienceleague.adobe.com/ja/docs/experience-platform/assurance/home)を使用しています
+* [Web SDK デバッグ有効](https://experienceleague.adobe.com/ja/docs/experience-platform/assurance/home)
+* [Web SDK モニタリングフックを使用](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/ja/docs/experience-platform/debugger/home)を使用
+* ターゲットトレース

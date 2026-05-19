@@ -1,36 +1,47 @@
 ---
-keywords: at.js, at.js のデバッグ，adobe Experience Cloudデバッガー，experience cloud デバッガー，mbox トレース，mbox ハイライト，デバッグ，デバッグ，$9
-description: '[!UICONTROL Adobe Experience Cloud Debugger] を使用すると、ライブラリ設定の表示、リクエストの調査、コンソールログの有効化、リクエストの無効化  [!DNL Target]  呼び出しなどを行えます。'
-title: '[!UICONTROL Adobe Experience Cloud Debugger] で at.Js をデバッグするにはどうすればよいですか？'
+keywords: at.js, debug at.js, adobe Experience Cloud debugger, experience cloud debugger, mbox trace, mbox highlight, debug, debugging, $9
+description: '[!UICONTROL Adobe Experience Cloud Debugger]を使用して、ライブラリ設定の表示、リクエストの確認、コンソールログの有効化、 [!DNL Target]  コールリクエストの無効化などを行います。'
+title: でデバッグするにはどうすればよいですか。[!UICONTROL Adobe Experience Cloud Debugger]さんと同じですか？
 feature: at.js
 exl-id: ac215560-3f6f-4269-947c-961e7a43c9e1
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/pZtiohItxWcjKFJTCXX8JtvOpEjFMsG1SJdp9ANalOE
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 7%
+source-wordcount: 162
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL Adobe Experience Cloud Debugger] を使用した at.js のデバッグ
+# [!UICONTROL Adobe Experience Cloud Debugger]を使用したat.jsのデバッグ
 
-[!DNL Target] の実装をすばやく簡単に理解できる、[!UICONTROL Adobe Experience Cloud Debugger] 拡張機能の使用に関する情報です。
+[!UICONTROL Adobe Experience Cloud Debugger]拡張機能の使用に関する情報です。これにより、[!DNL Target]の実装を迅速かつ簡単に把握できます。
 
-ライブラリ設定をすばやく表示したり、リクエストを調べてカスタムパラメーターが正しく渡されていることを確認したり、コンソールログをオンにしたり、すべての [!DNL Target] リクエストを無効にしたりできます。 [!DNL Experience Cloud] への認証をおこなうと、強力な mbox Trace ツールを使用して、アクティビティ、オーディエンスの選定、訪問者プロファイルを調べることができます。
+ライブラリ設定をすばやく表示し、要求を確認してカスタムパラメーターが正しく渡されていることを確認し、コンソールのログ記録をオンにして、すべての[!DNL Target] リクエストを無効にすることができます。 [!DNL Experience Cloud]に認証すると、強力なMbox Trace ツールを使用して、アクティビティとオーディエンスの資格、および訪問者プロファイルを調べることができます。
 
-[Adobe Experience Cloud Debugger の概要 &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=ja){target=_blank} を確認します。
+[Adobe Experience Cloud Debuggerの概要](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=ja){target=_blank}を確認します。
 
 ## トレーニングビデオ
 
 次のビデオでは、デバッグプロセスの手順について説明しています。
 
-### Adobe Experience Cloud Debugger 拡張機能 ![&#x200B; 概要バッジ &#x200B;](../../assets/overview.png) を追加します
+### Adobe Experience Cloud Debugger拡張機能![概要バッジ &#x200B;](../../assets/overview.png)を追加します
 
->[!VIDEO](https://video.tv.adobe.com/v/34063/?quality=12&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/34063/?captions=jpn&quality=12)
 
-### Adobe Target Debugger を使用した基本的なAdobe Experience Cloudのデバッグ ![&#x200B; 概要バッジ &#x200B;](../../assets/overview.png)
+### Adobe Experience Cloud Debugger ![概要バッジ &#x200B;](../../assets/overview.png)を使用した基本的なAdobe Target デバッグ
 
->[!VIDEO](https://video.tv.adobe.com/v/34064/?quality=12&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/34064/?captions=jpn&quality=12)
 
-### Mbox Trace![&#x200B; 概要バッジ &#x200B;](../../assets/overview.png)
+### Mbox Trace ![概要バッジ &#x200B;](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/34065/?quality=12&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/34065/?captions=jpn&quality=12)

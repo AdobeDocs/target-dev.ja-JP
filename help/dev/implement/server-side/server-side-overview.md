@@ -1,77 +1,93 @@
 ---
-keywords: サーバーサイド，サーバーサイド，api, sdk, node.js, nodejs, node js, recommendations api, api, api, サーバーサイド 1
-description: サーバーサ  [!DNL Adobe Target]  ド配信 API、SDK および API につい  [!DNL Target Recommendations]  説明します。
-title: サーバーサ  [!DNL Target]  ド配信 API および SDK について
+keywords: サーバーサイド、サーバーサイド、api、sdk、node.js、nodejs、node js、recommendations api、api、api、server side1
+description: ' [!DNL Adobe Target]  サーバーサイド配信API、SDK、および [!DNL Target Recommendations] APIについて説明します。'
+title: ' [!DNL Target]  サーバーサイド配信APIとSDKについて学ぶにはどうすればよいですか？'
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-source-git-commit: 75af30045684b95d5989b0a1f877ba95bb8cd883
+TQID: https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88c
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 13%
+source-wordcount: 603
+ht-degree: 12%
 
 ---
 
-# サーバー側：[!DNL Target] の実装
+# サーバーサイド：[!DNL Target]を実装
 
-[!DNL Adobe Target] サーバーサイド配信 API、SDK および [!DNL Target Recommendations] API に関する情報です。
+[!DNL Adobe Target]のサーバーサイド配信API、SDK、および[!DNL Target Recommendations]個のAPIに関する情報。
 
 >[!NOTE]
 >
->実装で at.js と [!DNL AppMeasurement] をクライアントサイドで使用する場合は、以下で説明する [!UICONTROL Target Delivery API] およびサーバーサイド SDK を使用する必要があります。
+>実装でat.jsと[!DNL AppMeasurement]をクライアントサイドで使用する場合は、以下で説明する[!UICONTROL Target Delivery API]とサーバーサイド SDKを使用する必要があります。
 >
->実装で [!UICONTROL Adobe Experience Platform Web SDK] を使用する場合は、[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/ja/docs/experience-platform/edge-network-server-api/overview){target=_blank} を使用する必要があります。
+>実装で[!UICONTROL Adobe Experience Platform Web SDK]を使用している場合は、[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/ja/docs/experience-platform/edge-network-server-api/overview){target=_blank}を使用する必要があります。
 
 以下の処理は、[!DNL Target] のサーバー側実装で発生します。
 
 1. クライアントデバイスがサーバーを通じてエクスペリエンスのリクエストをおこないます。
 1. サーバーは、そのリクエストを [!DNL Target] に送信します。
 1. [!DNL Target] は、サーバーに応答を送り返します。
-1. サーバーは、レンダリングするエクスペリエンスをクライアントデバイスに配信するかどうかの決定を行います。
+1. サーバーは、クライアントデバイスに配信するエクスペリエンスをレンダリングするエクスペリエンスを決定します。
 
-エクスペリエンスは、ブラウザーに表示する必要はありません。 エクスペリエンスは、電子メールやキオスクに表示したり、音声アシスタントを使用したり、非視覚的なエクスペリエンスや非ブラウザーベースのデバイスを使用したりして、表示できます。 サーバーはクライアントと [!DNL Target] の間に位置するので、より優れたコントロールおよびセキュリティが必要であったり、サーバーで実行したい複雑なバックエンド処理がある場合、このタイプの実装も理想的です。
+エクスペリエンスをブラウザーに表示する必要はありません。 エクスペリエンスは、電子メールやキオスク、音声アシスタント、その他の視覚的ではないエクスペリエンスやブラウザー以外のデバイスで表示できます。 サーバーはクライアントと [!DNL Target] の間に位置するので、より優れたコントロールおよびセキュリティが必要であったり、サーバーで実行したい複雑なバックエンド処理がある場合、このタイプの実装も理想的です。
 
 >[!NOTE]
 >
->初回訪問者は、クライアントサイドでのみ初期化できます。 初回の訪問者 *初期化できません* をサーバーサイドで行うことはできません。 これは ECID に起因します。この ECID はサードパーティの demdex cookie に依存するので、ブラウザーが関係する実装で訪問者 API.js を使用して初期化する必要があります。
+>初回訪問者は、クライアントサイドでのみ初期化できます。 初回訪問者&#x200B;*はサーバーサイドで初期化できません*。 これはECIDによるもので、これはサードパーティのdemdex cookieに依存するため、ブラウザーが関与する実装でVisitor API.jsを介して初期化する必要があります。
 
-次の節では、様々なサーバーサイド API と SDK について詳しく説明します。
+以下の節では、様々なサーバーサイド APIとSDKについて詳しく説明します。
 
 ## Server Side Delivery API
 
-リンク：[&#x200B; サーバーサイド配信 API](/help/dev/implement/delivery-api/overview.md)
+リンク：[&#x200B; サーバーサイド配信API](/help/dev/implement/delivery-api/overview.md)
 
 `/rest/v1/delivery`
 
-[!DNL Target] 配信 API を使用すると、次のことができます。
+[!DNL Target] Delivery APIを使用すると、次のことが可能になります。
 
-* SPAやモバイルチャネルを含む web 全体および接続された TV、キオスク、店舗のデジタルスクリーンなどの非ブラウザーベースの IoT デバイスにわたってエクスペリエンスを提供します。
-* HTTP/s 呼び出しを行えるサーバーサイドプラットフォームまたはアプリケーションからエクスペリエンスを配信します。
-* 訪問者がビジネスへのエンゲージメントに使用したチャネルやデバイスに関係なく、訪問者に対して一貫性のあるパーソナライズされたエクスペリエンスを提供します。
-* サーバー上のセッション内の訪問者のエクスペリエンスをキャッシュして、複数の API 呼び出しを回避し、パフォーマンスを向上させます。
-* Adobe Analytics、Adobe Audience Manager（AAM）などのAdobe Experience Cloud製品、Experience CloudID サービスとサーバーサイドからシームレスに統合します。
+* SPAやモバイルチャネルを含むwebはもちろん、コネクテッド TV、キオスク、実店舗のデジタルスクリーンなど、ブラウザー以外のIoT デバイスにもエクスペリエンスを提供できます。
+* HTTP/S呼び出しを行うことができる、任意のサーバーサイドプラットフォームまたはアプリケーションから、エクスペリエンスを配信します。
+* 訪問者がどのチャネルやデバイスを利用してビジネスに関与したとしても、訪問者に一貫性のあるパーソナライズされた体験を提供します。
+* 訪問者のエクスペリエンスをサーバー上のセッション内にキャッシュして、複数のAPI呼び出しを回避できるようにすることで、パフォーマンスを向上させます。
+* サーバーサイドから、Adobe Analytics、Adobe Audience Manager（AAM）、Experience Cloud ID ServiceなどのAdobe Experience Cloud製品とシームレスに連携できます。
 
 ## サーバーサイド SDK
 
-[!DNL Adobe Target] サーバーサイド SDK のドキュメントは、選択した言語でサーバーに [!DNL Target] を実装するのに役立ちます。
+[!DNL Adobe Target] サーバーサイド SDKのドキュメントは、お使いの言語でサーバーに[!DNL Target]を実装するのに役立ちます。
 
 * [Node.js](node-js/overview.md)
 * [Java](java/overview.md)
 * [.NET](net/overview.md)
 * [Python](python/overview.md)
 
-[!DNL Adobe Target] のサーバーサイド SDK を使用すると、次のことができます。
+[!DNL Adobe Target]のサーバーサイド SDKを使用すると、次のことが可能になります。
 
-* **機能フラグ設定**、**ロールアウト** および **A/B 実験** を **ほぼゼロの待ち時間** で実行および実行します。
-* **2&rbrace;SPA** や **モバイルチャネル** などの **web 全体でエクスペリエンスを提供できるだけでなく、ブラウザー以外のベースの** IoT （Internet of Things）デバイス **接続テレビ、キオスク、店舗のデジタル画面など）でもエクスペリエンスを提供できます。**
-* ユーザーがビジネスに関与したチャネルやデバイスに関係なく、**機械学習（ML）駆動のパーソナライズされたエクスペリエンス** をユーザーに提供します。
-* **Adobe Experience Cloudとシームレスに統合** サーバー側から **Adobe Analytics**、**Adobe Audience Manager**、**Experience CloudID サービス** などの製品を利用できます。
+* **機能のフラグ付け**、**ロールアウト**、および&#x200B;**A/B実験**&#x200B;を&#x200B;**ほぼゼロの遅延**&#x200B;で実行して実行します。
+* **SPA**&#x200B;と&#x200B;**モバイルチャネル**&#x200B;を含む&#x200B;**web**&#x200B;全体、および接続されたテレビ、キオスク、実店舗のデジタル画面などのブラウザー以外の&#x200B;**モノのインターネット（IoT）デバイス**&#x200B;を含むエクスペリエンスを配信します。
+* ユーザーがどのチャネルやデバイスとエンゲージしたかに関係なく、**機械学習（ML）を活用したパーソナライズされたエクスペリエンス**&#x200B;をユーザーに提供します。
+* **サーバーサイドから** Adobe Experience Cloud **、** Adobe Analytics **、** Adobe Audience Manager ID サービス **などの**&#x200B;製品とシームレスに連携できます。
 
-[&#x200B; オンデバイス判定 &#x200B;](sdk-guides/getting-started/getting-started.md) を使用して、シンプルな機能フラグ設定のユースケースを実行する方法については、[&#x200B; はじめに &#x200B;](sdk-guides/on-device-decisioning/overview.md) ページを参照してください。
+[&#x200B; デバイス上の決定](sdk-guides/on-device-decisioning/overview.md)を介してシンプルな機能フラグ付けユースケースを実行する方法については、[はじめに](sdk-guides/getting-started/getting-started.md) ページを参照してください。
 
-楽しく遊ぶには、[&#x200B; サンプルアプリ &#x200B;](sdk-guides/sample-apps/sample-apps.md) をチェックしてください。
+[&#x200B; サンプルアプリ &#x200B;](sdk-guides/sample-apps/sample-apps.md)をチェックして、楽しく遊びましょう。
 
 ## [!DNL Target Recommendations] API
 
-リンク：[Target Recommendations API](https://developers.adobetarget.com/api/recommendations) および [Adobe Recommendations API の概要 &#x200B;](../../before-administer/recs-api/overview.md)。
+リンク：[Target Recommendations API](https://developers.adobetarget.com/api/recommendations)および[Adobe Recommendations APIの概要](../../before-administer/recs-api/overview.md)。
 
-Recommendations API を使用すると、[!DNL Target] Recommendations サーバーとプログラムによってやり取りできます。 これらの API は様々なアプリケーションスタックと統合して、通常 [!DNL Target] ユーザーインターフェイスからおこなわれる関数を実行できます。
+Recommendations APIを使用すると、[!DNL Target]個のRecommendations サーバーとプログラムで対話できます。 これらのAPIは、通常[!DNL Target] ユーザーインターフェイスを介して実行する機能を実行するために、さまざまなアプリケーションスタックと統合できます。

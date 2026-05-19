@@ -1,20 +1,25 @@
 ---
 title: ユーザーの権限とプロパティ
-description: ' [!DNL Target] SDK には、ユーザー権限およびプロパティのサポートが含まれています。'
+description: ' [!DNL Target] SDKには、ユーザー権限とプロパティのサポートが含まれています。'
 exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/4l6qKRuEw14xYjcEsY49-3AAjYl6gouoKWIjkNuchdI
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 0%
+source-wordcount: 123
+ht-degree: 8%
 
 ---
 
 # ユーザーの権限とプロパティ
 
-[!DNL Target] SDK には、ユーザー権限およびプロパティのサポートが含まれています。 [!DNL Adobe Target] がワークスペースとプロパティを介して企業の権限をどのように処理するかについて詳しくは、[&#x200B; 企業ユーザーの権限 &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=ja) を参照してください。
+[!DNL Target] SDKには、ユーザー権限とプロパティのサポートが含まれています。 [!DNL Adobe Target]がワークスペースとプロパティを介してエンタープライズ権限を処理する方法に慣れていない場合は、[&#x200B; エンタープライズユーザー権限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=ja)で詳細を確認できます。
 
-クライアントは 2 つの方法のいずれかでプロパティトークンを使用できます。
+クライアントは、プロパティトークンを2つの方法のいずれかで使用できます。
 
 ## グローバルプロパティトークン
 
@@ -48,9 +53,9 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 >[!ENDTABS]
 
-## getOffers 呼び出しの付帯プロパティトークン
+## getOffers呼び出しの付随プロパティトークン
 
-プロパティトークンは、個々の `getOffers` 呼び出しで指定することもできます。 これを行うには、プロパティ オブジェクトをリクエストに追加します。 この方法で指定されたプロパティトークンは、設定の 1 つのセットより優先されます。
+プロパティトークンは、個別の`getOffers`呼び出しで指定することもできます。 これは、リクエストにプロパティオブジェクトを追加することで行います。 この方法で指定されたプロパティトークンは、設定の1つのセットよりも優先されます。
 
 >[!BEGINTABS]
 

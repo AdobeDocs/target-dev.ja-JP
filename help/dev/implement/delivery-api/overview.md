@@ -1,28 +1,33 @@
 ---
-title: Adobe Target配信 API の概要
-description: Adobe Target配信 API の概要
-keywords: 配信 api
+title: Adobe Target Delivery APIの概要
+description: Adobe Target Delivery APIの概要
+keywords: Delivery API
 exl-id: e760bddc-b1ae-4b7b-bff2-aba81c6b6d34
 feature: APIs/SDKs
-source-git-commit: 413b16ed0b098de6914558fa29b9ca59aaba958e
+TQID: https://experienceleague.adobe.com/gPXGax6ccvZZPklT3jnZbqyOj3mCClEfSpdufAFPtSs
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 0%
+source-wordcount: 184
+ht-degree: 1%
 
 ---
 
-# 配信 API の概要
+# 配信APIの概要
 
-[!DNL Adobe Target Delivery API] は REST に基づいています。 このドキュメントでは、[!DNL Adobe Target] [!DNL Delivery API] を構成するリソースについて説明します。 HTTP メソッドは、これらのリソースに対する操作を実行するために使用されます。
+[!DNL Adobe Target Delivery API]はRESTに基づいています。 このドキュメントでは、[!DNL Adobe Target] [!DNL Delivery API]を構成するリソースについて説明します。 HTTP メソッドは、これらのリソースに対する操作を実行するために使用されます。
 
-[!UICONTROL Adobe Target's Delivery API] を使用すると、次のことができます。
+[!UICONTROL Adobe Target's Delivery API]を使用すると、次のことが可能になります。
 
-* SPA やモバイルチャネルを含む web 全体および接続された TV、キオスク、店舗のデジタルスクリーンなどの非ブラウザーベースの IoT デバイスにわたってエクスペリエンスを提供します。
-* HTTP/s 呼び出しを行うことができるサーバーサイドプラットフォームまたはアプリケーションからエクスペリエンスを配信します。
-* ユーザーがビジネスに関与したチャネルやデバイスに関係なく、一貫したパーソナライズされたエクスペリエンスをユーザーに提供します。
-* サーバーのセッション内のユーザーのエクスペリエンスをキャッシュして、複数の API 呼び出しを回避し、その結果、パフォーマンスを向上させることができます。
-* サーバー側から [!DNL Adobe Experience Cloud]、[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager] などの [!DNL Experience Cloud ID Service] 製品とシームレスに統合します。
+* SPAやモバイルチャネルを含むwebはもちろん、コネクテッド TV、キオスク、実店舗のデジタルスクリーンなど、ブラウザー以外のIoT デバイスにもエクスペリエンスを提供できます。
+* HTTP/S呼び出しを行うことができる、任意のサーバーサイドプラットフォームまたはアプリケーションからエクスペリエンスを配信します。
+* 利用者がどのチャネルやデバイスを利用したとしても、一貫性のあるパーソナライズされた体験を利用者に提供できます。
+* サーバー内のセッション内にユーザーのエクスペリエンスをキャッシュして、複数のAPI呼び出しを回避し、結果としてパフォーマンスを向上させることができます。
+* サーバーサイドから[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Experience Cloud ID Service]などの[!DNL Adobe Experience Cloud]製品とシームレスに統合できます。
 
 >[!NOTE]
 >
->引き続き [&#x200B; 従来の/v1/mbox および/v2/batchmbox API ドキュメント &#x200B;](https://developers.adobetarget.com/api/legacy-api/index.html) にアクセスできます。 ただし、機能は（ここで説明しているように）配信 API で開発され、レガシー API には移植されません。
+>引き続き、[従来の/v1/mboxおよび/v2/batchmbox API ドキュメント &#x200B;](https://developers.adobetarget.com/api/legacy-api/index.html)にアクセスできます。 ただし、機能は（ここに記載されているように）配信APIで開発され、従来のAPIにはバックレポートされません。

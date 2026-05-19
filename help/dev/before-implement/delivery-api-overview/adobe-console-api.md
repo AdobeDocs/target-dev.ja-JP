@@ -1,18 +1,25 @@
 ---
-title: Adobe Admin Consoleの API
-description: Adobe Admin Console API の使用方法について説明します。
-keywords: Adobeコンソール API；コンソール；API
+title: ADOBE ADMIN CONSOLE API
+description: Adobe Admin Console APIの使用方法を説明します。
+keywords: Adobe Console API；コンソール；api
 exl-id: 515cb851-6553-42af-a1a9-e72c8952e210
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/qGUeWWdrN6m68CPeBkTgwJ8V4dnahiRJsj7aWrLfcu4
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '50'
+source-wordcount: 52
 ht-degree: 0%
 
 ---
 
-# Adobe Admin Consoleの API
+# ADOBE ADMIN CONSOLE API
 
-[!UICONTROL Adobe User Management] および [!UICONTROL User Sync API] を使用して、ユーザーと製品の使用権限を管理します。
+[!UICONTROL Adobe User Management]と[!UICONTROL User Sync API]を通じてユーザーと製品の使用権限を管理します。
 
-詳しくは、*Adobe Developer[&#x200B; web サイトの &#x200B;](https://developer.adobe.com/umapi/){target=_blank} ユーザーと製品の使用権限の管理、API 方式* を参照してください。
+詳しくは、*Adobe Developer* web サイトの[Manage Users and Product Entitlements, the API way](https://developer.adobe.com/umapi/){target=_blank}を参照してください。

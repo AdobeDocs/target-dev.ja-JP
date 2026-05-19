@@ -1,26 +1,37 @@
 ---
 title: JSON ペイロードを使用したオンデバイス判定ルールアーティファクトのダウンロード、保存、更新
-description: この方法が最適なのは、SDK メソッドを使用するファイルごとに SDK を初期化する必要がある方法でアプリケーションが構造化されている場合です。
+description: このアプローチは、SDK メソッドを使用する各ファイルでSDKを初期化する必要がある方法でアプリケーションが構造化されている場合に最適です。
 feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/knFQFgPKL-DBOtBnWUIz2-7usi35DPtxd-FSINqHHhY
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e7840a7b-a94f-4256-aed0-4e94b08e157b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 0%
+source-wordcount: 298
+ht-degree: 1%
 
 ---
 
 # JSON ペイロードを使用したルールアーティファクトのダウンロード、保存、更新
 
-この方法が最適なのは、SDK メソッドを使用するファイルごとに SDK を初期化する必要がある方法でアプリケーションが構造化されている場合です。 Web アプリケーションで SDK の初期化中にルールアーティファクトの JSON ペイロードを使用できるようにするには、JSON ペイロードがダウンロードされ、アプリケーションで使用できることを確認する必要があります。
+このアプローチは、SDK メソッドを使用する各ファイルでSDKを初期化する必要がある方法でアプリケーションが構造化されている場合に最適です。 web アプリケーションでSDKの初期化中にルールアーティファクトのJSON ペイロードを使用する前に、JSON ペイロードがダウンロードされ、アプリケーションで使用可能であることを確認する必要があります。
 
 ## 手順の概要
 
-1. SDK のインストール
-1. SDK の初期化
+1. SDKのインストール
+1. SDKの初期化
 1. JSON ペイロードの保存と使用
 
-## 1. SDK をインストールする
+## &#x200B;1. SDKのインストール
 
 >[!BEGINTABS]
 
@@ -42,9 +53,9 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2. SDK の初期化
+## &#x200B;2. SDKの初期化
 
-1. まず、SDK を読み込みます。 サーバーの起動を制御できるのと同じファイルにを読み込みます。
+1. まず、SDKを読み込みます。 サーバーの起動を制御できるファイルと同じファイルにインポートします。
 
    **Node.js**
 
@@ -59,7 +70,7 @@ npm i @adobe/target-nodejs-sdk -P
    import com.adobe.target.edge.client.TargetClient;
    ```
 
-1. SDK を設定するには、create メソッドを使用します。
+1. SDKを設定するには、create メソッドを使用します。
 
    **Node.js**
 
@@ -113,14 +124,14 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. ここに示すように、**[!UICONTROL Administration]**/**[!UICONTROL Implementation]** に移動すると、[!DNL Adobe Target] からクライアントと `organizationId` の両方を取得できます。
+1. 次に示すように、**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;に移動すると、クライアントと`organizationId`の両方を[!DNL Adobe Target]から取得できます。
 
-   &lt;!— image-client-code.png を挿入 – >
-   ![alt 画像 &#x200B;](assets/asset-rule-artifact-3.png)
+   &lt;!— image-client-code.pngを挿入 – >
+   ![alt画像](assets/asset-rule-artifact-3.png)
 
-## 3. JSON ペイロードを保存して rse する
+## &#x200B;3. JSON ペイロードの保存と再利用
 
-JSON ペイロードの保存に使用するメカニズムは、システムアーキテクチャによって異なります。 ローカルファイル、データベース、または Memcached などのメモリオブジェクトキャッシュシステムを使用できます。 使用するには、アプリケーションからこの JSON を読み取る必要があります。 このガイドでは、ローカルファイルをストレージとして使用します。
+JSON ペイロードの保存に使用するメカニズムは、システムのアーキテクチャによって異なります。 ローカルファイル、データベース、またはMemcachedなどのメモリオブジェクトキャッシュシステムを使用できます。 このJSONをアプリケーションから読み取って使用できるようにする必要があります。 このガイドでは、ローカルファイルをストレージとして使用します。
 
 >[!BEGINTABS]
 
@@ -162,9 +173,9 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->JSON ペイロードを介して [!DNL Adobe Target]SDK を初期化すると、[!DNL Adobe Target]SDK はルールアーティファクトがダウンロードされるのを待つ必要がなくなるので、サーバーはオンデバイス判定アクティビティで直ちにリクエストを処理できる状態になります。
+>[!DNL Adobe Target]SDKはルールアーティファクトのダウンロードを待つ必要がないため、JSON ペイロードを使用して[!DNL Adobe Target]SDKを初期化することで、サーバーはオンデバイス判定アクティビティを使用してリクエストをすぐに処理できます。
 
-JSON ペイロード初期化機能の例を次に示します。
+JSON ペイロード初期化機能を示す例を次に示します。
 
 >[!BEGINTABS]
 

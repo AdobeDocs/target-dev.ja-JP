@@ -1,30 +1,35 @@
 ---
-title: ' [!DNL Adobe Target] Node.js SDKでのイベントへのサブスクライブ'
-description: '[!UICONTROL OnDeviceDecisioningHandler] オブジェクトを使用して Node.js SDK内で発生する様々なイベントを登録する方法について説明します。'
+title: ' [!DNL Adobe Target] Node.js SDKでのイベントの購読'
+description: '[!UICONTROL OnDeviceDecisioningHandler] オブジェクトを使用してNode.js SDK内で発生するさまざまなイベントを購読する方法を説明します。'
 feature: APIs/SDKs
 exl-id: 40c53840-a560-4819-ae04-f527c36b22fe
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/KWuJT-p-Er-1mx766Y-itlFn7REZnqkUksdHKCy-2-U
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: 163
 ht-degree: 2%
 
 ---
 
-# SDK イベント（Node.js）
+# SDK Events （Node.js）
 
 ## 説明
 
-[SDKの初期化 &#x200B;](initialize-sdk.md) 時、`options.events` オブジェクトは、イベント名キーとコールバック関数値を持つオプションのオブジェクトです。 これを使用すると、SDK内で発生する様々なイベントを登録できます。 例えば、`clientReady` イベントは、SDKがメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
+SDK[&#128279;](initialize-sdk.md)を初期化する場合、`options.events` オブジェクトは、イベント名キーとコールバック関数値を持つオプションのオブジェクトです。 SDK内で発生するさまざまなイベントの購読に使用できます。 例えば、`clientReady` イベントは、SDKがメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
 
-コールバック関数が呼び出されると、イベントオブジェクトが渡されます。 各イベントには、イベント名に対応する `type` があります。 一部のイベントには、関連情報を含む追加のプロパティが含まれています。
+コールバック関数が呼び出されると、イベントオブジェクトが渡されます。 各イベントには、イベント名に対応する`type`があります。 一部のイベントには、関連情報を含む追加のプロパティが含まれます。
 
 ## Events
 
 | イベント名（タイプ） | 説明 | その他のイベントプロパティ |
 | --- | --- | --- |
-| clientReady | アーティファクトがダウンロードされ、SDKが `getOffers` 呼び出しに対応している場合に発行されます。 オンデバイス判定方法を使用する場合に推奨されます。 |  |
-| artifactDownloadSuccessful | 新しいアーティファクトがダウンロードされるたびに発行されます。 | artifactPayload, artifactLocation |
-| artifactDownloadFailed | アーティファクトのダウンロードに失敗するたびに生成されます。 | artifactLocation, エラー |
+| clientReady | アーティファクトがダウンロードされ、SDKが`getOffers`呼び出しの準備ができたときに発行されます。 オンデバイス判定メソッドを使用する場合に推奨されます。 |  |
+| artifactDownloadSucceeded | 新しいアーティファクトがダウンロードされるたびに実行されます。 | artifactPayload, artifactLocation |
+| artifactDownloadFailed | アーティファクトのダウンロードに失敗するたびに実行されます。 | artifactLocation、エラー |
 
 ## 例
 

@@ -4,27 +4,40 @@ description: '[!UICONTROL adobe.target.getOffers()] 関数とその at.js ライ
 title: How Do I Use the [!UICONTROL adobe.target.getOffers()] Function?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 99%
+source-wordcount: 1340
+ht-degree: 97%
 
 ---
 
 # [!UICONTROL adobe.target.getOffers()] - at.js 2.x
 
-この関数を使用すると、複数の mbox を渡すことで複数のオファーを取得できます。さらに、アクティブなアクティビティのすべてのビュー向けに複数のオファーを取得できます。
+この関数を使用すると、複数の mbox を渡すことで複数のオファーを取得できます。 さらに、アクティブなアクティビティのすべてのビュー向けに複数のオファーを取得できます。
 
 >[!NOTE]
 >
->この関数は at.js 2.x で導入されました。この関数は at.js バージョン 1.x では使用できません。*x*.
+>この関数は、at.js 2.xで導入されました。 この関数は、at.js バージョン 1.*x*&#x200B;では使用できません。
 
 | キー | タイプ | 必須？ | 説明 |
 | --- | --- | --- | --- |
-| `consumerId` | 文字列 | × | 指定しない場合、デフォルト値はクライアントのグローバル mbox です。このキーは、A4T 統合に使用される追加のデータ ID （SDID）を生成するために使用されます。<P>`getOffers()` を使用する場合、各呼び出しで新しい SDID が生成されます。 同じページに複数の mbox リクエストがあり、SDID を保持する（target-global-mbox と [!DNL Adobe Analytics] の SDID と一致するように）場合は、`consumerId` パラメーターを使用します。<P>`getOffers()` に 3 つの mbox （「mbox1」、「mbox2」、「mbox3」という名前）が含まれている場合は、`getOffers()` 呼び出しに `consumerId: "mbox1, mbox2, mbox3"` を含めます。 |
+| `consumerId` | 文字列 | × | 指定しない場合、デフォルト値はクライアントのグローバル mbox です。 このキーは、A4T 統合に使用される追加のデータ ID （SDID）を生成するために使用されます。<P>`getOffers()` を使用する場合、各呼び出しで新しい SDID が生成されます。 同じページに複数の mbox リクエストがあり、SDID を保持する（target-global-mbox と [!DNL Adobe Analytics] の SDID と一致するように）場合は、`consumerId` パラメーターを使用します。<P>`getOffers()` に 3 つの mbox （「mbox1」、「mbox2」、「mbox3」という名前）が含まれている場合は、`getOffers()` 呼び出しに `consumerId: "mbox1, mbox2, mbox3"` を含めます。 |
 | `decisioningMethod` | 文字列 | × | &quot;server-side&quot;、&quot;on-device&quot;、&quot;hybrid&quot; |
 | `request` | オブジェクト | ○ | 下の「リクエスト」の表を参照してください。 |
-| `timeout` | 数値 | × | リクエストのタイムアウト。指定しない場合、at.js のデフォルトのタイムアウトが使用されます。 |
+| `timeout` | 数値 | × | リクエストのタイムアウト。 指定しない場合、at.js のデフォルトのタイムアウトが使用されます。 |
 
 ## リクエスト
 
@@ -40,7 +53,7 @@ ht-degree: 99%
 | Request > experienceCloud > analytics | × |  | Adobe Analytics の統合 |
 | Request > experienceCloud > analytics > logging | × | 以下をページに実装する必要があります。<ul><li>訪問者 ID サービス</li><li>Appmeasurement.js</li></ul> | 次の値がサポートされています。<P>**client_side**：指定すると、分析ペイロードが呼び出し元に返されます。これは [!UICONTROL Data Insertion API] 経由で [!UICONTROL Adobe Analytics] に送信するために使用する必要があります。<P>**server_side**： これはデフォルト値で、[!DNL Target]と[!DNL Analytics] バックエンドが SDID を使用してレポート目的で呼び出しをステッチします。 |
 | Request > prefetch | × |  |  |
-| Request > prefetch > views | × | 最大数は 50 です。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>値の長さ `<=`5000。<P>名前を「profile」で始めないでください。<P>Not allowed names: &quot;orderId&quot;, &quot;orderTotal&quot;, &quot;productPurchasedId&quot;. | アクティブなアクティビティで関連するビューを取得するために使用するパラメーターを渡します。 |
+| Request > prefetch > views | × | 最大数は 50 です。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>値の長さ `<=`5000。<P>名前を「profile」で始めないでください。<P>使用できない名前：「orderId」、「orderTotal」、「productPurchasedId」 | アクティブなアクティビティで関連するビューを取得するために使用するパラメーターを渡します。 |
 | Request > prefetch > views > profileParameters | × | 最大値は 50 です。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>値の長さ `<=`5000。<P>文字列値のみを使用できます。<P>名前を「profile」で始めないでください。 | アクティブなアクティビティで関連するビューを取得するために使用するプロファイルパラメーターを渡します。 |
 | Request > prefetch > views > product | × |  |  |
 | Request > prefetch > views > product -> id | × | 空白ではありません。<P>最大サイズ = 128。 | アクティブなアクティビティで関連するビューを取得するために使用する製品 ID を渡します。 |
@@ -61,8 +74,8 @@ ht-degree: 99%
 | Request > execute > pageLoad > order > total | × | 0`>=`。 | ページ読み込み時に、指定された注文の合計を使用してオファーを取得します。 |
 | Request > execute > pageLoad > order > purchasedProductIds | × | 空白の値はありません。<P>各値の最大長は 50 です。<P>コンマで連結および区切ります。<P>商品 ID の長さ `<=` 合計 250。 | ページ読み込み時に、指定された購入 ID を使用してオファーを取得します。 |
 | Request > execute > mboxes | × | 最大サイズ = 50。<P>null 要素がありません。 |  |
-| Request > execute > mboxes>mbox | ○ | 空白ではありません。<P>「– クリック」サフィックスはありません。<P>最大サイズ = 250。<P>使用できる文字：`'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'`\|mbox の名前。 |
-| Request > execute > mboxes>mbox>index | ○ | null ではありません。<P>一意。<P>0`>=`。 | 注意： インデックスは、mbox が処理される順序を表すものではありません。複数のリージョナル mbox を持つ Web ページと同様、mbox が処理される順序は指定できません。 |
+| Request > execute > mboxes>mbox | ○ | 空白ではありません。<P>「– クリック」サフィックスはありません。<P>最大サイズ = 250。<P>使用可能な文字：`'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'`\|mboxの名前。 |
+| Request > execute > mboxes>mbox>index | ○ | null ではありません。<P>一意。<P>0`>=`。 | 注意： インデックスは、mbox が処理される順序を表すものではありません。 複数のリージョナル mbox を持つ Web ページと同様、mbox が処理される順序は指定できません。 |
 | Request > execute > mboxes > mbox > parameters | × | 最大数= 50。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>文字列値のみを使用できます。<P>値の長さ `<=`5000。<P>名前を「profile」で始めないでください。<P>使用できない名前：「orderId」、「orderTotal」、「productPurchasedId」。 | 指定されたパラメーターを使用して特定の mbox のオファーを取得します。 |
 | Request > execute > mboxes>mbox>profileParameters | × | 最大数= 50。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>文字列値のみを使用できます。<P>値の長さ `<=`256。<P>名前を「profile」で始めないでください。 | 指定されたプロファイルパラメーターを使用して特定の mbox のオファーを取得します。 |
 | Request > execute > mboxes>mbox > product | × |  |  |
@@ -208,7 +221,7 @@ adobe.target.getOffers({
 
 ## [!UICONTROL getOffers()] および [!UICONTROL applyOffers()]を使用した複数の mbox からのデータの取得とレンダリング
 
-at.js 2.x を使用すると、`[!UICONTROL getOffers()]` API を使用して複数の mbox を取得できます。複数の mbox のデータを取得して、`[!UICONTROL applyOffers()]` CSS セレクターによって識別されるさまざまな場所で、データをレンダリングすることもできます。
+at.js 2.x を使用すると、`[!UICONTROL getOffers()]` API を使用して複数の mbox を取得できます。 複数の mbox のデータを取得して、`[!UICONTROL applyOffers()]` CSS セレクターによって識別されるさまざまな場所で、データをレンダリングすることもできます。
 
 次の例は、at.js 2.x を実装した単純な HTML ページを示しています。
 
@@ -230,7 +243,7 @@ at.js 2.x を使用すると、`[!UICONTROL getOffers()]` API を使用して複
 </html>
 ```
 
-[!DNL Target] から受け取ったコンテンツを介して変更したい 3 つのコンテナがあるとします。3 つの mbox に対して 1 つのリクエストを作成し、それぞれの mbox に、それぞれのコンテナにレンダリングするためのコンテンツを含めることができます。
+[!DNL Target] から受け取ったコンテンツを介して変更したい 3 つのコンテナがあるとします。 3 つの mbox に対して 1 つのリクエストを作成し、それぞれの mbox に、それぞれのコンテナにレンダリングするためのコンテンツを含めることができます。
 
 リクエストおよびレンダリングコードは次の例のようになります。
 
@@ -275,19 +288,19 @@ adobe.target.getOffers({
 });
 ```
 
-`request > prefetch > mboxes` セクションでは、3 つの異なる mbox があります。リクエストが正常に完了した場合は、それぞれの mbox に対する応答を `response > prefetch > mboxes` から受信します。レスポンスとレンダリングに使用する場所が決まったら、`applyOffers()` を呼び出して [!DNL Target] から取得したコンテンツをレンダリングできます。この例では、次のマッピングがあります。
+`request > prefetch > mboxes` セクションでは、3 つの異なる mbox があります。 リクエストが正常に完了した場合は、それぞれの mbox に対する応答を `response > prefetch > mboxes` から受信します。 レスポンスとレンダリングに使用する場所が決まったら、`applyOffers()` を呼び出して [!DNL Target] から取得したコンテンツをレンダリングできます。 この例では、次のマッピングがあります。
 
 * mbox1／CSS セレクター# container1
 * mbox2／CSS セレクター# container2
 * mbox3／CSS セレクター# container3
 
-この例では、count 変数を使用して CSS セレクターを作成します。実際のシナリオでは、CSS セレクターと mbox との異なるマッピングを使用できます。
+この例では、count 変数を使用して CSS セレクターを作成します。 実際のシナリオでは、CSS セレクターと mbox との異なるマッピングを使用できます。
 
-この例では `prefetch > mboxes` を使用していますが、`execute > mboxes` を使用することもできます。`getOffers()` でプリフェッチを使用する場合は、`applyOffers()` 呼び出しでもプリフェッチを使用する必要があります。
+この例では `prefetch > mboxes` を使用していますが、`execute > mboxes` を使用することもできます。 `getOffers()` でプリフェッチを使用する場合は、`applyOffers()` 呼び出しでもプリフェッチを使用する必要があります。
 
 ## [!UICONTROL getOffers()] を呼び出して pageLoad を実行します
 
-次の例は、at.js 2 で [!UICONTROL getOffers()] を使用して pageLoad を実行する方法を示しています。*x*
+次の例は、at.js 2.*x*&#x200B;で[!UICONTROL getOffers()]を使用してpageLoadを実行する方法を示しています
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({

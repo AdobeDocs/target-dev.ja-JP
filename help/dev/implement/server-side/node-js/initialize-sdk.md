@@ -1,20 +1,30 @@
 ---
-title: create メソッドを使用して Node.js SDK を初期化します。
-description: create メソッドを使用して Node.js SDK を初期化し、クライアントをインスタンス化して、実験とパーソナライ  [!DNL Target]  されたエクスペリエンスを  [!DNL Adobe Target]  行する呼び出しを行う方法を説明します。
+title: create メソッドを使用してNode.js SDKを初期化します。
+description: create メソッドを使用してNode.js SDKを初期化し、 [!DNL Target]  クライアントをインスタンス化して、実験とパーソナライズされたエクスペリエンスのために [!DNL Adobe Target] を呼び出す方法を説明します。
 feature: APIs/SDKs
 exl-id: 71516e44-508a-4d8d-9f2b-7c54243e9c60
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/uawle0-l5bcv-FuXMLkPc8kIf8DvbkRqAYelr-ehNLk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 19%
+source-wordcount: 321
+ht-degree: 18%
 
 ---
 
-# Node.js SDK の初期化
+# Node.js SDKの初期化
 
 ## 説明
 
-`create` メソッドを使用して Node.js SDK を初期化し、[!UICONTROL Target] クライアントをインスタンス化して、実験およびパーソナライズされたエクスペリエンスのために [!DNL Adobe Target] を呼び出します。
+Node.js SDKを初期化し、[!UICONTROL Target] クライアントをインスタンス化して、実験とパーソナライズされたエクスペリエンスのために[!DNL Adobe Target]を呼び出すには、`create` メソッドを使用します。
 
 ## メソッド
 
@@ -26,26 +36,26 @@ TargetClient.create(options: Object): TargetClient
 
 ## パラメーター
 
-`options` の構造は以下のとおりです。
+`options`の構造は次のとおりです。
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
 | クライアント | 文字列 | ○ | None | [!UICONTROL Adobe Target Client ID] |
 | organizationId | 文字列 | ○ | None | [!UICONTROL Experience Cloud Organization ID] |
-| 環境 | 文字列 | × | 実稼動 | ターゲット環境名。 [!DNL Target] UI で、[!UICONTROL Administration]/[!UICONTROL Environments] を選択します。 |
-| timeout | 数値 | × | 3000 | タイムアウト （ミリ秒） |
+| 環境 | 文字列 | × | 本番 | ターゲット環境名。 [!DNL Target] UIでは、[!UICONTROL Administration] > [!UICONTROL Environments]です。 |
+| timeout | 数値 | × | 3000 | タイムアウト （ミリ秒単位） |
 | serverDomain | 文字列 | × | `*client*.tt.omtrdc.net` | デフォルトのホスト名を上書き |
-| セキュア | ブール値 | × | true | HTTP スキームを適用するための設定を解除 |
-| ロガー | オブジェクト | × | NOOP ロガー | デフォルトの NOOP ロガーを置き換えます |
-| targetLocationHint | 文字列 | × | None | ターゲットの場所のヒント |
-| fetchApi | 関数 | × | global.fetch または window.fetch | [fetch](https://fetch.spec.whatwg.org/) は、SDK で http リクエストに使用されます。 デフォルトでは、node-fetch またはブラウザー実装の fetch が使用されます。 ただし、`fetchApi` を使用して代替実装を指定することもできます |
-| propertyToken | 文字列 | × | None | **ターゲットプロパティトークン**。 ここで指定した場合、すべての `getOffers` 呼び出しでこの値が使用されます。 **オンデバイス判定の場合**、SDK は、`propertyToken` で設定されたプロパティトークンの対象アクティビティを含んだアーティファクトのみをダウンロードします |
-| decisioningMethod | 文字列 | × | server-side | 使用する判定方法を決定します（[&#x200B; オンデバイス &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、サーバーサイド、ハイブリッド） |
-| pollingInterval | 数値 | × | 300000 （5 分） | [&#x200B; オンデバイス判定ルールアーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) のポーリング間隔（ミリ秒） |
-| artifactLocation | 文字列 | × | None | [&#x200B; オンデバイス判定ルールアーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) への完全修飾 URL。 内部的に決定された場所を上書きします。 |
-| artifactPayload | オブジェクト | × | None | [&#x200B; オンデバイス判定ルールアーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) の JSON ペイロード。 指定した場合、URL からリクエストする代わりに使用されます。 |
-| [events](sdk-events.md) | Object&lt;String,Function> | × | None | イベント名のキーとコールバック関数の値を含むオプションのオブジェクト |
-| telemetryEnabled | ブール値 | × | true | 有効化すると、Adobeは SDK 機能の使用状況とパフォーマンスのテレメトリデータを収集します。 個人データは収集されません。  |
+| 安全 | ブール値 | × | true | HTTP スキームを適用する設定を解除 |
+| ロガー | オブジェクト | × | NOOP ロガー | デフォルトのNOOP ロガーを置換します |
+| targetLocationHint | 文字列 | × | None | ターゲット場所のヒント |
+| fetchApi | 関数 | × | global.fetchまたはwindow.fetch | [fetch](https://fetch.spec.whatwg.org/)は、SDKでhttp リクエストに使用されています。 デフォルトでは、node-fetchまたはfetchのブラウザー実装が使用されます。 ただし、別の実装は`fetchApi`を使用して提供できます |
+| propertyToken | 文字列 | × | None | **ターゲットプロパティトークン**。 ここで指定した場合、すべての`getOffers`呼び出しがこの値を使用します。 **オンデバイス判定**&#x200B;の場合、SDKは`propertyToken`で設定されたプロパティ トークンの適格アクティビティを含むアーティファクトのみをダウンロードします |
+| decisioningMethod | 文字列 | × | サーバーサイド | 使用する決定方法を決定します（[&#x200B; オンデバイス &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md)、サーバーサイド、ハイブリッド） |
+| pollingInterval | 数値 | × | 300000 （5分） | [&#x200B; オンデバイス決定ルール アーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)のポーリング間隔（ミリ秒単位） |
+| artifactLocation | 文字列 | × | None | [&#x200B; オンデバイス決定ルール アーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)への完全修飾URL。 内部で決定された場所を上書きします。 |
+| artifactPayload | オブジェクト | × | None | [&#x200B; デバイス上の決定ルール アーティファクト &#x200B;](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)のJSON ペイロード。 指定した場合は、URLからリクエストする代わりに使用されます。 |
+| [events](sdk-events.md) | Object&lt;String,Function> | × | None | イベント名キーとコールバック関数値を持つオプションのオブジェクト |
+| telemetryEnabled | ブール値 | × | true | 有効にすると、AdobeはSDK機能の使用状況およびパフォーマンスのテレメトリデータを収集します。 個人データは収集されません。 |
 
 ## 例
 

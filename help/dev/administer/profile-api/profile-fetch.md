@@ -1,79 +1,84 @@
 ---
-title: プロファイルの取得
-description: Adobe Target Profile API を使用して、 [!DNL Target] で使用する訪問者データを取得する方法を説明します。
+title: プロファイルを取得
+description: Adobe Target Profile APIを使用して、 [!DNL Target]で使用する訪問者データを取得する方法を説明します。
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
-source-git-commit: b8ccfdcaff6aa17a325727df0a9ffd716e44519b
+TQID: https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: 294
 ht-degree: 0%
 
 ---
 
-# プロファイルの取得
+# プロファイルを取得
 
-[!DNL Target] プロファイルは、`[!DNL Experience Cloud Visitor ID]` （`ECID`）、`tntid`、`thirdPartyId` の 3 つの方法で取得できます。
+[!DNL Target] プロファイルは、次の3つの方法で取得できます。`[!DNL Experience Cloud Visitor ID]` （`ECID`）、`tntid`または`thirdPartyId`を使用します。
 
 ## [!DNL Experience Cloud Visitor ID] （ECID）の使用
 
-`ECID` に基づいてプロファイルを取得できます。 HTTP メソッドはGETである必要があります。
+`ECID`に基づいてプロファイルを取得できます。 HTTP メソッドはGETである必要があります。
 
-URL は次の例のようになります。
+URLは次の例のようになります。
 
 ```
 https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
 ```
 
-`<clientCode>` を [!DNL Target] [!UICONTROL Client Code] に、`<ECID>` を [!DNL Experience Cloud Visitor ID] （[!DNL Marketing Cloud Visitor ID]）に置き換えます。
+`<clientCode>`を[!DNL Target] [!UICONTROL Client Code]に、`<ECID>`を[!DNL Experience Cloud Visitor ID] （[!DNL Marketing Cloud Visitor ID]）に置き換えます。
 
-## tntid の使用
+## tntidの使用
 
-[!DNL Target] は、リクエストごとに自動的に `tntid` を割り当てます。
+[!DNL Target]は、リクエストごとに`tntid`を自動的に割り当てます。
 
-`tntid` を使用してプロファイルを取得するリクエストの形式の例を次に示します。
+次の例は、`tntid`を使用してプロファイルを取得するリクエスト形式を示しています。
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/your-tnt-id?client=<your-client-code>
 ```
 
-`<your-client-code>` と `your-tnt-id` を置き換えて、GETリクエストを実行します。 `tntid` を使用したプロファイル取得呼び出しの例を次に示します。
+`<your-client-code>`と`your-tnt-id`を置き換えて、GET リクエストを実行します。 次に、`tntid`を使用したプロファイルフェッチ呼び出しの例を示します。
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?client=<your-client-code>
 ```
 
-## サードパーティ ID の使用
+## thirdPartyIdの使用
 
-[!DNL Adobe Target] プロファイルは、独自の識別子（CRM ID、`uuid`、メンバーシップ番号など）で拡張できます。
+[!DNL Adobe Target] プロファイルは、独自の識別子（CRM ID、`uuid`、メンバーシップ番号など）で強化できます。
 
-プロファイルに `thirdPartyId` を添付する方法については、[&#x200B; プロファイルの更新 &#x200B;](/help/dev/administer/profile-api/profile-api-overview.md) を参照してください。
+プロファイルに`thirdPartyId`を添付する方法については、[&#x200B; プロファイルの更新](/help/dev/administer/profile-api/profile-api-overview.md)を参照してください。
 
-`thirdPartyId` を使用してプロファイルを取得するリクエストの形式の例を次に示します。
+次の例は、`thirdPartyId`を使用してプロファイルを取得するリクエスト形式を示しています。
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
-`<your-client-code>` と `your-thirdpartyid` を置き換えて、GETリクエストを実行します。 [!UICONTROL thirdpartyid] を使用したプロファイル取得呼び出しの例を次に示します。
+`<your-client-code>`と`your-thirdpartyid`を置き換えて、GET リクエストを実行します。 次に、[!UICONTROL thirdpartyid]を使用したプロファイルフェッチ呼び出しの例を示します。
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
 ```
 
-この呼び出しが行われると、[!DNL Target] は、エッジリクエストで示されたクラスター内、またはプロファイルが存在する場所で最初にプロファイルを見つけて、コンテンツを返そうとします。 プロファイルコンテンツは JSON 形式で返されます。
+この呼び出しが行われると、[!DNL Target]は、edge リクエストに記載されているクラスター内で最初にプロファイルを見つけるか、プロファイルが配置されている場所でプロファイルを見つけてコンテンツを返そうとします。 プロファイルの内容はJSON形式で返されます。
 
 ## Authentication
 
-[!DNL Target Profile API] は、ここで説明するように、[!DNL Target] UI から認証をオンにすることで保護できます。 認証をオンにすると、すべてのプロファイル API リクエストのリクエストヘッダーにプロファイル認証トークンが設定される必要があります。 トークン自体は、[!DNL Target] UI を使用するか、前述の [&#x200B; プロファイル認証トークン &#x200B;](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} の節で説明している手順を使用して生成できます。
+[!DNL Target Profile API]は、[!DNL Target] UIから認証をオンにすることで保護できます（こちらを参照）。 認証がオンになると、すべてのプロファイル API リクエストにリクエストヘッダーでプロファイル認証トークンを設定する必要があります。 トークン自体は、[!DNL Target] UIを使用するか、[&#x200B; プロファイル認証トークン &#x200B;](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} セクションで前述した手順を使用して生成できます。
 
-## 計測
+## 計量
 
-これらの呼び出しは、mbox 呼び出しにはカウントされません。
+これらの呼び出しは、mbox呼び出しにカウントされません。
 
 ## エラー処理
 
-`/thirdPartyId` への呼び出しで、無効な呼び出しまたは期限切れの `thirdPartyId` が指定された場合：
+無効または期限切れの`thirdPartyId`が指定された`/thirdPartyId`への呼び出しの場合：
 
 ```
 {"status" : 404, "message" : "No profile found for client <client_code> with third party id=<third_party_id>"}

@@ -1,18 +1,30 @@
 ---
-title: Target SDK の概要
-description: Adobe Target SDK の使用方法
+title: Target SDKの概要
+description: Adobe Target SDKの使用方法
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 0%
+source-wordcount: 622
+ht-degree: 1%
 
 ---
 
-# [!DNL Target] SDK の概要
+# [!DNL Target] SDKの概要
 
-動作を開始するには、最初の [&#x200B; オンデバイス判定 &#x200B;](../on-device-decisioning/overview.md) 機能フラグアクティビティを選択した言語で作成することをお勧めします。
+最初に、お好みの言語で最初の[&#x200B; オンデバイス決定](../on-device-decisioning/overview.md)機能フラグアクティビティを作成することをお勧めします。
 
 * Node.js
 * Java
@@ -22,28 +34,28 @@ ht-degree: 0%
 ## 手順の概要
 
 1. 組織のオンデバイス判定を有効にする
-1. SDK のインストール
-1. SDK の初期化
-1. [!DNL Adobe Target] [!UICONTROL A/B Test] アクティビティの機能フラグの設定
-1. アプリケーションでの機能の実装とレンダリング
-1. アプリケーションにイベントのトラッキングを実装
-1. [!UICONTROL A/B Test] アクティビティのアクティベート
+1. SDKのインストール
+1. SDKの初期化
+1. [!DNL Adobe Target] [!UICONTROL A/B Test] アクティビティで機能フラグを設定します
+1. アプリケーションに機能を実装してレンダリングする
+1. アプリケーションにイベントのトラッキングを実装する
+1. [!UICONTROL A/B Test] アクティビティをアクティブ化
 
-## 1.組織のオンデバイス判定を有効にする
+## &#x200B;1. 組織のオンデバイス判定を有効にする
 
-オンデバイス判定を有効にすると、[!UICONTROL A/B Test] アクティビティがほぼゼロの待ち時間で実行されるようになります。 この機能を有効にするには、**[!UICONTROL Administration]** / **[!UICONTROL Implementation]** / **[!UICONTROL Account details]** に移動し、「**[!UICONTROL On-Device Decisioning]**」トグルを有効にします。
+オンデバイス決定を有効にすると、[!UICONTROL A/B Test] アクティビティがほぼゼロの遅延で実行されます。 この機能を有効にするには、**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**&#x200B;に移動し、**[!UICONTROL On-Device Decisioning]** トグルを有効にします。
 
-![alt 画像 &#x200B;](assets/asset-odd-toggle.png)
+![alt画像](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->**[!UICONTROL On-Device Decisioning]** の切り替えを有効または無効にするには、**[!UICONTROL Admin]** または **[!UICONTROL Approver]** [&#x200B; ユーザーの役割 &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) を持っている必要があります。
+>**[!UICONTROL On-Device Decisioning]**&#x200B;切り替えを有効または無効にするには、**[!UICONTROL Admin]**&#x200B;または&#x200B;**[!UICONTROL Approver]** [&#x200B; ユーザー役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja)が必要です。
 
-「**[!UICONTROL On-Device Decisioning]**」切替スイッチを有効 [!DNL Adobe Target] すると、クライアントの [&#x200B; ルールアーティファクト &#x200B;](../on-device-decisioning/rule-artifact-overview.md) の生成を開始します。
+**[!UICONTROL On-Device Decisioning]** トグルを有効にすると、[!DNL Adobe Target]は、クライアントの[&#x200B; ルールアーティファクト &#x200B;](../on-device-decisioning/rule-artifact-overview.md)の生成を開始します。
 
-## 2. SDK をインストールする
+## &#x200B;2. SDKのインストール
 
-Node.js、Java および Python の場合は、ターミナルのプロジェクトディレクトリで次のコマンドを実行します。 .NET の場合は、[NuGet からインストール &#x200B;](https://www.nuget.org/packages/Adobe.Target.Client) して、依存関係として追加します。
+Node.js、Java、Pythonの場合は、ターミナルのプロジェクトディレクトリで次のコマンドを実行します。 .NETの場合、NuGet[&#128279;](https://www.nuget.org/packages/Adobe.Target.Client)から インストールして依存関係として追加します。
 
 >[!BEGINTABS]
 
@@ -77,9 +89,9 @@ pip install target-python-sdk
 
 >[!ENDTABS]
 
-## 3. SDK の初期化
+## &#x200B;3. SDKの初期化
 
-ルールアーティファクトは、SDK の初期化手順の間にダウンロードされます。 初期化手順をカスタマイズして、アーティファクトのダウンロードおよび使用方法を決定できます。
+ルールアーティファクトは、SDKの初期化手順でダウンロードされます。 初期化手順をカスタマイズして、アーティファクトのダウンロードと使用方法を決定できます。
 
 >[!BEGINTABS]
 
@@ -146,31 +158,31 @@ target_client = TargetClient.create(CONFIG)
 
 >[!ENDTABS]
 
-## 4. [!DNL Adobe Target] [!UICONTROL A/B Test] アクティビティの機能フラグの設定
+## &#x200B;4. [!DNL Adobe Target] [!UICONTROL A/B Test] アクティビティで機能フラグを設定します
 
-1. [!DNL Target] で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]**/**[!UICONTROL A/B test]** を選択します。
+1. [!DNL Target]で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**&#x200B;を選択します。
 
-   ![alt 画像 &#x200B;](assets/asset-ab.png)
+   ![alt画像](assets/asset-ab.png)
 
-1. **[!UICONTROL Create A/B Test Activity]** モーダルでは、デフォルトの web オプションを選択したままにし（1）、experience composer として **[!UICONTROL Form]** を選択し（2）、**[!UICONTROL No Property Restrictions]** を使用して **[!UICONTROL Default Workspace]** を選択し（3）、**[!UICONTROL Next]** をクリックします（4）。
+1. **[!UICONTROL Create A/B Test Activity]** モーダルで、デフォルトのWeb オプションを選択したままにし（1）、エクスペリエンスコンポーザーとして&#x200B;**[!UICONTROL Form]**&#x200B;を選択し（2）、**[!UICONTROL No Property Restrictions]** （3）で&#x200B;**[!UICONTROL Default Workspace]**&#x200B;を選択し、**[!UICONTROL Next]** （4）をクリックします。
 
-   ![alt 画像 &#x200B;](assets/asset-form.png)
+   ![alt画像](assets/asset-form.png)
 
-1. アクティビティ作成の **[!UICONTROL Experiences]** の手順で、アクティビティの名前を指定し（1）、**[!UICONTROL Add Experience]** をクリックして 2 つ目のエクスペリエンス Experience B を追加します（2）。 任意の場所の名前（3）を入力します。 例えば、`ondevice-featureflag` や `homepage-addtocart-featureflag` は、機能フラグテストの宛先を示す場所名です。  次の例では、エクスペリエンス B に対して定義された場所が `ondevice-featureflag` です。オプションで、オーディエンスの絞り込み（4）を追加して、アクティビティの選定を制限できます。
+1. アクティビティ作成の&#x200B;**[!UICONTROL Experiences]** ステップで、アクティビティの名前（1）を入力し、**[!UICONTROL Add Experience]** （2）をクリックして2つ目のエクスペリエンスであるエクスペリエンス Bを追加します。 選択した場所の名前を入力します（3）。 例えば、`ondevice-featureflag`または`homepage-addtocart-featureflag`は、機能フラグテストの宛先を示す場所名です。  次の例では、`ondevice-featureflag`はエクスペリエンス Bに対して定義された場所です。必要に応じて、オーディエンスの絞り込み（4）を追加して、アクティビティへの選定を制限できます。
 
-   ![alt 画像 &#x200B;](assets/asset-location.png)
+   ![alt画像](assets/asset-location.png)
 
-1. 同じページの「**[!UICONTROL CONTENT]**」セクションで、次に示すように、ドロップダウンの「**[!UICONTROL Create JSON Offer]** （1）」を選択します。
+1. 同じページの「**[!UICONTROL CONTENT]**」セクションで、図に示すように、ドロップダウン（1）で「**[!UICONTROL Create JSON Offer]**」を選択します。
 
-   ![alt 画像 &#x200B;](assets/asset-offer.png)
+   ![alt画像](assets/asset-offer.png)
 
-1. 表示される **[!UICONTROL JSON Data]** テキストボックスに、有効な JSON オブジェクト（2）を使用して、各エクスペリエンス（1）の機能フラグ変数を入力します。
+1. 表示される&#x200B;**[!UICONTROL JSON Data]** テキストボックスに、有効なJSON オブジェクト （2）を使用して、各エクスペリエンス （1）の機能フラグ変数を入力します。
 
-   エクスペリエンス A の機能フラグ変数を入力します。
+   エクスペリエンス Aの機能フラグ変数を入力します。
 
-   ![alt 画像 &#x200B;](assets/asset-json_a.png)
+   ![alt画像](assets/asset-json_a.png)
 
-   **（上記のエクスペリエンス A のサンプル JSON）**
+   **（エクスペリエンス Aのサンプル JSON、上記）**
 
    ```json {line-numbers="true"}
    {
@@ -179,11 +191,11 @@ target_client = TargetClient.create(CONFIG)
    }
    ```
 
-   エクスペリエンス B の機能フラグ変数を入力します。
+   エクスペリエンス Bの機能フラグ変数を入力します。
 
-   ![alt 画像 &#x200B;](assets/asset-json_b.png)
+   ![alt画像](assets/asset-json_b.png)
 
-   **（前述のエクスペリエンス B のサンプル JSON）**
+   **（Experience Bのサンプル JSON、上記）**
 
    ```json {line-numbers="true"}
    {
@@ -192,21 +204,21 @@ target_client = TargetClient.create(CONFIG)
    }
    ```
 
-1. **[!UICONTROL Next]** （1）をクリックして、アクティビティ作成の **[!UICONTROL Targeting]** のステップに進みます。
+1. **[!UICONTROL Next]** （1）をクリックして、アクティビティ作成の&#x200B;**[!UICONTROL Targeting]** ステップに進みます。
 
-   ![alt 画像 &#x200B;](assets/asset-next_2_t.png)
+   ![alt画像](assets/asset-next_2_t.png)
 
-1. 以下に示す **[!UICONTROL Targeting]** の手順の例では、簡単にするために、オーディエンスのターゲット設定（2）はすべての訪問者のデフォルトセットに残ります。 つまり、アクティビティはターゲット設定されていません。 ただし、Adobeでは、実稼動アクティビティのオーディエンスを常にターゲットにすることをお勧めします。 **[!UICONTROL Next]** （3）をクリックして、アクティビティ作成の **[!UICONTROL Goals & Settings]** のステップに進みます。
+1. 以下に示す&#x200B;**[!UICONTROL Targeting]** ステップの例では、簡単に説明するために、オーディエンスターゲティング （2）はすべての訪問者のデフォルトセットに残っています。 つまり、活動はターゲット化されていません。 ただし、Adobeでは、実稼動アクティビティに対してオーディエンスを常にターゲティングすることをお勧めします。 **[!UICONTROL Next]** （3）をクリックして、アクティビティ作成の&#x200B;**[!UICONTROL Goals & Settings]** ステップに進みます。
 
-   ![alt 画像 &#x200B;](assets/asset-next_2_g.png)
+   ![alt画像](assets/asset-next_2_g.png)
 
-1. **[!UICONTROL Goals & Settings]** の手順では、**[!UICONTROL Reporting Source]** を **[!UICONTROL Adobe Target]** （1）に設定します。 **[!UICONTROL Conversion]** のように **[!UICONTROL Goal Metric]** を定義し、サイトのコンバージョン指標（2）に基づいて詳細を指定します。 **[!UICONTROL Save & Close]** （3）をクリックして、アクティビティを保存します。
+1. **[!UICONTROL Goals & Settings]** ステップで、**[!UICONTROL Reporting Source]**&#x200B;を&#x200B;**[!UICONTROL Adobe Target]** （1）に設定します。 **[!UICONTROL Goal Metric]**&#x200B;を&#x200B;**[!UICONTROL Conversion]**&#x200B;として定義し、サイトのコンバージョン指標（2）に基づいて詳細を指定します。 アクティビティを保存するには、**[!UICONTROL Save & Close]** （3）をクリックします。
 
-   ![alt 画像 &#x200B;](assets/asset-conv.png)
+   ![alt画像](assets/asset-conv.png)
 
-## 5. アプリケーションで機能を実装し、レンダリングする
+## &#x200B;5. アプリケーションに機能を実装してレンダリングする
 
-[!DNL Target] で機能フラグ変数を設定したら、それらを使用するようにアプリケーションコードを変更します。 例えば、アプリケーションで機能フラグを取得した後、それを使用して機能を有効にし、訪問者が認定したエクスペリエンスをレンダリングできます。
+[!DNL Target]で機能フラグ変数を設定したら、アプリケーションコードを変更して使用します。 例えば、アプリケーションで機能フラグを取得した後、それを使用して機能を有効にし、訪問者が選定したエクスペリエンスをレンダリングできます。
 
 >[!BEGINTABS]
 
@@ -272,9 +284,9 @@ def target_client_ready():
 
 >[!ENDTABS]
 
-## 6. アプリケーションにイベントの追加トラッキングを実装する
+## &#x200B;6. アプリケーション内のイベントに対する追加のトラッキングを実装する
 
-オプションで、sendNotification （）関数を使用してコンバージョンを追跡するための追加のイベントを送信できます。
+オプションとして、sendNotification （）関数を使用して、コンバージョンを追跡するための追加のイベントを送信できます。
 
 >[!BEGINTABS]
 
@@ -382,12 +394,12 @@ target_client.send_notifications({
 
 >[!ENDTABS]
 
-## 7. [!UICONTROL A/B Test] アクティビティをアクティブ化する
+## &#x200B;7. [!UICONTROL A/B Test] アクティビティをアクティブ化
 
 1. **[!UICONTROL Activate]** （1）をクリックして、[!UICONTROL A/B Test] アクティビティをアクティブ化します。
 
    >[!NOTE]
    >
-   >この手順を実行するには、**[!UICONTROL Approver]** または **[!UICONTROL Publisher]** [&#x200B; ユーザーの役割 &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja) を持っている必要があります。
+   >この手順を実行するには、**[!UICONTROL Approver]**&#x200B;または&#x200B;**[!UICONTROL Publisher]** [&#x200B; ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja)が必要です。
 
-   ![alt 画像 &#x200B;](assets/asset-activate.png)
+   ![alt画像](assets/asset-activate.png)

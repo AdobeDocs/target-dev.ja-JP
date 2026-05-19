@@ -1,19 +1,29 @@
 ---
-title: Experience CloudのAAM セグメントとの統合
-description: Experience Cloudとの統合、Audience Managerの統合
-keywords: 配信 api, サーバーサイド，サーバーサイド，統合，audience manager, aam
+title: Experience Cloud AAMのセグメントとの連携
+description: Experience Cloudとの連携，Audience Managerとの連携
+keywords: 配信api, サーバーサイド，サーバーサイド，統合，audience manager, aam
 exl-id: c21e0200-23ba-4a0b-adf4-38e03c087f00
 feature: Implement Server-side
-source-git-commit: e3f14e97fa48ffb1f07b29aca5711d16e75faa80
+TQID: https://experienceleague.adobe.com/mc55SxaUU8BJ81hKLji9xi0-OHCux3W4R0syuVoGrIo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: 431
 ht-degree: 4%
 
 ---
 
 # AAM セグメント
 
-[!DNL Adobe Audience Manager] セグメントは、[!DNL Adobe Target] SDK を介して利用できます。 AAM セグメントを活用するには、次のフィールドを指定する必要があります。
+[!DNL Adobe Audience Manager]個のセグメントは[!DNL Adobe Target]個のSDKを使用して活用できます。 AAM セグメントを活用するには、次のフィールドを指定する必要があります。
 
 >[!NOTE]
 >
@@ -21,43 +31,43 @@ ht-degree: 4%
 
 | フィールド名 | 必須 | 説明 |
 | --- | --- | --- |
-| `locationHint` | ○ | DCS の場所のヒントは、プロファイルを取得するためにどのAAM DCS エンドポイントにヒットするかを判断するために使用されます。 1 以上にする必要があります。 |
+| `locationHint` | ○ | DCS Location Hintは、プロファイルを取得するためにヒットするAAM DCS エンドポイントを決定するために使用されます。 >= 1にする必要があります。 |
 | `marketingCloudVisitorId` | ○ | Marketing Cloud 訪問者 ID |
-| `blob` | ○ | AAM Blob は、追加データをAAMに送信するために使用されます。 サイズ &lt; 1024 の値を指定し、空白にすることはできません。 |
+| `blob` | ○ | AAM Blobは、AAMにデータを送信するために使用されます。 空白にせず、サイズ &lt;= 1024を指定してください。 |
 
-`getOffers` メソッドを呼び出すと SDK によってこれらのフィールドが自動的に入力されますが、有効な訪問者 cookie が指定されていることを確認する必要があります。 この cookie を取得するには、ブラウザーに VisitorAPI.js を実装する必要があります。
+SDKでは、`getOffers` メソッド呼び出しを行う際に、これらのフィールドが自動的に入力されますが、有効な訪問者Cookieが提供されていることを確認する必要があります。 このCookieを取得するには、ブラウザーにVisitorAPI.jsを実装する必要があります。
 
 ## 実装ガイド
 
-### Cookie の使用
+### Cookieの使用
 
-Cookie は、リクエストと [!DNL Adobe Target] リクエスト [!DNL Adobe Audience Manager] 関連付けるために使用されます。 この実装で使用する Cookie は次のとおりです。
+Cookieは、[!DNL Adobe Audience Manager]件のリクエストと[!DNL Adobe Target]件のリクエストを関連付けるために使用されます。 この実装で使用されるCookieです。
 
 | Cookie | 名前 | 説明 |
 | --- | --- | --- |
-| 訪問者 cookie | `AMCVS_XXXXXXXXXXXXXXXXXXXXXXXX%40AdobeOrg` | この cookie は、ターゲット `getOffers` 応答から `visitorState` を使用して初期化される場合に `VisitorAPI.js` によって設定されます。 |
-| target の cookie | `mbox` | Web サーバーは、target `getOffers` 応答の `targetCookie` の名前と値を使用して、この cookie を設定する必要があります。 |
+| 訪問者Cookie | `AMCVS_XXXXXXXXXXXXXXXXXXXXXXXX%40AdobeOrg` | このCookieは、ターゲット `getOffers`応答から`visitorState`で初期化されたときに`VisitorAPI.js`によって設定されます。 |
+| ターゲット Cookie | `mbox` | Web サーバーは、ターゲット `getOffers`応答の`targetCookie`の名前と値を使用してこのCookieを設定する必要があります。 |
 
 ### 手順の概要
 
-ユーザーがブラウザーに URL を入力し、そのブラウザーが web サーバーにリクエストを送信するとします。 そのリクエストを処理する場合：
+ユーザーがWeb サーバーにリクエストを送信するブラウザーにURLを入力するとします。 その要求を満たす場合：
 
-1. サーバーは、リクエストから訪問者と Target の Cookie を読み取ります。
-1. サーバーは [!DNL Target] SDK の `getOffers` メソッドを呼び出し、訪問者およびターゲット Cookie を指定します（使用可能な場合）。
-1. `getOffers` 呼び出しが実行されると、応答の `targetCookie` と `visitorState` の値が使用されます。
-   1. Cookie は、`targetCookie` から取得した値で応答に設定されます。 これは、target cookie を保持するようにブラウザーに指示する `Set-Cookie` 応答ヘッダーを使用して行われます。
-   1. `VisitorAPI.js` を初期化し、ターゲットレスポンスから `visitorState` を渡すHTMLレスポンスが準備されます。
-1. HTMLの応答がブラウザーに読み込まれます。
-   1. `VisitorAPI.js` はドキュメントのヘッダーに含まれます。
-   1. VisitorAPI は、`getOffers` SDK 応答からの `visitorState` で初期化されます。 これにより、訪問者 Cookie がブラウザーに設定され、後続のリクエストでサーバーに送信されます。
+1. サーバーは、リクエストから訪問者とターゲット Cookieを読み取ります。
+1. サーバーは[!DNL Target] SDKの`getOffers` メソッドを呼び出し、訪問者とターゲット Cookieが使用可能な場合は指定します。
+1. `getOffers`呼び出しが満たされると、応答の`targetCookie`と`visitorState`の値が使用されます。
+   1. `targetCookie`から取得した値を使用して、応答にCookieが設定されます。 これは、`Set-Cookie`応答ヘッダーを使用して実行されます。このヘッダーは、ターゲット Cookieを保持するようにブラウザーに指示します。
+   1. `VisitorAPI.js`を初期化し、ターゲット応答から`visitorState`に渡すHTML応答が用意されています。
+1. HTMLの応答がブラウザーに読み込まれます…
+   1. `VisitorAPI.js`が文書ヘッダーに含まれています。
+   1. VisitorAPIは、`getOffers` SDK応答から`visitorState`で初期化されます。 これにより、訪問者のCookieがブラウザーで設定され、その後のリクエストでサーバーに送信されます。
 
 ### サンプルコード
 
-次のコードサンプルは、上記の各手順を実装しています。 各ステップは、コード内で、実装の横にインラインコメントとして表示されます。
+次のコードサンプルは、上記の各手順を実装しています。 各ステップは、実装の横にインラインコメントとしてコードに表示されます。
 
 #### Node.js
 
-このサンプルは、[express、Node.js web フレームワーク &#x200B;](https://expressjs.com/) に基づいています。
+このサンプルは、Node.js web フレームワーク [&#128279;](https://expressjs.com/)であるexpressに依存しています。
 
 >[!BEGINTABS]
 
@@ -175,7 +185,7 @@ app.listen(3000, function () {
 
 #### Java
 
-このサンプルでは、[spring、Java web フレームワーク &#x200B;](https://spring.io/) を使用します。
+このサンプルでは、Java web フレームワーク [&#128279;](https://spring.io/)であるspringを使用しています。
 
 >[!BEGINTABS]
 
@@ -298,4 +308,4 @@ public class TargetClientService {
 
 >[!ENDTABS]
 
-`TargetRequestUtils.java` の詳細については、[&#x200B; ユーティリティメソッド（Java） &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html?lang=ja){target=_blank} を参照してください
+`TargetRequestUtils.java`について詳しくは、[&#x200B; ユーティリティ メソッド （Java） &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html?lang=ja){target=_blank}を参照してください

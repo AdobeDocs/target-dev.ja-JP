@@ -1,55 +1,62 @@
 ---
-title: API を使用してRecommendations カタログを管理する方法
-description: Adobe Target API を使用してRecommendations カタログのエンティティを作成、更新、保存、取得および削除するために必要な手順です。
+title: APIを使用したレコメンデーションカタログの管理方法
+description: Adobe Target APIを使用して、レコメンデーションカタログ内のエンティティを作成、更新、保存、取得、および削除するために必要な手順。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: 905
 ht-degree: 0%
 
 ---
 
-# API を使用したRecommendations カタログの管理
+# APIを使用したレコメンデーションカタログの管理
 
-[Recommendations API を使用するための要件 &#x200B;](/help/dev/before-administer/recs-api/overview.md#prerequisites) を満たしていることを確認しながら、JWT 認証フローを使用して [&#x200B; アクセストークンを生成 &#x200B;](/help/dev/before-administer/configure-authentication.md) し、[Adobe Developer Consoleで [!DNL Adobe Target] 管理 API を使用する方法を学びました &#x200B;](https://developer.adobe.com/console/home)。
+Recommendations API[&#128279;](/help/dev/before-administer/recs-api/overview.md#prerequisites)を使用するための要件を満たしていることを確認しながら、JWT認証フローを使用して[&#x200B; アクセストークン &#x200B;](/help/dev/before-administer/configure-authentication.md)を生成し、[Adobe Developer Console](https://developer.adobe.com/console/home)で[!DNL Adobe Target]管理APIを使用する方法を学習しました。
 
-[Recommendations API](https://developer.adobe.com/target/administer/recommendations-api/) を使用して、Recommendations カタログのアイテムを追加、更新、削除できるようになりました。 その他のAdobe Target管理 API と同様に、Recommendations API には認証が必要です。
+[Recommendations API](https://developer.adobe.com/target/administer/recommendations-api/)を使用して、レコメンデーションカタログ内の項目を追加、更新、または削除できるようになりました。 その他のAdobe Target管理APIと同様に、Recommendations APIには認証が必要です。
 
 >[!NOTE]
 >
->24 時間後に期限切れになるので、認証用にアクセストークンを更新する必要がある場合は、いつでも **[!UICONTROL IMS: JWT Generate + Auth via User Token]** リクエストを送信します。 手順については、[AdobeAPI 認証の設定 &#x200B;](../configure-authentication.md) を参照してください。
+>認証のためにアクセストークンを更新する必要がある場合は、24時間後に有効期限が切れるため、**[!UICONTROL IMS: JWT Generate + Auth via User Token]** リクエストを送信します。 手順については、[Adobe API認証の設定](../configure-authentication.md)を参照してください。
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-続行する前に、[Recommendations Postman コレクション &#x200B;](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman) を取得します。
+続行する前に、[Recommendations Postman コレクション &#x200B;](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman)を入手してください。
 
-## エンティティ保存 API を使用した項目の作成と更新
+## エンティティを保存APIを使用したアイテムの作成と更新
 
-商品ページで発生する CSV 商品フィードや Target リクエストではなく、API を使用してRecommendations商品データベースに入力するには、[Save Entities API](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities) を使用します。 このリクエストは、単一の Target 環境で項目を追加または更新します。 構文は次のとおりです。
+CSV製品フィードまたは製品ページで実行されるTarget リクエストではなく、APIを使用してRecommendations製品データベースにデータを入力するには、[&#x200B; エンティティを保存API](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities)を使用します。 このリクエストは、単一のTarget環境の項目を追加または更新します。 構文は次のとおりです。
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
 ```
 
-例えば、保存エンティティを使用して、在庫や価格のしきい値など、特定のしきい値に達した場合に常にアイテムを更新し、アイテムにフラグを立て、アイテムが推奨されないようにすることができます。
+例えば、特定のしきい値（在庫や価格のしきい値など）を満たした場合に、これらの項目にフラグを立てて推奨されないようにするために、エンティティを保存を使用して項目を更新できます。
 
-1. **[!UICONTROL Target]**/**[!UICONTROL Setup]**/**[!UICONTROL Hosts]**/**[!UICONTROL CONTROL Environments]** に移動して、項目を追加または更新するターゲット環境 ID を取得します。
+1. **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL CONTROL Environments]**&#x200B;に移動して、項目を追加または更新するターゲット環境IDを取得します。
 
    ![SaveEntities1](assets/SaveEntities01.png)
 
-1. `TENANT_ID` を確認し、前 `API_KEY` 確立したPostman環境変数を参照します。 比較のために以下の画像を使用してください。 必要に応じて、API リクエストのヘッダーとパスを変更して、以下の画像のヘッダーとパスに一致させます。
+1. `TENANT_ID`と`API_KEY`が、以前に確立されたPostman環境変数を参照していることを確認します。 以下の画像を使用して比較してください。 必要に応じて、API リクエストのヘッダーとパスを、以下の画像のヘッダーとパスと一致するように変更します。
 
    ![SaveEntities3](assets/SaveEntities03.png)
 
-1. JSON を **raw** コードとして **Body** に入力します。 `environment` 変数を使用して、環境 ID を必ず指定してください。 （以下の例では、環境 ID は 6781 です。）
+1. JSONを&#x200B;**raw** コードとして&#x200B;**Body**&#x200B;に入力します。 `environment`変数を使用して、環境IDを指定することを忘れないでください。 （以下の例では、環境IDは6781です）。
 
    ![SaveEntities4.png](assets/SaveEntities04.png)
 
-   以下は、Toaster Oven 製品の関連するエンティティ値に entity.id kit2001 を追加して、環境 6781 に送信する JSON のサンプルです。
+   以下は、entity.id kit2001をToaster Oven製品の関連するエンティティ値と共に環境6781に追加するサンプル JSONです。
 
    ```
        {
@@ -72,11 +79,11 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
        }
    ```
 
-1. 「**[!UICONTROL Send]**」をクリックします。 次の応答が届きます。
+1. **[!UICONTROL Send]** をクリックします。 次の応答が返されます。
 
    ![SaveEntities5.png](assets/SaveEntities05.png)
 
-   JSON オブジェクトは、複数の製品を送信するようにスケールできます。 例えば、この JSON は 2 つのエンティティを指定します。
+   JSON オブジェクトは、複数の製品を送信するように拡張できます。 例えば、このJSONは2つのエンティティを指定します。
 
    ```
        {
@@ -116,54 +123,54 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
        }
    ```
 
-1. さあ、君の番だ。 **[!UICONTROL Save Entities]** API を使用して、次の項目をカタログに追加します。 上記のサンプル JSON を出発点として使用します。 （追加のエンティティを含めるには、JSON を拡張する必要があります）。
+1. 今度はお前の番だ！ **[!UICONTROL Save Entities]** APIを使用して、次の項目をカタログに追加します。 上記のサンプル JSONを出発点として使用します。 （追加のエンティティを含めるようにJSONを拡張する必要があります）。
 
    ![SaveEntities6.png](assets/SaveEntities06.png)
 
-これら最後の 2 つの項目は属していないようです。 **[!UICONTROL Get Entity]** API を使用して検査し、必要に応じて **[!UICONTROL Delete Entities]** API を使用して削除します。
+最後の2つは属していないようです。 **[!UICONTROL Get Entity]** APIを使用して調査し、必要に応じて&#x200B;**[!UICONTROL Delete Entities]** APIを使用して削除します。
 
-## Get Entity API を使用した項目の詳細の取得
+## Get Entity APIを使用した項目の詳細の取得
 
-既存の項目の詳細を取得するには、[Get Entity API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getEntity) を使用します。 構文は次のとおりです。
+既存の項目の詳細を取得するには、[Get Entity API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getEntity)を使用します。 構文は次のとおりです。
 
 ```
 GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 ```
 
-エンティティの詳細は、一度に 1 つのエンティティに対してのみ取得できます。 「エンティティを取得」を使用して、カタログで更新が正常に行われたことを確認したり、カタログのコンテンツを監査したりできます。
+エンティティの詳細は、一度に1つのエンティティに対してのみ取得できます。 「エンティティを取得」を使用して、カタログ内で予定どおりに更新が行われたことを確認したり、カタログの内容を監査したりできます。
 
-1. API リクエストで、変数 `entityId` を使用してエンティティ ID を指定します。 次の例では、entityId=kit2004 を持つエンティティの詳細を返します。
+1. API リクエストで、変数`entityId`を使用してエンティティ IDを指定します。 次の例では、entityId=kit2004のエンティティの詳細を返します。
 
    ![GetEntity1](assets/GetEntity1.png)
 
-1. `TENANT_ID` を確認し、前 `API_KEY` 確立したPostman環境変数を参照します。 比較のために以下の画像を使用してください。 必要に応じて、API リクエストのヘッダーとパスを変更して、以下の画像のヘッダーとパスに一致させます。
+1. `TENANT_ID`と`API_KEY`が、以前に確立されたPostman環境変数を参照していることを確認します。 以下の画像を使用して比較してください。 必要に応じて、API リクエストのヘッダーとパスを、以下の画像のヘッダーとパスと一致するように変更します。
 
    ![GetEntity2](assets/GetEntity2.png)
 
 1. リクエストを送信します。
 
    ![GetEntity3](assets/GetEntity3.png)
-上の例に示すように、「エンティティが見つかりませんでした」というエラーが表示された場合は、正しい Target 環境にリクエストを送信していることを確認します。
+上記の例に示すように、エンティティが見つからなかったというエラーが表示された場合は、リクエストを正しいTarget環境に送信していることを確認してください。
 
 
 
    >[!NOTE]
    >
-   >環境が明示的に指定されていない場合、Get Entity は自分の [&#x200B; デフォルト環境 &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=ja) からのみエンティティの取得を試みます。 デフォルト環境以外の環境から取り込む場合は、環境 ID を指定する必要があります。
+   >環境が明示的に指定されていない場合、「エンティティを取得」では、[&#x200B; デフォルト環境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=ja)のみからエンティティを取得しようとします。 デフォルト環境以外の環境から取得する場合は、環境IDを指定する必要があります。
 
 1. 必要に応じて、`environmentId` パラメーターを追加し、リクエストを再送信します。
 
    ![GetEntity4](assets/GetEntity4.png)
 
-1. 別の **[!UICONTROL Get Entity]** リクエストを送信します。今回は、entityId=kit2005 を持つエンティティを調べます。
+1. 別の&#x200B;**[!UICONTROL Get Entity]** リクエストを送信します。今回は、entityId=kit2005のエンティティを検査します。
 
    ![GetEntity5](assets/GetEntity5.png)
 
-これらのエンティティをカタログから削除する必要があると判断したとします。 **[!UICONTROL Delete Entities]** API を使用しましょう。
+これらのエンティティをカタログから削除する必要があるとします。 **[!UICONTROL Delete Entities]** APIを使用しましょう。
 
-## エンティティ削除 API を使用した項目の削除
+## エンティティを削除APIを使用した項目の削除
 
-カタログから項目を削除するには、[&#x200B; エンティティ削除 API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteEntities) を使用します。 構文は次のとおりです。
+カタログから項目を削除するには、[&#x200B; エンティティを削除API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteEntities)を使用します。 構文は次のとおりです。
 
 ```
 DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimited-entity-ids]&environment=[environmentId]
@@ -171,21 +178,21 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
 >[!WARNING]
 >
->Delete Entities API は、指定した ID によって参照されているエンティティを削除します。 エンティティ ID が指定されていない場合、指定された環境内のすべてのエンティティが削除されます。 環境 ID が指定されていない場合、エンティティはすべての環境から削除されます。 これを使用する際は注意が必要です。
+>エンティティを削除APIは、指定したIDで参照されているエンティティを削除します。 エンティティ IDが指定されていない場合、指定された環境内のすべてのエンティティが削除されます。 環境IDが指定されていない場合、エンティティはすべての環境から削除されます。 慎重に使用してください。
 
-1. **[!UICONTROL Target]**/**[!UICONTROL Setup]**/**[!UICONTROL Hosts]**/**[!UICONTROL Environments]** に移動し、項目を削除するターゲット環境 ID を取得します。
+1. **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL Environments]**&#x200B;に移動して、項目を削除するターゲット環境IDを取得します。
 
    ![DeleteEntities1](assets/SaveEntities01.png)
 
-1. API リクエストで、構文 `&ids=[comma-delimited-entity-ids]` （クエリパラメーター）を使用して、削除するエンティティのエンティティ ID を指定します。 複数のエンティティを削除する場合は、コンマを使用して ID を区切ります。
+1. API リクエストで、構文`&ids=[comma-delimited-entity-ids]` （クエリパラメーター）を使用して、削除するエンティティのエンティティ IDを指定します。 複数のエンティティを削除する場合は、コンマを使用してIDを分離します。
 
    ![DeleteEntities2](assets/DeleteEntities2.png)
 
-1. 構文 `&environment=[environmentId]` を使用して環境 ID を指定します。指定しない場合は、すべての環境のエンティティが削除されます。
+1. 構文`&environment=[environmentId]`を使用して環境IDを指定します。指定しないと、すべての環境のエンティティが削除されます。
 
    ![DeleteEntities3](assets/DeleteEntities3.png)
 
-1. `TENANT_ID` を確認し、前 `API_KEY` 確立したPostman環境変数を参照します。 比較のために以下の画像を使用してください。 必要に応じて、API リクエストのヘッダーとパスを変更して、以下の画像のヘッダーとパスに一致させます。
+1. `TENANT_ID`と`API_KEY`が、以前に確立されたPostman環境変数を参照していることを確認します。 以下の画像を使用して比較してください。 必要に応じて、API リクエストのヘッダーとパスを、以下の画像のヘッダーとパスと一致するように変更します。
 
    ![DeleteEntities4](assets/DeleteEntities4.png)
 
@@ -193,12 +200,12 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
    ![DeleteEntities5](assets/DeleteEntities5.png)
 
-1. **[!UICONTROL Get Entity]** を使用して結果を確認します。これにより、削除されたエンティティが見つからないことが示されます。
+1. **[!UICONTROL Get Entity]**&#x200B;を使用して結果を確認します。削除されたエンティティが見つかりません。
 
    ![DeleteEntities6](assets/DeleteEntities6.png)
 
    ![DeleteEntities6](assets/DeleteEntities7.png)
 
-おめでとうございます。 Recommendations API を使用して、カタログ内のエンティティの詳細を作成、更新、削除および取得できるようになりました。 次の節では、カスタム条件の管理方法について説明します。
+おめでとうございます。 Recommendations APIを使用して、カタログ内のエンティティの詳細を作成、更新、削除、取得できるようになりました。 次の節では、カスタム条件の管理方法について説明します。
 
-&lt;!— [&#x200B; 次の「カスタム条件の管理」 >](manage-custom-criteria.md) —>
+&lt;!— [次の「カスタム条件を管理」 >](manage-custom-criteria.md) —>

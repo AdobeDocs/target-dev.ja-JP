@@ -1,13 +1,25 @@
 ---
-keywords: targetPageParams、targetpageparams、pageParams、pageparams、ページパラメーター、at.js、functions、function、targetPageParams0
-description: at.js JavaScript ライブラリの [!UICONTROL targetPageParams()] 関数を使用して  [!DNL Adobe Target]  リクエストコードの外部からグローバル mbox にパラメーターを添付します。
-title: '[!UICONTROL targetPageParams()] 関数の使用方法'
+keywords: targetPageParams, targetpageparams, pageParams, pageparams, page params, page parameters, at.js, functions, function, targetPageParams0
+description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL targetPageParams()]関数を使用して、リクエストコードの外部からグローバル mboxにパラメーターを添付します。'
+title: How Do I Use the [!UICONTROL targetPageParams()] Function?
 feature: at.js
 exl-id: 274e4d1f-843a-443b-ad98-7139dc4a13f8
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/xaSxd1biZ8G-LmgYN4YW9BZ2lDyjZyPHOOlfnbXC2jU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 68%
+source-wordcount: 162
+ht-degree: 73%
 
 ---
 
@@ -15,7 +27,7 @@ ht-degree: 68%
 
 このメソッドにより、リクエストコードの外部からグローバル mbox にパラメーターを付加できます。
 
-この関数は、同じパラメーターのセットを複数の mbox 呼び出しに含めるのに非常に便利です。この関数は、お客様によって定義される必要があります。グローバル mbox リクエストにのみ渡されるパラメーターの配列を返す必要があります。この関数は、at.js が読み込まれる前か、**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]** > **[!UICONTROL Library Header]** で定義できます。
+この関数は、同じパラメーターのセットを複数の mbox 呼び出しに含めるのに非常に便利です。 この関数は、お客様によって定義される必要があります。 グローバル mbox リクエストにのみ渡されるパラメーターの配列を返す必要があります。 この関数は、at.jsが読み込まれる前、または&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]** > **[!UICONTROL Library Header]**&#x200B;で定義できます。
 
 次のいずれかの方法で、`[!UICONTROL targetPageParams()]` 関数を使用して target-global-mbox にパラメーターを渡せます。
 

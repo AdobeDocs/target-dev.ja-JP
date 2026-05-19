@@ -1,24 +1,35 @@
 ---
-title: オーディエンスのターゲティング
-description: オーディエンスを使用すると、実験およびパーソナライゼーションアクティビティのターゲットを設定できます。 [!DNL Adobe Target]  は、すぐに使用できる無数の強力なオーディエンスターゲット設定機能をサポートしています。
+title: オーディエンスターゲティング
+description: オーディエンスを使用すると、実験やパーソナライゼーション活動のターゲットを設定できます。 [!DNL Adobe Target] は、すぐに使用できる強力なオーディエンスターゲティング機能をサポートしています。
 exl-id: df1bd856-e848-452c-90a0-abf29e7a2313
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/BmKrCmWIkEkNHiipZ-DqDlhzOT7bVmKHl9de5uXhJQU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 26%
+source-wordcount: 1069
+ht-degree: 18%
 
 ---
 
-# オーディエンスのターゲティング
+# オーディエンスターゲティング
 
 ## 概要
 
-オーディエンスを使用すると、実験およびパーソナライゼーションアクティビティのターゲットを設定できます。 [!DNL Adobe Target] は、すぐに使用できる無数の強力なオーディエンスターゲット設定機能をサポートしています。 [&#x200B; オーディエンスターゲティング &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html?lang=ja) には、次の属性を使用できます。
+オーディエンスは、実験とパーソナライゼーションの活動をターゲットにするために使用できます。 [!DNL Adobe Target]は、標準で用意されている多数の強力なオーディエンスターゲティング機能をサポートしています。 [&#x200B; オーディエンスターゲティング &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html?lang=ja)では、次の属性を使用できます。
 
-### [!DNL Target] Library
+### [!DNL Target] ライブラリ
 
-詳しくは、[[!DNL Target]  ライブラリ &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=ja) を参照してください。
+詳しくは、[[!DNL Target]  ライブラリ &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=ja)を参照してください。
 &#x200B;
 * Bing から
 * Chrome ブラウザー
@@ -36,8 +47,8 @@ ht-degree: 26%
 
 ### 地域
 
-詳しくは、[&#x200B; 地域 &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=ja) を参照してください。
-&#x200B;&#x200B;
+詳しくは、[地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=ja)を参照してください。
+&#x200B;
 * 国 / 地域
 * 都道府県
 * 市区町村
@@ -49,7 +60,7 @@ ht-degree: 26%
 
 ### ネットワーク
 
-詳しくは、「[&#x200B; ネットワーク &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=ja)」を参照してください。
+詳しくは、[&#x200B; ネットワーク &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=ja)を参照してください。
 
 * ISP
 * ドメイン名
@@ -71,13 +82,13 @@ ht-degree: 26%
 
 ### カスタム
 
-詳しくは、[&#x200B; カスタムパラメーター &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) を参照してください。
+詳しくは、[&#x200B; カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja)を参照してください。
 
-* 任意のキーと値のペア
+* 任意のキー/値のペア
 
 ### オペレーティングシステム
 
-詳しくは、[&#x200B; オペレーティングシステム &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=ja) を参照してください。
+詳しくは、[&#x200B; オペレーティングシステム &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=ja)を参照してください。
 
 * Linux
 * Macintosh
@@ -85,7 +96,7 @@ ht-degree: 26%
 
 ### サイトのページ
 
-詳しくは、「[&#x200B; サイトのページ &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=ja)」を参照してください。
+詳しくは、[&#x200B; サイトページ &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=ja)を参照してください。
 
 * 現在のページ
 * 前のページ
@@ -94,7 +105,7 @@ ht-degree: 26%
 
 ### ブラウザー
 
-詳しくは、[&#x200B; ブラウザー &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=ja) を参照してください。
+詳しくは、[&#x200B; ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=ja)を参照してください。
 
 * タイプ
 * 言語
@@ -102,13 +113,13 @@ ht-degree: 26%
 
 ### 訪問者プロファイル
 
-詳しくは、[&#x200B; 訪問者プロファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja) を参照してください。
+詳しくは、[訪問者プロファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja)を参照してください。
 
-* 永続する任意のキーと値のペア
+* 永続化される任意のキーと値のペア
 
 ### トラフィックソース
 
-詳しくは、[&#x200B; トラフィックソース &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=ja) を参照してください。
+詳しくは、[&#x200B; トラフィックソース &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=ja)を参照してください。
 
 * Baidu から
 * Bing から
@@ -126,11 +137,11 @@ ht-degree: 26%
 
 ## クライアントヒント
 
-ブラウザー、オペレーティングシステム、モバイルオーディエンス属性およびプロファイルスクリプトの特定のインスタンスを正しくセグメント化するには、[!DNL Adobe Target] に Client Hints が必要です。 背景情報について詳しくは、[User Agent and Client Hints](../../../client-side/atjs/user-agent-and-client-hints.md) を参照してください。
+[!DNL Adobe Target]には、ブラウザー、オペレーティングシステム、およびモバイルオーディエンス属性の正しいセグメント化と、プロファイルスクリプトの特定のインスタンスに対するクライアントヒントが必要です。 背景の詳細については、[&#x200B; ユーザーエージェントとクライアントヒント &#x200B;](../../../client-side/atjs/user-agent-and-client-hints.md)を参照してください。
 
-### Client Hints を [!DNL Adobe Target] に渡す方法
+### クライアントヒントを[!DNL Adobe Target]に渡す方法
 
-Node.js SDK v2.4.0 および Java SDK v2.3.0 以降では、`getOffers()` 呼び出しを使用してクライアントヒントを [!DNL Target] に送信できます。 Client Hints は、User Agent と共に `request.context` オブジェクトに含める必要があります。
+Node.js SDK v2.4.0およびJava SDK v2.3.0以降、クライアントヒントは`getOffers()`呼び出しを介して[!DNL Target]に送信できます。 クライアントヒントは、ユーザーエージェントと共に`request.context` オブジェクトに含める必要があります。
 
 >[!BEGINTABS]
 
@@ -193,25 +204,25 @@ TargetDeliveryRequest request = TargetDeliveryRequest.builder()
 
 ## オンデバイス判定
 
-次の表に、オンデバイス判定でサポートされるオーディエンスルールとサポートされないオーディエンスルールを示します。
+次の表は、オンデバイス決定でサポートされているオーディエンスルールまたはサポートされていないオーディエンスルールを示しています。
 
 | オーディエンスルール | オンデバイス判定 |
 | --- | --- |
 | [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=ja) | ○ |
 | [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=ja) | × |
 | [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=ja) | × |
-| [&#x200B; カスタムパラメーター &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) | ○ |
+| [&#x200B; カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) | ○ |
 | [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=ja) | ○ |
 | [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=ja) | ○ |
 | [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=ja) | ○ |
 | [訪問者プロファイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja) | × |
 | [トラフィックソース](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=ja) | × |
 | [時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=ja) | ○ |
-| [Experience Cloudオーディエンス &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=ja) （Adobe Audience Manager、Adobe AnalyticsおよびAdobe Experience Managerのオーディエンス） | × |
+| [Experience Cloud Audiences](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=ja) （Adobe Audience Manager、Adobe Analytics、Adobe Experience Managerのオーディエンス） | × |
 
-### オンデバイス判定のためのジオターゲティング
+### オンデバイス判定のための地域ターゲティング
 
-ジオベースのオーディエンスを使用したオンデバイス判定アクティビティの待ち時間をほぼゼロに保つために、Adobeは `getOffers` の呼び出しでジオバリューを自分で指定することをお勧めします。 これを行うには、リクエストの `Context` に `Geo` オブジェクトを設定します。 つまり、サーバーには、各エンドユーザーの場所を判断する方法が必要になります。 例えば、サーバーは、設定したサービスを使用して IP からジオルックアップを実行する場合があります。 Google Cloud など、一部のホスティングプロバイダーは、各 `HttpServletRequest` ージのカスタムヘッダーを介してこの機能を提供します。
+位置情報ベースのオーディエンスを使用したオンデバイスの意思決定アクティビティの遅延をほぼゼロに近く維持するために、Adobeでは、`getOffers`への呼び出しで位置情報の値を自分で指定することをお勧めします。 これを行うには、リクエストの`Context`で`Geo` オブジェクトを設定します。 つまり、サーバーには、各エンドユーザーの場所を決定する方法が必要になります。 例えば、設定したサービスを使用して、サーバーがIPから地域へのルックアップを実行する場合があります。 Google Cloudなどの一部のホスティングプロバイダーは、各`HttpServletRequest`のカスタムヘッダーを使用してこの機能を提供します。
 
 >[!BEGINTABS]
 
@@ -270,7 +281,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-ただし、サーバーで IP からジオベースの検索を実行できない場合でも、ジオベースのオーディエンスを含んだ `getOffers` リクエストに対してオンデバイス判定を実行すると、これもサポートされます。 このアプローチの欠点は、リモートの IP からジオルックアップを使用することで、各 `getOffers` 呼び出しに待ち時間が追加されることです。 この待ち時間は、サーバーの近くにある CDN にヒットするため、リモート `getOffers` 呼び出しよりも短くなる必要があります。 SDK がユーザーの IP アドレスの位置情報を取得するには、リクエストの `Context` に `Geo` オブジェクトの `ipAddress` フィールドを **のみ** 指定する必要があります。 `ipAddress` 以外のフィールドが指定された場合、[!DNL Target] SDK は解決のために位置情報メタデータを取得しません。
+ただし、サーバーでIPから地域への検索を実行する機能がないものの、地域ベースのオーディエンスを含む`getOffers`要求に対してデバイス上で決定を実行したい場合は、これもサポートされます。 このアプローチの欠点は、リモート IP-to-Geo ルックアップを使用することで、各`getOffers`呼び出しに遅延が追加されることです。 サーバーの近くにあるCDNにヒットするため、この待ち時間はリモート `getOffers`呼び出しよりも低くしてください。 SDKがユーザーのIP アドレスの位置情報を取得するには、リクエストの`Context`の`Geo` オブジェクトの`ipAddress` フィールドを&#x200B;**のみ**&#x200B;で指定する必要があります。 `ipAddress`以外のフィールドが指定されている場合、[!DNL Target] SDKは解決のために位置情報メタデータを取得しません。
 
 >[!BEGINTABS]
 
@@ -318,20 +329,20 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-## サーバーサイドの決定
+## サーバーサイド決定
 
-次の表に、サーバー側判定でサポートされるオーディエンスルールとサポートされないオーディエンスルールを示します。
+次の表に、サーバーサイド決定でサポートされているオーディエンスルールまたはサポートされていないオーディエンスルールを示します。
 
-| オーディエンスルール | サーバー側決定 |
+| オーディエンスルール | サーバーサイド決定 |
 | --- | --- |
 | [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=ja) | ○ |
 | [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=ja) | ○ |
 | [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=ja) | ○ |
-| [&#x200B; カスタムパラメーター &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) | ○ |
+| [&#x200B; カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=ja) | ○ |
 | [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=ja) | ○ |
 | [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=ja) | ○ |
 | [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=ja) | ○ |
 | [訪問者プロファイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja) | ○ |
 | [トラフィックソース](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=ja) | ○ |
 | [時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=ja) | ○ |
-| [Experience Cloudオーディエンス &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=ja) （Adobe Audience Manager、Adobe AnalyticsおよびAdobe Experience Managerのオーディエンス） | ○ |
+| [Experience Cloud Audiences](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=ja) （Adobe Audience Manager、Adobe Analytics、Adobe Experience Managerのオーディエンス） | ○ |

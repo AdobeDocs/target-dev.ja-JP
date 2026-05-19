@@ -4,9 +4,14 @@ description: Adobe Target Delivery API と SDK
 keywords: Delivery API
 exl-id: fc3996e6-8945-437c-9574-cc3f1a406f54
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ctDEksYd-dwv5oe9QC1NMGsGUVoTdsxXDtoxg-ah2ks
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: 262
 ht-degree: 100%
 
 ---
@@ -49,4 +54,4 @@ Java SDK の [changelog](https://github.com/adobe/target-java-sdk/blob/main/CHAN
 
 Python SDK の [changelog](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) を読み取ります。
 
-&lt;!-- Judy: remove or modify this page? 他の場所で十分に説明されていますか？ または、.NET と Python SDK に関する類似の情報へのリンクを追加しますか？ -->
+<!-- Judy: remove or modify this page? adequately covered elsewhere? Or, add links to analogous info for the .NET and Python SDKs? -->

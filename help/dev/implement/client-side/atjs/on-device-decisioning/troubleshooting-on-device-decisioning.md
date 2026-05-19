@@ -1,61 +1,73 @@
 ---
-keywords: 実装，javascript ライブラリ，js, atjs, オンデバイス判定，デバイス判定，at.js, オンデバイス，デバイス，トラブルシューティング，トラブルシューティング，実装 2
-description: at.js ライブラリを使用した [!UICONTROL on-device decisioning] のトラブルシューティング方法を説明します。
-title: at.js JavaScript ライブラリを使用してオンデバイス判定のトラブルシューティングをおこなうには、どうすればよいですか？
+keywords: 実装，javascript ライブラリ，js, atjs, オンデバイス判定，オンデバイス判定，at.js, オンデバイス，オンデバイス，トラブルシューティング，トラブルシューティング，実装2
+description: at.js ライブラリを使用して[!UICONTROL on-device decisioning]をトラブルシューティングする方法を説明します。
+title: at.js JavaScript ライブラリを使用したオンデバイス判定のトラブルシューティング方法を教えてください。
 feature: at.js
 exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/Ji3jAHC0Ek7FrVnabEEMm-KCtxJLJ5rSz4uyi6sWpiE
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: 267
 ht-degree: 0%
 
 ---
 
-# at.js の [!UICONTROL on-device decisioning] のトラブルシューティング
+# at.jsの[!UICONTROL on-device decisioning]のトラブルシューティング
 
-at.js JavaScript ライブラリを使用して [!UICONTROL on-device decisioning] のトラブルシューティングを行 [!UICONTROL Adobe Target] には、次の手順を実行します。
+at.js JavaScript ライブラリを使用して[!UICONTROL Adobe Target]の[!UICONTROL on-device decisioning]をトラブルシューティングするには、次の手順を実行します。
 
-## 手順 1:at.js のコンソールログを有効にする
+## 手順1:at.jsのコンソールログを有効にする
 
-URL パラメーター `mboxDebug=1` を追加すると、at.js でブラウザーのコンソールにメッセージを印刷できます。
+URL パラメーター`mboxDebug=1`を追加すると、at.jsはブラウザーのコンソールにメッセージを印刷できるようになります。
 
-すべてのメッセージには、概要を見やすくするために「AT:」というプレフィックスが含まれています。 アーティファクトが正常に読み込まれたことを確認するには、コンソールログに次のようなメッセージが含まれています。
+すべてのメッセージには、便利な概要のために「AT:」というプレフィックスが含まれています。 アーティファクトが正常に読み込まれることを確認するには、コンソールログに次のようなメッセージを含める必要があります。
 
 ```
 AT: LD.ArtifactProvider fetching artifact - https://assets.adobetarget.com/your-client-cide/production/v1/rules.json
 AT: LD.ArtifactProvider artifact received - status=200
 ```
 
-次の図は、コンソールログに表示されるこれらのメッセージを示しています。
+次の図は、コンソールログ内のこれらのメッセージを示しています。
 
-（全幅に拡大するには、画像をクリックします）。
+（画像をクリックして全幅に拡大します）。
 
-![&#x200B; アーティファクト メッセージを含むコンソール ログ &#x200B;](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png " アーティファクト メッセージを含むコンソール ログ "){zoomable="yes"}
+![&#x200B; アーティファクトメッセージを含むコンソールログ &#x200B;](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png " アーティファクトメッセージを含むコンソールログ "){zoomable="yes"}
 
-## 手順 2：ブラウザーの「ネットワーク」タブでルールアーティファクトのダウンロードを確認する
+## 手順2：ブラウザーの「ネットワーク」タブでルールアーティファクトのダウンロードを確認する
 
 ブラウザーの「ネットワーク」タブを開きます。
 
-例えば、Google Chromeで DevTools を開くには：
+例えば、Google Chromeで開発ツールを開くには、次の手順を実行します。
 
-1. Ctrl + Shift + J キー（Windows）または Command + Option + J キー（Mac）を押します。
+1. Ctrl + Shift + J キー（Windows）またはCommand + Option + J キー（Mac）を押します。
 1. 「ネットワーク」タブに移動します。
-1. キーワード「rules.json」で呼び出しをフィルタリングして、アーティファクトのルールファイルのみが表示されるようにします。
+1. キーワード「rules.json」で呼び出しをフィルタリングして、アーティファクトルールファイルのみが表示されるようにします。
 
-   さらに、「/delivery|rules.json/」でフィルタリングすると、すべての Target 呼び出しとアーティファクトの rules.json を表示できます。
+   さらに、「/delivery|rules.json/」でフィルタリングして、すべてのTarget呼び出しとアーティファクトのrules.jsonを表示できます。
 
    ![Google Chromeの「ネットワーク」タブ &#x200B;](assets/rule-json.png)
 
-## 手順 3:at.js カスタムイベントを使用したルールアーティファクトのダウンロードの検証
+## 手順3:at.js カスタムイベントを使用したルールアーティファクトのダウンロードの確認
 
-at.js ライブラリは、[!UICONTROL on-device decisioning] れをサポートするために 2 つの新しいカスタムイベントをディスパッチします。
+at.js ライブラリは、[!UICONTROL on-device decisioning]をサポートするために2つの新しいカスタムイベントをディスパッチします。
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`
 
-アーティファクトルールファイルのダウンロードの成功または失敗に対して、アプリケーションでこれらのカスタムイベントをリッスンしてアクションを実行するように購読できます。
+アーティファクトルールファイルのダウンロードが成功または失敗した場合に、アプリケーションでこれらのカスタムイベントをリッスンしてアクションを実行できます。
 
-次の例は、アーティファクトのダウンロードの成功および失敗イベントをリッスンするコードのサンプルを示しています。
+次の例は、アーティファクトダウンロードの成功イベントと失敗イベントをリッスンするコードの例を示しています。
 
 ```javascript {line-numbers="true"}
 document.addEventListener(adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED, function(e) { 

@@ -1,119 +1,126 @@
 ---
 title: カスタム条件の管理方法
-description: Adobe Target API を使用してAdobe Target Recommendationsの条件を管理、作成、リスト化、編集、取得および削除するために必要な手順です。
+description: Adobe Target APIを使用して、Adobe Target Recommendationsの条件を管理、作成、一覧表示、編集、取得、および削除するために必要な手順。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: 930
 ht-degree: 0%
 
 ---
 
-# カスタム条件の管理
+# カスタム条件を管理
 
-Recommendationsが提供するアルゴリズムで、宣伝したい特定の商品を提示できない場合があります。 その場合、カスタム条件は、特定の主要な項目またはカテゴリに対して、推奨される特定の項目セットを配信する方法を提供します。
+Recommendationsが提供するアルゴリズムが、プロモーションする特定の項目を表示できない場合があります。 このような場合、カスタム基準を使用すると、特定の主要項目またはカテゴリに対して特定の推奨項目のセットを配信できます。
 
-カスタム条件を作成するには、キー項目またはカテゴリと推奨項目の間の目的のマッピングを定義して読み込みます。 このプロセスについては、[&#x200B; カスタム条件のドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=ja) を参照してください。 このドキュメントで説明しているように、Target ユーザーインターフェイス（UI）を使用してカスタム条件を作成、編集および削除できます。 ただし、Target には、カスタム条件をより詳細に管理できるカスタム条件 API のセットも用意されています。
+カスタム基準を作成するには、キー項目またはカテゴリと推奨項目の間に目的のマッピングを定義して読み込みます。 このプロセスについては、[&#x200B; カスタム条件ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=ja)を参照してください。 このドキュメントで説明しているように、Target ユーザーインターフェイス（UI）を使用して、カスタム条件を作成、編集、削除できます。 ただし、Targetには、カスタム条件をより詳細に管理できる一連のカスタム条件APIも用意されています。
 
 >[!WARNING]
 >
->カスタム条件の場合は、API を使用して、特定のカスタム条件のすべてのアクション（作成、編集、削除）を実行するか、UI を使用してすべてのアクション（作成、編集、削除）を実行します。 UI と API を組み合わせてカスタム条件を管理すると、情報の競合や予期しない結果が発生する可能性があります。 例えば、UI でカスタム条件を作成したあと、API 経由で編集すると、バックエンドで更新され、API 経由で表示される場合でも、UI の更新が反映されません。
+>カスタム条件の場合は、APIを使用して特定のカスタム条件に対するすべてのアクション（作成、編集、削除）を実行するか、UIを使用してすべてのアクション（作成、編集、削除）を実行します。 UIとAPIを組み合わせてカスタム条件を管理すると、情報の競合や予期しない結果につながる可能性があります。 例えば、UIでカスタム条件を作成し、API経由で編集しても、バックエンドで更新されますが、API経由で表示されるように、UIで更新が反映されません。
 
-## カスタム条件の作成
+## カスタム条件を作成
 
-[&#x200B; カスタム条件の作成 API](https://developer.adobe.com/target/administer/recommendations-api/#operation/createCriteriaCustom) を使用してカスタム条件を作成するには、次の構文を使用します。
+[&#x200B; カスタム条件を作成API](https://developer.adobe.com/target/administer/recommendations-api/#operation/createCriteriaCustom)を使用してカスタム条件を作成するには、構文は次のとおりです。
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
 >[!WARNING]
 >
->この演習で説明しているように、カスタム条件の作成 API を使用して作成したカスタム条件は UI に表示され、保持されます。 UI から編集または削除することはできません。 **API を使用** して編集または削除できますが、いずれにしても Target UI に引き続き表示されます。 UI からの編集や削除のオプションを維持するには、カスタム条件の作成 API を使用するのではなく、[&#x200B; ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=ja) に従って、UI を使用してカスタム条件を作成します。
+>この演習で説明しているように、カスタム条件を作成APIを使用して作成されたカスタム条件は、UIに表示され、永続化されます。 UIから編集または削除することはできません。 API **を介して**&#x200B;編集または削除できますが、いずれにしても、Target UIに引き続き表示されます。 UIの編集または削除のオプションを維持するには、「カスタム条件を作成」 APIを使用するのではなく、[&#x200B; ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=ja)ごとにUIを使用してカスタム条件を作成します。
 
-上記の警告を読み、その後 UI から削除できない新しいカスタム条件の作成に慣れてから、次の手順を進めてください。
+上記の警告を読み、後でUIから削除できない新しいカスタム条件の作成に慣れた後にのみ、次の手順に進みます。
 
-1. `TENANT_ID` と `API_KEY` を確認し、前 **[!UICONTROL Create custom criteria]** 確立したPostman環境変数を参照します。 比較のために以下の画像を使用してください。
+1. **[!UICONTROL Create custom criteria]**&#x200B;の`TENANT_ID`と`API_KEY`が、以前に確立されたPostman環境変数を参照していることを確認します。 以下の画像を使用して比較してください。
 
    ![CreateCustomCriteria1](assets/CreateCustomCriteria1.png)
 
-1. カスタム条件の CSV ファイルの場所を定義する **raw** JSON として **本文** を追加します。 [&#x200B; カスタム条件の作成 API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom) ドキュメントで提供されている例をテンプレートとして使用し、必要に応じて `environmentId` やその他の値を指定します。 この例では、LAST_PURCHASED をキーとして使用します。
+1. カスタム条件CSV ファイルの場所を定義する&#x200B;**Body**&#x200B;を&#x200B;**raw** JSONとして追加します。 [&#x200B; カスタム条件を作成API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom)のドキュメントで提供されている例をテンプレートとして使用し、必要に応じて`environmentId`およびその他の値を指定します。 この例では、キーとしてLAST_PURCHASEDを使用します。
 
    ![CreateCustomCriteria2](assets/CreateCustomCriteria2.png)
 
-1. リクエストを送信し、応答を確認します。この応答には、作成したカスタム条件の詳細が含まれます。
+1. リクエストを送信し、作成したカスタム条件の詳細を含む応答を確認します。
 
    ![CreateCustomCriteria3](assets/CreateCustomCriteria3.png)
 
-1. カスタム条件が作成されたことを確認するには、Adobe Target内で **[!UICONTROL Recommendations > Criteria]** に移動して名前で条件を検索するか、次の手順で **[!UICONTROL List Custom Criteria API]** を使用します。
+1. カスタム条件が作成されたことを確認するには、Adobe Target内で&#x200B;**[!UICONTROL Recommendations > Criteria]**&#x200B;に移動し、名前で条件を検索するか、次の手順で&#x200B;**[!UICONTROL List Custom Criteria API]**&#x200B;を使用します。
 
    ![CreateCustomCriteria4](assets/CreateCustomCriteria4.png)
 
-この場合、エラーが発生しています。 **[!UICONTROL List Custom Criteria API]** を使用してカスタム条件をさらに詳しく調べ、エラーを調査しましょう。
+この場合、エラーがあります。 **[!UICONTROL List Custom Criteria API]**&#x200B;を使用して、カスタム条件をより詳しく調べて、エラーを調査してみましょう。
 
 ## カスタム条件のリスト
 
-すべてのカスタム条件のリストと、それぞれの詳細を取得するには、[List Custom Criteria API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom) を使用します。 構文は次のとおりです。
+すべてのカスタム条件のリストとそれぞれの詳細を取得するには、[&#x200B; カスタム条件のリスト API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom)を使用します。 構文は次のとおりです。
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
-1. 前と同様に `TENANT_ID` と `API_KEY` を確認し、リクエストを送信します。 応答に、カスタム条件 ID と、前に説明したエラーメッセージに関する詳細をメモします。
+1. 以前と同様に`TENANT_ID`と`API_KEY`を確認し、リクエストを送信します。 応答では、カスタム条件IDと、前述のエラーメッセージに関する詳細を確認します。
    ![ListCustomCriteria](assets/ListCustomCriteria.png)
 
-この場合、サーバー情報が正しくないため、エラーが発生しました。つまり、Target はカスタム条件定義を含む CSV ファイルにアクセスできません。 これを修正するには、カスタム条件を編集します。
+この場合、サーバー情報が正しくないため、エラーが発生しました。つまり、Targetはカスタム条件定義を含むCSV ファイルにアクセスできません。 カスタム基準を編集して、これを修正します。
 
-## カスタム条件の編集
+## カスタム条件を編集
 
-カスタム条件定義の詳細を変更するには、[Edit Custom Criteria API](https://developer.adobe.com/target/administer/recommendations-api/#operation/updateCriteriaCustom) を使用します。 構文は次のとおりです。
+カスタム条件定義の詳細を変更するには、[&#x200B; カスタム条件を編集API](https://developer.adobe.com/target/administer/recommendations-api/#operation/updateCriteriaCustom)を使用します。 構文は次のとおりです。
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 前と同様に、`TENANT_ID` と `API_KEY` を確認します。
+1. 以前と同様に、`TENANT_ID`と`API_KEY`を確認します。
    ![EditCustomCriteria1](assets/EditCustomCriteria1.png)
 
-1. 編集する（単一の）カスタム条件の条件 ID を指定します。
+1. 編集する（単一）カスタム基準の基準IDを指定します。
    ![EditCustomCriteria2](assets/EditCustomCriteria2.png)
 
-1. 本文で、正しいサーバー情報を含む更新された JSON を指定します。 （この手順では、アクセス可能なサーバーへの FTP アクセスを指定します。）
+1. Bodyで、更新されたJSONに正しいサーバー情報を入力します。 （この手順では、アクセスできるサーバーへのFTP アクセスを指定します）。
    ![EditCustomCriteria3](assets/EditCustomCriteria3.png)
 
 1. リクエストを送信し、応答をメモします。
    ![EditCustomCriteria4](assets/EditCustomCriteria4.png)
 
-**[!UICONTROL Get Custom Criteria API]** を使用して、更新したカスタム条件が成功したことを確認します。
+**[!UICONTROL Get Custom Criteria API]**&#x200B;を使用して、更新されたカスタム条件の成功を確認します。
 
-## カスタム条件の取得
+## カスタム条件を取得
 
-特定のカスタム条件のカスタム条件の詳細を表示するには、[&#x200B; カスタム条件 API の取得 &#x200B;](https://developer.adobe.com/target/administer/recommendations-api/#operation/getCriteriaCustom) を使用します。 構文は次のとおりです。
+特定のカスタム条件のカスタム条件の詳細を表示するには、[&#x200B; カスタム条件を取得API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getCriteriaCustom)を使用します。 構文は次のとおりです。
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 詳細を取得するカスタム条件の条件 ID を指定します。 リクエストを送信し、応答を確認します。
+1. 詳細を取得するカスタム条件の条件IDを指定します。 リクエストを送信し、応答を確認します。
    ![GetCustomCriteria.png](assets/GetCustomCriteria.png)
-1. 成功を検証します。 （この例では、それ以上 FTP エラーがないことを確認します）。
+1. 成功の検証： （このケースでは、これ以上FTP エラーがないことを確認します）。
    ![GetCustomCriteria1.png](assets/GetCustomCriteria1.png)
-1. （オプション）更新が UI に正確に反映されることを確認します。
+1. （オプション）更新がUIに正確に反映されていることを確認します。
    ![GetCustomCriteria2.png](assets/GetCustomCriteria2.png)
 
 ## カスタム条件の削除
 
-前述の条件 ID を使用して、[&#x200B; カスタム条件の削除 API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteCriteriaCustom) を使用してカスタム条件を削除します。 構文は次のとおりです。
+前述の条件IDを使用して、[&#x200B; カスタム条件を削除API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteCriteriaCustom)を使用して、カスタム条件を削除します。 構文は次のとおりです。
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 削除する（単一の）カスタム条件の条件 ID を指定します。 **[!UICONTROL Send]** をクリックします。
+1. 削除する（単一）カスタム条件の条件IDを指定します。 **[!UICONTROL Send]** をクリックします。
    ![DeleteCustomCriteria1](assets/DeleteCustomCriteria1.png)
 
-1. 「カスタム条件の取得」を使用して、条件が削除されたことを確認します。
+1. カスタム条件を取得を使用して、条件が削除されたことを確認します。
    ![DeleteCustomCriteria2](assets/DeleteCustomCriteria2.png)
-この場合、期待される 404 エラーは、削除された条件が見つからないことを示します。
+この場合、404 エラーは、削除された条件が見つからないことを示します。
 
 >[!NOTE]
 >
->なお、条件は削除されましたが、Target UI からは削除されません。これは、カスタム条件の作成 API を使用して作成されたからです。
+>この条件は、カスタム条件を作成APIを使用して作成されたため、削除されたとしても、Target UIから削除されることはありません。
 
-おめでとうございます。 Recommendations API を使用して、カスタム条件の作成、リスト化、編集、削除、および詳細の取得を行うことができるようになりました。 次の節では、Target 配信 API を使用してレコメンデーションを取得します。
+おめでとうございます。 Recommendations APIを使用して、カスタム条件の詳細を作成、リスト化、編集、削除、取得できるようになりました。 次のセクションでは、Target Delivery APIを使用してレコメンデーションを取得します。
 
-&lt;!— [&#x200B; 次に「サーバーサイド配信 API を使用したRecommendationsの取得」 >](fetch-recs-server-side-delivery-api.md) —>
+&lt;!— [次の「サーバーサイド配信APIを使用した推奨事項の取得」 >](fetch-recs-server-side-delivery-api.md) —>

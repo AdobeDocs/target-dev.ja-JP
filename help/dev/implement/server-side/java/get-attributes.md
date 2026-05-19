@@ -1,20 +1,27 @@
 ---
-title: Java SDK での getAttributes [!DNL Adobe Target]  使用
-description: getAttributes （）を使用して、実験とパーソナライズされたエクスペリエンスをから取得し、属性値を抽出する方法  [!DNL Target]  説明します。
+title: Java SDKで [!DNL Adobe Target] のgetAttributesを使用する
+description: getAttributes （）を使用して、 [!DNL Target] から実験とパーソナライズされたエクスペリエンスを取得し、属性値を抽出する方法を説明します。
 feature: APIs/SDKs
 exl-id: e493e1b9-7180-4a7c-b98d-be84cc3a57c3
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ZZy9nUXiyR-qwBmOgv-TPS6ZuilvAuW850gH1Doqquo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: 169
 ht-degree: 13%
 
 ---
 
-# 属性を取得（Java）
+# 属性の取得（Java）
 
 ## 説明
 
-`getAttributes()` を使用して、[!DNL Target] から実験とパーソナライズされたエクスペリエンスを取得し、属性値を抽出します。
+`getAttributes()`は、[!DNL Target]から実験とパーソナライズされたエクスペリエンスを取得し、属性値を抽出するために使用されます。
 
 ## メソッド
 
@@ -28,22 +35,22 @@ Attributes TargetClient.getAttributes(TargetDeliveryRequest targetRequest, Strin
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | ○ | None | [&#x200B; オファーを取得&#x200B;](get-offers.md) に使用するのと同じターゲットリクエスト |
-| mboxNames | var-args 配列 | × | None | mbox 名の var-args 配列 |
+| targetRequest | TargetDeliveryRequest | ○ | None | [Get Offers&#x200B;](get-offers.md)に使用されているものと同じターゲットリクエスト |
+| mboxNames | var-args配列 | × | None | mbox名のvar-args配列 |
 
 
 ## 結果
 
-`TargetClient.getAttributes()` から `Attributes` オブジェクトが返されます。このオブジェクトには次のメソッドがあります。
+次のメソッドを持つ`TargetClient.getAttributes()`から`Attributes` オブジェクトが返されます：
 
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
-| getBoolean （mboxName, key） | ブール値 | 指定された mbox 名と属性キーの値を返します |
-| getString （mboxName, key） | 文字列 | 指定された mbox 名と属性キーの値を返します |
-| getInteger （mboxName, key） | 整数 | 指定された mbox 名と属性キーの値を返します |
-| getDouble （mboxName, key） | ダブル | 指定された mbox 名と属性キーの値を返します |
-| toMboxMap （mboxName） | マップ | キーと値のペアを含むシンプルなマップを返します |
-| getResponse （） | TargetDeliveryResponse | getOffers が通常返す応答オブジェクトを返します |
+| getBoolean （mboxName, key） | ブール値 | 指定したmbox名と属性キーの値を返します |
+| getString （mboxName, key） | 文字列 | 指定したmbox名と属性キーの値を返します |
+| getInteger （mboxName, key） | 整数 | 指定したmbox名と属性キーの値を返します |
+| getDouble （mboxName, key） | ダブル | 指定したmbox名と属性キーの値を返します |
+| toMboxMap （mboxName） | マップ | キーと値のペアを持つ単純なMapを返します |
+| getResponse （） | TargetDeliveryResponse | 通常getOffersによって返される応答オブジェクトを返します |
 
 ## 例
 

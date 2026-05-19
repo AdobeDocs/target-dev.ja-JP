@@ -1,20 +1,27 @@
 ---
-title: ' [!DNL Adobe Target] Python SDK で非同期要求を使用する方法'
-description: Python SDK が非同期リクエストをサポートする方法  [!DNL Target]  説明します。これにより、有効なターゲット時間をゼロに減らすことができます。
+title: ' [!DNL Adobe Target] Python SDKでの非同期リクエストの使用方法'
+description: ' [!DNL Target] Python SDKが非同期リクエストをサポートする方法を説明します。これにより、効果的な目標時間を0に短縮できます。'
 feature: APIs/SDKs
 exl-id: fafb9e28-5ac5-41c1-8e7f-f40550b6749f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/CFfT7Amoca2yqYkkt9AviTmWi-RCjGdABYYuWHxvqC8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 16%
+source-wordcount: 130
+ht-degree: 15%
 
 ---
 
-# 属性を取得（Python）
+# 属性の取得（Python）
 
 ## 説明
 
-`get_attributes()` を使用して、[!DNL Target] から実験とパーソナライズされたエクスペリエンスを取得し、属性値を抽出します。
+`get_attributes()`は、[!DNL Target]から実験とパーソナライズされたエクスペリエンスを取得し、属性値を抽出するために使用されます。
 
 
 ## メソッド
@@ -29,18 +36,18 @@ target_client_instance.get_attributes(mbox_names, options)
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| mbox_names | list[str] | ○ | None | mbox 名のリスト |
-| options | dict | × | None | [&#x200B; オファーを取得 &#x200B;](get-offers.md) に使用するオプションと同じ |
+| mbox_names | リスト [str] | ○ | None | mbox名のリスト |
+| options | dict | × | None | [&#x200B; オファーの取得](get-offers.md)に使用されるものと同じオプション |
 
-## AttributesProvider
+## Attributesprovider
 
-`target_client.get_attributes()` から返される `AttributesProvider` には、次のメソッドがあります。
+`target_client.get_attributes()`が返した`AttributesProvider`には、次のメソッドがあります。
 
 | メソッド | 戻り値の型 | 説明 |
 | --- | --- | --- |
-| get_value （mbox_name, key） | any | 指定された mbox 名と属性キーの値を返します |
-| as_object （mbox_name） | dict | キーと値のペアを持つ単純な json オブジェクトを返します |
-| get_response （） | [TargetDeliveryResponse](https://github.com/adobe/target-python-sdk/blob/main/target_python_sdk/types/target_delivery_response.py) | 通常 `get_offers` によって返される応答オブジェクトを返します |
+| get_value （mbox_name, key） | any | 指定したmbox名と属性キーの値を返します |
+| as_object （mbox_name） | dict | キーと値のペアを持つシンプルなjson オブジェクトを返します |
+| get_response （） | [TargetDeliveryResponse](https://github.com/adobe/target-python-sdk/blob/main/target_python_sdk/types/target_delivery_response.py) | 通常`get_offers`が返す応答オブジェクトを返します |
 
 ## 例
 
