@@ -156,7 +156,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
    >[!NOTE]
    >
-   >環境が明示的に指定されていない場合、「エンティティを取得」では、[&#x200B; デフォルト環境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html)のみからエンティティを取得しようとします。 デフォルト環境以外の環境から取得する場合は、環境IDを指定する必要があります。
+   >環境が明示的に指定されていない場合、「エンティティを取得」では、[&#x200B; デフォルト環境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=ja)のみからエンティティを取得しようとします。 デフォルト環境以外の環境から取得する場合は、環境IDを指定する必要があります。
 
 1. 必要に応じて、`environmentId` パラメーターを追加し、リクエストを再送信します。
 
