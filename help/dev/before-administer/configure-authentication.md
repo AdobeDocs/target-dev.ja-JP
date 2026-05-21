@@ -13,9 +13,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: addda914fcf7ba1616ae9a9d49118e737b3ad923
 workflow-type: tm+mt
-source-wordcount: 1937
+source-wordcount: 1849
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 このセクションでは、[!DNL Adobe Developer Console]にアクセスし、[!DNL Adobe Target]のプロジェクトを作成します。 詳しくは、[&#x200B; プロジェクトに関するドキュメント &#x200B;](https://developer.adobe.com/developer-console/docs/guides/projects/)を参照してください。
 
-&lt;!---(1. 認証[&#128279;](https://developer.adobe.com/developer-console/docs/guides/authentication/)に関する ドキュメントに従って、秘密鍵と公開証明書を生成します。 // [///]: # （**手順1**/[Adobe IOの設定方法：認証 – ステップごとの手順](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html)で説明します。 手順1を完了したら、このガイドに戻り、次の手順2で再開します。 //この手順の結果は、`private.key` ファイルと`certificate_pub.crt` ファイルの作成である必要があります。 これらの2つのファイルを生成したら、このガイドに戻ります。） – >
+<!--(1. Generate your private key and public certificate, per the [documentation on authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (as described in **Step 1** of [How to set up Adobe IO: Authentication - Step by Step](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). After completing Step 1, return to this guide and resume with Step 2, below. // The outcome of this step should be the creation of a `private.key` file and a `certificate_pub.crt` file. Return to this guide once you have generated these two files.)-->
 
 1. [Adobe Admin Console](https://adminconsole.adobe.com/)で、[!DNL Adobe] ユーザーアカウントに[製品管理者](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)と[開発者](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html) レベルの両方の[!DNL Target]へのアクセス権が付与されていることを確認します。
 
