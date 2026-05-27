@@ -69,13 +69,13 @@ ht-degree: 63%
 
    >[!WARNING]
    >
-   >Redirectorでは、オープンリダイレクトの脆弱性のリスクにさらされる可能性があります。 サードパーティによるリダイレクトリンクの不正使用を避けるために、Adobeでは、デフォルトのリダイレクト URL ドメインを許可リストに加えるするために「承認済みホスト」を使用することをお勧めします。 [!DNL Target]はホストを使用して、リダイレクトを許可するドメインを許可リストに加えるします。 詳しくは、*Hosts*&#x200B;の [!DNL Target][&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)へのmbox呼び出しを許可するホストを指定する ホストの作成を参照してください。
+   >Redirectorでは、オープンリダイレクトの脆弱性のリスクにさらされる可能性があります。 サードパーティによるリダイレクトリンクの不正使用を避けるために、Adobeでは、デフォルトのリダイレクト URL ドメインを許可リストに加えるするために「承認済みホスト」を使用することをお勧めします。 [!DNL Target]はホストを使用して、リダイレクトを許可するドメインを許可リストに加えるします。 詳しくは、*Hosts*&#x200B;の [!DNL Target][&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=ja#allowlist)へのmbox呼び出しを許可するホストを指定する ホストの作成を参照してください。
 
 1. リダイレクターを検証します。
    1. *セキュリティのベストプラクティス*：上記のように、リダイレクタで使用されるドメインが許可リストに加えるされていることを確認します。 許可リストに加えるされていないドメインを使用する場合、Adobeはそのドメインへの呼び出しをブロックし、悪意のあるアクターがリダイレクターを使用して悪意のある可能性のあるドメインにリダイレクトするのを防ぎます。
    2. リダイレクターの URL をブラウザーに挿入して表示を更新します。
    3. アカウントにログインし、mbox のリストを更新して、新しいリダイレクターが mbox として表示されることを確認します。
-1. 1 つの広告に対してさまざまな表示先をテストする場合、各バージョンごとに[リダイレクトオファー](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html)を作成します。
+1. 1 つの広告に対してさまざまな表示先をテストする場合、各バージョンごとに[リダイレクトオファー](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html?lang=ja)を作成します。
 1. キャンペーンを作成します。
 
    目的に合わせた適切な設定については、「[JavaScript ベース以外の実装](/help/dev/implement/email/overview.md)」を参照してください。
