@@ -5,11 +5,18 @@ title: リダイレクタの操作方法を教えてください。
 feature: Implement Email
 exl-id: 072368ff-9f17-4709-ac2d-c9e1f0d888bb
 TQID: https://experienceleague.adobe.com/3SUsZl1y9tk97sWgdB3iB7wrAXNb2LfN3hObJM14caE
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 689
@@ -62,7 +69,7 @@ ht-degree: 63%
 
    >[!WARNING]
    >
-   >Redirectorでは、オープンリダイレクトの脆弱性のリスクにさらされる可能性があります。 サードパーティによるリダイレクトリンクの不正使用を避けるために、Adobeでは、デフォルトのリダイレクト URL ドメインを許可リストに加えるするために「承認済みホスト」を使用することをお勧めします。 [!DNL Target]はホストを使用して、リダイレクトを許可するドメインを許可リストに加えるします。 詳しくは、*Hosts*&#x200B;の [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)へのmbox呼び出しを許可するホストを指定する[ ホストの作成を参照してください。
+   >Redirectorでは、オープンリダイレクトの脆弱性のリスクにさらされる可能性があります。 サードパーティによるリダイレクトリンクの不正使用を避けるために、Adobeでは、デフォルトのリダイレクト URL ドメインを許可リストに加えるするために「承認済みホスト」を使用することをお勧めします。 [!DNL Target]はホストを使用して、リダイレクトを許可するドメインを許可リストに加えるします。 詳しくは、*Hosts*&#x200B;の [!DNL Target][&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)へのmbox呼び出しを許可するホストを指定する ホストの作成を参照してください。
 
 1. リダイレクターを検証します。
    1. *セキュリティのベストプラクティス*：上記のように、リダイレクタで使用されるドメインが許可リストに加えるされていることを確認します。 許可リストに加えるされていないドメインを使用する場合、Adobeはそのドメインへの呼び出しをブロックし、悪意のあるアクターがリダイレクターを使用して悪意のある可能性のあるドメインにリダイレクトするのを防ぎます。
