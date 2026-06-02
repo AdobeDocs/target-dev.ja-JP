@@ -3,10 +3,10 @@ user-guide-title: Adobe Target開発者ガイド
 breadcrumb-title: Target開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
 nudge: true
-source-git-commit: 2a992af7a1a8bbc6dba4ce23263d7af7db773333
+source-git-commit: b7f74bef7a9e00aa9f794f63e5a29b391558808e
 workflow-type: tm+mt
 source-wordcount: '854'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
@@ -43,8 +43,7 @@ ht-degree: 41%
    + [TLS（Transport Layer Security）暗号化の変更](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME と Adobe Target](before-implement/implement-cname-support-in-target.md)
 + クライアントサイド実装 {#client-side}
-   + [概要：クライアントサイド web用にTargetを実装する](implement/client-side/overview.md)
-     <!--+ Prehide SDK {#prehide-sdk}-->
+   + [概要：Target をクライアント側 web に実装する](implement/client-side/overview.md)
    + {hide-from-toc}[SDK統合ガイドの事前非表示](implement/client-side/prehide-sdk/prehide-sdk.md)
    + Adobe Experience Platform Web SDKの導入 {#aep}
       + [Adobe Experience Platform Web SDKの導入の概要](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
