@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 6fac79420aef0a73c109b2c19f363266c1f8027a
 workflow-type: tm+mt
 source-wordcount: 361
 ht-degree: 4%
@@ -46,15 +46,15 @@ ht-degree: 4%
 
 `pcId`のプロファイルを更新するには、次を使用します。
 
-``````
+```
 https://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
-``````
+```
 
 `mbox3rdPartyId`のプロファイルを更新するには、次を使用します。
 
-``````
+```
 shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
-``````
+```
 
 [!UICONTROL Single Profile Update API]は更新用です。 何も見つからない場合は、プロファイルは作成されません。
 
@@ -65,7 +65,7 @@ shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPa
 * すべてのpcIdおよびmbox3rdPartyIdに対して、すべてのパラメーター値が存在する必要はありません。
 * パラメーターと値は、大文字と小文字を区別します。
 * GETとPOSTの両方がサポートされています。
-* 現在のサイズ制限は、GETでは8 KB、POSTでは60 KBです。
+* 制限の現在のサイズ制限は、GETの場合は8 KB、POSTの場合は60 KBです。
 
 ## 応答
 
