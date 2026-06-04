@@ -46,15 +46,15 @@ ht-degree: 4%
 
 `pcId`のプロファイルを更新するには、次を使用します。
 
-``` ```
-https://&lt;your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
-``` ```
+``````
+https://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
+``````
 
 `mbox3rdPartyId`のプロファイルを更新するには、次を使用します。
 
-``` ```
-shell http://&lt;your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
-``` ```
+``````
+shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
+``````
 
 [!UICONTROL Single Profile Update API]は更新用です。 何も見つからない場合は、プロファイルは作成されません。
 
