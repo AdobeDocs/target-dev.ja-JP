@@ -14,7 +14,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: f6df325aff4a2eb9321b86778d102737493e63bb
 workflow-type: tm+mt
 source-wordcount: 397
 ht-degree: 31%
@@ -56,7 +56,7 @@ ht-degree: 31%
 
   IETF サイトで言及されている文字に加えて、[!DNL Target]では、クエリ文字列に次の文字を使用できます。
 
-  ```< > # % " { } | \ ^ [ ] ` ``` {line-numbers="true"}
+  `< > # % " { } | \ ^ [ ] `
 
   これ以外の文字はすべて URL エンコードする必要があります。 標準では、以下に示すように、次の形式（[https://www.ietf.org/rfc/rfc1738.txt](https://www.ietf.org/rfc/rfc1738.txt)）を指定します。
 
