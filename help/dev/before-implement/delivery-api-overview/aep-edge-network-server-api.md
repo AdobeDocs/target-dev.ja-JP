@@ -18,14 +18,14 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 101
+source-wordcount: 121
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Adobe Experience Platform Edge Network Server API] の概要
+# [!UICONTROL Adobe Experience Platform Edge Network Server API]の概要
 
-[!UICONTROL Adobe Experience Platform Edge Network]は、顧客があらゆる[!DNL Adobe Experience Cloud]または[!UICONTROL Adobe Experience Platform Edge] サービスと対話するための最適化された方法を提供します。
+[!UICONTROL Adobe Experience Platform Edge Network]は、お客様が任意の[!DNL Adobe Experience Cloud]または[!UICONTROL Adobe Experience Platform Edge] サービスと対話するための最適化された方法を提供します。
 
 [!UICONTROL Edge Network Server API]は、データ収集、パーソナライゼーション、広告、マーケティングのさまざまなユースケースに使用できます。 サーバーAPIは、サーバー、IoT デバイス、セットトップボックスなどの様々なデバイスで使用できます。
 

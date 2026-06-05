@@ -14,8 +14,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 789
-ht-degree: 12%
+source-wordcount: 797
+ht-degree: 11%
 
 ---
 
@@ -30,7 +30,7 @@ Targetでは、次の3つの識別子を使用します。
 | `tntId` | `tntId`は、ユーザーの[!DNL Target]のプライマリ IDです。 このIDを指定できます。リクエストにIDが含まれていない場合は、[!DNL Target]が自動生成します。 |
 | `thirdPartyId` | `thirdPartyId`は、電話のたびに送信できるユーザーの会社のIDです。 ユーザーが企業のサイトにログインすると、通常、その企業は、訪問者のアカウント、ロイヤルティカード、会員番号、またはその他の該当する識別子に関連付けられたIDを作成します。 |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId`は、異なるAdobe ソリューション間でデータを結合して共有するために使用されます。 Adobe AnalyticsおよびAdobe Audience Managerとの統合には、`marketingCloudVisitorId`が必要です。 |
-| `customerIds` | Experience Cloud訪問者IDと共に、各訪問者に対する追加の[顧客ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja)と認証済みステータスを利用できます。 |
+| `customerIds` | Experience Cloud訪問者IDと共に、追加の[顧客ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja)と各訪問者の認証済みステータスを使用できます。 |
 
 ## [!DNL Target] ID
 
@@ -81,7 +81,7 @@ curl -X POST \
 }
 ```
 
-生成された`tntId`は`10abf6304b2714215b1fd39a870f01afc.28_20`です。 セッション間で同じユーザーの[!UICONTROL Adobe Target Delivery API]を呼び出す場合は、この`tntId`を使用する必要があります。
+生成された`tntId`は`10abf6304b2714215b1fd39a870f01afc.28_20`です。 セッション間で同じユーザーに[!UICONTROL Adobe Target Delivery API]を呼び出す場合は、この`tntId`を使用する必要があります。
 
 ## Marketing Cloud 訪問者 ID
 
@@ -177,7 +177,7 @@ curl -X POST \
 
 ## 顧客 ID
 
-[お客様ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja)を追加し、Experience Cloudの訪問者IDに関連付けることができます。 `customerIds`を送信するたびに、`marketingCloudVisitorId`も指定する必要があります。 さらに、各訪問者に対して、認証ステータスを各`customerId`と共に提供できます。 次の認証ステータスを考慮できます。
+[顧客ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja)を追加し、Experience Cloud訪問者IDに関連付けることができます。 `customerIds`を送信するたびに、`marketingCloudVisitorId`も指定する必要があります。 さらに、各訪問者に対して、認証ステータスを各`customerId`と共に提供できます。 次の認証ステータスを考慮できます。
 
 | 認証状態 | ユーザーステータス |
 | --- | --- |

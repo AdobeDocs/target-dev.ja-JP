@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 285
-ht-degree: 20%
+source-wordcount: 304
+ht-degree: 19%
 
 ---
 
@@ -34,15 +34,15 @@ ht-degree: 20%
 
 [!DNL Target] とレガシー実装の両方で既存のグローバル mbox を使用するには、いくつかのパラメーターを設定する必要があります。
 
-1. [!DNL Target]に移動し、**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;をクリックします。
+1. [!DNL Target]に移動し、**[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;をクリックします。
 
-   デフォルトでは、**[!UICONTROL Page load enabled (Auto-create global mbox]**&#x200B;は有効で、カスタム グローバル mboxの名前は`target-global-mbox`です。
+   デフォルトでは、**[!UICONTROL ページ読み込み有効（自動作成グローバル mbox]**&#x200B;が有効で、カスタム グローバル mboxの名前は`target-global-mbox`です。
 
-1. 既存のmboxを使用する場合は、**[!UICONTROL Page load enabled (Auto-create global mbox]**&#x200B;を無効にし、以前に作成したグローバル mboxの名前を&#x200B;**[!UICONTROL Global Mbox]** フィールドに指定します。
+1. 既存のmboxを使用する場合は、**[!UICONTROL ページ読み込み有効（グローバル mbox]**&#x200B;を自動作成）を無効にし、**[!UICONTROL グローバル Mbox]** フィールドに以前に作成したグローバル mboxの名前を指定します。
 
    グローバル Mbox ドロップダウンには、アカウント内のすべてのmboxが一覧表示されます。 まだ存在しないmboxを使用する場合は、mboxを作成します。
 
-1. **[!UICONTROL Save]** をクリックします。
+1. 「**[!UICONTROL 保存]**」をクリックします。
 
    アカウントの設定が更新されます。
 

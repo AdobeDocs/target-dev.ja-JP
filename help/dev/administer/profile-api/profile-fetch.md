@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 294
+source-wordcount: 297
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ URLは次の例のようになります。
 https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
 ```
 
-`<clientCode>`を[!DNL Target] [!UICONTROL Client Code]に、`<ECID>`を[!DNL Experience Cloud Visitor ID] （[!DNL Marketing Cloud Visitor ID]）に置き換えます。
+`<clientCode>`を[!DNL Target] [!UICONTROL &#x200B; クライアントコード &#x200B;]に、`<ECID>`を[!DNL Experience Cloud Visitor ID] （[!DNL Marketing Cloud Visitor ID]）に置き換えます。
 
 ## tntidの使用
 
@@ -60,7 +60,7 @@ https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
-`<your-client-code>`と`your-thirdpartyid`を置き換えて、GET リクエストを実行します。 次に、[!UICONTROL thirdpartyid]を使用したプロファイルフェッチ呼び出しの例を示します。
+`<your-client-code>`と`your-thirdpartyid`を置き換えて、GET リクエストを実行します。 [!UICONTROL thirdpartyid]を使用したプロファイル取得呼び出しの例を次に示します。
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>

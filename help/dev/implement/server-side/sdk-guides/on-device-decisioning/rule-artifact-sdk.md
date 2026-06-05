@@ -15,7 +15,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7a5aae2510a014c6efaeee63080cde3e7746f91c
 workflow-type: tm+mt
-source-wordcount: 350
+source-wordcount: 352
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. 次に示すように、**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;に移動すると、クライアントと組織Idの両方を[!DNL Adobe Target]から取得できます。
+1. 次に示すように、**[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;に移動すると、クライアントと組織Idの両方を[!DNL Adobe Target]から取得できます。
 
    <!-- Insert image-client-code.png -->
    ![Targetの管理下にある実装ページ &#x200B;](assets/asset-rule-artifact-3.png)

@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 152
+source-wordcount: 155
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 1. [!DNL Adobe Target]および[!DNL Experience Cloud ID Service]のクライアントサイド SDK
 1. [!DNL Target Delivery API]件の呼び出し
-1. [!UICONTROL Experience Cloud ID] （ECID）取得コール
+1. [!UICONTROL Experience Cloud ID] （ECID）取得呼び出し
 1. プロファイルの一括更新APIと[!DNL Customer Attributes] （CA） サービス
 1. 顧客のデータソースから[!DNL Target] プロファイルストアへのプロファイルデータの取り込み
 1. プロファイルや行動データを収集し、訪問者に提供する体験を決定する

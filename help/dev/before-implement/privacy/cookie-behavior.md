@@ -82,7 +82,7 @@ JavaScript ライブラリは`mboxSession ID`を生成し、[!DNL Target] Cookie
 
 >[!NOTE]
 >
->AMCV_###@AdobeOrg 1st パーティ Cookieは、常にExperience Cloud訪問者IDで設定されます。
+>AMCV_###@AdobeOrg ファーストパーティ Cookieは、常にExperience Cloud訪問者IDで設定されます。
 
 ## サードパーティ Cookie の動作
 

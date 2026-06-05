@@ -14,7 +14,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 411
+source-wordcount: 420
 ht-degree: 8%
 
 ---
@@ -50,7 +50,7 @@ target_client.send_notifications(options)
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| request | DeliveryRequest | ○ | None | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストに準拠 |
+| request | DeliveryRequest | ○ | None | [[!UICONTROL Target配信API]](/help/dev/implement/delivery-api/overview.md)要求に準拠 |
 | target_cookie | str | いいえ | None | [!DNL Target] Cookie |
 | target_location_hint | str | いいえ | None | [!DNL Target]場所のヒント |
 | consumer_id | str | いいえ | None | 複数の呼び出しをステッチする場合は、異なる消費者IDを指定する必要があります |
@@ -89,7 +89,7 @@ delivery_request = DeliveryRequest(prefetch=prefetch)
 response = target_client.get_offers({ "request": delivery_request })
 ```
 
-正常な応答には、要求されたmboxのプリフェッチされたコンテンツを含む[!UICONTROL Target Delivery API]応答オブジェクトが含まれます。 サンプル `target_response["response"]` オブジェクト （文書形式）は、次のように表示されます。
+正常な応答には、[!UICONTROL Target Delivery API]応答オブジェクトが含まれ、要求されたmboxのプリフェッチされたコンテンツが含まれます。 サンプル `target_response["response"]` オブジェクト （文書形式）は、次のように表示されます。
 
 ### Python
 

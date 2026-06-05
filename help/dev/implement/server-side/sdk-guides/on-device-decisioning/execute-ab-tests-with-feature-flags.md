@@ -17,7 +17,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 749
+source-wordcount: 813
 ht-degree: 1%
 
 ---
@@ -26,8 +26,8 @@ ht-degree: 1%
 
 ## 手順の概要
 
-1. 組織の[!UICONTROL on-device decisioning]を有効にする
-1. [!UICONTROL A/B Test] アクティビティの作成
+1. 組織の[!UICONTROL &#x200B; オンデバイス決定]を有効にする
+1. [!UICONTROL A/B テスト &#x200B;] アクティビティの作成
 1. AとBの定義
 1. オーディエンスの追加
 1. トラフィック配分の設定
@@ -41,9 +41,9 @@ ht-degree: 1%
 >
 >例えば、秋をテーマにしたホームページのリニューアルが、オーディエンスに好評かどうかを判断したいとします。 [!DNL Adobe Target]でA/B実験を実行してテストすることにしました。 また、ネガティブなユーザーエクスペリエンスや遅いユーザーエクスペリエンスが結果をゆがめないように、実験が優れたパフォーマンスで配信されるようにします。
 
-## &#x200B;1. 組織の[!UICONTROL on-device decisioning]を有効にする
+## &#x200B;1. 組織の[!UICONTROL &#x200B; オンデバイス決定]を有効にする
 
-オンデバイス判定を有効にすると、A/B アクティビティがほぼゼロの遅延で実行されます。 この機能を有効にするには、[!DNL Adobe Target]で&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**&#x200B;に移動し、**[!UICONTROL On-Device Decisioning]**&#x200B;切り替えを有効にします。
+オンデバイス判定を有効にすると、A/B アクティビティがほぼゼロの遅延で実行されます。 この機能を有効にするには、[!DNL Adobe Target]で&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]**&#x200B;に移動し、**[!UICONTROL オンデバイス決定]** トグルを有効にします。
 
 &lt;!— image-odd4.pngを挿入 – >
 ![alt画像](assets/asset-odd-toggle.png)
@@ -52,21 +52,21 @@ ht-degree: 1%
 >
 >オンデバイス決定トグルを有効または無効にするには、管理者または承認者[&#x200B; ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja)が必要です。
 
-**[!UICONTROL On-Device Decisioning]** トグルを有効にすると、[!DNL Adobe Target]はクライアントのルールアーティファクトの生成を開始します。
+**[!UICONTROL オンデバイス決定]** トグルを有効にすると、[!DNL Adobe Target]はクライアントのルールアーティファクトの生成を開始します。
 
-## &#x200B;2. [!UICONTROL A/B Test] アクティビティの作成
+## &#x200B;2. [!UICONTROL A/B テスト &#x200B;] アクティビティの作成
 
-[!DNL Adobe Target]で、**[!UICONTROL Activities]** ページに移動し、**[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**&#x200B;を選択します。
+[!DNL Adobe Target]で、**[!UICONTROL アクティビティ]** ページに移動し、**[!UICONTROL アクティビティの作成]** > **[!UICONTROL A/B テスト]**&#x200B;を選択します。
 
 ![alt画像](assets/asset-ab.png)
 
-**[!UICONTROL Create A/B Test Activity]** モーダルで、デフォルトの&#x200B;**[!UICONTROL Web]** オプションを選択したままにし（1）、エクスペリエンスコンポーザー（2）として&#x200B;**[!UICONTROL Form]**&#x200B;を選択し、**[!UICONTROL Default Workspace]**&#x200B;を選択して&#x200B;**[!UICONTROL Property Restrictions]**&#x200B;なし（3）を選択し、**[!UICONTROL Next]** （4）をクリックします。
+**[!UICONTROL A/B テスト アクティビティの作成]** モーダルで、デフォルトの&#x200B;**[!UICONTROL Web]** オプションを選択したままにし（1）、エクスペリエンス コンポーザーとして&#x200B;**[!UICONTROL Form]**&#x200B;を選択し（2）、**[!UICONTROL Default Workspace]**&#x200B;を&#x200B;**[!UICONTROL Property Restrictions]** （3）なしで選択し、**[!UICONTROL Next]** （4）をクリックします。
 
 ![alt画像](assets/asset-form.png)
 
 ## &#x200B;3. AとBの定義
 
-1. アクティビティ作成の&#x200B;**[!UICONTROL Experiences]** ステップで、アクティビティの名前（1）を入力し、**[!UICONTROL Add Experience]** （2） ボタンをクリックして、2番目のエクスペリエンスであるエクスペリエンス Bを追加します。 A/B テストを実行するアプリケーション内の場所（3）の名前を入力します。 以下の例では、ホームページはエクスペリエンス A用に定義された場所です。 （これは、エクスペリエンス Bに定義された場所でもあります）。
+1. アクティビティ作成の&#x200B;**[!UICONTROL エクスペリエンス]**&#x200B;手順で、アクティビティの名前（1）を入力し、「**[!UICONTROL エクスペリエンスを追加]** （2）」ボタンをクリックして、2番目のエクスペリエンスであるエクスペリエンス Bを追加します。 A/B テストを実行するアプリケーション内の場所（3）の名前を入力します。 以下の例では、ホームページはエクスペリエンス A用に定義された場所です。 （これは、エクスペリエンス Bに定義された場所でもあります）。
 
    エクスペリエンス Aは、現在のホームページのデザインであるコントロールを定義します。
 
@@ -76,7 +76,7 @@ ht-degree: 1%
 
    ![alt画像](assets/asset-exp-b.png)
 
-1. Experience Bで、クリックしてコンテンツを&#x200B;**[!UICONTROL Default Content]**&#x200B;から再設計されたコンテンツに変更し、次に示すように&#x200B;**[!UICONTROL Create JSON Offer]**&#x200B;を選択します（1）。
+1. Experience Bで、クリックしてコンテンツを&#x200B;**[!UICONTROL デフォルトコンテンツ]**&#x200B;から再設計されたコンテンツに変更し、次に示すように&#x200B;**[!UICONTROL JSON オファーを作成]**&#x200B;を選択します（1）。
 
    ![alt画像](assets/asset-offer.png)
 
@@ -93,11 +93,11 @@ ht-degree: 1%
 
 最初に、ロイヤルティの高い顧客に対して再設計をテストする場合は、ログインしているかどうかに基づいて識別できます。
 
-1. **[!UICONTROL Targeting]** ステップで、「**[!UICONTROL All Visitors]**」オーディエンスをクリックして置換します（図を参照）。
+1. **[!UICONTROL ターゲティング]**&#x200B;の手順で、クリックして&#x200B;**[!UICONTROL すべての訪問者]** オーディエンスを置き換えます（図を参照）。
 
    ![alt画像](assets/asset-all-audiences.png)
 
-1. **[!UICONTROL Create Audience]** モーダルで、`logged-in = true`というカスタム ルールを定義します。 これにより、ログインしているユーザーのグループが定義されます。 このオーディエンスをアクティビティで使用します。
+1. **[!UICONTROL オーディエンスを作成]** モーダルで、`logged-in = true`というカスタムルールを定義します。 これにより、ログインしているユーザーのグループが定義されます。 このオーディエンスをアクティビティで使用します。
 
    ![alt画像](assets/asset-audience.png)
 
@@ -115,13 +115,13 @@ ht-degree: 1%
 
 ## &#x200B;7. レポートの設定
 
-**[!UICONTROL Goals & Settings]** ステップで、**[!UICONTROL Reporting Source]**&#x200B;として&#x200B;**[!UICONTROL Adobe Target]**&#x200B;を選択して[!DNL Adobe Target] UIでアクティビティの結果を表示するか、**[!UICONTROL Adobe Analytics]**&#x200B;を選択してAdobe Analytics UIでアクティビティの結果を表示します。
+**[!UICONTROL 目標と設定]** ステップで、**[!UICONTROL レポートSource]**&#x200B;として&#x200B;**[!UICONTROL Adobe Target]**&#x200B;を選択して[!DNL Adobe Target] UIでアクティビティの結果を表示するか、**[!UICONTROL Adobe Analytics]**&#x200B;を選択してAdobe Analytics UIでアクティビティの結果を表示します。
 
 ![alt画像](assets/asset-reporting.png)
 
 ## &#x200B;8. KPIを追跡するための指標の追加
 
-A/B テストを測定するには、**[!UICONTROL Goal Metric]**&#x200B;を選択します。 この例では、コンバージョンの成功は、利用者がページの下部に到達し、エンゲージメントを示しているかどうかに基づいています。 したがって、**[!UICONTROL Conversion]**&#x200B;は、ユーザーがページの下部という名前の場所を閲覧したかどうかに基づいて決定されます。
+A/B テストを測定するには、**[!UICONTROL 目標指標]**&#x200B;を選択します。 この例では、コンバージョンの成功は、利用者がページの下部に到達し、エンゲージメントを示しているかどうかに基づいています。 したがって、**[!UICONTROL コンバージョン]**&#x200B;は、ユーザーがページ下部の場所を閲覧したかどうかに基づいて決定されます。
 
 ## &#x200B;9. 機能フラグを使用してA/B テストを実行するコードをアプリケーションに実装します
 

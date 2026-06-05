@@ -16,12 +16,12 @@ topic_v2:
   - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 278
+source-wordcount: 282
 ht-degree: 0%
 
 ---
 
-# クライアントヒントと[!UICONTROL Adobe Target Delivery API]
+# クライアントヒントと[!UICONTROL Adobe Target配信API]
 
 クライアントヒントは、オファーリクエストで[!DNL Adobe Target]に送信する必要があります。
 

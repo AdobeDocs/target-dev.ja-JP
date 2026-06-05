@@ -28,7 +28,7 @@ Target Standardのお客様は5つの属性を適用でき、[!DNL Target Premiu
 
 ## 形式
 
-[!DNL Experience Cloud] ID （ECID）と属性名と値のペアを持つ.csv ファイルは、FTP経由または手動でExperience Cloud UIにアップロードされます。
+[!DNL Experience Cloud]個のID （ECID）と属性名/値のペアを持つ.csv ファイルは、FTPを介して、またはExperience Cloud UIで手動でアップロードされます。
 
 ## 使用例
 

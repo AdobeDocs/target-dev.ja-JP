@@ -18,13 +18,13 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 116
+source-wordcount: 119
 ht-degree: 7%
 
 ---
 
 # ハイブリッド実装
 
-[!DNL Adobe Target]は、クライアントサイドとサーバーサイドの実装を組み合わせることで、パーソナライゼーションのための独自のハイブリッド展開モデルを提供します。 このハイブリッドモデルでは、技術的な知識がなくても、WYSIWYG [!UICONTROL Visual Experience Composer] （VEC）を使用して実験アクティビティやパーソナライゼーションアクティビティをオーサリングし、エクスペリエンスをサーバーサイドで実行、配信、レンダリングして、パフォーマンスの高い配信を実現できます。
+[!DNL Adobe Target]は、クライアントサイドとサーバーサイドの実装を組み合わせることで、パーソナライゼーションのための独自のハイブリッド展開モデルを提供します。 このハイブリッドモデルを使用すると、技術的な知識がなくても、WYSIWYG [!UICONTROL Visual Experience Composer] （VEC）を使用して実験またはパーソナライゼーションアクティビティを作成し、エクスペリエンスをサーバーサイドで実行、配信、レンダリングして、パフォーマンスの高い配信を実現できます。
 
 詳しくは、[Adobe チュートリアル &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=ja)の[Adobe Target ハイブリッドデプロイメント &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html?lang=ja)を参照してください。

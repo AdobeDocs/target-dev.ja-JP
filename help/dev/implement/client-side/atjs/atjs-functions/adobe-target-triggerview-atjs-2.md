@@ -17,14 +17,14 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 423
-ht-degree: 21%
+source-wordcount: 446
+ht-degree: 20%
 
 ---
 
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
-この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B Test]および[!UICONTROL Experience Targeting] （XT）アクティビティを作成するシングルページアプリケーション （SPA）に実装する必要があります。 `[!UICONTROL adobe.target.triggerView()]`がサイトに実装されていない場合、VECをSPAに使用することはできません。 詳細については、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
+この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL &#x200B; エクスペリエンスのターゲット設定] （XT）アクティビティを作成するシングルページアプリケーション （SPA）用に実装する必要があります。 `[!UICONTROL adobe.target.triggerView()]`がサイトに実装されていない場合、VECをSPAに使用することはできません。 詳細については、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ ht-degree: 21%
 
 | パラメーター | タイプ | 必須？ | 説明 |
 | --- | --- | --- | --- |
-| viewName | 文字列 | ○ | ビューを表す文字列型として任意の名前を渡します。 このビュー名は、VECの[!UICONTROL Modifications] パネルに表示され、マーケターがアクションを作成し、[!UICONTROL A/B Test]および[!UICONTROL Experience Targeting] XT アクティビティを実行できるようにします。 |
+| viewName | 文字列 | ○ | ビューを表す文字列型として任意の名前を渡します。 このビュー名は、VECの[!UICONTROL 変更] パネルに表示され、マーケターがアクションを作成し、[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL &#x200B; エクスペリエンスのターゲット設定] XT アクティビティを実行できるようにします。 |
 | options | オブジェクト | × |  |
 | options > page | ブール値 | × | **TRUE：** ページのデフォルト値は true です。 page = true の場合、インプレッション数を増分するために [!DNL Target] のバックエンドに通知が送信されます。<P>オプション/ページがfalseに設定されている場合を除き、`[!UICONTROL triggerView]`が呼び出されると、通知が常にデフォルトで送信されます。<P>**FALSE:** page=falseの場合、インプレッション数を増やすための通知は送信されません。 このアプローチは、オファーを含むページ上のコンポーネントのみを再レンダリングする場合に使用します。<P>**注意**: `[!UICONTROL triggerView()]`が`{page: false}`をオプションとして呼び出された場合、VEC内のカスタムコードオファーは再レンダリングされません。 |
 
@@ -81,11 +81,11 @@ adobe.target.getOffers({
 });
 ```
 
-## 例：`triggerView()`と[!UICONTROL Adobe Visual Editing Helper extension]の最適な互換性
+## 例：`triggerView()`と[!UICONTROL Adobe Visual Editing Helper拡張機能]の最適な互換性
 
 [Adobe Visual Editing Helper拡張機能](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}を使用する場合は、次の点を考慮してください。
 
-[!DNL Googl]eの[!DNL Chrome]拡張機能に対する新しいV3 マニフェストポリシーにより、[!UICONTROL Visual Editing Helper extension]は`DOMContentLoaded` イベントを待ってから、VECに[!DNL Target] ライブラリを読み込む必要があります。 この遅延により、オーサリングライブラリの準備が整う前にweb ページで`triggerView()`呼び出しが実行され、ビューが読み込み時に入力されない場合があります。
+[!DNL Googl]eの[!DNL Chrome]拡張機能に対する新しいV3 マニフェストポリシーにより、[!UICONTROL Visual Editing Helper拡張機能]は`DOMContentLoaded` イベントを待ってから、VECに[!DNL Target] ライブラリを読み込む必要があります。 この遅延により、オーサリングライブラリの準備が整う前にweb ページで`triggerView()`呼び出しが実行され、ビューが読み込み時に入力されない場合があります。
 
 この問題を軽減するには、ページ `load` イベントにリスナーを使用します。
 

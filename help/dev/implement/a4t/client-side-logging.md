@@ -20,7 +20,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1139
+source-wordcount: 1166
 ht-degree: 4%
 
 ---
@@ -147,7 +147,7 @@ ht-degree: 4%
 }
 ```
 
-[!UICONTROL Form-based Experience Composer] アクティビティの提案には、同じ提案の下にコンテンツとクリック指標の両方の項目を含めることができます。 したがって、`scopeDetails.characteristics.analyticsToken` プロパティにコンテンツ表示用の分析トークンを1つ持つ代わりに、対応して、`scopeDetails.characteristics.analyticsDisplayToken`および`scopeDetails.characteristics.analyticsClickToken` プロパティで表示トークンとクリック分析トークンの両方を指定できます。
+[!UICONTROL &#x200B; フォームベースのExperience Composer] アクティビティの提案には、同じ提案の下にコンテンツとクリック指標の両方の項目を含めることができます。 したがって、`scopeDetails.characteristics.analyticsToken` プロパティにコンテンツ表示用の分析トークンを1つ持つ代わりに、対応して、`scopeDetails.characteristics.analyticsDisplayToken`および`scopeDetails.characteristics.analyticsClickToken` プロパティで表示トークンとクリック分析トークンの両方を指定できます。
 
 ```json
 {
@@ -236,13 +236,13 @@ ht-degree: 4%
 
 次のサブセクションでは、一般的なユースケースに対して[!DNL Analytics] クライアントサイドのログを実装する方法を示します。
 
-### [!UICONTROL Form-Based Experience Composer]件のアクティビティ {#form-based-composer}
+### [!UICONTROL &#x200B; フォームベースのExperience Composer]のアクティビティ {#form-based-composer}
 
 [!DNL Platform Web SDK]を使用して、[Adobe Target フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja) アクティビティからの提案の実行を制御できます。
 
 特定の決定範囲に対する提案をリクエストする場合、返される提案には適切な[!DNL Analytics] トークンが含まれます。 ベストプラクティスは、[!DNL Experience Platform Web SDK] `sendEvent` コマンドをチェーンし、返された提案を繰り返し実行して、[!DNL Analytics] トークンを同時に収集しながら実行することです。
 
-次のように、[!UICONTROL Form-Based Experience Composer] アクティビティスコープの`sendEvent` コマンドをトリガーできます。
+次のように、[!UICONTROL &#x200B; フォームベースのExperience Composer]のアクティビティスコープに`sendEvent` コマンドをトリガーできます。
 
 ```javascript
 alloy("sendEvent", {
@@ -402,7 +402,7 @@ function getDisplayAnalyticsPayload(proposition) {
 }
 ```
 
-提案には、対象となるアイテムの`schema` プロパティで示すように、様々なタイプのアイテムを含めることができます。 [!UICONTROL Form-Based Experience Composer] アクティビティでサポートされている提案項目スキーマは4つあります。
+提案には、対象となるアイテムの`schema` プロパティで示すように、様々なタイプのアイテムを含めることができます。 [!UICONTROL &#x200B; フォームベースのExperience Composer] アクティビティでサポートされる提案項目スキーマは4つあります。
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -432,9 +432,9 @@ function getClickAnalyticsPayload(proposition) {
 
 #### 実装の概要 {#implementation-summary}
 
-要約すると、[!DNL Experience Platform Web SDK]で[!UICONTROL Form-Based Experience Composer] アクティビティを適用する場合は、次の手順を実行する必要があります。
+要約すると、[!UICONTROL &#x200B; フォームベースのExperience Composer] アクティビティを[!DNL Experience Platform Web SDK]に適用する場合は、次の手順を実行する必要があります。
 
-1. [!UICONTROL Form-Based Experience Composer] アクティビティオファーを取得するイベントを送信します。
+1. [!UICONTROL &#x200B; フォームベースのExperience Composer]のアクティビティオファーを取得するイベントを送信します。
 1. コンテンツの変更をページに適用します。
 1. `decisioning.propositionDisplay`通知イベントを送信します。
 1. SDK レスポンスから[!DNL Analytics]表示トークンを収集し、[!DNL Analytics] ヒットのペイロードを構築します。

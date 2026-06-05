@@ -37,7 +37,7 @@ at.js バージョン 2.x （バージョン 2.10.0以前）の場合、*1st パ
 
 at.js はセッション ID を生成し、Cookie に保存します。 最初の応答には、任意のアクティビティ情報と、[!DNL Target] サーバーによって生成された `TNT` または `PC ID` も含まれています。 続いて at.js は `TNT/PC ID` を Cookie に書き込みます。
 
-`AMCV_###@AdobeOrg` ファーストパーティ Cookieは、常にExperience Cloud ID サービスによって設定されますが、`ECID`は[!DNL Target] リクエストで渡されます。
+`AMCV_###@AdobeOrg`のファーストパーティ Cookieは、Experience Cloud ID サービスによって常に設定されますが、`ECID`は[!DNL Target]要求で渡されます。
 
 >[!NOTE]
 >

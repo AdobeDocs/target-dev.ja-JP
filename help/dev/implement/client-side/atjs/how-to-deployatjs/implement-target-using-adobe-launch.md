@@ -36,7 +36,7 @@ ht-degree: 61%
 
 | リソース | 詳細 |
 |--- |--- |
-| [Adobe Targetを追加](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/target.html?lang=ja#implement-solutions) | このチュートリアルでは、[!DNL Adobe Experience Platform] のタグを使用して web サイトに [!DNL Target] を実装する手順を詳しく説明します。 at.js JavaScript ライブラリの追加、グローバル mbox の発行、パラメーターの追加、他のソリューションとの統合といったトピックが含まれます。 この記事は、Adobe Experience Platformおよびその他のAdobe Experience Cloud ソリューションの実装方法について説明する、より大きなチュートリアルの一部です。 |
+| [Adobe Targetを追加](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/target.html?lang=ja#implement-solutions) | このチュートリアルでは、[!DNL Adobe Experience Platform] のタグを使用して web サイトに [!DNL Target] を実装する手順を詳しく説明します。 at.js JavaScript ライブラリの追加、グローバル mbox の発行、パラメーターの追加、他のソリューションとの統合といったトピックが含まれます。 この記事は、Adobe Experience Platformおよびその他のAdobe Experience Cloud ソリューションの実装方法を示す大きなチュートリアルの一部です。 |
 | [クイックスタートガイド](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html?lang=ja) | 適切な顧客体験の実現に必要な分析、マーケティングおよび広告タグのデプロイおよび管理に関する情報。 |
 | [Adobe  [!DNL Target]  拡張機能の概要](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=ja) | [!DNL Adobe Experience Platform] を使用した [!DNL Target] の実装に関する情報 |
 

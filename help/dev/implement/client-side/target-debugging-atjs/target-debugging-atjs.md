@@ -1,7 +1,7 @@
 ---
 keywords: at.js, debug at.js, adobe Experience Cloud debugger, experience cloud debugger, mbox trace, mbox highlight, debug, debugging, $9
-description: '[!UICONTROL Adobe Experience Cloud Debugger]を使用して、ライブラリ設定の表示、リクエストの確認、コンソールログの有効化、 [!DNL Target]  コールリクエストの無効化などを行います。'
-title: でデバッグするにはどうすればよいですか。[!UICONTROL Adobe Experience Cloud Debugger]さんと同じですか？
+description: '[!UICONTROL Adobe Experience Cloud Debugger]を使用して、ライブラリ設定の表示、リクエストの確認、コンソールログのオン、通話リクエストの無効化 [!DNL Target] などを行います。'
+title: でデバッグするにはどうすればよいですか。[!UICONTROL Adobe Experience Cloud Debugger]をお持ちですか？
 feature: at.js
 exl-id: ac215560-3f6f-4269-947c-961e7a43c9e1
 TQID: https://experienceleague.adobe.com/pZtiohItxWcjKFJTCXX8JtvOpEjFMsG1SJdp9ANalOE
@@ -17,14 +17,14 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 162
+source-wordcount: 178
 ht-degree: 6%
 
 ---
 
 # [!UICONTROL Adobe Experience Cloud Debugger]を使用したat.jsのデバッグ
 
-[!UICONTROL Adobe Experience Cloud Debugger]拡張機能の使用に関する情報です。これにより、[!DNL Target]の実装を迅速かつ簡単に把握できます。
+[!UICONTROL Adobe Experience Cloud Debugger]拡張機能の使用に関する情報。これにより、[!DNL Target]実装を迅速かつ簡単に把握できます。
 
 ライブラリ設定をすばやく表示し、要求を確認してカスタムパラメーターが正しく渡されていることを確認し、コンソールのログ記録をオンにして、すべての[!DNL Target] リクエストを無効にすることができます。 [!DNL Experience Cloud]に認証すると、強力なMbox Trace ツールを使用して、アクティビティとオーディエンスの資格、および訪問者プロファイルを調べることができます。
 
@@ -38,7 +38,7 @@ ht-degree: 6%
 
 >[!VIDEO](https://video.tv.adobe.com/v/34063/?captions=jpn&quality=12)
 
-### Adobe Experience Cloud Debugger ![概要バッジ &#x200B;](../../assets/overview.png)を使用した基本的なAdobe Target デバッグ
+### Adobe Experience Cloud Debuggerを使用した基本的なAdobe Target デバッグ ![概要バッジ &#x200B;](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/34064/?captions=jpn&quality=12)
 

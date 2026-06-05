@@ -12,8 +12,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 460
-ht-degree: 17%
+source-wordcount: 471
+ht-degree: 16%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 17%
 
 ## 説明
 
-Java SDKを初期化し、[!UICONTROL Target Client]をインスタンス化して[!DNL Adobe Target]を呼び出し、実験とパーソナライズされたエクスペリエンスを実行するには、`create` メソッドを使用します。
+`create` メソッドを使用して、Java SDKを初期化し、[!UICONTROL Target Client]をインスタンス化して、実験およびパーソナライズされたエクスペリエンスのために[!DNL Adobe Target]を呼び出します。
 
 ## メソッド
 
@@ -45,8 +45,8 @@ ClientConfigBuilder ClientConfig.builder()
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| クライアント | 文字列 | ○ | None | [!UICONTROL Target Client Id] |
-| organizationId | 文字列 | ○ | None | [!UICONTROL Experience Cloud Organization ID] |
+| クライアント | 文字列 | ○ | None | [!UICONTROL &#x200B; ターゲットクライアント Id] |
+| organizationId | 文字列 | ○ | None | [!UICONTROL Experience Cloud組織ID] |
 | connectTimeout | 数値 | × | 10000 | すべてのリクエストの接続タイムアウト （ミリ秒単位） |
 | socketTimeout | 数値 | × | 10000 | すべてのリクエストのソケットのタイムアウト （ミリ秒単位） |
 | maxConnectionsPerHost | 数値 | × | 100 | [!DNL Target] ホストあたりの最大接続数 |

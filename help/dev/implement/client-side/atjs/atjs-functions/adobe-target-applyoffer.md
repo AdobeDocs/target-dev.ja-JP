@@ -1,7 +1,7 @@
 ---
 keywords: adobe.target.applyOffer, applyOffer, applyoffer, apply offer, at.js, functions, function, $8
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL adobe.target.applyOffer()]関数を使用して、応答コンテンツを適用します。'
-title: How Do I Use the [!UICONTROL adobe.target.applyOffer()] Function?
+description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL adobe.target.applyOffer （） &#x200B;]関数を使用して、応答コンテンツを適用します。'
+title: '[!UICONTROL adobe.target.applyOffer （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 957bbe92-8012-4bd5-95d6-1ae38b72bb16
 TQID: https://experienceleague.adobe.com/lrjsIl-gKu1SnrZapxYcoDObvUCGG2ht58QtWbQkYts
@@ -17,12 +17,12 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 169
-ht-degree: 73%
+source-wordcount: 173
+ht-degree: 68%
 
 ---
 
-# [!UICONTROL adobe.target.applyOffer(options)]
+# [!UICONTROL adobe.target.applyOffer （options） &#x200B;]
 
 この関数は、[!DNL Adobe Target]を含む応答コンテンツを適用するためのものです。
 

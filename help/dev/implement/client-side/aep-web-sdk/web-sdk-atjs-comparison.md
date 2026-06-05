@@ -23,7 +23,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2303
+source-wordcount: 2308
 ht-degree: 9%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 9%
 
 ### at.jsのインストール
 
-[!DNL Adobe]では、[!DNL Adobe Experience Cloud]、[!UICONTROL Implementation] タブから直接ライブラリをダウンロードできます。 at.js ライブラリは、顧客がclientCode、imsOrgIdなどの設定でカスタマイズされます。
+[!DNL Adobe]では、[!DNL Adobe Experience Cloud]、[!UICONTROL 実装] タブから直接ライブラリをダウンロードできます。 at.js ライブラリは、顧客がclientCode、imsOrgIdなどの設定でカスタマイズされます。
 
 ### Web SDKのインストール
 
@@ -319,7 +319,7 @@ adobe.target.getOffers({
 
 ### [!DNL Platform Web SDK]の使用中
 
-[!UICONTROL Form-Based Composer] ベースのアクティビティを取得するには、`sendEvent` コマンドを使用し、`decisionScopes` オプションの下にmbox名を渡します。 `sendEvent` コマンドは、要求されたアクティビティまたは提案を含むオブジェクトで解決されるプロミスを返します。
+`sendEvent` コマンドを使用し、`decisionScopes` オプションの下にmbox名を渡すことで、[!UICONTROL &#x200B; フォームベースのコンポーザー]のアクティビティを取得できます。 `sendEvent` コマンドは、要求されたアクティビティまたは提案を含むオブジェクトで解決されるプロミスを返します。
 
 このコードスニペットは、`propositions`配列がどのように見えるかです。
 
@@ -670,7 +670,7 @@ alloy("sendEvent", {
 
 ### at.jsの使用
 
-`adobe.target.triggerView`関数を使用します。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`関数は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B Test]および[!UICONTROL Experience Targeting] （XT）アクティビティを作成するシングルページアプリケーション （SPA）に対して実装する必要があります。 `adobe.target.triggerView()`がサイトに実装されていない場合、VECをSPAに使用することはできません。
+`adobe.target.triggerView`関数を使用します。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`関数は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL &#x200B; エクスペリエンスのターゲット設定] （XT）アクティビティを作成するシングルページアプリケーション （SPA）に対して実装する必要があります。 `adobe.target.triggerView()`がサイトに実装されていない場合、VECをSPAに使用することはできません。
 
 **例**
 
@@ -682,7 +682,7 @@ adobe.target.triggerView("homeView")
 
 ### [!DNL Platform Web SDK]の使用中
 
-シングルページアプリケーション [!UICONTROL View Change]をトリガーまたはシグナルするには、`sendEvent` コマンドの`xdm` オプションの下に`web.webPageDetails.viewName` プロパティを設定します。 [!DNL Platform Web SDK]は、`sendEvent`で指定された`viewName`に対するオファーがある場合、ビューキャッシュをチェックし、それらを実行して表示通知イベントを送信します。
+シングルページアプリケーション [!UICONTROL View Change]をトリガーまたはシグナルするには、`sendEvent` コマンドの`xdm` オプションの`web.webPageDetails.viewName` プロパティを設定します。 [!DNL Platform Web SDK]は、`sendEvent`で指定された`viewName`に対するオファーがある場合、ビューキャッシュをチェックし、それらを実行して表示通知イベントを送信します。
 
 **例**
 
@@ -701,7 +701,7 @@ alloy("sendEvent", {
 
 [詳細情報](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
 
-## [!UICONTROL Response Tokens]の活用方法
+## [!UICONTROL 応答トークン &#x200B;]の活用方法
 
 [!DNL Target]から返されたPersonalization コンテンツには、[応答トークン &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/administer/response-tokens)が含まれています。 応答トークンには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、位置情報などの詳細が含まれます。 これらの詳細は、サードパーティのツールと共有することも、デバッグに使用することもできます。 応答トークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
 

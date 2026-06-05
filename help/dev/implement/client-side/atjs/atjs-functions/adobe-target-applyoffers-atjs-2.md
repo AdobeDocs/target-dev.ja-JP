@@ -1,7 +1,7 @@
 ---
 keywords: adobe.target.applyOffers, applyOffers, applyoffers, apply offers, at.js, functions,
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL adobe.target.applyOffers()]関数を使用して、レスポンスに複数のオファーを適用します。 (at.js 2.x)'
-title: How Do I Use the [!UICONTROL adobe.target.applyOffers()] Function?
+description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL adobe.target.applyOffers （） &#x200B;]関数を使用して、レスポンスに複数のオファーを適用します。 (at.js 2.x)'
+title: '[!UICONTROL adobe.target.applyOffers （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
 TQID: https://experienceleague.adobe.com/9WIJvPZIlrtLkv-vv-HRkctgwHn3nX-jrE4-4usXW0Y
@@ -18,12 +18,12 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 820
-ht-degree: 82%
+source-wordcount: 825
+ht-degree: 80%
 
 ---
 
-# [!UICONTROL adobe.target.applyOffers(options)] - at.js 2.x
+# [!UICONTROL adobe.target.applyOffers （options） &#x200B;] - at.js 2.x
 
 この関数を使用すると、`adobe.target.getOffers()` で取得した複数のオファーを適用できます。
 
@@ -82,7 +82,7 @@ ht-degree: 82%
 | response > execute > pageLoad > trace | pageLoad リクエストのすべてのトレースデータを含むオブジェクト。 |
 | response > execute > pageLoad > analytics > payload | ページ読み込みコンテンツが適用された後に[!DNL Analytics]に送信される、クライアントサイド統合用の[!DNL Analytics] ペイロード。 （「A4T が有効なキャンペーン」セクションを参照してください） |
 
-## 例：[!UICONTROL applyOffers()]呼び出し
+## 例[!UICONTROL applyOffers （） &#x200B;]呼び出し
 
 ```javascript {line-numbers="true"}
 adobe.target.applyOffers({response:{

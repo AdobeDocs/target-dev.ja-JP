@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 102
+source-wordcount: 84
 ht-degree: 0%
 
 ---
@@ -39,5 +39,5 @@ client = TargetClient.create({
 ```
 
 これはNode バージョン 18.2以降でのみ機能します。このバージョンでは、`undici.fetch`がノードのデフォルト `fetch`です。
-[Node SDK サンプルリポジトリにアクセスしてください](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration)
+[Node SDK サンプル リポジトリ &#x200B;](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration)にアクセスしてください
 古いバージョンのノードのプロキシ設定の例と詳細については、こちらを参照してください。

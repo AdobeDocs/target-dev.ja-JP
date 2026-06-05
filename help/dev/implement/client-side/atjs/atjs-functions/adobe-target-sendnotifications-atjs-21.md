@@ -1,6 +1,6 @@
 ---
 keywords: adobe.target.sendNotifications, sendNotifications, sendnotifications，送信通知，通知，at.js，関数，関数，$9
-description: '[!UICONTROL applyOffer]を使用しないエクスペリエンスがレンダリングされたときに [!DNL Target]  エッジに通知を送信するには、at.jsに[!UICONTROL adobe.target.sendNotifications()]を使用します。 （at.js.2.1 +）'
+description: '[!UICONTROL applyOffer]を使用せずにエクスペリエンスがレンダリングされたときに [!DNL Target]  エッジに通知を送信するには、at.jsに[!UICONTROL adobe.target.sendNotifications （） &#x200B;]を使用します。 （at.js.2.1 +）'
 title: adobe.target.sendNotifications （）関数の使用方法を教えてください。
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
@@ -17,12 +17,12 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 638
+source-wordcount: 642
 ht-degree: 83%
 
 ---
 
-# [!UICONTROL adobe.target.sendNotifications(options)]
+# [!UICONTROL adobe.target.sendNotifications （options） &#x200B;]
 
 `[!UICONTROL adobe.target.applyOffer()]`または`[!UICONTROL adobe.target.applyOffers()]`を使用せずにエクスペリエンスをレンダリングすると、この関数は[!DNL Target] エッジに通知を送信します。
 

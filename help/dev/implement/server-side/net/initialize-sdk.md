@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: b18c88053a47a97d6718a69cb72cb4e5d99969c8
 workflow-type: tm+mt
-source-wordcount: 359
+source-wordcount: 369
 ht-degree: 15%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 15%
 
 ## 説明
 
-`Create` メソッドを使用して、.NET SDKを初期化し、[!UICONTROL Target Client]をインスタンス化して、実験とパーソナライズされたエクスペリエンスのために[!DNL Adobe Target]を呼び出します。
+`Create` メソッドを使用して、.NET SDKを初期化し、[!UICONTROL Target Client]をインスタンス化して、実験およびパーソナライズされたエクスペリエンスのために[!DNL Adobe Target]を呼び出します。
 
 .NET依存関係インジェクションを使用する場合は、`services.AddTargetLibrary()`；を呼び出してサービス設定手順でSDKを追加し、アプリのコンストラクターに`ITargetClient targetClient`を挿入するだけです。
 
@@ -49,8 +49,8 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| クライアント | string | ○ | None | [!UICONTROL Target Client Id] |
-| OrganizationId | string | ○ | None | [!UICONTROL Experience Cloud Organization ID] |
+| クライアント | string | ○ | None | [!UICONTROL &#x200B; ターゲットクライアント Id] |
+| OrganizationId | string | ○ | None | [!UICONTROL Experience Cloud組織ID] |
 | タイムアウト | int | × | 10000 | すべてのリクエストのタイムアウト （ミリ秒単位） |
 | プロキシ | WebProxy | × | null | すべての[!DNL Target]要求のプロキシ |
 | RetryPolicy | ポリシー | × | null | すべての[!DNL Target]要求に対する再試行ポリシー |

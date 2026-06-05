@@ -13,13 +13,13 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 52
+source-wordcount: 57
 ht-degree: 0%
 
 ---
 
 # ADOBE ADMIN CONSOLE API
 
-[!UICONTROL Adobe User Management]と[!UICONTROL User Sync API]を通じてユーザーと製品の使用権限を管理します。
+[!UICONTROL Adobe User Management]および[!UICONTROL User Sync API]を使用して、ユーザーと製品の使用権限を管理します。
 
 詳しくは、*Adobe Developer* web サイトの[Manage Users and Product Entitlements, the API way](https://developer.adobe.com/umapi/){target=_blank}を参照してください。

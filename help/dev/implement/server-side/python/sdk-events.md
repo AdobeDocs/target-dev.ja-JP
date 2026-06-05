@@ -1,6 +1,6 @@
 ---
 title: ' [!DNL Adobe Target] Python SDKでのイベントの購読'
-description: '[!UICONTROL OnDeviceDecisioningHandler] オブジェクトを使用してPython SDK内で発生するさまざまなイベントを購読する方法を説明します。'
+description: '[!UICONTROL OnDeviceDecisioningHandler] オブジェクトを使用して、Python SDK内で発生するさまざまなイベントを購読する方法を説明します。'
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
 TQID: https://experienceleague.adobe.com/iFtlxw8Wlc9EMtDTndtXD7a2gu1TzGM6ijXire9gHPk
@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 165
+source-wordcount: 166
 ht-degree: 3%
 
 ---

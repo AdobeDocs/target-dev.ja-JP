@@ -17,14 +17,14 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 710
+source-wordcount: 731
 ht-degree: 9%
 
 ---
 
 # サポートされる機能の概要
 
-[!DNL Adobe Target]のサーバーサイド SDKにより、開発者はパフォーマンスと意思決定のためのデータの鮮度のどちらかを柔軟に選択できます。 言い換えれば、マシンラーニングを通じて最も関連性が高く、魅力的なパーソナライズされたコンテンツを配信することが最も重要な場合は、ライブサーバーコールを送信する必要があります。 しかし、パフォーマンスがより重要な場合は、デバイス上で決定する必要があります。 [!UICONTROL on-device decisioning]が機能するには、サポートされている機能の次の一覧を参照してください。
+[!DNL Adobe Target]のサーバーサイド SDKにより、開発者はパフォーマンスと意思決定のためのデータの鮮度のどちらかを柔軟に選択できます。 言い換えれば、マシンラーニングを通じて最も関連性が高く、魅力的なパーソナライズされたコンテンツを配信することが最も重要な場合は、ライブサーバーコールを送信する必要があります。 しかし、パフォーマンスがより重要な場合は、デバイス上で決定する必要があります。 [!UICONTROL &#x200B; オンデバイス決定]が機能するには、サポートされている機能の次の一覧を参照してください。
 
 * アクティビティのタイプ
 * Audience Targeting
@@ -32,7 +32,7 @@ ht-degree: 9%
 
 ## アクティビティのタイプ
 
-次の表は、[&#x200B; フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja&)を使用して作成された[&#x200B; アクティビティタイプ &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=ja)が、[!UICONTROL on-device decisioning]でサポートされているか、サポートされていないかを示しています。
+次の表は、[&#x200B; フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja&)を使用して作成された[&#x200B; アクティビティタイプ &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=ja)が、[!UICONTROL &#x200B; オンデバイス決定]でサポートされているか、サポートされていないかを示しています。
 
 | アクティビティタイプ | 対応 |
 | --- | --- |
@@ -48,7 +48,7 @@ ht-degree: 9%
 
 ## オーディエンスターゲティング
 
-次の表は、[!UICONTROL on-device decisioning]でサポートされているオーディエンスルールまたはサポートされていないオーディエンスルールを示しています。
+次の表は、[!UICONTROL &#x200B; オンデバイス決定]でサポートされているオーディエンスルールまたはサポートされていないオーディエンスルールを示しています。
 
 | オーディエンスルール | オンデバイス判定 |
 | --- | --- |
@@ -64,9 +64,9 @@ ht-degree: 9%
 | [時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=ja) | ○ |
 | [Experience Cloud Audiences](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=ja) （Adobe Audience Manager、Adobe Analytics、Adobe Experience Managerのオーディエンス） | × |
 
-### [!UICONTROL on-device decisioning]の地域ターゲット設定
+### [!UICONTROL &#x200B; オンデバイス決定]の地域ターゲティング
 
-地域ベースのオーディエンスを使用する[!UICONTROL on-device decisioning] アクティビティの遅延をほぼゼロに近く維持するために、Adobeでは、`getOffers`への呼び出しで地理値を指定することをお勧めします。 これを行うには、リクエストの`Context`で`Geo` オブジェクトを設定します。 つまり、サーバーには、各エンドユーザーの場所を決定する方法が必要になります。 例えば、設定したサービスを使用して、サーバーがIPから地域へのルックアップを実行する場合があります。 Google Cloudなどの一部のホスティングプロバイダーは、各`HttpServletRequest`のカスタムヘッダーを使用してこの機能を提供します。
+地域ベースのオーディエンスを使用した[!UICONTROL &#x200B; オンデバイス決定] アクティビティの遅延をほぼゼロに近く維持するために、Adobeでは、`getOffers`への呼び出しで地理値を自分で指定することをお勧めします。 これを行うには、リクエストの`Context`で`Geo` オブジェクトを設定します。 つまり、サーバーには、各エンドユーザーの場所を決定する方法が必要になります。 例えば、設定したサービスを使用して、サーバーがIPから地域へのルックアップを実行する場合があります。 Google Cloudなどの一部のホスティングプロバイダーは、各`HttpServletRequest`のカスタムヘッダーを使用してこの機能を提供します。
 
 >[!BEGINTABS]
 
@@ -126,7 +126,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-ただし、サーバーでIPから地域への検索を実行する機能がないものの、それでも地域ベースのオーディエンスを含む`getOffers`要求に対して[!UICONTROL on-device decisioning]を実行したい場合は、これもサポートされます。 このアプローチの欠点は、リモート IP-to-Geo ルックアップを使用することで、各`getOffers`呼び出しに遅延が追加されることです。 サーバーの近くにあるCDNにヒットするため、この待ち時間はリモート `getOffers`呼び出しよりも低くしてください。 SDKがユーザーのIP アドレスの位置情報を取得するには、リクエストの`Context`の`Geo` オブジェクトの`ipAddress` フィールドのみを指定する必要があります。 `ipAddress`以外のフィールドが指定されている場合、[!DNL Target] SDKは解決のために位置情報メタデータを取得しません。
+ただし、サーバーでIPから地域への検索を実行する機能がないものの、地域ベースのオーディエンスを含む`getOffers`要求に対して[!UICONTROL &#x200B; デバイス上での決定]を実行したい場合は、これもサポートされます。 このアプローチの欠点は、リモート IP-to-Geo ルックアップを使用することで、各`getOffers`呼び出しに遅延が追加されることです。 サーバーの近くにあるCDNにヒットするため、この待ち時間はリモート `getOffers`呼び出しよりも低くしてください。 SDKがユーザーのIP アドレスの位置情報を取得するには、リクエストの`Context`の`Geo` オブジェクトの`ipAddress` フィールドのみを指定する必要があります。 `ipAddress`以外のフィールドが指定されている場合、[!DNL Target] SDKは解決のために位置情報メタデータを取得しません。
 
 
 >[!BEGINTABS]
@@ -177,7 +177,7 @@ public class TargetRequestUtils {
 
 ## 配分方法
 
-次の表は、[!UICONTROL on-device decisioning]でサポートされている割り当て方法またはサポートされていない割り当て方法を示しています。
+次の表は、[!UICONTROL &#x200B; オンデバイス決定]でサポートされている割り当て方法またはサポートされていない割り当て方法を示しています。
 
 | 配分方法 | 対応 |
 | --- | --- |

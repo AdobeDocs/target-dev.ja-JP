@@ -131,7 +131,7 @@ Adobeは、データ処理者としての義務を既に果たしているか、
 
 いいえ、Adobeは、データ管理者がGDPRとCCPAの要件を満たすのに役立つ一元的な方法を提供します。 データ管理者は、各ソリューションで直接作業する必要はありません。
 
-Adobe Targetを含むExperience Cloudソリューション全体でのGDPRおよびCCPAのリクエストはすべて、Adobeの一元的なAPI （現在はGDPR APIと呼ばれる）を介して行われます。 その後、APIはData ControllerのExperience Cloud ソリューションスイート全体でリクエストを処理します。
+Adobe Targetを含むAdobe Experience Cloud ソリューション全体のあらゆるGDPRおよびCCPA リクエストは、現在GDPR APIと呼ばれる一元的なAdobe APIを通じて実行されます。 その後、APIはデータコントローラーのExperience Cloud ソリューションスイート全体でリクエストを完了します。
 
 ### Adobeでは、お客様がデータ主体/ユーザーのリクエストに応じて削除できる情報は何ですか？
 

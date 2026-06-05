@@ -1,6 +1,6 @@
 ---
 keywords: 実装，javascript ライブラリ，js, atjs, オンデバイス判定，オンデバイス判定，at.js, オンデバイス，オンデバイス，トラブルシューティング，トラブルシューティング，実装2
-description: at.js ライブラリを使用して[!UICONTROL on-device decisioning]をトラブルシューティングする方法を説明します。
+description: at.js ライブラリを使用した[!UICONTROL &#x200B; オンデバイス決定]のトラブルシューティング方法について説明します。
 title: at.js JavaScript ライブラリを使用したオンデバイス判定のトラブルシューティング方法を教えてください。
 feature: at.js
 exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
@@ -18,14 +18,14 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 267
+source-wordcount: 281
 ht-degree: 0%
 
 ---
 
-# at.jsの[!UICONTROL on-device decisioning]のトラブルシューティング
+# at.jsの[!UICONTROL &#x200B; オンデバイス決定]のトラブルシューティング
 
-at.js JavaScript ライブラリを使用して[!UICONTROL Adobe Target]の[!UICONTROL on-device decisioning]をトラブルシューティングするには、次の手順を実行します。
+at.js JavaScript ライブラリを使用して[!UICONTROL Adobe Target]の[!UICONTROL &#x200B; オンデバイス決定]をトラブルシューティングするには、次の手順を実行します。
 
 ## 手順1:at.jsのコンソールログを有効にする
 
@@ -60,7 +60,7 @@ AT: LD.ArtifactProvider artifact received - status=200
 
 ## 手順3:at.js カスタムイベントを使用したルールアーティファクトのダウンロードの確認
 
-at.js ライブラリは、[!UICONTROL on-device decisioning]をサポートするために2つの新しいカスタムイベントをディスパッチします。
+at.js ライブラリは、2つの新しいカスタムイベントをディスパッチして、[!UICONTROL &#x200B; オンデバイス決定]をサポートします。
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`

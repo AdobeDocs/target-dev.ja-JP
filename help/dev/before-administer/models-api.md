@@ -16,16 +16,16 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1316
+source-wordcount: 1321
 ht-degree: 2%
 
 ---
 
 # モデル APIの概要
 
-Models APIは、ブロックリストに加えるAPIとも呼ばれ、[!UICONTROL Automated Personalization] （AP）および[!DNL Auto-Target] （AT）アクティビティのマシンラーニングモデルで使用される機能のリストを表示および管理できます。 APまたはAT アクティビティのモデルで使用されるフィーチャーを除外する場合は、Models APIを使用して、そのフィーチャーを「モデルブロックリスト」に追加できます。
+Models APIは、^ブロックリスト APIとも呼ばれ、[!UICONTROL Automated Personalization] （AP）および[!DNL Auto-Target] （AT）アクティビティのマシンラーニングモデルで使用される機能のリストを表示および管理できます。 APまたはAT アクティビティのモデルで使用されるフィーチャーを除外する場合は、Models APIを使用して、そのフィーチャーを「モデルブロックリスト」に追加できます。
 
-**[!UICONTROL blocklist]**&#x200B;は、[!DNL Adobe Target]によって機械学習モデルから除外される一連の機能を定義します。 機能について詳しくは、 [!DNL Target] 機械学習アルゴリズム [&#128279;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=ja)によって使用される データを参照してください。
+**[!UICONTROL ブロックリスト]**&#x200B;は、[!DNL Adobe Target]によって機械学習モデルから除外される一連の機能を定義します。 機能について詳しくは、 [!DNL Target] 機械学習アルゴリズム [&#128279;](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=ja)によって使用される データを参照してください。
 
 ブロックリストは、アクティビティ（アクティビティレベル）ごとに定義することも、[!DNL Target] アカウント内のすべてのアクティビティ（グローバルレベル）に定義することもできます。
 
@@ -113,7 +113,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/<campaignId>
 
 **[!UICONTROL externalName]**&#x200B;は、機能の使いやすい名前です。 これは[!DNL Target]によって作成され、この値が時間の経過とともに変更される可能性があります。 ユーザーは、[Personalization インサイト レポート &#x200B;](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=ja)でこれらの使いやすい名前を確認できます。
 
-**[!UICONTROL internalName]**&#x200B;は、機能の実際のIDです。 [!DNL Target]さんも作成していますが、変更できません。 これは、ブロックリストに加えるする機能を特定するために参照する必要がある値です。
+**[!UICONTROL internalName]**&#x200B;は、機能の実際の識別子です。 [!DNL Target]さんも作成していますが、変更できません。 これは、ブロックリストに加えるする機能を特定するために参照する必要がある値です。
 
 機能リストに値を入力するには（つまり、null以外にするには）、次のアクティビティを実行します。
 
@@ -154,7 +154,7 @@ GET https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ## 手順3：アクティビティのブロックリストに機能を追加する {#step3}
 
-⌥ ブロックリストに機能を追加するには、GETからPUTにリクエストを変更し、リクエストの本文を変更して、必要に応じて`blockedFeatureSources`または`blockedFeatures`を指定します。
+⌥ ブロックリストに機能を追加するには、リクエストをGETからPUTに変更し、リクエストの本文を変更して、必要に応じて`blockedFeatureSources`または`blockedFeatures`を指定します。
 
 * リクエストの本文には`blockedFeatures`または`blockedFeatureSources`が必要です。 両方が含まれる場合があります。
 * `internalName`から特定された値を`blockedFeatures`に入力します。 [手順1](#step1)を参照してください。
@@ -208,11 +208,11 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-ここで示す例では、ユーザーは[&#x200B; ステップ 1](#step1)で説明されているように、アクティビティ IDが260480のアクティビティの機能の完全なリストをクエリすることで以前に特定した`SES_PREVIOUS_VISIT_COUNT`と`SES_TOTAL_SESSIONS`の2つの機能をブロックしています。 また、上記の[表](#table)で説明されているように、「Experience Cloud」という接頭辞を持つ機能をブロックすることで実現される、AAM セグメントからのすべての機能をブロックしています。
+ここで示す例では、ユーザーは[&#x200B; ステップ 1](#step1)で説明されているように、アクティビティ IDが260480のアクティビティの機能の完全なリストをクエリすることで以前に特定した`SES_PREVIOUS_VISIT_COUNT`と`SES_TOTAL_SESSIONS`の2つの機能をブロックしています。 また、上記の[表](#table)で説明されているように、「AAM」というプレフィックスを持つ機能をブロックすることで実現される、Experience Cloud セグメントからのすべての機能をブロックしています。
 
 ![手順 3](assets/models-api-step-3.png)
 
-機能をブロックリストに加えるした後、更新されたブロックリストを確認するには、[手順2](#step2)をもう一度実行することをお勧めします（GETのブロックリストに加える）。 結果が期待どおりに表示されることを確認します（結果に最新のPUT リクエストから追加された機能が含まれていることを確認します）。
+機能をブロックリストに加えるした後、更新されたブロックリストを確認するには、もう一度[手順2](#step2)を実行することをお勧めします（ブロックリストを取得）。 結果が期待どおりに表示されることを確認します（結果に最新のPUT リクエストから追加された機能が含まれていることを確認します）。
 
 ## 手順4:（オプション）ブロック解除 {#step4}
 
@@ -246,7 +246,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 ![手順 4](assets/models-api-step-4.png)
 
-いつも通り、GETを変更した後で、もう一度[手順2](#step2)を実行することをお勧めします（リストに期待どおりの機能が含まれていることを確認するには、ブロックリストに加えるを使用してください）。 ここに示す例では、ユーザーは自分の検索ブロックリストが空であることを確認しています。
+いつも通り、ブロックリストを変更した後で、[手順2](#step2)をもう一度実行することをお勧めします（リストに期待どおりの機能が含まれていることを確認するには、このリストを取得してください）。 ここに示す例では、ユーザーは自分の検索ブロックリストが空であることを確認しています。
 
 ![&#x200B; ステップ 4b](assets/models-api-step-4b.png)
 
@@ -293,7 +293,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/global
 
 質問：上記のコードサンプルは冗長ではありませんか？
 
-回答：はい。 「AAM」で始まる値を持つ機能をブロックし、ソースが「AAM」のすべての機能をブロックするのは冗長です。 最終的な結果として、AAM（Experience Cloud セグメント）からソースされたすべての機能がブロックされます。 したがって、Experience Cloud セグメントのすべての機能をブロックすることを目標とする場合、上記の例では、「AAM」で始まる特定の機能を個別に指定する必要はありません。
+回答：はい。 「AAM」で始まる値を持つ機能をブロックし、ソースが「AAM」のすべての機能をブロックするのは冗長です。 最終的な結果として、AAM（Experience Cloud セグメント）から取得されたすべての機能がブロックされます。 したがって、Experience Cloud セグメントのすべての機能をブロックすることを目標とする場合、上記の例では、「AAM」で始まる特定の機能を個別に指定する必要はありません。
 
 最後の手順：アクティビティレベルまたはグローバルレベルのいずれでも、値が含まれていることを確認するために、変更した後に必ずの値を検証することをお勧めします。 これを行うには、`PUT`を`GET`に変更します。
 

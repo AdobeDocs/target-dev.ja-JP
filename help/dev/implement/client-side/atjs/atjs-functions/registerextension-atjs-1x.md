@@ -1,7 +1,7 @@
 ---
 keywords: registerExtension, registerextension, register extension, at.js, functions, function, clientCode, serverDomain, globalMboxName, globalMboxAutoCreate, timeout, registerExtension2
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL registerExtension()]関数を使用して、特定の拡張機能を登録します。 （at.js 1.x）'
-title: How Do I Use the [!UICONTROL registerExtension()] Function?
+description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL registerExtension （） &#x200B;]関数を使用して、特定の拡張機能を登録します。 （at.js 1.x）'
+title: '[!UICONTROL registerExtension （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 71decf00-84c5-4914-b0cd-bb061fa6265f
 TQID: https://experienceleague.adobe.com/qTWubp0dNesN-8vsooz8pdbjfSw1W1ktm-0bG6YRzJw
@@ -17,12 +17,12 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 274
-ht-degree: 65%
+source-wordcount: 277
+ht-degree: 62%
 
 ---
 
-# [!UICONTROL registerExtension()] - at.js 1.x
+# [!UICONTROL registerExtension （） &#x200B;] - at.js 1.x
 
 特定の拡張を登録するための標準的な方法を提供します。
 
@@ -43,7 +43,7 @@ options パラメーターは必須で、以下の構造を持ちます。
 * パラメーターのいずれかが指定されていない場合は、例外が発生します。
 * モジュール配列が空白の場合は、例外が発生します。
 
-`[!UICONTROL registerExtension]`の使用方法の詳細と例については、GitHubの[Adobe Experience Cloud Target Target Extensions](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions) ページを参照してください。
+`[!UICONTROL registerExtension]`の使用方法の詳細と例については、GitHubの[Adobe Experience Cloud Target拡張機能](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions) ページを参照してください。
 
 ## モジュールメソッドの設定
 

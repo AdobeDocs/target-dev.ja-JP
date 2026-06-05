@@ -1,6 +1,6 @@
 ---
-title: Experience Cloud AAMのセグメントとの連携
-description: Experience Cloudとの連携，Audience Managerとの連携
+title: Adobe Experience Cloud AAMのセグメントとの統合
+description: Adobe Experience CloudやAudience Managerと連携し
 keywords: 配信api, サーバーサイド，サーバーサイド，統合，audience manager, aam
 exl-id: c21e0200-23ba-4a0b-adf4-38e03c087f00
 feature: Implement Server-side

@@ -1,6 +1,6 @@
 ---
 title: オンデバイス決定ルールのアーティファクトについて
-description: ' [!DNL Adobe Target] [!UICONTROL on-device decisioning] アクティビティのJSON表現であるルールアーティファクトの使用方法を説明します。'
+description: 'デバイス上の決定 アクティビティのJSON表現であるルールアーティファクトの使用方法を説明します。 [!DNL Adobe Target] '
 feature: APIs/SDKs
 exl-id: 3dfb08df-eaa9-43d4-b009-e5f64c3a96d7
 TQID: https://experienceleague.adobe.com/mPzCK-vBYFAQnslX-8FPsBaeSiYtyxjZv76anbpHWuE
@@ -16,14 +16,14 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 86209eb483ca69d40615c632ba435d27fec78f36
 workflow-type: tm+mt
-source-wordcount: 266
+source-wordcount: 277
 ht-degree: 0%
 
 ---
 
 # ルールアーティファクトの概要
 
-ルールアーティファクトは、[!DNL Adobe Target] [!UICONTROL on-device decisioning] アクティビティのJSON表現です。 [!DNL Adobe Target]によって生成され、エンドユーザーにできるだけ近いルールアーティファクトが利用可能になるようにAkamai CDNに反映されます。 アクティビティを正確に実行して配信するためのメタデータと、イベントのトラッキングによるリアルタイムの分析を備えています。 [!DNL Adobe Target] SDKは、ルールアーティファクトの自動管理を可能にする方法で設定できます。これにより、ユーザーが指定した時間間隔に従ってダウンロードまたは更新できます。 さらに、[Memcached](https://memcached.org/)などの分散メモリキャッシュシステムを使用してルールアーティファクトの独自のローカルコピーを管理し、[!DNL Adobe Target] SDKを初期化して、ステートレスサーバーがリクエストをすぐに処理できるようにすることもできます。 これらのオプションについて詳しくは、次のガイドを参照してください。
+ルールアーティファクトは、[!DNL Adobe Target] [!UICONTROL &#x200B; デバイス上の決定] アクティビティのJSON表現です。 [!DNL Adobe Target]によって生成され、エンドユーザーにできるだけ近いルールアーティファクトが利用可能になるようにAkamai CDNに反映されます。 アクティビティを正確に実行して配信するためのメタデータと、イベントのトラッキングによるリアルタイムの分析を備えています。 [!DNL Adobe Target] SDKは、ルールアーティファクトの自動管理を可能にする方法で設定できます。これにより、ユーザーが指定した時間間隔に従ってダウンロードまたは更新できます。 さらに、[Memcached](https://memcached.org/)などの分散メモリキャッシュシステムを使用してルールアーティファクトの独自のローカルコピーを管理し、[!DNL Adobe Target] SDKを初期化して、ステートレスサーバーがリクエストをすぐに処理できるようにすることもできます。 これらのオプションについて詳しくは、次のガイドを参照してください。
 
 * [&#x200B; [!DNL Adobe Target] SDKを介したルールアーティファクトの自動ダウンロード、保存、更新](rule-artifact-sdk.md)
 * [JSON ペイロードを使用したルールアーティファクトのダウンロード、保存、更新](rule-artifact-json.md)
@@ -41,7 +41,7 @@ ht-degree: 0%
    <!-- Insert image-target-ui-1.png -->
    ![alt画像](assets/asset-rule-artifact-1.png)
 
-1. **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;に移動し、**[!UICONTROL Generate New Authorization Token]**&#x200B;をクリックします。
+1. **[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;に移動し、**[!UICONTROL 新しい認証トークンの生成]**&#x200B;をクリックします。
 
    <!-- Insert image-target-ui-2.png -->
    ![alt画像](assets/asset-rule-artifact-2.png)

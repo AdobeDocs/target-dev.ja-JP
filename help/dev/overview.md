@@ -33,7 +33,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 501
+source-wordcount: 510
 ht-degree: 11%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 11%
 
 ## クライアントサイド実装
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md): [!DNL Adobe Experience Platform Web SDK]を使用すると、[!DNL Experience Cloud] （[!DNL Target]を含む）の様々なサービスを[!UICONTROL Adobe Experience Edge Network]経由で操作できます。
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md): [!DNL Adobe Experience Platform Web SDK]を使用すると、[!UICONTROL Adobe Experience Edge Network]を通じて[!DNL Experience Cloud] （[!DNL Target]を含む）の様々なサービスを利用できます。
 
 [**Target at.js JavaScript library**](/help/dev/implement/client-side/overview.md): at.js JavaScript ライブラリは、web実装のページ読み込み時間を短縮し、セキュリティを強化し、シングルページアプリケーションの実装オプションを改善します。
 
@@ -104,7 +104,7 @@ ht-degree: 11%
 
 [**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md): [!DNL Adobe Target] ユーザープロファイル情報を取得します。
 
-[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): [!UICONTROL A/B Test]および[!UICONTROL Automated Personalization] アクティビティレポートデータを取得します。
+[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): [!UICONTROL A/B テスト &#x200B;]および[!UICONTROL Automated Personalization]のアクティビティレポートデータを取得します。
 
 [**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/): [!DNL Target Recommendations] APIを使用します。
 

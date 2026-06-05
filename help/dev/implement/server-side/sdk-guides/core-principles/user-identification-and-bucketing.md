@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1172
+source-wordcount: 1173
 ht-degree: 6%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 6%
 
 ## ユーザーID
 
-[!DNL Adobe Target]内でユーザーを識別する方法は複数あります。 [!UICONTROL Target]は次の識別子を使用します：
+[!DNL Adobe Target]内でユーザーを識別する方法は複数あります。 [!UICONTROL Target]は、次の識別子を使用します。
 
 | フィールド名 | 説明 |
 | --- | --- |
@@ -175,7 +175,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## Marketing Cloud訪問者ID （marketingCloudVisitorId）
 
-`marketingCloudVisitorId`は、Adobe Experience Cloud内のすべてのソリューションで訪問者を識別する、ユニバーサルで永続的なIDです。 組織がID サービスを実装する場合、このIDを使用すると、[!DNL Adobe Target]、Adobe Analytics、Adobe Audience Managerなど、異なるExperience Cloud ソリューションで同じサイト訪問者とそのデータを識別できます。 [!DNL Target]を[!DNL Adobe Analytics]および[!DNL Adobe Audience Manager]と統合する場合は、`marketingCloudVisitorId`が必要であることに注意してください。
+`marketingCloudVisitorId`は、Adobe Experience Cloudのすべてのソリューションで訪問者を識別する、ユニバーサルで永続的なIDです。 組織がID サービスを実装する場合、このIDを使用すると、[!DNL Adobe Target]、Adobe Analytics、Adobe Audience Managerなど、様々なExperience Cloud ソリューションで同じサイト訪問者とそのデータを識別できます。 [!DNL Target]を[!DNL Adobe Analytics]および[!DNL Adobe Audience Manager]と統合する場合は、`marketingCloudVisitorId`が必要であることに注意してください。
 
 次のサンプル呼び出しは、Experience Cloud ID サービスから取得した`marketingCloudVisitorId`を[!DNL Target]に渡す方法を示しています。
 
@@ -241,7 +241,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## 顧客ID （customerId）
 
-[お客様ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja)は、Experience Cloudの訪問者IDに追加したり、関連付けたりできます。 `customerIds`を送信するたびに、`marketingCloudVisitorId`も指定する必要があります。 さらに、各訪問者に対して、認証ステータスを各`customerId`と共に提供できます。 次の認証ステータスを使用できます。
+[顧客ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja)は、Experience Cloud訪問者IDに追加するか、Experience Cloud訪問者IDに関連付けることができます。 `customerIds`を送信するたびに、`marketingCloudVisitorId`も指定する必要があります。 さらに、各訪問者に対して、認証ステータスを各`customerId`と共に提供できます。 次の認証ステータスを使用できます。
 
 | 認証状態 | ユーザーステータス |
 | --- | --- |

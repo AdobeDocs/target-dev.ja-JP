@@ -1,6 +1,6 @@
 ---
 keywords: 実装、実装、設定、設定、一括プロファイル更新api
-description: '[!UICONTROL Bulk Profile Update API]を使用して [!DNL Target] にデータを取り込みます。'
+description: '[!UICONTROL Bulk Profile Update API]を使用して [!DNL Target] にデータを取得します。'
 title: '[!UICONTROL Bulk Profile Update API]を使用して [!DNL Target] にデータを取り込むにはどうすればよいですか？'
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
@@ -15,29 +15,29 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 221
-ht-degree: 7%
+source-wordcount: 284
+ht-degree: 5%
 
 ---
 
 # プロファイルの一括更新API
 
-[!DNL Adobe Target] [!UICONTROL Bulk Profile Update API]では、バッチファイルを使用して、複数の訪問者のユーザープロファイルをWeb サイトに一括で更新できます。
+[!DNL Adobe Target] [!UICONTROL 一括プロファイル更新API]を使用すると、バッチファイルを使用して、複数の訪問者のユーザープロファイルをWeb サイトに一括で更新できます。
 
 [!UICONTROL Bulk Profile Update API]を使用すると、多くのユーザーのプロファイルパラメーターの形式で詳細な訪問者プロファイルデータを任意の外部ソースから[!DNL Target]に簡単に送信できます。 外部ソースには、顧客関係管理（CRM）システムや販売時点情報管理（POS）システムなどがあります。これらのシステムは、web ページでは通常は利用できません。
 
-[!UICONTROL Bulk Profile Update API]と[[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)を対比します。
+[!UICONTROL 一括プロファイル更新API]と[[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)を対照させます。
 
-## [!UICONTROL Customer attributes]対[!UICONTROL Bulk Profile Update API]
+## [!UICONTROL 顧客属性]と[!UICONTROL 一括プロファイル更新API]の比較
 
-このオプションは、[[!UICONTROL customer attributes]](/help/dev/before-implement/methods-to-get-data-into-target/customer-attributes.md)と似ていますが、いくつかの違いがあります。
+このオプションは、[[!UICONTROL 顧客属性]](/help/dev/before-implement/methods-to-get-data-into-target/customer-attributes.md)と似ていますが、いくつかの違いがあります。
 
-* [!UICONTROL Customer attributes]はFTP アップロードを使用します。 [!UICONTROL Target Bulk Profile Update API]はHTTP POST APIを使用しています。
-* [!UICONTROL Customer attribute] データは[!DNL Analytics]と共有できます。 [!UICONTROL Bulk Profile Update]は[!DNL Target]でのみ使用できます。
-* ユーザー[!DNL Target]のプロファイルの作成に関する[!UICONTROL Customer attributes]のサポートはまだ表示されていません。
+* [!UICONTROL 顧客属性]がFTP アップロードを使用しています。 [!UICONTROL Target Bulk Profile Update API]では、HTTP POST APIが使用されています。
+* [!UICONTROL 顧客属性] データは[!DNL Analytics]と共有できます。 [!UICONTROL 一括プロファイル更新]は、[!DNL Target]でのみ使用できます。
+* ユーザー[!DNL Target]のプロファイルの作成に関する[!UICONTROL 顧客属性]のサポートはまだ表示されていません。
    * [!UICONTROL Bulk Profile Update API] v2：各`pcId`に対してすべてのパラメーター値を指定する必要はありません。 プロファイルは、[!DNL Target]に見つからない`pcId`または`mbox3rdPartyId`に対して作成されます。
-   * [!UICONTROL Bulk Profile Update API] v1: [!UICONTROL Bulk Profile Update API]は既存の[!DNL Target] プロファイルのみを更新します。 v1を使用している場合、`pcIds`または`mbox3rdPartyIds`が見つからないプロファイルは作成されません。
-* [!UICONTROL Customer attributes]では、[!UICONTROL Experience Cloud ID] （ECID）の使用と、CRM IDやロイヤルティ IDなどのソース IDの使用が必要です。
+   * [!UICONTROL Bulk Profile Update API] v1: [!UICONTROL Bulk Profile Update API]は、既存の[!DNL Target] プロファイルのみを更新します。 v1を使用している場合、`pcIds`または`mbox3rdPartyIds`が見つからないプロファイルは作成されません。
+* [!UICONTROL 顧客属性]では、[!UICONTROL Experience Cloud ID] （ECID）の使用と、CRM IDやロイヤルティ IDなどのソース IDの使用が必要です。
 * [!UICONTROL Bulk Profile Update API]には、TNT IDまたは`mbox3rdPartyId`のいずれかが必要です。
 * 送信する `mbox3rdPartyID` には、プラス記号（+）とスラッシュ（/）を含めることはできません。
 

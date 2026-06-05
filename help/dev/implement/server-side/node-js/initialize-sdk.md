@@ -15,7 +15,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 321
+source-wordcount: 332
 ht-degree: 18%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 18%
 
 ## 説明
 
-Node.js SDKを初期化し、[!UICONTROL Target] クライアントをインスタンス化して、実験とパーソナライズされたエクスペリエンスのために[!DNL Adobe Target]を呼び出すには、`create` メソッドを使用します。
+Node.js SDKを初期化し、[!UICONTROL Target] クライアントをインスタンス化して、[!DNL Adobe Target]を呼び出して実験およびパーソナライズされたエクスペリエンスを実行するには、`create` メソッドを使用します。
 
 ## メソッド
 
@@ -40,9 +40,9 @@ TargetClient.create(options: Object): TargetClient
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| クライアント | 文字列 | ○ | None | [!UICONTROL Adobe Target Client ID] |
-| organizationId | 文字列 | ○ | None | [!UICONTROL Experience Cloud Organization ID] |
-| 環境 | 文字列 | × | 本番 | ターゲット環境名。 [!DNL Target] UIでは、[!UICONTROL Administration] > [!UICONTROL Environments]です。 |
+| クライアント | 文字列 | ○ | None | [!UICONTROL Adobe Target クライアント ID] |
+| organizationId | 文字列 | ○ | None | [!UICONTROL Experience Cloud組織ID] |
+| 環境 | 文字列 | × | 本番 | ターゲット環境名。 [!DNL Target] UIでは、[!UICONTROL 管理] > [!UICONTROL 環境]です。 |
 | timeout | 数値 | × | 3000 | タイムアウト （ミリ秒単位） |
 | serverDomain | 文字列 | × | `*client*.tt.omtrdc.net` | デフォルトのホスト名を上書き |
 | 安全 | ブール値 | × | true | HTTP スキームを適用する設定を解除 |

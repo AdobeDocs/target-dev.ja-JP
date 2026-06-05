@@ -1,7 +1,7 @@
 ---
 keywords: 実装、実装、設定、設定、単一プロファイルの更新
 description: 単一のプロファイル更新APIを使用して [!DNL Target] にデータを取り込みます。
-title: '[!UICONTROL Single Profile Update API]を使用して [!DNL Target] にデータを取り込むにはどうすればよいですか？'
+title: '[!UICONTROL 単一プロファイル更新API]を使用して [!DNL Target] にデータを取り込むにはどうすればよいですか？'
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
 TQID: https://experienceleague.adobe.com/tkh7YEJ9Vr5eMynNYYxYKZZDOXZTVJNxwUSCxiwPfzI
@@ -15,18 +15,18 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 132
+source-wordcount: 160
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Single Profile Update API]
+# [!UICONTROL 単一プロファイル更新API]
 
-[!DNL Adobe Target] [!UICONTROL Single Profile Update API]では、1人のユーザーに対してプロファイル更新を送信できます。 [!UICONTROL Single Profile Update API]は[!UICONTROL Bulk Profile Update API]とほぼ同じですが、1人の訪問者プロファイルが一度に更新され、.cvs ファイルではなくAPI呼び出しでインライン化されます。
+[!DNL Adobe Target] [!UICONTROL 単一プロファイル更新API]を使用すると、単一ユーザーのプロファイル更新を送信できます。 [!UICONTROL 単一プロファイル更新API]は、[!UICONTROL 一括プロファイル更新API]とほぼ同じですが、1人の訪問者プロファイルが一度に更新され、.cvs ファイルではなくAPI呼び出しでインライン化されます。
 
-[!UICONTROL Single Profile Update API]とは、[!DNL Target]を実装していないチャネルで発生しているトランザクションに関連して更新を行う必要がある場合に一般的に使用されます。 例えば、オフラインアクションを実行する1人の訪問者のプロファイルを更新するとします。 アクションには、コールセンターへの連絡、ローンの資金調達、店舗でのロイヤルティカードの利用、キオスクへのアクセスなどが含まれます。
+[!UICONTROL 単一プロファイル更新API]は、[!DNL Target]を実装していないチャネルで発生しているトランザクションに関連して更新を行う必要がある場合に一般的に使用されます。 例えば、オフラインアクションを実行する1人の訪問者のプロファイルを更新するとします。 アクションには、コールセンターへの連絡、ローンの資金調達、店舗でのロイヤルティカードの利用、キオスクへのアクセスなどが含まれます。
 
-[!UICONTROL Single Profile Update API]と[[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)を対比します。
+[!UICONTROL 単一プロファイル更新API]と[[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)を対照させます。
 
 ## リソース
 

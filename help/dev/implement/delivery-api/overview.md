@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 184
+source-wordcount: 188
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 [!DNL Adobe Target Delivery API]はRESTに基づいています。 このドキュメントでは、[!DNL Adobe Target] [!DNL Delivery API]を構成するリソースについて説明します。 HTTP メソッドは、これらのリソースに対する操作を実行するために使用されます。
 
-[!UICONTROL Adobe Target's Delivery API]を使用すると、次のことが可能になります。
+[!UICONTROL Adobe Targetの配信API]を使用すると、次のことが可能になります。
 
 * SPAやモバイルチャネルを含むwebはもちろん、コネクテッド TV、キオスク、実店舗のデジタルスクリーンなど、ブラウザー以外のIoT デバイスにもエクスペリエンスを提供できます。
 * HTTP/S呼び出しを行うことができる、任意のサーバーサイドプラットフォームまたはアプリケーションからエクスペリエンスを配信します。

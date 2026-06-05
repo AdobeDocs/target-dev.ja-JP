@@ -19,8 +19,8 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 233
-ht-degree: 28%
+source-wordcount: 252
+ht-degree: 26%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 28%
 
 * [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
 
-  [!UICONTROL Adobe Experience Platform Web SDK]を使用すると、[!DNL Adobe Experience Cloud] （[!DNL Target]を含む）の様々なサービスを[!UICONTROL Adobe Experience Edge Network]経由で操作できます。 [!UICONTROL Adobe Experience Platform Web SDK]への移行を選択した場合は、[概要[!UICONTROL Adobe Experience Platform Web SDK]](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)を参照してください。
+  [!UICONTROL Adobe Experience Platform Web SDK]を使用すると、[!UICONTROL Adobe Experience Edge Network]を通じて[!DNL Adobe Experience Cloud] （[!DNL Target]を含む）の様々なサービスを利用できます。 [!UICONTROL Adobe Experience Platform Web SDK]への移行を選択した場合は、[Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)の概要を参照してください。
 
 * [[!DNL Target] at.js JavaScript library](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 

@@ -18,7 +18,7 @@ topic_v2:
   - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 548
+source-wordcount: 578
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 ## Mboxの先行取得
 
-モバイルアプリやサーバーなどのクライアントは、セッション内の特定の訪問者に対して複数のmboxをプリフェッチし、それらをキャッシュして[!UICONTROL Adobe Target Delivery API]への複数の呼び出しを回避できます。
+モバイルアプリやサーバーなどのクライアントは、セッション内の特定の訪問者に対して複数のmboxをプリフェッチし、それらをキャッシュして、[!UICONTROL Adobe Target Delivery API]への複数の呼び出しを回避できます。
 
 ```shell shell-session
 curl -X POST \
@@ -132,11 +132,11 @@ curl -X POST \
 }
 ```
 
-応答内に、特定の`mbox`の訪問者に表示するエクスペリエンスを含む`content` フィールドが表示されます。 これは、サーバーにキャッシュした場合に非常に便利です。訪問者がセッション内でwebまたはモバイルアプリケーションと対話し、アプリケーションの特定のページで`mbox`にアクセスすると、別の[!UICONTROL Adobe Target Delivery API]呼び出しを行う代わりにキャッシュからエクスペリエンスを配信できます。 ただし、エクスペリエンスが`mbox`から訪問者に配信されると、インプレッションのログ記録が発生するように、配信API呼び出しを介して`notification`が送信されます。 これは、`prefetch`呼び出しの応答がキャッシュされているためです。つまり、`prefetch`呼び出しの発生時に、訪問者はエクスペリエンスを見ていません。 `notification` プロセスについて詳しくは、[通知](notifications.md)を参照してください。
+応答内に、特定の`mbox`の訪問者に表示するエクスペリエンスを含む`content` フィールドが表示されます。 これは、サーバーにキャッシュした場合に非常に便利です。訪問者がセッション内でwebまたはモバイルアプリケーションと対話し、アプリケーションの特定のページで`mbox`にアクセスした場合、別の[!UICONTROL Adobe Target Delivery API]呼び出しを行う代わりに、キャッシュからエクスペリエンスを配信できます。 ただし、エクスペリエンスが`mbox`から訪問者に配信されると、インプレッションのログ記録が発生するように、配信API呼び出しを介して`notification`が送信されます。 これは、`prefetch`呼び出しの応答がキャッシュされているためです。つまり、`prefetch`呼び出しの発生時に、訪問者はエクスペリエンスを見ていません。 `notification` プロセスについて詳しくは、[通知](notifications.md)を参照してください。
 
-## [!UICONTROL Analytics for Target] （A4T）を使用する場合、`clickTrack`指標を持つmboxを先行取得します
+## Target （A4T）にAnalyticsを使用する場合、`clickTrack`指標を持つmboxを先行取得します
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja){target=_blank} （A4T）は、[!DNL Analytics]個のコンバージョン指標とオーディエンスセグメントに基づいてアクティビティを作成できるソリューション間の統合です。
+[[!UICONTROL Target用Adobe Analytics]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja){target=_blank} （A4T）は、[!DNL Analytics]個のコンバージョン指標とオーディエンスセグメントに基づいてアクティビティを作成できるソリューション間の統合機能です。
 
 次のコードスニペットは、`clickTrack`指標を含むmboxの先行取得からの応答で、[!DNL Analytics]にオファーがクリックされたことを通知します。
 
@@ -181,7 +181,7 @@ curl -X POST \
 
 ## 先行取得
 
-ビューは、シングルページアプリケーション（SPA）とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、SPAまたはモバイルエクスペリエンスを構成するビジュアル要素の論理的なグループとして見ることができます。 これで、配信APIを通じて、VECが作成した[[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja){target=_blank}および[[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=ja){target=_blank} （X） T アクティビティと、SPA[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)の ビューの変更をプリフェッチできるようになりました。
+ビューは、シングルページアプリケーション（SPA）とモバイルアプリケーションをよりシームレスにサポートします。 ビューは、SPAまたはモバイルエクスペリエンスを構成するビジュアル要素の論理的なグループとして見ることができます。 これで、配信APIを通じて、VECが作成した[[!UICONTROL A/B テスト &#x200B;]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja){target=_blank}および[[!UICONTROL &#x200B; エクスペリエンスのターゲット設定]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=ja){target=_blank} （X） T アクティビティを、[SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)のビューで変更してプリフェッチできるようになりました。
 
 ```shell  {line-numbers="true"}
 curl -X POST \
@@ -211,7 +211,7 @@ curl -X POST \
 }'
 ```
 
-上記の呼び出しの例では、[!UICONTROL A/B Test]用のSPA VECを通じて作成されたすべてのビューと、Web `channel`用に表示するXT アクティビティをプリフェッチします。 呼び出しは、`url`:`https://target.enablementadobe.com/react/demo/#/`を訪問している`tntId`:`84e8d0e211054f18af365d65f45e902b.28_131`の訪問者が対象とする[!UICONTROL A/B Test]またはXT アクティビティのすべてのビューをプリフェッチすることに注意してください。
+上記の呼び出しの例では、[!UICONTROL A/B テスト &#x200B;]用にSPA VECを通じて作成されたすべてのビューと、Web `channel`用に表示するXT アクティビティをプリフェッチします。 呼び出しは、`url`:`https://target.enablementadobe.com/react/demo/#/`を訪問している`tntId`:`84e8d0e211054f18af365d65f45e902b.28_131`の訪問者が対象とする[!UICONTROL A/B テスト &#x200B;]またはXT アクティビティのすべてのビューをプリフェッチすることに注意してください。
 
 ```JSON  {line-numbers="true"}
 {

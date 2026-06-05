@@ -18,7 +18,7 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 436
+source-wordcount: 443
 ht-degree: 20%
 
 ---
@@ -45,7 +45,7 @@ TLSに関する重要な情報については、[TLS （Transport Layer Security
 
 ## ビジュアル編集の要件
 
-[!UICONTROL Visual Experience Composer] （VEC）でweb ページを確実に開き、作成し、プレビューするには、[Adobe Experience Cloud Visual Editing Helper ブラウザー拡張機能](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}がweb ブラウザーにインストールされているか、[!UICONTROL Enhanced Experience Composer (EEC)]を使用する必要があります。
+[!UICONTROL Visual Experience Composer] （VEC）でweb ページを確実に開き、作成し、プレビューするには、[Adobe Experience Cloud Visual Editing Helper ブラウザー拡張機能](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}をweb ブラウザーにインストールするか、[!UICONTROL Enhanced Experience Composer （EEC） &#x200B;]を使用する必要があります。
 
 >[!NOTE]
 >

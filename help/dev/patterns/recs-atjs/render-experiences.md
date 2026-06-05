@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1060
+source-wordcount: 1144
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 3%
 
 ## エクスペリエンスのレンダリング図 {#diagram}
 
-at.jsで利用できる、すぐに使える自動フリッカー処理は、[!UICONTROL Automatic Page Load Request]が有効になっている場合にのみ有効です。 このオプションは、[!DNL Target]からエクスペリエンスを取得する際に、HTMLの本文全体を非表示にします。 この場合、フリッカーを処理するのは自分の責任です。 ガイダンスのちらつき処理に使用できる実装パターンを検索します。
+at.jsで使用できる自動フリッカー処理は、[!UICONTROL 自動ページ読み込み要求]が有効になっている場合にのみ有効です。 このオプションは、[!DNL Target]からエクスペリエンスを取得する際に、HTMLの本文全体を非表示にします。 この場合、フリッカーを処理するのは自分の責任です。 ガイダンスのちらつき処理に使用できる実装パターンを検索します。
 
 >[!NOTE]
 >
@@ -94,9 +94,9 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **使用可能な条件**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL これらを閲覧したユーザー、これらを閲覧したユーザー]
+* [!UICONTROL これらを閲覧したユーザー、購入したユーザー]
+* [!UICONTROL これらを購入した人、購入した人]
 
 **エンティティ パラメーターが必要**
 
@@ -118,13 +118,13 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **使用可能な条件**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL &#x200B; サイト全体で最も閲覧された]
+* [!UICONTROL &#x200B; カテゴリー別に最も閲覧された]
+* [!UICONTROL 項目属性]で最も閲覧された項目
+* サイト全体で[!UICONTROL &#x200B; トップ セラー]
+* [!UICONTROL &#x200B; カテゴリー別のトップセラー]
+* [!UICONTROL 項目属性]別の上位セラー
+* 分析指標[!UICONTROL 上位]
 
 **エンティティ パラメーターが必要**
 
@@ -147,10 +147,10 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **使用可能な条件**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL これを閲覧したユーザー、これを閲覧したユーザー]
+* [!UICONTROL これを閲覧したユーザーが購入しました]
+* [!UICONTROL これを購入した人、購入した人]
+* [!UICONTROL 類似の属性を持つアイテム &#x200B;]
 
 **エンティティ パラメーターが必要**
 
@@ -173,8 +173,8 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **使用可能な条件**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL 最近表示された項目]
+* [!UICONTROL あなたにおすすめ]
 
 **エンティティ パラメーターが必要**
 
@@ -196,7 +196,7 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **使用可能な条件**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL &#x200B; カスタムアルゴリズム &#x200B;]
 
 **エンティティ パラメーターが必要**
 

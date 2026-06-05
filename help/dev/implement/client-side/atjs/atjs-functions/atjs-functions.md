@@ -18,8 +18,8 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 515
-ht-degree: 46%
+source-wordcount: 557
+ht-degree: 40%
 
 ---
 
@@ -29,17 +29,17 @@ ht-degree: 46%
 
 | 関数 | 詳細 |
 | --- | --- |
-| [[!UICONTROL adobe.target.getOffer(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md) | この関数は、[!DNL Target] オファーを取得するためのリクエストを起動します。 `adobe.target.applyOffer()` と併用して、応答を処理するか、独自の成功処理を使用します。 |
-| [[!UICONTROL adobe.target.getOffers(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)<P>(at.js 2.x) | この関数を使用すると、複数の mbox を渡すことで複数のオファーを取得できます。 さらに、アクティブなアクティビティのすべてのビュー向けに複数のオファーを取得できます。<P>**注：**&#x200B;この関数はat.js 2.xで導入されました。 この関数は、at.js バージョン 1.*x*&#x200B;では使用できません。 |
-| [[!UICONTROL adobe.target.applyOffer(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md) | この関数は、応答内容を適用するために使用します。 |
-| [[!UICONTROL adobe.target.applyOffers(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)<P>(at.js 2.x) | この関数を使用すると、[!UICONTROL adobe.target.getOffers()] で取得した複数のオファーを適用できます。<P>**注：**&#x200B;この関数はat.js 2.xで導入されました。 この関数は、at.js バージョン 1.*x*&#x200B;では使用できません。 |
-| [[!UICONTROL adobe.target.triggerView (viewName, options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)<P>(at.js 2.x) | この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。<P> [!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B Test]および[!UICONTROL Experience Targeting] （XT）アクティビティを作成するには、この関数をシングルページアプリケーション （SPA）に対して実装する必要があります。 |
-| [[!UICONTROL adobe.target.trackEvent(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) | この関数は、クリックやコンバージョンなどのユーザーアクションを報告するリクエストを実行します。 応答でアクティビティを配信することはありません。 |
-| [[!UICONTROL mboxCreate(mbox,params)]](/help/dev/implement/client-side/atjs/atjs-functions/mboxcreate-atjs.md)<P>（at.js 1.x） | リクエストを実行し、mboxDefault クラス名を持つ最も近い DIV にオファーを適用します。<P>**注意：**&#x200B;この関数は、at.js バージョン 1.*x*&#x200B;でのみ使用できます。 この関数は、at.js 2.xのリリースで廃止されました。 この関数は、at.js 2.xで使用した場合、デフォルトコンテンツを返します。 |
-| [[!UICONTROL mboxDefine(options)] および [!UICONTROL mboxUpdate(options)]](/help/dev/implement/client-side/atjs/atjs-functions/mboxdefine-mboxupdate-atjs-1x.md)<P>（at.js 1.x） | mbox を定義および更新します。<P>**注意：**&#x200B;この関数は、at.js バージョン 1.*x*&#x200B;でのみ使用できます。 この関数は、at.js 2.xのリリースで廃止されました。 この関数は、at.js 2.xで使用した場合、デフォルトコンテンツを返します。 |
-| [[!UICONTROL targetGlobalSettings(options)]](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) | at.js ライブラリの設定は、[!DNL Target Standard/Premium] UIやREST APIで設定するのではなく、`[!UICONTROL targetGlobalSettings()]`を使用して上書きできます。<ul><li>データプロバイダー：この設定では、Demandbase、BlueKai、カスタムサービスなどのサードパーティのデータプロバイダーからデータを収集し、そのデータをグローバル mbox リクエストで mbox パラメーターとして Target に渡すことができます。</li></ul> |
-| [[!UICONTROL targetPageParams(options)]](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) | このメソッドにより、リクエストコードの外部からグローバル mbox にパラメーターを付加できます。 |
-| [[!UICONTROL targetPageParamsAll(options)]](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md) | このメソッドにより、リクエストコードの外部からすべての mbox にパラメーターを付加できます。 |
-| [[!UICONTROL registerExtension(options)]](/help/dev/implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)<P>（at.js 1.x） | 特定の拡張を登録するための標準的な方法を提供します。<P>**注意：**&#x200B;この関数は、at.js バージョン 1.*x*&#x200B;でのみ使用できます。 この関数は、at.js 2.xのリリースで廃止されました。 この関数は、at.js 2.xで使用した場合、デフォルトコンテンツを返します。 |
-| [[!UICONTROL at.js custom events]](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md) | at.js カスタムイベントを使用すると、mbox リクエストまたはオファーが失敗または成功した場合に通知できます。 |
-| [[!UICONTROL adobe.target.sendNotifications(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)<P>（at.js 2.1.0） | `[!UICONTROL adobe.target.applyOffer()]`または`[!UICONTROL adobe.target.applyOffers()]`を使用せずにエクスペリエンスをレンダリングすると、この関数は[!DNL Target] エッジに通知を送信します。<P>**注意**：この関数はat.js 2.1.0で導入され、2.1.0以降のバージョンで使用できます。 |
+| [[!UICONTROL adobe.target.getOffer （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md) | この関数は、[!DNL Target] オファーを取得するためのリクエストを起動します。 `adobe.target.applyOffer()` と併用して、応答を処理するか、独自の成功処理を使用します。 |
+| [[!UICONTROL adobe.target.getOffers （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)<P>(at.js 2.x) | この関数を使用すると、複数の mbox を渡すことで複数のオファーを取得できます。 さらに、アクティブなアクティビティのすべてのビュー向けに複数のオファーを取得できます。<P>**注：**&#x200B;この関数はat.js 2.xで導入されました。 この関数は、at.js バージョン 1.*x*&#x200B;では使用できません。 |
+| [[!UICONTROL adobe.target.applyOffer （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md) | この関数は、応答内容を適用するために使用します。 |
+| [[!UICONTROL adobe.target.applyOffers （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)<P>(at.js 2.x) | この関数を使用すると、[!UICONTROL adobe.target.getOffers （） &#x200B;]によって取得された複数のオファーを適用できます。<P>**注：**&#x200B;この関数はat.js 2.xで導入されました。 この関数は、at.js バージョン 1.*x*&#x200B;では使用できません。 |
+| [[!UICONTROL adobe.target.triggerView （viewName, options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)<P>(at.js 2.x) | この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。<P> この関数は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL Experience Targeting] （XT）アクティビティを作成するために、シングルページアプリケーション （SPA）に対して実装する必要があります。 |
+| [[!UICONTROL adobe.target.trackEvent （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) | この関数は、クリックやコンバージョンなどのユーザーアクションを報告するリクエストを実行します。 応答でアクティビティを配信することはありません。 |
+| [[!UICONTROL mboxCreate （mbox,params） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/mboxcreate-atjs.md)<P>（at.js 1.x） | リクエストを実行し、mboxDefault クラス名を持つ最も近い DIV にオファーを適用します。<P>**注意：**&#x200B;この関数は、at.js バージョン 1.*x*&#x200B;でのみ使用できます。 この関数は、at.js 2.xのリリースで廃止されました。 この関数は、at.js 2.xで使用した場合、デフォルトコンテンツを返します。 |
+| [[!UICONTROL mboxDefine （options） &#x200B;]および[!UICONTROL mboxUpdate （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/mboxdefine-mboxupdate-atjs-1x.md)<P>（at.js 1.x） | mbox を定義および更新します。<P>**注意：**&#x200B;この関数は、at.js バージョン 1.*x*&#x200B;でのみ使用できます。 この関数は、at.js 2.xのリリースで廃止されました。 この関数は、at.js 2.xで使用した場合、デフォルトコンテンツを返します。 |
+| [[!UICONTROL targetGlobalSettings （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) | at.js ライブラリの設定は、[!DNL Target Standard/Premium] UIやREST APIで設定するのではなく、`[!UICONTROL targetGlobalSettings()]`を使用して上書きできます。<ul><li>データプロバイダー：この設定では、Demandbase、BlueKai、カスタムサービスなどのサードパーティのデータプロバイダーからデータを収集し、そのデータをグローバル mbox リクエストで mbox パラメーターとして Target に渡すことができます。</li></ul> |
+| [[!UICONTROL targetPageParams （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) | このメソッドにより、リクエストコードの外部からグローバル mbox にパラメーターを付加できます。 |
+| [[!UICONTROL targetPageParamsAll （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md) | このメソッドにより、リクエストコードの外部からすべての mbox にパラメーターを付加できます。 |
+| [[!UICONTROL registerExtension （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)<P>（at.js 1.x） | 特定の拡張を登録するための標準的な方法を提供します。<P>**注意：**&#x200B;この関数は、at.js バージョン 1.*x*&#x200B;でのみ使用できます。 この関数は、at.js 2.xのリリースで廃止されました。 この関数は、at.js 2.xで使用した場合、デフォルトコンテンツを返します。 |
+| [[!UICONTROL at.js カスタムイベント &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md) | at.js カスタムイベントを使用すると、mbox リクエストまたはオファーが失敗または成功した場合に通知できます。 |
+| [[!UICONTROL adobe.target.sendNotifications （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)<P>（at.js 2.1.0） | `[!UICONTROL adobe.target.applyOffer()]`または`[!UICONTROL adobe.target.applyOffers()]`を使用せずにエクスペリエンスをレンダリングすると、この関数は[!DNL Target] エッジに通知を送信します。<P>**注意**：この関数はat.js 2.1.0で導入され、2.1.0以降のバージョンで使用できます。 |

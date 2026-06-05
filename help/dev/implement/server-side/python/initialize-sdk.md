@@ -10,15 +10,15 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 276
-ht-degree: 17%
+source-wordcount: 287
+ht-degree: 16%
 
 ---
 
 # Python SDKの初期化
 
 説明
-`create` メソッドを使用して、Python SDKを初期化し、[!UICONTROL Target Client]をインスタンス化して、実験とパーソナライズされたエクスペリエンスのために[!DNL Adobe Target]を呼び出します。
+`create` メソッドを使用して、Python SDKを初期化し、[!UICONTROL Target Client]をインスタンス化して、実験およびパーソナライズされたエクスペリエンスのために[!DNL Adobe Target]を呼び出します。
 
 ## メソッド
 
@@ -34,8 +34,8 @@ TargetClient.create(options)
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| クライアント | str | ○ | None | [!UICONTROL Adobe Target client ID] |
-| organization_id | str | ○ | None | [!UICONTROL Experience Cloud Organization ID] |
+| クライアント | str | ○ | None | [!UICONTROL Adobe Target クライアント ID] |
+| organization_id | str | ○ | None | [!UICONTROL Experience Cloud組織ID] |
 | timeout | int | × | 3000 | タイムアウト （ミリ秒単位） |
 | server_domain | str | × | `client.tt.omtrdc.net` | デフォルトのホスト名を上書き |
 | 安全 | ブール | × | true | HTTP スキームを適用する設定を解除 |

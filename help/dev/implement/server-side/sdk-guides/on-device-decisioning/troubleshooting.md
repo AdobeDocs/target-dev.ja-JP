@@ -1,6 +1,6 @@
 ---
 title: オンデバイス判定のトラブルシューティング
-description: '[!UICONTROL on-device decisioning]のトラブルシューティング方法を学ぶ'
+description: '[!UICONTROL &#x200B; オンデバイス決定]のトラブルシューティング方法について説明します'
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
@@ -16,12 +16,12 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1158
+source-wordcount: 1188
 ht-degree: 0%
 
 ---
 
-# トラブルシューティング [!UICONTROL on-device decisioning]
+# [!UICONTROL &#x200B; オンデバイス決定]のトラブルシューティング
 
 ## 設定を検証しています
 
@@ -29,8 +29,8 @@ ht-degree: 0%
 
 1. `logger`が設定されていることを確認します
 1. [!DNL Target] トレースが有効になっていることを確認します
-1. 定義されたポーリング間隔に従って、[!UICONTROL on-device decisioning] *ルールアーティファクト*&#x200B;が取得され、キャッシュされたことを確認します。
-1. フォームベースのエクスペリエンスコンポーザーを使用してテスト [!UICONTROL on-device decisioning] アクティビティを作成し、キャッシュされたルール成果物を使用してコンテンツ配信を検証します。
+1. 定義されたポーリング間隔に従って、デバイス上の[!UICONTROL 決定] *ルールアーティファクト*&#x200B;が取得され、キャッシュされたことを確認します。
+1. フォームベースのエクスペリエンスコンポーザーを使用して、テスト [!UICONTROL &#x200B; オンデバイス決定] アクティビティを作成することで、キャッシュされたルールアーティファクトを使用してコンテンツ配信を検証します。
 1. 送信通知エラーの確認
 
 ## &#x200B;1. ロガーが設定されていることを確認します
@@ -75,7 +75,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 
    ![alt画像](assets/asset-target-ui-1.png)
 
-1. **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;に移動し、**[!UICONTROL Generate New Authorization Token]**&#x200B;をクリックします。
+1. **[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;に移動し、**[!UICONTROL 新しい認証トークンの生成]**&#x200B;をクリックします。
 
    ![alt画像](assets/asset-target-ui-2.png)
 
@@ -124,7 +124,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## &#x200B;3. 定義されたポーリング間隔に従って、[!UICONTROL on-device decisioning] *ルールアーティファクト*&#x200B;が取得され、キャッシュされたことを確認します。
+## &#x200B;3. 定義されたポーリング間隔に従って、デバイス上の[!UICONTROL 決定] *ルールアーティファクト*&#x200B;が取得され、キャッシュされたことを確認します。
 
 1. ポーリング間隔の時間（デフォルトは20分）を待ち、アーティファクトがSDKによって取得されていることを確認します。 同じターミナルログが出力されます。
 
@@ -146,7 +146,7 @@ java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
      },
    ```
 
-## &#x200B;4. フォームベースのエクスペリエンスコンポーザーを使用してテスト [!UICONTROL on-device decisioning] アクティビティを作成し、キャッシュされたルール成果物を使用してコンテンツ配信を検証します
+## &#x200B;4. フォームベースのエクスペリエンスコンポーザーを使用してテスト [!UICONTROL &#x200B; オンデバイス決定] アクティビティを作成し、キャッシュされたルールアーティファクトを使用してコンテンツ配信を検証します
 
 1. Experience Cloudの[!DNL Target]UIに移動します
 
@@ -250,11 +250,11 @@ client = TargetClient.create({
 
 ## 一般的なトラブルシューティング
 
-問題が発生した場合は、[!UICONTROL on-device decisioning]の[&#x200B; サポートされている機能](supported-features.md)を必ず確認してください。
+問題が発生した場合は、[!UICONTROL &#x200B; オンデバイス決定]の[&#x200B; サポートされている機能](supported-features.md)を必ず確認してください。
 
 ### サポートされていないオーディエンスまたはアクティビティが原因で、オンデバイス決定アクティビティが実行されない
 
-発生する可能性のある一般的な問題は、使用中のオーディエンスまたはアクティビティタイプがサポートされていないため、[!UICONTROL on-device decisioning]個のアクティビティが実行されないことです。
+発生する可能性のある一般的な問題は、使用中のオーディエンスまたはアクティビティタイプがサポートされていないため、[!UICONTROL &#x200B; デバイス上の決定] アクティビティが実行されないことです。
 
 （1） ロガー出力を使用して、応答オブジェクトのtrace プロパティのエントリを確認します。 キャンペーンプロパティを具体的に特定します。
 

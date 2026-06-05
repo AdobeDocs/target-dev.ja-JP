@@ -13,7 +13,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 414
+source-wordcount: 426
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## プリフェッチ済みMboxの通知
 
-1回の配信呼び出しを使用して、1つまたは複数の通知を送信できます。 追跡する必要のある指標が、通知の`type`を正しく反映できるように、各mboxの`click`または`display`のどちらかであるかを判断します。 また、通知ごとに`id`を渡して、通知が[!UICONTROL &#x200B; Adobe Target Delivery API]を通じて正しく送信されたかどうかを判断できるようにします。 `timestamp`は、レポート用に特定のmboxで`click`または`display`がいつ発生したかを示すために[!DNL Target]に転送することも重要です。
+1回の配信呼び出しを使用して、1つまたは複数の通知を送信できます。 追跡する必要のある指標が、通知の`type`を正しく反映できるように、各mboxの`click`または`display`のどちらかであるかを判断します。 また、[!UICONTROL &#x200B; Adobe Target Delivery API]を通じて通知が正しく送信されたかどうかを判断できるように、各通知に`id`を渡します。 `timestamp`は、レポート用に特定のmboxで`click`または`display`がいつ発生したかを示すために[!DNL Target]に転送することも重要です。
 
 ```
 curl -X POST \
@@ -117,7 +117,7 @@ curl -X POST \
 
 ## プリフェッチビューの通知
 
-1回の配信呼び出しを使用して、1つまたは複数の通知を送信できます。 追跡する必要のある指標が、通知のタイプを正しく反映できるように、各mboxの`click`または`display`のどちらかであるかを判断します。 また、通知ごとに`id`を渡して、通知が[!UICONTROL Adobe Target Delivery API]を通じて正しく送信されたかどうかを判断できるようにします。 タイムスタンプは、レポート用に特定のビューで`click`または`display`がいつ発生したかを示すために[!DNL Target]に転送することも重要です。
+1回の配信呼び出しを使用して、1つまたは複数の通知を送信できます。 追跡する必要のある指標が、通知のタイプを正しく反映できるように、各mboxの`click`または`display`のどちらかであるかを判断します。 また、[!UICONTROL Adobe Target Delivery API]を通じて通知が正しく送信されたかどうかを判断できるように、各通知に`id`を渡します。 タイムスタンプは、レポート用に特定のビューで`click`または`display`がいつ発生したかを示すために[!DNL Target]に転送することも重要です。
 
 ```
 curl -X POST \

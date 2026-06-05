@@ -12,7 +12,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 357
+source-wordcount: 366
 ht-degree: 12%
 
 ---
@@ -53,7 +53,7 @@ target_client_instance.get_offers(options)
 
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
-| 応答 | DeliveryResponse | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)の応答に準拠しています |
+| 応答 | DeliveryResponse | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)応答に準拠しています |
 | target_cookie | dict | [!DNL Target] Cookie |
 | target_location_hint_cookie | dict | [!DNL Target]の場所ヒント Cookie |
 | analytics_details | list[AnalyticsResponse] | Analytics ペイロード（クライアントサイドのAnalyticsの使用の場合） |
@@ -74,8 +74,8 @@ target_client_instance.get_offers(options)
 | 名前 | タイプ | 説明 |
 | --- | --- | --- |
 | decisioning_method | str | 使用された決定方法：オンデバイスまたはサーバーサイド |
-| remote_mboxes | リスト `[str]` | 決定方法が`on-device`の場合、オンデバイスで完全に決定できなかったmbox名の配列が与えられます。 つまり、[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストが必要です。 |
-| remote_views | リスト `[str]` | 決定方法がオンデバイスの場合、オンデバイスで完全に決定できなかったビュー名の配列が与えられます。 つまり、[[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) リクエストが必要です。 |
+| remote_mboxes | リスト `[str]` | 決定方法が`on-device`の場合、オンデバイスで完全に決定できなかったmbox名の配列が与えられます。 つまり、[[!UICONTROL Target配信API]](/help/dev/implement/delivery-api/overview.md) リクエストが必要です。 |
+| remote_views | リスト `[str]` | 決定方法がオンデバイスの場合、オンデバイスで完全に決定できなかったビュー名の配列が与えられます。 つまり、[[!UICONTROL Target配信API]](/help/dev/implement/delivery-api/overview.md) リクエストが必要です。 |
 
 ## 例
 

@@ -16,7 +16,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 4131354373a42c475db9a4f8dcf8090dd0cbdfcd
 workflow-type: tm+mt
-source-wordcount: 294
+source-wordcount: 296
 ht-degree: 1%
 
 ---
@@ -124,7 +124,7 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. 次に示すように、**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;に移動すると、クライアントと`organizationId`の両方を[!DNL Adobe Target]から取得できます。
+1. クライアントと`organizationId`の両方を[!DNL Adobe Target]から取得するには、**[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;に移動します（こちらを参照）。
 
    <!-- Insert image-client-code.png -->
    ![alt画像](assets/asset-rule-artifact-3.png)

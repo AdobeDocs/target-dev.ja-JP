@@ -11,17 +11,17 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 175
-ht-degree: 4%
+source-wordcount: 180
+ht-degree: 3%
 
 ---
 
-# 個別のプロファイル属性に基づいて予測を構築する機械学習モデルなど、最も複雑なアルゴリズムを最適化したい場合に、[!UICONTROL Location Service]
+# [!UICONTROL 位置情報サービス &#x200B;]を使用
 
 場所は、モバイルユーザーを把握し、エンゲージするための重要なコンテキストです。 このコンテキストを利用することで、モバイルアプリの開発者は、アプリのデザインを強化し、よりパーソナライズされた魅力的な体験にすることができます。
 
 [!DNL Adobe Experience Platform Location Service] （[!DNL Location Service]）は、位置情報を認識するモバイルアプリが、豊富で使いやすいSDK インターフェイスと柔軟なPOI （目標点情報管理）を使用して、位置情報のコンテキストを理解できるようにする位置情報サービスです。
 
-[!DNL Location Service]と[!DNL Target]を使用すると、Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja)の タグを持つルールを活用して、[!UICONTROL Places] データを[!DNL Adobe Target]個のSDK イベントに添付できます。
+[!DNL Location Service]と[!DNL Target]を使用すると、[!UICONTROL Places] データを[!DNL Adobe Target] SDK イベントに添付するために、Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja)の タグを持つルールを活用できます。
 
-詳しくは、[Adobe Experience Platform Location Service ガイド &#x200B;](https://experienceleague.adobe.com/docs/places/using/home.html?lang=ja)の「[!UICONTROL Location Service]を [!DNL Adobe Target][&#128279;](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html?lang=ja)で使用する」を参照してください。
+詳しくは、[Adobe Experience Platform Location Service ガイド &#x200B;](https://experienceleague.adobe.com/docs/places/using/home.html?lang=ja)の「[!UICONTROL Location Service]を [!DNL Adobe Target][&#128279;](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html?lang=ja)と共に使用する」を参照してください。

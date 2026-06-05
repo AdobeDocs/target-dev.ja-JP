@@ -1,6 +1,6 @@
 ---
 keywords: Adobe Experience Platform Web SDK、aep web sdk、web sdk、sdk、adobe experience cloud、platform edge network、adobe experience platform edge network、edge network、aep edge network、Adobe Experience Platform Web SDK0
-description: '[!UICONTROL Adobe Experience Platform Web SDK]を使用して、[!UICONTROL Adobe Experience Cloud]から[!UICONTROL AEP Edge Network]までの様々なサービスを操作する方法を説明します。'
+description: '[!UICONTROL Adobe Experience Platform Web SDK]を使用して、[!UICONTROL Adobe Experience Cloud]から[!UICONTROL AEP Edge Network]の様々なサービスを操作する方法について説明します。'
 title: '[!UICONTROL Experience Platform Web SDK]を実装するにはどうすればよいですか？'
 feature: AEP Web SDK
 exl-id: 35ee60d2-3d6d-4169-9f22-b2aef4c6548b
@@ -23,18 +23,18 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 714
-ht-degree: 11%
+source-wordcount: 786
+ht-degree: 9%
 
 ---
 
 # [!UICONTROL Adobe Experience Platform Web SDK]
 
-[!UICONTROL Adobe Experience Platform Web SDK] （AEP Web SDK）は、[!UICONTROL Adobe Experience Cloud]のお客様が[!DNL Adobe Experience Cloud] （[!DNL Target]を含む）から[!UICONTROL Adobe Experience Platform Edge Network]までの様々なサービスと対話できるようにする、クライアントサイドのJavaScript ライブラリです。 JavaScript ライブラリに加えて、Web SDK設定に役立つ[!UICONTROL Adobe Experience Platform]拡張機能があります。
+[!UICONTROL Adobe Experience Platform Web SDK] （AEP Web SDK）は、[!UICONTROL Adobe Experience Cloud]のお客様が[!DNL Adobe Experience Cloud]の様々なサービス（[!DNL Target]を含む）と[!UICONTROL Adobe Experience Platform Edge Network]を操作できるようにする、クライアントサイドのJavaScript ライブラリです。 JavaScript ライブラリに加えて、Web SDK設定に役立つ[!UICONTROL Adobe Experience Platform]拡張機能があります。
 
 詳しくは、*[!UICONTROL Adobe Experience Platform Web SDK]* ヘルプの次のリンクを参照してください。
 
-* 包括的な情報：[[!UICONTROL Adobe Experience Platform Web SDK]](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ja)とは
+* 包括的な情報：[Adobe Experience Platform Web SDKとは](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=ja)
 * [!DNL Target]に固有の情報：[[!DNL Target] 概要](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=ja)
 
 ## チュートリアル
@@ -56,11 +56,11 @@ ht-degree: 11%
 | 機能 | 説明/リンク |
 | --- | --- |
 | [アクティビティ QA](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=ja) | [!DNL Target]のQA URLを使用すると、変更のないプレビューリンク、オプションのオーディエンスターゲティング、ライブアクティビティデータからセグメント化されたままのQA レポートを使用して、簡単なエンドツーエンドのアクティビティ QAを実行できます。 アクティビティ QAを使用すると、アクティビティを公開する前に[!DNL Target]個のアクティビティを完全にテストできます。<p>[Target JavaScript ライブラリ QA モードの互換性](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=ja#compatibility)および[&#x200B; プレビューURL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=ja#preview)を参照してください。 |
-| [[!UICONTROL Analytics for Target] （A4T） &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) | [!UICONTROL Adobe Analytics for Target]（A4T）は、[!DNL Analytics] のコンバージョン指標とオーディエンスセグメントに基づいてアクティビティを作成できるクロスソリューション統合環境です。 A4T統合では、Analytics レポートを使用して結果を調べることができます。<p>Adobe Experience Platform Web SDK実装の[&#x200B; サポートされているアクティビティタイプ &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja#section_F487896214BF4803AF78C552EF1669AA)および[実装手順](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=ja#platform)を参照してください。 |
+| [[!UICONTROL &#x200B; ターゲットの分析] （A4T） &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) | [!UICONTROL Target用Adobe Analytics] （A4T）は、[!DNL Analytics]個のコンバージョン指標とオーディエンスセグメントに基づいてアクティビティを作成できるソリューション間の統合機能です。 A4T統合では、Analytics レポートを使用して結果を調べることができます。<p>Adobe Experience Platform Web SDK実装の[&#x200B; サポートされているアクティビティタイプ &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja#section_F487896214BF4803AF78C552EF1669AA)および[実装手順](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=ja#platform)を参照してください。 |
 | [オーディエンス](https://experienceleague.adobe.com/docs/target/using/audiences/target.html?lang=ja) | ターゲットを絞ったアクティビティでコンテンツとエクスペリエンスを見るユーザーは、[!DNL Target]のオーディエンスによって決まります。<p>[&#x200B; オーディエンスリストを使用](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html?lang=ja#use-list)および[複数のオーディエンスを組み合わせる](https://experienceleague.adobe.com/docs/target/using/audiences/combining-multiple-audiences.html?lang=ja)を参照してください。 |
 | [オーディエンスの作成](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html?lang=ja) | [!DNL Adobe Experience Platform]で作成されたオーディエンスを使用すると、よりインパクトのあるパーソナライゼーションにつながる豊富な顧客データが得られます。<p>[Adobe Experience Platformのオーディエンスを使用](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html?lang=ja#aep)を参照してください。 |
 | [&#x200B; オファー決定](https://experienceleague.adobe.com/docs/target/using/integrate/ajo/offer-decision.html?lang=ja) | [!DNL Adobe Journey Optimizer]で作成されたオファー決定を[!DNL Target] アクティビティ（手動A/B テストまたはエクスペリエンスのターゲット設定）に追加して、webおよびモバイル上の訪問者に対する次善のオファーを決定して配信します。 |
-| [リダイレクトオファー - A4T FAQ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=ja) | リダイレクトオファーにより、訪問者のブラウザーが新しいページにリダイレクトされます。<p>[A4Tのリダイレクト オファーは[!UICONTROL Adobe Experience Platform Web SDK]でサポートされますか？](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=ja#platform)を参照してください |
+| [リダイレクトオファー - A4T FAQ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=ja) | リダイレクトオファーにより、訪問者のブラウザーが新しいページにリダイレクトされます。<p>[Adobe Experience Platform Web SDK]は、A4Tのリダイレクト オファーをサポートしていますか？(https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=ja#platform)を参照してください。 |
 | [レスポンストークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) | Response トークンを使用すると、[!DNL Target] データをGoogle Analyticsやその他の3rd パーティ統合に送信できます。<p>このタスクを実行する方法のコードサンプルについては、[Platform Web SDK](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja#sending-data-to-google-analytics-via-platform-web-sdk)を介したGoogle Analyticsへのデータ送信を参照してください。 |
-| *[!UICONTROL Platform Web SDK]概要* ガイドの[単一ページアプリケーション実装](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html?lang=ja)。 | [!UICONTROL Adobe Experience Platform Web SDK]には、シングルページアプリケーション （SPA）などの次世代のクライアントサイド技術でパーソナライゼーションを実行するための豊富な機能が用意されています。 |
+| *[!UICONTROL Platform Web SDK]の概要* ガイドの[&#x200B; シングルページアプリケーション実装](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html?lang=ja)。 | [!UICONTROL Adobe Experience Platform Web SDK]には、シングルページアプリケーション（SPA）などの次世代のクライアントサイド技術でパーソナライゼーションを実行するための豊富な機能が用意されています。 |
 | [TLS（Transport Layer Security）暗号化の変更](/help/dev/before-implement/tls-transport-layer-security-encryption.md) | TLS （Transport Layer Security）は、最高レベルのセキュリティ標準を維持し、顧客データの安全性を向上させるのに役立ちます。 |

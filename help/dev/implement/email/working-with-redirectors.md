@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 689
-ht-degree: 63%
+source-wordcount: 697
+ht-degree: 62%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 63%
 
    * `yourclientcode` はお客様のクライアントコードです。 クライアントコードはすべて小文字で、特殊文字は含まれません。
 
-     クライアントコードは、[!DNL Target] インターフェイスの&#x200B;**[!UICONTROL Administration]** > **[!UICONTROL Implementation]** ページの上部にあります。
+     クライアントコードは、[!DNL Target] インターフェイスの&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 実装]** ページの上部にあります。
 
    * `redirectorlink_456` は、キャンペーンおよびテストで使用するためにアカウントで表示するリダイレクター mbox の名前です。
 
@@ -107,7 +107,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->ベストプラクティスは、**[!UICONTROL Score per visit]** エンゲージメント指標を使用してコスト値を決定することです。
+>ベストプラクティスは、**[!UICONTROL 訪問当たりのスコア]**&#x200B;のエンゲージメント指標を使用してコスト値を決定することです。
 
 `&mboxPageValue=-value` を URL に追加します。 負の値であることに注意してください。
 
@@ -124,7 +124,7 @@ https://<your_clientcode>.tt.omtrdc.net/​m2/yourclientcode/ubox/​page?mbox=r
 
 >[!NOTE]
 >
->ベストプラクティスは、**[!UICONTROL Score per visit]** エンゲージメント指標を使用して収益値を決定することです。
+>ベストプラクティスは、**[!UICONTROL 訪問当たりのスコア]**&#x200B;のエンゲージメント指標を使用して収益値を決定することです。
 
 `&mboxPageValue=value` を URL に追加します。
 

@@ -18,7 +18,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1544
+source-wordcount: 1607
 ht-degree: 21%
 
 ---
@@ -33,20 +33,20 @@ ht-degree: 21%
 
 [!DNL Adobe Target]で最初の[!UICONTROL Recommendations] アクティビティを設定する前に、次の手順を実行します。
 
-1. [&#x200B; ユーザーの行動のキャプチャとレコメンデーションの配信に使用するwebおよびモバイルアプリのサーフェスに[!UICONTROL Target]](#implement-target)を実装します。
-1. [&#x200B; ユーザーに推奨する製品またはコンテンツの[!UICONTROL Recommendations] カタログ &#x200B;](#set-up-your-recommendations-catalog)を設定します。
+1. [&#x200B; ユーザーの行動のキャプチャとレコメンデーションの配信に使用するwebおよびモバイルアプリサーフェスに[!UICONTROL Target]](#implement-target)を実装します。
+1. [&#x200B; ユーザーにレコメンデーションする製品またはコンテンツの[!UICONTROL &#x200B; レコメンデーション &#x200B;] カタログ &#x200B;](#set-up-your-recommendations-catalog)を設定します。
 1. [行動情報とコンテキスト &#x200B;](#pass-behavioral-information-and-context)を[!DNL Target Recommendations]に渡して、パーソナライズされたレコメンデーションを配信できるようにします。
 1. [&#x200B; グローバル除外の設定](#configure-global-exclusions)。
-1. [設定[!UICONTROL Recommendations]を構成](#configure-recommendations-settings)。
+1. [[!UICONTROL 推奨事項]の設定](#configure-recommendations-settings)を構成します。
 1. （オプション） [管理者API](#administer-recommendations-using-admin-apis)を使用して[!UICONTROL Recommendations]を管理します。
 
 ## &#x200B;1. [!UICONTROL Target]を実装
 
 [!DNL Target Recommendations]には、Adobe Experience Platform Web SDKまたはat.js 0.9.2 （またはそれ以降）を実装する必要があります。 詳しくは、[[!UICONTROL Target] クライアントサイド実装ガイド &#x200B;](../client-side/overview.md)を参照してください。
 
-## &#x200B;2. [!UICONTROL Recommendations] カタログの設定
+## &#x200B;2. [!UICONTROL Recommendations] カタログを設定する
 
-高品質なレコメンデーションを提供するには、[!UICONTROL Target]がレコメンデーションする製品またはコンテンツについて知っている必要があります。 カタログには通常、推奨項目に関する3種類の情報が含まれます。 例えば、映画を推薦しているとします。 次の項目を含めます。
+質の高いレコメンデーションを提供するには、[!UICONTROL Target]がレコメンデーションする製品またはコンテンツについて知っている必要があります。 カタログには通常、推奨項目に関する3種類の情報が含まれます。 例えば、映画を推薦しているとします。 次の項目を含めます。
 
 1. レコメンデーションを受け取るユーザーに表示したいデータ。 例えば、ムービーの名前と、ムービーポスターのサムネール画像のURLを表示できます。
 1. マーケティングおよびマーチャンダイジング制御に便利なデータ。 例えば、NC-17 ムービーを推奨しないように、ムービーの評価を表示できます。
@@ -62,7 +62,7 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
->[!DNL Delivery API]を介して[!DNL Recommendations] [!UICONTROL Catalog]を更新する場合は、注意してください。 [!DNL Delivery API]は公開されているため、レコメンデーションカタログにクリック可能な項目を入力する際に使用しないでください。 これにより、無効なコンテンツが発生し、カタログが汚染される可能性があります。
+>[!DNL Delivery API]経由で[!DNL Recommendations] [!UICONTROL &#x200B; カタログ &#x200B;]を更新する場合は、注意してください。 [!DNL Delivery API]は公開されているため、レコメンデーションカタログにクリック可能な項目を入力する際に使用しないでください。 これにより、無効なコンテンツが発生し、カタログが汚染される可能性があります。
 >
 >**ベストプラクティス**: [!DNL Delivery API]は、次のカタログ属性の更新にのみ使用します。
 >
@@ -74,13 +74,13 @@ ht-degree: 21%
 >
 >* 必要に応じて、カスタマーサポートにリクエストして、配信APIを介してカタログの更新を無効にすることができます。
 >
->詳しくは、[[!UICONTROL Adobe Target Delivery API]](https://developer.adobe.com/target/implement/delivery-api/){target=_blank} ドキュメントを参照してください。
+>詳しくは、[[!UICONTROL Adobe Target Delivery API]](https://developer.adobe.com/target/implement/delivery-api/){target=_blank}のドキュメントを参照してください。
 
 ほとんどの顧客は、少なくとも1つのフィードを実装する必要があります。 その後、エンティティ APIまたはページ上のメソッドを使用して、頻繁に変更される属性や項目の更新をフィードに補完するように選択できます。
 
 ## &#x200B;3. 顧客行動に関する情報とコンテクストの提供
 
-[!UICONTROL Target]に渡す行動情報とコンテキストは、訪問者が実行するアクションによって異なります。これは、多くの場合、訪問者が操作するページのタイプに関連付けられます。
+[!UICONTROL Target]に渡す行動情報とコンテキストは、訪問者が実行するアクションによって異なります。このアクションは、多くの場合、訪問者が操作するページのタイプに関連付けられます。
 
 ### アイテムビューまたは商品ページ
 
@@ -171,13 +171,13 @@ function targetPageParams() {
 
 | 設定 | 説明 |
 |--- |--- |
-| カスタムグローバル mbox | （オプション）[!UICONTROL Target] アクティビティを提供するために使用するカスタムグローバル mbox を指定します。 デフォルトでは、[!UICONTROL Target]が使用するグローバル mboxは[!UICONTROL Recommendations]に使用されます。<P>注意：このオプションは、[!UICONTROL Target] **[!UICONTROL Administration]** ページで設定されています。 [!UICONTROL Target]を開き、**[!UICONTROL Administration]** > **[!UICONTROL Visual Experience Composer]**&#x200B;をクリックします。 |
+| カスタムグローバル mbox | （オプション）[!UICONTROL Target] アクティビティを提供するために使用するカスタムグローバル mbox を指定します。 デフォルトでは、[!UICONTROL Target] によって使用されるグローバル mbox が [!UICONTROL Recommendations] に使用されます。<P>注意：このオプションは、[!UICONTROL Target] **[!UICONTROL 管理]** ページで設定されています。 [!UICONTROL Target]を開き、**[!UICONTROL 管理]** > **[!UICONTROL Visual Experience Composer]**&#x200B;をクリックします。 |
 | 業種 | 業種は、レコメンデーション条件の分類に使用されます。 この情報は、ショッピングカートページやメディアページに最適な基準など、特定のページに最適な基準を見つけるのに役立ちます。 |
 | 非互換の条件をフィルター | このオプションを選択すると、選択されたページが必要なデータを渡す条件のみが表示されます。 すべての基準があらゆるページで正しく実行されるわけではありません。 現在のアイテムまたは現在のカテゴリの推奨事項に互換性を持たせるには、ページまたはmboxを`entity.id`または`entity.categoryId`に渡す必要があります。 通常は、互換性のある条件のみを表示するようにします。 ただし、アクティビティで互換性のない条件を有効にしたい場合は、このオプションのチェックを外します。<P>タグ管理ソリューションを使用している場合は、このオプションを無効にすることをお勧めします。<P>このオプションについて詳しくは、「*[!DNL Adobe Target]Business Practitioner Guide*」の「[[!UICONTROL Recommendations] FAQ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=ja)」を参照してください。 |
-| デフォルトホストグループ | デフォルトホストグループを選択します。<P>ホストグループを使用して、カタログの利用可能な項目をさまざまな用途に分割できます。 例えば、ホストグループは開発環境と本番環境、さまざまなブランド、またはさまざまな地域に使用できます。 デフォルトでは、カタログ検索、コレクションおよび除外のプレビュー結果はデフォルトのホストグループに基づいています。 （環境フィルターを使用して、結果をプレビューする別のホストグループを選択することもできます）。 デフォルトでは、新しく追加された項目は、項目の作成または更新時に環境IDが指定されていない限り、すべてのホストグループで使用できます。 配信されるレコメンデーションは、リクエストで指定したホストグループによって異なります。<P>商品が表示されていない場合は、適切なホストグループが使用されていることを確認してください。 例えば、ステージング環境を使用するようにレコメンデーションを設定し、ホストグループをステージングに設定した場合、商品を表示するために、ステージング環境のコレクションを再作成する必要がある可能性があります。 各環境でどの商品が利用できるかを確認するには、各環境でカタログ検索を利用します。 選択した環境（ホストグループ）の[!UICONTROL Recommendations] コレクションと除外の内容をプレビューすることもできます。<P>**メモ：**&#x200B;選択した環境を変更したら、「検索」をクリックして、返された結果を更新する必要があります。<P> **[!UICONTROL The Environment]** フィルターは、Target UIの次の場所から使用できます。<ul><li>カタログ検索（**[!UICONTROL Recommendations]** > **[!UICONTROL Catalog Search]**）</li><li>コレクションを作成ダイアログボックス （**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Create New]**）</li><li>コレクションを更新ダイアログボックス （**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Edit]**）</li><li>除外を作成ダイアログボックス （**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Create New]**）</li><li>除外を更新ダイアログボックス （**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**）</li></ul>詳しくは、「*[!DNL Adobe Target]Business Practitioner Guide*」の「[Hosts](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=ja)」を参照してください。 |
+| デフォルトホストグループ | デフォルトホストグループを選択します。<P>ホストグループを使用して、カタログの利用可能な項目をさまざまな用途に分割できます。 例えば、ホストグループは開発環境と本番環境、さまざまなブランド、またはさまざまな地域に使用できます。 デフォルトでは、カタログ検索、コレクションおよび除外のプレビュー結果はデフォルトのホストグループに基づいています。 （環境フィルターを使用して、結果をプレビューする別のホストグループを選択することもできます）。 デフォルトでは、新しく追加された項目は、項目の作成または更新時に環境IDが指定されていない限り、すべてのホストグループで使用できます。 配信されるレコメンデーションは、リクエストで指定したホストグループによって異なります。<P>商品が表示されていない場合は、適切なホストグループが使用されていることを確認してください。 例えば、ステージング環境を使用するようにレコメンデーションを設定し、ホストグループをステージングに設定した場合、商品を表示するために、ステージング環境のコレクションを再作成する必要がある可能性があります。 各環境でどの商品が利用できるかを確認するには、各環境でカタログ検索を利用します。 選択した環境（ホストグループ）の[!UICONTROL Recommendations] コレクションと除外の内容をプレビューすることもできます。<P>**メモ：**&#x200B;選択した環境を変更したら、「検索」をクリックして、返された結果を更新する必要があります。<P> **[!UICONTROL 環境]** フィルターは、Target UIの次の場所から使用できます。<ul><li>カタログ検索（**[!UICONTROL おすすめ]** > **[!UICONTROL カタログ検索]**）</li><li>コレクションを作成ダイアログボックス （**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Create New]**）</li><li>コレクションを更新ダイアログボックス （**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Edit]**）</li><li>除外を作成ダイアログボックス （**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL 新規作成]**）</li><li>除外を更新ダイアログボックス （**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**）</li></ul>詳しくは、「*[!DNL Adobe Target]Business Practitioner Guide*」の「[Hosts](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=ja)」を参照してください。 |
 | サムネールのベース URL | 商品カタログのベース URL を設定すると、商品のサムネールの指定でサムネール URL を渡す場合に、相対 URL を使用できます。<P>次に例を示します。<P>`"entity.thumbnailURL=/Images/Homepage/product1.jpg"`<P>サムネールのベース URL に対する相対 URL を設定します。 |
 | [!UICONTROL Recommendations] API トークン | このトークンは、ダウンロード APIなどの[!UICONTROL Recommendations] API呼び出しで使用します。 |
 
-## &#x200B;6. （オプション）管理者APIを使用して[!UICONTROL Recommendations]を管理
+## &#x200B;6. （オプション）管理者APIを使用して[!UICONTROL Recommendations]を管理する
 
-[!UICONTROL Recommendations]の[!UICONTROL Target]管理者および配信APIを設定および使用する方法については、[APIs](../../before-administer/recs-api/overview.md)の実践ガイドを参照してください。[!UICONTROL Recommendations]
+[!UICONTROL Recommendations]の[!UICONTROL Target]管理者および配信APIを設定および使用する方法については、[Recommendations] API(../../before-administer/recs-api/overview.md)の実践ガイドを参照してください。

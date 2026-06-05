@@ -18,7 +18,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 611
+source-wordcount: 624
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Target.getSessionId { (id, err) in
 
 ## web ビューでのテスト
 
-Web プレビューリンクは、[[!UICONTROL Adobe QA] リンク &#x200B;](/help/dev/implement/mobile/target-mobile-preview.md)をクリックしてポップアップを表示し、次のような各エクスペリエンスプレビューリンクをコピーすることで、[!UICONTROL Activity detail] ページで生成されます。
+Web プレビューリンクは、[[!UICONTROL Adobe QA] リンク &#x200B;](/help/dev/implement/mobile/target-mobile-preview.md)をクリックしてポップアップを表示し、次のような各エクスペリエンス プレビューリンクをコピーすることで、[!UICONTROL &#x200B; アクティビティの詳細] ページで生成されます。
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

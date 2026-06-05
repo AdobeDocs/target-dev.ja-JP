@@ -16,14 +16,14 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 116
+source-wordcount: 132
 ht-degree: 1%
 
 ---
 
-# [!UICONTROL Adobe Target Delivery API]を使い始める
+# [!UICONTROL Adobe Target Delivery API]の概要
 
-[!UICONTROL Target Delivery API]の呼び出しは次のようになります。
+[!UICONTROL Target Delivery API]呼び出しは次のようになります。
 
 ```
 curl -X POST \
@@ -55,9 +55,9 @@ curl -X POST \
     }'
 ```
 
-`clientCode`は、**[!UICONTROL Administration]** > **[!UICONTROL Implementation]**&#x200B;に移動して、[!DNL Target] UIから取得できます。
+`clientCode`を[!DNL Target] UIから取得するには、**[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;に移動します。
 
-[!UICONTROL Target Delivery API]呼び出しを行う前に、次の手順に従って、エンドユーザーに表示する関連するエクスペリエンスが応答に含まれていることを確認します。
+[!UICONTROL Target Delivery API]呼び出しを行う前に、次の手順に従って、応答にエンドユーザーに表示する関連するエクスペリエンスが含まれていることを確認します。
 
 1. [&#x200B; フォームベースのコンポーザー](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja)または[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja)を使用して、[!DNL Target] アクティビティ（A/B、XT、APまたはRecommendations）を作成します。
 1. 配信APIを使用して、手順2で作成した[!DNL Target] アクティビティで使用されるmboxの応答を取得します。

@@ -15,7 +15,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
 workflow-type: tm+mt
-source-wordcount: 901
+source-wordcount: 930
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
 
 例えば、特定のしきい値（在庫や価格のしきい値など）を満たした場合に、これらの項目にフラグを立てて推奨されないようにするために、エンティティを保存を使用して項目を更新できます。
 
-1. **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL CONTROL Environments]**&#x200B;に移動して、項目を追加または更新するターゲット環境IDを取得します。
+1. **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL CONTROL Environments]**&#x200B;に移動して、項目を追加または更新するTarget環境IDを取得します。
 
    ![SaveEntities1](assets/SaveEntities01.png)
 
@@ -79,7 +79,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
        }
    ```
 
-1. **[!UICONTROL Send]** をクリックします。 次の応答が返されます。
+1. 「**[!UICONTROL 送信]**」をクリックします。 次の応答が返されます。
 
    ![SaveEntities5.png](assets/SaveEntities05.png)
 
@@ -123,11 +123,11 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
        }
    ```
 
-1. 今度はお前の番だ！ **[!UICONTROL Save Entities]** APIを使用して、次の項目をカタログに追加します。 上記のサンプル JSONを出発点として使用します。 （追加のエンティティを含めるようにJSONを拡張する必要があります）。
+1. 今度はお前の番だ！ **[!UICONTROL エンティティを保存]** APIを使用して、次の項目をカタログに追加します。 上記のサンプル JSONを出発点として使用します。 （追加のエンティティを含めるようにJSONを拡張する必要があります）。
 
    ![SaveEntities6.png](assets/SaveEntities06.png)
 
-最後の2つは属していないようです。 **[!UICONTROL Get Entity]** APIを使用して調査し、必要に応じて&#x200B;**[!UICONTROL Delete Entities]** APIを使用して削除します。
+最後の2つは属していないようです。 **[!UICONTROL Get Entity]** APIを使用して確認し、必要に応じて&#x200B;**[!UICONTROL Delete Entities]** APIを使用して削除します。
 
 ## Get Entity APIを使用した項目の詳細の取得
 
@@ -166,7 +166,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
    ![GetEntity5](assets/GetEntity5.png)
 
-これらのエンティティをカタログから削除する必要があるとします。 **[!UICONTROL Delete Entities]** APIを使用しましょう。
+これらのエンティティをカタログから削除する必要があるとします。 **[!UICONTROL エンティティの削除]** APIを使用します。
 
 ## エンティティを削除APIを使用した項目の削除
 
@@ -180,7 +180,7 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 >
 >エンティティを削除APIは、指定したIDで参照されているエンティティを削除します。 エンティティ IDが指定されていない場合、指定された環境内のすべてのエンティティが削除されます。 環境IDが指定されていない場合、エンティティはすべての環境から削除されます。 慎重に使用してください。
 
-1. **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL Environments]**&#x200B;に移動して、項目を削除するターゲット環境IDを取得します。
+1. **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL Environments]**&#x200B;に移動して、項目を削除するTarget環境IDを取得します。
 
    ![DeleteEntities1](assets/SaveEntities01.png)
 

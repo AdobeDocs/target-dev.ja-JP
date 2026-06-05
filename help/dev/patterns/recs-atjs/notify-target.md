@@ -16,7 +16,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 368
+source-wordcount: 369
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 0%
    * `orderTotal`：購入の注文合計。
    * `orderId`：購入の注文ID。
 
-  次の図は、[!UICONTROL Confirmation] ページでのみ実行される [!DNL tags] in [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=ja){target=_blank}の ルールを示しています。
+  次の図は、[!UICONTROL 確認] ページでのみ実行される [!DNL tags] in [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=ja){target=_blank}の ルールを示しています。
 
   ![&#x200B; アクション設定ページ &#x200B;](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 

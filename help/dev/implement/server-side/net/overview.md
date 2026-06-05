@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 140
+source-wordcount: 143
 ht-degree: 12%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 12%
 
 the.NET SDKをテストします。
 
-* [[!DNL Adobe Target] [!UICONTROL on-device decisioning] デモサイト &#x200B;](https://github.com/adobe/on-device-decisioning-demo-site)にアクセスすると
+* [[!DNL Adobe Target] [!UICONTROL &#x200B; オンデバイス決定]のデモサイト &#x200B;](https://github.com/adobe/on-device-decisioning-demo-site)にアクセスすると
 * [&#x200B; サンプルアプリケーション &#x200B;](../sdk-guides/sample-apps/sample-apps.md)で。
 
 ### リファレンス

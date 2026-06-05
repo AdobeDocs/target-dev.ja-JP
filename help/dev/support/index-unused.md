@@ -3,8 +3,8 @@ title: サポート - Adobe Analytics
 description: これはAdobe Analyticsのサポートページです
 source-git-commit: f139f5b910b5d23ea8cf4ee5b00ea5f6fd3c39b2
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 6%
+source-wordcount: '97'
+ht-degree: 9%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 6%
 
 ### スタックオーバーフロー
 
-[探索](https://adobe.io)
+[参照](https://adobe.io)
 
 特定のタグを使用した開発者Q&amp;A。
 

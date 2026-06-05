@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 120
+source-wordcount: 133
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 ## 説明
 
-SDK[&#128279;](initialize-sdk.md)を初期化する際に、オプションの`OnDeviceDecisioningReady` デリゲートを`TargetClientConfig` オブジェクトで指定できます。これは、SDKがオンデバイス メソッド呼び出しの準備ができたときに呼び出されます。 [!UICONTROL on-device decisioning] アーティファクトのダウンロードを処理するために使用できる他のデリゲートもいくつかあります。
+SDK[&#128279;](initialize-sdk.md)を初期化する際に、オプションの`OnDeviceDecisioningReady` デリゲートを`TargetClientConfig` オブジェクトで指定できます。これは、SDKがオンデバイス メソッド呼び出しの準備ができたときに呼び出されます。 [!UICONTROL &#x200B; オンデバイス決定] アーティファクトのダウンロードを処理するために使用できる他のデリゲートもいくつかあります。
 
 ## Events
 
@@ -27,9 +27,9 @@ SDK[&#128279;](initialize-sdk.md)を初期化する際に、オプションの`O
 
 | 名前 | 引数 | 説明 |
 | --- | --- | --- |
-| OnDeviceDecisioningReady | None | クライアントが初めて[!UICONTROL on-device decisioning]の準備が整ったときに一度だけ呼び出されます |
-| ArtifactDownloadSucceeded | アーティファクトファイルの文字列コンテンツ | [!UICONTROL on-device decisioning] アーティファクトがダウンロードされるたびに呼び出されます |
-| ArtifactDownloadFailed | 例外 | [!UICONTROL on-device decisioning] アーティファクトのダウンロードに失敗するたびに呼び出されます |
+| OnDeviceDecisioningReady | None | クライアントが初めて[!UICONTROL &#x200B; オンデバイス決定]の準備が整ったときに一度だけ呼び出されます |
+| ArtifactDownloadSucceeded | アーティファクトファイルの文字列コンテンツ | [!UICONTROL &#x200B; オンデバイス決定] アーティファクトがダウンロードされるたびに呼び出されます |
+| ArtifactDownloadFailed | 例外 | [!UICONTROL &#x200B; オンデバイス決定] アーティファクトのダウンロードに失敗するたびに呼び出されます |
 
 ## 例
 
