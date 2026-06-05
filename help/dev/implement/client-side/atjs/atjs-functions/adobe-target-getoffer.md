@@ -1,26 +1,19 @@
 ---
 keywords: adobe.target.getOffer, getOffer, getoffer, get offer, get offer, at.js, functions, function, $8
-description: '[!UICONTROL adobe.target.getOffer()]関数とその [!DNL Adobe Target] at.js ライブラリのオプションを使用して、リクエストを実行して [!DNL Target]  オファーを取得します。'
-title: How Do I Use the [!UICONTROL adobe.target.getOffer()] Function?
+description: '[!UICONTROL adobe.target.getOffer （） ]関数とその [!DNL Adobe Target] at.js ライブラリのオプションを使用して、リクエストを実行して [!DNL Target]  オファーを取得します。'
+title: '[!UICONTROL adobe.target.getOffer （） ]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
 TQID: https://experienceleague.adobe.com/GcXVIt-42-PV0j4Q4oe5uePTZAn7PDIMicIAULDXz-s
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 463
-ht-degree: 75%
+source-wordcount: 472
+ht-degree: 72%
 
 ---
 
@@ -36,11 +29,11 @@ ht-degree: 75%
 | params | オブジェクト | × | mbox パラメーター。 次の構造を持つキーと値のペアのオブジェクト。<P>`{ "param1": "value1", "param2": "value2"}` |
 | success | 関数 | ○ | サーバーから応答を受け取ると、コールバックが実行されます。 success コールバック関数は、オファーオブジェクトの配列を表す単一のパラメーターを受け取ります。 次に、成功コールバックの例を示します。<P>`function handleSuccess(response){......}`<P>詳しくは、以下の「応答」を参照してください。 |
 | error | 関数 | ○ | エラーを受け取ると、コールバックが実行されます。 エラーと見なされる状況がいくつかあります。<ul><li>HTTP ステータスコードが 200 OK ではない</li><li>応答が解析できない。 例えば、脆弱な構造の JSON や、JSON ではなく HTML など。</li><li>応答には「エラー」キーが含まれます。 例えば、危険にさらされて例外がスローされ、リクエストが適切に処理されない可能性があります。 mboxがブロックされ、そのコンテンツを取得できないなどのエラーが発生する可能性があります。エラーコールバック関数は、ステータスとエラーの2つのパラメーターを受け取ります。 エラーコールバックの例を次に示します：`function handleError(status, error){......}`</li></ul>詳しくは、以下の「エラー応答」を参照してください。 |
-| timeout | 数値 | × | タイムアウト（ミリ秒）。 指定しない場合は、at.js のデフォルトのタイムアウトが使用されます。<P>デフォルトのタイムアウトは、[!UICONTROL Administration] > [!UICONTROL Implementation]の[!DNL Target] UIから設定できます。 |
+| timeout | 数値 | × | タイムアウト（ミリ秒）。 指定しない場合は、at.js のデフォルトのタイムアウトが使用されます。<P>デフォルトのタイムアウトは、[!UICONTROL 管理] > [!UICONTROL 実装]の[!DNL Target] UIから設定できます。 |
 
 ## 例
 
-[!UICONTROL getOffer()]でパラメーターを追加し、成功処理に[!UICONTROL applyOffer()]を使用しています：
+[!UICONTROL getOffer （） ]でパラメーターを追加し、成功処理に[!UICONTROL applyOffer （） ]を使用しています：
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -61,7 +54,7 @@ adobe.target.getOffer({
 });
 ```
 
-パラメーターとプロファイルパラメーターを[!UICONTROL getOffer()]に追加し、成功処理に[!UICONTROL applyOffer()]を使用しています：
+[!UICONTROL getOffer （） ]でパラメーターとプロファイルパラメーターを追加し、成功処理に[!UICONTROL applyOffer （） ]を使用します。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -84,7 +77,7 @@ adobe.target.getOffer({
 });
 ```
 
-[!UICONTROL getOffer()]でカスタムタイムアウトとカスタム成功処理を使用：
+[!UICONTROL getOffer （） ]でのカスタムタイムアウトとカスタム成功処理の使用：
 
 「YOUR_OWN_CUSTOM_HANDLING_FUNCTION」は、お客様が定義する関数のプレースホルダーです。
 

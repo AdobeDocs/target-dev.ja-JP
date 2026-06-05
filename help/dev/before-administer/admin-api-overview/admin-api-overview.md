@@ -4,17 +4,10 @@ description: ' [!DNL Adobe Target Admin API]の概要'
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/pJIaDbvs5sAFD8KPsnaNAMQAoq-lowmLs-B0zRAGzDY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1400
@@ -28,7 +21,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->UIを使用して[!DNL Target]を管理する場合は、*Adobe Target Business Practitioner Guide*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=ja)の管理セクションを参照してください。
+>UIを使用して[!DNL Target]を管理する場合は、*Adobe Target Business Practitioner Guide*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)の[管理セクションを参照してください。
 >
 >Admin APIとProfile APIは、多くの場合、まとめて参照されますが（「Admin and Profile API」）、個別に参照することもできます（「Admin API」と「Profile API」）。 Recommendations APIは、[!DNL Target]管理APIの特定の実装です。
 
@@ -42,7 +35,7 @@ ht-degree: 2%
 
 リクエストにペイロード（POSTまたはPUT）が含まれている場合、リクエストの`Content-Type` ヘッダーを使用してバージョンを指定します。
 
-リクエストにペイロード（GET、DELETEまたはOPTIONS）が含まれていない場合は、`Accept` ヘッダーを使用してバージョンを指定します。
+リクエストにペイロード （GET、DELETEまたはOPTIONS）が含まれていない場合、`Accept` ヘッダーを使用してバージョンを指定します。
 
 バージョンが指定されていない場合、呼び出しはデフォルトでV1 （application/vnd.adobe.target.v1+json）になります。
 
@@ -68,7 +61,7 @@ ht-degree: 2%
 
 Admin Postman Collection
 
-Postmanは、API呼び出しを簡単に実行できるアプリケーションです。 この[Target管理API Postman コレクション &#x200B;](https://developers.adobetarget.com/api/#admin-postman-collection)には、アクティビティ、オーディエンス、オファー、レポート、Mbox、および環境を使用して認証を必要とするすべてのTarget管理API呼び出しが含まれています
+Postmanは、API呼び出しを簡単に実行できるアプリケーションです。 この[Target管理API Postman コレクション ](https://developers.adobetarget.com/api/#admin-postman-collection)には、アクティビティ、オーディエンス、オファー、レポート、Mbox、および環境を使用して認証を必要とするすべてのTarget管理API呼び出しが含まれています
 
 ## 応答コード
 
@@ -77,7 +70,7 @@ Target Admin APIの一般的な応答コードを次に示します。
 | ステータス | 意味 | 説明 |
 | --- | --- | --- |
 | 200 | [OK](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | OK |
-| 400 | [不正なリクエスト &#x200B;](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | リクエストが正しくありません。 おそらく、リクエストで提供されたデータが無効です。 |
+| 400 | [不正なリクエスト ](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | リクエストが正しくありません。 おそらく、リクエストで提供されたデータが無効です。 |
 | 401 | [未承認](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | ユーザーはこの操作を実行できません。 |
 | 403 | [禁止](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | このリソースへのアクセスは禁止されています。 |
 | 404 | [見つかりません](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 参照されているリソースが見つかりませんでした。 |
@@ -86,11 +79,11 @@ Target Admin APIの一般的な応答コードを次に示します。
 
 アクティビティを使用すると、ユーザーのコンテンツをテストまたはパーソナライズできます。 アクティビティは、次のいずれかのタイプになります。
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja)
-* [エクスペリエンスのターゲット設定（XT）](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=ja)
-* [レコメンデーション](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=ja)
-* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja)
-* [多変量分析テスト（MVT）](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=ja)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [エクスペリエンスのターゲット設定（XT）](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
+* [レコメンデーション](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
+* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [多変量分析テスト（MVT）](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## 更新のバッチ
 
@@ -104,7 +97,7 @@ Target Admin APIの一般的な応答コードを次に示します。
 
 バッチ処理を使用すると、1つのHTTP リクエストで複数の操作の命令を渡すことができます。 関連する操作の依存関係を指定することもできます（以下の節で説明します）。 TNTは、独立した各操作を（場合によっては並行して）処理し、依存する操作を順次処理します。 すべての操作が完了すると、統合応答が渡され、HTTP接続が閉じられます。
 
-バッチ APIは、JSON配列として表される論理HTTP リクエストの配列を取り込みます。各リクエストには、メソッド（HTTP メソッド GET/PUT/POST/DELETEなどに対応）、relativeUrl （admin/rest/の後のURLの部分）、オプションのヘッダー配列（HTTP ヘッダーに対応）、オプションの本文（POSTおよびPUT リクエスト用）があります。 Batch APIは、JSON配列として表される論理HTTP応答の配列を返します。各応答には、ステータスコード、オプションのヘッダー配列、オプションの本文（JSON エンコードされた文字列）が含まれます。 バッチ処理リクエストに、実行する個々の操作を記述したJSON オブジェクトを構築させる。 許可される最大操作の数は256です（0から255まで）。
+バッチ APIは、JSON配列として表される論理HTTP リクエストの配列を取り込みます。各リクエストには、メソッド（HTTP メソッド GET/PUT/POST/DELETEなどに対応）、relativeUrl （admin/rest/の後のURLの部分）、オプションのヘッダー配列（HTTP ヘッダーに対応）、オプションの本文（POST リクエストおよびPUT リクエスト用）があります。 Batch APIは、JSON配列として表される論理HTTP応答の配列を返します。各応答には、ステータスコード、オプションのヘッダー配列、オプションの本文（JSON エンコードされた文字列）が含まれます。 バッチ処理リクエストに、実行する個々の操作を記述したJSON オブジェクトを構築させる。 許可される最大操作の数は256です（0から255まで）。
 
 リクエスト内の操作の依存関係の指定デフォルトでは、バッチ API リクエストで指定された操作は独立しています。サーバー上で任意の順序で実行でき、1つの操作のエラーは他の操作の実行には影響しません。
 
@@ -127,7 +120,7 @@ Target Admin APIの一般的な応答コードを次に示します。
 | ヘッダー | 特定の操作で送信されるキー値ヘッダーの配列。 バッチ APIの認証が認証ヘッダーを介して実行された場合、個々の操作でもコピーされます。 | 許可される配列のヘッダーの最大数は50です | コンテンツタイプ：application/json |
 | headers->name | ヘッダー名 | 他のヘッダー名と一意である必要があります。 ヘッダーではrfcで大文字と小文字が区別されないため、値は互いに上書きされます。 |  |
 | headers->value | ヘッダー値 | 該当なし | 空の文字列 |
-| method | 使用するHTTP メソッド。 利用可能なオプション：GET、POST、PUT、PATCH、DELETE | GET、POST、PUT、PATCH、DELETE メソッドのみが許可されます |  |
+| method | 使用するHTTP メソッド。 利用可能なオプション：GET、POST、PUT、PATCH、DELETE | get、POST、PUT、PATCH、DELETE メソッドのみが許可されます |  |
 | operationId | 応答と結果の参照のために、他の操作の中から操作を識別するために使用される操作ID。 | その他の操作では一意。0 ～ 255の値 |  |
 | 業務運営 | バッチで実行する操作のリスト。 注文は関係ありません。 | 最大256個の操作が許可されています |  |
 | relativeUrl | admin rest APIの相対URL。「/admin/rest/」の後の部分。 次のようなクエリ文字列パラメーターを含めることができます。「/v2/campaigns?limit=10&amp;offset=10」 以前のバッチアクションのIDを含むURLを参照できます（例：「/v1/offers/{operationIdResponse:0}」）。 クエリパラメーターが送信される場合は、URL エンコードする必要があります。 | /で始まる必要があります。新しい有効なJSON APIのみがサポートされます。無効なrelativeURLの場合、特定の操作に対する404応答が返されます。operationIdResponseを参照する場合、参照されるoperationId応答は有効なIDで、そのアクションのメソッドはPOSTである必要があります |  |

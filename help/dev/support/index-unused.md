@@ -3,8 +3,8 @@ title: サポート - Adobe Analytics
 description: これはAdobe Analyticsのサポートページです
 source-git-commit: f139f5b910b5d23ea8cf4ee5b00ea5f6fd3c39b2
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 6%
+source-wordcount: '97'
+ht-degree: 9%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 6%
 
 コミュニティ全体のチュートリアルとビデオ。
 
-[&#x200B; エクスペリエンスフォーラム &#x200B;](https://adobe.io)
+[ エクスペリエンスフォーラム ](https://adobe.io)
 
 助けを得て他の人を助けるためのフォーラム
 
@@ -37,11 +37,11 @@ ht-degree: 6%
 
 会話に参加する場所があります。
 
-![&#x200B; スタックオーバーフロー](stack-overflow.png)
+![ スタックオーバーフロー](stack-overflow.png)
 
 ### スタックオーバーフロー
 
-[探索](https://adobe.io)
+[参照](https://adobe.io)
 
 特定のタグを使用した開発者Q&amp;A。
 

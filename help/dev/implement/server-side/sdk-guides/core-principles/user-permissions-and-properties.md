@@ -4,10 +4,8 @@ description: ' [!DNL Target] SDKには、ユーザー権限とプロパティの
 exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/4l6qKRuEw14xYjcEsY49-3AAjYl6gouoKWIjkNuchdI
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 123
@@ -17,7 +15,7 @@ ht-degree: 8%
 
 # ユーザーの権限とプロパティ
 
-[!DNL Target] SDKには、ユーザー権限とプロパティのサポートが含まれています。 [!DNL Adobe Target]がワークスペースとプロパティを介してエンタープライズ権限を処理する方法に慣れていない場合は、[&#x200B; エンタープライズユーザー権限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=ja)で詳細を確認できます。
+[!DNL Target] SDKには、ユーザー権限とプロパティのサポートが含まれています。 [!DNL Adobe Target]がワークスペースとプロパティを介してエンタープライズ権限を処理する方法に慣れていない場合は、[ エンタープライズユーザー権限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=ja)で詳細を確認できます。
 
 クライアントは、プロパティトークンを2つの方法のいずれかで使用できます。
 

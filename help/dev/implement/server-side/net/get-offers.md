@@ -4,17 +4,13 @@ description: getOffers （）を使用して決定を実行し、 [!DNL Adobe Ta
 feature: APIs/SDKs
 exl-id: 4d1d1cbd-c7e5-4146-9fea-08e01923874d
 TQID: https://experienceleague.adobe.com/T-oUyDgCJZ8hqQZgCb3-Z-d9WeMaffwq8krMHhGvYlI
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 572
+source-wordcount: 576
 ht-degree: 14%
 
 ---
@@ -70,7 +66,7 @@ TargetDeliveryRequest.Builder TargetDeliveryRequest.Builder()
 | tntId | 文字列 | × | ユーザーの[!DNL Target]のプライマリ ID。 targetCookieから取得しました。 指定されていない場合は自動生成。 |
 | mcId | 文字列 | × | 異なるAdobe ソリューション（ECID）間のデータの結合と共有に使用されます。 targetCookieから取得しました。 指定されていない場合は自動生成。 |
 | trackingServer | 文字列 | × | [!DNL Adobe Target]と[!DNL Adobe Analytics]が正しくデータをつなぎ合わせるために、Adobe Analytics Serverを使用します。 |
-| trackingServerSecure | 文字列 | × | [!UICONTROL Adobe Analytics Secure Server]は、[!DNL Adobe Target]と[!DNL Adobe Analytics]がデータを正しく結合するために使用されます。 |
+| trackingServerSecure | 文字列 | × | [!DNL Adobe Target]と[!DNL Adobe Analytics]がデータを正しく結合するために、[!UICONTROL Adobe Analytics Secure Server]を使用します。 |
 | decisioningMethod | DecisioningMethod | × | オンデバイス判定のためのON_DEVICEまたはハイブリッド判定メソッドを明示的に設定するために使用できます |
 
 各フィールドの値は、[Target配信API](/help/dev/implement/delivery-api/overview.md) リクエスト仕様に準拠している必要があります。

@@ -1,23 +1,17 @@
 ---
 title: Experience Cloud ID （ECID）サービス
-description: ' [!DNL Target] SDKを使用して [!DNL Target] からコンテンツを取得することは強力ですが、ユーザートラッキングに[!UICONTROL Experience Cloud ID] （ECID）を使用することの付加価値は、A4T レポートや [!DNL Adobe Audience Manager]  （AAM）セグメントなど、Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] の製品や機能を超えて拡張されます。'
+description: ' [!DNL Target] SDKを使用して [!DNL Target] からコンテンツを取得することは強力ですが、[!UICONTROL Experience Cloud ID] （ECID）を使用してユーザートラッキングに使用することの付加価値は、A4T レポートや [!DNL Adobe Audience Manager]  （AAM）セグメントなどのAdobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] 製品や機能を超えています。'
 exl-id: fd7e5c3e-51c1-4965-ab6a-f50a6b0c910b
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/751nWT-fW5Ct1rZ2DgnTz2Pkt9W7-JfcusQ6eqrDp1A
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 261
+source-wordcount: 273
 ht-degree: 0%
 
 ---

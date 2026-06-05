@@ -1,32 +1,32 @@
 ---
-title: Experience Cloudとの統合
-description: Experience Cloudとの統合
-keywords: 配信 api
+title: Experience Cloudとの連携
+description: Experience Cloudとの連携
+keywords: Delivery API
 source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 7%
+source-wordcount: '482'
+ht-degree: 10%
 
 ---
 
 <!-- The content on this page was originally pulled from the legacy Delivery API doc site, and was subsequently found to be an outdated version of information now found on [Implement > Server-side > Integration > A4T Reporting](../../implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md) and [Implement > Server-side > Integration > AAM Segments](../../implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md). Therefore sunsetting this page, but not deleting it from the repo immediately, pending a more thorough examination to avoid inadvertently deleting relevant content. -->
 
 
-# Experience Cloudとの統合
+# Experience Cloudとの連携
 
 ## Adobe Analytics for Target （A4T）
 
-ターゲット配信 API 呼び出しがサーバーから実行されると、Adobe Targetがそのユーザーのエクスペリエンスを返し、さらに、Adobe TargetがAdobe Analytics ペイロードを呼び出し元に返すか、自動的にAdobe Analyticsに転送します。 Target のアクティビティ情報をサーバーサイドのAdobe Analyticsに送信するには、次の前提条件を満たす必要があります。
+Target Delivery API呼び出しがサーバーから実行されると、Adobe Targetはそのユーザーのエクスペリエンスを返します。さらに、Adobe TargetはAdobe Analytics ペイロードを呼び出し元に戻すか、Adobe Analyticsに自動的に転送します。 サーバーサイドのAdobe AnalyticsにTarget アクティビティ情報を送信するには、次の前提条件を満たす必要があります。
 
-1. アクティビティは、Adobe Target UI でAdobe Analyticsをレポートソースとして設定され、アカウントは A4T に対して有効になります
-1. Adobe Marketing Cloud訪問者 ID は、API ユーザーによって生成され、Target 配信 API 呼び出しが実行されると使用できるようになります
+1. アクティビティは、レポートソースとしてAdobe Analyticsを使用してAdobe Target UIで設定され、アカウントはA4Tに対して有効になっています
+1. Adobe Marketing Cloud訪問者IDはAPI ユーザーによって生成され、Target Delivery API呼び出しが発生したときに使用できます
 
-### Adobe Targetは、Analytics ペイロードを自動的に転送します
+### Adobe Targetは、Analytics ペイロードを自動転送します
 
-次の識別子が指定されている場合、Adobe Targetは、サーバーサイドを介して analytics ペイロードをAdobe Analyticsに自動的に転送できます。
+次の識別子が指定されている場合、Adobe Targetは、サーバーサイドを介してAnalytics ペイロードをAdobe Analyticsに自動的に転送できます。
 
-1. `supplementalDataId` - Adobe AnalyticsとAdobe Target間のステッチに使用される ID
-1. `trackingServer` - Adobe Analaytics Server Adobe TargetとAdobe Analyticsがデータを正しくステッチするには、同じ `supplementalDataId` をAdobe TargetとAdobe Analyticsの両方に渡す必要があります。
+1. `supplementalDataId` - Adobe AnalyticsとAdobe Target間のステッチに使用されるID
+1. `trackingServer` - Adobe Analytics Server Adobe TargetとAdobe Analyticsがデータを正しく結合するには、Adobe TargetとAdobe Analyticsの両方に同じ`supplementalDataId`を渡す必要があります。
 
 ```
 curl -X POST \
@@ -71,9 +71,9 @@ curl -X POST \
     }'
 ```
 
-### Adobe Targetから Analytics ペイロードを取得
+### Adobe TargetからのAnalytics ペイロードの取得
 
-Adobe Target配信 API のコンシューマーは、対応する mbox のAdobe Analytics ペイロードを取得できるため、[Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を介してAdobe Analyticsにペイロードを送信できます。 サーバーサイド Adobe Target呼び出しが実行されると、`client_side` をリクエストの `logging` フィールドに渡します。 これは、レポートソースとして Analytics を使用しているアクティビティに mbox が存在する場合、ペイロードを返します。
+Adobe Target Delivery APIのコンシューマーは、対応するmboxのAdobe Analytics ペイロードを取得できるため、コンシューマーは[Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を介してAdobe Analyticsにペイロードを送信できます。 サーバーサイドのAdobe Target呼び出しが発生したら、リクエストの`logging` フィールドに`client_side`を渡します。 これにより、Analyticsをレポートソースとして使用しているアクティビティにmboxが存在する場合、ペイロードが返されます。
 
 ```
 curl -X POST \
@@ -121,7 +121,7 @@ curl -X POST \
     }'
 ```
 
-`logging` = `client_side` を指定すると、以下に示すように、「`mbox`」フィールドにペイロードが届きます。
+`logging` = `client_side`を指定すると、次に示すように、`mbox` フィールドにペイロードが表示されます。
 
 ```
 {
@@ -176,28 +176,28 @@ curl -X POST \
 }
 ```
 
-Target からの応答に `analytics` -> `payload` プロパティに何かが含まれている場合は、そのままAdobe Analyticsに転送します。 Analytics は、このペイロードの処理方法を把握しています。 これは、次のフォーマットを使用したGET リクエストで実行できます。
+Targetからのレスポンスに`analytics` -> `payload` プロパティに何かが含まれている場合は、そのままAdobe Analyticsに転送します。 Analyticsはこのペイロードの処理方法を把握しています。 これは、次の形式を使用してGET リクエストで実行できます。
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
 ```
 
-### クエリ文字列のパラメーターと変数
+### クエリー文字列パラメーターと変数
 
 | フィールド名 | 必須 | 説明 |
 | --- | --- | --- |
 | `rsid` | ○ | レポートスイート ID |
-| `pe` | ○ | ページイベント。 常に `tnt` に設定 |
-| `tnta` | ○ | Target サーバーから `analytics` -> `payload` -> `tnta` で返された Analytics ペイロード |
+| `pe` | ○ | ページイベント： 常に`tnt`に設定 |
+| `tnta` | ○ | Analytics ペイロードがTarget サーバーによって`analytics` -> `payload` -> `tnta`に返されました |
 | `mid` | Marketing Cloud 訪問者 ID |  |
 
-### 必須のヘッダー値
+### 必須ヘッダー値
 
 | ヘッダー名 | ヘッダー値 |
 | --- | --- |
 | ホスト | Analytics データ収集サーバー（例：adobeags421.sc.omtrdc.net） |
 
-### A4T データ挿入 HTTP Get 呼び出しの例
+### A4T データ挿入HTTP Get呼び出しの例
 
 ```
 https://demo.sc.omtrdc.net/b/ss/myCustomRsid/0/MOBILE-1.0?pe=tnt&tnta=285408:0:0|2&mid=2304820394812039
@@ -205,13 +205,13 @@ https://demo.sc.omtrdc.net/b/ss/myCustomRsid/0/MOBILE-1.0?pe=tnt&tnta=285408:0:0
 
 ## Adobe Audience Manager
 
-Adobe Audience Manager（AAM）セグメントは、Adobe Target配信 API を介して利用することもできます。 AAM セグメントを活用するには、次のフィールドを指定する必要があります。
+Adobe Audience Manager（AAM）セグメントは、Adobe Target Delivery APIを介して活用することもできます。 AAM セグメントを活用するには、次のフィールドを指定する必要があります。
 
 | フィールド名 | 必須 | 説明 |
 | --- | --- | --- |
-| `locationHint` | ○ | DCS 場所のヒントは、プロファイルを取得するためにヒットするAAM DCS エンドポイントを判断するために使用されます。 1 以上にする必要があります。 |
+| `locationHint` | ○ | DCS Location Hintは、プロファイルを取得するためにヒットするAAM DCS エンドポイントを決定するために使用されます。 >= 1にする必要があります。 |
 | `marketingCloudVisitorId` | ○ | Marketing Cloud 訪問者 ID |
-| `blob` | ○ | AAM Blob は、追加データをAAMに送信するために使用されます。 サイズ &lt; 1024 の値を指定し、空白にすることはできません。 |
+| `blob` | ○ | AAM Blobは、AAMにデータを送信するために使用されます。 空白にせず、サイズ &lt;= 1024を指定してください。 |
 
 ```
 curl -X POST \

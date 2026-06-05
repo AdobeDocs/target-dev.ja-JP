@@ -6,21 +6,14 @@ level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
 TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1060
+source-wordcount: 1144
 ht-degree: 3%
 
 ---
@@ -39,13 +32,13 @@ ht-degree: 3%
 
 ## エクスペリエンスのレンダリング図 {#diagram}
 
-at.jsで利用できる、すぐに使える自動フリッカー処理は、[!UICONTROL Automatic Page Load Request]が有効になっている場合にのみ有効です。 このオプションは、[!DNL Target]からエクスペリエンスを取得する際に、HTMLの本文全体を非表示にします。 この場合、フリッカーを処理するのは自分の責任です。 ガイダンスのちらつき処理に使用できる実装パターンを検索します。
+at.jsで使用できる自動フリッカー処理は、[!UICONTROL 自動ページ読み込み要求]が有効になっている場合にのみ有効です。 このオプションは、[!DNL Target]からエクスペリエンスを取得する際に、HTMLの本文全体を非表示にします。 この場合、フリッカーを処理するのは自分の責任です。 ガイダンスのちらつき処理に使用できる実装パターンを検索します。
 
 >[!NOTE]
 >
 >次の図の手順の番号は、以下の節に対応しています。 ステップ番号は特定の順序ではなく、アクティビティの作成中に[!DNL Target] UIで実行されたステップの順序は反映されません。
 
-![&#x200B; エクスペリエンス図をレンダリング &#x200B;](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
+![ エクスペリエンス図をレンダリング ](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
 次のリンクをクリックして、目的のセクションに移動します。
 
@@ -71,8 +64,8 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 **使用可能なオプション**
 
 * IDによるプロモーション
-* [コレクションで宣伝](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=ja){target=_blank}
-* [属性で昇格](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=ja){target=_blank}
+* [コレクションで宣伝](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [属性で昇格](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **エンティティ パラメーターが必要**
 
@@ -80,7 +73,7 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **読み取り**
 
-* [プロモーションの追加](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=ja){target=_blank}
+* [プロモーションの追加](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -94,9 +87,9 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **使用可能な条件**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL これらを閲覧したユーザー、これらを閲覧したユーザー]
+* [!UICONTROL これらを閲覧したユーザー、購入したユーザー]
+* [!UICONTROL これらを購入した人、購入した人]
 
 **エンティティ パラメーターが必要**
 
@@ -104,7 +97,7 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **読み取り**
 
-* [カートベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [カートベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -118,13 +111,13 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **使用可能な条件**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL  サイト全体で最も閲覧された]
+* [!UICONTROL  カテゴリー別に最も閲覧された]
+* [!UICONTROL 項目属性]で最も閲覧された項目
+* サイト全体で[!UICONTROL  トップ セラー]
+* [!UICONTROL  カテゴリー別のトップセラー]
+* [!UICONTROL 項目属性]別の上位セラー
+* 分析指標[!UICONTROL 上位]
 
 **エンティティ パラメーターが必要**
 
@@ -133,7 +126,7 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **読み取り**
 
-* [人気ベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [人気ベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -147,10 +140,10 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **使用可能な条件**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL これを閲覧したユーザー、これを閲覧したユーザー]
+* [!UICONTROL これを閲覧したユーザーが購入しました]
+* [!UICONTROL これを購入した人、購入した人]
+* [!UICONTROL 類似の属性を持つアイテム ]
 
 **エンティティ パラメーターが必要**
 
@@ -159,7 +152,7 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **読み取り**
 
-* [アイテムベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [アイテムベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -173,8 +166,8 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **使用可能な条件**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL 最近表示された項目]
+* [!UICONTROL あなたにおすすめ]
 
 **エンティティ パラメーターが必要**
 
@@ -182,7 +175,7 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **読み取り**
 
-* [ユーザーベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [ユーザーベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -196,7 +189,7 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **使用可能な条件**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL  カスタムアルゴリズム ]
 
 **エンティティ パラメーターが必要**
 
@@ -204,7 +197,7 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **読み取り**
 
-* [カスタム条件](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [カスタム条件](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -216,7 +209,7 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **読み取り**
 
-* [動的および静的インクルージョンルールの使用](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=ja){target=_blank}
+* [動的および静的インクルージョンルールの使用](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -230,7 +223,7 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **読み取り**
 
-* [エンティティを動的に除外できますか。](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=ja#exclude){target=_blank}
+* [エンティティを動的に除外できますか。](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -242,9 +235,9 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **読み取り**
 
-* [エンティティの属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=ja){target=_blank}
+* [エンティティの属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-この手順を実行するには、[!DNL Target] UIを使用して[製品フィード &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=ja){target=_blank}を作成し、[!DNL Recommendations]の製品カタログを更新します。
+この手順を実行するには、[!DNL Target] UIを使用して[製品フィード ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}を作成し、[!DNL Recommendations]の製品カタログを更新します。
 
 +++
 
@@ -258,7 +251,7 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 **読み取り**
 
-* [プロファイル属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=ja){target=_blank}
+* [プロファイル属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
 
 +++
 
@@ -266,11 +259,11 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 ## 3.11: ページ読み込みリクエストを実行する {#fire}
 
-この手順では、リクエストで`execute` > `pageLoad` ペイロードを含む[!DNL Delivery API]呼び出しをトリガーします。 `getOffers()` メソッドはエクスペリエンスを取得し、`applyOffers()`はページ上のエクスペリエンスをレンダリングします。 `pageLoad` リクエストは、[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja){target=_blank} （VEC）で作成されたエクスペリエンスのレンダリングに必要です。
+この手順では、リクエストで`execute` > `pageLoad` ペイロードを含む[!DNL Delivery API]呼び出しをトリガーします。 `getOffers()` メソッドはエクスペリエンスを取得し、`applyOffers()`はページ上のエクスペリエンスをレンダリングします。 `pageLoad` リクエストは、[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} （VEC）で作成されたエクスペリエンスのレンダリングに必要です。
 
 +++詳細を見る
 
-![&#x200B; ページ読み込みリクエスト図を作成](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
+![ ページ読み込みリクエスト図を作成](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
 
 **前提条件**
 
@@ -314,4 +307,4 @@ at.jsで利用できる、すぐに使える自動フリッカー処理は、[!U
 
 [このページの上部にある図に戻ります。](#diagram)
 
-手順4に進みます：[&#x200B; ターゲットに通知](/help/dev/patterns/recs-atjs/notify-target.md)。
+手順4に進みます：[ ターゲットに通知](/help/dev/patterns/recs-atjs/notify-target.md)。

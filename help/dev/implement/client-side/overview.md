@@ -5,34 +5,27 @@ title: クライアントサイド Web用に [!DNL Target] を実装する方法
 feature: at.js
 exl-id: b3a850ff-ace0-4eea-955a-aa71dfad256f
 TQID: https://experienceleague.adobe.com/KgJyhvTguS8EXbwELaApI1mcs5egnEKHKpnxVYGqT4I
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 233
-ht-degree: 28%
+source-wordcount: 252
+ht-degree: 26%
 
 ---
 
 # 概要：クライアントサイド web用に[!DNL Target]を実装する
 
-クライアント側での [!DNL Adobe Target] の実装では、[!DNL Target] アクティビティに関連付けられたエクスペリエンスをクライアントブラウザーに直接配信します。 ブラウザーは、表示するエクスペリエンスを決定して表示します。 クライアント側の実装では、WYSIWYG エディタ、[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) （VEC）、または非視覚的インタフェースである[フォームベースの Experience Composer &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja)を使用して、アクティビティとパーソナライズされたエクスペリエンスを作成できます。
+クライアント側での [!DNL Adobe Target] の実装では、[!DNL Target] アクティビティに関連付けられたエクスペリエンスをクライアントブラウザーに直接配信します。 ブラウザーは、表示するエクスペリエンスを決定して表示します。 クライアント側の実装では、WYSIWYG エディタ、[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) （VEC）、または非視覚的インタフェースである[フォームベースの Experience Composer ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)を使用して、アクティビティとパーソナライズされたエクスペリエンスを作成できます。
 
 [!DNL Target] クライアントサイドを実装するには、次のいずれかのJavaScript ライブラリを使用する必要があります。
 
 * [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
 
-  [!UICONTROL Adobe Experience Platform Web SDK]を使用すると、[!DNL Adobe Experience Cloud] （[!DNL Target]を含む）の様々なサービスを[!UICONTROL Adobe Experience Edge Network]経由で操作できます。 [!UICONTROL Adobe Experience Platform Web SDK]への移行を選択した場合は、[概要[!UICONTROL Adobe Experience Platform Web SDK]](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)を参照してください。
+  [!UICONTROL Adobe Experience Platform Web SDK]を使用すると、[!UICONTROL Adobe Experience Edge Network]を通じて[!DNL Adobe Experience Cloud] （[!DNL Target]を含む）の様々なサービスを利用できます。 [!UICONTROL Adobe Experience Platform Web SDK]への移行を選択した場合は、[Adobe Experience Platform Web SDK]](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)の概要を参照してください。[!UICONTROL 
 
 * [[!DNL Target] at.js JavaScript library](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 

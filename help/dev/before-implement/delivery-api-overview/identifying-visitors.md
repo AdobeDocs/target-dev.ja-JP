@@ -5,17 +5,13 @@ keywords: Delivery API
 exl-id: 5b8c28aa-caad-44a9-880a-3c5f844e47b2
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/ciTxaPn8odyuyHzrnqhPWzdmpcU2bknOATGCt-ZtAZw
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 789
-ht-degree: 12%
+source-wordcount: 797
+ht-degree: 11%
 
 ---
 
@@ -30,7 +26,7 @@ Targetでは、次の3つの識別子を使用します。
 | `tntId` | `tntId`は、ユーザーの[!DNL Target]のプライマリ IDです。 このIDを指定できます。リクエストにIDが含まれていない場合は、[!DNL Target]が自動生成します。 |
 | `thirdPartyId` | `thirdPartyId`は、電話のたびに送信できるユーザーの会社のIDです。 ユーザーが企業のサイトにログインすると、通常、その企業は、訪問者のアカウント、ロイヤルティカード、会員番号、またはその他の該当する識別子に関連付けられたIDを作成します。 |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId`は、異なるAdobe ソリューション間でデータを結合して共有するために使用されます。 Adobe AnalyticsおよびAdobe Audience Managerとの統合には、`marketingCloudVisitorId`が必要です。 |
-| `customerIds` | Experience Cloud訪問者IDと共に、各訪問者に対する追加の[顧客ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja)と認証済みステータスを利用できます。 |
+| `customerIds` | Experience Cloud訪問者IDと共に、追加の[顧客ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja)と各訪問者の認証済みステータスを使用できます。 |
 
 ## [!DNL Target] ID
 
@@ -81,7 +77,7 @@ curl -X POST \
 }
 ```
 
-生成された`tntId`は`10abf6304b2714215b1fd39a870f01afc.28_20`です。 セッション間で同じユーザーの[!UICONTROL Adobe Target Delivery API]を呼び出す場合は、この`tntId`を使用する必要があります。
+生成された`tntId`は`10abf6304b2714215b1fd39a870f01afc.28_20`です。 セッション間で同じユーザーに[!UICONTROL Adobe Target Delivery API]を呼び出す場合は、この`tntId`を使用する必要があります。
 
 ## Marketing Cloud 訪問者 ID
 
@@ -177,7 +173,7 @@ curl -X POST \
 
 ## 顧客 ID
 
-[お客様ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja)を追加し、Experience Cloudの訪問者IDに関連付けることができます。 `customerIds`を送信するたびに、`marketingCloudVisitorId`も指定する必要があります。 さらに、各訪問者に対して、認証ステータスを各`customerId`と共に提供できます。 次の認証ステータスを考慮できます。
+[顧客ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=ja)を追加し、Experience Cloud訪問者IDに関連付けることができます。 `customerIds`を送信するたびに、`marketingCloudVisitorId`も指定する必要があります。 さらに、各訪問者に対して、認証ステータスを各`customerId`と共に提供できます。 次の認証ステータスを考慮できます。
 
 | 認証状態 | ユーザーステータス |
 | --- | --- |
@@ -228,11 +224,11 @@ curl -X POST \
     }'
 ```
 
-上記の呼び出しの例では、`authenticatedState`を含む`customerId`を送信する方法を示しています。 `customerId`を送信する場合、`integrationCode`、`id`、`authenticatedState`および`marketingCloudVisitorId`が必要です。 `integrationCode`は、CRSを通じて指定した[顧客属性ファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=ja)のエイリアスです。
+上記の呼び出しの例では、`authenticatedState`を含む`customerId`を送信する方法を示しています。 `customerId`を送信する場合、`integrationCode`、`id`、`authenticatedState`および`marketingCloudVisitorId`が必要です。 `integrationCode`は、CRSを通じて指定した[顧客属性ファイル ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=ja)のエイリアスです。
 
 ## 結合プロファイル
 
-同じリクエストで`tntId`、`thirdPartyID`および`marketingCloudVisitorId`を組み合わせることができます。 この場合、Adobe Targetは、これらすべてのIDのマッピングを管理し、訪問者に固定します。 様々な識別子を使用してプロファイルを[統合し、リアルタイムで](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=ja)同期する方法について説明します。
+同じリクエストで`tntId`、`thirdPartyID`および`marketingCloudVisitorId`を組み合わせることができます。 この場合、Adobe Targetは、これらすべてのIDのマッピングを管理し、訪問者に固定します。 様々な識別子を使用してプロファイルを[統合し、リアルタイムで](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html)同期する方法について説明します。
 
 ```
 curl -X POST \

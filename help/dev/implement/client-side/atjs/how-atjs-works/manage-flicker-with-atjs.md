@@ -5,17 +5,11 @@ title: at.jsはどのようにFlickerを管理しますか？
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
 TQID: https://experienceleague.adobe.com/r8uyzkf1gSHmppyDHPOcn5jrH86Hedb4ArMmtigq93w
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 717
@@ -45,13 +39,13 @@ ht-degree: 57%
 
 （画像をクリックして全幅に拡大します）。
 
-![&#x200B; ターゲットフロー：at.js ページ読み込みリクエスト &#x200B;](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png " ターゲットフロー：at.js ページ読み込みリクエスト "){zoomable="yes"}
+![ ターゲットフロー：at.js ページ読み込みリクエスト ](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png " ターゲットフロー：at.js ページ読み込みリクエスト "){zoomable="yes"}
 
 **at.js 1.*x***
 
 （画像をクリックして全幅に拡大します）。
 
-![&#x200B; ターゲットフロー：自動作成されたグローバル mbox](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png " ターゲットフロー：自動作成されたグローバル mbox"){zoomable="yes"}
+![ ターゲットフロー：自動作成されたグローバル mbox](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png " ターゲットフロー：自動作成されたグローバル mbox"){zoomable="yes"}
 
 `bodyHiddenStyle` オーバーライドについて詳しくは、「[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)」を参照してください。
 

@@ -6,17 +6,13 @@ level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
 TQID: https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 368
+source-wordcount: 369
 ht-degree: 0%
 
 ---
@@ -35,7 +31,7 @@ ht-degree: 0%
 
 次の図の手順の番号は、以下の節に対応しています。
 
-![&#x200B; ターゲットダイアグラムに通知](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
+![ ターゲットダイアグラムに通知](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
 
 ## 4.1: [!DNL Adobe Target] Track APIを実行する
 
@@ -43,7 +39,7 @@ ht-degree: 0%
 
 +++詳細を見る
 
-![Fire Adobe Target Track API ダイアグラム &#x200B;](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
+![Fire Adobe Target Track API ダイアグラム ](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 以下の「*前提条件*」セクションに記載されているように、注文コンバージョン属性を送信します。 mboxの名前は問題ではありませんが、変換には`orderConfirmPage`を使用します。
 
@@ -60,16 +56,16 @@ ht-degree: 0%
    * `orderTotal`：購入の注文合計。
    * `orderId`：購入の注文ID。
 
-  次の図は、[!UICONTROL Confirmation] ページでのみ実行される [!DNL tags] in [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=ja){target=_blank}の ルールを示しています。
+  次の図は、[!UICONTROL 確認] ページでのみ実行される [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank}の[ ルールを示しています。
 
-  ![&#x200B; アクション設定ページ &#x200B;](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
+  ![ アクション設定ページ ](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
 * カート追加用のイベントを追跡している場合は、`cartIds`をパラメーターとして送信します。 `cardIds`には、製品IDのコンマ区切りリストを渡すことができます。
 
 **読み取り**
 
 * [adobe.target.trackEvent （） メソッド](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [カートベースの条件のcartId](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=ja#cart-based){target=_blank}
+* [カートベースの条件のcartId](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
 
 **アクション**
 

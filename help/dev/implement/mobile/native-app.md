@@ -6,19 +6,14 @@ feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
 TQID: https://experienceleague.adobe.com/JrbjPpq3ds0sl4rkMnuzF9SYk2PI4r676hHqN-Pvn78
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 611
+source-wordcount: 624
 ht-degree: 0%
 
 ---
@@ -27,7 +22,7 @@ ht-degree: 0%
 
 この記事では、[!DNL Adobe Experience Platform Mobile SDK]を使用してweb ビューでネイティブコードを使用するモバイルアプリに[!DNL Adobe Target]を実装するためのベストプラクティスを紹介します。
 
-この記事では、[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank}と[Swiftで記述された[!DNL Target]統合をGitHub リポジトリ &#x200B;](https://github.com/adobe/aep-sdk-app/){target=_blank}から使用したiOS アプリのサンプルを使用します。
+この記事では、[[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank}と[Swiftで記述された[!DNL Target]統合をGitHub リポジトリ ](https://github.com/adobe/aep-sdk-app/){target=_blank}から使用したiOS アプリのサンプルを使用します。
 
 実際には、エンタープライズアプリはモバイルアプリでweb ビューを使用している可能性があります。 Web ビューは、URLを使用してweb ページを読み込むコンテナです。 コンテナは、コントロールを持たないブラウザーウィンドウに似ています。 IOSでは、web ページを処理する際に、Web ビューコンテナがSafari ブラウザーとして機能します。
 
@@ -90,7 +85,7 @@ Target.getSessionId { (id, err) in
 
 ## web ビューでのテスト
 
-Web プレビューリンクは、[[!UICONTROL Adobe QA] リンク &#x200B;](/help/dev/implement/mobile/target-mobile-preview.md)をクリックしてポップアップを表示し、次のような各エクスペリエンスプレビューリンクをコピーすることで、[!UICONTROL Activity detail] ページで生成されます。
+Web プレビューリンクは、[[!UICONTROL Adobe QA] リンク ](/help/dev/implement/mobile/target-mobile-preview.md)をクリックしてポップアップを表示し、次のような各エクスペリエンス プレビューリンクをコピーすることで、[!UICONTROL  アクティビティの詳細] ページで生成されます。
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

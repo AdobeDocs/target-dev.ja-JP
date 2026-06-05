@@ -5,13 +5,11 @@ keywords: Delivery API
 exl-id: e760bddc-b1ae-4b7b-bff2-aba81c6b6d34
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/gPXGax6ccvZZPklT3jnZbqyOj3mCClEfSpdufAFPtSs
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 184
+source-wordcount: 188
 ht-degree: 1%
 
 ---
@@ -20,7 +18,7 @@ ht-degree: 1%
 
 [!DNL Adobe Target Delivery API]はRESTに基づいています。 このドキュメントでは、[!DNL Adobe Target] [!DNL Delivery API]を構成するリソースについて説明します。 HTTP メソッドは、これらのリソースに対する操作を実行するために使用されます。
 
-[!UICONTROL Adobe Target's Delivery API]を使用すると、次のことが可能になります。
+[!UICONTROL Adobe Targetの配信API]を使用すると、次のことが可能になります。
 
 * SPAやモバイルチャネルを含むwebはもちろん、コネクテッド TV、キオスク、実店舗のデジタルスクリーンなど、ブラウザー以外のIoT デバイスにもエクスペリエンスを提供できます。
 * HTTP/S呼び出しを行うことができる、任意のサーバーサイドプラットフォームまたはアプリケーションからエクスペリエンスを配信します。
@@ -30,4 +28,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->引き続き、[従来の/v1/mboxおよび/v2/batchmbox API ドキュメント &#x200B;](https://developers.adobetarget.com/api/legacy-api/index.html)にアクセスできます。 ただし、機能は（ここに記載されているように）配信APIで開発され、従来のAPIにはバックレポートされません。
+>引き続き、[従来の/v1/mboxおよび/v2/batchmbox API ドキュメント ](https://developers.adobetarget.com/api/legacy-api/index.html)にアクセスできます。 ただし、機能は（ここに記載されているように）配信APIで開発され、従来のAPIにはバックレポートされません。

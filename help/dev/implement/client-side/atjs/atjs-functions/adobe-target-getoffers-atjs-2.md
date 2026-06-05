@@ -1,30 +1,23 @@
 ---
 keywords: adobe.target.getOffers, getOffers, getoffers, get offers, at.js, functions, function, $8
-description: '[!UICONTROL adobe.target.getOffers()] 関数とその at.js ライブラリのオプションを使用して  [!DNL Adobe Target]  複数のオファーを取得するリクエストを実行  [!DNL Target]  ます。 (at.js 2.x)'
-title: How Do I Use the [!UICONTROL adobe.target.getOffers()] Function?
+description: '[!UICONTROL adobe.target.getOffers （） ]関数とその [!DNL Adobe Target] at.js ライブラリのオプションを使用して、複数の [!DNL Target]  オファーを取得するリクエストを実行します。 (at.js 2.x)'
+title: '[!UICONTROL adobe.target.getOffers （） ]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
 TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1340
-ht-degree: 97%
+source-wordcount: 1357
+ht-degree: 88%
 
 ---
 
-# [!UICONTROL adobe.target.getOffers()] - at.js 2.x
+# [!UICONTROL adobe.target.getOffers （） ] - at.js 2.x
 
 この関数を使用すると、複数の mbox を渡すことで複数のオファーを取得できます。 さらに、アクティブなアクティビティのすべてのビュー向けに複数のオファーを取得できます。
 
@@ -43,7 +36,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->以下に示すすべてのフィールドで使用可能なタイプについて詳しくは、[&#x200B; 配信 API ドキュメント &#x200B;](/help/dev/implement/delivery-api/overview.md) を参照してください。
+>以下に示すすべてのフィールドで使用可能なタイプについて詳しくは、[ 配信 API ドキュメント ](/help/dev/implement/delivery-api/overview.md) を参照してください。
 
 | フィールド名 | 必須？ | 制限事項 | 説明 |
 | --- | --- | --- | --- |
@@ -51,7 +44,7 @@ ht-degree: 97%
 | Request > id > thirdPartyId | × | 最大サイズ = 128。 |  |
 | Request > experienceCloud | × |  |  |
 | Request > experienceCloud > analytics | × |  | Adobe Analytics の統合 |
-| Request > experienceCloud > analytics > logging | × | 以下をページに実装する必要があります。<ul><li>訪問者 ID サービス</li><li>Appmeasurement.js</li></ul> | 次の値がサポートされています。<P>**client_side**：指定すると、分析ペイロードが呼び出し元に返されます。これは [!UICONTROL Data Insertion API] 経由で [!UICONTROL Adobe Analytics] に送信するために使用する必要があります。<P>**server_side**： これはデフォルト値で、[!DNL Target]と[!DNL Analytics] バックエンドが SDID を使用してレポート目的で呼び出しをステッチします。 |
+| Request > experienceCloud > analytics > logging | × | 以下をページに実装する必要があります。<ul><li>訪問者 ID サービス</li><li>Appmeasurement.js</li></ul> | 次の値がサポートされています。<P>**client_side**：指定すると、Analytics ペイロードが呼び出し元に返されます。このペイロードは、[!UICONTROL Data Insertion API]を介して[!UICONTROL Adobe Analytics]に送信するために使用されます。<P>**server_side**： これはデフォルト値で、[!DNL Target]と[!DNL Analytics] バックエンドが SDID を使用してレポート目的で呼び出しをステッチします。 |
 | Request > prefetch | × |  |  |
 | Request > prefetch > views | × | 最大数は 50 です。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>値の長さ `<=`5000。<P>名前を「profile」で始めないでください。<P>使用できない名前：「orderId」、「orderTotal」、「productPurchasedId」 | アクティブなアクティビティで関連するビューを取得するために使用するパラメーターを渡します。 |
 | Request > prefetch > views > profileParameters | × | 最大値は 50 です。<P>名前が空白ではありません。<P>名前の長さ `<=`128 です。<P>値の長さ `<=`5000。<P>文字列値のみを使用できます。<P>名前を「profile」で始めないでください。 | アクティブなアクティビティで関連するビューを取得するために使用するプロファイルパラメーターを渡します。 |
@@ -86,7 +79,7 @@ ht-degree: 97%
 | Request > execute > mboxes > mbox > order > total | × | 0`>=`。 | 指定された注文合計を持つ特定の mbox のオファーを取得します。 |
 | Request > execute > mboxes > mbox > order > purchasedProductIds | × | 空白の値はありません。<P>各値の最大長= 50。<P>コンマで連結および区切ります。<P>製品 ID の全長 `<=`250 です。 | 指定された注文で購入された製品 ID を持つ特定の mbox のオファーを取得します。 |
 
-## すべてのビューに [!UICONTROL getOffers()] を呼び出す
+## すべてのビューについて[!UICONTROL getOffers （） ]を呼び出します
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -98,7 +91,7 @@ adobe.target.getOffers({
 });
 ```
 
-## [!UICONTROL getOffers()] を呼び出し、オンデバイス判定を行う
+## [!UICONTROL getOffers （） ]を呼び出して、デバイス上で決定します
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({ 
@@ -117,7 +110,7 @@ adobe.target.getOffers({
 }); 
 ```
 
-## [!UICONTROL getOffers()] を呼び出し、渡されたパラメーターとプロファイルを使用して最新ビューを取得する
+## [!UICONTROL getOffers （） ]を呼び出して、渡されたパラメーターとプロファイル パラメーターを使用して最新のビューを取得します
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -138,7 +131,7 @@ adobe.target.getOffers({
 });
 ```
 
-## [!UICONTROL getOffers()] を呼び出し、渡されたパラメーターとプロファイルを使用して mbox を取得する
+## [!UICONTROL getOffers （） ]を呼び出して、パラメーターとプロファイルパラメーターが渡されたmboxを取得します。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -165,7 +158,7 @@ adobe.target.getOffers({
 });
 ```
 
-## [!UICONTROL getOffers()] を呼び出して、クライアント側から分析ペイロードを取得します
+## [!UICONTROL getOffers （） ]を呼び出して、クライアントサイドから分析ペイロードを取得します
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -217,9 +210,9 @@ adobe.target.getOffers({
 }
 ```
 
-その後、ペイロードは [&#x200B; Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を介して [!DNL Adobe Analytics] に転送できます。
+その後、ペイロードは [ Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を介して [!DNL Adobe Analytics] に転送できます。
 
-## [!UICONTROL getOffers()] および [!UICONTROL applyOffers()]を使用した複数の mbox からのデータの取得とレンダリング
+## [!UICONTROL getOffers （） ]および[!UICONTROL applyOffers （） ]を介して、複数のmboxからデータを取得してレンダリングします
 
 at.js 2.x を使用すると、`[!UICONTROL getOffers()]` API を使用して複数の mbox を取得できます。 複数の mbox のデータを取得して、`[!UICONTROL applyOffers()]` CSS セレクターによって識別されるさまざまな場所で、データをレンダリングすることもできます。
 
@@ -298,9 +291,9 @@ adobe.target.getOffers({
 
 この例では `prefetch > mboxes` を使用していますが、`execute > mboxes` を使用することもできます。 `getOffers()` でプリフェッチを使用する場合は、`applyOffers()` 呼び出しでもプリフェッチを使用する必要があります。
 
-## [!UICONTROL getOffers()] を呼び出して pageLoad を実行します
+## [!UICONTROL getOffers （） ]を呼び出してpageLoadを実行します
 
-次の例は、at.js 2.*x*&#x200B;で[!UICONTROL getOffers()]を使用してpageLoadを実行する方法を示しています
+次の例は、at.js 2.*x*&#x200B;で[!UICONTROL getOffers （） ]を使用してpageLoadを実行する方法を示しています
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({

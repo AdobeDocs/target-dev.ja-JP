@@ -1,24 +1,22 @@
 ---
 title: Adobe Target Delivery APIのシングルまたはバッチ配信
-description: '[!UICONTROL Adobe Target Delivery API]単発またはバッチ配信呼び出しを使用するにはどうすればよいですか？'
+description: '[!UICONTROL Adobe Target Delivery API]のシングルまたはバッチ配信呼び出しを使用するにはどうすればよいですか？'
 keywords: Delivery API
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/NMNCubmUyiVOWfq2MnkONSrQCZRqNEh0VJTfFBGptOk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 448
+source-wordcount: 460
 ht-degree: 0%
 
 ---
 
 # シングルまたはバッチ配信
 
-[!UICONTROL Adobe Target Delivery API]は、1回またはバッチの配信呼び出しをサポートしています。 単一または複数のmboxのコンテンツに対して、サーバーリクエストを行うことができます。
+[!UICONTROL Adobe Target Delivery API]は、1回またはバッチ方式の配信呼び出しをサポートしています。 単一または複数のmboxのコンテンツに対して、サーバーリクエストを行うことができます。
 
 単一呼出しと一括呼出しの比較を決定する際のパフォーマンスコストを測定する。 ユーザーに表示する必要があるすべてのコンテンツを把握している場合は、複数の配信呼び出しを行わないようにするために、1回のバッチ配信呼び出しですべてのmboxのコンテンツを取得することをお勧めします。
 

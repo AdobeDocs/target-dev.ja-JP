@@ -1,25 +1,21 @@
 ---
 title: Experience Cloud A4T レポートとの統合
-description: Experience Cloudとの統合、A4T レポート、Analytics for Targetとの統合
+description: Experience Cloud、A4T レポート、Analytics for Targetとの統合
 keywords: 配信api, サーバーサイド，サーバーサイド，統合，a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/Qx5xwszkQLumkFhGJDbvyIofPe7qxUDN922iqmhsClk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 392
+source-wordcount: 399
 ht-degree: 10%
 
 ---
 
-# [!UICONTROL Analytics for Target] （A4T） レポート
+# ターゲット ] （A4T）レポート用の[!UICONTROL Analytics
 
 [!DNL Adobe Target]は、オンデバイス決定とサーバーサイド [!DNL Target]の両方のアクティビティに対するA4T レポートをサポートしています。 A4T レポートを有効にするには、次の2つの設定オプションがあります。
 
@@ -33,7 +29,7 @@ ht-degree: 10%
 ## 前提条件
 
 1. [!DNL Adobe Analytics]をレポートソースとして[!DNL Adobe Target] UIのアクティビティを設定し、アカウントがA4Tに対して有効になっていることを確認します。
-1. API ユーザーはAdobe [!UICONTROL Marketing Cloud Visitor ID]を生成し、[!DNL Target] リクエストの実行時にこのIDが使用可能であることを確認します。
+1. API ユーザーはAdobe [!UICONTROL Marketing Cloud訪問者ID]を生成し、[!DNL Target] リクエストの実行時にこのIDが使用可能であることを確認します。
 
 ## [!DNL Adobe Target]は[!DNL Analytics] ペイロードを自動的に転送します
 
@@ -123,7 +119,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## ユーザーは[!DNL Adobe Target]から分析ペイロードを取得します
 
-ユーザーは、特定のmboxの[!DNL Adobe Analytics] ペイロードを取得し、[&#x200B; データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を介して[!DNL Adobe Analytics]に送信できます。 [!DNL Adobe Target] リクエストが実行されたら、リクエストの`client_side`を`logging` フィールドに渡します。 指定されたmboxがレポートソースとして[!DNL Analytics]を使用しているアクティビティに存在する場合、このリクエストはペイロードを返します。
+ユーザーは、特定のmboxの[!DNL Adobe Analytics] ペイロードを取得し、[ データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を介して[!DNL Adobe Analytics]に送信できます。 [!DNL Adobe Target] リクエストが実行されたら、リクエストの`client_side`を`logging` フィールドに渡します。 指定されたmboxがレポートソースとして[!DNL Analytics]を使用しているアクティビティに存在する場合、このリクエストはペイロードを返します。
 
 >[!BEGINTABS]
 
@@ -199,7 +195,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 `logging = client_side`を指定すると、mbox フィールドにペイロードが表示されます。
 
-[!DNL Target]からの応答に`analytics -> payload` プロパティに何かが含まれている場合は、そのまま[!DNL Adobe Analytics]に転送します。 [!DNL Adobe Analytics]はこのペイロードの処理方法を知っています。 これは、次のフォーマットを使用してGET リクエストで実行できます。
+[!DNL Target]からの応答に`analytics -> payload` プロパティに何かが含まれている場合は、そのまま[!DNL Adobe Analytics]に転送します。 [!DNL Adobe Analytics]はこのペイロードの処理方法を知っています。 これは、次の形式を使用してGET リクエストで実行できます。
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/{content_type_num}/{code_ver}/{session}?pe=tnt&tnta={payload}&c.&a.&target.&sessionId={sessionId}&.target&.a&.c&mid={mid}
