@@ -1,15 +1,21 @@
 ---
 keywords: 実装，javascript ライブラリ，js, atjs, オンデバイス判定，オンデバイス判定，at.js, オンデバイス，オンデバイス，トラブルシューティング，トラブルシューティング，実装2
-description: at.js ライブラリを使用した[!UICONTROL  オンデバイス決定]のトラブルシューティング方法について説明します。
+description: at.js ライブラリを使用した[!UICONTROL &#x200B; オンデバイス決定]のトラブルシューティング方法について説明します。
 title: at.js JavaScript ライブラリを使用したオンデバイス判定のトラブルシューティング方法を教えてください。
 feature: at.js
 exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
 TQID: https://experienceleague.adobe.com/Ji3jAHC0Ek7FrVnabEEMm-KCtxJLJ5rSz4uyi6sWpiE
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 281
@@ -17,9 +23,9 @@ ht-degree: 0%
 
 ---
 
-# at.jsの[!UICONTROL  オンデバイス決定]のトラブルシューティング
+# at.jsの[!UICONTROL &#x200B; オンデバイス決定]のトラブルシューティング
 
-at.js JavaScript ライブラリを使用して[!UICONTROL Adobe Target]の[!UICONTROL  オンデバイス決定]をトラブルシューティングするには、次の手順を実行します。
+at.js JavaScript ライブラリを使用して[!UICONTROL Adobe Target]の[!UICONTROL &#x200B; オンデバイス決定]をトラブルシューティングするには、次の手順を実行します。
 
 ## 手順1:at.jsのコンソールログを有効にする
 
@@ -36,7 +42,7 @@ AT: LD.ArtifactProvider artifact received - status=200
 
 （画像をクリックして全幅に拡大します）。
 
-![ アーティファクトメッセージを含むコンソールログ ](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png " アーティファクトメッセージを含むコンソールログ "){zoomable="yes"}
+![&#x200B; アーティファクトメッセージを含むコンソールログ &#x200B;](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png " アーティファクトメッセージを含むコンソールログ "){zoomable="yes"}
 
 ## 手順2：ブラウザーの「ネットワーク」タブでルールアーティファクトのダウンロードを確認する
 
@@ -50,11 +56,11 @@ AT: LD.ArtifactProvider artifact received - status=200
 
    さらに、「/delivery|rules.json/」でフィルタリングして、すべてのTarget呼び出しとアーティファクトのrules.jsonを表示できます。
 
-   ![Google Chromeの「ネットワーク」タブ ](assets/rule-json.png)
+   ![Google Chromeの「ネットワーク」タブ &#x200B;](assets/rule-json.png)
 
 ## 手順3:at.js カスタムイベントを使用したルールアーティファクトのダウンロードの確認
 
-at.js ライブラリは、2つの新しいカスタムイベントをディスパッチして、[!UICONTROL  オンデバイス決定]をサポートします。
+at.js ライブラリは、2つの新しいカスタムイベントをディスパッチして、[!UICONTROL &#x200B; オンデバイス決定]をサポートします。
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`

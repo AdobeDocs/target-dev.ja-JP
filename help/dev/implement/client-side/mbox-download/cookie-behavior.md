@@ -19,7 +19,7 @@ Cookie の動作は、その Cookie がファーストパーティ Cookie であ
 >
 >このトピックには、`mboxSession` および `mboxPC` に関する情報が含まれています。 実装のベストプラクティスでは、機密情報をcookie データ `mboxSession`または`mboxPC`とリンクまたは保存しないことを推奨します。
 
-「[ ターゲット Cookieを削除](/help/dev/before-implement/privacy/cookie-deleting.md)」も参照してください。
+「[&#x200B; ターゲット Cookieを削除](/help/dev/before-implement/privacy/cookie-deleting.md)」も参照してください。
 
 ## ファーストパーティ Cookie またはサードパーティ Cookie を使用するタイミング
 
@@ -137,5 +137,5 @@ Apple の発表内容：
 
 | 影響を受ける機能 | 詳細 |
 |--- |--- |
-| オプトアウトのサポート | Apple の WebKit 追跡における変更により、オプトアウトのサポートが影響を受けます。<br />Target のオプトアウトでは、`clientcode.tt.omtrdc.net` ドメインの Cookie が使用されます。 詳しくは、[ プライバシー](/help/dev/before-implement/privacy/privacy.md)を参照してください。<br />Targetは2つのオプトアウトをサポートしています。<ul><li>クライアントごと（クライアントがオプトアウトリンクを管理します）。</li><li>アドビ経由。すべてのお客様のすべての Target 機能からユーザーをオプトアウトします。</li></ul>どちらの方法でもサードパーティ Cookie が使用されます。 |
-| Target アクティビティ | 顧客は、ターゲットアカウントの[ プロファイルの有効期間](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html)を選択できます（最大90日間）。 懸念は、アカウントのプロファイルの有効期間が30日を超え、顧客のドメインがクロスサイトでユーザーを追跡するようにマークされているため、ファーストパーティ Cookieが消去された場合、Safari ユーザーの行動がTarget:<br />**[!UICONTROL  ターゲットレポート ]**: Safari ユーザーがアクティビティに入り、30日後に戻ってコンバージョンした場合、そのユーザーは2人の訪問者と1つのコンバージョンとしてカウントされます。<br />この動作は、Analyticsをレポートソース （A4T）として使用するアクティビティと同じです。<br />**[!UICONTROL  プロファイルとアクティビティメンバーシップ]**:<ul><li>プロファイルデータは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li>アクティビティメンバーシップは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li> サードパーティ Cookie 実装またはファーストパーティおよびサードパーティ Cookie 実装を使用しているアカウントの Safari では、Target は動作しません。 この動作は新しいものではありません。 Safariはしばらくサードパーティ Cookieを許可していません。</li></ul><br />**[!UICONTROL 提案&#x200B;]**：顧客ドメインが1人のトラッキング訪問者としてクロスセッションでマークされる可能性がある場合は、Targetでプロファイルの有効期間を30日以内に設定するのが最も安全です。 この制限により、Safariやその他のすべてのブラウザーでユーザーが同じように追跡されます。 |
+| オプトアウトのサポート | Apple の WebKit 追跡における変更により、オプトアウトのサポートが影響を受けます。<br />Target のオプトアウトでは、`clientcode.tt.omtrdc.net` ドメインの Cookie が使用されます。 詳しくは、[&#x200B; プライバシー](/help/dev/before-implement/privacy/privacy.md)を参照してください。<br />Targetは2つのオプトアウトをサポートしています。<ul><li>クライアントごと（クライアントがオプトアウトリンクを管理します）。</li><li>アドビ経由。すべてのお客様のすべての Target 機能からユーザーをオプトアウトします。</li></ul>どちらの方法でもサードパーティ Cookie が使用されます。 |
+| Target アクティビティ | 顧客は、ターゲットアカウントの[&#x200B; プロファイルの有効期間](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html)を選択できます（最大90日間）。 懸念は、アカウントのプロファイルの有効期間が30日を超え、顧客のドメインがクロスサイトでユーザーを追跡するようにマークされているため、ファーストパーティ Cookieが消去された場合、Safari ユーザーの行動がTarget:<br />**[!UICONTROL &#x200B; ターゲットレポート &#x200B;]**: Safari ユーザーがアクティビティに入り、30日後に戻ってコンバージョンした場合、そのユーザーは2人の訪問者と1つのコンバージョンとしてカウントされます。<br />この動作は、Analyticsをレポートソース （A4T）として使用するアクティビティと同じです。<br />**[!UICONTROL &#x200B; プロファイルとアクティビティメンバーシップ]**:<ul><li>プロファイルデータは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li>アクティビティメンバーシップは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li> サードパーティ Cookie 実装またはファーストパーティおよびサードパーティ Cookie 実装を使用しているアカウントの Safari では、Target は動作しません。 この動作は新しいものではありません。 Safariはしばらくサードパーティ Cookieを許可していません。</li></ul><br />**[!UICONTROL 提案&#x200B;]**：顧客ドメインが1人のトラッキング訪問者としてクロスセッションでマークされる可能性がある場合は、Targetでプロファイルの有効期間を30日以内に設定するのが最も安全です。 この制限により、Safariやその他のすべてのブラウザーでユーザーが同じように追跡されます。 |

@@ -19,14 +19,14 @@ ht-degree: 37%
 >
 >[!DNL Adobe Mobile] バージョン 4.*x* SDKのサポートは2021年8月31日（PT）をもって終了し、[!DNL Adobe Target] モバイルユーザーには推奨されなくなりました。
 >
->[Adobe Experience Platform SDK モバイル版アプリ ](https://developer.adobe.com/client-sdks/documentation/){target=_blank}は、モバイル アプリで[!DNL Adobe Experience Cloud]のソリューションとサービスを強化するために推奨されるソリューションです。
+>[Adobe Experience Platform SDK モバイル版アプリ &#x200B;](https://developer.adobe.com/client-sdks/documentation/){target=_blank}は、モバイル アプリで[!DNL Adobe Experience Cloud]のソリューションとサービスを強化するために推奨されるソリューションです。
 
 このプロセスにより、読み込み時間が短縮され、複数のネットワーク呼び出しを防ぎ [!DNL Target] 、モバイルアプリユーザーがmboxを訪問したことを通知できます。 プリフェッチ呼び出し中にすべてのコンテンツが取得され、キャッシュされます。このコンテンツは、指定された mbox 名のキャッシュされたコンテンツを含む今後のすべての呼び出しに対してキャッシュから取得されます。
 
 IOSおよびAndroid Mobile SDKでプリフェッチ方式を使用する場合は、次の制限事項を考慮してください。
 
 * プリフェッチコンテンツは、起動間で保持されません。 プリフェッチコンテンツは、アプリケーションが稼働しているか `clearPrefetchCache()` 、メソッドが呼び出されるまでキャッシュされます。
-* プリフェッチ機能は、[!UICONTROL 自動割り当て]および[!UICONTROL 自動ターゲット ]のトラフィック割り当てメソッド、[!UICONTROL Automated Personalization]または[!UICONTROL Recommendations]のアクティビティタイプ、またはA/BまたはXT アクティビティ内の[Recommendations オファー](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html)ではサポートされていません。
+* プリフェッチ機能は、[!UICONTROL 自動割り当て]および[!UICONTROL 自動ターゲット &#x200B;]のトラフィック割り当てメソッド、[!UICONTROL Automated Personalization]または[!UICONTROL Recommendations]のアクティビティタイプ、またはA/BまたはXT アクティビティ内の[Recommendations オファー](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html)ではサポートされていません。
 
 プリフェッチメソッド、パブリッククラス、コードサンプルなどについて詳しくは、以下のドキュメントを参照してください。
 

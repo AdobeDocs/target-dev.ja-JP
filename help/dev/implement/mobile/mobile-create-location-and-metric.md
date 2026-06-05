@@ -5,9 +5,12 @@ title: IOS アプリで [!DNL Target] 場所と成功指標を作成するには
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
 TQID: https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 469
@@ -23,13 +26,13 @@ ht-degree: 63%
 >
 >[!DNL Adobe Mobile] バージョン 4.*x* SDKのサポートは2021年8月31日（PT）をもって終了し、[!DNL Adobe Target] モバイルユーザーには推奨されなくなりました。
 >
->[Adobe Experience Platform SDK モバイル版アプリ ](https://developer.adobe.com/client-sdks/documentation/){target=_blank}は、モバイル アプリで[!DNL Adobe Experience Cloud]のソリューションとサービスを強化するために推奨されるソリューションです。
+>[Adobe Experience Platform SDK モバイル版アプリ &#x200B;](https://developer.adobe.com/client-sdks/documentation/){target=_blank}は、モバイル アプリで[!DNL Adobe Experience Cloud]のソリューションとサービスを強化するために推奨されるソリューションです。
 
 この節では、アプリのテンプレートとして使用できるサンプルコードを紹介します。 この節のサンプルには、iOS 用のコードがあります。 Android でも同じパターンを使用します。 Android固有の構文については、[Android SDK 4.x for Experience Cloud Solutions](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html) ガイドを参照してください。
 
 >[!NOTE]
 >
->使用可能なすべての[!DNL Target] メソッドの一覧については、[ モバイルドキュメント ](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html)を参照してください。
+>使用可能なすべての[!DNL Target] メソッドの一覧については、[&#x200B; モバイルドキュメント &#x200B;](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html)を参照してください。
 
 アプリで[!DNL Target]の場所を作成してリクエストを行うには、主に2つの方法があります。
 

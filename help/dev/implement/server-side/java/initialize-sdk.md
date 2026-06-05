@@ -4,9 +4,12 @@ description: create メソッドを使用してJava SDKを初期化し、[!UICON
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
 TQID: https://experienceleague.adobe.com/B1Ev7NnjlFMg4VoicF6Z4whyqfJYDjCwPeYRKEk2viY
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 471
@@ -42,7 +45,7 @@ ClientConfigBuilder ClientConfig.builder()
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| クライアント | 文字列 | ○ | None | [!UICONTROL  ターゲットクライアント Id] |
+| クライアント | 文字列 | ○ | None | [!UICONTROL &#x200B; ターゲットクライアント Id] |
 | organizationId | 文字列 | ○ | None | [!UICONTROL Experience Cloud組織ID] |
 | connectTimeout | 数値 | × | 10000 | すべてのリクエストの接続タイムアウト （ミリ秒単位） |
 | socketTimeout | 数値 | × | 10000 | すべてのリクエストのソケットのタイムアウト （ミリ秒単位） |

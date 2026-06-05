@@ -1,15 +1,24 @@
 ---
 keywords: 実装，javascript ライブラリ，js, atjs, オンデバイス判定，オンデバイス判定，サポートされている機能，8 ドル
-description: '[!UICONTROL  オンデバイス決定]でサポートされている機能について説明します。'
+description: '[!UICONTROL &#x200B; オンデバイス決定]でサポートされている機能について説明します。'
 title: On-Device Decisioningでサポートされている機能
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
 TQID: https://experienceleague.adobe.com/ummFURb6WnrNCbiQNDtzWmtZq05am9CMn9UXL0SPaXo
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 747
@@ -17,28 +26,28 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL  オンデバイス決定]でサポートされている機能
+# [!UICONTROL &#x200B; オンデバイス決定]でサポートされている機能
 
-[!DNL Adobe Target] JS SDKでは、パフォーマンスとデータの鮮度のどちらかを柔軟に選択して意思決定を行うことができます。 言い換えれば、マシンラーニングを通じて最も関連性が高く、魅力的なパーソナライズされたコンテンツを配信することが最も重要な場合は、ライブサーバーコールを送信する必要があります。 しかし、パフォーマンスがより重要な場合は、オンデバイスとメモリ内の決定を行う必要があります。 [!UICONTROL  オンデバイス決定]が機能するには、サポートされている機能を一覧表示する次の節を参照してください。
+[!DNL Adobe Target] JS SDKでは、パフォーマンスとデータの鮮度のどちらかを柔軟に選択して意思決定を行うことができます。 言い換えれば、マシンラーニングを通じて最も関連性が高く、魅力的なパーソナライズされたコンテンツを配信することが最も重要な場合は、ライブサーバーコールを送信する必要があります。 しかし、パフォーマンスがより重要な場合は、オンデバイスとメモリ内の決定を行う必要があります。 [!UICONTROL &#x200B; オンデバイス決定]が機能するには、サポートされている機能を一覧表示する次の節を参照してください。
 
 ## サポートされているアクティビティのタイプ
 
-次の表は、[ フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)または[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) （VEC）によって作成された[ アクティビティタイプ ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)が、[!UICONTROL  デバイス上の決定]でサポートされているか、サポートされていないかを示しています。
+次の表は、[&#x200B; フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)または[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) （VEC）によって作成された[&#x200B; アクティビティタイプ &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)が、[!UICONTROL &#x200B; デバイス上の決定]でサポートされているか、サポートされていないかを示しています。
 
 | アクティビティタイプ | 対応? |
 | --- | --- |
 | [A/B テスト](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html) | ○ |
 | [自動配分](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | × |
-| [自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) ![ プレミアム ](../../../assets/premium.png) | × |
+| [自動ターゲット &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) ![&#x200B; プレミアム &#x200B;](../../../assets/premium.png) | × |
 | [多変量分析テスト](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html) （MVT） | × |
 | [エクスペリエンスのターゲット設定](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)（XT） | ○ |
-| [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) ![ プレミアム ](../../../assets/premium.png) | × |
-| [おすすめ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html) ![ プレミアム ](../../../assets/premium.png) | × |
-| [Analytics for Targetを使用したアクティビティ ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?) （A4T） | ○ |
+| [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) ![&#x200B; プレミアム &#x200B;](../../../assets/premium.png) | × |
+| [おすすめ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html) ![&#x200B; プレミアム &#x200B;](../../../assets/premium.png) | × |
+| [Analytics for Targetを使用したアクティビティ &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?) （A4T） | ○ |
 
 ## オーディエンスターゲティング
 
-次の表は、[!UICONTROL  オンデバイス決定]でサポートされているオーディエンスルールまたはサポートされていないオーディエンスルールを示しています。
+次の表は、[!UICONTROL &#x200B; オンデバイス決定]でサポートされているオーディエンスルールまたはサポートされていないオーディエンスルールを示しています。
 
 | オーディエンスルール | 対応? |
 | --- | --- |
@@ -54,9 +63,9 @@ ht-degree: 8%
 | [時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | ○ |
 | Adobe Experience Cloud Audiences<P>（[!DNL Audiences from Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Manager]） | × |
 
-### [!UICONTROL  オンデバイス決定]の地域ターゲティング
+### [!UICONTROL &#x200B; オンデバイス決定]の地域ターゲティング
 
-位置情報ベースのオーディエンスを使用した[!UICONTROL  オンデバイス決定] アクティビティの遅延を最小限に抑えるために、Adobeでは、[getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)への呼び出しで位置情報を自分で指定することをお勧めします。 リクエストのコンテキストでGeo オブジェクトを設定します。 これは、ブラウザから、各訪問者の場所を決定する方法を意味します。 例えば、設定したサービスを使用して、IP-to-Geo ルックアップを実行できます。 Google Cloudなどの一部のホスティングプロバイダーは、各`HttpServletRequest`のカスタムヘッダーを使用してこの機能を提供します。
+位置情報ベースのオーディエンスを使用した[!UICONTROL &#x200B; オンデバイス決定] アクティビティの遅延を最小限に抑えるために、Adobeでは、[getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)への呼び出しで位置情報を自分で指定することをお勧めします。 リクエストのコンテキストでGeo オブジェクトを設定します。 これは、ブラウザから、各訪問者の場所を決定する方法を意味します。 例えば、設定したサービスを使用して、IP-to-Geo ルックアップを実行できます。 Google Cloudなどの一部のホスティングプロバイダーは、各`HttpServletRequest`のカスタムヘッダーを使用してこの機能を提供します。
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -78,7 +87,7 @@ window.adobe.target.getOffers({
 })
 ```
 
-ただし、サーバーでIPから地域へのルックアップを実行できませんが、地域ベースのオーディエンスを含む[getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)要求に対して[!UICONTROL  オンデバイス決定]を実行する場合は、これもサポートされています。 このアプローチの欠点は、リモート IP-to-Geo参照を使用することで、各`getOffers`呼び出しに遅延が追加されることです。 サーバーの近くにあるCDNにヒットするため、サーバーサイドの決定を行う`getOffers`呼び出しよりも待ち時間を短くする必要があります。 SDKに対するリクエストのコンテキストで、Geo オブジェクトの「ipAddress」フィールドのみを指定して、訪問者のIP アドレスの位置情報を取得します。 「ipAddress」以外のフィールドが指定されている場合、[!DNL Target] SDKは解決のために位置情報メタデータを取得しません。
+ただし、サーバーでIPから地域へのルックアップを実行できませんが、地域ベースのオーディエンスを含む[getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)要求に対して[!UICONTROL &#x200B; オンデバイス決定]を実行する場合は、これもサポートされています。 このアプローチの欠点は、リモート IP-to-Geo参照を使用することで、各`getOffers`呼び出しに遅延が追加されることです。 サーバーの近くにあるCDNにヒットするため、サーバーサイドの決定を行う`getOffers`呼び出しよりも待ち時間を短くする必要があります。 SDKに対するリクエストのコンテキストで、Geo オブジェクトの「ipAddress」フィールドのみを指定して、訪問者のIP アドレスの位置情報を取得します。 「ipAddress」以外のフィールドが指定されている場合、[!DNL Target] SDKは解決のために位置情報メタデータを取得しません。
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -98,10 +107,10 @@ window.adobe.target.getOffers({
 
 ### 配分方法
 
-次の表は、[!UICONTROL  オンデバイス決定]でサポートされている割り当て方法またはサポートされていない割り当て方法を示しています。
+次の表は、[!UICONTROL &#x200B; オンデバイス決定]でサポートされている割り当て方法またはサポートされていない割り当て方法を示しています。
 
 | 配分方法 | 対応? |
 | --- | --- |
 | 手動 | ○ |
 | [最適なエクスペリエンスに自動割り当て](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | × |
-| [ パーソナライズされたエクスペリエンスの自動ターゲティング ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) | × |
+| [&#x200B; パーソナライズされたエクスペリエンスの自動ターゲティング &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) | × |

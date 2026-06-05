@@ -1,13 +1,20 @@
 ---
 title: Adobe Target SDKを使用したパーソナライゼーション
-description: '[!UICONTROL  オンデバイス判定]を使用してパーソナライゼーションを配信する方法について説明します。'
+description: '[!UICONTROL &#x200B; オンデバイス判定]を使用してパーソナライゼーションを配信する方法について説明します。'
 feature: APIs/SDKs
 exl-id: bac64c78-0d3a-40d7-ae2b-afa0f1b8dc4f
 TQID: https://experienceleague.adobe.com/IufE4ByFgQ8WwHZ5YVHbbyvN6jBBNGCK4IC98m9zGsc
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 587
@@ -19,19 +26,19 @@ ht-degree: 1%
 
 ## 手順の概要
 
-1. 組織の[!UICONTROL  オンデバイス決定]を有効にする
-1. [!UICONTROL  エクスペリエンスのターゲット設定] （XT） アクティビティの作成
+1. 組織の[!UICONTROL &#x200B; オンデバイス決定]を有効にする
+1. [!UICONTROL &#x200B; エクスペリエンスのターゲット設定] （XT） アクティビティの作成
 1. オーディエンスごとにパーソナライズされたエクスペリエンスを定義
 1. オーディエンスごとにパーソナライズされたエクスペリエンスを検証
 1. レポートの設定
 1. KPIを追跡するための指標の追加
 1. アプリケーションにパーソナライズされたオファーを実装する
 1. コンバージョンイベントを追跡するコードの実装
-1. [!UICONTROL  エクスペリエンスターゲティング ] （XT）のパーソナライゼーションアクティビティをアクティブ化する
+1. [!UICONTROL &#x200B; エクスペリエンスターゲティング &#x200B;] （XT）のパーソナライゼーションアクティビティをアクティブ化する
 
 あなたが旅行会社だと仮定してください。 特定の旅行パッケージを25% オフのパーソナライズされたオファーで提供したい場合。 ユーザーの心に響くオファーを提供するために、目的地の都市のランドマークを表示することにしました。 また、パーソナライズされたオファーの配信が、ほぼゼロの遅延で実行されることを確認し、ユーザーエクスペリエンスに悪影響を与えたり、結果をゆがめたりしないようにすることもできます。
 
-## &#x200B;1. 組織の[!UICONTROL  オンデバイス決定]を有効にする
+## &#x200B;1. 組織の[!UICONTROL &#x200B; オンデバイス決定]を有効にする
 
 1. オンデバイス判定を有効にすると、A/B アクティビティがほぼゼロの遅延で実行されます。 この機能を有効にするには、[!DNL Adobe Target]で&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]**&#x200B;に移動し、**[!UICONTROL オンデバイス決定]** トグルを有効にします。
 
@@ -39,11 +46,11 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >[!UICONTROL  オンデバイス決定] トグルを有効または無効にするには、管理者または承認者[ ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
+   >[!UICONTROL &#x200B; オンデバイス決定] トグルを有効または無効にするには、管理者または承認者[&#x200B; ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
 
    **[!UICONTROL オンデバイス決定]** トグルを有効にすると、[!DNL Adobe Target]は、クライアントに対して&#x200B;*ルールアーティファクト*&#x200B;の生成を開始します。
 
-## &#x200B;2. [!UICONTROL  エクスペリエンスのターゲット設定] （XT） アクティビティの作成
+## &#x200B;2. [!UICONTROL &#x200B; エクスペリエンスのターゲット設定] （XT） アクティビティの作成
 
 1. [!DNL Adobe Target]で、**[!UICONTROL アクティビティ]** ページに移動し、**[!UICONTROL アクティビティの作成]** > **[!UICONTROL エクスペリエンスのターゲット設定]**&#x200B;を選択します。
 

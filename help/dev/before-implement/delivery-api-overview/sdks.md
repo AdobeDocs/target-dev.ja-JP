@@ -5,8 +5,10 @@ keywords: Delivery API
 exl-id: fc3996e6-8945-437c-9574-cc3f1a406f54
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/ctDEksYd-dwv5oe9QC1NMGsGUVoTdsxXDtoxg-ah2ks
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
 source-wordcount: 265
@@ -16,7 +18,7 @@ ht-degree: 91%
 
 # SDK
 
-[!DNL Adobe Target]様は、[ サーバーサイド SDK](../../implement/server-side/server-side-overview.md)を提供して、[!DNL Target Delivery API]様とやり取りし、[!UICONTROL Target]様と[!UICONTROL Adobe Analytics]様や[!DNL Adobe Audience Manager]様などの他の[!DNL Adobe Experience Cloud]様のソリューションとの統合を容易にするのに役立てています。
+[!DNL Adobe Target]様は、[&#x200B; サーバーサイド SDK](../../implement/server-side/server-side-overview.md)を提供して、[!DNL Target Delivery API]様とやり取りし、[!UICONTROL Target]様と[!UICONTROL Adobe Analytics]様や[!DNL Adobe Audience Manager]様などの他の[!DNL Adobe Experience Cloud]様のソリューションとの統合を容易にするのに役立てています。
 
 SDK は、セッションと Cookie の管理でのベストプラクティスに従うのに役立ちます。 複雑さをスムーズにし、API の誤用を防ぐために、SDK を活用することを強くお勧めします。
 

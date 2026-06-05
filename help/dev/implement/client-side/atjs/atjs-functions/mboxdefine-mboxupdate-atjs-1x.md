@@ -1,15 +1,20 @@
 ---
 keywords: mboxDefine、mboxdefine、mbox define、mboxUpdate、mboxupdate、mbox update、at.js、functions、function、mboxDefine0
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL mboxDefine （） ]関数と[!UICONTROL mboxUpdate （） ]関数を使用して、mboxを定義または更新します。 （at.js 1.x）'
-title: '[!UICONTROL mboxDefine （） ]および[!UICONTROL mboxUpdate （） ]関数を使用するにはどうすればよいですか？'
+description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL mboxDefine （） &#x200B;]関数と[!UICONTROL mboxUpdate （） &#x200B;]関数を使用して、mboxを定義または更新します。 （at.js 1.x）'
+title: '[!UICONTROL mboxDefine （） &#x200B;]および[!UICONTROL mboxUpdate （） &#x200B;]関数を使用するにはどうすればよいですか？'
 feature: at.js
 exl-id: 0a7dbea2-1cbd-4a5b-ba68-4c76a88d65c4
 TQID: https://experienceleague.adobe.com/Fn-Ej8jk2AMEn79tOtRoP9GQc36Ugy6FtXyn6x7jkmA
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 208
@@ -17,7 +22,7 @@ ht-degree: 46%
 
 ---
 
-# [!UICONTROL mboxDefine （） ]および[!UICONTROL mboxUpdate （） ] - at.js 1.x
+# [!UICONTROL mboxDefine （） &#x200B;]および[!UICONTROL mboxUpdate （） &#x200B;] - at.js 1.x
 
 [!DNL Adobe Target]でmboxを定義および更新します。
 

@@ -4,10 +4,17 @@ description: Adobe Target SDKの使用方法
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
 TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 702
@@ -17,7 +24,7 @@ ht-degree: 1%
 
 # [!DNL Target] SDKの概要
 
-最初に、お好みの言語で最初の[ オンデバイス決定](../on-device-decisioning/overview.md)機能フラグアクティビティを作成することをお勧めします。
+最初に、お好みの言語で最初の[&#x200B; オンデバイス決定](../on-device-decisioning/overview.md)機能フラグアクティビティを作成することをお勧めします。
 
 * Node.js
 * Java
@@ -29,26 +36,26 @@ ht-degree: 1%
 1. 組織のオンデバイス判定を有効にする
 1. SDKのインストール
 1. SDKの初期化
-1. [!DNL Adobe Target] [!UICONTROL A/B テスト ] アクティビティで機能フラグを設定します
+1. [!DNL Adobe Target] [!UICONTROL A/B テスト &#x200B;] アクティビティで機能フラグを設定します
 1. アプリケーションに機能を実装してレンダリングする
 1. アプリケーションにイベントのトラッキングを実装する
-1. [!UICONTROL A/B テスト ] アクティビティをアクティブ化
+1. [!UICONTROL A/B テスト &#x200B;] アクティビティをアクティブ化
 
 ## &#x200B;1. 組織のオンデバイス判定を有効にする
 
-オンデバイス判定を有効にすると、[!UICONTROL A/B テスト ] アクティビティがほぼゼロの遅延で実行されます。 この機能を有効にするには、**[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]**&#x200B;に移動し、**[!UICONTROL オンデバイス決定]** トグルを有効にします。
+オンデバイス判定を有効にすると、[!UICONTROL A/B テスト &#x200B;] アクティビティがほぼゼロの遅延で実行されます。 この機能を有効にするには、**[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]**&#x200B;に移動し、**[!UICONTROL オンデバイス決定]** トグルを有効にします。
 
 ![alt画像](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->**[!UICONTROL オンデバイス決定]** トグルを有効または無効にするには、**[!UICONTROL 管理者]**&#x200B;または&#x200B;**[!UICONTROL 承認者]** [ ユーザーロール ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
+>**[!UICONTROL オンデバイス決定]** トグルを有効または無効にするには、**[!UICONTROL 管理者]**&#x200B;または&#x200B;**[!UICONTROL 承認者]** [&#x200B; ユーザーロール &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
 
-**[!UICONTROL オンデバイス決定]** トグルを有効にすると、[!DNL Adobe Target]は、クライアントに対して[ ルールアーティファクト ](../on-device-decisioning/rule-artifact-overview.md)の生成を開始します。
+**[!UICONTROL オンデバイス決定]** トグルを有効にすると、[!DNL Adobe Target]は、クライアントに対して[&#x200B; ルールアーティファクト &#x200B;](../on-device-decisioning/rule-artifact-overview.md)の生成を開始します。
 
 ## &#x200B;2. SDKのインストール
 
-Node.js、Java、Pythonの場合は、ターミナルのプロジェクトディレクトリで次のコマンドを実行します。 .NETの場合、NuGet](https://www.nuget.org/packages/Adobe.Target.Client)から[ インストールして依存関係として追加します。
+Node.js、Java、Pythonの場合は、ターミナルのプロジェクトディレクトリで次のコマンドを実行します。 .NETの場合、NuGet[&#128279;](https://www.nuget.org/packages/Adobe.Target.Client)から インストールして依存関係として追加します。
 
 >[!BEGINTABS]
 
@@ -151,7 +158,7 @@ target_client = TargetClient.create(CONFIG)
 
 >[!ENDTABS]
 
-## &#x200B;4. [!DNL Adobe Target] [!UICONTROL A/B テスト ] アクティビティで機能フラグを設定します
+## &#x200B;4. [!DNL Adobe Target] [!UICONTROL A/B テスト &#x200B;] アクティビティで機能フラグを設定します
 
 1. [!DNL Target]で、**[!UICONTROL アクティビティ]** ページに移動し、**[!UICONTROL アクティビティの作成]** > **[!UICONTROL A/B テスト]**&#x200B;を選択します。
 
@@ -387,12 +394,12 @@ target_client.send_notifications({
 
 >[!ENDTABS]
 
-## &#x200B;7. [!UICONTROL A/B テスト ] アクティビティをアクティブ化
+## &#x200B;7. [!UICONTROL A/B テスト &#x200B;] アクティビティをアクティブ化
 
-1. 「**[!UICONTROL アクティブ化]** （1）」をクリックして、[!UICONTROL A/B テスト ] アクティビティをアクティブ化します。
+1. 「**[!UICONTROL アクティブ化]** （1）」をクリックして、[!UICONTROL A/B テスト &#x200B;] アクティビティをアクティブ化します。
 
    >[!NOTE]
    >
-   >この手順を実行するには、**[!UICONTROL 承認者]**&#x200B;または&#x200B;**[!UICONTROL 発行者]** [ ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
+   >この手順を実行するには、**[!UICONTROL 承認者]**&#x200B;または&#x200B;**[!UICONTROL 発行者]** [&#x200B; ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
 
    ![alt画像](assets/asset-activate.png)
