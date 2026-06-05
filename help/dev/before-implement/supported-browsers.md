@@ -45,7 +45,7 @@ TLSに関する重要な情報については、[TLS （Transport Layer Security
 
 ## ビジュアル編集の要件
 
-[!UICONTROL Visual Experience Composer] （VEC）でweb ページを確実に開き、作成し、プレビューするには、[Adobe Experience Cloud Visual Editing Helper ブラウザー拡張機能](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}をweb ブラウザーにインストールするか、[!UICONTROL Enhanced Experience Composer （EEC） &#x200B;]を使用する必要があります。
+[!UICONTROL Visual Experience Composer] （VEC）でweb ページを確実に開き、作成し、プレビューするには、[Adobe Experience Cloud Visual Editing Helper ブラウザー拡張機能](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}をweb ブラウザーにインストールするか、[!UICONTROL Enhanced Experience Composer （EEC） &#x200B;]を使用する必要があります。
 
 >[!NOTE]
 >

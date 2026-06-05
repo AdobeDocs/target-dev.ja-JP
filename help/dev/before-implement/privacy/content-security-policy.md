@@ -51,7 +51,7 @@ Adobeは、「adobe.tt.omtrdc.net」が指す[!DNL Adobe Target] エッジサー
 
 ### サイトをiFrameとして外部ドメインに埋め込むのを許可または防止するにはどうすればよいですか？
 
-[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} （VEC）がWeb サイトをiFrameに埋め込むようにするには、Web サーバー設定でCSP （設定されている場合）を変更する必要があります。 [!DNL Adobe] ドメインはホワイトリストに登録して設定する必要があります。
+[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja){target=_blank} （VEC）がWeb サイトをiFrameに埋め込むようにするには、Web サーバー設定でCSP （設定されている場合）を変更する必要があります。 [!DNL Adobe] ドメインはホワイトリストに登録して設定する必要があります。
 
 セキュリティ上の理由から、サイトが外部ドメインにiFrameとして埋め込まれるのを防ぐ必要がある場合があります。
 

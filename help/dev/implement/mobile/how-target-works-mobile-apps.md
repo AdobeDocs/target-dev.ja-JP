@@ -33,7 +33,7 @@ ht-degree: 21%
 
 *ターゲットの場所* はmboxとも呼ばれます。 アプリで識別した場所は、テストとパーソナライゼーション（例えば、ホーム画面のようこそメッセージ）のために有効になります。 これらの場所は、テスト作成プロセスの間に識別されます。
 
-*[成功指標](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)*&#x200B;は、特定のアクティビティ （サインアップ、購入、チケットの予約など）が成功したかどうかを識別するためにユーザーが実行するアクションです。
+*[成功指標](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=ja)*&#x200B;は、特定のアクティビティ （サインアップ、購入、チケットの予約など）が成功したかどうかを識別するためにユーザーが実行するアクションです。
 
 ![alt画像](assets/mobile-target-location.png)
 

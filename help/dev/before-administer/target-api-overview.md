@@ -24,7 +24,7 @@ ht-degree: 0%
 
 # Target APIの概要
 
-この記事では、Admin APIとProfile APIに固有の要件に焦点を当てる前に、一般的に様々なTarget APIについて説明します。 UIを使用してAdobe Targetを管理する場合は、*Adobe Target Business ユーザーガイド*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)の管理セクションを参照してください。
+この記事では、Admin APIとProfile APIに固有の要件に焦点を当てる前に、一般的に様々なTarget APIについて説明します。 UIを使用してAdobe Targetを管理する場合は、*Adobe Target Business ユーザーガイド*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=ja)の管理セクションを参照してください。
 
 ## API タイプ
 

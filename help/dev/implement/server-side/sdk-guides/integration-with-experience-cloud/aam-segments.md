@@ -308,4 +308,4 @@ public class TargetClientService {
 
 >[!ENDTABS]
 
-`TargetRequestUtils.java`について詳しくは、[&#x200B; ユーティリティ メソッド （Java） &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}を参照してください
+`TargetRequestUtils.java`について詳しくは、[&#x200B; ユーティリティ メソッド （Java） &#x200B;](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html?lang=ja){target=_blank}を参照してください

@@ -60,7 +60,7 @@ ht-degree: 0%
    * `orderTotal`：購入の注文合計。
    * `orderId`：購入の注文ID。
 
-  次の図は、[!UICONTROL 確認] ページでのみ実行される [!DNL tags] in [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html){target=_blank}の ルールを示しています。
+  次の図は、[!UICONTROL 確認] ページでのみ実行される [!DNL tags] in [!DNL Experience Platform][&#128279;](https://experienceleague.adobe.com/docs/tags.html?lang=ja){target=_blank}の ルールを示しています。
 
   ![&#x200B; アクション設定ページ &#x200B;](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -69,7 +69,7 @@ ht-degree: 0%
 **読み取り**
 
 * [adobe.target.trackEvent （） メソッド](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [カートベースの条件のcartId](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
+* [カートベースの条件のcartId](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=ja#cart-based){target=_blank}
 
 **アクション**
 

@@ -26,9 +26,9 @@ ht-degree: 37%
 IOSおよびAndroid Mobile SDKでプリフェッチ方式を使用する場合は、次の制限事項を考慮してください。
 
 * プリフェッチコンテンツは、起動間で保持されません。 プリフェッチコンテンツは、アプリケーションが稼働しているか `clearPrefetchCache()` 、メソッドが呼び出されるまでキャッシュされます。
-* プリフェッチ機能は、[!UICONTROL 自動割り当て]および[!UICONTROL 自動ターゲット &#x200B;]のトラフィック割り当てメソッド、[!UICONTROL Automated Personalization]または[!UICONTROL Recommendations]のアクティビティタイプ、またはA/BまたはXT アクティビティ内の[Recommendations オファー](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html)ではサポートされていません。
+* プリフェッチ機能は、[!UICONTROL 自動割り当て]および[!UICONTROL 自動ターゲット &#x200B;]のトラフィック割り当てメソッド、[!UICONTROL Automated Personalization]または[!UICONTROL Recommendations]のアクティビティタイプ、またはA/BまたはXT アクティビティ内の[Recommendations オファー](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html?lang=ja)ではサポートされていません。
 
 プリフェッチメソッド、パブリッククラス、コードサンプルなどについて詳しくは、以下のドキュメントを参照してください。
 
-* **iOS:** [iOSでオファーコンテンツを先行取得](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html)、*Mobile Services iOS SDK ヘルプ*&#x200B;で。
-* **Android:** [Androidでオファーコンテンツを先行取得](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html)、*Mobile Services Android SDK ヘルプ*&#x200B;で。
+* **iOS:** [iOSでオファーコンテンツを先行取得](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html?lang=ja)、*Mobile Services iOS SDK ヘルプ*&#x200B;で。
+* **Android:** [Androidでオファーコンテンツを先行取得](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=ja)、*Mobile Services Android SDK ヘルプ*&#x200B;で。

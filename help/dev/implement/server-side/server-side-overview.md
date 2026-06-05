@@ -35,7 +35,7 @@ ht-degree: 12%
 >
 >実装でat.jsと[!DNL AppMeasurement]をクライアントサイドで使用する場合は、以下で説明する[!UICONTROL Target Delivery API]とサーバーサイド SDKを使用する必要があります。
 >
->実装で[!UICONTROL Adobe Experience Platform Web SDK]を使用している場合は、[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}を使用する必要があります。
+>実装で[!UICONTROL Adobe Experience Platform Web SDK]を使用している場合は、[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/ja/docs/experience-platform/edge-network-server-api/overview){target=_blank}を使用する必要があります。
 
 以下の処理は、[!DNL Target] のサーバー側実装で発生します。
 

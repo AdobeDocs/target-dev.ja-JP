@@ -23,7 +23,7 @@ ht-degree: 4%
 
 # 応答トークンへのアクセス
 
-[!DNL Adobe Target]から返されるPersonalization コンテンツには、[応答トークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)が含まれます。このトークンには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、位置情報などの詳細が含まれます。 これらの詳細は、サードパーティのツールと共有することも、デバッグに使用することもできます。 応答トークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
+[!DNL Adobe Target]から返されるPersonalization コンテンツには、[応答トークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)が含まれます。このトークンには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、位置情報などの詳細が含まれます。 これらの詳細は、サードパーティのツールと共有することも、デバッグに使用することもできます。 応答トークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
 
 パーソナライゼーションコンテンツにアクセスするには、イベントの送信時にコールバック機能を提供します。 このコールバックは、SDKがサーバーから正常な応答を受け取った後に呼び出されます。 コールバックに`result` オブジェクトが指定されています。このオブジェクトには、返されたパーソナライゼーションコンテンツを含む`propositions` プロパティが含まれている場合があります。 以下は、コールバック関数を提供する例です。
 

@@ -49,7 +49,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->**[!UICONTROL オンデバイス決定]** トグルを有効または無効にするには、**[!UICONTROL 管理者]**&#x200B;または&#x200B;**[!UICONTROL 承認者]** [&#x200B; ユーザーロール &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
+>**[!UICONTROL オンデバイス決定]** トグルを有効または無効にするには、**[!UICONTROL 管理者]**&#x200B;または&#x200B;**[!UICONTROL 承認者]** [&#x200B; ユーザーロール &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja)が必要です。
 
 **[!UICONTROL オンデバイス決定]** トグルを有効にすると、[!DNL Adobe Target]は、クライアントに対して[&#x200B; ルールアーティファクト &#x200B;](../on-device-decisioning/rule-artifact-overview.md)の生成を開始します。
 
@@ -400,6 +400,6 @@ target_client.send_notifications({
 
    >[!NOTE]
    >
-   >この手順を実行するには、**[!UICONTROL 承認者]**&#x200B;または&#x200B;**[!UICONTROL 発行者]** [&#x200B; ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
+   >この手順を実行するには、**[!UICONTROL 承認者]**&#x200B;または&#x200B;**[!UICONTROL 発行者]** [&#x200B; ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=ja)が必要です。
 
    ![alt画像](assets/asset-activate.png)

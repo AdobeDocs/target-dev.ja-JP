@@ -44,7 +44,7 @@ TLS 1.2は2020年3月1日時点のデフォルトであり、TLS 1.1はサポー
 
 Adobeでは、お客様をTLS 1.2に段階的に移行します。 ドメインがすでに1.2に準拠している場合は、お客様からの変更を必要とせずにTLS 1.2に移行します。 ほとんどの顧客ドメインは既にTLS 1.2をサポートしていますが、お客様のドメインがTLS 1.2をサポートしていない場合、現在と同様に（2020年3月まで） TLS 1.1にドメインを維持します。
 
-この移行期間中は問題は発生しないはずです。 VECが以前に動作していたサイトの読み込みを停止した場合は、この移行が原因である可能性があることを示すクライアントケアチケットを[開きます](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)。
+この移行期間中は問題は発生しないはずです。 VECが以前に動作していたサイトの読み込みを停止した場合は、この移行が原因である可能性があることを示すクライアントケアチケットを[開きます](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja&#reference_ACA3391A00EF467B87930A450050077C)。
 
 ただし、TLS 1.2をサポートしていないTSL 1.1を使用している顧客の1人である場合は、ドメイン/インフラストラクチャをTLS 1.2に移行する計画を立てる必要があります。 引き続き2020年3月1日までTLS 1.1 プロトコルをサポートします。 2020年3月1日以降、[!DNL Target]では、Enhanced Experience Composer機能を使用してVECに使用するTLS 1.1 プロトコルはサポートされません。
 

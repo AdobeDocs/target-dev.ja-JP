@@ -27,13 +27,13 @@ ht-degree: 4%
 
 # [!DNL Experience Platform Web SDK]のA4T データのクライアント側ログ
 
-[!DNL Adobe Experience Platform Web SDK]を使用すると、Web アプリケーションのクライアント側で[Adobe Analytics for Target （A4T） &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) データを収集できます。
+[!DNL Adobe Experience Platform Web SDK]を使用すると、Web アプリケーションのクライアント側で[Adobe Analytics for Target （A4T） &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja) データを収集できます。
 
-クライアントサイドのログとは、クライアントサイドで関連する[!DNL Target] データが返されることを意味します。これにより、データを収集して[!DNL Analytics]と共有できます。 このオプションは、[Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)を使用してAnalyticsにデータを手動で送信する場合に有効にする必要があります。
+クライアントサイドのログとは、クライアントサイドで関連する[!DNL Target] データが返されることを意味します。これにより、データを収集して[!DNL Analytics]と共有できます。 このオプションは、[Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=ja)を使用してAnalyticsにデータを手動で送信する場合に有効にする必要があります。
 
 >[!NOTE]
 >
->[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html)を使用してこれを実行する方法は現在開発中で、近日中に公開される予定です。
+>[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=ja)を使用してこれを実行する方法は現在開発中で、近日中に公開される予定です。
 
 このドキュメントでは、[!DNL Platform Web SDK]のクライアントサイド A4T ログを設定する手順について説明し、一般的なユースケースの実装例を示します。
 
@@ -41,8 +41,8 @@ ht-degree: 4%
 
 このチュートリアルでは、パーソナライゼーションの目的で[!DNL Platform Web SDK]を使用することに関連する基本的な概念とプロセスについて理解していることを前提としています。 概要が必要な場合は、次のドキュメントを参照してください。
 
-* [Web SDKの設定](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview)
-* [イベントの送信](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)
+* [Web SDKの設定](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/commands/configure/overview)
+* [イベントの送信](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/commands/sendevent/overview)
 * [パーソナライゼーションコンテンツのレンダリング](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## [!DNL Analytics] クライアントサイドのログを設定 {#set-up-client-side-logging}
@@ -51,13 +51,13 @@ ht-degree: 4%
 
 ### [!DNL Analytics] クライアント側ログを有効にする {#enable-analytics-client-side-logging}
 
-実装で[!DNL Analytics]のクライアントサイドのログ記録が有効になっていることを考慮するには、[&#x200B; データストリーム &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)で[!DNL Adobe Analytics]設定を無効にする必要があります。
+実装で[!DNL Analytics]のクライアントサイドのログ記録が有効になっていることを考慮するには、[&#x200B; データストリーム &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/datastreams/overview)で[!DNL Adobe Analytics]設定を無効にする必要があります。
 
 ![Analytics データストリーム設定が無効です](/help/dev/implement/a4t/assets/disable-analytics-datastream.png)
 
 ### SDKから[!DNL A4T] データを取得し、[!DNL Analytics]に送信します {#a4t-to-analytics}
 
-このレポート方法を正しく機能させるには、[!DNL Analytics] ヒットで[`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview) コマンドから取得した[!DNL A4T]関連データを送信する必要があります。
+このレポート方法を正しく機能させるには、[!DNL Analytics] ヒットで[`sendEvent`](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/commands/sendevent/overview) コマンドから取得した[!DNL A4T]関連データを送信する必要があります。
 
 [!DNL Target] Edgeが提案レスポンスを計算すると、[!DNL Analytics] クライアントサイドのログが有効になっているかどうかを確認します（例えば、[!DNL Analytics]がデータストリームで無効になっている場合）。 クライアント側のログ記録が有効になっている場合、システムは応答の各提案に[!DNL Analytics] トークンを追加します。
 
@@ -238,7 +238,7 @@ ht-degree: 4%
 
 ### [!UICONTROL &#x200B; フォームベースのExperience Composer]のアクティビティ {#form-based-composer}
 
-[!DNL Platform Web SDK]を使用して、[Adobe Target フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) アクティビティからの提案の実行を制御できます。
+[!DNL Platform Web SDK]を使用して、[Adobe Target フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja) アクティビティからの提案の実行を制御できます。
 
 特定の決定範囲に対する提案をリクエストする場合、返される提案には適切な[!DNL Analytics] トークンが含まれます。 ベストプラクティスは、[!DNL Experience Platform Web SDK] `sendEvent` コマンドをチェーンし、返された提案を繰り返し実行して、[!DNL Analytics] トークンを同時に収集しながら実行することです。
 
@@ -478,7 +478,7 @@ alloy("sendEvent", {
 
 ### [!UICONTROL Visual Experience Composer] （VEC） アクティビティ {#visual-experience-composer-acitivties}
 
-[!DNL Platform Web SDK]を使用すると、[Visual Experience Composer （VEC） &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)を使用して作成されたオファーを処理できます。
+[!DNL Platform Web SDK]を使用すると、[Visual Experience Composer （VEC） &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja)を使用して作成されたオファーを処理できます。
 
 >[!NOTE]
 >
