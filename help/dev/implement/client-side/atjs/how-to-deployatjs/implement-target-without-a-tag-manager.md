@@ -76,7 +76,7 @@ ht-degree: 32%
 | [!UICONTROL &#x200B; ページ読み込み有効（グローバル mboxを自動作成） &#x200B;] | 各ページが読み込まれると自動的に実行されるように、グローバル mbox 呼び出しを at.js ファイルに埋め込むかどうかを選択します。 |
 | [!UICONTROL グローバル mbox] | global mbox の名前を選択します。 デフォルトでは、この名前は target-global-mbox です。<p>at.jsを使用すると、mbox名にアンパサンド（&amp;）などの特殊文字を使用できます。 |
 | [!UICONTROL &#x200B; タイムアウト （秒） &#x200B;] | [!DNL Target] が定義された期間内にコンテンツの応答をしない場合、サーバー呼び出しはタイムアウトし、デフォルトコンテンツが表示されます。 訪問者のセッション中、追加の呼び出しが引き続き試行されます。 デフォルト値は 5 秒です。<p>at.js ライブラリは、`XMLHttpRequest`のタイムアウト設定を使用します。 タイムアウトは、リクエストが実行されたときに開始し、[!DNL Target]がサーバーから応答を受け取ったときに停止します。 詳しくは、Mozilla Developer Networkの[XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout)を参照してください。<p>指定されたタイムアウトが応答を受信する前に発生した場合、デフォルトのコンテンツが表示され、すべてのデータ収集が[!DNL Target] エッジで行われるため、訪問者がアクティビティの参加者としてカウントされる場合があります。 リクエストが[!DNL Target] エッジに達した場合、訪問者はカウントされます。<p>タイムアウト設定を構成する際は、次の点を考慮してください。<ul><li>値が低すぎると、訪問者はアクティビティの参加者としてカウントされるものの、ほとんどの時間デフォルトのコンテンツが表示される可能性があります。</li><li>値が高すぎると、Web ページに空白の領域が表示されるか、長時間の本文の非表示を使用している場合は空白のページが表示される可能性があります。</li></ul>mbox の応答時間をよりよく把握するには、ブラウザーの開発者ツールの「ネットワーク」タブを確認してください。 また、Catchpoint など、サードパーティの web パフォーマンスモニタリングツールを使用することもできます。<p>**メモ**: [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout)設定により、[!DNL Target]がVisitor API応答を長時間待たずに済みます。 この設定と、ここで説明している at.js のタイムアウト設定は相互に影響しません。 |
-| [!UICONTROL &#x200B; プロファイルの有効期間] | この設定は、訪問者プロファイルが保存される期間を決定します。 デフォルトでは、プロファイルは 2 週間保存されます。 この設定は、最大90日間まで延長できます。<p>プロファイルの有効期間の設定を変更するには、[&#x200B; クライアントケア &#x200B;](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)にお問い合わせください。 |
+| [!UICONTROL &#x200B; プロファイルの有効期間] | この設定は、訪問者プロファイルが保存される期間を決定します。 デフォルトでは、プロファイルは 2 週間保存されます。 この設定は、最大90日間まで延長できます。<p>プロファイルの有効期間の設定を変更するには、[&#x200B; クライアントケア &#x200B;](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja#reference_ACA3391A00EF467B87930A450050077C)にお問い合わせください。 |
 
 ### 主な実装方法
 
@@ -90,7 +90,7 @@ at.js設定を編集するには、目的のat.js バージョンの横にある
 
 >[!WARNING]
 >
->これらのデフォルト設定を変更する前に、現在の実装に影響を与えないように、[&#x200B; クライアントケア &#x200B;](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)に相談してください。
+>これらのデフォルト設定を変更する前に、現在の実装に影響を与えないように、[&#x200B; クライアントケア &#x200B;](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja#reference_ACA3391A00EF467B87930A450050077C)に相談してください。
 
 上記の設定に加えて、次の特定のat.js設定も使用できます。
 
