@@ -5,11 +5,21 @@ title: at.js Cookie
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
 TQID: https://experienceleague.adobe.com/BRauW1ppIMya4aX-vTJDGZFCv1fijYgDuxbHjXCI6D8
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 1830
@@ -161,4 +171,4 @@ Apple の発表内容：
 | 影響を受ける機能 | 詳細 |
 |--- |--- |
 | オプトアウトのサポート | Apple の WebKit 追跡における変更により、オプトアウトのサポートが影響を受けます。<P>[!DNL Target] オプトアウトは、`clientcode.tt.omtrdc.net` ドメインでCookieを使用します。 詳しくは、「[プライバシー](/help/dev/before-implement/privacy/privacy.md)」を参照してください。<P>[!DNL Target]は2つのオプトアウトをサポートしています：<ul><li>クライアントごと（クライアントがオプトアウトリンクを管理します）。</li><li>Adobeを使用して、すべてのユーザーに対して[!DNL Target]機能からユーザーをオプトアウトします。</li></ul>どちらの方法でもサードパーティ Cookie が使用されます。 |
-| [!DNL Target]件のアクティビティ | お客様は、[!DNL Target] アカウントの[ プロファイルの有効期間](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html)を最大90日間まで選択できます。 問題は、アカウントのプロファイルの有効期間が30日を超え、顧客のドメインがクロスサイトでユーザーを追跡するようにマークされているため、ファーストパーティ Cookieが消去された場合、Safari訪問者の行動は[!DNL Target]の次の領域で影響を受けることです。<P>**[!DNL Target]件のレポート**: Safari ユーザーがアクティビティに参加し、30日後に戻ってコンバージョンした場合、そのユーザーは2人の訪問者と1人のコンバージョンとしてカウントされます。<P>この動作は、[!DNL Analytics]をレポートソース （A4T）として使用するアクティビティに対しても同じです。<P>**プロファイルとアクティビティ メンバーシップ**:<ul><li>プロファイルデータは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li>アクティビティメンバーシップは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li> サードパーティ Cookieの実装またはファーストパーティ Cookieとサードパーティ Cookieの実装を使用しているアカウントでは、[!DNL Target]はSafariで機能しません。 この動作は新しいものではありません。 Safari では、サードパーティ Cookie を以前から許可していません。</li></ul><P>**提案**：顧客ドメインがクロスセッションで1人のトラッキング訪問者としてマークされる可能性がある場合、[!DNL Target]でプロファイルの有効期間を30日以内に設定するのが最も安全です。 これにより、ユーザーは Safari と他のすべてのブラウザーで同様に追跡されます。 |
+| [!DNL Target]件のアクティビティ | お客様は、[!DNL Target] アカウントの[&#x200B; プロファイルの有効期間](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html)を最大90日間まで選択できます。 問題は、アカウントのプロファイルの有効期間が30日を超え、顧客のドメインがクロスサイトでユーザーを追跡するようにマークされているため、ファーストパーティ Cookieが消去された場合、Safari訪問者の行動は[!DNL Target]の次の領域で影響を受けることです。<P>**[!DNL Target]件のレポート**: Safari ユーザーがアクティビティに参加し、30日後に戻ってコンバージョンした場合、そのユーザーは2人の訪問者と1人のコンバージョンとしてカウントされます。<P>この動作は、[!DNL Analytics]をレポートソース （A4T）として使用するアクティビティに対しても同じです。<P>**プロファイルとアクティビティ メンバーシップ**:<ul><li>プロファイルデータは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li>アクティビティメンバーシップは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li> サードパーティ Cookieの実装またはファーストパーティ Cookieとサードパーティ Cookieの実装を使用しているアカウントでは、[!DNL Target]はSafariで機能しません。 この動作は新しいものではありません。 Safari では、サードパーティ Cookie を以前から許可していません。</li></ul><P>**提案**：顧客ドメインがクロスセッションで1人のトラッキング訪問者としてマークされる可能性がある場合、[!DNL Target]でプロファイルの有効期間を30日以内に設定するのが最も安全です。 これにより、ユーザーは Safari と他のすべてのブラウザーで同様に追跡されます。 |
