@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 91
 ht-degree: 36%
@@ -30,3 +30,4 @@ ht-degree: 36%
 [!DNL Adobe Experience Platform] のタグは、[!DNL Adobe] の次世代タグ管理機能です。 タグは、適切な顧客体験の実現に必要な分析、マーケティングおよび広告タグをデプロイおよび管理するためのシンプルな手段を提供します。
 
 詳しくは、[実装 [!DNL Target] using [!DNL Adobe Platform]](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)を参照してください。
+

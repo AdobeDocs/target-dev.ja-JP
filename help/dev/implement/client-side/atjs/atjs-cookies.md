@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 1830
 ht-degree: 67%
@@ -172,4 +172,3 @@ Apple の発表内容：
 |--- |--- |
 | オプトアウトのサポート | Apple の WebKit 追跡における変更により、オプトアウトのサポートが影響を受けます。<P>[!DNL Target] オプトアウトは、`clientcode.tt.omtrdc.net` ドメインでCookieを使用します。 詳しくは、「[プライバシー](/help/dev/before-implement/privacy/privacy.md)」を参照してください。<P>[!DNL Target]は2つのオプトアウトをサポートしています：<ul><li>クライアントごと（クライアントがオプトアウトリンクを管理します）。</li><li>Adobeを使用して、すべてのユーザーに対して[!DNL Target]機能からユーザーをオプトアウトします。</li></ul>どちらの方法でもサードパーティ Cookie が使用されます。 |
 | [!DNL Target]件のアクティビティ | お客様は、[!DNL Target] アカウントの[&#x200B; プロファイルの有効期間](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=ja)を最大90日間まで選択できます。 問題は、アカウントのプロファイルの有効期間が30日を超え、顧客のドメインがクロスサイトでユーザーを追跡するようにマークされているため、ファーストパーティ Cookieが消去された場合、Safari訪問者の行動は[!DNL Target]の次の領域で影響を受けることです。<P>**[!DNL Target]件のレポート**: Safari ユーザーがアクティビティに参加し、30日後に戻ってコンバージョンした場合、そのユーザーは2人の訪問者と1人のコンバージョンとしてカウントされます。<P>この動作は、[!DNL Analytics]をレポートソース （A4T）として使用するアクティビティに対しても同じです。<P>**プロファイルとアクティビティ メンバーシップ**:<ul><li>プロファイルデータは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li>アクティビティメンバーシップは、ファーストパーティ Cookie の有効期限が切れた時点で消去されます。</li><li> サードパーティ Cookieの実装またはファーストパーティ Cookieとサードパーティ Cookieの実装を使用しているアカウントでは、[!DNL Target]はSafariで機能しません。 この動作は新しいものではありません。 Safari では、サードパーティ Cookie を以前から許可していません。</li></ul><P>**提案**：顧客ドメインがクロスセッションで1人のトラッキング訪問者としてマークされる可能性がある場合、[!DNL Target]でプロファイルの有効期間を30日以内に設定するのが最も安全です。 これにより、ユーザーは Safari と他のすべてのブラウザーで同様に追跡されます。 |
-
