@@ -1,28 +1,23 @@
 ---
 keywords: mboxCreate, mboxcreate, mbox create, at.js，関数，関数
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL mboxCreate （） &#x200B;]関数を使用して、mboxDefault クラス名を持つ最も近いDIVにオファーを適用します。 （at.js 1.x）'
-title: '[!UICONTROL mboxCreate （） &#x200B;]関数の使用方法を教えてください。'
+description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL mboxCreate （） ]関数を使用して、mboxDefault クラス名を持つ最も近いDIVにオファーを適用します。 （at.js 1.x）'
+title: '[!UICONTROL mboxCreate （） ]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 86eba1fc-4e1d-4793-94e7-898bf81f8945
 TQID: https://experienceleague.adobe.com/hCEKL9RPtqIbMVEouzObjU6dc7TKl1hBtKZ1jEdicRE
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 216
 ht-degree: 40%
 
 ---
 
-# [!UICONTROL mboxCreate （mbox,params） &#x200B;] - at.js 1.x
+# [!UICONTROL mboxCreate （mbox,params） ] - at.js 1.x
 
 リクエストを実行し、mboxDefault クラス名を持つ最も近い DIV にオファーを適用します。
 
@@ -57,4 +52,5 @@ ht-degree: 40%
 * 空の、ページの先頭にある `[!UICONTROL mboxCreate()]` 関数は、グローバル mbox としてお勧めしません。
 
   at.jsの自動作成グローバル mboxは、`<head>`から起動し、コンテンツを早く返すことができるため、より優れたオプションです。
+
 
