@@ -5,11 +5,16 @@ title: adobe.target.triggerView （）関数の使用方法を教えてくださ
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
 TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 446
@@ -19,7 +24,7 @@ ht-degree: 20%
 
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
-この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B テスト ]および[!UICONTROL  エクスペリエンスのターゲット設定] （XT）アクティビティを作成するシングルページアプリケーション （SPA）用に実装する必要があります。 `[!UICONTROL adobe.target.triggerView()]`がサイトに実装されていない場合、VECをSPAに使用することはできません。 詳細については、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
+この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL &#x200B; エクスペリエンスのターゲット設定] （XT）アクティビティを作成するシングルページアプリケーション （SPA）用に実装する必要があります。 `[!UICONTROL adobe.target.triggerView()]`がサイトに実装されていない場合、VECをSPAに使用することはできません。 詳細については、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
 
 >[!NOTE]
 >
@@ -27,7 +32,7 @@ ht-degree: 20%
 
 | パラメーター | タイプ | 必須？ | 説明 |
 | --- | --- | --- | --- |
-| viewName | 文字列 | ○ | ビューを表す文字列型として任意の名前を渡します。 このビュー名は、VECの[!UICONTROL 変更] パネルに表示され、マーケターがアクションを作成し、[!UICONTROL A/B テスト ]および[!UICONTROL  エクスペリエンスのターゲット設定] XT アクティビティを実行できるようにします。 |
+| viewName | 文字列 | ○ | ビューを表す文字列型として任意の名前を渡します。 このビュー名は、VECの[!UICONTROL 変更] パネルに表示され、マーケターがアクションを作成し、[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL &#x200B; エクスペリエンスのターゲット設定] XT アクティビティを実行できるようにします。 |
 | options | オブジェクト | × |  |
 | options > page | ブール値 | × | **TRUE：** ページのデフォルト値は true です。 page = true の場合、インプレッション数を増分するために [!DNL Target] のバックエンドに通知が送信されます。<P>オプション/ページがfalseに設定されている場合を除き、`[!UICONTROL triggerView]`が呼び出されると、通知が常にデフォルトで送信されます。<P>**FALSE:** page=falseの場合、インプレッション数を増やすための通知は送信されません。 このアプローチは、オファーを含むページ上のコンポーネントのみを再レンダリングする場合に使用します。<P>**注意**: `[!UICONTROL triggerView()]`が`{page: false}`をオプションとして呼び出された場合、VEC内のカスタムコードオファーは再レンダリングされません。 |
 
