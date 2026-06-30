@@ -30,7 +30,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、[!DNL Adobe Experience Platform]でデータ収集テクノロジースイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更に関する参照の一覧については、次の[ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?)を参照してください。
+>Adobe Experience Platform Launchは、[!DNL Adobe Experience Platform]でデータ収集テクノロジースイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更に関する参照の一覧については、次の[ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=ja&)を参照してください。
 
 詳細な情報を取得できる様々なソースを次の表に示します。
 
