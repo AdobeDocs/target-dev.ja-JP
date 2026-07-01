@@ -21,7 +21,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 1785
 ht-degree: 32%
@@ -295,4 +295,5 @@ at.js は、Web サイトのすべてのページの `<head>` 要素で実装す
 | orderId | 注文を識別する一意の値（コンバージョンのカウントに使用）。<p>`orderId` は一意である必要があります。 重複する注文はレポートで無視されます。 |
 | orderTotal | 購入金額。<p>通貨記号は渡さないでください。 （コンマではなく）小数点を使用して、10 進数値を示します。 |
 | productPurchasedId（オプション） | この注文で購入された製品 ID のコンマ区切りのリスト。<p>これらの製品 ID は、追加のレポート分析をサポートするために監査レポートに表示されます。 |
+
 

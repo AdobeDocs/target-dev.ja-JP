@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 446
 ht-degree: 61%
@@ -51,4 +51,5 @@ ht-degree: 61%
   >[!DNL Adobe Analytics]拡張機能で「ビーコンを送信」アクションを使用して、[!DNL Analytics]呼び出しが[!DNL Target]呼び出しを待つようにします。 カスタムコードを使用して `s.t()` または `s.tl()` を直接呼び出す場合、[!DNL Analytics] 呼び出しは [!DNL Target] 呼び出しが完了するまで待機することはありません。
 
 * **間違ったリダイレクト オファー処理を防ぎます：** ページに[!DNL Target]と[!DNL Analytics]があり、Targetによってリダイレクト オファーが実行されている場合、（ユーザーが別のURLにリダイレクトされているため）、[!DNL Analytics] トラッカーがリクエストを実行しない場合にリクエストを実行する状況が発生する可能性があります。 [!DNL Adobe Experience Platform]のタグを使用して[!DNL Target]と[!DNL Analytics]を実装する場合、この問題は発生しません。 [!DNL Adobe Experience Platform] でタグを使用すると、[!DNL Target] は、[!DNL Analytics] ビーコンリクエストを中止するように [!DNL Analytics] に指示します。
+
 

@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 203
 ht-degree: 46%
@@ -37,5 +37,6 @@ ht-degree: 46%
 at.js JavaScript ライブラリでは、Cookieを使用してユーザーを追跡し、[!DNL [!DNL Target]]が常に一貫したエクスペリエンスを提供できるようにします。 [!DNL Target] JavaScript ライブラリでCookieを保存できない場合、Target リクエストは無効になります。
 
 **解決策：**&#x200B;パブリックサフィックスリストに含まれているドメインを使用してクラウドベースのインスタンスを利用する必要がある場合は、`cookieDomain` 設定をカスタマイズすることをお勧めします。 詳しくは、[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) を参照してください。
+
 
 
