@@ -55,3 +55,4 @@ Java SDK の [changelog](https://github.com/adobe/target-java-sdk/blob/main/CHAN
 Python SDK の [changelog](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) を読み取ります。
 
 <!-- Judy: remove or modify this page? adequately covered elsewhere? Or, add links to analogous info for the .NET and Python SDKs? -->
+
