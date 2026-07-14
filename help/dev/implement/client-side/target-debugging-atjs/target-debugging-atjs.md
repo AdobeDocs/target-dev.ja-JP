@@ -5,11 +5,16 @@ title: でデバッグするにはどうすればよいですか。[!UICONTROL A
 feature: at.js
 exl-id: ac215560-3f6f-4269-947c-961e7a43c9e1
 TQID: https://experienceleague.adobe.com/pZtiohItxWcjKFJTCXX8JtvOpEjFMsG1SJdp9ANalOE
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
 source-wordcount: 178
@@ -29,15 +34,15 @@ ht-degree: 6%
 
 次のビデオでは、デバッグプロセスの手順について説明しています。
 
-### Adobe Experience Cloud Debugger拡張機能![概要バッジ ](../../assets/overview.png)を追加します
+### Adobe Experience Cloud Debugger拡張機能![概要バッジ &#x200B;](../../assets/overview.png)を追加します
 
 >[!VIDEO](https://video.tv.adobe.com/v/23114/?quality=12)
 
-### Adobe Experience Cloud Debuggerを使用した基本的なAdobe Target デバッグ ![概要バッジ ](../../assets/overview.png)
+### Adobe Experience Cloud Debuggerを使用した基本的なAdobe Target デバッグ ![概要バッジ &#x200B;](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/23115/?quality=12)
 
-### Mbox Trace ![概要バッジ ](../../assets/overview.png)
+### Mbox Trace ![概要バッジ &#x200B;](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/23113/?quality=12)
 
