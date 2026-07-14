@@ -333,13 +333,13 @@ at.js 2.x APIを使用すると、様々な方法で[!DNL Target]実装をカス
 
 ### SPA での at.js 2.x の実装
 
->[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/35058/?captions=jpn&quality=12)
 
 詳しくは、「[Adobe Targetのat.js 2.xをシングルページアプリケーション（SPA）に実装する](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=ja)」を参照してください。
 
 ### [!DNL Adobe Target]でのSPAにVECの使用
 
->[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/35062/?captions=jpn&quality=12)
 
 詳しくは、[Adobe Target でのシングルページアプリケーション Visual Experience Composer（SPA VEC）の使用](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=ja)を参照してください。
 
