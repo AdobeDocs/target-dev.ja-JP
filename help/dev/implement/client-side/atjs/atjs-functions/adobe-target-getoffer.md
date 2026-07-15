@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
 source-wordcount: 472
 ht-degree: 72%
@@ -141,5 +141,6 @@ error コールバックに渡される「status」および「error」パラメ
 |--- |--- |--- |
 | status | 文字列 | エラーの状態を表します。 このパラメーターは次の値を持つことができます。<ul><li>timeout：リクエストがタイムアウトしたことを示します。</li><li>parseerror：例えば、JSON ではなく HTML またはプレーンテキストを受け取るなど、応答が解析できなかったことを示します。</li><li>error：200 OK ではない HTTP ステータスを受け取ったなど、一般的なエラーを示します。</li></ul> |
 | error | 文字列 | 例外メッセージやその他トラブルシューティングに役立つ可能性のある、追加のデータが含まれています。 |
+
 
 

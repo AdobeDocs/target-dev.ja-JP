@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
 source-wordcount: 661
 ht-degree: 70%
@@ -63,5 +63,6 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(event) 
 次のビデオでは、応答トークンとat.js カスタムイベントを使用して、[!DNL Target]からサードパーティシステムにプロファイル情報を共有する方法を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34066/?captions=jpn&quality=12)
+
 
 

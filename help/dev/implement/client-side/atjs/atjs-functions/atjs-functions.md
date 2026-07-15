@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
 source-wordcount: 557
 ht-degree: 40%
@@ -43,5 +43,6 @@ ht-degree: 40%
 | [[!UICONTROL registerExtension （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)<P>（at.js 1.x） | 特定の拡張を登録するための標準的な方法を提供します。<P>**注意：**&#x200B;この関数は、at.js バージョン 1.*x*&#x200B;でのみ使用できます。 この関数は、at.js 2.xのリリースで廃止されました。 この関数は、at.js 2.xで使用した場合、デフォルトコンテンツを返します。 |
 | [[!UICONTROL at.js カスタムイベント &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md) | at.js カスタムイベントを使用すると、mbox リクエストまたはオファーが失敗または成功した場合に通知できます。 |
 | [[!UICONTROL adobe.target.sendNotifications （options） &#x200B;]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)<P>（at.js 2.1.0） | `[!UICONTROL adobe.target.applyOffer()]`または`[!UICONTROL adobe.target.applyOffers()]`を使用せずにエクスペリエンスをレンダリングすると、この関数は[!DNL Target] エッジに通知を送信します。<P>**注意**：この関数はat.js 2.1.0で導入され、2.1.0以降のバージョンで使用できます。 |
+
 
 

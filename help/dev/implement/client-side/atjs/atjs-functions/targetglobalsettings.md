@@ -22,7 +22,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
 source-wordcount: 2705
 ht-degree: 56%
@@ -573,5 +573,6 @@ const PAGE_TEMPLATE = `
 
 * [サンプルコード](https://github.com/Adobe-Marketing-Cloud/target-node-client-samples/tree/master/advanced-atjs-integration-serverstate).
 * [`serverState` を使用した単一ページアプリケーション（SPA）サンプルアプリケーション](https://github.com/Adobe-Marketing-Cloud/target-node-client-samples/tree/master/react-shopping-cart-demo)。
+
 
 

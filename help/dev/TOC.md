@@ -3,7 +3,7 @@ user-guide-title: Adobe Target開発者ガイド
 breadcrumb-title: Target開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
 nudge: true
-source-git-commit: b7f74bef7a9e00aa9f794f63e5a29b391558808e
+source-git-commit: 894adb088e301a0628be687c7d381c30811f47e7
 workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 42%
@@ -200,7 +200,7 @@ ht-degree: 42%
       + [シングルまたはバッチ配信](/help/dev/before-implement/delivery-api-overview/single-or-batch.md)
       + [先行取得](/help/dev/before-implement/delivery-api-overview/prefetch.md)
       + [通知](/help/dev/before-implement/delivery-api-overview/notifications.md)
-      + [Experience Cloudとの連携](before-implement/delivery-api-overview/integration.md)
+      + [Adobe Experience Cloudとの連携](before-implement/delivery-api-overview/integration.md)
       + [考慮事項と既知の制限事項](/help/dev/before-implement/delivery-api-overview/known-limitations.md)
       + [クライアントヒント](/help/dev/before-implement/delivery-api-overview/client-hints.md)
       + [配信 API](/help/dev/implement/delivery-api/delivery-api.md)

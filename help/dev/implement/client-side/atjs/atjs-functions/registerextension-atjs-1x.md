@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
 source-wordcount: 277
 ht-degree: 62%
@@ -61,5 +61,6 @@ options パラメーターは必須で、以下の構造を持ちます。
 |--- |--- |--- |
 | log | 関数 | ブラウザーコンソールに対する引数の変数リストを記録します（存在する場合）。 `mboxDebug=true` が URL に渡される場合にのみアクティブ化されます。 |
 | error | 関数 | ブラウザーコンソールに対する引数の変数リストを記録します。 ネットワークのタイムアウトや、HTML ノードが見つからない場合など、重大なエラーが発生した場合にのみアクティブ化されます。 |
+
 
 

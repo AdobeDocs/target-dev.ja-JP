@@ -18,7 +18,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
 source-wordcount: 287
 ht-degree: 27%
@@ -50,5 +50,6 @@ ht-degree: 27%
   詳しくは、サードパーティのタグマネージャーに関するドキュメントを確認してください。
 
 シングルページアプリケーション （SPA）を使用する場合に[!DNL Target]を実装するには、[&#x200B; シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)を参照してください。
+
 
 
