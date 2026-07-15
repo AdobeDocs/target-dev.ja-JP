@@ -1,28 +1,23 @@
 ---
 keywords: registerExtension, registerextension, register extension, at.js, functions, function, clientCode, serverDomain, globalMboxName, globalMboxAutoCreate, timeout, registerExtension2
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL registerExtension （） &#x200B;]関数を使用して、特定の拡張機能を登録します。 （at.js 1.x）'
-title: '[!UICONTROL registerExtension （） &#x200B;]関数の使用方法を教えてください。'
+description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL registerExtension （） ]関数を使用して、特定の拡張機能を登録します。 （at.js 1.x）'
+title: '[!UICONTROL registerExtension （） ]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 71decf00-84c5-4914-b0cd-bb061fa6265f
 TQID: https://experienceleague.adobe.com/qTWubp0dNesN-8vsooz8pdbjfSw1W1ktm-0bG6YRzJw
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
 source-wordcount: 277
 ht-degree: 62%
 
 ---
 
-# [!UICONTROL registerExtension （） &#x200B;] - at.js 1.x
+# [!UICONTROL registerExtension （） ] - at.js 1.x
 
 特定の拡張を登録するための標準的な方法を提供します。
 
@@ -61,5 +56,6 @@ options パラメーターは必須で、以下の構造を持ちます。
 |--- |--- |--- |
 | log | 関数 | ブラウザーコンソールに対する引数の変数リストを記録します（存在する場合）。 `mboxDebug=true` が URL に渡される場合にのみアクティブ化されます。 |
 | error | 関数 | ブラウザーコンソールに対する引数の変数リストを記録します。 ネットワークのタイムアウトや、HTML ノードが見つからない場合など、重大なエラーが発生した場合にのみアクティブ化されます。 |
+
 
 

@@ -1,28 +1,23 @@
 ---
 keywords: adobe.target.applyOffer, applyOffer, applyoffer, apply offer, at.js, functions, function, $8
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL adobe.target.applyOffer （） &#x200B;]関数を使用して、応答コンテンツを適用します。'
-title: '[!UICONTROL adobe.target.applyOffer （） &#x200B;]関数の使用方法を教えてください。'
+description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL adobe.target.applyOffer （） ]関数を使用して、応答コンテンツを適用します。'
+title: '[!UICONTROL adobe.target.applyOffer （） ]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 957bbe92-8012-4bd5-95d6-1ae38b72bb16
 TQID: https://experienceleague.adobe.com/lrjsIl-gKu1SnrZapxYcoDObvUCGG2ht58QtWbQkYts
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
 source-wordcount: 173
 ht-degree: 68%
 
 ---
 
-# [!UICONTROL adobe.target.applyOffer （options） &#x200B;]
+# [!UICONTROL adobe.target.applyOffer （options） ]
 
 この関数は、[!DNL Adobe Target]を含む応答コンテンツを適用するためのものです。
 
@@ -60,5 +55,6 @@ adobe.target.getOffer({
  "timeout": 5000 
 }); 
 ```
+
 
 
