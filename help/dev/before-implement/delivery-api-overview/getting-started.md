@@ -63,6 +63,6 @@ curl -X POST \
 
 [!UICONTROL Target Delivery API]呼び出しを行う前に、次の手順に従って、応答にエンドユーザーに表示する関連するエクスペリエンスが含まれていることを確認します。
 
-1. [&#x200B; フォームベースのコンポーザー](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en)または[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)を使用して、[!DNL Target] アクティビティ（A/B、XT、APまたはRecommendations）を作成します。
+1. [&#x200B; フォームベースのコンポーザー](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja)または[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja)を使用して、[!DNL Target] アクティビティ（A/B、XT、APまたはRecommendations）を作成します。
 1. 配信APIを使用して、手順2で作成した[!DNL Target] アクティビティで使用されるmboxの応答を取得します。
 1. 訪問者にエクスペリエンスを提示します。
