@@ -20,10 +20,10 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 45af56b5ac64eb1db67c1bfdfecd6887dce990ff
 workflow-type: tm+mt
-source-wordcount: 618
-ht-degree: 12%
+source-wordcount: 825
+ht-degree: 9%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 12%
 * HTTP/S呼び出しを行うことができる、任意のサーバーサイドプラットフォームまたはアプリケーションから、エクスペリエンスを配信します。
 * 訪問者がどのチャネルやデバイスを利用してビジネスに関与したとしても、訪問者に一貫性のあるパーソナライズされた体験を提供します。
 * 訪問者のエクスペリエンスをサーバー上のセッション内にキャッシュして、複数のAPI呼び出しを回避できるようにすることで、パフォーマンスを向上させます。
-* サーバーサイドから、Adobe Analytics、Adobe Audience Manager（AAM）、Experience Cloud ID ServiceなどのAdobe Experience Cloud製品とシームレスに連携できます。
+* サーバーサイドから、Adobe Analytics、Adobe Audience Manager（AAM）、Adobe Experience Cloud ID ServiceなどのAdobe Experience Cloud製品とシームレスに連携できます。
 
 ## サーバーサイド SDK
 
@@ -80,7 +80,7 @@ ht-degree: 12%
 * **機能のフラグ付け**、**ロールアウト**、および&#x200B;**A/B実験**&#x200B;を&#x200B;**ほぼゼロの遅延**&#x200B;で実行して実行します。
 * **SPA**&#x200B;と&#x200B;**モバイルチャネル**&#x200B;を含む&#x200B;**web**&#x200B;全体、および接続されたテレビ、キオスク、実店舗のデジタル画面などのブラウザー以外の&#x200B;**モノのインターネット（IoT）デバイス**&#x200B;を含むエクスペリエンスを配信します。
 * ユーザーがどのチャネルやデバイスとエンゲージしたかに関係なく、**機械学習（ML）を活用したパーソナライズされたエクスペリエンス**&#x200B;をユーザーに提供します。
-* **サーバーサイドから** Adobe Experience Cloud **、** Adobe Analytics **、** Adobe Audience Manager ID サービス **などの**&#x200B;製品とシームレスに連携できます。
+* **サーバーサイドから** Adobe Analytics **、** Adobe Audience Manager **、** Experience Cloud ID Service **などのAdobe Experience Cloud**&#x200B;製品とシームレスに連携できます。
 
 [&#x200B; デバイス上の決定](sdk-guides/on-device-decisioning/overview.md)を介してシンプルな機能フラグ付けユースケースを実行する方法については、[はじめに](sdk-guides/getting-started/getting-started.md) ページを参照してください。
 
@@ -91,3 +91,26 @@ ht-degree: 12%
 リンク：[Target Recommendations API](https://developers.adobetarget.com/api/recommendations)および[Adobe Recommendations APIの概要](../../before-administer/recs-api/overview.md)。
 
 Recommendations APIを使用すると、[!DNL Target]個のRecommendations サーバーとプログラムで対話できます。 これらのAPIは、通常[!DNL Target] ユーザーインターフェイスを介して実行する機能を実行するために、さまざまなアプリケーションスタックと統合できます。
+
+## SDKを使用しない[!DNL Platform Edge Network] API呼び出し {#platform-edge-api-user-agent}
+
+[!UICONTROL Adobe Experience Platform Web SDK]およびその他のサポートされているSDK統合には、[!DNL Experience Platform Edge Network]の呼び出し時にHTTP リクエストヘッダーにブラウザーのような`User-Agent`値が含まれています。 SDKなしでパブリック [&#x200B; インタラクション API](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network/server-api/interact){target=_blank}を使用するサーバーサイド統合では、このヘッダーを明示的に指定する必要があります。
+
+SDK以外のインタラクション API呼び出しの場合は、次の要件を確認してください。
+
+* HTTP リクエストヘッダーに、ブラウザーに似た有効な`User-Agent`を含めます。 JSON リクエスト本文の訪問者またはユーザーエージェントの値だけでは、この統合パターンのボット検出要件を満たしません。
+* プレースホルダーやブラウザー以外の値（例：`MyApp/1.0`）は使用しないでください。このような値はボットの分類になる可能性があります。
+* パブリック Edge API呼び出しには、SDK名またはSDK バージョンは必要ありません。 このシナリオでは、有効な`User-Agent` HTTP ヘッダーが必須の要素です。
+
+[!DNL Target]がリクエストをボットトラフィックとして分類すると、以下のように、[!UICONTROL Recommendations]や[!UICONTROL 自動ターゲット &#x200B;]などのアクティビティのプロファイル検索、セグメント評価、パーソナライズされたコンテンツが抑制されるので、パーソナライゼーションが失敗したり、断続的に見えたりする可能性があります。
+
+SDKの導入について詳しくは、[[!DNL Adobe Experience Platform Web SDK] 概要](https://experienceleague.adobe.com/ja/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}を参照してください。
+
+**Interact API リクエストの例（ヘッダーには`User-Agent`を含める必要があります）:**
+
+```http
+POST https://edge.adobedc.net/ee/v2/interact?dataStreamId=YOUR_DATASTREAM_ID&requestId=YOUR_REQUEST_ID
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15
+Accept: */*
+Content-Type: text/plain; charset=UTF-8
+```

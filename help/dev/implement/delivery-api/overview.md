@@ -9,16 +9,20 @@ product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
-source-wordcount: 188
-ht-degree: 1%
+source-wordcount: 244
+ht-degree: 0%
 
 ---
 
 # 配信APIの概要
 
 [!DNL Adobe Target Delivery API]はRESTに基づいています。 このドキュメントでは、[!DNL Adobe Target] [!DNL Delivery API]を構成するリソースについて説明します。 HTTP メソッドは、これらのリソースに対する操作を実行するために使用されます。
+
+>[!IMPORTANT]
+>
+>ここで説明する[!DNL Delivery API]は、[!DNL at.js]および直接サーバーサイド実装を目的としています。 [!DNL Adobe Experience Platform Web SDK]を使用して[!DNL Target]を実装する場合は、[!DNL Delivery API]を直接呼び出す代わりに、[!UICONTROL Experience Platform Edge Network]経由で`sendEvent` コマンドを使用してアクセスするInteract APIを使用します。 詳しくは、[Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)および[at.js ライブラリとExperience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)の比較を参照してください。
 
 [!UICONTROL Adobe Targetの配信API]を使用すると、次のことが可能になります。
 
