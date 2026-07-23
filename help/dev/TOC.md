@@ -3,7 +3,7 @@ user-guide-title: Adobe Target開発者ガイド
 breadcrumb-title: Target開発者ガイド
 user-guide-description: web サイトやモバイルサイト、アプリ、ソーシャルメディアおよびその他のデジタルチャネルでの収益を最大化するために、顧客のエクスペリエンスを調整およびパーソナライズする方法について説明します。
 nudge: true
-source-git-commit: 72b19deb10f2e0d0c38f76317b1e8fee19ae0be1
+source-git-commit: 5c19d83d1ba84165dee064183ec04a9803dd1a61
 workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 42%
@@ -87,10 +87,10 @@ ht-degree: 42%
     + [at.js カスタムイベント](implement/client-side/atjs/atjs-functions/atjs-custom-events.md)
     + [Adobe Experience Cloud デバッガーを使用した at.js のデバッグ](implement/client-side/target-debugging-atjs/target-debugging-atjs.md)
     + [Target でのクラウドベースのインスタンスの使用](implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)
-  + [at.js の FAQ](implement/client-side/atjs/target-atjs-faq.md)
-  + [at.js のバージョンの詳細](implement/client-side/atjs/target-atjs-versions.md)
-  + [at.js 1.x から at.js 2.x へのアップグレード](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
-  + [at.js の cookie](implement/client-side/atjs/atjs-cookies.md)
+    + [at.js の FAQ](implement/client-side/atjs/target-atjs-faq.md)
+    + [at.js のバージョンの詳細](implement/client-side/atjs/target-atjs-versions.md)
+    + [at.js 1.x から at.js 2.x へのアップグレード](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
+    + [at.js の cookie](implement/client-side/atjs/atjs-cookies.md)
   + [User-agentとクライアントヒント](implement/client-side/atjs/user-agent-and-client-hints.md)
   + グローバル mbox について {#global-mbox}
     + [グローバル mbox の概要について](implement/client-side/atjs/global-mbox/global-mbox-overview.md)
