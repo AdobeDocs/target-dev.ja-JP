@@ -35,7 +35,7 @@ ht-degree: 9%
 >
 >実装でat.jsと[!DNL AppMeasurement]をクライアントサイドで使用する場合は、以下で説明する[!UICONTROL Target Delivery API]とサーバーサイド SDKを使用する必要があります。
 >
->実装で[!UICONTROL Adobe Experience Platform Web SDK]を使用している場合は、[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}を使用する必要があります。
+>実装で[!UICONTROL Adobe Experience Platform Web SDK]を使用している場合は、[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/ja/docs/experience-platform/edge-network-server-api/overview){target=_blank}を使用する必要があります。
 
 以下の処理は、[!DNL Target] のサーバー側実装で発生します。
 
@@ -104,7 +104,7 @@ SDK以外のEdge API呼び出しの場合は、次の要件を確認してくだ
 
 [!DNL Target]がリクエストをボットトラフィックとして分類すると、[!UICONTROL Recommendations]や[!UICONTROL 自動ターゲット &#x200B;]などのアクティビティのプロファイル検索、セグメント評価、パーソナライズされたコンテンツが抑制されるため、パーソナライゼーションが失敗したり、断続的に見えたりする可能性があります。
 
-SDKの導入について詳しくは、[[!DNL Adobe Experience Platform Web SDK] 概要](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}を参照してください。
+SDKの導入について詳しくは、[[!DNL Adobe Experience Platform Web SDK] 概要](https://experienceleague.adobe.com/ja/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}を参照してください。
 
 **Edge API リクエストの例（ヘッダーには`User-Agent`を含める必要があります）:**
 
