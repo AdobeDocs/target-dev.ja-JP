@@ -5,11 +5,21 @@ title: ' [!DNL Target]  サーバーサイド配信APIとSDKについて学ぶ�
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
 TQID: https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88cid: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d095671a-1355-40aa-8b5f-06c33c68080bid: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88c
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 7a393cc6a3f30a276a256cdabb5b42fe08f3c505
 workflow-type: tm+mt
 source-wordcount: 820
@@ -44,7 +54,7 @@ ht-degree: 9%
 
 ## Server Side Delivery API
 
-リンク：[ サーバーサイド配信API](/help/dev/implement/delivery-api/overview.md)
+リンク：[&#x200B; サーバーサイド配信API](/help/dev/implement/delivery-api/overview.md)
 
 `/rest/v1/delivery`
 
@@ -72,9 +82,9 @@ ht-degree: 9%
 * ユーザーがどのチャネルやデバイスとエンゲージしたかに関係なく、**機械学習（ML）を活用したパーソナライズされたエクスペリエンス**&#x200B;をユーザーに提供します。
 * **サーバーサイドから** Adobe Analytics **、** Adobe Audience Manager **、** Experience Cloud ID Service **などのAdobe Experience Cloud**&#x200B;製品とシームレスに連携できます。
 
-[ デバイス上の決定](sdk-guides/on-device-decisioning/overview.md)を介してシンプルな機能フラグ付けユースケースを実行する方法については、[はじめに](sdk-guides/getting-started/getting-started.md) ページを参照してください。
+[&#x200B; デバイス上の決定](sdk-guides/on-device-decisioning/overview.md)を介してシンプルな機能フラグ付けユースケースを実行する方法については、[はじめに](sdk-guides/getting-started/getting-started.md) ページを参照してください。
 
-[ サンプルアプリ ](sdk-guides/sample-apps/sample-apps.md)をチェックして、楽しく遊びましょう。
+[&#x200B; サンプルアプリ &#x200B;](sdk-guides/sample-apps/sample-apps.md)をチェックして、楽しく遊びましょう。
 
 ## [!DNL Target Recommendations] API
 
@@ -92,7 +102,7 @@ SDK以外のEdge API呼び出しの場合は、次の要件を確認してくだ
 * プレースホルダーやブラウザー以外の値（例：`MyApp/1.0`）は使用しないでください。このような値はボットの分類になる可能性があります。
 * パブリック Edge API呼び出しには、SDK名またはSDK バージョンは必要ありません。 このシナリオでは、有効な`User-Agent` HTTP ヘッダーが必須の要素です。
 
-[!DNL Target]がリクエストをボットトラフィックとして分類すると、[!UICONTROL Recommendations]や[!UICONTROL 自動ターゲット ]などのアクティビティのプロファイル検索、セグメント評価、パーソナライズされたコンテンツが抑制されるため、パーソナライゼーションが失敗したり、断続的に見えたりする可能性があります。
+[!DNL Target]がリクエストをボットトラフィックとして分類すると、[!UICONTROL Recommendations]や[!UICONTROL 自動ターゲット &#x200B;]などのアクティビティのプロファイル検索、セグメント評価、パーソナライズされたコンテンツが抑制されるため、パーソナライゼーションが失敗したり、断続的に見えたりする可能性があります。
 
 SDKの導入について詳しくは、[[!DNL Adobe Experience Platform Web SDK] 概要](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}を参照してください。
 
