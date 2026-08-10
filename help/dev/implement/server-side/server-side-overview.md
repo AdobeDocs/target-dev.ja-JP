@@ -20,9 +20,9 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 45af56b5ac64eb1db67c1bfdfecd6887dce990ff
+source-git-commit: 7a393cc6a3f30a276a256cdabb5b42fe08f3c505
 workflow-type: tm+mt
-source-wordcount: 825
+source-wordcount: 820
 ht-degree: 9%
 
 ---
@@ -94,19 +94,19 @@ Recommendations APIを使用すると、[!DNL Target]個のRecommendations サ�
 
 ## SDKを使用しない[!DNL Platform Edge Network] API呼び出し {#platform-edge-api-user-agent}
 
-[!UICONTROL Adobe Experience Platform Web SDK]およびその他のサポートされているSDK統合には、[!DNL Experience Platform Edge Network]の呼び出し時にHTTP リクエストヘッダーにブラウザーのような`User-Agent`値が含まれています。 SDKなしでパブリック [&#x200B; インタラクション API](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network/server-api/interact){target=_blank}を使用するサーバーサイド統合では、このヘッダーを明示的に指定する必要があります。
+[!UICONTROL Adobe Experience Platform Web SDK]およびその他のサポートされているSDK統合には、[!DNL Experience Platform Edge Network]の呼び出し時にHTTP リクエストヘッダーにブラウザーのような`User-Agent`値が含まれています。 SDKなしでパブリック [Edge API](https://developer.adobe.com/data-collection-apis/docs/getting-started/personalization){target=_blank}を使用するサーバーサイド統合では、このヘッダーを明示的に指定する必要があります。
 
-SDK以外のインタラクション API呼び出しの場合は、次の要件を確認してください。
+SDK以外のEdge API呼び出しの場合は、次の要件を確認してください。
 
 * HTTP リクエストヘッダーに、ブラウザーに似た有効な`User-Agent`を含めます。 JSON リクエスト本文の訪問者またはユーザーエージェントの値だけでは、この統合パターンのボット検出要件を満たしません。
 * プレースホルダーやブラウザー以外の値（例：`MyApp/1.0`）は使用しないでください。このような値はボットの分類になる可能性があります。
 * パブリック Edge API呼び出しには、SDK名またはSDK バージョンは必要ありません。 このシナリオでは、有効な`User-Agent` HTTP ヘッダーが必須の要素です。
 
-[!DNL Target]がリクエストをボットトラフィックとして分類すると、以下のように、[!UICONTROL Recommendations]や[!UICONTROL 自動ターゲット &#x200B;]などのアクティビティのプロファイル検索、セグメント評価、パーソナライズされたコンテンツが抑制されるので、パーソナライゼーションが失敗したり、断続的に見えたりする可能性があります。
+[!DNL Target]がリクエストをボットトラフィックとして分類すると、[!UICONTROL Recommendations]や[!UICONTROL 自動ターゲット &#x200B;]などのアクティビティのプロファイル検索、セグメント評価、パーソナライズされたコンテンツが抑制されるため、パーソナライゼーションが失敗したり、断続的に見えたりする可能性があります。
 
 SDKの導入について詳しくは、[[!DNL Adobe Experience Platform Web SDK] 概要](https://experienceleague.adobe.com/ja/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}を参照してください。
 
-**Interact API リクエストの例（ヘッダーには`User-Agent`を含める必要があります）:**
+**Edge API リクエストの例（ヘッダーには`User-Agent`を含める必要があります）:**
 
 ```http
 POST https://edge.adobedc.net/ee/v2/interact?dataStreamId=YOUR_DATASTREAM_ID&requestId=YOUR_REQUEST_ID
