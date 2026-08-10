@@ -5,26 +5,11 @@ title: at.jsの各バージョンに含まれるもの
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
 TQID: https://experienceleague.adobe.com/95lXe4YAZ7mD12XBtKPB3ddFtGCJYdvlXR632qosuG4
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
 source-wordcount: 5174
@@ -46,7 +31,7 @@ ht-degree: 62%
 >
 >対応するメジャーバージョンの以前のマイナーバージョンで検出された問題のバグ修正とセキュリティパッチを取得するには、1.*x*&#x200B;または2.*x*&#x200B;のいずれかの最新バージョンにアップグレードする必要があります。
 
-[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)のタグは、at.jsをアップグレードする際に推奨される方法です。 拡張機能の開発者は、継続的に拡張機能に新しい機能を追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンにパッケージ化され、アップグレードとしてAdobe Experience Platform カタログで利用できるようになります。 詳しくは、*タグの概要* ガイドの[拡張機能のアップグレード &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html?lang=ja)を参照してください。
+[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)のタグは、at.jsをアップグレードする際に推奨される方法です。 拡張機能の開発者は、継続的に拡張機能に新しい機能を追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンにパッケージ化され、アップグレードとしてAdobe Experience Platform カタログで利用できるようになります。 詳しくは、*タグの概要* ガイドの[拡張機能のアップグレード ](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)を参照してください。
 
 ## at.js バージョン 2.11.8（2025年3月31日（PT））
 
@@ -58,7 +43,7 @@ ht-degree: 62%
 
 ## at.js バージョン 2.11.6（2024年9月29日（PT））
 
-* [!UICONTROL Visual Experience Composer] （VEC）または[!UICONTROL &#x200B; フォームベース Experience Composer]内のリダイレクトオファーで[!DNL Target]が正しく動作しない問題を修正しました。
+* [!UICONTROL Visual Experience Composer] （VEC）または[!UICONTROL  フォームベース Experience Composer]内のリダイレクトオファーで[!DNL Target]が正しく動作しない問題を修正しました。
 
 ## at.js バージョン 2.11.5（2024年8月14日（PT））
 
@@ -151,7 +136,7 @@ ht-degree: 62%
 at.js のこのリリースには、次の機能強化および変更が含まれています。
 
 * at.js の[オンデバイス判定](/help/dev/implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md)のサポート。
-* Automated Personalization アクティビティでの[プレビューリンク](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=ja)のサポート
+* Automated Personalization アクティビティでの[プレビューリンク](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html)のサポート
 
 このリリースでは、Microsoft Internet Explorer 10 以降のバージョンのサポートも削除されます。
 
@@ -263,7 +248,7 @@ at.js のこのリリースはメンテナンスリリースで、次の機能�
 
 * **クライアントサイド分析ログ**：クライアントサイドまたはサーバーサイドのいずれでも、顧客が[!DNL Adobe Analytics]に分析データを送信する方法を完全に制御できるようにします。
 
-  詳しくは、[&#x200B; クライアントサイド  [!DNL Analytics]  ログ &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?lang=ja#client-side)を参照してください。
+  詳しくは、[ クライアントサイド  [!DNL Analytics]  ログ ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html#client-side)を参照してください。
 
 * **通知の送信**：`applyOffer()` または `applyOffers()` を使用する代わりにコードでエクスペリエンスがレンダリングされる場合、開発者は通知を送信できます。
 
@@ -380,7 +365,7 @@ at.js バージョン 1.5.0 がリリースされました。
 * `at-request-succeeded` イベントの詳細には、リダイレクトフラグが含まれています。 このフラグを使用すると、ページが別の URL にリダイレクトされるかどうかを判断することができます。 その URL を知る必要がある場合は、subscribe to `at-content-rendering-redirect` をサブスクライブします。 （TNT-29834）
 * `window.targetGlobalSettings.enabled` を false に設定すると失敗して実行時例外が発生する原因となっていた問題を修正しました。 （TNT-29829）
 * グローバル mbox リクエストを発行したり本文を非表示にしたりすると、Visual Experience Composer（VEC）への読み込み中にページが失敗する原因となっていた問題を修正しました。 （TNT-29795）
-* `screenOrientation`、`devicePixelRatio`、および `webGLRenderer` のサポートを追加しました。 これらの新しい[!DNL Target] リクエストパラメーターは、iPhone Xおよびその他の最新のデバイス検出に使用されます。 詳しくは、[モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=ja)を参照してください。 （TNT-29781）
+* `screenOrientation`、`devicePixelRatio`、および `webGLRenderer` のサポートを追加しました。 これらの新しい[!DNL Target] リクエストパラメーターは、iPhone Xおよびその他の最新のデバイス検出に使用されます。 詳しくは、[モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html)を参照してください。 （TNT-29781）
 * Adobe Audience Manager（AAM）のロケーションヒントが送信されないことがある問題を修正しました。 （TNT-29695）
 * これをサポートしているブラウザーの場合、at.js 1.5.0 はセレクターポーリングの際に MutationObserver に切り替わります。 at.js 1.0.0 以前のバージョンでは、MutationObserver ポリフィルを使用していましたが、これは問題があることがわかっていました。 ポリフィルの問題を回避するために、バージョン 1.5.0 では次の擬似コードを使用して、どのスケジューリングメカニズムを使用するかを決定しています。
 
@@ -399,11 +384,11 @@ at.js バージョン 1.3.0 がリリースされました。
 
 * at.js とのインタラクションの追跡、デバッグ、カスタマイズに役立つ次の新しいイベントを利用できます。
 
-   * LIBRARY_LOADED
-   * REQUEST_START
-   * CONTENT_RENDERING_START
-   * CONTENT_RENDERING_NO_OFFERS
-   * CONTENT_RENDERING_REDIRECT
+  * LIBRARY_LOADED
+  * REQUEST_START
+  * CONTENT_RENDERING_START
+  * CONTENT_RENDERING_NO_OFFERS
+  * CONTENT_RENDERING_REDIRECT
 
   詳細については、「[at.js カスタムイベント](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md)」を参照してください。
 
@@ -422,7 +407,7 @@ at.js バージョン 1.3.0 がリリースされました。
 
 at.js バージョン 1.2.3 がリリースされました。
 
-* JSON オファーのサポートを追加しました。 JSON オファーは、フォームベースの Experience Composer を使用して作成されたアクティビティでのみ利用できます。 現時点で JSON オファーを使用できる方法は、直接の API 呼び出しのみとなっています。 「[JSON オファーの作成](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=ja)」を参照してください。
+* JSON オファーのサポートを追加しました。 JSON オファーは、フォームベースの Experience Composer を使用して作成されたアクティビティでのみ利用できます。 現時点で JSON オファーを使用できる方法は、直接の API 呼び出しのみとなっています。 「[JSON オファーの作成](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html)」を参照してください。
 
 ## at.js バージョン 1.2.2
 
@@ -460,7 +445,7 @@ at.js バージョン 1.2は、主にバグ修正を含むメンテナンスリ�
 
 at.js バージョン 1.1には、次の機能強化と修正が含まれています。
 
-* レスポンストークンの処理を追加しました。 詳しくは、[レスポンストークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)を参照してください。
+* レスポンストークンの処理を追加しました。 詳しくは、[レスポンストークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)を参照してください。
 * 問題を解消し、`document.currentScript polyfill` が Angular 1.X に干渉しないようにしました。
 * 変更を加え、クリック追跡が visibility プロパティに干渉しないようにしました。 クリック追跡要素が、`at-element-click-tracking` ではなく `at-element-marker` の CSS クラスに分類されます。
 
@@ -494,7 +479,7 @@ at.js バージョン 0.9.7には、次の機能強化と修正が含まれて�
 
 at.js バージョン 0.9.6には、次の機能強化と修正が含まれています。
 
-* A4T のリダイレクトオファーのサポート。 at.js バージョン 0.9.6をダウンロードしてインストールした後、[!UICONTROL Adobe AnalyticsをReporting Source for Target] （A4T）として使用するアクティビティでリダイレクトオファーを使用できます。 at.js バージョン 0.9.6に加えて、リダイレクトオファーとA4Tを使用するには、実装で満たす必要がある他の最小要件があります。 詳細および追加の重要な情報については、[リダイレクトオファー - A4T に関する FAQ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=ja) を参照してください。
+* A4T のリダイレクトオファーのサポート。 at.js バージョン 0.9.6をダウンロードしてインストールした後、[!UICONTROL Adobe AnalyticsをReporting Source for Target] （A4T）として使用するアクティビティでリダイレクトオファーを使用できます。 at.js バージョン 0.9.6に加えて、リダイレクトオファーとA4Tを使用するには、実装で満たす必要がある他の最小要件があります。 詳細および追加の重要な情報については、[リダイレクトオファー - A4T に関する FAQ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html) を参照してください。
 * at.js 0.9.6より前のバージョンでは、訪問者APIがページに存在し、`visitorApiTimeout`設定がアグレッシブすぎるため、[!DNL Target]では、[!DNL Target] リクエストでMCID データが送信されない場合があります。 その結果、A4T を使用しているときに、[!DNL Analytics] で未関連付けヒットなどの問題が発生することがありました。
 
   この動作はat.js 0.9.6で変更されました。`visitorApiTimeout`が1 ミリ秒と設定されている場合でも、[!DNL Target]はSDID、トラッキングサーバー、顧客IDのデータを収集し、[!DNL Target] リクエストでそれらを送信しようとします。
@@ -553,10 +538,10 @@ at.js バージョン 0.9.6には、次の機能強化と修正が含まれて�
 
   この新しいAPIにより、開発者はat.jsで使用される特定のjQuery モジュールにアクセスして、ライブラリの拡張機能（別名プラグイン）を開発できます。 この変更に伴い、気をつけるべき事項がいくつかあります。 これは、次の機能を使用しているユーザーのみに影響します。
 
-   * `getSettings()` API は廃止されましたが、`registerExtension()` を使用すると同じ機能が利用できます。
-   * `getTracking()` API は廃止されましたが、`registerExtension()` を使用すると同じ機能が利用できます。
+  * `getSettings()` API は廃止されましたが、`registerExtension()` を使用すると同じ機能が利用できます。
+  * `getTracking()` API は廃止されましたが、`registerExtension()` を使用すると同じ機能が利用できます。
 
-   * 既存の拡張（AngularJS 拡張など）は `registerExtension()` の手法を使用するように更新する必要があります。
+  * 既存の拡張（AngularJS 拡張など）は `registerExtension()` の手法を使用するように更新する必要があります。
 
 * 新しいat.js通知API。
 
