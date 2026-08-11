@@ -399,11 +399,11 @@ at.js バージョン 1.3.0 がリリースされました。
 
 * at.js とのインタラクションの追跡、デバッグ、カスタマイズに役立つ次の新しいイベントを利用できます。
 
-   * LIBRARY_LOADED
-   * REQUEST_START
-   * CONTENT_RENDERING_START
-   * CONTENT_RENDERING_NO_OFFERS
-   * CONTENT_RENDERING_REDIRECT
+  * LIBRARY_LOADED
+  * REQUEST_START
+  * CONTENT_RENDERING_START
+  * CONTENT_RENDERING_NO_OFFERS
+  * CONTENT_RENDERING_REDIRECT
 
   詳細については、「[at.js カスタムイベント](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md)」を参照してください。
 
@@ -553,10 +553,10 @@ at.js バージョン 0.9.6には、次の機能強化と修正が含まれて�
 
   この新しいAPIにより、開発者はat.jsで使用される特定のjQuery モジュールにアクセスして、ライブラリの拡張機能（別名プラグイン）を開発できます。 この変更に伴い、気をつけるべき事項がいくつかあります。 これは、次の機能を使用しているユーザーのみに影響します。
 
-   * `getSettings()` API は廃止されましたが、`registerExtension()` を使用すると同じ機能が利用できます。
-   * `getTracking()` API は廃止されましたが、`registerExtension()` を使用すると同じ機能が利用できます。
+  * `getSettings()` API は廃止されましたが、`registerExtension()` を使用すると同じ機能が利用できます。
+  * `getTracking()` API は廃止されましたが、`registerExtension()` を使用すると同じ機能が利用できます。
 
-   * 既存の拡張（AngularJS 拡張など）は `registerExtension()` の手法を使用するように更新する必要があります。
+  * 既存の拡張（AngularJS 拡張など）は `registerExtension()` の手法を使用するように更新する必要があります。
 
 * 新しいat.js通知API。
 
