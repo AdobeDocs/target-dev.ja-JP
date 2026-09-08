@@ -5,10 +5,17 @@ feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
 TQID: https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 64d250010899c671e73045b23b8e0c79cefaa2d6
 workflow-type: tm+mt
 source-wordcount: 1311
@@ -72,7 +79,7 @@ POST呼び出しでこのファイルを参照して、[!DNL Target] サーバ�
 * 最初のヘッダーは`pcId`または`thirdPartyId`のいずれかである必要があります。 [!UICONTROL Marketing Cloud訪問者ID]はサポートされていません。 [!UICONTROL pcId]は[!DNL Target]が生成した訪問者IDです。 `thirdPartyId`はクライアントアプリケーションで指定されたIDで、mbox呼び出しを通じて[!DNL Target]に`mbox3rdPartyId`として渡されます。 ここで`thirdPartyId`と呼ぶ必要があります。
 * バッチファイルで指定するパラメーターと値は、セキュリティ上の理由から、UTF-8を使用してURL エンコードする必要があります。 パラメーターと値は、HTTP リクエストを通じて処理するために他のエッジノードに転送できます。
 * パラメーターの形式は`paramName`のみにする必要があります。 パラメーターは[!DNL Target]に`profile.paramName`として表示されます。
-* [!UICONTROL Bulk Profile Update API] v2を使用している場合は、各`pcId`にすべてのパラメーター値を指定する必要はありません。 プロファイルは、[!DNL Target]に見つからない`pcId`または`mbox3rdPartyId`に対して作成されます。 v1を使用している場合、欠落しているpcIdまたはmbox3rdPartyIdのプロファイルは作成されません。 詳しくは、以下の [!DNL Bulk Profile Update API]](#empty)の[空の値の処理を参照してください。
+* [!UICONTROL Bulk Profile Update API] v2を使用している場合は、各`pcId`にすべてのパラメーター値を指定する必要はありません。 プロファイルは、[!DNL Target]に見つからない`pcId`または`mbox3rdPartyId`に対して作成されます。 v1を使用している場合、欠落しているpcIdまたはmbox3rdPartyIdのプロファイルは作成されません。 詳しくは、以下の [!DNL Bulk Profile Update API]&#x200B;[&#128279;](#empty)の空の値の処理を参照してください。
 * バッチファイルの容量は 50 MB 未満にする必要があります。 さらに、行の合計数は500,000を超えてはなりません。 この制限により、サーバーに多すぎるリクエストが溢れるのを防ぐことができます。
 * アップロードできる属性の数に制限はありません。 ただし、顧客属性、プロファイル API、Mbox内プロファイルパラメーター、プロファイルスクリプト出力を含む外部プロファイルデータの合計サイズは、64 KBを超えてはなりません。
 * パラメーターと値は、大文字と小文字を区別します。
@@ -83,7 +90,7 @@ POST呼び出しでこのファイルを参照して、[!DNL Target] サーバ�
 >
 >すべてのパラメーター名と値は、バッチを送信する前にURL エンコード済み（UTF-8）である必要があります。このバッチは`Content-Type: application/x-www-form-urlencoded`で送信され、本文は`batch=`で始まります。 エンコードされていない予約済み文字は、データではなくリクエスト構文として読み取られ、バッチを拒否、切り捨て、または破損する可能性があります。
 >
->`batchId`が発行されていない「予期しないエラー」の応答が表示された場合は、トラブルシューティング手順について「[ プロファイルの一括更新APIが「予期しないエラー」を返す」を参照してください](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281)。
+>`batchId`が発行されていない「予期しないエラー」の応答が表示された場合は、トラブルシューティング手順について「[&#x200B; プロファイルの一括更新APIが「予期しないエラー」を返す」を参照してください](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281)。
 
 次の文字は、通常、プロファイル値に含まれますが、`application/x-www-form-urlencoded` データでは特別な意味を持ちます。 エンコードされていないリクエストを送信すると、リクエストが失敗するか、明らかなエラーなしにデータが破損します。
 
@@ -110,7 +117,7 @@ curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTC
 
 BATCH.TXTはファイル名です。 CLIENTCODEは[!DNL Target] クライアント コードです。
 
-クライアントコードがわからない場合は、[!DNL Target] ユーザーインターフェイスで、**[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;をクリックします。 クライアントコードは、[!UICONTROL  アカウントの詳細] セクションに表示されます。
+クライアントコードがわからない場合は、[!DNL Target] ユーザーインターフェイスで、**[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;をクリックします。 クライアントコードは、[!UICONTROL &#x200B; アカウントの詳細] セクションに表示されます。
 
 ### 応答を調べる
 
