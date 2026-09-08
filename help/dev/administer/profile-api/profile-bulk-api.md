@@ -5,21 +5,14 @@ feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
 TQID: https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 64d250010899c671e73045b23b8e0c79cefaa2d6
 workflow-type: tm+mt
-source-wordcount: 1094
-ht-degree: 7%
+source-wordcount: 1311
+ht-degree: 6%
 
 ---
 
@@ -79,10 +72,31 @@ POST呼び出しでこのファイルを参照して、[!DNL Target] サーバ�
 * 最初のヘッダーは`pcId`または`thirdPartyId`のいずれかである必要があります。 [!UICONTROL Marketing Cloud訪問者ID]はサポートされていません。 [!UICONTROL pcId]は[!DNL Target]が生成した訪問者IDです。 `thirdPartyId`はクライアントアプリケーションで指定されたIDで、mbox呼び出しを通じて[!DNL Target]に`mbox3rdPartyId`として渡されます。 ここで`thirdPartyId`と呼ぶ必要があります。
 * バッチファイルで指定するパラメーターと値は、セキュリティ上の理由から、UTF-8を使用してURL エンコードする必要があります。 パラメーターと値は、HTTP リクエストを通じて処理するために他のエッジノードに転送できます。
 * パラメーターの形式は`paramName`のみにする必要があります。 パラメーターは[!DNL Target]に`profile.paramName`として表示されます。
-* [!UICONTROL Bulk Profile Update API] v2を使用している場合は、各`pcId`にすべてのパラメーター値を指定する必要はありません。 プロファイルは、[!DNL Target]に見つからない`pcId`または`mbox3rdPartyId`に対して作成されます。 v1を使用している場合、欠落しているpcIdまたはmbox3rdPartyIdのプロファイルは作成されません。 詳しくは、以下の [!DNL Bulk Profile Update API][&#128279;](#empty)の空の値の処理を参照してください。
+* [!UICONTROL Bulk Profile Update API] v2を使用している場合は、各`pcId`にすべてのパラメーター値を指定する必要はありません。 プロファイルは、[!DNL Target]に見つからない`pcId`または`mbox3rdPartyId`に対して作成されます。 v1を使用している場合、欠落しているpcIdまたはmbox3rdPartyIdのプロファイルは作成されません。 詳しくは、以下の [!DNL Bulk Profile Update API]](#empty)の[空の値の処理を参照してください。
 * バッチファイルの容量は 50 MB 未満にする必要があります。 さらに、行の合計数は500,000を超えてはなりません。 この制限により、サーバーに多すぎるリクエストが溢れるのを防ぐことができます。
 * アップロードできる属性の数に制限はありません。 ただし、顧客属性、プロファイル API、Mbox内プロファイルパラメーター、プロファイルスクリプト出力を含む外部プロファイルデータの合計サイズは、64 KBを超えてはなりません。
 * パラメーターと値は、大文字と小文字を区別します。
+
+### URL エンコーディング要件 {#url-encoding}
+
+>[!IMPORTANT]
+>
+>すべてのパラメーター名と値は、バッチを送信する前にURL エンコード済み（UTF-8）である必要があります。このバッチは`Content-Type: application/x-www-form-urlencoded`で送信され、本文は`batch=`で始まります。 エンコードされていない予約済み文字は、データではなくリクエスト構文として読み取られ、バッチを拒否、切り捨て、または破損する可能性があります。
+>
+>`batchId`が発行されていない「予期しないエラー」の応答が表示された場合は、トラブルシューティング手順について「[ プロファイルの一括更新APIが「予期しないエラー」を返す」を参照してください](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281)。
+
+次の文字は、通常、プロファイル値に含まれますが、`application/x-www-form-urlencoded` データでは特別な意味を持ちます。 エンコードされていないリクエストを送信すると、リクエストが失敗するか、明らかなエラーなしにデータが破損します。
+
+| 文字 | 次としてエンコード | エンコードされていない送信の場合 |
+|---|---|---|
+| `%` | `%25` | バッチ全体が却下されます。 応答は、`success=false`を含むHTTP 200を返し、「予期しないエラー」というメッセージが表示され、`batchId`は発行されません。 |
+| `&` | `%26` | バッチは、最初の`&`で自動的に切り捨てられます。 残りの行がドロップされ、部分的な更新または「バッチが空です」という応答が発生する可能性があります。 |
+| `+` | `%2B` | 文字は無言でスペースに変換され、保存された値が破損します。 |
+| `=` | `%3D` | 文字がフィールド境界と誤解釈される可能性があります。 |
+
+_例えば、値`50% off & more`は`50%25 off %26 more`として送信する必要があります。_
+
+文字、数字、UTF-8 アクセント文字、および文字`- . ! ~ _ * ( )`はエンコーディングを必要としません。 ただし、[!DNL Adobe]では、曖昧さを避けるために、すべての値をエンコードすることをお勧めします。
 
 ## HTTP POST リクエスト
 
@@ -96,7 +110,7 @@ curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTC
 
 BATCH.TXTはファイル名です。 CLIENTCODEは[!DNL Target] クライアント コードです。
 
-クライアントコードがわからない場合は、[!DNL Target] ユーザーインターフェイスで、**[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;をクリックします。 クライアントコードは、[!UICONTROL &#x200B; アカウントの詳細] セクションに表示されます。
+クライアントコードがわからない場合は、[!DNL Target] ユーザーインターフェイスで、**[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;をクリックします。 クライアントコードは、[!UICONTROL  アカウントの詳細] セクションに表示されます。
 
 ### 応答を調べる
 
