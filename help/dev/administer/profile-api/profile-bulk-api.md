@@ -90,7 +90,7 @@ POST呼び出しでこのファイルを参照して、[!DNL Target] サーバ�
 >
 >すべてのパラメーター名と値は、バッチを送信する前にURL エンコード済み（UTF-8）である必要があります。このバッチは`Content-Type: application/x-www-form-urlencoded`で送信され、本文は`batch=`で始まります。 エンコードされていない予約済み文字は、データではなくリクエスト構文として読み取られ、バッチを拒否、切り捨て、または破損する可能性があります。
 >
->`batchId`が発行されていない「予期しないエラー」の応答が表示された場合は、トラブルシューティング手順について「[&#x200B; プロファイルの一括更新APIが「予期しないエラー」を返す」を参照してください](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281)。
+>`batchId`が発行されていない「予期しないエラー」の応答が表示された場合は、トラブルシューティング手順について「[&#x200B; プロファイルの一括更新APIが「予期しないエラー」を返す」を参照してください](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-24281)。
 
 次の文字は、通常、プロファイル値に含まれますが、`application/x-www-form-urlencoded` データでは特別な意味を持ちます。 エンコードされていないリクエストを送信すると、リクエストが失敗するか、明らかなエラーなしにデータが破損します。
 
