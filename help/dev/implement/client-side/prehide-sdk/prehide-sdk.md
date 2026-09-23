@@ -1,16 +1,13 @@
 ---
 keywords: SDK、ちらつき、ちらつき防止、事前非表示、事前非表示、合金、at.js、実装、同意、CMP、スクリプトの配置、インライン、外部、SDKの選択を事前非表示にする
-description: SDKの事前非表示 [!DNL Adobe Target] 機能を組み込んで、ページ読み込み中にパーソナライズされていないコンテンツ（ちらつき）のフラッシュを排除する方法について説明します。 SDKは、Adobe Alloy （Web SDK）とat.jsの両方で使用できます。
+description: '[!DNL Adobe Target] Prehide SDKを統合して、ページ読み込み中にパーソナライズされていないコンテンツ（ちらつき）のフラッシュを排除する方法について説明します。 SDKは、Adobe Alloy （Web SDK）とat.jsの両方で使用できます。'
 title: SDK統合ガイドの事前非表示
 feature: Implementation
-hide: true
-source-git-commit: bb3c2906a52daecca03cf29331d9bec5e2955d2e
+source-git-commit: 35ac4480ead5069169a2c55d35b43d3c1a81d78a
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 0%
-
+source-wordcount: '1066'
+ht-degree: 1%
 ---
-
 
 # SDK統合ガイドの事前非表示
 
@@ -62,8 +59,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Prehide SDKはAlloy/at.jsの前に実行する必要があります。Alloyが最初に読み込まれた場合、ページはパーソナライズされていないコンテンツをレンダリングしてから再レンダリングします。これが、このSDKが防ぐように設計された正確なフリッカーです。
-></br>>SDKの事前非表示スクリプトタグに`async`または`defer`を追加しないでください。ブラウザーがページのレイアウトを開始する前に非表示ルールを挿入するには、同期実行が必要です。
+>Prehide SDKはAlloy/at.jsの前に実行する必要があります。 Alloyが最初に読み込まれた場合、ページはパーソナライズされていないコンテンツをレンダリングしてから再レンダリングします。 これが、このSDKが防ぐように設計された正確なフリッカーです。
+></br>
+>SDKの事前非表示スクリプトタグに`async`または`defer`を追加しないでください。 ブラウザーがページのレイアウトを開始する前に非表示ルールを挿入するには、同期実行が必要です。
 
 「SDKを事前に非表示」は、後からクリーンアップする[!DNL Adobe Target] SDKよりも前に表示する必要があります。 読み込み順序は交渉不可能です：
 
