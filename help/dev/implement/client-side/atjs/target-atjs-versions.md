@@ -59,7 +59,7 @@ ht-degree: 62%
 >
 >対応するメジャーバージョンの以前のマイナーバージョンで検出された問題のバグ修正とセキュリティパッチを取得するには、1.*x*&#x200B;または2.*x*&#x200B;のいずれかの最新バージョンにアップグレードする必要があります。
 
-[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)のタグは、at.jsをアップグレードする際に推奨される方法です。 拡張機能の開発者は、継続的に拡張機能に新しい機能を追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンにパッケージ化され、アップグレードとしてAdobe Experience Platform カタログで利用できるようになります。 詳しくは、*タグの概要* ガイドの[拡張機能のアップグレード ](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)を参照してください。
+[Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)のタグは、at.jsをアップグレードする際に推奨される方法です。 拡張機能の開発者は、継続的に拡張機能に新しい機能を追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンにパッケージ化され、アップグレードとしてAdobe Experience Platform カタログで利用できるようになります。 詳しくは、*タグの概要* ガイドの[拡張機能のアップグレード &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html)を参照してください。
 
 ## at.js バージョン バージョン 2.11.9 （2026年2月）
 
@@ -75,7 +75,7 @@ ht-degree: 62%
 
 ## at.js バージョン 2.11.6（2024年9月29日（PT））
 
-* [!UICONTROL Visual Experience Composer] （VEC）または[!UICONTROL  フォームベース Experience Composer]内のリダイレクトオファーで[!DNL Target]が正しく動作しない問題を修正しました。
+* [!UICONTROL Visual Experience Composer] （VEC）または[!UICONTROL &#x200B; フォームベース Experience Composer]内のリダイレクトオファーで[!DNL Target]が正しく動作しない問題を修正しました。
 
 ## at.js バージョン 2.11.5（2024年8月14日（PT））
 
@@ -280,7 +280,7 @@ at.js のこのリリースはメンテナンスリリースで、次の機能�
 
 * **クライアントサイド分析ログ**：クライアントサイドまたはサーバーサイドのいずれでも、顧客が[!DNL Adobe Analytics]に分析データを送信する方法を完全に制御できるようにします。
 
-  詳しくは、[ クライアントサイド  [!DNL Analytics]  ログ ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html#client-side)を参照してください。
+  詳しくは、[&#x200B; クライアントサイド  [!DNL Analytics]  ログ &#x200B;](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html#client-side)を参照してください。
 
 * **通知の送信**：`applyOffer()` または `applyOffers()` を使用する代わりにコードでエクスペリエンスがレンダリングされる場合、開発者は通知を送信できます。
 
