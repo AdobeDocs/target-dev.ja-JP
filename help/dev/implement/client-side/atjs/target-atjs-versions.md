@@ -1,37 +1,50 @@
 ---
 keywords: at.js リリース、at.js バージョン、リリースノート
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの各バージョンの変更点の詳細を表示します。'
+description: at.js JavaScript ライブラリ [!DNL Adobe Target]の各バージョンの変更点の詳細を表示します。
 title: at.jsの各バージョンに含まれるもの
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
 TQID: https://experienceleague.adobe.com/95lXe4YAZ7mD12XBtKPB3ddFtGCJYdvlXR632qosuG4
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+    internal-label: Analytics integration
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 235baadf4059d2c363368408012630d6619aef99
+    internal-label: Privacy
+source-git-commit: 1e9b96361fd11095248b8fcae6f7a185f74a39c8
 workflow-type: tm+mt
-source-wordcount: 5174
+source-wordcount: '5217'
 ht-degree: 62%
-
 ---
-
 # at.js のバージョンの詳細
 
 [!DNL Adobe Target] at. js JavaScript ライブラリの各バージョンの変更点についての詳細です。
@@ -47,6 +60,10 @@ ht-degree: 62%
 >対応するメジャーバージョンの以前のマイナーバージョンで検出された問題のバグ修正とセキュリティパッチを取得するには、1.*x*&#x200B;または2.*x*&#x200B;のいずれかの最新バージョンにアップグレードする必要があります。
 
 [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)のタグは、at.jsをアップグレードする際に推奨される方法です。 拡張機能の開発者は、継続的に拡張機能に新しい機能を追加し、頻繁にバグを修正します。 これらのアップデートは、拡張機能の新しいバージョンにパッケージ化され、アップグレードとしてAdobe Experience Platform カタログで利用できるようになります。 詳しくは、*タグの概要* ガイドの[拡張機能のアップグレード &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html?lang=ja)を参照してください。
+
+## at.js バージョン バージョン 2.11.9 （2026年2月）
+
+* At.jsのapplyOffers関数がLightning Web コンポーネント（LWC）を正しく検出および変更しなかった問題を解決しました。 At.js ライブラリが更新され、LWC コンポーネントが検出され、必要に応じて変更が適用されます。 （TGT-54478）
 
 ## at.js バージョン 2.11.8（2025年3月31日（PT））
 
