@@ -1,30 +1,39 @@
 ---
 keywords: クライアント ケア；cname；証明書プログラム；正規名；cookie；証明書；amc;adobe管理証明書；digicert；ドメイン制御検証；dcv
-description: 広告ブロックの問題を処理するために、 [!DNL Adobe]  クライアントケアと連携して、 [!DNL Adobe Target] でCNAME （正規名）サポートを実装します。
+description: '[!DNL Adobe] クライアントケアと連携して、[!DNL Adobe Target]でCNAME （正規名）サポートを実装し、広告ブロックの問題を処理します。'
 title: TargetでCNAMEを使用するにはどうすればよいですか？
 feature: Privacy & Security
 role: Developer
 exl-id: bf533771-6d46-48ba-964c-3ad9ce9f7352
-TQID: https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40
+TQID: 'https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 78ca638b097a9d3f3028353c80f4929e036e2f49
 workflow-type: tm+mt
-source-wordcount: 1255
+source-wordcount: '1326'
 ht-degree: 1%
-
 ---
-
 # CNAMEと[!DNL Target]
 
 [!DNL Adobe Target]でCNAME （正規の名前）のサポートを実装するために[!DNL Adobe] Client Careで作業する手順を説明します。 CNAMEを使用して、広告ブロックの問題またはITP関連（インテリジェント トラッキング防止） Cookie ポリシーを処理します。 CNAMEを使用すると、呼び出しは、[!DNL Adobe]が所有するドメインではなく、顧客が所有するドメインに対して行われます。
@@ -32,18 +41,18 @@ ht-degree: 1%
 ## [!DNL Target]でのCNAME サポートのリクエスト
 
 1. SSL証明書に必要なホスト名のリストを決定します（以下のFAQを参照）。
-1. [このフォーム &#x200B;](/help/dev/implement/assets/FPC_Request_Form.xlsx)に入力し、CNAME サポートをリクエストする [!DNL Adobe]  クライアントケアチケットを[開いたときにフォームを含めます](https://experienceleague.adobe.com/ja/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
+1. [このフォーム ](/help/dev/implement/assets/FPC_Request_Form.xlsx)に入力し、CNAME サポートをリクエストする [!DNL Adobe]  クライアントケアチケットを[開いたときにフォームを含めます](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] クライアント コード：
    * SSL証明書ホスト名（例：`target.example.com target.example.org`）:
    * SSL証明書の購入者（[!DNL Adobe]を強くお勧めします。FAQを参照）: Adobe/お客様
    * お客様が「自分の証明書を持参」（BYOC）とも呼ばれる証明書を購入する場合は、以下の追加情報を入力します。
 
-      * 証明書の整理（例：会社の例）:
-      * 証明書の組織単位（オプション、例：マーケティング）:
-      * 証明書国（例：米国）:
-      * 証明書の状態/地域（例：カリフォルニア）:
-      * 証明書都市（例：サンノゼ）:
+     * 証明書の整理（例：会社の例）:
+     * 証明書の組織単位（オプション、例：マーケティング）:
+     * 証明書国（例：米国）:
+     * 証明書の状態/地域（例：カリフォルニア）:
+     * 証明書都市（例：サンノゼ）:
 
 1. ホスト名リクエストごとに、Adobeが実装を作成し、作成するCNAME レコード名を返します。このレコードには、`tt.omtrdc.net`でサフィックスされたランダムな文字列が含まれます
 
@@ -333,14 +342,14 @@ To check DNS propagation around the world, see whatsmydns.net:
 
 >[!NOTE]
 >
->この検証コマンドがDNS検証で失敗したが、必要なDNS変更を既に行っている場合は、DNS更新が完全に反映されるのを待つ必要がある場合があります。 DNS レコードには、これらのレコードのDNS応答のキャッシュ有効期限を決定する[TTL （有効期間） &#x200B;](https://en.wikipedia.org/wiki/Time_to_live#DNS_records)が関連付けられています。 その結果、少なくともTTLに対応できる限り待つ必要があるかもしれません。 `dig target.example.com` コマンドまたは[G Suite Toolbox](https://toolbox.googleapps.com/apps/dig/#CNAME)を使用して、特定のTTLを検索できます。 世界中のDNSの伝播を確認するには、[whatsmydns.net](https://whatsmydns.net/#CNAME)を参照してください。
+>この検証コマンドがDNS検証で失敗したが、必要なDNS変更を既に行っている場合は、DNS更新が完全に反映されるのを待つ必要がある場合があります。 DNS レコードには、これらのレコードのDNS応答のキャッシュ有効期限を決定する[TTL （有効期間） ](https://en.wikipedia.org/wiki/Time_to_live#DNS_records)が関連付けられています。 その結果、少なくともTTLに対応できる限り待つ必要があるかもしれません。 `dig target.example.com` コマンドまたは[G Suite Toolbox](https://toolbox.googleapps.com/apps/dig/#CNAME)を使用して、特定のTTLを検索できます。 世界中のDNSの伝播を確認するには、[whatsmydns.net](https://whatsmydns.net/#CNAME)を参照してください。
 
 ### CNAME でのオプトアウトリンクの使用方法
 
 CNAMEを使用している場合、オプトアウトリンクには「client=`clientcode`」パラメーターを含める必要があります。例：
 `https://my.cname.domain/optout?client=clientcode`.
 
-`clientcode`をクライアントコードに置き換え、[&#x200B; オプトアウト URL](/help/dev/before-implement/privacy/privacy.md)にリンクするテキストまたは画像を追加します。
+`clientcode`をクライアントコードに置き換え、[ オプトアウト URL](/help/dev/before-implement/privacy/privacy.md)にリンクするテキストまたは画像を追加します。
 
 ## 既知の制限事項
 
