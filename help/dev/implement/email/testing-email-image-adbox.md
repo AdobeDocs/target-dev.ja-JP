@@ -1,23 +1,30 @@
 ---
 keywords: 電子メール、アドボックス、電子メール画像アドボックス
-description: ' [!DNL Adobe Target] を使用してメール内の画像を動的にテストし、メールを開いたときにその画像を即座に変更する方法について説明します。'
+description: '[!DNL Adobe Target]を使用してメール内の画像を動的にテストし、誰かがメールを開いたときにそれらの画像を即座に変更する方法を説明します。'
 title: メール画像のAdboxをテストするにはどうすればよいですか？
 feature: Implement Email
 exl-id: 4512741a-567f-41bb-9721-3e1c4f5302e1
-TQID: https://experienceleague.adobe.com/gmeO3ZSLpU6t5daKMoBXlaxyPd-Xu-fNABQU-Y5k4d0
+TQID: 'https://experienceleague.adobe.com/gmeO3ZSLpU6t5daKMoBXlaxyPd-Xu-fNABQU-Y5k4d0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+    internal-label: Implement email
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Optimization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 420
+source-wordcount: '421'
 ht-degree: 79%
-
 ---
-
 # 電子メール画像 adbox のテスト
 
 電子メール内の画像を動的にテストし、電子メールが開かれたときにそれらの画像をその場で変更することもできます。

@@ -1,27 +1,36 @@
 ---
 title: '[!DNL Adobe Experience Platform Web SDK]のシングルページアプリケーションの実装'
-description: ' [!DNL Target]を使用して [!DNL Adobe Experience Platform Web SDK]のシングルページアプリケーション （SPA）実装を作成する方法について説明します。'
+description: '[!DNL Target]を使用して[!DNL Adobe Experience Platform Web SDK]のシングルページアプリケーション （SPA）実装を作成する方法について説明します。'
 keywords: target;adobe target;xdm ビュー；ビュー；シングルページアプリケーション；SPA;SPA;SPA ライフサイクル；クライアントサイド；AB テスト；AB；エクスペリエンスターゲティング；XT;VEC
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
-TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
+TQID: 'https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1836
+source-wordcount: '1837'
 ht-degree: 2%
-
 ---
-
 # シングルページアプリケーションの導入
 
 [!DNL Adobe Experience Platform Web SDK]には、シングルページアプリケーション （SPA）などの次世代のクライアントサイド技術でパーソナライゼーションを実行するための豊富な機能が用意されています。

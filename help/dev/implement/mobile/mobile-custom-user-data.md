@@ -1,16 +1,26 @@
 ---
 keywords: モバイルアプリ, モバイルアプリ送信データ, target モバイルアプリ, モバイルのカスタムユーザーデータ, モバイルアプリのカスタムデータ
-description: 場所またはユーザーに関する追加情報を名前と値のペアとして [!DNL Adobe Target] に送信して、カスタムオーディエンスを作成する方法を説明します。
+description: 場所またはユーザーに関する追加情報を名前と値のペアとして[!DNL Adobe Target]に送信して、カスタムオーディエンスを作成する方法を説明します。
 title: IOS アプリでカスタムユーザーデータを送信するにはどうすればよいですか？
 feature: Implement Mobile
 exl-id: 9cf8e8fd-1898-43b1-b339-d7a21cb35d57
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '418'
 ht-degree: 55%
-
 ---
-
 # iOS - カスタムユーザーデータの送信
 
 場所またはユーザーに関する追加情報を名前と値のペアとして[!DNL Target]に送信できます。

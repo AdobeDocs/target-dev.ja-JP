@@ -1,20 +1,23 @@
 ---
-title: Node.js SDKを使用する場合は、 [!DNL Adobe Target] で[!UICONTROL getOffers （） &#x200B;]を使用します
-description: '[!UICONTROL getOffers （） &#x200B;]を使用して決定を実行し、 [!DNL Adobe Target]からエクスペリエンスを取得する方法を説明します。'
+title: Node.js SDKを使用する場合は、[!DNL Adobe Target]の[!UICONTROL getOffers （） &#x200B;]を使用してください
+description: '[!UICONTROL getOffers （） &#x200B;]を使用して決定を実行し、[!DNL Adobe Target]からエクスペリエンスを取得する方法を説明します。'
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
-TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
+TQID: 'https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 342
+source-wordcount: '343'
 ht-degree: 20%
-
 ---
-
 # [!UICONTROL &#x200B; オファーを取得] （Node.js）
 
 ## 説明

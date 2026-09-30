@@ -1,29 +1,36 @@
 ---
 keywords: 実装，実装，実装，adobe launch, launch, race, redirect, experience platform launch, platform launch, tags, adobe platform, implement2
-description: Targetの実装方法として推奨される [!DNL Adobe Experience Platform]を使用して、 [!DNL Adobe Target] at.js ライブラリを実装する方法について説明します。
-title: ' [!DNL Adobe Experience Platform] を使用して  [!DNL Target]  を実装する方法'
+description: Targetの実装方法として推奨される[!DNL Adobe Experience Platform]を使用して、[!DNL Adobe Target] at.js ライブラリを実装する方法について説明します。
+title: '[!DNL Adobe Experience Platform]を使用して[!DNL Target]を実装するにはどうすればよいですか？'
 feature: Implement Server-side
 exl-id: 0a325871-194a-479c-a3bf-294e3dde3e9a
-TQID: https://experienceleague.adobe.com/5dXJlXYYvlu5sskrNED2j55SNmeggtWTb1jLgXRXAEo
+TQID: 'https://experienceleague.adobe.com/5dXJlXYYvlu5sskrNED2j55SNmeggtWTb1jLgXRXAEo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
+    internal-label: Data collection
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 446
-ht-degree: 61%
-
+source-wordcount: '448'
+ht-degree: 60%
 ---
-
 # [!DNL Target] を使用した [!DNL Adobe Experience Platform] の実装
 
 [!DNL Adobe Experience Platform] のタグは、[!DNL Adobe] の次世代タグ管理機能です。 タグは、適切な顧客体験の実現に必要な分析、マーケティングおよび広告タグをデプロイおよび管理するためのシンプルな手段を提供します。

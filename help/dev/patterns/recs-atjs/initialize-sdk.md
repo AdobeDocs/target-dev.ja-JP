@@ -1,33 +1,46 @@
 ---
 title: SDKの初期化
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリを読み込むのに必要なすべての手順が、正しい順序で実行されていることを確認します。'
+description: '[!DNL Adobe Target] at.js JavaScript ライブラリを読み込むのに必要なすべての手順が、正しい順序で実行されていることを確認します。'
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 250a8382-1fdd-4a70-b712-a25af5adad71
-TQID: https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo
+TQID: 'https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1879
+source-wordcount: '1880'
 ht-degree: 5%
-
 ---
-
 # SDKの初期化
 
 *SDKの初期化*&#x200B;図の手順に従って、[!DNL Adobe Target] at.js JavaScript ライブラリの読み込みに必要なすべてのタスクが正しい順序で実行されるようにします。
@@ -202,12 +215,12 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 * データ レイヤーは、[!DNL Target]に送信する必要があるすべてのデータで準備できなければなりません。
 * 推奨事項：プロファイルの強化。
-   * `entity.id`を渡すと、最近閲覧した商品に基づいて、最近閲覧した基準と項目のデータが取得されます。
-   * `entity.id`を渡して、お気に入りのカテゴリに基づく人気条件のデータを取得します。
-   * カスタム基準が基準に基づいている場合、または任意の基準での包含ルールのフィルタリングで使用される場合は、プロファイル属性を渡します。
+  * `entity.id`を渡すと、最近閲覧した商品に基づいて、最近閲覧した基準と項目のデータが取得されます。
+  * `entity.id`を渡して、お気に入りのカテゴリに基づく人気条件のデータを取得します。
+  * カスタム基準が基準に基づいている場合、または任意の基準での包含ルールのフィルタリングで使用される場合は、プロファイル属性を渡します。
 * 推奨事項：商品データを取り込みます。
-   * その他のエンティティ パラメーター（予約済みおよびカスタム）を渡して、製品カタログを[!DNL Recommendations]に取り込むか更新できます。
-   * 製品カタログは、[!DNL Target] UIまたはAPIを使用してエンティティフィードを使用して更新することもできます。
+  * その他のエンティティ パラメーター（予約済みおよびカスタム）を渡して、製品カタログを[!DNL Recommendations]に取り込むか更新できます。
+  * 製品カタログは、[!DNL Target] UIまたはAPIを使用してエンティティフィードを使用して更新することもできます。
 
 **データを[!DNL Target]**&#x200B;にマッピング
 

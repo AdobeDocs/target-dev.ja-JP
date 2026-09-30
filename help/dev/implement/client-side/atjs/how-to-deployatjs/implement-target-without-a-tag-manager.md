@@ -1,33 +1,44 @@
 ---
 keywords: targetの実装、実装の実装、at.jsの実装、タグマネージャー、オンデバイス判定、オンデバイス判定
-description: 設定の指定方法（アカウントの詳細、実装方法など）について説明します。 タグマネージャーを使用せずに [!DNL Adobe Target] at.js ライブラリを実装する
-title: タグマネージャーなしで [!DNL Target] 実装できますか？
+description: 設定の指定方法（アカウントの詳細、実装方法など）について説明します。 タグマネージャーを使用せずに[!DNL Adobe Target] at.js ライブラリを実装するには、次の手順を実行します。
+title: タグマネージャーなしで[!DNL Target]を実装できますか？
 feature: Implement Server-side
 exl-id: f675ae21-105d-4aa3-9926-59291f1136b5
-TQID: https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk
+TQID: 'https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1785
+source-wordcount: '1787'
 ht-degree: 32%
-
 ---
-
 # タグマネージャーなしで[!DNL Target]を実装する
 
 タグマネージャーまたは[!DNL Adobe Experience Platform]のタグを使用せずに[!DNL Adobe Target]を実装する方法について説明します。

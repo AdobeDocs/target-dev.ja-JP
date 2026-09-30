@@ -1,25 +1,32 @@
 ---
-title: ' [!DNL Adobe Target] APIの認証を設定する方法'
-description: ' [!DNL Adobe Target] APIを正常に操作するために必要な認証トークンを生成するにはどうすればよいですか？'
+title: '[!DNL Adobe Target] APIの認証を設定する方法'
+description: '[!DNL Adobe Target]個のAPIを正常に操作するために必要な認証トークンを生成するにはどうすればよいですか？'
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-TQID: https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw
+TQID: 'https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: addda914fcf7ba1616ae9a9d49118e737b3ad923
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1927
+source-wordcount: '1929'
 ht-degree: 1%
-
 ---
-
 # [!DNL Adobe Target] APIの認証を設定
 
 [!DNL Recommendations Admin] APIを含む[!DNL Adobe Target]管理APIは、認証によって保護され、承認済みのユーザーのみが[!DNL Adobe Target]へのアクセスに使用できるようになります。 [Adobe Developer Console](https://developer.adobe.com/console/home)を使用して、[!DNL Adobe Target]を含むすべての[!DNL Adobe Experience Cloud solutions]の認証を管理します。

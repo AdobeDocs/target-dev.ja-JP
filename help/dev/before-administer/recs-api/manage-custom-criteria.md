@@ -3,23 +3,34 @@ title: カスタム条件の管理方法
 description: Adobe Target APIを使用して、Adobe Target Recommendationsの条件を管理、作成、一覧表示、編集、取得、および削除するために必要な手順。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
+TQID: 'https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 890
+source-wordcount: '939'
 ht-degree: 0%
-
 ---
-
 # カスタム条件を管理
 
 Recommendationsが提供するアルゴリズムが、プロモーションする特定の項目を表示できない場合があります。 このような場合、カスタム基準を使用すると、特定の主要項目またはカテゴリに対して特定の推奨項目のセットを配信できます。
@@ -66,7 +77,7 @@ Recommendationsが提供するアルゴリズムが、プロモーションす�
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
-1. 以前と同様に`TENANT_ID`と`API_KEY`を確認し、リクエストを送信します。応答では、カスタム条件IDと、前述のエラーメッセージに関する詳細を確認します。
+1. 以前と同様に`TENANT_ID`と`API_KEY`を確認し、リクエストを送信します。 応答では、カスタム条件IDと、前述のエラーメッセージに関する詳細を確認します。
    ![ListCustomCriteria](assets/ListCustomCriteria.png)
 
 この場合、サーバー情報が正しくないため、エラーが発生しました。つまり、Targetはカスタム条件定義を含むCSV ファイルにアクセスできません。 カスタム基準を編集して、これを修正します。
@@ -83,7 +94,7 @@ Recommendationsが提供するアルゴリズムが、プロモーションす�
 1. 編集する（単一）カスタム基準の基準IDを指定します。
    ![EditCustomCriteria2](assets/EditCustomCriteria2.png)
 
-1. Bodyで、更新されたJSONに正しいサーバー情報を入力します。（この手順では、アクセスできるサーバーへのFTP アクセスを指定します）。
+1. Bodyで、更新されたJSONに正しいサーバー情報を入力します。 （この手順では、アクセスできるサーバーへのFTP アクセスを指定します）。
    ![EditCustomCriteria3](assets/EditCustomCriteria3.png)
 
 1. リクエストを送信し、応答をメモします。
@@ -97,9 +108,9 @@ Recommendationsが提供するアルゴリズムが、プロモーションす�
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 詳細を取得するカスタム条件の条件IDを指定します。リクエストを送信し、応答を確認します。
+1. 詳細を取得するカスタム条件の条件IDを指定します。 リクエストを送信し、応答を確認します。
    ![GetCustomCriteria.png](assets/GetCustomCriteria.png)
-1. 成功の検証：（このケースでは、これ以上FTP エラーがないことを確認します）。
+1. 成功の検証： （このケースでは、これ以上FTP エラーがないことを確認します）。
    ![GetCustomCriteria1.png](assets/GetCustomCriteria1.png)
 1. （オプション）更新がUIに正確に反映されていることを確認します。
    ![GetCustomCriteria2.png](assets/GetCustomCriteria2.png)
@@ -110,12 +121,12 @@ Recommendationsが提供するアルゴリズムが、プロモーションす�
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. 削除する（単一）カスタム条件の条件IDを指定します。**[!UICONTROL 送信]**&#x200B;をクリックします。
+1. 削除する（単一）カスタム条件の条件IDを指定します。 「**[!UICONTROL 送信]**」をクリックします。
    ![DeleteCustomCriteria1](assets/DeleteCustomCriteria1.png)
 
 1. カスタム条件を取得を使用して、条件が削除されたことを確認します。
    ![DeleteCustomCriteria2](assets/DeleteCustomCriteria2.png)
-この場合、404 エラーは、削除された条件が見つからないことを示します。
+   この場合、404 エラーは、削除された条件が見つからないことを示します。
 
 >[!NOTE]
 >

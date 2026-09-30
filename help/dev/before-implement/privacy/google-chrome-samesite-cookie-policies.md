@@ -1,30 +1,40 @@
 ---
 keywords: google、samesite、cookie、chrome 80、ietf
-description: Google Chrome バージョン 80で導入されたSameSite IETF標準を [!DNL Adobe Target] が処理する方法と、これらのポリシーに準拠するために必要な操作について説明します。
-title: ' [!DNL Target]  では、Googleの SameSite Cookie ポリシーをどのように取り扱いますか？'
+description: '[!DNL Adobe Target]が、Google Chrome バージョン 80で導入されたSameSite IETF標準をどのように処理するのか、およびこれらのポリシーに準拠するために必要な操作について説明します。'
+title: '[!DNL Target]は、GoogleのSamesite Cookie ポリシーをどのように処理しますか？'
 feature: Privacy & Security
 exl-id: 58a83def-9625-4d44-914f-203509c6c434
-TQID: https://experienceleague.adobe.com/vidrxxFMqtYLAHQEiqbpEpgcab6OBie-oEhKoWljHwo
+TQID: 'https://experienceleague.adobe.com/vidrxxFMqtYLAHQEiqbpEpgcab6OBie-oEhKoWljHwo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 2019
+source-wordcount: '2021'
 ht-degree: 63%
-
 ---
-
 # Google Chrome SameSite cookie ポリシー
 
 Googleは、2020年初頭にリリースされる予定の Chrome 80 以降のユーザーに対し、デフォルトで新しい Cookie ポリシーの適用を開始します。 この記事では、新しいSameSite Cookie ポリシーについて知っておくべきすべての情報、これらのポリシーを[!DNL Adobe Target]がどのようにサポートしているか、および[!DNL Target]を使用してGoogle Chromeの新しいSameSite Cookie ポリシーに準拠する方法について説明します。

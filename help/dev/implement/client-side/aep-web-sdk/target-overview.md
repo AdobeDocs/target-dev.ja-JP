@@ -1,15 +1,25 @@
 ---
-title: ' [!DNL Adobe Target] と [!DNL Web SDK] を使用してパーソナライゼーションを行います。'
-description: ' [!DNL Adobe Target]を使用して [!DNL Experience Platform Web SDK] でパーソナライズされたコンテンツをレンダリングする方法について説明します。'
+title: '[!DNL Adobe Target]を[!DNL Web SDK]と共にパーソナライゼーションに使用します。'
+description: '[!DNL Adobe Target]を使用して[!DNL Experience Platform Web SDK]でパーソナライズされたコンテンツをレンダリングする方法について説明します。'
 feature: AEP Web SDK
 exl-id: 31c00779-20a8-4d18-9ee4-0430e5e9a84c
-source-git-commit: 925a150c06057f5830a1370eee65b5984f81a72d
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1563'
 ht-degree: 6%
-
 ---
-
 # パーソナライゼーションに[!DNL Adobe Target]と[!DNL Web SDK]を使用
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK]は、[!DNL Adobe Target]で管理されているパーソナライズされたエクスペリエンスをweb チャネルに配信してレンダリングできます。 [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) （VEC）と呼ばれるWYSIWYG エディター、または非ビジュアル インターフェイス [&#x200B; フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja)を使用して、アクティビティとパーソナライズされたエクスペリエンスを作成、アクティブ化、配信できます。

@@ -3,25 +3,32 @@ title: オンデバイス判定でサポートされている機能は何です�
 description: ライブサーバーコールを使用して、マシンラーニングを通じて最も関連性が高く、魅力的なパーソナライズされたコンテンツを配信する方法を説明します。
 feature: APIs/SDKs
 exl-id: 15d9870f-6c58-4da0-bfe5-ef23daf7d273
-TQID: https://experienceleague.adobe.com/Fgwu8Nh90i-tS1aCUVmQReGz6DYBP2GHdcNM7z17BSk
+TQID: 'https://experienceleague.adobe.com/Fgwu8Nh90i-tS1aCUVmQReGz6DYBP2GHdcNM7z17BSk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Machine learning
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 731
+source-wordcount: '731'
 ht-degree: 9%
-
 ---
-
 # サポートされる機能の概要
 
 [!DNL Adobe Target]のサーバーサイド SDKにより、開発者はパフォーマンスと意思決定のためのデータの鮮度のどちらかを柔軟に選択できます。 言い換えれば、マシンラーニングを通じて最も関連性が高く、魅力的なパーソナライズされたコンテンツを配信することが最も重要な場合は、ライブサーバーコールを送信する必要があります。 しかし、パフォーマンスがより重要な場合は、デバイス上で決定する必要があります。 [!UICONTROL &#x200B; オンデバイス決定]が機能するには、サポートされている機能の次の一覧を参照してください。

@@ -1,21 +1,27 @@
 ---
 keywords: qa、プレビュー、プレビューリンク、モバイル、モバイルプレビュー
 description: モバイルプレビューリンクを使用して、モバイルアプリのアクティビティのエンドツーエンドのQAを実行します。
-title: ' [!DNL Adobe Target] Mobileでモバイルプレビューリンクを使用するにはどうすればよいですか？'
+title: '[!DNL Adobe Target] モバイルでモバイルプレビューリンクを使用するにはどうすればよいですか？'
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-TQID: https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk
+TQID: 'https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 578
+source-wordcount: '579'
 ht-degree: 24%
-
 ---
-
 # [!DNL Target] モバイルプレビュー
 
 モバイルプレビューリンクを使用して、モバイルアプリのアクティビティに関する簡単なエンドツーエンドのQAを実行し、特別なテストデバイスを使用せずに、デバイスを使用してさまざまなエクスペリエンスに登録できます。
@@ -80,7 +86,7 @@ ht-degree: 24%
 1. 表示するエクスペリエンスの組み合わせを選択し、「**[!UICONTROL エクスペリエンスを開始]**」をクリックします。
 
    |![&#x200B; モバイルプレビュー1](assets/mobile-preview-experience-selection-1.png)|![&#x200B; モバイルプレビュー2](assets/mobile-preview-experience-result-1-france.png)|![&#x200B; モバイルプレビュー3](assets/mobile-preview-experience-result-1-shipfree.png)|
-|![&#x200B; モバイルプレビュー4](assets/mobile-preview-experience-selection-2.png)|![&#x200B; モバイルプレビュー5](assets/mobile-preview-experience-result-2-aus.png)|![&#x200B; モバイルプレビュー6](assets/mobile-preview-experience-result-2-10off.png)|
+   |![&#x200B; モバイルプレビュー4](assets/mobile-preview-experience-selection-2.png)|![&#x200B; モバイルプレビュー5](assets/mobile-preview-experience-result-2-aus.png)|![&#x200B; モバイルプレビュー6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## 制限事項
 
