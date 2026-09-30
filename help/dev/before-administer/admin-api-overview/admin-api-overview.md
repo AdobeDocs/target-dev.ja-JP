@@ -1,34 +1,41 @@
 ---
 title: Adobe Target Admin APIの概要
-description: ' [!DNL Adobe Target Admin API]の概要'
+description: '[!DNL Adobe Target Admin API]の概要'
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
-TQID: https://experienceleague.adobe.com/pJIaDbvs5sAFD8KPsnaNAMQAoq-lowmLs-B0zRAGzDY
+TQID: 'https://experienceleague.adobe.com/pJIaDbvs5sAFD8KPsnaNAMQAoq-lowmLs-B0zRAGzDY'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1400
-ht-degree: 2%
-
+source-wordcount: '1400'
+ht-degree: 3%
 ---
-
 # Target Admin APIの概要
 
 この記事では、[!DNL Adobe Target Admin API]sを理解して使用するために必要な背景情報の概要について説明します。 次のコンテンツは、[!DNL Adobe Target Admin API]sに対して[認証](../configure-authentication.md)を設定する方法を理解していることを前提としています。
 
 >[!NOTE]
 >
->UIを使用して[!DNL Target]を管理する場合は、*Adobe Target Business Practitioner Guide*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=ja)の管理セクションを参照してください。
+>UIを使用して[!DNL Target]を管理する場合は、*Adobe Target Business Practitioner Guide*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)の[管理セクションを参照してください。
 >
 >Admin APIとProfile APIは、多くの場合、まとめて参照されますが（「Admin and Profile API」）、個別に参照することもできます（「Admin API」と「Profile API」）。 Recommendations APIは、[!DNL Target]管理APIの特定の実装です。
 
@@ -68,7 +75,7 @@ ht-degree: 2%
 
 Admin Postman Collection
 
-Postmanは、API呼び出しを簡単に実行できるアプリケーションです。 この[Target管理API Postman コレクション &#x200B;](https://developers.adobetarget.com/api/#admin-postman-collection)には、アクティビティ、オーディエンス、オファー、レポート、Mbox、および環境を使用して認証を必要とするすべてのTarget管理API呼び出しが含まれています
+Postmanは、API呼び出しを簡単に実行できるアプリケーションです。 この[Target管理API Postman コレクション ](https://developers.adobetarget.com/api/#admin-postman-collection)には、アクティビティ、オーディエンス、オファー、レポート、Mbox、および環境を使用して認証を必要とするすべてのTarget管理API呼び出しが含まれています
 
 ## 応答コード
 
@@ -77,7 +84,7 @@ Target Admin APIの一般的な応答コードを次に示します。
 | ステータス | 意味 | 説明 |
 | --- | --- | --- |
 | 200 | [OK](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | OK |
-| 400 | [不正なリクエスト &#x200B;](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | リクエストが正しくありません。 おそらく、リクエストで提供されたデータが無効です。 |
+| 400 | [不正なリクエスト ](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | リクエストが正しくありません。 おそらく、リクエストで提供されたデータが無効です。 |
 | 401 | [未承認](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | ユーザーはこの操作を実行できません。 |
 | 403 | [禁止](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | このリソースへのアクセスは禁止されています。 |
 | 404 | [見つかりません](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | 参照されているリソースが見つかりませんでした。 |
@@ -86,11 +93,11 @@ Target Admin APIの一般的な応答コードを次に示します。
 
 アクティビティを使用すると、ユーザーのコンテンツをテストまたはパーソナライズできます。 アクティビティは、次のいずれかのタイプになります。
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja)
-* [エクスペリエンスのターゲット設定（XT）](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=ja)
-* [レコメンデーション](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=ja)
-* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja)
-* [多変量分析テスト（MVT）](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=ja)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [エクスペリエンスのターゲット設定（XT）](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
+* [レコメンデーション](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
+* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [多変量分析テスト（MVT）](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## 更新のバッチ
 

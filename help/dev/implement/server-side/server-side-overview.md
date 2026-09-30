@@ -1,32 +1,42 @@
 ---
 keywords: サーバーサイド、サーバーサイド、api、sdk、node.js、nodejs、node js、recommendations api、api、api、server side1
-description: ' [!DNL Adobe Target]  サーバーサイド配信API、SDK、および [!DNL Target Recommendations] APIについて説明します。'
-title: ' [!DNL Target]  サーバーサイド配信APIとSDKについて学ぶにはどうすればよいですか？'
+description: '[!DNL Adobe Target] サーバーサイド配信API、SDK、および[!DNL Target Recommendations] APIについて説明します。'
+title: '[!DNL Target]のサーバーサイド配信APIとSDKについては、どこで確認できますか？'
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-TQID: https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc
+TQID: 'https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88c
+    internal-label: Delivery API
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7a393cc6a3f30a276a256cdabb5b42fe08f3c505
+    internal-label: Machine learning
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 820
+source-wordcount: '823'
 ht-degree: 9%
-
 ---
-
 # サーバーサイド：[!DNL Target]を実装
 
 [!DNL Adobe Target]のサーバーサイド配信API、SDK、および[!DNL Target Recommendations]個のAPIに関する情報。
@@ -35,7 +45,7 @@ ht-degree: 9%
 >
 >実装でat.jsと[!DNL AppMeasurement]をクライアントサイドで使用する場合は、以下で説明する[!UICONTROL Target Delivery API]とサーバーサイド SDKを使用する必要があります。
 >
->実装で[!UICONTROL Adobe Experience Platform Web SDK]を使用している場合は、[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/ja/docs/experience-platform/edge-network-server-api/overview){target=_blank}を使用する必要があります。
+>実装で[!UICONTROL Adobe Experience Platform Web SDK]を使用している場合は、[[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}を使用する必要があります。
 
 以下の処理は、[!DNL Target] のサーバー側実装で発生します。
 
@@ -54,7 +64,7 @@ ht-degree: 9%
 
 ## Server Side Delivery API
 
-リンク：[&#x200B; サーバーサイド配信API](/help/dev/implement/delivery-api/overview.md)
+リンク：[ サーバーサイド配信API](/help/dev/implement/delivery-api/overview.md)
 
 `/rest/v1/delivery`
 
@@ -82,9 +92,9 @@ ht-degree: 9%
 * ユーザーがどのチャネルやデバイスとエンゲージしたかに関係なく、**機械学習（ML）を活用したパーソナライズされたエクスペリエンス**&#x200B;をユーザーに提供します。
 * **サーバーサイドから** Adobe Analytics **、** Adobe Audience Manager **、** Experience Cloud ID Service **などのAdobe Experience Cloud**&#x200B;製品とシームレスに連携できます。
 
-[&#x200B; デバイス上の決定](sdk-guides/on-device-decisioning/overview.md)を介してシンプルな機能フラグ付けユースケースを実行する方法については、[はじめに](sdk-guides/getting-started/getting-started.md) ページを参照してください。
+[ デバイス上の決定](sdk-guides/on-device-decisioning/overview.md)を介してシンプルな機能フラグ付けユースケースを実行する方法については、[はじめに](sdk-guides/getting-started/getting-started.md) ページを参照してください。
 
-[&#x200B; サンプルアプリ &#x200B;](sdk-guides/sample-apps/sample-apps.md)をチェックして、楽しく遊びましょう。
+[ サンプルアプリ ](sdk-guides/sample-apps/sample-apps.md)をチェックして、楽しく遊びましょう。
 
 ## [!DNL Target Recommendations] API
 
@@ -102,9 +112,9 @@ SDK以外のEdge API呼び出しの場合は、次の要件を確認してくだ
 * プレースホルダーやブラウザー以外の値（例：`MyApp/1.0`）は使用しないでください。このような値はボットの分類になる可能性があります。
 * パブリック Edge API呼び出しには、SDK名またはSDK バージョンは必要ありません。 このシナリオでは、有効な`User-Agent` HTTP ヘッダーが必須の要素です。
 
-[!DNL Target]がリクエストをボットトラフィックとして分類すると、[!UICONTROL Recommendations]や[!UICONTROL 自動ターゲット &#x200B;]などのアクティビティのプロファイル検索、セグメント評価、パーソナライズされたコンテンツが抑制されるため、パーソナライゼーションが失敗したり、断続的に見えたりする可能性があります。
+[!DNL Target]がリクエストをボットトラフィックとして分類すると、[!UICONTROL Recommendations]や[!UICONTROL 自動ターゲット ]などのアクティビティのプロファイル検索、セグメント評価、パーソナライズされたコンテンツが抑制されるため、パーソナライゼーションが失敗したり、断続的に見えたりする可能性があります。
 
-SDKの導入について詳しくは、[[!DNL Adobe Experience Platform Web SDK] 概要](https://experienceleague.adobe.com/ja/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}を参照してください。
+SDKの導入について詳しくは、[[!DNL Adobe Experience Platform Web SDK] 概要](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}を参照してください。
 
 **Edge API リクエストの例（ヘッダーには`User-Agent`を含める必要があります）:**
 

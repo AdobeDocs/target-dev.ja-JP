@@ -1,25 +1,28 @@
 ---
-title: ' [!DNL Adobe Target] Java SDKでのイベントの購読'
+title: '[!DNL Adobe Target] Java SDKでのイベントの購読'
 description: '[!UICONTROL OnDeviceDecisioningHandler] オブジェクトを使用して、Java SDK内で発生するさまざまなイベントを購読する方法を説明します。'
 feature: APIs/SDKs
 exl-id: f2d56762-6bf7-4c6b-9c14-fb20e5cfd60d
-TQID: https://experienceleague.adobe.com/x3aig-jM-GXzmLNcUNclZUK9Y49tuSF9-sdkxzJFtiM
+TQID: 'https://experienceleague.adobe.com/x3aig-jM-GXzmLNcUNclZUK9Y49tuSF9-sdkxzJFtiM'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 144
+source-wordcount: '145'
 ht-degree: 4%
-
 ---
-
 # SDK Events （Java）
 
 ## 説明
 
-SDK[&#128279;](initialize-sdk.md)を初期化中に、`ClientConfig` オブジェクトにオプションの`OnDeviceDecisioningHandler` オブジェクトを指定できます。 SDK内で発生するさまざまなイベントの購読に使用できます。 例えば、`onDeviceDecisioningReady` イベントは、SDKがメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
+SDK](initialize-sdk.md)を[初期化中に、`ClientConfig` オブジェクトにオプションの`OnDeviceDecisioningHandler` オブジェクトを指定できます。 SDK内で発生するさまざまなイベントの購読に使用できます。 例えば、`onDeviceDecisioningReady` イベントは、SDKがメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
 
 ## Events
 
@@ -27,9 +30,9 @@ SDK[&#128279;](initialize-sdk.md)を初期化中に、`ClientConfig` オブジ�
 
 | 名前 | 引数 | 説明 |
 | --- | --- | --- |
-| onDeviceDecisioningReady | None | クライアントが初めて[!UICONTROL &#x200B; オンデバイス決定]の準備が整ったときに一度だけ呼び出されます |
-| artifactDownloadSucceeded | アーティファクト ファイルのバイト [] コンテンツ | [!UICONTROL &#x200B; オンデバイス決定] アーティファクトがダウンロードされるたびに呼び出されます |
-| artifactDownloadFailed | 例外 | [!UICONTROL &#x200B; オンデバイス決定] アーティファクトのダウンロードに失敗するたびに呼び出されます |
+| onDeviceDecisioningReady | None | クライアントが初めて[!UICONTROL  オンデバイス決定]の準備が整ったときに一度だけ呼び出されます |
+| artifactDownloadSucceeded | アーティファクト ファイルのバイト [] コンテンツ | [!UICONTROL  オンデバイス決定] アーティファクトがダウンロードされるたびに呼び出されます |
+| artifactDownloadFailed | 例外 | [!UICONTROL  オンデバイス決定] アーティファクトのダウンロードに失敗するたびに呼び出されます |
 
 ## 例
 

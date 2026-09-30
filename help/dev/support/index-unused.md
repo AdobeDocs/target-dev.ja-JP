@@ -1,13 +1,17 @@
 ---
 title: サポート - Adobe Analytics
 description: これはAdobe Analyticsのサポートページです
-source-git-commit: f139f5b910b5d23ea8cf4ee5b00ea5f6fd3c39b2
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 9%
-
 ---
-
 
 # サポート
 
@@ -29,7 +33,7 @@ ht-degree: 9%
 
 コミュニティ全体のチュートリアルとビデオ。
 
-[&#x200B; エクスペリエンスフォーラム &#x200B;](https://adobe.io)
+[ エクスペリエンスフォーラム ](https://adobe.io)
 
 助けを得て他の人を助けるためのフォーラム
 
@@ -37,7 +41,7 @@ ht-degree: 9%
 
 会話に参加する場所があります。
 
-![&#x200B; スタックオーバーフロー](stack-overflow.png)
+![ スタックオーバーフロー](stack-overflow.png)
 
 ### スタックオーバーフロー
 

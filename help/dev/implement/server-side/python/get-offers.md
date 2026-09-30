@@ -1,22 +1,26 @@
 ---
-title: Python SDKを使用する場合は、 [!DNL Adobe Target] でgetOffers （）を使用します
-description: getOffers （）を使用して決定を実行し、 [!DNL Adobe Target]からエクスペリエンスを取得する方法を説明します。
+title: Python SDKを使用する場合は、[!DNL Adobe Target]でgetOffers （）を使用します
+description: getOffers （）を使用して決定を実行し、[!DNL Adobe Target]からエクスペリエンスを取得する方法を説明します。
 feature: APIs/SDKs
 exl-id: 9539b806-e070-430e-80cf-cf632ce3f207
-TQID: https://experienceleague.adobe.com/b7t1NfE5Gcsj86w4u3Cfl5-Eb7a6HG1Hg8vi6-ViQFg
+TQID: 'https://experienceleague.adobe.com/b7t1NfE5Gcsj86w4u3Cfl5-Eb7a6HG1Hg8vi6-ViQFg'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Metadata
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 366
-ht-degree: 12%
-
+source-wordcount: '367'
+ht-degree: 11%
 ---
-
 # オファーを取得（Python）
 
 ## 説明
@@ -58,7 +62,7 @@ target_client_instance.get_offers(options)
 | target_location_hint_cookie | dict | [!DNL Target]の場所ヒント Cookie |
 | analytics_details | list[AnalyticsResponse] | Analytics ペイロード（クライアントサイドのAnalyticsの使用の場合） |
 | trace | リスト [辞書] | すべてのリクエスト mbox/ビューのトレース データを集約しました |
-| response_tokens | リスト [辞書] | &#x200B;[応答トークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)のリスト |
+| response_tokens | リスト [辞書] | &#x200B;[応答トークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)のリスト |
 | meta | dict | オンデバイス判定で使用する追加の判定メタデータ |
 
 ブラウザーにデータを渡すために使用される`target_cookie`および`target_location_hint_cookie` オブジェクトの構造は次のとおりです。

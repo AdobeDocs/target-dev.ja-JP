@@ -3,7 +3,16 @@ keywords: SDK、ちらつき、ちらつき防止、事前非表示、事前非�
 description: '[!DNL Adobe Target] Prehide SDKを統合して、ページ読み込み中にパーソナライズされていないコンテンツ（ちらつき）のフラッシュを排除する方法について説明します。 SDKは、Adobe Alloy （Web SDK）とat.jsの両方で使用できます。'
 title: SDK統合ガイドの事前非表示
 feature: Implementation
-source-git-commit: 35ac4480ead5069169a2c55d35b43d3c1a81d78a
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 1%
@@ -21,7 +30,7 @@ ht-degree: 1%
 
 1. `<head>`の最上部にインラインで埋め込みます。
 
-   インライン `<script>` タグ内に`prehide.min.js`の内容を`<head>`の最初の子として直接貼り付けます。 インラインが推奨される理由については、[&#x200B; インラインと外部](#inline-vs-external)を参照してください。
+   インライン `<script>` タグ内に`prehide.min.js`の内容を`<head>`の最初の子として直接貼り付けます。 インラインが推奨される理由については、[ インラインと外部](#inline-vs-external)を参照してください。
 
    ```html
    <!-- 1. Prehide SDK: must be FIRST in <head> and BEFORE any Adobe SDK -->

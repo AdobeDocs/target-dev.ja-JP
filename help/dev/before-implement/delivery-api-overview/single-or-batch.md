@@ -4,18 +4,21 @@ description: '[!UICONTROL Adobe Target Delivery API]のシングルまたはバ�
 keywords: Delivery API
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
-TQID: https://experienceleague.adobe.com/NMNCubmUyiVOWfq2MnkONSrQCZRqNEh0VJTfFBGptOk
+TQID: 'https://experienceleague.adobe.com/NMNCubmUyiVOWfq2MnkONSrQCZRqNEh0VJTfFBGptOk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 460
+source-wordcount: '460'
 ht-degree: 0%
-
 ---
-
 # シングルまたはバッチ配信
 
 [!UICONTROL Adobe Target Delivery API]は、1回またはバッチ方式の配信呼び出しをサポートしています。 単一または複数のmboxのコンテンツに対して、サーバーリクエストを行うことができます。

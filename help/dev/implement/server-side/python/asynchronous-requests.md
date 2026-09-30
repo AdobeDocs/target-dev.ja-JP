@@ -1,20 +1,23 @@
 ---
-title: ' [!DNL Adobe Target] Python SDKでの非同期リクエストの使用方法'
-description: ' [!DNL Target] Python SDKが非同期リクエストをサポートする方法を説明します。これにより、効果的な目標時間を0に短縮できます。'
+title: '[!DNL Adobe Target] Python SDKでの非同期リクエストの使用方法'
+description: '[!DNL Target] Python SDKが非同期リクエストをサポートする方法を説明します。これにより、効果的な目標時間を0に短縮できます。'
 feature: APIs/SDKs
 exl-id: 44ab74e5-3c1a-49cf-9fff-fe523b0c2592
-TQID: https://experienceleague.adobe.com/ZWRw2OlSbuEHorY0MXPOaBw3uePIW5dzpsuqho0Jtqk
+TQID: 'https://experienceleague.adobe.com/ZWRw2OlSbuEHorY0MXPOaBw3uePIW5dzpsuqho0Jtqk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 142
+source-wordcount: '144'
 ht-degree: 4%
-
 ---
-
 # 非同期リクエスト （Python）
 
 ## 説明

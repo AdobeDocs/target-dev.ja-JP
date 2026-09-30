@@ -4,22 +4,27 @@ description: Experience Cloud、A4T レポート、Analytics for Targetとの統
 keywords: 配信api, サーバーサイド，サーバーサイド，統合，a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
-TQID: https://experienceleague.adobe.com/Qx5xwszkQLumkFhGJDbvyIofPe7qxUDN922iqmhsClk
+TQID: 'https://experienceleague.adobe.com/Qx5xwszkQLumkFhGJDbvyIofPe7qxUDN922iqmhsClk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Data collection
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 399
+source-wordcount: '399'
 ht-degree: 10%
-
 ---
-
-# ターゲット  （A4T）レポート用のAnalytics
+# ターゲット ] （A4T）レポート用の[!UICONTROL Analytics
 
 [!DNL Adobe Target]は、オンデバイス決定とサーバーサイド [!DNL Target]の両方のアクティビティに対するA4T レポートをサポートしています。 A4T レポートを有効にするには、次の2つの設定オプションがあります。
 
@@ -123,7 +128,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## ユーザーは[!DNL Adobe Target]から分析ペイロードを取得します
 
-ユーザーは、特定のmboxの[!DNL Adobe Analytics] ペイロードを取得し、[&#x200B; データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を介して[!DNL Adobe Analytics]に送信できます。 [!DNL Adobe Target] リクエストが実行されたら、リクエストの`client_side`を`logging` フィールドに渡します。 指定されたmboxがレポートソースとして[!DNL Analytics]を使用しているアクティビティに存在する場合、このリクエストはペイロードを返します。
+ユーザーは、特定のmboxの[!DNL Adobe Analytics] ペイロードを取得し、[ データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を介して[!DNL Adobe Analytics]に送信できます。 [!DNL Adobe Target] リクエストが実行されたら、リクエストの`client_side`を`logging` フィールドに渡します。 指定されたmboxがレポートソースとして[!DNL Analytics]を使用しているアクティビティに存在する場合、このリクエストはペイロードを返します。
 
 >[!BEGINTABS]
 

@@ -1,20 +1,23 @@
 ---
-title: ' [!DNL Adobe Target] .NET SDKの基本を学ぶ'
-description: ' [!DNL Adobe Target] お客様が.NET SDKをインストール、初期化、使用する方法について説明します。'
+title: '[!DNL Adobe Target] .NET SDKの基本を学ぶ'
+description: '[!DNL Adobe Target]のお客様が.NET SDKをインストール、初期化、使用する方法について説明します。'
 feature: APIs/SDKs
 exl-id: 618e9320-f001-4ab4-befc-c7b12bbe7b5f
-TQID: https://experienceleague.adobe.com/FWbHAWmYHTVTKdfk0mRek1U6ymrmZ7ioB7plWmnndSk
+TQID: 'https://experienceleague.adobe.com/FWbHAWmYHTVTKdfk0mRek1U6ymrmZ7ioB7plWmnndSk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 143
+source-wordcount: '145'
 ht-degree: 12%
-
 ---
-
 # .NET SDKの概要
 
 このリファレンスガイドでは、[!DNL Adobe Target]のお客様が.NET SDKをインストール、初期化、使用する方法について説明します。
@@ -26,18 +29,18 @@ ht-degree: 12%
 
 ## 導入
 
-.NET SDKの使用方法については、[[!DNL Target] SDK入門ガイド &#x200B;](../sdk-guides/getting-started/getting-started.md)を参照してください。
+.NET SDKの使用方法については、[[!DNL Target] SDK入門ガイド ](../sdk-guides/getting-started/getting-started.md)を参照してください。
 
 ## サンプルアプリ
 
 the.NET SDKをテストします。
 
-* [[!DNL Adobe Target] [!UICONTROL &#x200B; オンデバイス決定]のデモサイト &#x200B;](https://github.com/adobe/on-device-decisioning-demo-site)にアクセスすると
-* [&#x200B; サンプルアプリケーション &#x200B;](../sdk-guides/sample-apps/sample-apps.md)で。
+* [[!DNL Adobe Target] [!UICONTROL  オンデバイス決定]のデモサイト ](https://github.com/adobe/on-device-decisioning-demo-site)にアクセスすると
+* [ サンプルアプリケーション ](../sdk-guides/sample-apps/sample-apps.md)で。
 
 ### リファレンス
 
-.NET SDKのリファレンスドキュメントを読み、理解するには、[SDKのインストール &#x200B;](install-sdk.md)から始めます。
+.NET SDKのリファレンスドキュメントを読み、理解するには、[SDKのインストール ](install-sdk.md)から始めます。
 
 ## Source ファイル
 

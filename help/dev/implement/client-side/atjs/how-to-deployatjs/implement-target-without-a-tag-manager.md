@@ -1,33 +1,44 @@
 ---
 keywords: targetの実装、実装の実装、at.jsの実装、タグマネージャー、オンデバイス判定、オンデバイス判定
-description: 設定の指定方法（アカウントの詳細、実装方法など）について説明します。 タグマネージャーを使用せずに [!DNL Adobe Target] at.js ライブラリを実装する
-title: タグマネージャーなしで [!DNL Target] 実装できますか？
+description: 設定の指定方法（アカウントの詳細、実装方法など）について説明します。 タグマネージャーを使用せずに[!DNL Adobe Target] at.js ライブラリを実装するには、次の手順を実行します。
+title: タグマネージャーなしで[!DNL Target]を実装できますか？
 feature: Implement Server-side
 exl-id: f675ae21-105d-4aa3-9926-59291f1136b5
-TQID: https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk
+TQID: 'https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1785
+source-wordcount: '1787'
 ht-degree: 32%
-
 ---
-
 # タグマネージャーなしで[!DNL Target]を実装する
 
 タグマネージャーまたは[!DNL Adobe Experience Platform]のタグを使用せずに[!DNL Adobe Target]を実装する方法について説明します。
@@ -56,9 +67,9 @@ ht-degree: 32%
 
 | 設定 | 説明 |
 | --- | --- |
-| [!UICONTROL &#x200B; クライアントコード &#x200B;] | クライアントコードは、[!DNL Target] APIを使用する際によく必要となる、クライアント固有の文字シーケンスです。 |
+| [!UICONTROL  クライアントコード ] | クライアントコードは、[!DNL Target] APIを使用する際によく必要となる、クライアント固有の文字シーケンスです。 |
 | [!UICONTROL IMS組織ID] | このIDは、実装をAdobe Experience Cloud アカウントに関連付けます。 |
-| [!UICONTROL &#x200B; オンデバイス決定] | オンデバイス判定を有効にするには、切り替えスイッチを「オン」の位置にスライドさせます。<p>オンデバイス判定により、A/Bおよびエクスペリエンスのターゲット設定（XT）キャンペーンをサーバー上にキャッシュし、ほぼゼロの遅延でメモリ内の判定を実行できます。 詳しくは、[&#x200B; オンデバイス判定の概要](../../../server-side/sdk-guides/on-device-decisioning/overview.md)を参照してください。 |
+| [!UICONTROL  オンデバイス決定] | オンデバイス判定を有効にするには、切り替えスイッチを「オン」の位置にスライドさせます。<p>オンデバイス判定により、A/Bおよびエクスペリエンスのターゲット設定（XT）キャンペーンをサーバー上にキャッシュし、ほぼゼロの遅延でメモリ内の判定を実行できます。 詳しくは、[ オンデバイス判定の概要](../../../server-side/sdk-guides/on-device-decisioning/overview.md)を参照してください。 |
 | [!UICONTROL 既存のすべてのオンデバイス決定適格アクティビティをアーティファクトに含める] | （条件付き）このオプションは、オンデバイス判定を有効にした場合に表示されます。<p>オンデバイス判定に適格なすべてのライブ [!DNL Target] アクティビティをアーティファクトに自動的に含める場合は、切り替えスイッチを「オン」の位置にスライドさせます。<p>このトグルをオフにすると、生成されたルール アーティファクトに含めるために、デバイス上の決定アクティビティを再作成してアクティブ化する必要があります。 |
 
 ## 実装方法
@@ -73,10 +84,10 @@ ht-degree: 32%
 
 | 設定 | 説明 |
 | --- | --- |
-| [!UICONTROL &#x200B; ページ読み込み有効（グローバル mboxを自動作成） &#x200B;] | 各ページが読み込まれると自動的に実行されるように、グローバル mbox 呼び出しを at.js ファイルに埋め込むかどうかを選択します。 |
+| [!UICONTROL  ページ読み込み有効（グローバル mboxを自動作成） ] | 各ページが読み込まれると自動的に実行されるように、グローバル mbox 呼び出しを at.js ファイルに埋め込むかどうかを選択します。 |
 | [!UICONTROL グローバル mbox] | global mbox の名前を選択します。 デフォルトでは、この名前は target-global-mbox です。<p>at.jsを使用すると、mbox名にアンパサンド（&amp;）などの特殊文字を使用できます。 |
-| [!UICONTROL &#x200B; タイムアウト （秒） &#x200B;] | [!DNL Target] が定義された期間内にコンテンツの応答をしない場合、サーバー呼び出しはタイムアウトし、デフォルトコンテンツが表示されます。 訪問者のセッション中、追加の呼び出しが引き続き試行されます。 デフォルト値は 5 秒です。<p>at.js ライブラリは、`XMLHttpRequest`のタイムアウト設定を使用します。 タイムアウトは、リクエストが実行されたときに開始し、[!DNL Target]がサーバーから応答を受け取ったときに停止します。 詳しくは、Mozilla Developer Networkの[XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout)を参照してください。<p>指定されたタイムアウトが応答を受信する前に発生した場合、デフォルトのコンテンツが表示され、すべてのデータ収集が[!DNL Target] エッジで行われるため、訪問者がアクティビティの参加者としてカウントされる場合があります。 リクエストが[!DNL Target] エッジに達した場合、訪問者はカウントされます。<p>タイムアウト設定を構成する際は、次の点を考慮してください。<ul><li>値が低すぎると、訪問者はアクティビティの参加者としてカウントされるものの、ほとんどの時間デフォルトのコンテンツが表示される可能性があります。</li><li>値が高すぎると、Web ページに空白の領域が表示されるか、長時間の本文の非表示を使用している場合は空白のページが表示される可能性があります。</li></ul>mbox の応答時間をよりよく把握するには、ブラウザーの開発者ツールの「ネットワーク」タブを確認してください。 また、Catchpoint など、サードパーティの web パフォーマンスモニタリングツールを使用することもできます。<p>**メモ**: [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout)設定により、[!DNL Target]がVisitor API応答を長時間待たずに済みます。 この設定と、ここで説明している at.js のタイムアウト設定は相互に影響しません。 |
-| [!UICONTROL &#x200B; プロファイルの有効期間] | この設定は、訪問者プロファイルが保存される期間を決定します。 デフォルトでは、プロファイルは 2 週間保存されます。 この設定は、最大90日間まで延長できます。<p>プロファイルの有効期間の設定を変更するには、[&#x200B; クライアントケア &#x200B;](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja#reference_ACA3391A00EF467B87930A450050077C)にお問い合わせください。 |
+| [!UICONTROL  タイムアウト （秒） ] | [!DNL Target] が定義された期間内にコンテンツの応答をしない場合、サーバー呼び出しはタイムアウトし、デフォルトコンテンツが表示されます。 訪問者のセッション中、追加の呼び出しが引き続き試行されます。 デフォルト値は 5 秒です。<p>at.js ライブラリは、`XMLHttpRequest`のタイムアウト設定を使用します。 タイムアウトは、リクエストが実行されたときに開始し、[!DNL Target]がサーバーから応答を受け取ったときに停止します。 詳しくは、Mozilla Developer Networkの[XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout)を参照してください。<p>指定されたタイムアウトが応答を受信する前に発生した場合、デフォルトのコンテンツが表示され、すべてのデータ収集が[!DNL Target] エッジで行われるため、訪問者がアクティビティの参加者としてカウントされる場合があります。 リクエストが[!DNL Target] エッジに達した場合、訪問者はカウントされます。<p>タイムアウト設定を構成する際は、次の点を考慮してください。<ul><li>値が低すぎると、訪問者はアクティビティの参加者としてカウントされるものの、ほとんどの時間デフォルトのコンテンツが表示される可能性があります。</li><li>値が高すぎると、Web ページに空白の領域が表示されるか、長時間の本文の非表示を使用している場合は空白のページが表示される可能性があります。</li></ul>mbox の応答時間をよりよく把握するには、ブラウザーの開発者ツールの「ネットワーク」タブを確認してください。 また、Catchpoint など、サードパーティの web パフォーマンスモニタリングツールを使用することもできます。<p>**メモ**: [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout)設定により、[!DNL Target]がVisitor API応答を長時間待たずに済みます。 この設定と、ここで説明している at.js のタイムアウト設定は相互に影響しません。 |
+| [!UICONTROL  プロファイルの有効期間] | この設定は、訪問者プロファイルが保存される期間を決定します。 デフォルトでは、プロファイルは 2 週間保存されます。 この設定は、最大90日間まで延長できます。<p>プロファイルの有効期間の設定を変更するには、[ クライアントケア ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)にお問い合わせください。 |
 
 ### 主な実装方法
 
@@ -90,7 +101,7 @@ at.js設定を編集するには、目的のat.js バージョンの横にある
 
 >[!WARNING]
 >
->これらのデフォルト設定を変更する前に、現在の実装に影響を与えないように、[&#x200B; クライアントケア &#x200B;](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja#reference_ACA3391A00EF467B87930A450050077C)に相談してください。
+>これらのデフォルト設定を変更する前に、現在の実装に影響を与えないように、[ クライアントケア ](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C)に相談してください。
 
 上記の設定に加えて、次の特定のat.js設定も使用できます。
 
@@ -104,7 +115,7 @@ at.js設定を編集するには、目的のat.js バージョンの横にある
 
 API による一括更新の認証を有効または無効にし、プロファイル認証トークンを生成します。
 
-詳しくは、[&#x200B; プロファイル API設定](/help/dev/before-implement/methods-to-get-data-into-target/profile-api-settings.md)を参照してください。
+詳しくは、[ プロファイル API設定](/help/dev/before-implement/methods-to-get-data-into-target/profile-api-settings.md)を参照してください。
 
 ### デバッガーツール
 
@@ -126,7 +137,7 @@ API による一括更新の認証を有効または無効にし、プロファ�
 
 >[!NOTE]
 >
->従来のブラウザーサポートオプションは、at.js バージョン 0.9.3以前で使用できました。 このオプションは、at.js バージョン 0.9.4 で削除されました。 at.jsでサポートされているブラウザーの一覧については、[&#x200B; サポートされているブラウザー](/help/dev/before-implement/supported-browsers.md)を参照してください。<p>レガシーブラウザーは、CORS（クロスオリジンリソース共有）を完全にはサポートしない古いブラウザーです。 こうしたブラウザーには、バージョン 11 より前の Internet Explorer およびバージョン 6 以下の Safari が含まれます。 従来のブラウザーのサポートが無効になっている場合、[!DNL Target]は、これらのブラウザーのレポートでコンテンツを配信しなかったか、訪問者を数えませんでした。 このオプションが有効になっている場合は、優れた顧客体験を確実に提供するために、古いブラウザーで品質保証を行うことをお勧めします。
+>従来のブラウザーサポートオプションは、at.js バージョン 0.9.3以前で使用できました。 このオプションは、at.js バージョン 0.9.4 で削除されました。 at.jsでサポートされているブラウザーの一覧については、[ サポートされているブラウザー](/help/dev/before-implement/supported-browsers.md)を参照してください。<p>レガシーブラウザーは、CORS（クロスオリジンリソース共有）を完全にはサポートしない古いブラウザーです。 こうしたブラウザーには、バージョン 11 より前の Internet Explorer およびバージョン 6 以下の Safari が含まれます。 従来のブラウザーのサポートが無効になっている場合、[!DNL Target]は、これらのブラウザーのレポートでコンテンツを配信しなかったか、訪問者を数えませんでした。 このオプションが有効になっている場合は、優れた顧客体験を確実に提供するために、古いブラウザーで品質保証を行うことをお勧めします。
 
 ## at.js のダウンロード
 

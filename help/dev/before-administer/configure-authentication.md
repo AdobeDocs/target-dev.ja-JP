@@ -1,25 +1,32 @@
 ---
-title: ' [!DNL Adobe Target] APIの認証を設定する方法'
-description: ' [!DNL Adobe Target] APIを正常に操作するために必要な認証トークンを生成するにはどうすればよいですか？'
+title: '[!DNL Adobe Target] APIの認証を設定する方法'
+description: '[!DNL Adobe Target]個のAPIを正常に操作するために必要な認証トークンを生成するにはどうすればよいですか？'
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-TQID: https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw
+TQID: 'https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: addda914fcf7ba1616ae9a9d49118e737b3ad923
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1927
+source-wordcount: '1929'
 ht-degree: 1%
-
 ---
-
 # [!DNL Adobe Target] APIの認証を設定
 
 [!DNL Recommendations Admin] APIを含む[!DNL Adobe Target]管理APIは、認証によって保護され、承認済みのユーザーのみが[!DNL Adobe Target]へのアクセスに使用できるようになります。 [Adobe Developer Console](https://developer.adobe.com/console/home)を使用して、[!DNL Adobe Target]を含むすべての[!DNL Adobe Experience Cloud solutions]の認証を管理します。
@@ -30,7 +37,7 @@ ht-degree: 1%
 >
 >サービスアカウント（JWT）の資格情報は、2025年1月1日まで引き続き機能します。 新しいOAuth サーバー間資格情報を使用するには、2025年1月1日より前にアプリケーションまたは統合を移行する必要があります。
 >
->統合を移行するための詳細と手順については、*Developer Console* ドキュメントの「[&#x200B; サービスアカウント（JWT）資格情報からOAuth サーバー間の資格情報](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/){target=_blank}への移行」を参照してください。
+>統合を移行するための詳細と手順については、*Developer Console* ドキュメントの「[ サービスアカウント（JWT）資格情報からOAuth サーバー間の資格情報](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/){target=_blank}への移行」を参照してください。
 >
 >新しいOAuth資格情報を設定する方法については、*Developer Console* ドキュメントの[OAuth サーバー間の資格情報実装](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/){target=_blank}を参照してください。
 
@@ -45,18 +52,18 @@ ht-degree: 1%
 
 | リソース | 詳細 |
 | --- | --- |
-| Postman | これらの手順を正常に実行するには、ご使用のオペレーティングシステムの[Postman アプリ &#x200B;](https://www.postman.com/downloads/)を入手してください。 Postman basicはアカウント作成機能を無料で利用できます。 [!DNL Adobe Target] APIを一般的に使用するために必須ではありませんが、PostmanではAPI ワークフローが簡単になり、[!DNL Adobe Target]にはAPIの実行と動作の学習に役立つPostman コレクションがいくつか用意されています。 このガイドの残りの部分では、Postmanに関する実務的な知識を前提としています。 詳しくは、[Postman ドキュメント &#x200B;](https://learning.getpostman.com/)を参照してください。 |
-| 参照 | このガイドの残りの部分では、次のリソースについて理解していることを前提としています。<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Target管理者とプロファイル API ドキュメント &#x200B;](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API ドキュメント &#x200B;](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
+| Postman | これらの手順を正常に実行するには、ご使用のオペレーティングシステムの[Postman アプリ ](https://www.postman.com/downloads/)を入手してください。 Postman basicはアカウント作成機能を無料で利用できます。 [!DNL Adobe Target] APIを一般的に使用するために必須ではありませんが、PostmanではAPI ワークフローが簡単になり、[!DNL Adobe Target]にはAPIの実行と動作の学習に役立つPostman コレクションがいくつか用意されています。 このガイドの残りの部分では、Postmanに関する実務的な知識を前提としています。 詳しくは、[Postman ドキュメント ](https://learning.getpostman.com/)を参照してください。 |
+| 参照 | このガイドの残りの部分では、次のリソースについて理解していることを前提としています。<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Target管理者とプロファイル API ドキュメント ](../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API ドキュメント ](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## Adobe I/O プロジェクトの作成
 
-このセクションでは、[!DNL Adobe Developer Console]にアクセスし、[!DNL Adobe Target]のプロジェクトを作成します。 詳しくは、[&#x200B; プロジェクトに関するドキュメント &#x200B;](https://developer.adobe.com/developer-console/docs/guides/projects/)を参照してください。
+このセクションでは、[!DNL Adobe Developer Console]にアクセスし、[!DNL Adobe Target]のプロジェクトを作成します。 詳しくは、[ プロジェクトに関するドキュメント ](https://developer.adobe.com/developer-console/docs/guides/projects/)を参照してください。
 
 <!--(1. Generate your private key and public certificate, per the [documentation on authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (as described in **Step 1** of [How to set up Adobe IO: Authentication - Step by Step](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). After completing Step 1, return to this guide and resume with Step 2, below. // The outcome of this step should be the creation of a `private.key` file and a `certificate_pub.crt` file. Return to this guide once you have generated these two files.)-->
 
-1. [Adobe Admin Console](https://adminconsole.adobe.com/)で、[!DNL Adobe] ユーザーアカウントに[製品管理者](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)と[開発者](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html) レベルの両方の[!DNL Target]へのアクセス権が付与されていることを確認します。
+1. [Adobe Admin Console](https://adminconsole.adobe.com/)で、[!DNL Adobe] ユーザーアカウントに[製品管理者](https://helpx.adobe.com/enterprise/using/admin-roles.html)と[開発者](https://helpx.adobe.com/enterprise/using/manage-developers.html) レベルの両方の[!DNL Target]へのアクセス権が付与されていることを確認します。
 
-1. [Adobe Developer Console](https://developer.adobe.com/console/home)で、この統合を作成する[!UICONTROL Experience Cloud Organization]を選択します。 （Experience Cloud組織へのアクセス権は1つのみになる可能性があります）。
+1. [Adobe Developer Console](https://developer.adobe.com/console/home)で、この統合を作成する[!UICONTROL Experience Cloud Organization]を選択します。 （Experience Cloud組織]へのアクセス権は1つのみになる可能性があります）。[!UICONTROL 
 
    ![configure-io-target-createproject2.png](assets/configure-io-target-createproject2.png)
 
@@ -84,7 +91,7 @@ ht-degree: 1%
 
    ![configure-io-target-createproject8](assets/configure-io-target-createproject8.png)
 
-1. Adobe Developer Consoleに戻り、Adobe Recommendationsを使用しているプロパティに対応する[製品プロファイル &#x200B;](https://helpx.adobe.com/jp/enterprise/using/manage-products-and-profiles.html)を選択します。 （プロパティを使用していない場合は、「デフォルトのWorkspace」オプションを選択します）。 「**[!UICONTROL 設定したAPIを保存]**」をクリックします。
+1. Adobe Developer Consoleに戻り、Adobe Recommendationsを使用しているプロパティに対応する[製品プロファイル ](https://helpx.adobe.com/jp/enterprise/using/manage-products-and-profiles.html)を選択します。 （プロパティを使用していない場合は、「デフォルトのWorkspace」オプションを選択します）。 「**[!UICONTROL 設定したAPIを保存]**」をクリックします。
 
    ![configure-io-target-createproject9](assets/configure-io-target-createproject9.png)
 
@@ -105,7 +112,7 @@ Postmanでは、プロジェクトの詳細を指定する方法を数多く用�
 
 >[!NOTE]
 >
->[!DNL Target]を含む任意のExperience Cloud ソリューションに適用されるビデオ手順については、[Experience Platform APIでのPostmanの使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=ja)を参照してください。 次のセクションは、[!DNL Target] APIに関連しています：1. Experience Platform APIを作成してPostman 2に書き出します。 Postmanでアクセストークンを生成します。 これらの手順は以下にも示します。
+>[!DNL Target]を含む任意のExperience Cloud ソリューションに適用されるビデオ手順については、[Experience Platform APIでのPostmanの使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html)を参照してください。 次のセクションは、[!DNL Target] APIに関連しています：1. Experience Platform APIを作成してPostman 2に書き出します。 Postmanでアクセストークンを生成します。 これらの手順は以下にも示します。
 
 1. まだ[Adobe Developer Console](https://developer.adobe.com/console/home)に移動して、新しいプロジェクトの&#x200B;**[!UICONTROL サービスアカウント（JWT）]**&#x200B;資格情報を表示します。 図に示すように、左側のナビゲーションまたは&#x200B;**[!UICONTROL 資格情報]** セクションのいずれかを使用します。
 
@@ -159,27 +166,27 @@ Postmanでは、プロジェクトの詳細を指定する方法を数多く用�
 
 ## ベアラートークンの生成
 
-このセクションでは、ベアラートークンを生成します。これは、[!DNL Adobe Target] APIを使用したインタラクションを認証するために必要です。 ベアラートークンを生成するには、[Adobe Identity Management サービス（IMS） &#x200B;](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/AuthenticationGuide.md)に統合の詳細（前のセクションで確認）を送信する必要があります。 これを行う方法はいくつかありますが、このガイドでは、プロセスを直接的かつ簡単にする事前定義済みのIMS呼び出しを含むPostman コレクションを利用します。 コレクションをインポートしたら、必要なときにいつでも再利用して、[!DNL Adobe Target]だけでなく、他のAdobe APIでも新しいトークンを生成できます。
+このセクションでは、ベアラートークンを生成します。これは、[!DNL Adobe Target] APIを使用したインタラクションを認証するために必要です。 ベアラートークンを生成するには、[Adobe Identity Management サービス（IMS） ](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/AuthenticationGuide.md)に統合の詳細（前のセクションで確認）を送信する必要があります。 これを行う方法はいくつかありますが、このガイドでは、プロセスを直接的かつ簡単にする事前定義済みのIMS呼び出しを含むPostman コレクションを利用します。 コレクションをインポートしたら、必要なときにいつでも再利用して、[!DNL Adobe Target]だけでなく、他のAdobe APIでも新しいトークンを生成できます。
 
 1. [Adobe Identity Management Service API サンプル呼び出し](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)に移動します。
 
-   ![&#x200B; トークン 1](assets/configure-io-target-generatetoken1.png)
+   ![ トークン 1](assets/configure-io-target-generatetoken1.png)
 
 1. **[!UICONTROL Adobe I/O Access Token Generation Postman コレクション]**&#x200B;をクリックします。
 
-   ![&#x200B; トークン 2](assets/configure-io-target-generatetoken2.png)
+   ![ トークン 2](assets/configure-io-target-generatetoken2.png)
 
 1. **[!UICONTROL Raw]**&#x200B;をクリックし、生成されたJSONをクリップボードにコピーして、このコレクションの生のJSONを取得します。 （または、生のJSON を.json ファイルとして保存することもできます）。
 
-   ![&#x200B; トークン 3](assets/configure-io-target-generatetoken3.png)
+   ![ トークン 3](assets/configure-io-target-generatetoken3.png)
 
 1. Postmanで、クリップボードから生のJSONを貼り付けて送信することで、コレクションを読み込みます。 （または、保存した.json ファイルをアップロードすることもできます）。 「**[!UICONTROL 続行]**」をクリックします。
 
-   ![&#x200B; トークン 4](assets/configure-io-target-generatetoken4.png)
+   ![ トークン 4](assets/configure-io-target-generatetoken4.png)
 
 1. Adobe I/O Access Token Generation Postman コレクションで「**[!UICONTROL IMS: JWT Generate + Auth via User Token]**」リクエストを選択し、環境が選択されていることを確認し、**[!UICONTROL Send]**&#x200B;をクリックしてトークンを生成します。
 
-   ![&#x200B; トークン 5](assets/configure-io-target-generatetoken5.png)
+   ![ トークン 5](assets/configure-io-target-generatetoken5.png)
 
    >[!NOTE]
    >
@@ -187,11 +194,11 @@ Postmanでは、プロジェクトの詳細を指定する方法を数多く用�
 
 1. 「環境を管理」モーダルをもう一度開き、環境を選択します。
 
-   ![&#x200B; トークン 6](assets/configure-io-target-jwt11.png)
+   ![ トークン 6](assets/configure-io-target-jwt11.png)
 
 1. `ACCESS_TOKEN`と`JWT_TOKEN`の値が入力されました。
 
-   ![&#x200B; トークン 7](assets/configure-io-target-generatetoken7.png)
+   ![ トークン 7](assets/configure-io-target-generatetoken7.png)
 
 質問：JSON Web トークン（JWT）とベアラートークンを生成するには、Adobe I/O アクセストークン生成Postman コレクションを使用する必要がありますか？
 

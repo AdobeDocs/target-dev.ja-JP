@@ -1,30 +1,42 @@
 ---
 keywords: プライバシー、ip アドレス、ジオセグメンテーション、オプトアウト、オプトアウト、オプトアウト、データプライバシー、政府規制、規制、gdpr、ccpa、プライバシー、個人情報、PII
-description: ' [!DNL Adobe Target] が、IP アドレス、PII、オプトアウト手順の収集と処理を含む、適用されるデータプライバシー法に準拠する方法について説明します。'
+description: '[!DNL Adobe Target]が、IP アドレス、PII、オプトアウト手順の収集と処理を含む、適用されるデータプライバシー法に準拠する方法について説明します。'
 title: Targetは、PIIを含むプライバシーの問題をどのように処理しますか？
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-TQID: https://experienceleague.adobe.com/lEllQscRLJ1I-5mu3r2TyoxYfaOb2nLHVQzG9YnL0ig
+TQID: 'https://experienceleague.adobe.com/lEllQscRLJ1I-5mu3r2TyoxYfaOb2nLHVQzG9YnL0ig'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
+subfeature_v2:
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 814
-ht-degree: 43%
-
+source-wordcount: '820'
+ht-degree: 44%
 ---
-
 # プライバシー
 
 [!DNL Adobe Target] のプロセスおよび設定はプライバシーを考慮した設計になっており、個人情報保護法に準拠した方法で [!DNL Target] を使用できます。
@@ -57,7 +69,7 @@ Adobeでは、Adobe [!DNL Target]に対してユーザーが有効にできる�
 
 [!DNL Platform Web SDK] （バージョン 23.4以降）を使用する場合、データストリームレベルのIP難読化設定は、[!DNL Target]で設定されているIP難読化オプションよりも優先されます。 例えば、データストリームレベルのIP難読化オプションが[!UICONTROL Full]に設定され、[!DNL Target] IP難読化オプションが[!UICONTROL 最後のオクテット難読化]に設定されている場合、[!DNL Target]は完全に難読化されたIPを受信します。
 
-詳しくは、*[!DNL Adobe Experience Platfrom]データストリームガイド*&#x200B;の「[&#x200B; データストリームの設定](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ja){target=_blank}」の「[!UICONTROL IP難読化]」を参照してください。
+詳しくは、*[!DNL Adobe Experience Platfrom]データストリームガイド*&#x200B;の「[ データストリームの設定](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ja){target=_blank}」の「[!UICONTROL IP難読化]」を参照してください。
 
 ## 地理特性
 
@@ -84,7 +96,7 @@ IP アドレスが完全に不明化されている場合、地理特性と 地�
 
 ## プライバシーとデータ保護規制
 
-欧州連合の一般データ保護規則（GDPR）、カリフォルニア州消費者プライバシー法（CCPA）、その他の国際的なプライバシー要件、およびこれらの規制が組織と[!DNL Target]にどのような影響を与えるかについては、[&#x200B; プライバシーおよびデータ保護規則](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)を参照してください。
+欧州連合の一般データ保護規則（GDPR）、カリフォルニア州消費者プライバシー法（CCPA）、その他の国際的なプライバシー要件、およびこれらの規制が組織と[!DNL Target]にどのような影響を与えるかについては、[ プライバシーおよびデータ保護規則](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)を参照してください。
 
 ## 機能使用状況データの収集
 

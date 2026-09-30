@@ -1,31 +1,42 @@
 ---
 keywords: apple、ITP、インテリジェントトラッキング防止、experience cloud id、ecid、itp
-description: Safari ユーザーのプライバシー保護を目的としたApple Intelligent Tracking Prevention （ITP）イニシアチブの影響と [!DNL Adobe Target] について説明します。
-title: ' [!DNL Target] では、Apple ITP サポートをどのように処理しますか？'
+description: '[!DNL Adobe Target]と、Safari ユーザーのプライバシー保護を目的としたApple Intelligent Tracking Prevention （ITP） イニシアチブの影響について説明します。'
+title: '[!DNL Target]はApple ITP サポートをどのように処理しますか？'
 feature: Privacy & Security
 exl-id: 6deee03b-df86-4d0d-999c-b11855ddfda5
-TQID: https://experienceleague.adobe.com/AvrlwiLa-soHwrGT1QMa8KgsiIwfwKaF-0LBxMjb8cs
+TQID: 'https://experienceleague.adobe.com/AvrlwiLa-soHwrGT1QMa8KgsiIwfwKaF-0LBxMjb8cs'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 681
+source-wordcount: '683'
 ht-degree: 28%
-
 ---
-
 # Apple Intelligent Tracking Prevention（ITP）2.x
 
 Intelligent Tracking Prevention （ITP）は、Safari ユーザーのプライバシーを保護するためのAppleの取り組みです。 ITP の最初のリリース（2017 年）では、サードパーティ Cookie の使用を対象としていました。 実際、Apple は、サードパーティ Cookie を完全にブロックしましたが、サードパーティ Cookie は、訪問者の追跡および訪問者データの収集に一般的に使用されていたので、広告技術およびマーケティング技術会社にとって深刻な頭痛の種となりました。 現在、Apple は、Safari 内でのファーストパーティ Cookie の使用方法に制限や制約を課すことに移行しています。
@@ -48,8 +59,8 @@ Apple ITP 2.xは、次の領域で[!DNL Target]に影響を与えます。
 | --- | --- |
 | ユニーク訪問者数が増加する可能性 | 有効期限が7日（ITP 2.1）と1日（ITP 2.2およびITP 2.3）に設定されているため、Safari ブラウザーからのユニーク訪問者が増加する可能性があります。 訪問者が7日後（ITP 2.1）または1日後（ITP 2.2およびITP 2.3）にドメインを再訪問した場合、[!DNL Target]は、期限切れのCookieの代わりに新しい[!DNL Target] Cookieをドメインに配置することを余儀なくされます。 新しい [!DNL Target] Cookie は、ユーザーが同じであっても、新しいユニーク訪問者と解釈されます。 |
 | [!DNL Target] アクティビティのルックバック期間の短縮 | [!DNL Target] アクティビティの訪問者プロファイルは、決定のためのルックバック期間が短縮した可能性があります。 [!DNL Target] Cookie は、訪問者を特定するために活用され、パーソナライゼーション用にユーザープロファイル属性を格納します。 [!DNL Target]個のCookieは、7日間（ITP 2.1）または1日（ITP 2.2および2.3）後にSafariで有効期限が切れることを考慮すると、パージされた[!DNL Target]個のCookieに関連付けられたユーザープロファイルデータを意思決定に使用することはできません。 |
-| サードパーティ ID に基づくプロファイルスクリプト | 有効期限が7日間（ITP 2.1）と1日（ITP 2.2およびITP 2.3）に設定されているため、3rdPartyID Cookieに基づく[&#x200B; プロファイルスクリプト &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=ja)は、有効期限が切れると機能しなくなります。 |
-| iOS デバイスでの QA／プレビュー URL | 有効期限が7日間（ITP 2.1）と1日（ITP 2.2およびITP 2.3）に設定されているため、URLが3rdPartyID Cookieに基づいているため、[QA/Preview URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=ja)は有効期限が切れると機能しなくなります。 |
+| サードパーティ ID に基づくプロファイルスクリプト | 有効期限が7日間（ITP 2.1）と1日（ITP 2.2およびITP 2.3）に設定されているため、3rdPartyID Cookieに基づく[ プロファイルスクリプト ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html)は、有効期限が切れると機能しなくなります。 |
+| iOS デバイスでの QA／プレビュー URL | 有効期限が7日間（ITP 2.1）と1日（ITP 2.2およびITP 2.3）に設定されているため、URLが3rdPartyID Cookieに基づいているため、[QA/Preview URL](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html)は有効期限が切れると機能しなくなります。 |
 
 ## 現在の [!DNL Target] の実装は影響を受けますか？
 

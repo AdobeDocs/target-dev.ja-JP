@@ -1,35 +1,45 @@
 ---
-title: ' [!DNL Adobe Target] と [!DNL Web SDK] を使用してパーソナライゼーションを行います。'
-description: ' [!DNL Adobe Target]を使用して [!DNL Experience Platform Web SDK] でパーソナライズされたコンテンツをレンダリングする方法について説明します。'
+title: '[!DNL Adobe Target]を[!DNL Web SDK]と共にパーソナライゼーションに使用します。'
+description: '[!DNL Adobe Target]を使用して[!DNL Experience Platform Web SDK]でパーソナライズされたコンテンツをレンダリングする方法について説明します。'
 feature: AEP Web SDK
 exl-id: 31c00779-20a8-4d18-9ee4-0430e5e9a84c
-source-git-commit: 925a150c06057f5830a1370eee65b5984f81a72d
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1563'
 ht-degree: 6%
-
 ---
-
 # パーソナライゼーションに[!DNL Adobe Target]と[!DNL Web SDK]を使用
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK]は、[!DNL Adobe Target]で管理されているパーソナライズされたエクスペリエンスをweb チャネルに配信してレンダリングできます。 [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) （VEC）と呼ばれるWYSIWYG エディター、または非ビジュアル インターフェイス [&#x200B; フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja)を使用して、アクティビティとパーソナライズされたエクスペリエンスを作成、アクティブ化、配信できます。
+[!DNL Adobe Experience Platform] [!DNL Web SDK]は、[!DNL Adobe Target]で管理されているパーソナライズされたエクスペリエンスをweb チャネルに配信してレンダリングできます。 [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) （VEC）と呼ばれるWYSIWYG エディター、または非ビジュアル インターフェイス [ フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)を使用して、アクティビティとパーソナライズされたエクスペリエンスを作成、アクティブ化、配信できます。
 
 >[!IMPORTANT]
 >
->at.js 2.xからExperience Platform Web SDK[&#128279;](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=ja)へのTargetの移行チュートリアルで、[!DNL Target]実装を[!DNL Experience Platform Web SDK]に移行する方法について説明します。
+>at.js 2.xからExperience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=ja)への[Targetの移行チュートリアルで、[!DNL Target]実装を[!DNL Experience Platform Web SDK]に移行する方法について説明します。
 >
->[Web SDKを使用したAdobe Experience Cloudの実装](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ja) チュートリアルで、[!DNL Target]を初めて実装する方法について説明します。 [!DNL Target]について詳しくは、「[Experience Platform Web SDKを使用したTargetの設定](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=ja)」というタイトルのチュートリアルの節を参照してください。
+>[Web SDKを使用したAdobe Experience Cloudの実装](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=ja) チュートリアルで、[!DNL Target]を初めて実装する方法について説明します。 [!DNL Target]について詳しくは、「[Experience Platform Web SDKを使用したTargetの設定](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html)」というタイトルのチュートリアルの節を参照してください。
 
 次の機能がテストされ、現在[!DNL Target]でサポートされています。
 
-* [A/B テスト](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=ja)
-* [A4T インプレッションとコンバージョンレポート](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja)
-* [Automated Personalization アクティビティ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja)
-* [エクスペリエンスのターゲット設定](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja)
-* [多変量分析テスト（MVT）](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=ja)
-* [Recommendations アクティビティ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=ja)
-* [ネイティブのターゲットインプレッションとコンバージョンレポート](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=ja)
-* [VEC サポート](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja)
+* [A/B テスト](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [A4T インプレッションとコンバージョンレポート](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
+* [Automated Personalization アクティビティ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [エクスペリエンスのターゲット設定](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [多変量分析テスト（MVT）](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Recommendations アクティビティ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* [ネイティブのターゲットインプレッションとコンバージョンレポート](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
+* [VEC サポート](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
 ## [!DNL Web SDK] システム ダイアグラム
 
@@ -42,7 +52,7 @@ ht-degree: 6%
 | 1 | デバイスが[!DNL Web SDK]を読み込みます。 [!DNL Web SDK]は、XDM データ、Datastreams Environment ID、渡されたパラメーター、Customer ID （オプション）を含むリクエストをEdge Networkに送信します。 ページ（またはコンテナ）は事前に非表示になっています。 |
 | 2 | Edge Networkは、エッジサービスにリクエストを送信し、訪問者ID、同意、および位置情報やデバイスに適した名前などの訪問者のコンテキスト情報でリクエストを強化します。 |
 | 3 | Edge Networkは、訪問者IDと渡されたパラメーターを使用して、エンリッチメントされたパーソナライゼーションリクエストを[!DNL Target] エッジに送信します。 |
-| 4 | プロファイルスクリプトが実行され、[!DNL Target]個のプロファイルストレージにフィードされます。 プロファイルストレージは、[!UICONTROL &#x200B; オーディエンスライブラリ &#x200B;]からセグメントを取得します（例えば、[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform]から共有されたセグメント）。 |
+| 4 | プロファイルスクリプトが実行され、[!DNL Target]個のプロファイルストレージにフィードされます。 プロファイルストレージは、[!UICONTROL  オーディエンスライブラリ ]からセグメントを取得します（例えば、[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform]から共有されたセグメント）。 |
 | 5 | URL リクエストパラメーターとプロファイルデータに基づいて、[!DNL Target]は、現在のページビューと将来のプリフェッチ済みビューに訪問者に表示するアクティビティとエクスペリエンスを決定します。 [!DNL Target]は、これをEdge Networkに送り返します。 |
 | 6 | a. Edge Networkは、パーソナライゼーションのレスポンスをページに送り返します。オプションで、追加のパーソナライゼーション用のプロファイル値を含めます。 現在のページ上のパーソナライズされたコンテンツは、デフォルトのコンテンツのちらつきを使用せずに、できるだけ早く表示されます。<br>b. シングルページアプリケーション（SPA）でのユーザーアクションの結果として表示されるビュー用のパーソナライズされたコンテンツはキャッシュされるので、ビューがトリガーされたときに追加のサーバーコールなしで即座に適用できます。 <br>c. Edge Networkは、同意、セッション ID、ID、Cookie チェック、パーソナライゼーションなど、訪問者IDおよびその他の値をCookieに送信します。 |
 | 7 | Web SDKは、デバイスからEdge Networkに通知を送信します。 |
@@ -52,27 +62,27 @@ ht-degree: 6%
 
 [!DNL Target]を有効にするには、次の操作を行います。
 
-1. 適切なクライアントコードを使用して、[&#x200B; データストリーム &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/datastreams/overview)の[!DNL Target]を有効にします。
+1. 適切なクライアントコードを使用して、[ データストリーム ](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)の[!DNL Target]を有効にします。
 1. イベントに`renderDecisions` オプションを追加します。
 
 次に、オプションで次のオプションを追加することもできます。
 
 * **`decisionScopes`**：このオプションをイベントに追加して、特定のアクティビティ（フォームベースのコンポーザーで作成されたアクティビティに便利）を取得します。
-* **[スニペットの事前非表示](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/manage-flicker)**: ページの特定の部分のみを非表示にします。
+* **[スニペットの事前非表示](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/manage-flicker)**: ページの特定の部分のみを非表示にします。
 
 ## [!UICONTROL Adobe Target] VECの使用
 
-[!DNL Web SDK]実装でVECを使用するには、[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)または[Chrome](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) VEC Helper Extensionのいずれかをインストールしてアクティベートします。
+[!DNL Web SDK]実装でVECを使用するには、[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)または[Chrome](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) VEC Helper Extensionのいずれかをインストールしてアクティベートします。
 
-詳しくは、*Adobe Target ガイド*&#x200B;の[Visual Experience Composer ヘルパー拡張機能](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=ja)を参照してください。
+詳しくは、*Adobe Target ガイド*&#x200B;の[Visual Experience Composer ヘルパー拡張機能](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)を参照してください。
 
 ## パーソナライズされたコンテンツのレンダリング
 
-詳しくは、[&#x200B; パーソナライゼーションコンテンツのレンダリング &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)を参照してください。
+詳しくは、[ パーソナライゼーションコンテンツのレンダリング ](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)を参照してください。
 
 ## XDMのオーディエンス
 
-[!DNL Web SDK]を介して配信される[!DNL Target] アクティビティのオーディエンスを定義する場合、[XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja)を定義して使用する必要があります。 XDM スキーマ、クラス、スキーマフィールドグループを定義したら、ターゲット用にXDM データで定義された[!DNL Target] オーディエンスルールを作成できます。 [!DNL Target]内では、XDM データは[!UICONTROL Audience Builder]にカスタムパラメーターとして表示されます。 XDMは、ドット表記法を使用してシリアル化されます（例：`web.webPageDetails.name`）。
+[!DNL Web SDK]を介して配信される[!DNL Target] アクティビティのオーディエンスを定義する場合、[XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)を定義して使用する必要があります。 XDM スキーマ、クラス、スキーマフィールドグループを定義したら、ターゲット用にXDM データで定義された[!DNL Target] オーディエンスルールを作成できます。 [!DNL Target]内では、XDM データは[!UICONTROL Audience Builder]にカスタムパラメーターとして表示されます。 XDMは、ドット表記法を使用してシリアル化されます（例：`web.webPageDetails.name`）。
 
 カスタムパラメーターまたはユーザープロファイルを使用する、事前定義されたオーディエンスを持つ[!DNL Target]件のアクティビティがある場合、SDKを介して正しく配信されません。 カスタムパラメーターやユーザープロファイルを使用する代わりに、代わりにXDMを使用する必要があります。 ただし、XDMを必要としない[!DNL Web SDK]経由でサポートされている、すぐに使用できるオーディエンスターゲティングフィールドがあります。 これらのフィールドは、XDMを必要としない[!DNL Target] UIで使用できます。
 
@@ -85,7 +95,7 @@ ht-degree: 6%
 * トラフィックソース
 * 時間枠
 
-詳しくは、*Adobe Target ガイド*&#x200B;の「[&#x200B; オーディエンスのカテゴリ &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=ja)」を参照してください。
+詳しくは、*Adobe Target ガイド*&#x200B;の「[ オーディエンスのカテゴリ ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html)」を参照してください。
 
 ### レスポンストークン
 
@@ -288,7 +298,7 @@ alloy("sendEvent", {
 
 ## デバッグ
 
-mboxTraceおよびmboxDebugは非推奨（廃止予定）となりました。 代わりに、[Web SDK デバッグ &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/use-cases/debugging)のメソッドを使用してください。
+mboxTraceおよびmboxDebugは非推奨（廃止予定）となりました。 代わりに、[Web SDK デバッグ ](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/use-cases/debugging)のメソッドを使用してください。
 
 ## 用語
 

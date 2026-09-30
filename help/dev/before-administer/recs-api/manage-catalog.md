@@ -3,26 +3,37 @@ title: APIを使用したレコメンデーションカタログの管理方法
 description: Adobe Target APIを使用して、レコメンデーションカタログ内のエンティティを作成、更新、保存、取得、および削除するために必要な手順。
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
+TQID: 'https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 930
+source-wordcount: '930'
 ht-degree: 0%
-
 ---
-
 # APIを使用したレコメンデーションカタログの管理
 
-Recommendations API[&#128279;](/help/dev/before-administer/recs-api/overview.md#prerequisites)を使用するための要件を満たしていることを確認しながら、JWT認証フローを使用して[&#x200B; アクセストークン &#x200B;](/help/dev/before-administer/configure-authentication.md)を生成し、[Adobe Developer Console](https://developer.adobe.com/console/home)で[!DNL Adobe Target]管理APIを使用する方法を学習しました。
+Recommendations API](/help/dev/before-administer/recs-api/overview.md#prerequisites)を使用するための[要件を満たしていることを確認しながら、JWT認証フローを使用して[ アクセストークン ](/help/dev/before-administer/configure-authentication.md)を生成し、[Adobe Developer Console](https://developer.adobe.com/console/home)で[!DNL Adobe Target]管理APIを使用する方法を学習しました。
 
 [Recommendations API](https://developer.adobe.com/target/administer/recommendations-api/)を使用して、レコメンデーションカタログ内の項目を追加、更新、または削除できるようになりました。 その他のAdobe Target管理APIと同様に、Recommendations APIには認証が必要です。
 
@@ -32,11 +43,11 @@ Recommendations API[&#128279;](/help/dev/before-administer/recs-api/overview.md#
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-続行する前に、[Recommendations Postman コレクション &#x200B;](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman)を入手してください。
+続行する前に、[Recommendations Postman コレクション ](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman)を入手してください。
 
 ## エンティティを保存APIを使用したアイテムの作成と更新
 
-CSV製品フィードまたは製品ページで実行されるTarget リクエストではなく、APIを使用してRecommendations製品データベースにデータを入力するには、[&#x200B; エンティティを保存API](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities)を使用します。 このリクエストは、単一のTarget環境の項目を追加または更新します。 構文は次のとおりです。
+CSV製品フィードまたは製品ページで実行されるTarget リクエストではなく、APIを使用してRecommendations製品データベースにデータを入力するには、[ エンティティを保存API](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities)を使用します。 このリクエストは、単一のTarget環境の項目を追加または更新します。 構文は次のとおりです。
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
@@ -150,13 +161,13 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 1. リクエストを送信します。
 
    ![GetEntity3](assets/GetEntity3.png)
-上記の例に示すように、エンティティが見つからなかったというエラーが表示された場合は、リクエストを正しいTarget環境に送信していることを確認してください。
+   上記の例に示すように、エンティティが見つからなかったというエラーが表示された場合は、リクエストを正しいTarget環境に送信していることを確認してください。
 
 
 
    >[!NOTE]
    >
-   >環境が明示的に指定されていない場合、「エンティティを取得」では、[&#x200B; デフォルト環境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=ja)のみからエンティティを取得しようとします。 デフォルト環境以外の環境から取得する場合は、環境IDを指定する必要があります。
+   >環境が明示的に指定されていない場合、「エンティティを取得」では、[ デフォルト環境](https://experienceleague.adobe.com/docs/target/using/administer/environments.html)のみからエンティティを取得しようとします。 デフォルト環境以外の環境から取得する場合は、環境IDを指定する必要があります。
 
 1. 必要に応じて、`environmentId` パラメーターを追加し、リクエストを再送信します。
 
@@ -170,7 +181,7 @@ GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
 
 ## エンティティを削除APIを使用した項目の削除
 
-カタログから項目を削除するには、[&#x200B; エンティティを削除API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteEntities)を使用します。 構文は次のとおりです。
+カタログから項目を削除するには、[ エンティティを削除API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteEntities)を使用します。 構文は次のとおりです。
 
 ```
 DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimited-entity-ids]&environment=[environmentId]

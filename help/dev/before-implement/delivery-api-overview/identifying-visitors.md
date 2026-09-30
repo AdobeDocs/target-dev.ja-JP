@@ -1,24 +1,28 @@
 ---
 title: Adobe Target Delivery APIによる訪問者の識別
-description: ' [!DNL Adobe Target]内のユーザーを特定するにはどうすればよいですか？'
+description: '[!DNL Adobe Target]内のユーザーを特定するにはどうすればよいですか？'
 keywords: Delivery API
 exl-id: 5b8c28aa-caad-44a9-880a-3c5f844e47b2
 feature: APIs/SDKs
-TQID: https://experienceleague.adobe.com/ciTxaPn8odyuyHzrnqhPWzdmpcU2bknOATGCt-ZtAZw
+TQID: 'https://experienceleague.adobe.com/ciTxaPn8odyuyHzrnqhPWzdmpcU2bknOATGCt-ZtAZw'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 797
+source-wordcount: '797'
 ht-degree: 11%
-
 ---
-
 # 訪問者の特定
 
 [!DNL Adobe Target]内で訪問者を識別する方法は複数あります。
@@ -228,11 +232,11 @@ curl -X POST \
     }'
 ```
 
-上記の呼び出しの例では、`authenticatedState`を含む`customerId`を送信する方法を示しています。 `customerId`を送信する場合、`integrationCode`、`id`、`authenticatedState`および`marketingCloudVisitorId`が必要です。 `integrationCode`は、CRSを通じて指定した[顧客属性ファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=ja)のエイリアスです。
+上記の呼び出しの例では、`authenticatedState`を含む`customerId`を送信する方法を示しています。 `customerId`を送信する場合、`integrationCode`、`id`、`authenticatedState`および`marketingCloudVisitorId`が必要です。 `integrationCode`は、CRSを通じて指定した[顧客属性ファイル ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=ja)のエイリアスです。
 
 ## 結合プロファイル
 
-同じリクエストで`tntId`、`thirdPartyID`および`marketingCloudVisitorId`を組み合わせることができます。 この場合、Adobe Targetは、これらすべてのIDのマッピングを管理し、訪問者に固定します。 様々な識別子を使用してプロファイルを[統合し、リアルタイムで](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=ja)同期する方法について説明します。
+同じリクエストで`tntId`、`thirdPartyID`および`marketingCloudVisitorId`を組み合わせることができます。 この場合、Adobe Targetは、これらすべてのIDのマッピングを管理し、訪問者に固定します。 様々な識別子を使用してプロファイルを[統合し、リアルタイムで](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html)同期する方法について説明します。
 
 ```
 curl -X POST \

@@ -1,24 +1,30 @@
 ---
-title: Python SDKを使用してディスプレイまたはクリック通知を [!DNL Adobe Target] に送信する
-description: sendNotifications （）を使用して、測定とレポート用にディスプレイ通知またはクリック通知を [!DNL Adobe Target] に送信する方法を説明します。
+title: Python SDKを使用してディスプレイまたはクリック通知を[!DNL Adobe Target]に送信する
+description: sendNotifications （）を使用して、測定とレポート用にディスプレイまたはクリック通知を[!DNL Adobe Target]に送信する方法を説明します。
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
-TQID: https://experienceleague.adobe.com/r7j2MaCmcZBEsx7TmTlKL9R-IKlncZJw5DhSfcKmVNU
+TQID: 'https://experienceleague.adobe.com/r7j2MaCmcZBEsx7TmTlKL9R-IKlncZJw5DhSfcKmVNU'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Measurement
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 420
+source-wordcount: '422'
 ht-degree: 8%
-
 ---
-
 # 通知の送信（Python）
 
 ## 説明
@@ -70,7 +76,7 @@ target_client.send_notifications(options)
 | target_location_hint_cookie | dict | [!DNL Target]の場所ヒント Cookie |
 | analytics_details | list[AnalyticsResponse] | [!DNL Analytics] ペイロード （クライアント側[!DNL Analytics]使用時） |
 | trace | リスト [辞書] | すべてのリクエスト mbox/ビューのトレース データを集約しました |
-| response_tokens | リスト [辞書] | [応答トークン&#x200B;リスト &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja) |
+| response_tokens | リスト [辞書] | [応答トークン&#x200B;リスト ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
 | meta | dict | オンデバイス判定で使用する追加の判定メタデータ |
 
 ## 例

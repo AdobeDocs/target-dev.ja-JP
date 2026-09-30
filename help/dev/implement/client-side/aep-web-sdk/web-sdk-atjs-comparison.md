@@ -1,33 +1,46 @@
 ---
 title: at.jsとExperience Platform Web SDKの比較
-description: at.js機能と [!DNL Experience Platform Web SDK]の比較について説明します。
+description: at.js機能と[!DNL Experience Platform Web SDK]の比較について説明します。
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示のスニペット；vec；フォームベースのExperience Composer;xdm;audiences;decisions；スコープ；スキーマ；システム図；図
 feature: AEP Web SDK
 exl-id: 31c9722b-5d92-4653-aa20-4183d166c097
-TQID: https://experienceleague.adobe.com/Ly2ytp87gfQ5mCES-43K5tU4-4fhTjdcdk-OxRRL-II
+TQID: 'https://experienceleague.adobe.com/Ly2ytp87gfQ5mCES-43K5tU4-4fhTjdcdk-OxRRL-II'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 2354
+source-wordcount: '2354'
 ht-degree: 9%
-
 ---
-
 # at.js ライブラリと[!DNL Adobe Experience Platform Web SDK]の比較
 
 ## 概要
@@ -48,7 +61,7 @@ ht-degree: 9%
 
 ビルド済みのバージョンは、CDNで利用できます。 CDN上のライブラリをページ上で直接参照するか、独自のインフラストラクチャでダウンロードしてホストできます。 最小化された形式と最小化されていない形式で使用できます。 最小化されていないバージョンは、デバッグの目的に役立ちます。
 
-詳しくは、[JavaScript ライブラリを使用したWeb SDKのインストール &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/install/library)を参照してください。
+詳しくは、[JavaScript ライブラリを使用したWeb SDKのインストール ](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library)を参照してください。
 
 ## ライブラリの設定
 
@@ -94,7 +107,7 @@ window.adobe.target.init(window, document, {
 
 ### Platform Web SDKの設定
 
-SDKの設定は、[`configure`](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/commands/configure/overview) コマンドを使用して行います。 `configure` コマンドは、最初に呼び出された&#x200B;*always*&#x200B;です。
+SDKの設定は、[`configure`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview) コマンドを使用して行います。 `configure` コマンドは、最初に呼び出された&#x200B;*always*&#x200B;です。
 
 ## ページ読み込み[!DNL Target] オファーをリクエストして自動的にレンダリングする方法
 
@@ -104,7 +117,7 @@ at.js 2.xを使用して、設定`pageLoadEnabled,`を有効にすると、ラ�
 
 ### [!DNL PLatform Web SDK]の使用中
 
-[!DNL Target] [Visual Experience Composer](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/visual-experience-composer)内で作成されたコンテンツは、SDKで自動的に取得およびレンダリングできます。
+[!DNL Target] [Visual Experience Composer](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)内で作成されたコンテンツは、SDKで自動的に取得およびレンダリングできます。
 
 [!DNL Target]件のオファーをリクエストして自動的にレンダリングするには、`sendEvent` コマンドを使用し、`renderDecisions` オプションを`true.`に設定します。これにより、SDKは、自動レンダリングの対象となるパーソナライズされたコンテンツを自動的にレンダリングします。
 
@@ -323,7 +336,7 @@ adobe.target.getOffers({
 
 ### [!DNL Platform Web SDK]の使用中
 
-`sendEvent` コマンドを使用し、`decisionScopes` オプションの下にmbox名を渡すことで、[!UICONTROL &#x200B; フォームベースのコンポーザー]のアクティビティを取得できます。 `sendEvent` コマンドは、要求されたアクティビティまたは提案を含むオブジェクトで解決されるプロミスを返します。
+`sendEvent` コマンドを使用し、`decisionScopes` オプションの下にmbox名を渡すことで、[!UICONTROL  フォームベースのコンポーザー]のアクティビティを取得できます。 `sendEvent` コマンドは、要求されたアクティビティまたは提案を含むオブジェクトで解決されるプロミスを返します。
 
 このコードスニペットは、`propositions`配列がどのように見えるかです。
 
@@ -457,7 +470,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-`applyOffers` コマンドについて詳しくは、[専用ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2)を参照してください。
+`applyOffers` コマンドについて詳しくは、[専用ドキュメント ](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2)を参照してください。
 
 ### [!DNL Platform Web SDK]の使用中
 
@@ -471,7 +484,7 @@ alloy("applyPropositions", {
 });
 ```
 
-`applyPropositions` コマンドについて詳しくは、[専用ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)を参照してください。
+`applyPropositions` コマンドについて詳しくは、[専用ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)を参照してください。
 
 ## イベントの追跡方法
 
@@ -625,7 +638,7 @@ alloy("sendEvent", {
 });
 ```
 
-[詳細情報](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
+[詳細情報](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
 
 **例3 - アクションの実行後に発生したイベントの追跡**
 
@@ -674,7 +687,7 @@ alloy("sendEvent", {
 
 ### at.jsの使用
 
-`adobe.target.triggerView`関数を使用します。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`関数は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL &#x200B; エクスペリエンスのターゲット設定] （XT）アクティビティを作成するシングルページアプリケーション （SPA）に対して実装する必要があります。 `adobe.target.triggerView()`がサイトに実装されていない場合、VECをSPAに使用することはできません。
+`adobe.target.triggerView`関数を使用します。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`関数は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B テスト ]および[!UICONTROL  エクスペリエンスのターゲット設定] （XT）アクティビティを作成するシングルページアプリケーション （SPA）に対して実装する必要があります。 `adobe.target.triggerView()`がサイトに実装されていない場合、VECをSPAに使用することはできません。
 
 **例**
 
@@ -705,9 +718,9 @@ alloy("sendEvent", {
 
 [詳細情報](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
 
-## [!UICONTROL 応答トークン &#x200B;]の活用方法
+## [!UICONTROL 応答トークン ]の活用方法
 
-[!DNL Target]から返されたPersonalization コンテンツには、[応答トークン &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/administer/response-tokens)が含まれています。 応答トークンには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、位置情報などの詳細が含まれます。 これらの詳細は、サードパーティのツールと共有することも、デバッグに使用することもできます。 応答トークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
+[!DNL Target]から返されたPersonalization コンテンツには、[応答トークン ](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)が含まれています。 応答トークンには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、位置情報などの詳細が含まれます。 これらの詳細は、サードパーティのツールと共有することも、デバッグに使用することもできます。 応答トークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
 
 ### at.jsの使用
 
@@ -721,7 +734,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 ### [!DNL Platform Web SDK]の使用中
 
@@ -729,7 +742,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >[!DNL Experience Platform Web SDK] バージョン 2.6.0以降を使用していることを確認してください。
 
-応答トークンは、`sendEvent` コマンドの結果で公開される`propositions`の一部として返されます。 各提案には`items,`の配列が含まれ、各項目には`meta` オブジェクトが含まれており、対応トークンが[!DNL Target]管理UIで有効になっている場合は、応答トークンが入力されます。 [詳細情報](https://experienceleague.adobe.com/ja/docs/target/using/administer/response-tokens)
+応答トークンは、`sendEvent` コマンドの結果で公開される`propositions`の一部として返されます。 各提案には`items,`の配列が含まれ、各項目には`meta` オブジェクトが含まれており、対応トークンが[!DNL Target]管理UIで有効になっている場合は、応答トークンが入力されます。 [詳細情報](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)
 
 **例**
 
@@ -836,7 +849,7 @@ Analytics クライアント側ログは、at.js設定で`analyticsLogging: clie
 }
 ```
 
-次に、ペイロードを[!DNL &#x200B; Data Insertion API]経由で[!DNL Analytics]に転送できます。
+次に、ペイロードを[!DNL  Data Insertion API]経由で[!DNL Analytics]に転送できます。
 
 例2: `getOffers`関数ごとに設定する：
 
@@ -890,7 +903,7 @@ adobe.target.getOffers({
 }
 ```
 
-[!DNL Analytics] ペイロード （`tnta` トークン）は、[&#x200B; データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を使用して[!DNL Analytics] ヒットに含める必要があります。
+[!DNL Analytics] ペイロード （`tnta` トークン）は、[ データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を使用して[!DNL Analytics] ヒットに含める必要があります。
 
 #### [!DNL Analytics] サーバーサイドのログ
 
@@ -900,7 +913,7 @@ adobe.target.getOffers({
 
 Analytics Server Side Logging ワークフローを示す![図](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=ja)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
 ### [!DNL Platform Web SDK]の使用中
 
@@ -915,7 +928,7 @@ Web SDKでは、次の機能もサポートしています。
 
 Analytics クライアント側のログ記録ワークフローを示す![図](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-disabled-datastream-config.png)
 
-お客様は、`sendEvent` コマンドをチェーンして[!DNL Analytics] データ挿入API[&#128279;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を使用してと共有する必要がある[!DNL Analytics] トークン （`tnta`）にアクセスし、結果として得られる提案の配列を繰り返します。
+お客様は、`sendEvent` コマンドをチェーンして[!DNL Analytics] データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を使用して[と共有する必要がある[!DNL Analytics] トークン （`tnta`）にアクセスし、結果として得られる提案の配列を繰り返します。
 
 **例**
 
@@ -950,19 +963,19 @@ alloy("sendEvent", {
 
 [!DNL Analytics] Client Sideが有効になっている場合のデータの流れを示す図を次に示します。
 
-Analytics クライアントサイドの![&#x200B; データフロー図のログ &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-client-side-logging.png)
+Analytics クライアントサイドの![ データフロー図のログ ](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-client-side-logging.png)
 
 #### [!DNL Analytics] サーバーサイドのログ
 
 [!DNL Analytics] サーバー側ログは、そのDataStream設定で[!DNL Analytics]が有効になっている場合に有効になります。
 
-Analytics設定を示す![&#x200B; データストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-enabled-datastream-config.png)
+Analytics設定を示す![ データストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-enabled-datastream-config.png)
 
 サーバーサイド [!DNL Analytics] ログが有効になっている場合、[!DNL Analytics] レポートに正しいインプレッションとコンバージョンが表示されるように、[!DNL Analytics]と共有する必要があるA4T ペイロードがEdge Network レベルで共有されるので、お客様は追加の処理を行う必要はありません。
 
 サーバーサイド分析ログが有効になっている場合、システムにデータが流れ込む方法は次のとおりです。
 
-![&#x200B; サーバーサイド分析ログのデータフローを示す図](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-server-side-logging.png)
+![ サーバーサイド分析ログのデータフローを示す図](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-server-side-logging.png)
 
 ## [!DNL Target] グローバル設定の設定方法
 
@@ -1172,7 +1185,7 @@ ID マップを使用すると、顧客は複数のIDを送信できます。 �
 
 1. データストリーム設定ページで[!DNL Target] サードパーティ IDを含む名前空間を設定します。
 
-![&#x200B; ターゲット サードパーティ ID名前空間フィールドを表示するデータストリーム UI](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
+![ ターゲット サードパーティ ID名前空間フィールドを表示するデータストリーム UI](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
 
 1. 次のように、`sendEvent` コマンドごとにID名前空間を送信します。
 
@@ -1222,7 +1235,7 @@ window.targetPageParams = function() {
 
 [!DNL Platform Web SDK]を使用している顧客は、データストリーム設定を設定する際に、[!DNL Adobe Target]名前空間の下でプロパティをより高いレベルで設定できます。
 
-Adobe Targetの設定を示す![&#x200B; データストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/at-property-setup.png)
+Adobe Targetの設定を示す![ データストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/at-property-setup.png)
 
 つまり、特定のデータストリーム設定に対する[!DNL Target]呼び出しごとに、そのプロパティトークンが含まれています。
 
@@ -1282,5 +1295,5 @@ at.js ライブラリは、次のデバッグ機能を公開します。
 * [Assurance](https://experienceleague.adobe.com/ja/docs/experience-platform/assurance/home)を使用しています
 * [Web SDK デバッグ有効](https://experienceleague.adobe.com/ja/docs/experience-platform/assurance/home)
 * [Web SDK モニタリングフックを使用](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/ja/docs/experience-platform/debugger/home)を使用
+* [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)を使用
 * ターゲットトレース

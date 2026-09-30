@@ -1,25 +1,28 @@
 ---
-title: ' [!DNL Adobe Target] Node.js SDKでのイベントの購読'
+title: '[!DNL Adobe Target] Node.js SDKのイベントの購読'
 description: '[!UICONTROL OnDeviceDecisioningHandler] オブジェクトを使用して、Node.js SDK内で発生するさまざまなイベントを購読する方法を説明します。'
 feature: APIs/SDKs
 exl-id: 40c53840-a560-4819-ae04-f527c36b22fe
-TQID: https://experienceleague.adobe.com/KWuJT-p-Er-1mx766Y-itlFn7REZnqkUksdHKCy-2-U
+TQID: 'https://experienceleague.adobe.com/KWuJT-p-Er-1mx766Y-itlFn7REZnqkUksdHKCy-2-U'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 164
+source-wordcount: '165'
 ht-degree: 2%
-
 ---
-
 # SDK Events （Node.js）
 
 ## 説明
 
-SDK[&#128279;](initialize-sdk.md)を初期化する場合、`options.events` オブジェクトは、イベント名キーとコールバック関数値を持つオプションのオブジェクトです。 SDK内で発生するさまざまなイベントの購読に使用できます。 例えば、`clientReady` イベントは、SDKがメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
+SDK](initialize-sdk.md)を[初期化する場合、`options.events` オブジェクトは、イベント名キーとコールバック関数値を持つオプションのオブジェクトです。 SDK内で発生するさまざまなイベントの購読に使用できます。 例えば、`clientReady` イベントは、SDKがメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
 
 コールバック関数が呼び出されると、イベントオブジェクトが渡されます。 各イベントには、イベント名に対応する`type`があります。 一部のイベントには、関連情報を含む追加のプロパティが含まれます。
 

@@ -1,31 +1,42 @@
 ---
 keywords: tls, tls 1.0, トランスポート層のセキュリティ，暗号化，tls 1.1, tls 1.2
-description: ' [!DNL Target] がTLS （Transport Layer Security） プロトコルを使用して、最高レベルのセキュリティ標準を維持し、顧客データの安全性を向上させる方法について説明します。'
-title: ' [!DNL Target] TLSを使用してセキュリティを確保する方法を教えてください。'
+description: '[!DNL Target]がTLS （Transport Layer Security） プロトコルを使用して、最高のセキュリティ標準を維持し、顧客データの安全性を向上させる方法について説明します。'
+title: '[!DNL Target]がセキュリティを提供するためにTLSをどのように使用しますか？'
 feature: Privacy & Security
 exl-id: f5ea2272-27ab-49c9-b096-b15dd277d4e5
-TQID: https://experienceleague.adobe.com/2Ka08Kp8jLd6u7-gtwbfU1rq7SGDxE-dwBTHWz1mS3E
+TQID: 'https://experienceleague.adobe.com/2Ka08Kp8jLd6u7-gtwbfU1rq7SGDxE-dwBTHWz1mS3E'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1231
+source-wordcount: '1233'
 ht-degree: 41%
-
 ---
-
 # TLS（Transport Layer Security）暗号化の変更
 
 [!DNL Adobe]と[!DNL Adobe Target]がTLS （Transport Layer Security）を使用して最高のセキュリティ標準を維持し、顧客データの安全性を向上させる方法の変更に関する情報。
@@ -44,7 +55,7 @@ TLS 1.2は2020年3月1日時点のデフォルトであり、TLS 1.1はサポー
 
 Adobeでは、お客様をTLS 1.2に段階的に移行します。 ドメインがすでに1.2に準拠している場合は、お客様からの変更を必要とせずにTLS 1.2に移行します。 ほとんどの顧客ドメインは既にTLS 1.2をサポートしていますが、お客様のドメインがTLS 1.2をサポートしていない場合、現在と同様に（2020年3月まで） TLS 1.1にドメインを維持します。
 
-この移行期間中は問題は発生しないはずです。 VECが以前に動作していたサイトの読み込みを停止した場合は、この移行が原因である可能性があることを示すクライアントケアチケットを[開きます](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=ja&#reference_ACA3391A00EF467B87930A450050077C)。
+この移行期間中は問題は発生しないはずです。 VECが以前に動作していたサイトの読み込みを停止した場合は、この移行が原因である可能性があることを示すクライアントケアチケットを[開きます](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C)。
 
 ただし、TLS 1.2をサポートしていないTSL 1.1を使用している顧客の1人である場合は、ドメイン/インフラストラクチャをTLS 1.2に移行する計画を立てる必要があります。 引き続き2020年3月1日までTLS 1.1 プロトコルをサポートします。 2020年3月1日以降、[!DNL Target]では、Enhanced Experience Composer機能を使用してVECに使用するTLS 1.1 プロトコルはサポートされません。
 
@@ -70,13 +81,13 @@ Adobeでは、お客様をTLS 1.2に段階的に移行します。 ドメイン�
 * [!DNL Target] レポートの訪問者数が、訪問者数が大幅に減少する可能性があることに注意してください。
 * TLS 1.2をサポートしていない古いデバイスやブラウザーをターゲットにするために、特別に作成したオーディエンスを変更する必要がある場合があります。 デバイスやブラウザーへの配信は機能しなくなります。
 
-サポートされているブラウザーとそのバージョンについて詳しくは、[&#x200B; サポートされているブラウザー](supported-browsers.md)を参照してください。
+サポートされているブラウザーとそのバージョンについて詳しくは、[ サポートされているブラウザー](supported-browsers.md)を参照してください。
 
 ## [!DNL Adobe Target] API
 
 2020年3月1日以降、[!DNL Target] APIはTLS 1.1暗号化をサポートしなくなります。 API にアクセスするお客様は、この変更による影響の有無を確認してください。
 
-* デフォルト設定でJava 7を使用しているAPI クライアントは、TLS 1.2をサポートするために変更が必要です。 詳しくは、Java Web サイトの「[&#x200B; クライアントエンドポイントのデフォルト TLS プロトコルバージョンの変更：TLS 1.0からTLS 1.2](https://www.java.com/en/configure_crypto.html)」を参照してください。
+* デフォルト設定でJava 7を使用しているAPI クライアントは、TLS 1.2をサポートするために変更が必要です。 詳しくは、Java Web サイトの「[ クライアントエンドポイントのデフォルト TLS プロトコルバージョンの変更：TLS 1.0からTLS 1.2](https://www.java.com/en/configure_crypto.html)」を参照してください。
 * Java 8 を使用している API クライアントは、デフォルト設定が TLS 1.2 なので、影響を受けません。
 * その他のフレームワークを使用している API クライアントは、TLS 1.2 のサポートについてベンダーにお問い合わせください。
 
