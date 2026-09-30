@@ -61,7 +61,7 @@ ht-degree: 9%
 
 ビルド済みのバージョンは、CDNで利用できます。 CDN上のライブラリをページ上で直接参照するか、独自のインフラストラクチャでダウンロードしてホストできます。 最小化された形式と最小化されていない形式で使用できます。 最小化されていないバージョンは、デバッグの目的に役立ちます。
 
-詳しくは、[JavaScript ライブラリを使用したWeb SDKのインストール &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library)を参照してください。
+詳しくは、[JavaScript ライブラリを使用したWeb SDKのインストール &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/install/library)を参照してください。
 
 ## ライブラリの設定
 
@@ -107,7 +107,7 @@ window.adobe.target.init(window, document, {
 
 ### Platform Web SDKの設定
 
-SDKの設定は、[`configure`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview) コマンドを使用して行います。 `configure` コマンドは、最初に呼び出された&#x200B;*always*&#x200B;です。
+SDKの設定は、[`configure`](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/commands/configure/overview) コマンドを使用して行います。 `configure` コマンドは、最初に呼び出された&#x200B;*always*&#x200B;です。
 
 ## ページ読み込み[!DNL Target] オファーをリクエストして自動的にレンダリングする方法
 
@@ -117,7 +117,7 @@ at.js 2.xを使用して、設定`pageLoadEnabled,`を有効にすると、ラ�
 
 ### [!DNL PLatform Web SDK]の使用中
 
-[!DNL Target] [Visual Experience Composer](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)内で作成されたコンテンツは、SDKで自動的に取得およびレンダリングできます。
+[!DNL Target] [Visual Experience Composer](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/visual-experience-composer)内で作成されたコンテンツは、SDKで自動的に取得およびレンダリングできます。
 
 [!DNL Target]件のオファーをリクエストして自動的にレンダリングするには、`sendEvent` コマンドを使用し、`renderDecisions` オプションを`true.`に設定します。これにより、SDKは、自動レンダリングの対象となるパーソナライズされたコンテンツを自動的にレンダリングします。
 
@@ -638,7 +638,7 @@ alloy("sendEvent", {
 });
 ```
 
-[詳細情報](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
+[詳細情報](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
 
 **例3 - アクションの実行後に発生したイベントの追跡**
 
@@ -720,7 +720,7 @@ alloy("sendEvent", {
 
 ## [!UICONTROL 応答トークン &#x200B;]の活用方法
 
-[!DNL Target]から返されたPersonalization コンテンツには、[応答トークン &#x200B;](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)が含まれています。 応答トークンには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、位置情報などの詳細が含まれます。 これらの詳細は、サードパーティのツールと共有することも、デバッグに使用することもできます。 応答トークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
+[!DNL Target]から返されたPersonalization コンテンツには、[応答トークン &#x200B;](https://experienceleague.adobe.com/ja/docs/target/using/administer/response-tokens)が含まれています。 応答トークンには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、位置情報などの詳細が含まれます。 これらの詳細は、サードパーティのツールと共有することも、デバッグに使用することもできます。 応答トークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
 
 ### at.jsの使用
 
@@ -734,7 +734,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)
 
 ### [!DNL Platform Web SDK]の使用中
 
@@ -742,7 +742,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >[!DNL Experience Platform Web SDK] バージョン 2.6.0以降を使用していることを確認してください。
 
-応答トークンは、`sendEvent` コマンドの結果で公開される`propositions`の一部として返されます。 各提案には`items,`の配列が含まれ、各項目には`meta` オブジェクトが含まれており、対応トークンが[!DNL Target]管理UIで有効になっている場合は、応答トークンが入力されます。 [詳細情報](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)
+応答トークンは、`sendEvent` コマンドの結果で公開される`propositions`の一部として返されます。 各提案には`items,`の配列が含まれ、各項目には`meta` オブジェクトが含まれており、対応トークンが[!DNL Target]管理UIで有効になっている場合は、応答トークンが入力されます。 [詳細情報](https://experienceleague.adobe.com/ja/docs/target/using/administer/response-tokens)
 
 **例**
 
@@ -913,7 +913,7 @@ adobe.target.getOffers({
 
 Analytics Server Side Logging ワークフローを示す![図](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
 
-[詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
+[詳細情報](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=ja)
 
 ### [!DNL Platform Web SDK]の使用中
 
@@ -1295,5 +1295,5 @@ at.js ライブラリは、次のデバッグ機能を公開します。
 * [Assurance](https://experienceleague.adobe.com/ja/docs/experience-platform/assurance/home)を使用しています
 * [Web SDK デバッグ有効](https://experienceleague.adobe.com/ja/docs/experience-platform/assurance/home)
 * [Web SDK モニタリングフックを使用](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)を使用
+* [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/ja/docs/experience-platform/debugger/home)を使用
 * ターゲットトレース

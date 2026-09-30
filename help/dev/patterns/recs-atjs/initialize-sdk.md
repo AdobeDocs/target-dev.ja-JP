@@ -88,27 +88,27 @@ ht-degree: 5%
 
 **前提条件**
 
-* 訪問者ID/API サービスを使用するには、会社が[!DNL Adobe Experience Cloud]に対して有効になっており、[!UICONTROL 組織ID]を持っている必要があります。 詳しくは、*Identity Service ヘルプ* ガイドの[Experience Cloud要件：組織ID](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank}を参照してください。
-* `VisitorAPI.js` ファイルが必要です。 [!DNL Adobe Analytics]が実装されている場合は、このファイルを既に用意しておく必要があります。 このファイルは、[[!DNL Adobe Experience Platform] tags拡張機能](https://experienceleague.adobe.com/docs/tags.html){target=_blank}を通じて追加することも、[Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}からダウンロードすることもできます。
+* 訪問者ID/API サービスを使用するには、会社が[!DNL Adobe Experience Cloud]に対して有効になっており、[!UICONTROL 組織ID]を持っている必要があります。 詳しくは、*Identity Service ヘルプ* ガイドの[Experience Cloud要件：組織ID](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=ja&){target=_blank}を参照してください。
+* `VisitorAPI.js` ファイルが必要です。 [!DNL Adobe Analytics]が実装されている場合は、このファイルを既に用意しておく必要があります。 このファイルは、[[!DNL Adobe Experience Platform] tags拡張機能](https://experienceleague.adobe.com/docs/tags.html?lang=ja){target=_blank}を通じて追加することも、[Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=ja){target=_blank}からダウンロードすることもできます。
 
 **VisitorAPI.jsの設定と参照**
 
-詳しくは、「[Target用Experience Cloud サービスの実装](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html){target=_blank}」を参照してください。
+詳しくは、「[Target用Experience Cloud サービスの実装](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=ja){target=_blank}」を参照してください。
 
 **読み取り**
 
-* [Experience Cloud Identity Serviceの概要](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html){target=_blank}
-* [ID サービスについて](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html){target=_blank}
-* [Cookies および Experience Cloud ID サービス](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html){target=_blank}
-* [Experience Cloud ID サービスがIDをリクエストおよび設定する方法](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html){target=_blank}
-* [IDの同期と一致率について](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html){target=_blank}
+* [Experience Cloud Identity Serviceの概要](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=ja){target=_blank}
+* [ID サービスについて](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html?lang=ja){target=_blank}
+* [Cookies および Experience Cloud ID サービス](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=ja){target=_blank}
+* [Experience Cloud ID サービスがIDをリクエストおよび設定する方法](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=ja){target=_blank}
+* [IDの同期と一致率について](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html?lang=ja){target=_blank}
 
 **アクション**
 
 * Web ページに`VisitorAPI.js` ファイルを埋め込みます。
-* 訪問者ID/API サービス [&#128279;](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}で使用できる構成について説明します。
+* 訪問者ID/API サービス [&#128279;](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=ja){target=_blank}で使用できる構成について説明します。
 * `VisitorAPI.js` ファイルが読み込まれたら、`Visitor.getInstance` メソッドを使用して、必要な構成を使用して初期化します。
-* [使用可能なメソッド &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}について説明します。
+* [使用可能なメソッド &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=ja){target=_blank}について説明します。
 
 +++
 
@@ -127,11 +127,11 @@ ht-degree: 5%
 * 訪問者の既知のIDは、データレイヤーで利用できる必要があります。
 
 **顧客IDを設定**
-詳しくは、[setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html){target=_blank}を参照してください。
+詳しくは、[setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=ja){target=_blank}を参照してください。
 
 **読み取り**
 
-* [mbox3rdPartyId のリアルタイムプロファイル同期](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html){target=_blank}
+* [mbox3rdPartyId のリアルタイムプロファイル同期](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=ja){target=_blank}
 
 **アクション**
 
@@ -242,15 +242,15 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 ## 1.6: プロモーション {#promotion}
 
-[!DNL Target Recommendations] [&#x200B; デザイン &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}で、プロモーションされたアイテムを追加し、その配置を制御します。
+[!DNL Target Recommendations] [&#x200B; デザイン &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=ja){target=_blank}で、プロモーションされたアイテムを追加し、その配置を制御します。
 
 +++詳細を見る
 
 **使用可能なオプション**
 
 * IDによるプロモーション
-* [コレクションで宣伝](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
-* [属性で昇格](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [コレクションで宣伝](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=ja){target=_blank}
+* [属性で昇格](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=ja){target=_blank}
 
 **エンティティ パラメーターが必要**
 
@@ -278,7 +278,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **読み取り**
 
-* [カートベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [カートベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -307,7 +307,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **読み取り**
 
-* [人気ベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [人気ベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -332,7 +332,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **読み取り**
 
-* [アイテムベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [アイテムベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -355,7 +355,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **読み取り**
 
-* [ユーザーベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [ユーザーベース](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -377,7 +377,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **読み取り**
 
-* [カスタム条件](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [カスタム条件](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=ja#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -389,7 +389,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **読み取り**
 
-* [動的および静的インクルージョンルールの使用](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
+* [動的および静的インクルージョンルールの使用](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=ja){target=_blank}
 
 +++
 
@@ -403,7 +403,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **読み取り**
 
-* [エンティティを動的に除外できますか。](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
+* [エンティティを動的に除外できますか。](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=ja#exclude){target=_blank}
 
 +++
 
@@ -417,7 +417,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **読み取り**
 
-* [エンティティの属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=en){target=_blank}
+* [エンティティの属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=ja){target=_blank}
 
 +++
 
@@ -465,7 +465,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 *読み取り*
 
-* [Target の仕組み](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html){target=_blank}
+* [Target の仕組み](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=ja){target=_blank}
 * [at.js の仕組み](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 * [タグマネージャーを使用しない Target の実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
 

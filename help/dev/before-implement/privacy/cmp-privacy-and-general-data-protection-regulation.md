@@ -101,7 +101,7 @@ Adobe Experience Platformを使用してオプトインを管理する方法を�
 
 1. **Target タグはAdobe Experience Platform（または以前に承認されたデータ主体）を介して事前承認されています：** Target タグは同意のために保持されず、期待どおりに機能しません。
 1. **Target タグが事前に承認されていない状態で、`bodyHidingEnabled` が FALSE に設定されている：** Target タグは、お客様から同意が得られるまで実行されません。 同意が得られるまでは、デフォルトコンテンツのみを使用できます。 同意が得られると Target が呼び出されて、パーソナライズされたコンテンツがデータ主体（訪問者）に対して提供されるようになります。 同意が得られるまではデフォルトコンテンツしか使用できないので、適切な戦略を採用することが重要です。例えば、スプラッシュページを使用してページの一部やパーソナライズされる可能性があるコンテンツを覆い隠すことなどを検討してください。 これにより、データ主体（訪問者）のエクスペリエンスの一貫性を維持することができます。
-1. **Target タグが事前に承認されていない状態で、`bodyHidingEnabled` が TRUE に設定されている：** Target タグは、お客様から同意が得られるまで実行されません。 同意が得られるまでは、デフォルトコンテンツのみを使用できます。 ただし、`bodyHidingEnabled` が true に設定されているので、Target タグが実行されるまで（またはデータ主体がオプトインを拒否するまで）ページ上で非表示になるコンテンツは `bodyHiddenStyle` によって決定されます。データ主体がオプトインを拒否した場合は、デフォルトコンテンツが表示されます。 デフォルトでは、`bodyHiddenStyle` が `body { opacity:0;}` に設定されているので、HTML body タグは非表示になります。 以下に、アドビが推奨するページ設定を示します。この設定では、ページのコンテンツを 1 つのコンテナに配置し、同意管理ダイアログを別のコンテナに配置することで、同意管理ダイアログ以外のページ本文全体を非表示にしています。 このように Target を設定すると、ページコンテンツのコンテナのみが非表示になります。 詳しくは、[Privacy Service の概要](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?)を参照してください。
+1. **Target タグが事前に承認されていない状態で、`bodyHidingEnabled` が TRUE に設定されている：** Target タグは、お客様から同意が得られるまで実行されません。 同意が得られるまでは、デフォルトコンテンツのみを使用できます。 ただし、`bodyHidingEnabled` が true に設定されているので、Target タグが実行されるまで（またはデータ主体がオプトインを拒否するまで）ページ上で非表示になるコンテンツは `bodyHiddenStyle` によって決定されます。データ主体がオプトインを拒否した場合は、デフォルトコンテンツが表示されます。 デフォルトでは、`bodyHiddenStyle` が `body { opacity:0;}` に設定されているので、HTML body タグは非表示になります。 以下に、アドビが推奨するページ設定を示します。この設定では、ページのコンテンツを 1 つのコンテナに配置し、同意管理ダイアログを別のコンテナに配置することで、同意管理ダイアログ以外のページ本文全体を非表示にしています。 このように Target を設定すると、ページコンテンツのコンテナのみが非表示になります。 詳しくは、[Privacy Service の概要](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=ja&)を参照してください。
 
    次に、3 つ目のシナリオで推奨されるページ設定を示します。
 
@@ -147,7 +147,7 @@ Adobe Targetを含むAdobe Experience Cloud ソリューション全体のあら
 
 ### Adobeでは、お客様がデータ主体/ユーザーのリクエストに応じて削除できる情報は何ですか？
 
-個々の訪問者に関する Target 内の情報は、Target 訪問者プロファイルに格納されています。 Targetを使用すると、顧客は訪問者プロファイルのIDに関連付けられたすべてのデータを削除できます。 プロファイルデータターゲットストアの例については、[訪問者プロファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)を参照してください。
+個々の訪問者に関する Target 内の情報は、Target 訪問者プロファイルに格納されています。 Targetを使用すると、顧客は訪問者プロファイルのIDに関連付けられたすべてのデータを削除できます。 プロファイルデータターゲットストアの例については、[訪問者プロファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=ja)を参照してください。
 
 個人を特定しない集約化されたあるいは匿名化されたデータ（レポートデータなど）または特定の個人に関連しないデータ（コンテンツデータなど）は、ユーザーからの削除要請の範疇外となります。
 
@@ -175,7 +175,7 @@ GDPR および CCPA では、いつ同意の取得が必要となるかに関す
 
 Adobe Targetでは、Adobe Experience Platformを通じてオプトイン機能をサポートし、同意管理戦略をサポートします。 オプトイン機能を使用すると、Target タグを実行する方法とタイミングを制御できます。 Adobe Experience Platformでは、Target タグを事前承認するオプションもあります。 Adobe Experience Platformを使用してオプトインを管理する方法をお勧めします。 Adobe Experience Platformでは、Targetを実行する前にページの一部の要素を非表示にするための詳細な制御が可能です。これは、同意戦略の一部として使用すると便利です。
 
-GDPR、CCPA、Adobe Experience Platformについて詳しくは、[Adobe Privacy JavaScript LibraryおよびGDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?)を参照してください。 また、前述の *Adobe Target と Adobe Experience Platform のオプトイン*&#x200B;の節も参照してください。
+GDPR、CCPA、Adobe Experience Platformについて詳しくは、[Adobe Privacy JavaScript LibraryおよびGDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=ja&)を参照してください。 また、前述の *Adobe Target と Adobe Experience Platform のオプトイン*&#x200B;の節も参照してください。
 
 ### `AdobePrivacy.js` は情報を GDPR API に送信しますか？
 
@@ -314,7 +314,7 @@ Target のアクセス API 応答は次の例のようになります。
 | Sample_Parameter | Target プロファイル内の多数の情報が、データ管理者によってアップロードされるか、直接提供されます。 この例では、プロファイル更新 API を利用して Target プロファイルにパラメーターがアップロードされました。 詳しくは、[データを Target に送信する方法](/help/dev/before-implement/methods-to-get-data-into-target/methods-to-get-data-into-target.md)を参照してください。 |
 | user.ReturnTimeOfDay | この標準フィールドには、ユーザーの直近の再来訪の時刻が含まれます。 |
 | firstSessionStart | この標準フィールドには、ユーザーの最初のセッションが開始された時刻が含まれます。 |
-| user.sessionCountScript | Target プロファイル内の多数の情報が、データ管理者によってアップロードされるか、直接提供されます。 この例では、プロファイルスクリプトは、この訪問者がデータコントローラーのサイトに対して行ったセッション数を増やします。 詳しくは、[プロファイルスクリプト属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html)を参照してください。 |
+| user.sessionCountScript | Target プロファイル内の多数の情報が、データ管理者によってアップロードされるか、直接提供されます。 この例では、プロファイルスクリプトは、この訪問者がデータコントローラーのサイトに対して行ったセッション数を増やします。 詳しくは、[プロファイルスクリプト属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=ja)を参照してください。 |
 
 >[!NOTE]
 >

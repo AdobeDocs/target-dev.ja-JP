@@ -35,7 +35,7 @@ ht-degree: 0%
 
 Recommendationsが提供するアルゴリズムが、プロモーションする特定の項目を表示できない場合があります。 このような場合、カスタム基準を使用すると、特定の主要項目またはカテゴリに対して特定の推奨項目のセットを配信できます。
 
-カスタム基準を作成するには、キー項目またはカテゴリと推奨項目の間に目的のマッピングを定義して読み込みます。 このプロセスについては、[&#x200B; カスタム条件ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)を参照してください。 このドキュメントで説明しているように、Target ユーザーインターフェイス（UI）を使用して、カスタム条件を作成、編集、削除できます。 ただし、Targetには、カスタム条件をより詳細に管理できる一連のカスタム条件APIも用意されています。
+カスタム基準を作成するには、キー項目またはカテゴリと推奨項目の間に目的のマッピングを定義して読み込みます。 このプロセスについては、[&#x200B; カスタム条件ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=ja)を参照してください。 このドキュメントで説明しているように、Target ユーザーインターフェイス（UI）を使用して、カスタム条件を作成、編集、削除できます。 ただし、Targetには、カスタム条件をより詳細に管理できる一連のカスタム条件APIも用意されています。
 
 >[!WARNING]
 >
@@ -49,7 +49,7 @@ Recommendationsが提供するアルゴリズムが、プロモーションす�
 
 >[!WARNING]
 >
->この演習で説明しているように、カスタム条件を作成APIを使用して作成されたカスタム条件は、UIに表示され、永続化されます。 UIから編集または削除することはできません。 API **を介して**&#x200B;編集または削除できますが、いずれにしても、Target UIに引き続き表示されます。 UIの編集または削除のオプションを維持するには、「カスタム条件を作成」 APIを使用するのではなく、[&#x200B; ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)ごとにUIを使用してカスタム条件を作成します。
+>この演習で説明しているように、カスタム条件を作成APIを使用して作成されたカスタム条件は、UIに表示され、永続化されます。 UIから編集または削除することはできません。 API **を介して**&#x200B;編集または削除できますが、いずれにしても、Target UIに引き続き表示されます。 UIの編集または削除のオプションを維持するには、「カスタム条件を作成」 APIを使用するのではなく、[&#x200B; ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=ja)ごとにUIを使用してカスタム条件を作成します。
 
 上記の警告を読み、後でUIから削除できない新しいカスタム条件の作成に慣れた後にのみ、次の手順に進みます。
 

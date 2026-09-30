@@ -81,7 +81,7 @@ SPA用[!UICONTROL Adobe Target] VECは、[!UICONTROL &#x200B; ビュー]と呼�
 
 [!UICONTROL XDM ビュー]を[!DNL Target]で利用すると、マーケターは[!UICONTROL Visual Experience Composer]を介してSPAでA/B テストとXT テストを実行できます。 これを行うには、1回限りの開発者セットアップを完了するために、次の手順を実行する必要があります。
 
-1. [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview)をインストールします。
+1. [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/install/overview)をインストールします。
 2. パーソナライズするシングルページアプリケーションのすべての[!UICONTROL XDM ビュー]を決定します。
 3. [!UICONTROL XDM ビュー]を定義した後、A/BまたはXT VEC アクティビティを配信するには、`renderDecisions`を`true`に設定し、対応する[!UICONTROL XDM ビュー]をシングルページアプリケーションに`sendEvent()`関数を実装します。 [!UICONTROL XDM ビュー]は`xdm.web.webPageDetails.viewName`で渡す必要があります。 この手順により、マーケターは[!UICONTROL Visual Experience Composer]を活用して、これらのXDMのA/B テストおよびXT テストを開始できます。
 
@@ -241,7 +241,7 @@ class Checkout extends Component {
 
 >[!NOTE]
 >
->SPAにVECを使用するには、[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)または[Chrome VEC Helper Extension](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)のいずれかをインストールしてアクティベートする必要があります。
+>SPAにVECを使用するには、[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)または[Chrome VEC Helper Extension](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)のいずれかをインストールしてアクティベートする必要があります。
 
 ### [!UICONTROL 変更] パネル
 

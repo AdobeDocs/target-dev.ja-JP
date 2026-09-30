@@ -61,7 +61,7 @@ ht-degree: 1%
 
 <!--(1. Generate your private key and public certificate, per the [documentation on authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (as described in **Step 1** of [How to set up Adobe IO: Authentication - Step by Step](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). After completing Step 1, return to this guide and resume with Step 2, below. // The outcome of this step should be the creation of a `private.key` file and a `certificate_pub.crt` file. Return to this guide once you have generated these two files.)-->
 
-1. [Adobe Admin Console](https://adminconsole.adobe.com/)で、[!DNL Adobe] ユーザーアカウントに[製品管理者](https://helpx.adobe.com/enterprise/using/admin-roles.html)と[開発者](https://helpx.adobe.com/enterprise/using/manage-developers.html) レベルの両方の[!DNL Target]へのアクセス権が付与されていることを確認します。
+1. [Adobe Admin Console](https://adminconsole.adobe.com/)で、[!DNL Adobe] ユーザーアカウントに[製品管理者](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)と[開発者](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html) レベルの両方の[!DNL Target]へのアクセス権が付与されていることを確認します。
 
 1. [Adobe Developer Console](https://developer.adobe.com/console/home)で、この統合を作成する[!UICONTROL Experience Cloud Organization]を選択します。 （Experience Cloud組織へのアクセス権は1つのみになる可能性があります）。
 
@@ -112,7 +112,7 @@ Postmanでは、プロジェクトの詳細を指定する方法を数多く用�
 
 >[!NOTE]
 >
->[!DNL Target]を含む任意のExperience Cloud ソリューションに適用されるビデオ手順については、[Experience Platform APIでのPostmanの使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html)を参照してください。 次のセクションは、[!DNL Target] APIに関連しています：1. Experience Platform APIを作成してPostman 2に書き出します。 Postmanでアクセストークンを生成します。 これらの手順は以下にも示します。
+>[!DNL Target]を含む任意のExperience Cloud ソリューションに適用されるビデオ手順については、[Experience Platform APIでのPostmanの使用](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=ja)を参照してください。 次のセクションは、[!DNL Target] APIに関連しています：1. Experience Platform APIを作成してPostman 2に書き出します。 Postmanでアクセストークンを生成します。 これらの手順は以下にも示します。
 
 1. まだ[Adobe Developer Console](https://developer.adobe.com/console/home)に移動して、新しいプロジェクトの&#x200B;**[!UICONTROL サービスアカウント（JWT）]**&#x200B;資格情報を表示します。 図に示すように、左側のナビゲーションまたは&#x200B;**[!UICONTROL 資格情報]** セクションのいずれかを使用します。
 

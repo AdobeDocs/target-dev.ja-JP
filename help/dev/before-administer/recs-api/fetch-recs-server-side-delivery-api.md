@@ -64,9 +64,9 @@ Adobe Target用[配信API](/help/dev/implement/delivery-api/overview.md)は、�
 
 ## フォームベースのExperience Composerを使用したレコメンデーションの作成
 
-配信APIで使用できるレコメンデーションを作成するには、[&#x200B; フォームベースのコンポーザー](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)を使用します。
+配信APIで使用できるレコメンデーションを作成するには、[&#x200B; フォームベースのコンポーザー](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja)を使用します。
 
-1. まず、レコメンデーションで使用するJSON ベースのデザインを作成して保存します。 サンプル JSONと、フォームベースのアクティビティを設定する際にJSON応答を返す方法に関する背景情報については、[&#x200B; レコメンデーションデザインの作成](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html)に関するドキュメントを参照してください。 この例では、デザインの名前は&#x200B;*Simple JSONです。*
+1. まず、レコメンデーションで使用するJSON ベースのデザインを作成して保存します。 サンプル JSONと、フォームベースのアクティビティを設定する際にJSON応答を返す方法に関する背景情報については、[&#x200B; レコメンデーションデザインの作成](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=ja)に関するドキュメントを参照してください。 この例では、デザインの名前は&#x200B;*Simple JSONです。*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. Targetで、**[!UICONTROL アクティビティ]** > **[!UICONTROL アクティビティの作成]** > **[!UICONTROL Recommendations]**&#x200B;に移動し、**[!UICONTROL Form]**&#x200B;を選択します。
@@ -76,7 +76,7 @@ Adobe Target用[配信API](/help/dev/implement/delivery-api/overview.md)は、�
 1. プロパティを選択し、**[!UICONTROL 次へ]**&#x200B;をクリックします。
 1. レコメンデーションの応答をユーザーに受け取ってもらう場所を定義します。 次の例では、*api_charter*&#x200B;という名前の場所を使用しています。 *Simple JSONという名前で以前に作成したJSON ベースのデザインを選択します。*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. レコメンデーションを保存してアクティブ化します。 結果が生まれます。 [結果の準備ができたら](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html)、配信APIを使用してそれらを取得できます。
+1. レコメンデーションを保存してアクティブ化します。 結果が生まれます。 [結果の準備ができたら](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=ja)、配信APIを使用してそれらを取得できます。
 
 ## 配信APIの使用
 
@@ -137,7 +137,7 @@ Adobe Target Recommendations エンティティを管理し、サーバーサイ
 ## リファレンスドキュメント
 
 * [Adobe Target Delivery API ドキュメント](/help/dev/implement/delivery-api/overview.md)
-* [レコメンデーションとメールの統合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
+* [レコメンデーションとメールの統合](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=ja)
 
 ## 概要とレビュー
 
