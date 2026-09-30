@@ -35,7 +35,7 @@ ht-degree: 0%
 
 Recommendationsが提供するアルゴリズムが、プロモーションする特定の項目を表示できない場合があります。 このような場合、カスタム基準を使用すると、特定の主要項目またはカテゴリに対して特定の推奨項目のセットを配信できます。
 
-カスタム基準を作成するには、キー項目またはカテゴリと推奨項目の間に目的のマッピングを定義して読み込みます。 このプロセスについては、[ カスタム条件ドキュメント ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)を参照してください。 このドキュメントで説明しているように、Target ユーザーインターフェイス（UI）を使用して、カスタム条件を作成、編集、削除できます。 ただし、Targetには、カスタム条件をより詳細に管理できる一連のカスタム条件APIも用意されています。
+カスタム基準を作成するには、キー項目またはカテゴリと推奨項目の間に目的のマッピングを定義して読み込みます。 このプロセスについては、[&#x200B; カスタム条件ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)を参照してください。 このドキュメントで説明しているように、Target ユーザーインターフェイス（UI）を使用して、カスタム条件を作成、編集、削除できます。 ただし、Targetには、カスタム条件をより詳細に管理できる一連のカスタム条件APIも用意されています。
 
 >[!WARNING]
 >
@@ -43,13 +43,13 @@ Recommendationsが提供するアルゴリズムが、プロモーションす�
 
 ## カスタム条件を作成
 
-[ カスタム条件を作成API](https://developer.adobe.com/target/administer/recommendations-api/#operation/createCriteriaCustom)を使用してカスタム条件を作成するには、構文は次のとおりです。
+[&#x200B; カスタム条件を作成API](https://developer.adobe.com/target/administer/recommendations-api/#operation/createCriteriaCustom)を使用してカスタム条件を作成するには、構文は次のとおりです。
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
 >[!WARNING]
 >
->この演習で説明しているように、カスタム条件を作成APIを使用して作成されたカスタム条件は、UIに表示され、永続化されます。 UIから編集または削除することはできません。 API **を介して**&#x200B;編集または削除できますが、いずれにしても、Target UIに引き続き表示されます。 UIの編集または削除のオプションを維持するには、「カスタム条件を作成」 APIを使用するのではなく、[ ドキュメント ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)ごとにUIを使用してカスタム条件を作成します。
+>この演習で説明しているように、カスタム条件を作成APIを使用して作成されたカスタム条件は、UIに表示され、永続化されます。 UIから編集または削除することはできません。 API **を介して**&#x200B;編集または削除できますが、いずれにしても、Target UIに引き続き表示されます。 UIの編集または削除のオプションを維持するには、「カスタム条件を作成」 APIを使用するのではなく、[&#x200B; ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html)ごとにUIを使用してカスタム条件を作成します。
 
 上記の警告を読み、後でUIから削除できない新しいカスタム条件の作成に慣れた後にのみ、次の手順に進みます。
 
@@ -57,7 +57,7 @@ Recommendationsが提供するアルゴリズムが、プロモーションす�
 
    ![CreateCustomCriteria1](assets/CreateCustomCriteria1.png)
 
-1. カスタム条件CSV ファイルの場所を定義する&#x200B;**Body**&#x200B;を&#x200B;**raw** JSONとして追加します。 [ カスタム条件を作成API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom)のドキュメントで提供されている例をテンプレートとして使用し、必要に応じて`environmentId`およびその他の値を指定します。 この例では、キーとしてLAST_PURCHASEDを使用します。
+1. カスタム条件CSV ファイルの場所を定義する&#x200B;**Body**&#x200B;を&#x200B;**raw** JSONとして追加します。 [&#x200B; カスタム条件を作成API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom)のドキュメントで提供されている例をテンプレートとして使用し、必要に応じて`environmentId`およびその他の値を指定します。 この例では、キーとしてLAST_PURCHASEDを使用します。
 
    ![CreateCustomCriteria2](assets/CreateCustomCriteria2.png)
 
@@ -73,7 +73,7 @@ Recommendationsが提供するアルゴリズムが、プロモーションす�
 
 ## カスタム条件のリスト
 
-すべてのカスタム条件のリストとそれぞれの詳細を取得するには、[ カスタム条件のリスト API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom)を使用します。 構文は次のとおりです。
+すべてのカスタム条件のリストとそれぞれの詳細を取得するには、[&#x200B; カスタム条件のリスト API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom)を使用します。 構文は次のとおりです。
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
@@ -84,7 +84,7 @@ Recommendationsが提供するアルゴリズムが、プロモーションす�
 
 ## カスタム条件を編集
 
-カスタム条件定義の詳細を変更するには、[ カスタム条件を編集API](https://developer.adobe.com/target/administer/recommendations-api/#operation/updateCriteriaCustom)を使用します。 構文は次のとおりです。
+カスタム条件定義の詳細を変更するには、[&#x200B; カスタム条件を編集API](https://developer.adobe.com/target/administer/recommendations-api/#operation/updateCriteriaCustom)を使用します。 構文は次のとおりです。
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -104,7 +104,7 @@ Recommendationsが提供するアルゴリズムが、プロモーションす�
 
 ## カスタム条件を取得
 
-特定のカスタム条件のカスタム条件の詳細を表示するには、[ カスタム条件を取得API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getCriteriaCustom)を使用します。 構文は次のとおりです。
+特定のカスタム条件のカスタム条件の詳細を表示するには、[&#x200B; カスタム条件を取得API](https://developer.adobe.com/target/administer/recommendations-api/#operation/getCriteriaCustom)を使用します。 構文は次のとおりです。
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -117,7 +117,7 @@ Recommendationsが提供するアルゴリズムが、プロモーションす�
 
 ## カスタム条件の削除
 
-前述の条件IDを使用して、[ カスタム条件を削除API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteCriteriaCustom)を使用して、カスタム条件を削除します。 構文は次のとおりです。
+前述の条件IDを使用して、[&#x200B; カスタム条件を削除API](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteCriteriaCustom)を使用して、カスタム条件を削除します。 構文は次のとおりです。
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 

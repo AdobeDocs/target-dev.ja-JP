@@ -61,7 +61,7 @@ ht-degree: 9%
 
 ビルド済みのバージョンは、CDNで利用できます。 CDN上のライブラリをページ上で直接参照するか、独自のインフラストラクチャでダウンロードしてホストできます。 最小化された形式と最小化されていない形式で使用できます。 最小化されていないバージョンは、デバッグの目的に役立ちます。
 
-詳しくは、[JavaScript ライブラリを使用したWeb SDKのインストール ](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library)を参照してください。
+詳しくは、[JavaScript ライブラリを使用したWeb SDKのインストール &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library)を参照してください。
 
 ## ライブラリの設定
 
@@ -336,7 +336,7 @@ adobe.target.getOffers({
 
 ### [!DNL Platform Web SDK]の使用中
 
-`sendEvent` コマンドを使用し、`decisionScopes` オプションの下にmbox名を渡すことで、[!UICONTROL  フォームベースのコンポーザー]のアクティビティを取得できます。 `sendEvent` コマンドは、要求されたアクティビティまたは提案を含むオブジェクトで解決されるプロミスを返します。
+`sendEvent` コマンドを使用し、`decisionScopes` オプションの下にmbox名を渡すことで、[!UICONTROL &#x200B; フォームベースのコンポーザー]のアクティビティを取得できます。 `sendEvent` コマンドは、要求されたアクティビティまたは提案を含むオブジェクトで解決されるプロミスを返します。
 
 このコードスニペットは、`propositions`配列がどのように見えるかです。
 
@@ -470,7 +470,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-`applyOffers` コマンドについて詳しくは、[専用ドキュメント ](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2)を参照してください。
+`applyOffers` コマンドについて詳しくは、[専用ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2)を参照してください。
 
 ### [!DNL Platform Web SDK]の使用中
 
@@ -484,7 +484,7 @@ alloy("applyPropositions", {
 });
 ```
 
-`applyPropositions` コマンドについて詳しくは、[専用ドキュメント ](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)を参照してください。
+`applyPropositions` コマンドについて詳しくは、[専用ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)を参照してください。
 
 ## イベントの追跡方法
 
@@ -687,7 +687,7 @@ alloy("sendEvent", {
 
 ### at.jsの使用
 
-`adobe.target.triggerView`関数を使用します。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`関数は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B テスト ]および[!UICONTROL  エクスペリエンスのターゲット設定] （XT）アクティビティを作成するシングルページアプリケーション （SPA）に対して実装する必要があります。 `adobe.target.triggerView()`がサイトに実装されていない場合、VECをSPAに使用することはできません。
+`adobe.target.triggerView`関数を使用します。 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`関数は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL &#x200B; エクスペリエンスのターゲット設定] （XT）アクティビティを作成するシングルページアプリケーション （SPA）に対して実装する必要があります。 `adobe.target.triggerView()`がサイトに実装されていない場合、VECをSPAに使用することはできません。
 
 **例**
 
@@ -718,9 +718,9 @@ alloy("sendEvent", {
 
 [詳細情報](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
 
-## [!UICONTROL 応答トークン ]の活用方法
+## [!UICONTROL 応答トークン &#x200B;]の活用方法
 
-[!DNL Target]から返されたPersonalization コンテンツには、[応答トークン ](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)が含まれています。 応答トークンには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、位置情報などの詳細が含まれます。 これらの詳細は、サードパーティのツールと共有することも、デバッグに使用することもできます。 応答トークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
+[!DNL Target]から返されたPersonalization コンテンツには、[応答トークン &#x200B;](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)が含まれています。 応答トークンには、アクティビティ、オファー、エクスペリエンス、ユーザープロファイル、位置情報などの詳細が含まれます。 これらの詳細は、サードパーティのツールと共有することも、デバッグに使用することもできます。 応答トークンは、[!DNL Target] ユーザーインターフェイスで設定できます。
 
 ### at.jsの使用
 
@@ -849,7 +849,7 @@ Analytics クライアント側ログは、at.js設定で`analyticsLogging: clie
 }
 ```
 
-次に、ペイロードを[!DNL  Data Insertion API]経由で[!DNL Analytics]に転送できます。
+次に、ペイロードを[!DNL &#x200B; Data Insertion API]経由で[!DNL Analytics]に転送できます。
 
 例2: `getOffers`関数ごとに設定する：
 
@@ -903,7 +903,7 @@ adobe.target.getOffers({
 }
 ```
 
-[!DNL Analytics] ペイロード （`tnta` トークン）は、[ データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を使用して[!DNL Analytics] ヒットに含める必要があります。
+[!DNL Analytics] ペイロード （`tnta` トークン）は、[&#x200B; データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を使用して[!DNL Analytics] ヒットに含める必要があります。
 
 #### [!DNL Analytics] サーバーサイドのログ
 
@@ -928,7 +928,7 @@ Web SDKでは、次の機能もサポートしています。
 
 Analytics クライアント側のログ記録ワークフローを示す![図](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-disabled-datastream-config.png)
 
-お客様は、`sendEvent` コマンドをチェーンして[!DNL Analytics] データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を使用して[と共有する必要がある[!DNL Analytics] トークン （`tnta`）にアクセスし、結果として得られる提案の配列を繰り返します。
+お客様は、`sendEvent` コマンドをチェーンして[!DNL Analytics] データ挿入API[&#128279;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を使用してと共有する必要がある[!DNL Analytics] トークン （`tnta`）にアクセスし、結果として得られる提案の配列を繰り返します。
 
 **例**
 
@@ -963,19 +963,19 @@ alloy("sendEvent", {
 
 [!DNL Analytics] Client Sideが有効になっている場合のデータの流れを示す図を次に示します。
 
-Analytics クライアントサイドの![ データフロー図のログ ](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-client-side-logging.png)
+Analytics クライアントサイドの![&#x200B; データフロー図のログ &#x200B;](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-client-side-logging.png)
 
 #### [!DNL Analytics] サーバーサイドのログ
 
 [!DNL Analytics] サーバー側ログは、そのDataStream設定で[!DNL Analytics]が有効になっている場合に有効になります。
 
-Analytics設定を示す![ データストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-enabled-datastream-config.png)
+Analytics設定を示す![&#x200B; データストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-enabled-datastream-config.png)
 
 サーバーサイド [!DNL Analytics] ログが有効になっている場合、[!DNL Analytics] レポートに正しいインプレッションとコンバージョンが表示されるように、[!DNL Analytics]と共有する必要があるA4T ペイロードがEdge Network レベルで共有されるので、お客様は追加の処理を行う必要はありません。
 
 サーバーサイド分析ログが有効になっている場合、システムにデータが流れ込む方法は次のとおりです。
 
-![ サーバーサイド分析ログのデータフローを示す図](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-server-side-logging.png)
+![&#x200B; サーバーサイド分析ログのデータフローを示す図](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-server-side-logging.png)
 
 ## [!DNL Target] グローバル設定の設定方法
 
@@ -1185,7 +1185,7 @@ ID マップを使用すると、顧客は複数のIDを送信できます。 �
 
 1. データストリーム設定ページで[!DNL Target] サードパーティ IDを含む名前空間を設定します。
 
-![ ターゲット サードパーティ ID名前空間フィールドを表示するデータストリーム UI](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
+![&#x200B; ターゲット サードパーティ ID名前空間フィールドを表示するデータストリーム UI](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
 
 1. 次のように、`sendEvent` コマンドごとにID名前空間を送信します。
 
@@ -1235,7 +1235,7 @@ window.targetPageParams = function() {
 
 [!DNL Platform Web SDK]を使用している顧客は、データストリーム設定を設定する際に、[!DNL Adobe Target]名前空間の下でプロパティをより高いレベルで設定できます。
 
-Adobe Targetの設定を示す![ データストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/at-property-setup.png)
+Adobe Targetの設定を示す![&#x200B; データストリーム UI。](/help/dev/implement/client-side/aep-web-sdk/assets/at-property-setup.png)
 
 つまり、特定のデータストリーム設定に対する[!DNL Target]呼び出しごとに、そのプロパティトークンが含まれています。
 

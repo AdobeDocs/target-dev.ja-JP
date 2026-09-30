@@ -24,8 +24,8 @@ ht-degree: 0%
 ---
 # [!DNL Adobe Experience Cloud]との統合
 
-[!DNL Adobe Target]の[!DNL Analytics]とのサーバーサイド統合（[!UICONTROL Analytics for Target]または「A4T」）について詳しくは、[Analytics for Target （A4T） レポート ](/help/dev/implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md)を参照してください。
+[!DNL Adobe Target]の[!DNL Analytics]とのサーバーサイド統合（[!UICONTROL Analytics for Target]または「A4T」）について詳しくは、[Analytics for Target （A4T） レポート &#x200B;](/help/dev/implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md)を参照してください。
 
-[!DNL Adobe Audience Manager] （AAM）とのAdobe Target サーバーサイド統合について詳しくは、[AAM セグメント ](/help/dev/implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)を参照してください。
+[!DNL Adobe Audience Manager] （AAM）とのAdobe Target サーバーサイド統合について詳しくは、[AAM セグメント &#x200B;](/help/dev/implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)を参照してください。
 
 [!DNL Experience Cloud ID (ECID) Service]とのサーバーサイド統合について詳しくは、[Experience Cloud ID （ECID） Service](/help/dev/implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)を参照してください。

@@ -106,9 +106,9 @@ ht-degree: 5%
 **アクション**
 
 * Web ページに`VisitorAPI.js` ファイルを埋め込みます。
-* 訪問者ID/API サービス ](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}で使用できる[構成について説明します。
+* 訪問者ID/API サービス [&#128279;](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}で使用できる構成について説明します。
 * `VisitorAPI.js` ファイルが読み込まれたら、`Visitor.getInstance` メソッドを使用して、必要な構成を使用して初期化します。
-* [使用可能なメソッド ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}について説明します。
+* [使用可能なメソッド &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}について説明します。
 
 +++
 
@@ -160,7 +160,7 @@ ht-degree: 5%
 
 **読み取り**
 
-[targetGlobalSettings （） ](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)の`pageLoadEnabled`設定について説明します。
+[targetGlobalSettings （） &#x200B;](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)の`pageLoadEnabled`設定について説明します。
 
 **アクション**
 
@@ -193,7 +193,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 **読み取り**
 
 * [at.js によるちらつきの制御方法](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)
-* [targetGlobalSettings （） ](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)のbodyHiddenStyle オブジェクトとbodyHidingEnabled オブジェクトについて説明します。
+* [targetGlobalSettings （） &#x200B;](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)のbodyHiddenStyle オブジェクトとbodyHidingEnabled オブジェクトについて説明します。
 
 **アクション**
 
@@ -209,7 +209,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 +++詳細を見る
 
-![ データマッピング図](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
+![&#x200B; データマッピング図](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
 
 **前提条件**
 
@@ -224,7 +224,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **データを[!DNL Target]**&#x200B;にマッピング
 
-詳しくは、[targetPageParams （） ](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)を参照してください。
+詳しくは、[targetPageParams （） &#x200B;](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)を参照してください。
 
 **読み取り**
 
@@ -242,7 +242,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 ## 1.6: プロモーション {#promotion}
 
-[!DNL Target Recommendations] [ デザイン ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}で、プロモーションされたアイテムを追加し、その配置を制御します。
+[!DNL Target Recommendations] [&#x200B; デザイン &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}で、プロモーションされたアイテムを追加し、その配置を制御します。
 
 +++詳細を見る
 
@@ -292,11 +292,11 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **使用可能な条件**
 
-* [!UICONTROL  サイト全体で最も閲覧された]
-* [!UICONTROL  カテゴリー別に最も閲覧された]
+* [!UICONTROL &#x200B; サイト全体で最も閲覧された]
+* [!UICONTROL &#x200B; カテゴリー別に最も閲覧された]
 * [!UICONTROL 項目属性]で最も閲覧された項目
-* サイト全体で[!UICONTROL  トップ セラー]
-* [!UICONTROL  カテゴリー別のトップセラー]
+* サイト全体で[!UICONTROL &#x200B; トップ セラー]
+* [!UICONTROL &#x200B; カテゴリー別のトップセラー]
 * [!UICONTROL 項目属性]別の上位セラー
 * 分析指標[!UICONTROL 上位]
 
@@ -324,7 +324,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 * [!UICONTROL これを閲覧したユーザー、これを閲覧したユーザー]
 * [!UICONTROL これを閲覧したユーザーが購入しました]
 * [!UICONTROL これを購入した人、購入した人]
-* [!UICONTROL 類似の属性を持つアイテム ]
+* [!UICONTROL 類似の属性を持つアイテム &#x200B;]
 
 **エンティティ パラメーターが必要**
 
@@ -369,7 +369,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **使用可能な条件**
 
-* [!UICONTROL  カスタムアルゴリズム ]
+* [!UICONTROL &#x200B; カスタムアルゴリズム &#x200B;]
 
 **エンティティ パラメーターが必要**
 
@@ -429,7 +429,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 +++詳細を見る
 
-![ リモートデータマッピング図](/help/dev/patterns/recs-atjs/assets/remote-data-mapping-combined.png){width="400" zoomable="yes"}
+![&#x200B; リモートデータマッピング図](/help/dev/patterns/recs-atjs/assets/remote-data-mapping-combined.png){width="400" zoomable="yes"}
 
 **前提条件**
 
@@ -437,7 +437,7 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 **データプロバイダーの設定**
 
-詳しくは、[ データプロバイダー](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#data-providers)を参照してください。
+詳しくは、[&#x200B; データプロバイダー](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#data-providers)を参照してください。
 
 **読み取り**
 
@@ -477,4 +477,4 @@ APLRを実行したくなく、後でページリクエストを実行する必�
 
 [このページの上部にある図に戻ります。](#diagram)
 
-手順2: [ データ収集の設定](/help/dev/patterns/recs-atjs/data-collection.md)に進みます。
+手順2: [&#x200B; データ収集の設定](/help/dev/patterns/recs-atjs/data-collection.md)に進みます。

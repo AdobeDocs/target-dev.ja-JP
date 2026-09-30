@@ -20,7 +20,7 @@ ht-degree: 8%
 ---
 # ユーザーの権限とプロパティ
 
-[!DNL Target] SDKには、ユーザー権限とプロパティのサポートが含まれています。 [!DNL Adobe Target]がワークスペースとプロパティを介してエンタープライズ権限を処理する方法に慣れていない場合は、[ エンタープライズユーザー権限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=ja)で詳細を確認できます。
+[!DNL Target] SDKには、ユーザー権限とプロパティのサポートが含まれています。 [!DNL Adobe Target]がワークスペースとプロパティを介してエンタープライズ権限を処理する方法に慣れていない場合は、[&#x200B; エンタープライズユーザー権限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=ja)で詳細を確認できます。
 
 クライアントは、プロパティトークンを2つの方法のいずれかで使用できます。
 

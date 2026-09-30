@@ -55,7 +55,7 @@ at.jsで使用できる自動フリッカー処理は、[!UICONTROL 自動ペー
 >
 >次の図の手順の番号は、以下の節に対応しています。 ステップ番号は特定の順序ではなく、アクティビティの作成中に[!DNL Target] UIで実行されたステップの順序は反映されません。
 
-![ エクスペリエンス図をレンダリング ](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
+![&#x200B; エクスペリエンス図をレンダリング &#x200B;](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
 次のリンクをクリックして、目的のセクションに移動します。
 
@@ -128,11 +128,11 @@ at.jsで使用できる自動フリッカー処理は、[!UICONTROL 自動ペー
 
 **使用可能な条件**
 
-* [!UICONTROL  サイト全体で最も閲覧された]
-* [!UICONTROL  カテゴリー別に最も閲覧された]
+* [!UICONTROL &#x200B; サイト全体で最も閲覧された]
+* [!UICONTROL &#x200B; カテゴリー別に最も閲覧された]
 * [!UICONTROL 項目属性]で最も閲覧された項目
-* サイト全体で[!UICONTROL  トップ セラー]
-* [!UICONTROL  カテゴリー別のトップセラー]
+* サイト全体で[!UICONTROL &#x200B; トップ セラー]
+* [!UICONTROL &#x200B; カテゴリー別のトップセラー]
 * [!UICONTROL 項目属性]別の上位セラー
 * 分析指標[!UICONTROL 上位]
 
@@ -160,7 +160,7 @@ at.jsで使用できる自動フリッカー処理は、[!UICONTROL 自動ペー
 * [!UICONTROL これを閲覧したユーザー、これを閲覧したユーザー]
 * [!UICONTROL これを閲覧したユーザーが購入しました]
 * [!UICONTROL これを購入した人、購入した人]
-* [!UICONTROL 類似の属性を持つアイテム ]
+* [!UICONTROL 類似の属性を持つアイテム &#x200B;]
 
 **エンティティ パラメーターが必要**
 
@@ -206,7 +206,7 @@ at.jsで使用できる自動フリッカー処理は、[!UICONTROL 自動ペー
 
 **使用可能な条件**
 
-* [!UICONTROL  カスタムアルゴリズム ]
+* [!UICONTROL &#x200B; カスタムアルゴリズム &#x200B;]
 
 **エンティティ パラメーターが必要**
 
@@ -254,7 +254,7 @@ at.jsで使用できる自動フリッカー処理は、[!UICONTROL 自動ペー
 
 * [エンティティの属性](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-この手順を実行するには、[!DNL Target] UIを使用して[製品フィード ](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}を作成し、[!DNL Recommendations]の製品カタログを更新します。
+この手順を実行するには、[!DNL Target] UIを使用して[製品フィード &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}を作成し、[!DNL Recommendations]の製品カタログを更新します。
 
 +++
 
@@ -280,7 +280,7 @@ at.jsで使用できる自動フリッカー処理は、[!UICONTROL 自動ペー
 
 +++詳細を見る
 
-![ ページ読み込みリクエスト図を作成](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
+![&#x200B; ページ読み込みリクエスト図を作成](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
 
 **前提条件**
 
@@ -324,4 +324,4 @@ at.jsで使用できる自動フリッカー処理は、[!UICONTROL 自動ペー
 
 [このページの上部にある図に戻ります。](#diagram)
 
-手順4に進みます：[ ターゲットに通知](/help/dev/patterns/recs-atjs/notify-target.md)。
+手順4に進みます：[&#x200B; ターゲットに通知](/help/dev/patterns/recs-atjs/notify-target.md)。

@@ -31,7 +31,7 @@ ht-degree: 9%
 ---
 # サポートされる機能の概要
 
-[!DNL Adobe Target]のサーバーサイド SDKにより、開発者はパフォーマンスと意思決定のためのデータの鮮度のどちらかを柔軟に選択できます。 言い換えれば、マシンラーニングを通じて最も関連性が高く、魅力的なパーソナライズされたコンテンツを配信することが最も重要な場合は、ライブサーバーコールを送信する必要があります。 しかし、パフォーマンスがより重要な場合は、デバイス上で決定する必要があります。 [!UICONTROL  オンデバイス決定]が機能するには、サポートされている機能の次の一覧を参照してください。
+[!DNL Adobe Target]のサーバーサイド SDKにより、開発者はパフォーマンスと意思決定のためのデータの鮮度のどちらかを柔軟に選択できます。 言い換えれば、マシンラーニングを通じて最も関連性が高く、魅力的なパーソナライズされたコンテンツを配信することが最も重要な場合は、ライブサーバーコールを送信する必要があります。 しかし、パフォーマンスがより重要な場合は、デバイス上で決定する必要があります。 [!UICONTROL &#x200B; オンデバイス決定]が機能するには、サポートされている機能の次の一覧を参照してください。
 
 * アクティビティのタイプ
 * Audience Targeting
@@ -39,7 +39,7 @@ ht-degree: 9%
 
 ## アクティビティのタイプ
 
-次の表は、[ フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?)を使用して作成された[ アクティビティタイプ ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)が、[!UICONTROL  オンデバイス決定]でサポートされているか、サポートされていないかを示しています。
+次の表は、[&#x200B; フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?)を使用して作成された[&#x200B; アクティビティタイプ &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)が、[!UICONTROL &#x200B; オンデバイス決定]でサポートされているか、サポートされていないかを示しています。
 
 | アクティビティタイプ | 対応 |
 | --- | --- |
@@ -55,14 +55,14 @@ ht-degree: 9%
 
 ## オーディエンスターゲティング
 
-次の表は、[!UICONTROL  オンデバイス決定]でサポートされているオーディエンスルールまたはサポートされていないオーディエンスルールを示しています。
+次の表は、[!UICONTROL &#x200B; オンデバイス決定]でサポートされているオーディエンスルールまたはサポートされていないオーディエンスルールを示しています。
 
 | オーディエンスルール | オンデバイス判定 |
 | --- | --- |
 | [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | ○ |
 | [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | × |
 | [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | × |
-| [ カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | ○ |
+| [&#x200B; カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | ○ |
 | [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | ○ |
 | [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | ○ |
 | [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | ○ |
@@ -71,9 +71,9 @@ ht-degree: 9%
 | [時間枠](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | ○ |
 | [Experience Cloud Audiences](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) （Adobe Audience Manager、Adobe Analytics、Adobe Experience Managerのオーディエンス） | × |
 
-### [!UICONTROL  オンデバイス決定]の地域ターゲティング
+### [!UICONTROL &#x200B; オンデバイス決定]の地域ターゲティング
 
-地域ベースのオーディエンスを使用した[!UICONTROL  オンデバイス決定] アクティビティの遅延をほぼゼロに近く維持するために、Adobeでは、`getOffers`への呼び出しで地理値を自分で指定することをお勧めします。 これを行うには、リクエストの`Context`で`Geo` オブジェクトを設定します。 つまり、サーバーには、各エンドユーザーの場所を決定する方法が必要になります。 例えば、設定したサービスを使用して、サーバーがIPから地域へのルックアップを実行する場合があります。 Google Cloudなどの一部のホスティングプロバイダーは、各`HttpServletRequest`のカスタムヘッダーを使用してこの機能を提供します。
+地域ベースのオーディエンスを使用した[!UICONTROL &#x200B; オンデバイス決定] アクティビティの遅延をほぼゼロに近く維持するために、Adobeでは、`getOffers`への呼び出しで地理値を自分で指定することをお勧めします。 これを行うには、リクエストの`Context`で`Geo` オブジェクトを設定します。 つまり、サーバーには、各エンドユーザーの場所を決定する方法が必要になります。 例えば、設定したサービスを使用して、サーバーがIPから地域へのルックアップを実行する場合があります。 Google Cloudなどの一部のホスティングプロバイダーは、各`HttpServletRequest`のカスタムヘッダーを使用してこの機能を提供します。
 
 >[!BEGINTABS]
 
@@ -133,7 +133,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-ただし、サーバーでIPから地域への検索を実行する機能がないものの、地域ベースのオーディエンスを含む`getOffers`要求に対して[!UICONTROL  デバイス上での決定]を実行したい場合は、これもサポートされます。 このアプローチの欠点は、リモート IP-to-Geo ルックアップを使用することで、各`getOffers`呼び出しに遅延が追加されることです。 サーバーの近くにあるCDNにヒットするため、この待ち時間はリモート `getOffers`呼び出しよりも低くしてください。 SDKがユーザーのIP アドレスの位置情報を取得するには、リクエストの`Context`の`Geo` オブジェクトの`ipAddress` フィールドのみを指定する必要があります。 `ipAddress`以外のフィールドが指定されている場合、[!DNL Target] SDKは解決のために位置情報メタデータを取得しません。
+ただし、サーバーでIPから地域への検索を実行する機能がないものの、地域ベースのオーディエンスを含む`getOffers`要求に対して[!UICONTROL &#x200B; デバイス上での決定]を実行したい場合は、これもサポートされます。 このアプローチの欠点は、リモート IP-to-Geo ルックアップを使用することで、各`getOffers`呼び出しに遅延が追加されることです。 サーバーの近くにあるCDNにヒットするため、この待ち時間はリモート `getOffers`呼び出しよりも低くしてください。 SDKがユーザーのIP アドレスの位置情報を取得するには、リクエストの`Context`の`Geo` オブジェクトの`ipAddress` フィールドのみを指定する必要があります。 `ipAddress`以外のフィールドが指定されている場合、[!DNL Target] SDKは解決のために位置情報メタデータを取得しません。
 
 
 >[!BEGINTABS]
@@ -184,10 +184,10 @@ public class TargetRequestUtils {
 
 ## 配分方法
 
-次の表は、[!UICONTROL  オンデバイス決定]でサポートされている割り当て方法またはサポートされていない割り当て方法を示しています。
+次の表は、[!UICONTROL &#x200B; オンデバイス決定]でサポートされている割り当て方法またはサポートされていない割り当て方法を示しています。
 
 | 配分方法 | 対応 |
 | --- | --- |
 | 手動 | ○ |
 | [最適なエクスペリエンスに自動割り当て](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | × |
-| [ パーソナライズされたエクスペリエンスの自動ターゲティング ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target-to-optimize.html) | × |
+| [&#x200B; パーソナライズされたエクスペリエンスの自動ターゲティング &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-target-to-optimize.html) | × |

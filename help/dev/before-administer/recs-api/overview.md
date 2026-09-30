@@ -68,5 +68,5 @@ Target管理APIには[Adobe認証の設定](../configure-authentication.md)が�
 
 | リソース | 詳細 |
 | --- | --- |
-| Postman | お使いのオペレーティング システム用の[Postman アプリ ](https://www.postman.com/downloads/)を入手します。 Postman basicはアカウント作成機能を無料で利用できます。 Adobe Target APIを一般的に使用する場合は不要ですが、PostmanではAPI ワークフローが簡単になり、Adobe TargetにはAPIの実行と動作の学習に役立つPostman コレクションがいくつか用意されています。 このガイドの残りの部分では、Postmanに関する実務的な知識を前提としています。 サポートが必要な場合は、[Postman ドキュメント ](https://learning.getpostman.com/)を参照してください。 |
-| 参照 | このガイドの残りの部分では、次のリソースについて理解していることを前提としています。<UL><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Target管理者とプロファイル API ドキュメント ](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API ドキュメント ](https://developer.adobe.com/target/administer/recommendations-api/)</li></UL> |
+| Postman | お使いのオペレーティング システム用の[Postman アプリ &#x200B;](https://www.postman.com/downloads/)を入手します。 Postman basicはアカウント作成機能を無料で利用できます。 Adobe Target APIを一般的に使用する場合は不要ですが、PostmanではAPI ワークフローが簡単になり、Adobe TargetにはAPIの実行と動作の学習に役立つPostman コレクションがいくつか用意されています。 このガイドの残りの部分では、Postmanに関する実務的な知識を前提としています。 サポートが必要な場合は、[Postman ドキュメント &#x200B;](https://learning.getpostman.com/)を参照してください。 |
+| 参照 | このガイドの残りの部分では、次のリソースについて理解していることを前提としています。<UL><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Target管理者とプロファイル API ドキュメント &#x200B;](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Recommendations API ドキュメント &#x200B;](https://developer.adobe.com/target/administer/recommendations-api/)</li></UL> |

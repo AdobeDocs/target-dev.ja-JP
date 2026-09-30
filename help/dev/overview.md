@@ -72,7 +72,7 @@ ht-degree: 13%
 >
 >* [*[!DNL Adobe Target] チュートリアル *](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=ja){target=_blank}
 >
->リリース情報については、「*[!DNL Adobe Target]Business Practitioner Guide*」の「[Target リリースノート （最新） ](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank}」を参照してください。
+>リリース情報については、「*[!DNL Adobe Target]Business Practitioner Guide*」の「[Target リリースノート （最新） &#x200B;](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank}」を参照してください。
 
 ## 入門ガイド
 
@@ -124,7 +124,7 @@ ht-degree: 13%
 
 [**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md): [!DNL Adobe Target] ユーザープロファイル情報を取得します。
 
-[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): [!UICONTROL A/B テスト ]および[!UICONTROL Automated Personalization]のアクティビティレポートデータを取得します。
+[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): [!UICONTROL A/B テスト &#x200B;]および[!UICONTROL Automated Personalization]のアクティビティレポートデータを取得します。
 
 [**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/): [!DNL Target Recommendations] APIを使用します。
 

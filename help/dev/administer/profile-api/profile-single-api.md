@@ -42,7 +42,7 @@ ht-degree: 4%
 
   さらに更新を送信する必要がある場合、または更新を短い時間枠で処理する必要がある場合は、クライアントサイドの更新（推奨）または[!DNL Adobe Target] サーバーサイド [配信API](/help/dev/implement/delivery-api/overview.md)を介してトランザクションプロファイルの更新を送信することを検討してください。
 
-* [!UICONTROL 単一プロファイル更新API]はサーバー間APIであり、Web ページ内で動作するように設計されていません。 Web ページ内から訪問者プロファイルを更新するには、[trackEvent （） ](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)関数または[配信API](/help/dev/implement/delivery-api/overview.md)を使用できます。
+* [!UICONTROL 単一プロファイル更新API]はサーバー間APIであり、Web ページ内で動作するように設計されていません。 Web ページ内から訪問者プロファイルを更新するには、[trackEvent （） &#x200B;](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)関数または[配信API](/help/dev/implement/delivery-api/overview.md)を使用できます。
 
 ## 形式
 

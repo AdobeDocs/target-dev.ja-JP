@@ -49,7 +49,7 @@ ClientConfigBuilder ClientConfig.builder()
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| クライアント | 文字列 | ○ | None | [!UICONTROL  ターゲットクライアント Id] |
+| クライアント | 文字列 | ○ | None | [!UICONTROL &#x200B; ターゲットクライアント Id] |
 | organizationId | 文字列 | ○ | None | [!UICONTROL Experience Cloud組織ID] |
 | connectTimeout | 数値 | × | 10000 | すべてのリクエストの接続タイムアウト （ミリ秒単位） |
 | socketTimeout | 数値 | × | 10000 | すべてのリクエストのソケットのタイムアウト （ミリ秒単位） |

@@ -37,7 +37,7 @@ ht-degree: 32%
 
 ### 手順1: `Target Third Party ID Namespace`を設定する
 
-[ データストリーム ](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)の`Target Third Party ID Namespace`を、mbox サードパーティ IDとして使用するID名前空間を使用して設定します。 [ID名前空間の詳細](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)
+[&#x200B; データストリーム &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)の`Target Third Party ID Namespace`を、mbox サードパーティ IDとして使用するID名前空間を使用して設定します。 [ID名前空間の詳細](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)
 
 ![Target サードパーティ ID名前空間フィールドを示すExperience Platform UI。](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
 

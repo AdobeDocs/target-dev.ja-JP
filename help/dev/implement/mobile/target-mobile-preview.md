@@ -32,20 +32,20 @@ ht-degree: 24%
 
 1. **サポートされているバージョンのSDKを使用：** モバイルプレビュー機能を使用するには、対応するアプリに適切なバージョンの[!DNL Adobe Mobile SDK]をダウンロードしてインストールする必要があります。
 
-   適切なSDKをダウンロードする手順については、*[!DNL Adobe Experience Platform Mobile SDK]* ドキュメントの[現在のSDK バージョン ](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank}を参照してください。
+   適切なSDKをダウンロードする手順については、*[!DNL Adobe Experience Platform Mobile SDK]* ドキュメントの[現在のSDK バージョン &#x200B;](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank}を参照してください。
 
 1. **URL スキームを設定する：**&#x200B;プレビューリンクでは、URL スキームを使用してアプリを開きます。 プレビュー用の一意のURL スキームを指定します。
 
-   詳しくは、*[!DNL Mobile SDK]* ドキュメントの「*データ接続UI*」の「[ ビジュアルプレビュー](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank}」を参照してください。
+   詳しくは、*[!DNL Mobile SDK]* ドキュメントの「*データ接続UI*」の「[&#x200B; ビジュアルプレビュー](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank}」を参照してください。
 
    詳細については、次のリンクを参照してください。
 
-   * **iOs**: iOSのURL スキームの設定について詳しくは、*Apple Developer* web サイトの[ アプリのカスタム URL スキームの定義](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank}を参照してください。
-   * **Android**: AndroidのURL スキームの設定について詳しくは、*Android Developers* web サイトの[ アプリ コンテンツへのディープリンクの作成](https://developer.android.com/training/app-links/deep-linking){target=_blank}を参照してください。
+   * **iOs**: iOSのURL スキームの設定について詳しくは、*Apple Developer* web サイトの[&#x200B; アプリのカスタム URL スキームの定義](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank}を参照してください。
+   * **Android**: AndroidのURL スキームの設定について詳しくは、*Android Developers* web サイトの[&#x200B; アプリ コンテンツへのディープリンクの作成](https://developer.android.com/training/app-links/deep-linking){target=_blank}を参照してください。
 
 1. **`collectLaunchInfo` APIの設定（i0Sのみ）**
 
-   詳しくは、*[!DNL Mobile SDK]* ドキュメントの「*データ接続UI*」の「[ ビジュアルプレビュー](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank}」を参照してください。
+   詳しくは、*[!DNL Mobile SDK]* ドキュメントの「*データ接続UI*」の「[&#x200B; ビジュアルプレビュー](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank}」を参照してください。
 
 ## プレビューリンクの生成
 
@@ -57,7 +57,7 @@ ht-degree: 24%
 
    >[!NOTE]
    >
-   >選択できるのは、フォームベースの[!UICONTROL A/B テスト ]および[!UICONTROL  エクスペリエンスのターゲット設定] （XT）アクティビティのみです。
+   >選択できるのは、フォームベースの[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL &#x200B; エクスペリエンスのターゲット設定] （XT）アクティビティのみです。
 
    ![alt画像](assets/mobile-preview-select-activities.png)
 
@@ -81,12 +81,12 @@ ht-degree: 24%
 
    |![ディープリンクのプレビュー1](assets/mobile-preview-open-deeplink.png)|![ディープリンクのプレビュー2](assets/mobile-preview-open-app.png)|
 
-   アプリが開き、[!DNL Target] [!UICONTROL  モバイルプレビューモード ]が開始されます。
+   アプリが開き、[!DNL Target] [!UICONTROL &#x200B; モバイルプレビューモード &#x200B;]が開始されます。
 
 1. 表示するエクスペリエンスの組み合わせを選択し、「**[!UICONTROL エクスペリエンスを開始]**」をクリックします。
 
-   |![ モバイルプレビュー1](assets/mobile-preview-experience-selection-1.png)|![ モバイルプレビュー2](assets/mobile-preview-experience-result-1-france.png)|![ モバイルプレビュー3](assets/mobile-preview-experience-result-1-shipfree.png)|
-   |![ モバイルプレビュー4](assets/mobile-preview-experience-selection-2.png)|![ モバイルプレビュー5](assets/mobile-preview-experience-result-2-aus.png)|![ モバイルプレビュー6](assets/mobile-preview-experience-result-2-10off.png)|
+   |![&#x200B; モバイルプレビュー1](assets/mobile-preview-experience-selection-1.png)|![&#x200B; モバイルプレビュー2](assets/mobile-preview-experience-result-1-france.png)|![&#x200B; モバイルプレビュー3](assets/mobile-preview-experience-result-1-shipfree.png)|
+   |![&#x200B; モバイルプレビュー4](assets/mobile-preview-experience-selection-2.png)|![&#x200B; モバイルプレビュー5](assets/mobile-preview-experience-result-2-aus.png)|![&#x200B; モバイルプレビュー6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## 制限事項
 

@@ -232,7 +232,7 @@ curl -X POST \
     }'
 ```
 
-上記の呼び出しの例では、`authenticatedState`を含む`customerId`を送信する方法を示しています。 `customerId`を送信する場合、`integrationCode`、`id`、`authenticatedState`および`marketingCloudVisitorId`が必要です。 `integrationCode`は、CRSを通じて指定した[顧客属性ファイル ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=ja)のエイリアスです。
+上記の呼び出しの例では、`authenticatedState`を含む`customerId`を送信する方法を示しています。 `customerId`を送信する場合、`integrationCode`、`id`、`authenticatedState`および`marketingCloudVisitorId`が必要です。 `integrationCode`は、CRSを通じて指定した[顧客属性ファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=ja)のエイリアスです。
 
 ## 結合プロファイル
 

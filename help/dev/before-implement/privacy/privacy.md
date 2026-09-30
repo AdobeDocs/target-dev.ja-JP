@@ -69,7 +69,7 @@ Adobeでは、Adobe [!DNL Target]に対してユーザーが有効にできる�
 
 [!DNL Platform Web SDK] （バージョン 23.4以降）を使用する場合、データストリームレベルのIP難読化設定は、[!DNL Target]で設定されているIP難読化オプションよりも優先されます。 例えば、データストリームレベルのIP難読化オプションが[!UICONTROL Full]に設定され、[!DNL Target] IP難読化オプションが[!UICONTROL 最後のオクテット難読化]に設定されている場合、[!DNL Target]は完全に難読化されたIPを受信します。
 
-詳しくは、*[!DNL Adobe Experience Platfrom]データストリームガイド*&#x200B;の「[ データストリームの設定](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ja){target=_blank}」の「[!UICONTROL IP難読化]」を参照してください。
+詳しくは、*[!DNL Adobe Experience Platfrom]データストリームガイド*&#x200B;の「[&#x200B; データストリームの設定](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=ja){target=_blank}」の「[!UICONTROL IP難読化]」を参照してください。
 
 ## 地理特性
 
@@ -96,7 +96,7 @@ IP アドレスが完全に不明化されている場合、地理特性と 地�
 
 ## プライバシーとデータ保護規制
 
-欧州連合の一般データ保護規則（GDPR）、カリフォルニア州消費者プライバシー法（CCPA）、その他の国際的なプライバシー要件、およびこれらの規制が組織と[!DNL Target]にどのような影響を与えるかについては、[ プライバシーおよびデータ保護規則](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)を参照してください。
+欧州連合の一般データ保護規則（GDPR）、カリフォルニア州消費者プライバシー法（CCPA）、その他の国際的なプライバシー要件、およびこれらの規制が組織と[!DNL Target]にどのような影響を与えるかについては、[&#x200B; プライバシーおよびデータ保護規則](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)を参照してください。
 
 ## 機能使用状況データの収集
 

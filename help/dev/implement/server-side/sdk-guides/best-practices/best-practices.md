@@ -1,6 +1,6 @@
 ---
 title: オンデバイス判定を使用する際のベストプラクティス
-description: '[!DNL Adobe Target]で[!UICONTROL  オンデバイス決定]を使用する際のベストプラクティスについて説明します'
+description: '[!DNL Adobe Target]で[!UICONTROL &#x200B; オンデバイス決定]を使用する際のベストプラクティスについて説明します'
 feature: Implement Server-side
 exl-id: a0ca014d-ad9f-4ecc-961d-cb7ba236507f
 TQID: 'https://experienceleague.adobe.com/GgVJaAal4uS1RqpCK3wNCVwPjAOaXzjXNV7EoqWhwcY'
@@ -23,7 +23,7 @@ ht-degree: 3%
 ---
 # ベストプラクティス
 
-[!DNL Adobe]では、[!UICONTROL  オンデバイス決定]を使用する際に、次のベストプラクティスをお勧めします。
+[!DNL Adobe]では、[!UICONTROL &#x200B; オンデバイス決定]を使用する際に、次のベストプラクティスをお勧めします。
 
 ## 決定方法が「オンデバイス」である場合のベストプラクティス
 

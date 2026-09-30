@@ -33,7 +33,7 @@ URLは次の例のようになります。
 https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
 ```
 
-`<clientCode>`を[!DNL Target] [!UICONTROL  クライアントコード ]に、`<ECID>`を[!DNL Experience Cloud Visitor ID] （[!DNL Marketing Cloud Visitor ID]）に置き換えます。
+`<clientCode>`を[!DNL Target] [!UICONTROL &#x200B; クライアントコード &#x200B;]に、`<ECID>`を[!DNL Experience Cloud Visitor ID] （[!DNL Marketing Cloud Visitor ID]）に置き換えます。
 
 ## tntidの使用
 
@@ -55,7 +55,7 @@ https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046
 
 [!DNL Adobe Target] プロファイルは、独自の識別子（CRM ID、`uuid`、メンバーシップ番号など）で強化できます。
 
-プロファイルに`thirdPartyId`を添付する方法については、[ プロファイルの更新](/help/dev/administer/profile-api/profile-api-overview.md)を参照してください。
+プロファイルに`thirdPartyId`を添付する方法については、[&#x200B; プロファイルの更新](/help/dev/administer/profile-api/profile-api-overview.md)を参照してください。
 
 次の例は、`thirdPartyId`を使用してプロファイルを取得するリクエスト形式を示しています。
 
@@ -73,7 +73,7 @@ https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3r
 
 ## Authentication
 
-[!DNL Target Profile API]は、[!DNL Target] UIから認証をオンにすることで保護できます（こちらを参照）。 認証がオンになると、すべてのプロファイル API リクエストにリクエストヘッダーでプロファイル認証トークンを設定する必要があります。 トークン自体は、[!DNL Target] UIを使用するか、[ プロファイル認証トークン ](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} セクションで前述した手順を使用して生成できます。
+[!DNL Target Profile API]は、[!DNL Target] UIから認証をオンにすることで保護できます（こちらを参照）。 認証がオンになると、すべてのプロファイル API リクエストにリクエストヘッダーでプロファイル認証トークンを設定する必要があります。 トークン自体は、[!DNL Target] UIを使用するか、[&#x200B; プロファイル認証トークン &#x200B;](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} セクションで前述した手順を使用して生成できます。
 
 ## 計量
 

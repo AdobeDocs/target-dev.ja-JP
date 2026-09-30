@@ -29,18 +29,18 @@ ht-degree: 8%
 
 ## 導入
 
-Java SDKの使用を開始する方法については、[[!DNL Target] SDK入門ガイド ](../sdk-guides/getting-started/getting-started.md)に移動してください。
+Java SDKの使用を開始する方法については、[[!DNL Target] SDK入門ガイド &#x200B;](../sdk-guides/getting-started/getting-started.md)に移動してください。
 
 ## サンプルアプリ
 
 Java SDKをテストします。
 
-* [[!DNL Adobe Target] [!UICONTROL  オンデバイス決定]のデモサイト ](https://github.com/adobe/on-device-decisioning-demo-site)にアクセスすると
-* [ サンプルアプリケーション ](../sdk-guides/sample-apps/sample-apps.md)で。
+* [[!DNL Adobe Target] [!UICONTROL &#x200B; オンデバイス決定]のデモサイト &#x200B;](https://github.com/adobe/on-device-decisioning-demo-site)にアクセスすると
+* [&#x200B; サンプルアプリケーション &#x200B;](../sdk-guides/sample-apps/sample-apps.md)で。
 
 ## リファレンス
 
-Java SDKのリファレンスドキュメントを読み、理解するには、[SDKのインストール ](install-sdk.md)から始めます。
+Java SDKのリファレンスドキュメントを読み、理解するには、[SDKのインストール &#x200B;](install-sdk.md)から始めます。
 
 ## Source ファイル
 

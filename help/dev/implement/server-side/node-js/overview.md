@@ -24,22 +24,22 @@ ht-degree: 14%
 
 ## 前提条件
 
-現在サポートされているNode.jsのすべてのバージョン（LTS バージョンを含む）がサポートされています。[Node.js リリース ](https://en.wikipedia.org/wiki/Node.js#Releases)を参照してください。
+現在サポートされているNode.jsのすべてのバージョン（LTS バージョンを含む）がサポートされています。[Node.js リリース &#x200B;](https://en.wikipedia.org/wiki/Node.js#Releases)を参照してください。
 
 ## 導入
 
-Node.js SDKの使用を開始する方法については、[Target SDK入門ガイド ](../sdk-guides/getting-started/getting-started.md)に移動してください。
+Node.js SDKの使用を開始する方法については、[Target SDK入門ガイド &#x200B;](../sdk-guides/getting-started/getting-started.md)に移動してください。
 
 ## サンプルアプリ
 
 Node.js SDKをテストします。
 
-* [[!DNL Adobe Target]  オンデバイス決定デモサイト ](https://github.com/adobe/on-device-decisioning-demo-site)にアクセスすると
-* [ サンプルアプリケーション ](../sdk-guides/sample-apps/sample-apps.md)で。
+* [[!DNL Adobe Target]  オンデバイス決定デモサイト &#x200B;](https://github.com/adobe/on-device-decisioning-demo-site)にアクセスすると
+* [&#x200B; サンプルアプリケーション &#x200B;](../sdk-guides/sample-apps/sample-apps.md)で。
 
 ## リファレンス
 
-Node.js SDK リファレンスドキュメントを読み、理解するには、[SDKのインストール ](install-sdk.md)から始めます。
+Node.js SDK リファレンスドキュメントを読み、理解するには、[SDKのインストール &#x200B;](install-sdk.md)から始めます。
 
 ## Source ファイル
 

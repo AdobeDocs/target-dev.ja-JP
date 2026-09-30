@@ -31,7 +31,7 @@ ht-degree: 0%
 ---
 # Target APIの概要
 
-この記事では、Admin APIとProfile APIに固有の要件に焦点を当てる前に、一般的に様々なTarget APIについて説明します。 UIを使用してAdobe Targetを管理する場合は、*Adobe Target Business ユーザーガイド*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)の[管理セクションを参照してください。
+この記事では、Admin APIとProfile APIに固有の要件に焦点を当てる前に、一般的に様々なTarget APIについて説明します。 UIを使用してAdobe Targetを管理する場合は、*Adobe Target Business ユーザーガイド*[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)の管理セクションを参照してください。
 
 ## API タイプ
 
@@ -48,8 +48,8 @@ Adobe Target APIは、管理者、プロファイル、配信、レポートの�
 | [管理者](../administer/admin-api/admin-api-overview-new.md) | アクティビティ、オーディエンス、オファー、その他のオブジェクト（Recommendations エンティティ、条件、デザインなど）を作成、変更、削除します。 Recommendations APIは、Admin APIの一種です）。 | <UL><li>[Target Admin API Postman Collection](https://developers.adobetarget.com/api/#admin-postman-collection)</li><li>[Recommendations API Postman Collection](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman)</li></UL> | [Recommendations APIを使用](../before-administer/recs-api/overview.md) |
 | プロファイル | Adobe Targetに保存されているユーザープロファイルを取得して変更します。 | [Target Profile API Postman Collection](https://developers.adobetarget.com/api/#profiles) |  |
 | [配信](../implement/delivery-api/overview.md) | エンドユーザーへの配信のために、Targetから最適化およびパーソナライズされたコンテンツを取得します。 | [Target Delivery API Postman Collection](/help/dev/before-implement/delivery-api-overview/getting-started.md#postman) |  |
-| [レポート](../administer/admin-api/admin-api-overview-new.md) | アクティビティの結果やその他のレポート結果の書き出し： | レポート APIは、[Target Admin API Postman コレクション ](https://developers.adobetarget.com/api/#admin-postman-collection)に含まれています。 |  |
-| [ モデル ](../administer/models-api/models-api-overview.md) | Targetでマシンラーニングモデルから除外する機能のリストを管理します（「ブロックリスト」）。 Models APIはAdmin APIの一種ですが、UIを介してアクセスできないオブジェクト（ヘルプブロックリスト）に対する一意の操作のため、ここに個別にリストされています。 |  |  |
+| [レポート](../administer/admin-api/admin-api-overview-new.md) | アクティビティの結果やその他のレポート結果の書き出し： | レポート APIは、[Target Admin API Postman コレクション &#x200B;](https://developers.adobetarget.com/api/#admin-postman-collection)に含まれています。 |  |
+| [&#x200B; モデル &#x200B;](../administer/models-api/models-api-overview.md) | Targetでマシンラーニングモデルから除外する機能のリストを管理します（「ブロックリスト」）。 Models APIはAdmin APIの一種ですが、UIを介してアクセスできないオブジェクト（ヘルプブロックリスト）に対する一意の操作のため、ここに個別にリストされています。 |  |  |
 
 ## APIの違い
 

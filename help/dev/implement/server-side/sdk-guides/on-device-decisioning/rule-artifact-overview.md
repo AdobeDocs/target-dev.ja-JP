@@ -1,6 +1,6 @@
 ---
 title: オンデバイス決定ルールのアーティファクトについて
-description: '[!DNL Adobe Target] [!UICONTROL  オンデバイス決定] アクティビティのJSON表現であるルールアーティファクトの使用方法を説明します。'
+description: '[!DNL Adobe Target] [!UICONTROL &#x200B; オンデバイス決定] アクティビティのJSON表現であるルールアーティファクトの使用方法を説明します。'
 feature: APIs/SDKs
 exl-id: 3dfb08df-eaa9-43d4-b009-e5f64c3a96d7
 TQID: 'https://experienceleague.adobe.com/mPzCK-vBYFAQnslX-8FPsBaeSiYtyxjZv76anbpHWuE'
@@ -29,14 +29,14 @@ ht-degree: 0%
 ---
 # ルールアーティファクトの概要
 
-ルールアーティファクトは、[!DNL Adobe Target] [!UICONTROL  デバイス上の決定] アクティビティのJSON表現です。 [!DNL Adobe Target]によって生成され、エンドユーザーにできるだけ近いルールアーティファクトが利用可能になるようにAkamai CDNに反映されます。 アクティビティを正確に実行して配信するためのメタデータと、イベントのトラッキングによるリアルタイムの分析を備えています。 [!DNL Adobe Target] SDKは、ルールアーティファクトの自動管理を可能にする方法で設定できます。これにより、ユーザーが指定した時間間隔に従ってダウンロードまたは更新できます。 さらに、[Memcached](https://memcached.org/)などの分散メモリキャッシュシステムを使用してルールアーティファクトの独自のローカルコピーを管理し、[!DNL Adobe Target] SDKを初期化して、ステートレスサーバーがリクエストをすぐに処理できるようにすることもできます。 これらのオプションについて詳しくは、次のガイドを参照してください。
+ルールアーティファクトは、[!DNL Adobe Target] [!UICONTROL &#x200B; デバイス上の決定] アクティビティのJSON表現です。 [!DNL Adobe Target]によって生成され、エンドユーザーにできるだけ近いルールアーティファクトが利用可能になるようにAkamai CDNに反映されます。 アクティビティを正確に実行して配信するためのメタデータと、イベントのトラッキングによるリアルタイムの分析を備えています。 [!DNL Adobe Target] SDKは、ルールアーティファクトの自動管理を可能にする方法で設定できます。これにより、ユーザーが指定した時間間隔に従ってダウンロードまたは更新できます。 さらに、[Memcached](https://memcached.org/)などの分散メモリキャッシュシステムを使用してルールアーティファクトの独自のローカルコピーを管理し、[!DNL Adobe Target] SDKを初期化して、ステートレスサーバーがリクエストをすぐに処理できるようにすることもできます。 これらのオプションについて詳しくは、次のガイドを参照してください。
 
-* [ [!DNL Adobe Target] SDKを介したルールアーティファクトの自動ダウンロード、保存、更新](rule-artifact-sdk.md)
+* [&#x200B; [!DNL Adobe Target] SDKを介したルールアーティファクトの自動ダウンロード、保存、更新](rule-artifact-sdk.md)
 * [JSON ペイロードを使用したルールアーティファクトのダウンロード、保存、更新](rule-artifact-json.md)
 
 ## ルールアーティファクトの例
 
-[ ルール アーティファクト ](rule-artifact-example.md)の例については、ここをクリックしてください。
+[&#x200B; ルール アーティファクト &#x200B;](rule-artifact-example.md)の例については、ここをクリックしてください。
 
 ## クライアントのルールアーティファクトの表示方法
 

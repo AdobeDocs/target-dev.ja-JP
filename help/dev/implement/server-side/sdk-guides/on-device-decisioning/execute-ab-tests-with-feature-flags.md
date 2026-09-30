@@ -33,8 +33,8 @@ ht-degree: 1%
 
 ## 手順の概要
 
-1. 組織の[!UICONTROL  オンデバイス決定]を有効にする
-1. [!UICONTROL A/B テスト ] アクティビティの作成
+1. 組織の[!UICONTROL &#x200B; オンデバイス決定]を有効にする
+1. [!UICONTROL A/B テスト &#x200B;] アクティビティの作成
 1. AとBの定義
 1. オーディエンスの追加
 1. トラフィック配分の設定
@@ -48,7 +48,7 @@ ht-degree: 1%
 >
 >例えば、秋をテーマにしたホームページのリニューアルが、オーディエンスに好評かどうかを判断したいとします。 [!DNL Adobe Target]でA/B実験を実行してテストすることにしました。 また、ネガティブなユーザーエクスペリエンスや遅いユーザーエクスペリエンスが結果をゆがめないように、実験が優れたパフォーマンスで配信されるようにします。
 
-## &#x200B;1. 組織の[!UICONTROL  オンデバイス決定]を有効にする
+## &#x200B;1. 組織の[!UICONTROL &#x200B; オンデバイス決定]を有効にする
 
 オンデバイス判定を有効にすると、A/B アクティビティがほぼゼロの遅延で実行されます。 この機能を有効にするには、[!DNL Adobe Target]で&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]**&#x200B;に移動し、**[!UICONTROL オンデバイス決定]** トグルを有効にします。
 
@@ -57,11 +57,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->オンデバイス決定トグルを有効または無効にするには、管理者または承認者[ ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
+>オンデバイス決定トグルを有効または無効にするには、管理者または承認者[&#x200B; ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
 
 **[!UICONTROL オンデバイス決定]** トグルを有効にすると、[!DNL Adobe Target]はクライアントのルールアーティファクトの生成を開始します。
 
-## &#x200B;2. [!UICONTROL A/B テスト ] アクティビティの作成
+## &#x200B;2. [!UICONTROL A/B テスト &#x200B;] アクティビティの作成
 
 [!DNL Adobe Target]で、**[!UICONTROL アクティビティ]** ページに移動し、**[!UICONTROL アクティビティの作成]** > **[!UICONTROL A/B テスト]**&#x200B;を選択します。
 

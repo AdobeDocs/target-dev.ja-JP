@@ -64,7 +64,7 @@ ht-degree: 9%
 
 ## Server Side Delivery API
 
-リンク：[ サーバーサイド配信API](/help/dev/implement/delivery-api/overview.md)
+リンク：[&#x200B; サーバーサイド配信API](/help/dev/implement/delivery-api/overview.md)
 
 `/rest/v1/delivery`
 
@@ -92,9 +92,9 @@ ht-degree: 9%
 * ユーザーがどのチャネルやデバイスとエンゲージしたかに関係なく、**機械学習（ML）を活用したパーソナライズされたエクスペリエンス**&#x200B;をユーザーに提供します。
 * **サーバーサイドから** Adobe Analytics **、** Adobe Audience Manager **、** Experience Cloud ID Service **などのAdobe Experience Cloud**&#x200B;製品とシームレスに連携できます。
 
-[ デバイス上の決定](sdk-guides/on-device-decisioning/overview.md)を介してシンプルな機能フラグ付けユースケースを実行する方法については、[はじめに](sdk-guides/getting-started/getting-started.md) ページを参照してください。
+[&#x200B; デバイス上の決定](sdk-guides/on-device-decisioning/overview.md)を介してシンプルな機能フラグ付けユースケースを実行する方法については、[はじめに](sdk-guides/getting-started/getting-started.md) ページを参照してください。
 
-[ サンプルアプリ ](sdk-guides/sample-apps/sample-apps.md)をチェックして、楽しく遊びましょう。
+[&#x200B; サンプルアプリ &#x200B;](sdk-guides/sample-apps/sample-apps.md)をチェックして、楽しく遊びましょう。
 
 ## [!DNL Target Recommendations] API
 
@@ -112,7 +112,7 @@ SDK以外のEdge API呼び出しの場合は、次の要件を確認してくだ
 * プレースホルダーやブラウザー以外の値（例：`MyApp/1.0`）は使用しないでください。このような値はボットの分類になる可能性があります。
 * パブリック Edge API呼び出しには、SDK名またはSDK バージョンは必要ありません。 このシナリオでは、有効な`User-Agent` HTTP ヘッダーが必須の要素です。
 
-[!DNL Target]がリクエストをボットトラフィックとして分類すると、[!UICONTROL Recommendations]や[!UICONTROL 自動ターゲット ]などのアクティビティのプロファイル検索、セグメント評価、パーソナライズされたコンテンツが抑制されるため、パーソナライゼーションが失敗したり、断続的に見えたりする可能性があります。
+[!DNL Target]がリクエストをボットトラフィックとして分類すると、[!UICONTROL Recommendations]や[!UICONTROL 自動ターゲット &#x200B;]などのアクティビティのプロファイル検索、セグメント評価、パーソナライズされたコンテンツが抑制されるため、パーソナライゼーションが失敗したり、断続的に見えたりする可能性があります。
 
 SDKの導入について詳しくは、[[!DNL Adobe Experience Platform Web SDK] 概要](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}を参照してください。
 

@@ -31,7 +31,7 @@ ht-degree: 0%
 
 クライアントヒントは、オファーリクエストで[!DNL Adobe Target]に送信する必要があります。
 
-通常、使用可能なすべてのクライアントヒントを[!DNL Target]に送信することをお勧めします。 詳しくは、「[ クライアントサイド実装](../../implement/client-side/overview.md)」セクションの「[User-agent and Client Hints](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md)」を参照してください。
+通常、使用可能なすべてのクライアントヒントを[!DNL Target]に送信することをお勧めします。 詳しくは、「[&#x200B; クライアントサイド実装](../../implement/client-side/overview.md)」セクションの「[User-agent and Client Hints](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md)」を参照してください。
 
 ## 配信API ダイレクトコール
 

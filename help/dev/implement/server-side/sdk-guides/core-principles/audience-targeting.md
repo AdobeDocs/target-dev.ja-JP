@@ -31,11 +31,11 @@ ht-degree: 18%
 
 ## 概要
 
-オーディエンスは、実験とパーソナライゼーションの活動をターゲットにするために使用できます。 [!DNL Adobe Target]は、標準で用意されている多数の強力なオーディエンスターゲティング機能をサポートしています。 [ オーディエンスターゲティング ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html)では、次の属性を使用できます。
+オーディエンスは、実験とパーソナライゼーションの活動をターゲットにするために使用できます。 [!DNL Adobe Target]は、標準で用意されている多数の強力なオーディエンスターゲティング機能をサポートしています。 [&#x200B; オーディエンスターゲティング &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html)では、次の属性を使用できます。
 
 ### [!DNL Target] ライブラリ
 
-詳しくは、[[!DNL Target]  ライブラリ ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html)を参照してください。
+詳しくは、[[!DNL Target]  ライブラリ &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html)を参照してください。
 &#x200B;
 * Bing から
 * Chrome ブラウザー
@@ -66,7 +66,7 @@ ht-degree: 18%
 
 ### ネットワーク
 
-詳しくは、[ ネットワーク ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html)を参照してください。
+詳しくは、[&#x200B; ネットワーク &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html)を参照してください。
 
 * ISP
 * ドメイン名
@@ -88,13 +88,13 @@ ht-degree: 18%
 
 ### カスタム
 
-詳しくは、[ カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html)を参照してください。
+詳しくは、[&#x200B; カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html)を参照してください。
 
 * 任意のキー/値のペア
 
 ### オペレーティングシステム
 
-詳しくは、[ オペレーティングシステム ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html)を参照してください。
+詳しくは、[&#x200B; オペレーティングシステム &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html)を参照してください。
 
 * Linux
 * Macintosh
@@ -102,7 +102,7 @@ ht-degree: 18%
 
 ### サイトのページ
 
-詳しくは、[ サイトページ ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html)を参照してください。
+詳しくは、[&#x200B; サイトページ &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html)を参照してください。
 
 * 現在のページ
 * 前のページ
@@ -111,7 +111,7 @@ ht-degree: 18%
 
 ### ブラウザー
 
-詳しくは、[ ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html)を参照してください。
+詳しくは、[&#x200B; ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html)を参照してください。
 
 * タイプ
 * 言語
@@ -119,13 +119,13 @@ ht-degree: 18%
 
 ### 訪問者プロファイル
 
-詳しくは、[訪問者プロファイル ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)を参照してください。
+詳しくは、[訪問者プロファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)を参照してください。
 
 * 永続化される任意のキーと値のペア
 
 ### トラフィックソース
 
-詳しくは、[ トラフィックソース ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html)を参照してください。
+詳しくは、[&#x200B; トラフィックソース &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html)を参照してください。
 
 * Baidu から
 * Bing から
@@ -143,7 +143,7 @@ ht-degree: 18%
 
 ## クライアントヒント
 
-[!DNL Adobe Target]には、ブラウザー、オペレーティングシステム、およびモバイルオーディエンス属性の正しいセグメント化と、プロファイルスクリプトの特定のインスタンスに対するクライアントヒントが必要です。 背景の詳細については、[ ユーザーエージェントとクライアントヒント ](../../../client-side/atjs/user-agent-and-client-hints.md)を参照してください。
+[!DNL Adobe Target]には、ブラウザー、オペレーティングシステム、およびモバイルオーディエンス属性の正しいセグメント化と、プロファイルスクリプトの特定のインスタンスに対するクライアントヒントが必要です。 背景の詳細については、[&#x200B; ユーザーエージェントとクライアントヒント &#x200B;](../../../client-side/atjs/user-agent-and-client-hints.md)を参照してください。
 
 ### クライアントヒントを[!DNL Adobe Target]に渡す方法
 
@@ -217,7 +217,7 @@ TargetDeliveryRequest request = TargetDeliveryRequest.builder()
 | [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | ○ |
 | [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | × |
 | [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | × |
-| [ カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | ○ |
+| [&#x200B; カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | ○ |
 | [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | ○ |
 | [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | ○ |
 | [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | ○ |
@@ -344,7 +344,7 @@ public class TargetRequestUtils {
 | [地域](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | ○ |
 | [ネットワーク](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | ○ |
 | [モバイル](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | ○ |
-| [ カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | ○ |
+| [&#x200B; カスタムパラメーター](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | ○ |
 | [オペレーティングシステム](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | ○ |
 | [サイトのページ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | ○ |
 | [ブラウザー](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | ○ |

@@ -21,7 +21,7 @@ ht-degree: 91%
 ---
 # SDK
 
-[!DNL Adobe Target]様は、[ サーバーサイド SDK](../../implement/server-side/server-side-overview.md)を提供して、[!DNL Target Delivery API]様とやり取りし、[!UICONTROL Target]様と[!UICONTROL Adobe Analytics]様や[!DNL Adobe Audience Manager]様などの他の[!DNL Adobe Experience Cloud]様のソリューションとの統合を容易にするのに役立てています。
+[!DNL Adobe Target]様は、[&#x200B; サーバーサイド SDK](../../implement/server-side/server-side-overview.md)を提供して、[!DNL Target Delivery API]様とやり取りし、[!UICONTROL Target]様と[!UICONTROL Adobe Analytics]様や[!DNL Adobe Audience Manager]様などの他の[!DNL Adobe Experience Cloud]様のソリューションとの統合を容易にするのに役立てています。
 
 SDK は、セッションと Cookie の管理でのベストプラクティスに従うのに役立ちます。 複雑さをスムーズにし、API の誤用を防ぐために、SDK を活用することを強くお勧めします。
 

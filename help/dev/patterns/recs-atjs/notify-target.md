@@ -42,7 +42,7 @@ ht-degree: 0%
 
 次の図の手順の番号は、以下の節に対応しています。
 
-![ ターゲットダイアグラムに通知](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
+![&#x200B; ターゲットダイアグラムに通知](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
 
 ## 4.1: [!DNL Adobe Target] Track APIを実行する
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 +++詳細を見る
 
-![Fire Adobe Target Track API ダイアグラム ](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
+![Fire Adobe Target Track API ダイアグラム &#x200B;](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 以下の「*前提条件*」セクションに記載されているように、注文コンバージョン属性を送信します。 mboxの名前は問題ではありませんが、変換には`orderConfirmPage`を使用します。
 
@@ -67,9 +67,9 @@ ht-degree: 0%
   * `orderTotal`：購入の注文合計。
   * `orderId`：購入の注文ID。
 
-  次の図は、[!UICONTROL 確認] ページでのみ実行される [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank}の[ ルールを示しています。
+  次の図は、[!UICONTROL 確認] ページでのみ実行される [!DNL tags] in [!DNL Experience Platform]&#x200B;[&#128279;](https://experienceleague.adobe.com/docs/tags.html){target=_blank}の ルールを示しています。
 
-  ![ アクション設定ページ ](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
+  ![&#x200B; アクション設定ページ &#x200B;](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
 * カート追加用のイベントを追跡している場合は、`cartIds`をパラメーターとして送信します。 `cardIds`には、製品IDのコンマ区切りリストを渡すことができます。
 

@@ -147,7 +147,7 @@ Adobe Targetを含むAdobe Experience Cloud ソリューション全体のあら
 
 ### Adobeでは、お客様がデータ主体/ユーザーのリクエストに応じて削除できる情報は何ですか？
 
-個々の訪問者に関する Target 内の情報は、Target 訪問者プロファイルに格納されています。 Targetを使用すると、顧客は訪問者プロファイルのIDに関連付けられたすべてのデータを削除できます。 プロファイルデータターゲットストアの例については、[訪問者プロファイル ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)を参照してください。
+個々の訪問者に関する Target 内の情報は、Target 訪問者プロファイルに格納されています。 Targetを使用すると、顧客は訪問者プロファイルのIDに関連付けられたすべてのデータを削除できます。 プロファイルデータターゲットストアの例については、[訪問者プロファイル &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)を参照してください。
 
 個人を特定しない集約化されたあるいは匿名化されたデータ（レポートデータなど）または特定の個人に関連しないデータ（コンテンツデータなど）は、ユーザーからの削除要請の範疇外となります。
 

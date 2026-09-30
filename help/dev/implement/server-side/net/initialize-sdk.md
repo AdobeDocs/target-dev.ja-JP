@@ -32,7 +32,7 @@ ht-degree: 15%
 
 `TargetClient`は`TargetClient.Create`を使用して作成されています。
 
-## C#
+## C#&#x200B;
 
 ```csharp {line-numbers="true"}
 TargetClient TargetClient.Create(TargetClientConfig clientConfig)
@@ -40,7 +40,7 @@ TargetClient TargetClient.Create(TargetClientConfig clientConfig)
 
 `ClientConfig`はClientConfig.Builderを使用して作成されます。
 
-## C#
+## C#&#x200B;
 
 ```csharp {line-numbers="true"}
 TargetClientConfig.Builder TargetClientConfig.Builder()
@@ -52,7 +52,7 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 | 名前 | タイプ | 必須 | デフォルト | 説明 |
 | --- | --- | --- | --- | --- |
-| クライアント | string | ○ | None | [!UICONTROL  ターゲットクライアント Id] |
+| クライアント | string | ○ | None | [!UICONTROL &#x200B; ターゲットクライアント Id] |
 | OrganizationId | string | ○ | None | [!UICONTROL Experience Cloud組織ID] |
 | タイムアウト | int | × | 10000 | すべてのリクエストのタイムアウト （ミリ秒単位） |
 | プロキシ | WebProxy | × | null | すべての[!DNL Target]要求のプロキシ |
@@ -74,7 +74,7 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 ## 例
 
-## C#
+## C#&#x200B;
 
 ```csharp {line-numbers="true"}
 var targetClientConfig = new TargetClientConfig.Builder("acmeclient", "ABCDEF012345677890ABCDEF0@AdobeOrg")

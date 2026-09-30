@@ -22,7 +22,7 @@ ht-degree: 1%
 
 ## Node.js
 
-[React ショッピングカートのデモアプリ ](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/react-shopping-cart-demo)
+[React ショッピングカートのデモアプリ &#x200B;](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/react-shopping-cart-demo)
 
 [サーバーサイドレンダリング（SSR）デモアプリ](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/next-server-side-rendering-demo)
 

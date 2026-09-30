@@ -24,7 +24,7 @@ workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 10%
 ---
-# ターゲット ] （A4T）レポート用の[!UICONTROL Analytics
+# ターゲット  （A4T）レポート用のAnalytics
 
 [!DNL Adobe Target]は、オンデバイス決定とサーバーサイド [!DNL Target]の両方のアクティビティに対するA4T レポートをサポートしています。 A4T レポートを有効にするには、次の2つの設定オプションがあります。
 
@@ -128,7 +128,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## ユーザーは[!DNL Adobe Target]から分析ペイロードを取得します
 
-ユーザーは、特定のmboxの[!DNL Adobe Analytics] ペイロードを取得し、[ データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を介して[!DNL Adobe Analytics]に送信できます。 [!DNL Adobe Target] リクエストが実行されたら、リクエストの`client_side`を`logging` フィールドに渡します。 指定されたmboxがレポートソースとして[!DNL Analytics]を使用しているアクティビティに存在する場合、このリクエストはペイロードを返します。
+ユーザーは、特定のmboxの[!DNL Adobe Analytics] ペイロードを取得し、[&#x200B; データ挿入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)を介して[!DNL Adobe Analytics]に送信できます。 [!DNL Adobe Target] リクエストが実行されたら、リクエストの`client_side`を`logging` フィールドに渡します。 指定されたmboxがレポートソースとして[!DNL Analytics]を使用しているアクティビティに存在する場合、このリクエストはペイロードを返します。
 
 >[!BEGINTABS]
 

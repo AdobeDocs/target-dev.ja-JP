@@ -22,7 +22,7 @@ ht-degree: 4%
 
 ## 説明
 
-SDK](initialize-sdk.md)を[初期化中に、`ClientConfig` オブジェクトにオプションの`OnDeviceDecisioningHandler` オブジェクトを指定できます。 SDK内で発生するさまざまなイベントの購読に使用できます。 例えば、`onDeviceDecisioningReady` イベントは、SDKがメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
+SDK[&#128279;](initialize-sdk.md)を初期化中に、`ClientConfig` オブジェクトにオプションの`OnDeviceDecisioningHandler` オブジェクトを指定できます。 SDK内で発生するさまざまなイベントの購読に使用できます。 例えば、`onDeviceDecisioningReady` イベントは、SDKがメソッド呼び出しの準備ができたときに呼び出されるコールバック関数と共に使用できます。
 
 ## Events
 
@@ -30,9 +30,9 @@ SDK](initialize-sdk.md)を[初期化中に、`ClientConfig` オブジェクト�
 
 | 名前 | 引数 | 説明 |
 | --- | --- | --- |
-| onDeviceDecisioningReady | None | クライアントが初めて[!UICONTROL  オンデバイス決定]の準備が整ったときに一度だけ呼び出されます |
-| artifactDownloadSucceeded | アーティファクト ファイルのバイト [] コンテンツ | [!UICONTROL  オンデバイス決定] アーティファクトがダウンロードされるたびに呼び出されます |
-| artifactDownloadFailed | 例外 | [!UICONTROL  オンデバイス決定] アーティファクトのダウンロードに失敗するたびに呼び出されます |
+| onDeviceDecisioningReady | None | クライアントが初めて[!UICONTROL &#x200B; オンデバイス決定]の準備が整ったときに一度だけ呼び出されます |
+| artifactDownloadSucceeded | アーティファクト ファイルのバイト [] コンテンツ | [!UICONTROL &#x200B; オンデバイス決定] アーティファクトがダウンロードされるたびに呼び出されます |
+| artifactDownloadFailed | 例外 | [!UICONTROL &#x200B; オンデバイス決定] アーティファクトのダウンロードに失敗するたびに呼び出されます |
 
 ## 例
 

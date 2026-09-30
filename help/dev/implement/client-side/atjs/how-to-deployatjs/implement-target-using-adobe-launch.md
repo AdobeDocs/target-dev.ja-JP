@@ -37,7 +37,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、[!DNL Adobe Experience Platform]でデータ収集テクノロジースイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更に関する参照の一覧については、次の[ドキュメント ](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?)を参照してください。
+>Adobe Experience Platform Launchは、[!DNL Adobe Experience Platform]でデータ収集テクノロジースイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更に関する参照の一覧については、次の[ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?)を参照してください。
 
 詳細な情報を取得できる様々なソースを次の表に示します。
 
@@ -51,7 +51,7 @@ ht-degree: 60%
 
 次のメリットは、[!DNL Adobe Experience Platform] のタグを使用して at.js を実装する場合にのみ当てはまります。 そのため、Adobeでは、at.jsを手動で実装するのではなく、[!DNL Adobe Experience Platform]でタグを使用することを強くお勧めします。
 
-* **[!DNL Adobe Analytics] と [!DNL Target] の競合状態の解消：**[!DNL Analytics] 呼び出しは [!DNL Target] 呼び出しより先に実行される可能性があるので、[!DNL Target] 呼び出しは [!DNL Analytics] 呼び出しには結合されません。 これにより、データが正しくなくなるおそれがあります。 [!DNL Target] 拡張機能では、[!DNL Target] 呼び出しが成否に関わらず完了するまで [!DNL Analytics] ビーコン呼び出しが待機します。 [!DNL Adobe Experience Platform] でタグを使用すると、手動で実装する場合に発生する可能性のあるデータ不整合の問題を解決できます。
+* **[!DNL Adobe Analytics] と [!DNL Target] の競合状態の解消：**&#x200B;[!DNL Analytics] 呼び出しは [!DNL Target] 呼び出しより先に実行される可能性があるので、[!DNL Target] 呼び出しは [!DNL Analytics] 呼び出しには結合されません。 これにより、データが正しくなくなるおそれがあります。 [!DNL Target] 拡張機能では、[!DNL Target] 呼び出しが成否に関わらず完了するまで [!DNL Analytics] ビーコン呼び出しが待機します。 [!DNL Adobe Experience Platform] でタグを使用すると、手動で実装する場合に発生する可能性のあるデータ不整合の問題を解決できます。
 
   >[!NOTE]
   >

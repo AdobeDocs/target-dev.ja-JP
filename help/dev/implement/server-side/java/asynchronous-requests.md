@@ -81,6 +81,6 @@ public class TargetRestController {
 }
 ```
 
-この例では、[SDK](initialize-sdk.md)をスプリング Beanとして初期化しており、[ ユーティリティメソッド ](utility-methods.md)が使用可能であると仮定します。
+この例では、[SDK](initialize-sdk.md)をスプリング Beanとして初期化しており、[&#x200B; ユーティリティメソッド &#x200B;](utility-methods.md)が使用可能であると仮定します。
 
 [!DNL Target] リクエストは`simulateIO`の前に実行され、実行されるまでにターゲット結果も準備が整っている必要があります。 そうでなくても、ほとんどの場合、大幅な節約になります。

@@ -61,7 +61,7 @@ ht-degree: 31%
 
    * [!DNL Adobe Target]製品レベルの管理者権限（Sysadmin 権限）
 
-API を使用してプロファイル認証トークンを生成もできます。 詳しくは、[Adobe Target管理者およびプロファイル API ガイド ](../../administer/admin-api/admin-api-overview-new.md)の「プロファイル」を参照してください。
+API を使用してプロファイル認証トークンを生成もできます。 詳しくは、[Adobe Target管理者およびプロファイル API ガイド &#x200B;](../../administer/admin-api/admin-api-overview-new.md)の「プロファイル」を参照してください。
 
 1. トークンをコピーし、「Authorization」 : 「Bearer」の形式でリクエストのヘッダーに含めます。
 
