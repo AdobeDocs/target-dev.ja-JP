@@ -215,4 +215,4 @@ window.targetGlobalSettings = { allowHighEntropyClientHints: true };
 
 ### サーバーサイド SDK
 
-サーバーサイド SDKを介してクライアントヒントを渡す方法について詳しくは、「サーバーサイド実装ドキュメント」の「[ クライアントヒント ](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints)」を参照してください。
+サーバーサイド SDKを介してクライアントヒントを渡す方法について詳しくは、「サーバーサイド実装ドキュメント」の「[&#x200B; クライアントヒント &#x200B;](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints)」を参照してください。
