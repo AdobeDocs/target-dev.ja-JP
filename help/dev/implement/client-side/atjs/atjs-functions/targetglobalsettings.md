@@ -286,7 +286,7 @@ at.js ライブラリの設定は、[!DNL Target] UIやREST APIで設定する�
 window.targetGlobalSettings = {
    timeout: 200, // using custom timeout
    visitorApiTimeout: 500, // using custom API timeout
-   enabled: document.location.href.indexOf('https://www.adobe.com') >= 0 // enabled ONLY on adobe.com
+   enabled: document.location.href.indexOf('https://www.adobe.com/jp') >= 0 // enabled ONLY on adobe.com
 };
 ```
 
