@@ -1,6 +1,6 @@
 ---
 title: 機能テストのロールアウトの管理
-description: '[!UICONTROL  オンデバイス判定]を使用して、機能テストのロールアウトを管理する方法について説明します。'
+description: '[!UICONTROL &#x200B; オンデバイス判定]を使用して、機能テストのロールアウトを管理する方法について説明します。'
 feature: APIs/SDKs
 exl-id: caa91728-6ac0-4583-a594-0c8fe616342d
 TQID: 'https://experienceleague.adobe.com/soG8leVV3R4Y4FSns5oIJ43oziIhtOb2zJ5bkFYxeo0'
@@ -33,15 +33,15 @@ ht-degree: 1%
 
 ## 手順の概要
 
-1. 組織の[!UICONTROL  オンデバイス決定]を有効にする
-1. [!UICONTROL A/B テスト ] アクティビティの作成
+1. 組織の[!UICONTROL &#x200B; オンデバイス決定]を有効にする
+1. [!UICONTROL A/B テスト &#x200B;] アクティビティの作成
 1. 機能とロールアウト設定の定義
 1. アプリケーションに機能を実装してレンダリングする
 1. アプリケーションにイベントのトラッキングを実装する
 1. A/B アクティビティのアクティベート
 1. 必要に応じて、ロールアウトとトラフィック配分を調整します
 
-## &#x200B;1. 組織の[!UICONTROL  オンデバイス決定]を有効にする
+## &#x200B;1. 組織の[!UICONTROL &#x200B; オンデバイス決定]を有効にする
 
 オンデバイス判定を有効にすると、A/B アクティビティがほぼゼロの遅延で実行されます。 この機能を有効にするには、[!DNL Adobe Target]で&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL アカウントの詳細]**&#x200B;に移動し、**[!UICONTROL オンデバイス決定]** トグルを有効にします。
 
@@ -49,11 +49,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->[!UICONTROL  オンデバイス決定] トグルを有効または無効にするには、管理者または承認者[ ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
+>[!UICONTROL &#x200B; オンデバイス決定] トグルを有効または無効にするには、管理者または承認者[&#x200B; ユーザーの役割](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html)が必要です。
 
-[!UICONTROL  オンデバイス決定] トグルを有効にすると、[!DNL Adobe Target]は、クライアントに対して&#x200B;*ルールアーティファクト*&#x200B;の生成を開始します。
+[!UICONTROL &#x200B; オンデバイス決定] トグルを有効にすると、[!DNL Adobe Target]は、クライアントに対して&#x200B;*ルールアーティファクト*&#x200B;の生成を開始します。
 
-## &#x200B;2. [!UICONTROL A/B テスト ] アクティビティの作成
+## &#x200B;2. [!UICONTROL A/B テスト &#x200B;] アクティビティの作成
 
 1. [!DNL Adobe Target]で、**[!UICONTROL アクティビティ]** ページに移動し、**[!UICONTROL アクティビティの作成]** > **[!UICONTROL A/B テスト]**&#x200B;を選択します。
 
