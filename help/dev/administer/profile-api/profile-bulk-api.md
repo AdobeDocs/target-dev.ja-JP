@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1336'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -156,9 +156,9 @@ BATCH.TXTはファイル名です。 CLIENTCODEは[!DNL Target] クライアン�
 
 | ステータス | 詳細 |
 | --- | --- |
-| [!UICONTROL complete] | プロファイルのバッチ更新リクエストが正常に完了しました。 |
-| [!UICONTROL 不完全] | プロファイルのバッチ更新リクエストはまだ処理中で、完了していません。 |
-| [!UICONTROL 行き詰まり] | プロファイルのバッチ更新リクエストが停止しているため完了できませんでした。 |
+| [!UICONTROL complete] | プロファイルのバッチ更新リクエストが正常に完了しました。 行動は必要ありません。 |
+| [!UICONTROL 不完全] | プロファイルのバッチ更新リクエストはまだ処理中で、完了していません。 行動は必要ありません。 |
+| [!UICONTROL 行き詰まり] | プロファイルのバッチ更新リクエストが停止しているため完了できませんでした。 バッチのアップロードから24時間が経過しても、バッチが停止したままになる場合は、再度アップロードする必要があります。 |
 
 ### 詳細なバッチステータス URL応答
 
