@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1336'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -86,7 +86,7 @@ POST呼び出しでこのファイルを参照して、[!DNL Target] サーバ�
 * 最初のヘッダーは`pcId`または`thirdPartyId`のいずれかである必要があります。 [!UICONTROL Marketing Cloud訪問者ID]はサポートされていません。 [!UICONTROL pcId]は[!DNL Target]が生成した訪問者IDです。 `thirdPartyId`はクライアントアプリケーションで指定されたIDで、mbox呼び出しを通じて[!DNL Target]に`mbox3rdPartyId`として渡されます。 ここで`thirdPartyId`と呼ぶ必要があります。
 * バッチファイルで指定するパラメーターと値は、セキュリティ上の理由から、UTF-8を使用してURL エンコードする必要があります。 パラメーターと値は、HTTP リクエストを通じて処理するために他のエッジノードに転送できます。
 * パラメーターの形式は`paramName`のみにする必要があります。 パラメーターは[!DNL Target]に`profile.paramName`として表示されます。
-* [!UICONTROL Bulk Profile Update API] v2を使用している場合は、各`pcId`にすべてのパラメーター値を指定する必要はありません。 プロファイルは、[!DNL Target]に見つからない`pcId`または`mbox3rdPartyId`に対して作成されます。 v1を使用している場合、欠落しているpcIdまたはmbox3rdPartyIdのプロファイルは作成されません。 詳しくは、以下の [!DNL Bulk Profile Update API]&#x200B;[&#128279;](#empty)の空の値の処理を参照してください。
+* [!UICONTROL Bulk Profile Update API] v2を使用している場合は、各`pcId`にすべてのパラメーター値を指定する必要はありません。 プロファイルは、[!DNL Target]に見つからない`pcId`または`mbox3rdPartyId`に対して作成されます。 v1を使用している場合、欠落しているpcIdまたはmbox3rdPartyIdのプロファイルは作成されません。 詳しくは、以下の [!DNL Bulk Profile Update API]](#empty)の[空の値の処理を参照してください。
 * バッチファイルの容量は 50 MB 未満にする必要があります。 さらに、行の合計数は500,000を超えてはなりません。 この制限により、サーバーに多すぎるリクエストが溢れるのを防ぐことができます。
 * アップロードできる属性の数に制限はありません。 ただし、顧客属性、プロファイル API、Mbox内プロファイルパラメーター、プロファイルスクリプト出力を含む外部プロファイルデータの合計サイズは、64 KBを超えてはなりません。
 * パラメーターと値は、大文字と小文字を区別します。
@@ -97,7 +97,7 @@ POST呼び出しでこのファイルを参照して、[!DNL Target] サーバ�
 >
 >すべてのパラメーター名と値は、バッチを送信する前にURL エンコード済み（UTF-8）である必要があります。このバッチは`Content-Type: application/x-www-form-urlencoded`で送信され、本文は`batch=`で始まります。 エンコードされていない予約済み文字は、データではなくリクエスト構文として読み取られ、バッチを拒否、切り捨て、または破損する可能性があります。
 >
->`batchId`が発行されていない「予期しないエラー」の応答が表示された場合は、トラブルシューティング手順について「[&#x200B; プロファイルの一括更新APIが「予期しないエラー」を返す」を参照してください](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-24281)。
+>`batchId`が発行されていない「予期しないエラー」の応答が表示された場合は、トラブルシューティング手順について「[ プロファイルの一括更新APIが「予期しないエラー」を返す」を参照してください](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281)。
 
 次の文字は、通常、プロファイル値に含まれますが、`application/x-www-form-urlencoded` データでは特別な意味を持ちます。 エンコードされていないリクエストを送信すると、リクエストが失敗するか、明らかなエラーなしにデータが破損します。
 
@@ -124,7 +124,7 @@ curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTC
 
 BATCH.TXTはファイル名です。 CLIENTCODEは[!DNL Target] クライアント コードです。
 
-クライアントコードがわからない場合は、[!DNL Target] ユーザーインターフェイスで、**[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;をクリックします。 クライアントコードは、[!UICONTROL &#x200B; アカウントの詳細] セクションに表示されます。
+クライアントコードがわからない場合は、[!DNL Target] ユーザーインターフェイスで、**[!UICONTROL 管理]** > **[!UICONTROL 実装]**&#x200B;をクリックします。 クライアントコードは、[!UICONTROL  アカウントの詳細] セクションに表示されます。
 
 ### 応答を調べる
 
@@ -156,9 +156,9 @@ BATCH.TXTはファイル名です。 CLIENTCODEは[!DNL Target] クライアン�
 
 | ステータス | 詳細 |
 | --- | --- |
-| [!UICONTROL complete] | プロファイルのバッチ更新リクエストが正常に完了しました。 |
-| [!UICONTROL 不完全] | プロファイルのバッチ更新リクエストはまだ処理中で、完了していません。 |
-| [!UICONTROL 行き詰まり] | プロファイルのバッチ更新リクエストが停止しているため完了できませんでした。 |
+| [!UICONTROL complete] | プロファイルのバッチ更新リクエストが正常に完了しました。 行動は必要ありません。 |
+| [!UICONTROL 不完全] | プロファイルのバッチ更新リクエストはまだ処理中で、完了していません。 行動は必要ありません。 |
+| [!UICONTROL 行き詰まり] | プロファイルのバッチ更新リクエストが停止しているため完了できませんでした。 バッチのアップロードから24時間が経過しても、バッチが停止したままになる場合は、再度アップロードする必要があります。 |
 
 ### 詳細なバッチステータス URL応答
 
