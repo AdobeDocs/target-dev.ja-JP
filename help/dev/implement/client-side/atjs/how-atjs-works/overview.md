@@ -34,4 +34,4 @@ at.js ライブラリは、[!DNL Adobe Target]のクライアントサイド実�
 
 * [at.js の仕組み](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 * [at.js によるちらつきの制御方法](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)
-* [ [!DNL Target]との共通の統合を持つat.jsのサポート状態](/help/dev/implement/client-side/atjs/how-atjs-works/target-atjs-integrations.md)
+* [&#x200B; [!DNL Target]との共通の統合を持つat.jsのサポート状態](/help/dev/implement/client-side/atjs/how-atjs-works/target-atjs-integrations.md)

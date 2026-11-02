@@ -45,7 +45,7 @@ at.js ライブラリは、[!DNL Adobe Target]のクライアントサイド実�
 
 詳細については、[Target JavaScript ライブラリ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#libraries)を参照してください。
 
-以下に示す[!DNL Target]実装では、次のAdobe Experience Cloud ソリューションが実装されています：[!DNL Analytics]、Target、および[!DNL Audience Manager]。 さらに、次の[!DNL Experience Cloud] コアサービスが実装されています：[!DNL Adobe Experience Platform]、[!UICONTROL  オーディエンス ]、[!UICONTROL 訪問者ID サービス ]。
+以下に示す[!DNL Target]実装では、次のAdobe Experience Cloud ソリューションが実装されています：[!DNL Analytics]、Target、および[!DNL Audience Manager]。 さらに、次の[!DNL Experience Cloud] コアサービスが実装されています：[!DNL Adobe Experience Platform]、[!UICONTROL &#x200B; オーディエンス &#x200B;]、[!UICONTROL 訪問者ID サービス &#x200B;]。
 
 ## at.js 1.*x*&#x200B;とat.js 2.x ワークフロー図の違いは何ですか？
 
@@ -54,11 +54,11 @@ at.js ライブラリは、[!DNL Adobe Target]のクライアントサイド実�
 抽象度の高い表示では、2 つのバージョン間にいくつかの違いがあります。
 
 * at.js 2.x は、グローバル mbox リクエストの概念がなく、ページ読み込みリクエストを使用します。 ページ読み込みリクエストは、Web サイトの最初のページ読み込み時に適用されるコンテンツを取得するリクエストとして表示できます。
-* at.js 2.xは、[!UICONTROL  ビュー]という概念を管理します。これは、シングルページアプリケーション（SPA）に使用されます。 at.js 1.*x*&#x200B;はこの概念を認識していません。
+* at.js 2.xは、[!UICONTROL &#x200B; ビュー]という概念を管理します。これは、シングルページアプリケーション（SPA）に使用されます。 at.js 1.*x*&#x200B;はこの概念を認識していません。
 
 ## at.js 2.x 図
 
-次の図は、[!UICONTROL  ビュー]を含むat.js 2.xのワークフローと、これがSPA統合をどのように強化するかを理解するのに役立ちます。 at.js 2.x で使用されている概念に関するより詳しい概要については、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
+次の図は、[!UICONTROL &#x200B; ビュー]を含むat.js 2.xのワークフローと、これがSPA統合をどのように強化するかを理解するのに役立ちます。 at.js 2.x で使用されている概念に関するより詳しい概要については、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
 
 （画像をクリックして全幅に拡大します）。
 
@@ -69,13 +69,13 @@ at.js ライブラリは、[!DNL Adobe Target]のクライアントサイド実�
 | 1 | ユーザーが認証された場合、呼び出しは[!UICONTROL Experience Cloud ID]を返します。別の呼び出しは顧客IDを同期します。 |
 | 2 | at.js ライブラリは、ドキュメント本文を同期して読み込み、非表示にします。<br />at.jsは、オプションの事前非表示スニペットをページに実装して、非同期で読み込むこともできます。 |
 | 3 | すべての設定済みパラメーター（MCID、SDID および顧客 ID）を含む、ページ読み込みリクエストがおこなわれます。 |
-| 4 | プロファイルスクリプトが実行され、[!UICONTROL  プロファイルストア ]に入力されます。 Storeは、[!UICONTROL  オーディエンスライブラリ ]から適格なオーディエンスをリクエストします（例えば、[!DNL Adobe Analytics]、[!DNL Audience Manager]などから共有されたオーディエンス）。<br />顧客属性は、バッチプロセスで[!UICONTROL  プロファイルストア ]に送信されます。 |
+| 4 | プロファイルスクリプトが実行され、[!UICONTROL &#x200B; プロファイルストア &#x200B;]に入力されます。 Storeは、[!UICONTROL &#x200B; オーディエンスライブラリ &#x200B;]から適格なオーディエンスをリクエストします（例えば、[!DNL Adobe Analytics]、[!DNL Audience Manager]などから共有されたオーディエンス）。<br />顧客属性は、バッチプロセスで[!UICONTROL &#x200B; プロファイルストア &#x200B;]に送信されます。 |
 | 5 | URL リクエストパラメーターとプロファイルデータに基づいて、[!DNL Target] が現在のページおよび将来のビューでどのアクティビティおよびエクスペリエンスを訪問者に返すかを決定します。 |
 | 6 | ターゲットコンテンツが（オプションで、追加のパーソナライゼーションに関するプロファイル値を含めて）ページに送り返されます。<br />デフォルトコンテンツがちらつくことなく、可能な限り迅速に現在のページ上のターゲットコンテンツが表示されます。<br />SPA でのユーザーアクションの結果として表示されるビューのターゲットコンテンツは、ブラウザーにキャッシュされます。そのため、`triggerView()` を介してビューがトリガーされたときに追加のサーバー呼び出しをおこなわずに即座にターゲットコンテンツを適用できます。 |
-| 7 | 分析データは[!UICONTROL  データ収集] サーバーに送信されます。 |
+| 7 | 分析データは[!UICONTROL &#x200B; データ収集] サーバーに送信されます。 |
 | 8 | ターゲットデータは、SDIDを介してAnalytics データと照合され、[!DNL Analytics] レポートストレージに処理されます。<br />[!DNL Analytics] その後、（A4T）レポートを使用して、[!DNL Analytics]と[!DNL Target]の両方でデータを表示できます。 |
 
-現在、`triggerView()`がSPAに実装されている場所では、[!UICONTROL  ビュー]とアクションがキャッシュから取得され、サーバーコールなしでユーザーに表示されます。 `triggerView()` は、インプレッション数を増分して記録するために、[!DNL Target] バックエンド に通知リクエストもおこないます。 ビューを使用した SPA での at.js について詳しくは、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
+現在、`triggerView()`がSPAに実装されている場所では、[!UICONTROL &#x200B; ビュー]とアクションがキャッシュから取得され、サーバーコールなしでユーザーに表示されます。 `triggerView()` は、インプレッション数を増分して記録するために、[!DNL Target] バックエンド に通知リクエストもおこないます。 ビューを使用した SPA での at.js について詳しくは、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
 
 （画像をクリックして全幅に拡大します）。
 
@@ -83,11 +83,11 @@ at.js ライブラリは、[!DNL Adobe Target]のクライアントサイド実�
 
 | 手順 | 詳細 |
 | --- | --- |
-| 1 | `triggerView()`がSPAで呼び出され、[!UICONTROL  ビュー]をレンダリングし、アクションを適用してビジュアル要素を変更します。 |
+| 1 | `triggerView()`がSPAで呼び出され、[!UICONTROL &#x200B; ビュー]をレンダリングし、アクションを適用してビジュアル要素を変更します。 |
 | 2 | ビューのターゲットコンテンツがキャッシュから読み取られます。 |
 | 3 | デフォルトコンテンツがちらつくことなく、可能な限り迅速にターゲットコンテンツが表示されます。 |
-| 4 | アクティビティおよび増分指標で訪問者をカウントするために、[!DNL Target] [!UICONTROL  プロファイルストア ]に通知リクエストが送信されます。 |
-| 5 | [!DNL Analytics]個のデータが[!UICONTROL  データ収集サーバー]に送信されました。 |
+| 4 | アクティビティおよび増分指標で訪問者をカウントするために、[!DNL Target] [!UICONTROL &#x200B; プロファイルストア &#x200B;]に通知リクエストが送信されます。 |
+| 5 | [!DNL Analytics]個のデータが[!UICONTROL &#x200B; データ収集サーバー]に送信されました。 |
 | 6 | [!DNL Target] データはSDIDを介して[!DNL Analytics] データと照合され、[!DNL Analytics] レポートストレージに処理されます。 [!DNL Analytics]個のデータは、A4T レポートを使用して[!DNL Analytics]と[!DNL Target]の両方で表示できます。 |
 
 ### ビデオ： at.js 2.x のアーキテクチャ図
@@ -115,7 +115,7 @@ at.js 2.x は、Adobe Target の SAP のサポートを強化し、Adobe Target 
 
 ### ビデオ — Office hours：at.js のヒントと概要（2019年6月26日（PT））
 
-このビデオは、[!UICONTROL Adobe カスタマーケア ] チームが主導した「Office Hours」の録画です。
+このビデオは、[!UICONTROL Adobe カスタマーケア &#x200B;] チームが主導した「Office Hours」の録画です。
 
 * at.js を使用する利点
 * at.js の設定

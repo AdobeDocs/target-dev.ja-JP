@@ -28,15 +28,15 @@ ht-degree: 3%
 
 ## [!DNL Adobe Experience Platform]のタグを使用してSDKをデプロイする必要がありますか。それとも、Launchを使用せずにSDKをデプロイできますか？
 
-SDKは、[Adobe Marketing Cloud Git](https://github.com/Adobe-Marketing-Cloud/acp-sdks/){target=_blank}で利用できます。 Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja){target=_blank}で[ タグを使用しない場合は、独自の設定ファイルを管理し、アプリで管理する必要があります。
+SDKは、[Adobe Marketing Cloud Git](https://github.com/Adobe-Marketing-Cloud/acp-sdks/){target=_blank}で利用できます。 Adobe Experience Platform[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=ja){target=_blank}で タグを使用しない場合は、独自の設定ファイルを管理し、アプリで管理する必要があります。
 
 ## 現在、どのSDKが利用できますか？
 
-Adobe Experience Platform Mobile SDKは現在、iOS、Android、Reactをサポートしています。 詳しくは、[Adobe Experience Cloud Platform Mobile SDK ガイド ](https://experienceleague.adobe.com/docs/mobile.html?lang=ja){target=_blank}を参照してください。
+Adobe Experience Platform Mobile SDKは現在、iOS、Android、Reactをサポートしています。 詳しくは、[Adobe Experience Cloud Platform Mobile SDK ガイド &#x200B;](https://experienceleague.adobe.com/docs/mobile.html?lang=ja){target=_blank}を参照してください。
 
 ## 緯度と経度に関する検証の観点から、ロケーションベースの機能の頻度は何ですか？
 
-詳しくは、[Adobe Places ドキュメント ](https://experienceleague.adobe.com/docs/places/using/home.html){target=_blank}を参照してください。
+詳しくは、[Adobe Places ドキュメント &#x200B;](https://experienceleague.adobe.com/docs/places/using/home.html){target=_blank}を参照してください。
 
 ## Adobe Experience Platform Mobile SDKが機能するためにat.jsが必要ですか？
 
@@ -44,8 +44,8 @@ Adobe Experience Platform Mobile SDKは現在、iOS、Android、Reactをサポ�
 
 ## [!DNL Target] モバイルは[!DNL Adobe Target] プレミアム製品SKUの機能ですか？
 
-いいえ。 [!DNL Adobe Target Standard]のお客様は、[!DNL Target Standard] モバイルアプリアドオンでのみ、[!UICONTROL A/B テスト ]および[!UICONTROL  エクスペリエンスのターゲット設定] （XT）アクティビティにMobile SDKを使用できます。 モバイルアプリで[!UICONTROL Recommendations]またはAIを活用した機能を使用する場合は、[Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html#premium)のライセンスが必要です。
+いいえ。 [!DNL Adobe Target Standard]のお客様は、[!DNL Target Standard] モバイルアプリアドオンでのみ、[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL &#x200B; エクスペリエンスのターゲット設定] （XT）アクティビティにMobile SDKを使用できます。 モバイルアプリで[!UICONTROL Recommendations]またはAIを活用した機能を使用する場合は、[Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html#premium)のライセンスが必要です。
 
 ## [!DNL Adobe Experience Manager] （AEM）と[!DNL Target] モバイルアクティビティの間にモバイルアプリの統合はありますか？
 
-現在、AEMから[!DNL Target]までJSON [ エクスペリエンスフラグメント ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html){target=_blank}を共有でき、モバイルアプリアクティビティで使用する可能性があります。
+現在、AEMから[!DNL Target]までJSON [&#x200B; エクスペリエンスフラグメント &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html){target=_blank}を共有でき、モバイルアプリアクティビティで使用する可能性があります。

@@ -62,7 +62,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(event) 
 });
 ```
 
-## トレーニングビデオ：応答トークンとat.js カスタムイベント ![ チュートリアルバッジ ](../../../assets/tutorial.png)
+## トレーニングビデオ：応答トークンとat.js カスタムイベント ![&#x200B; チュートリアルバッジ &#x200B;](../../../assets/tutorial.png)
 
 次のビデオでは、応答トークンとat.js カスタムイベントを使用して、[!DNL Target]からサードパーティシステムにプロファイル情報を共有する方法を説明します。
 

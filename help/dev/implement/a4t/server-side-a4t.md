@@ -34,8 +34,8 @@ ht-degree: 0%
 
 次の図は、サーバーサイド [!DNL Analytics] ログが有効になっている場合のシステム内でのデータの流れを示しています。
 
-![ サーバーサイドのログフロー](/help/dev/implement/a4t/assets/analytics-server-side-logging.png)
+![&#x200B; サーバーサイドのログフロー](/help/dev/implement/a4t/assets/analytics-server-side-logging.png)
 
 ## 次のステップ
 
-このガイドでは、Web SDKでのA4T データのサーバーサイドのログ記録について説明しました。 クライアントサイドでのA4T データの処理方法について詳しくは、[ クライアントサイドのログ記録](/help/dev/implement/a4t/client-side-logging.md)に関するガイドを参照してください。
+このガイドでは、Web SDKでのA4T データのサーバーサイドのログ記録について説明しました。 クライアントサイドでのA4T データの処理方法について詳しくは、[&#x200B; クライアントサイドのログ記録](/help/dev/implement/a4t/client-side-logging.md)に関するガイドを参照してください。

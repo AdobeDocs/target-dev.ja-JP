@@ -37,15 +37,15 @@ ht-degree: 6%
 
 次のビデオでは、デバッグプロセスの手順について説明しています。
 
-### Adobe Experience Cloud Debugger拡張機能![概要バッジ ](../../assets/overview.png)を追加します
+### Adobe Experience Cloud Debugger拡張機能![概要バッジ &#x200B;](../../assets/overview.png)を追加します
 
 >[!VIDEO](https://video.tv.adobe.com/v/23114/?quality=12)
 
-### Adobe Experience Cloud Debuggerを使用した基本的なAdobe Target デバッグ ![概要バッジ ](../../assets/overview.png)
+### Adobe Experience Cloud Debuggerを使用した基本的なAdobe Target デバッグ ![概要バッジ &#x200B;](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/23115/?quality=12)
 
-### Mbox Trace ![概要バッジ ](../../assets/overview.png)
+### Mbox Trace ![概要バッジ &#x200B;](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/23113/?quality=12)
 

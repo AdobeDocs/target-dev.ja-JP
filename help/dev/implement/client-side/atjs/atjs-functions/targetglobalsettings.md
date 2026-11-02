@@ -1,7 +1,7 @@
 ---
 keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalSettings, at.js, functions, function, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookiedomain, crossDomain, crossdomain, timeout, timeout globalMboxAutoCreate, visitorApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiedomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3 optoutEnabled, optout, optout, selectorsPollingTimeout, dataProviders, Hybrid Personalization, deviceIdLifetime
-description: '[!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL targetGlobalSettings （） ]関数を使用して、[!DNL Target] UIまたはREST APIを使用する代わりに設定を上書きします。'
-title: '[!UICONTROL targetGlobalSettings （） ]関数の使用方法を教えてください。'
+description: '[!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL targetGlobalSettings （） &#x200B;]関数を使用して、[!DNL Target] UIまたはREST APIを使用する代わりに設定を上書きします。'
+title: '[!UICONTROL targetGlobalSettings （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
 TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
@@ -39,7 +39,7 @@ workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 56%
 ---
-# [!UICONTROL targetGlobalSettings （） ]
+# [!UICONTROL targetGlobalSettings （） &#x200B;]
 
 at.js ライブラリの設定は、[!DNL Target] UIやREST APIで設定するのではなく、`[!UICONTROL targetGlobalSettings()]`を使用して上書きできます。
 
@@ -63,7 +63,7 @@ at.js ライブラリの設定は、[!DNL Target] UIやREST APIで設定する�
 
 * **型**：String
 * **デフォルト値**：なし
-* **説明**: [ デバイス上の決定ルール アーティファクト ](../../../server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)への完全修飾URL
+* **説明**: [&#x200B; デバイス上の決定ルール アーティファクト &#x200B;](../../../server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)への完全修飾URL
 
 ### bodyHiddenStyle
 
@@ -130,7 +130,7 @@ at.js ライブラリの設定は、[!DNL Target] UIやREST APIで設定する�
 
   at.js 2.5以降をweb プロパティに実装してデプロイする場合に、デフォルトの決定メソッドはサーバーサイドのみになります。
 
-  デフォルト設定としてサーバーサイドのみを使用すると、サーバーコールをブロックする[!DNL Target] エッジネットワークですべての決定が行われます。 このアプローチでは、遅延が増加する可能性がありますが、[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) （AP）、[自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) アクティビティを含む[!DNL Target]のマシンラーニング機能を適用できる機能など、大きなメリットも得られます。
+  デフォルト設定としてサーバーサイドのみを使用すると、サーバーコールをブロックする[!DNL Target] エッジネットワークですべての決定が行われます。 このアプローチでは、遅延が増加する可能性がありますが、[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) （AP）、[自動ターゲット &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) アクティビティを含む[!DNL Target]のマシンラーニング機能を適用できる機能など、大きなメリットも得られます。
 
   さらに、セッションやチャネルをまたいで保持される[!DNL Target]のユーザープロファイルを使用して、パーソナライズされたエクスペリエンスを強化することで、ビジネスに強力な成果をもたらすことができます。
 
@@ -200,7 +200,7 @@ at.js ライブラリの設定は、[!DNL Target] UIやREST APIで設定する�
 
 * **タイプ**：ブール値
 * **デフォルト値**：false
-* **説明**: [!DNL Target]は、同意管理戦略をサポートするために、Adobe Experience Platformを介したオプトイン機能のサポートを提供しています。 オプトイン機能を使用すると、[!DNL Target] タグを実行する方法とタイミングを制御できます。 Adobe Experience Platformを介して、[!DNL Target] タグを事前承認するオプションもあります。 [!DNL Target] の at.js ライブラリでオプトインを使用する機能を有効にするには、`optinEnabled=true` 設定を追加する必要があります。 Adobe Experience Platformでは、拡張機能のインストールビューのGDPR オプトインドロップダウンリストから「有効」を選択する必要があります。 詳しくは、[Adobe Experience Platform ドキュメント ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)を参照してください。 欧州連合（EU）の一般データ保護規則（GDPR）やカリフォルニア州消費者プライバシー法（CCPA）など、プライバシーとデータ保護に関する規制に関連するこの設定について詳しくは、[ プライバシーとデータ保護に関する規制](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)を参照してください。
+* **説明**: [!DNL Target]は、同意管理戦略をサポートするために、Adobe Experience Platformを介したオプトイン機能のサポートを提供しています。 オプトイン機能を使用すると、[!DNL Target] タグを実行する方法とタイミングを制御できます。 Adobe Experience Platformを介して、[!DNL Target] タグを事前承認するオプションもあります。 [!DNL Target] の at.js ライブラリでオプトインを使用する機能を有効にするには、`optinEnabled=true` 設定を追加する必要があります。 Adobe Experience Platformでは、拡張機能のインストールビューのGDPR オプトインドロップダウンリストから「有効」を選択する必要があります。 詳しくは、[Adobe Experience Platform ドキュメント &#x200B;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)を参照してください。 欧州連合（EU）の一般データ保護規則（GDPR）やカリフォルニア州消費者プライバシー法（CCPA）など、プライバシーとデータ保護に関する規制に関連するこの設定について詳しくは、[&#x200B; プライバシーとデータ保護に関する規制](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)を参照してください。
 
 ### optoutEnabled
 

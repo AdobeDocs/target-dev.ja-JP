@@ -39,7 +39,7 @@ ht-degree: 31%
 
 アクティビティに URL ルールを追加することで、アクティビティの実行場所を制限できます。 詳しくは、[類似ページに同じエクスペリエンスを含める](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html)を参照してください。
 
-[targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)を使用してページ上のパラメーターを渡し、[!UICONTROL Visual Experience Composer] （VEC）の「URLの設定」セクションでこれらのパラメーターを選択するか、[!UICONTROL  フォームベース Experience Composer]で「改良」としてパラメーターを追加することもできます。
+[targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)を使用してページ上のパラメーターを渡し、[!UICONTROL Visual Experience Composer] （VEC）の「URLの設定」セクションでこれらのパラメーターを選択するか、[!UICONTROL &#x200B; フォームベース Experience Composer]で「改良」としてパラメーターを追加することもできます。
 
 ## [!DNL Target] グローバル mboxで収益データを渡すにはどうすればよいですか？
 

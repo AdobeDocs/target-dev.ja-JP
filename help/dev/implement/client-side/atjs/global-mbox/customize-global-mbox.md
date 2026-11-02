@@ -56,4 +56,4 @@ at.jsの[!DNL Adobe Target] グローバル mboxのカスタマイズに役立�
 
 >[!WARNING]
 >
->アカウント内のすべてのアクティビティがこのmboxと同期されます。 アクティビティが引き続き機能するように、グローバル mboxがサイトに存在することを確認します。 このmboxと同期する[!UICONTROL Visual Experience Composer] （VEC）で作成された影響を受けるアクティビティを必ず編集して再保存してください。 [!UICONTROL  フォームベースのExperience Composer]またはAPI経由で作成されたアクティビティを再保存する必要はありません。
+>アカウント内のすべてのアクティビティがこのmboxと同期されます。 アクティビティが引き続き機能するように、グローバル mboxがサイトに存在することを確認します。 このmboxと同期する[!UICONTROL Visual Experience Composer] （VEC）で作成された影響を受けるアクティビティを必ず編集して再保存してください。 [!UICONTROL &#x200B; フォームベースのExperience Composer]またはAPI経由で作成されたアクティビティを再保存する必要はありません。

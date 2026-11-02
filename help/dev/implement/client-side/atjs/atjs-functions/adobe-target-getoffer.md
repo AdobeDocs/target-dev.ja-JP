@@ -1,7 +1,7 @@
 ---
 keywords: adobe.target.getOffer, getOffer, getoffer, get offer, get offer, at.js, functions, function, $8
-description: '[!UICONTROL adobe.target.getOffer （） ]関数とその[!DNL Adobe Target] at.js ライブラリのオプションを使用して、リクエストを実行して[!DNL Target] オファーを取得します。'
-title: '[!UICONTROL adobe.target.getOffer （） ]関数の使用方法を教えてください。'
+description: '[!UICONTROL adobe.target.getOffer （） &#x200B;]関数とその[!DNL Adobe Target] at.js ライブラリのオプションを使用して、リクエストを実行して[!DNL Target] オファーを取得します。'
+title: '[!UICONTROL adobe.target.getOffer （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
 TQID: https://experienceleague.adobe.com/GcXVIt-42-PV0j4Q4oe5uePTZAn7PDIMicIAULDXz-s
@@ -45,7 +45,7 @@ ht-degree: 72%
 
 ## 例
 
-[!UICONTROL getOffer （） ]でパラメーターを追加し、成功処理に[!UICONTROL applyOffer （） ]を使用しています：
+[!UICONTROL getOffer （） &#x200B;]でパラメーターを追加し、成功処理に[!UICONTROL applyOffer （） &#x200B;]を使用しています：
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -66,7 +66,7 @@ adobe.target.getOffer({
 });
 ```
 
-[!UICONTROL getOffer （） ]でパラメーターとプロファイルパラメーターを追加し、成功処理に[!UICONTROL applyOffer （） ]を使用します。
+[!UICONTROL getOffer （） &#x200B;]でパラメーターとプロファイルパラメーターを追加し、成功処理に[!UICONTROL applyOffer （） &#x200B;]を使用します。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -89,7 +89,7 @@ adobe.target.getOffer({
 });
 ```
 
-[!UICONTROL getOffer （） ]でのカスタムタイムアウトとカスタム成功処理の使用：
+[!UICONTROL getOffer （） &#x200B;]でのカスタムタイムアウトとカスタム成功処理の使用：
 
 「YOUR_OWN_CUSTOM_HANDLING_FUNCTION」は、お客様が定義する関数のプレースホルダーです。
 

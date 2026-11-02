@@ -35,7 +35,7 @@ ht-degree: 0%
 ---
 # [!DNL Adobe Analytics for Target] （A4T） [!DNL Experience Platform Web SDK]にログイン
 
-パーソナライゼーションに[!DNL Adobe Target]を使用する場合は、パフォーマンス測定に使用するシステムを選択できます。 各[Target アクティビティ ](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)では、[!DNL Target]件のレポートとAdobe [!DNL Analytics]件のレポートを選択できます。
+パーソナライゼーションに[!DNL Adobe Target]を使用する場合は、パフォーマンス測定に使用するシステムを選択できます。 各[Target アクティビティ &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)では、[!DNL Target]件のレポートとAdobe [!DNL Analytics]件のレポートを選択できます。
 
 [!DNL Analytics] レポートを使用している場合、[!DNL Target]は次の情報を[!DNL Analytics]に伝える必要があります。
 
@@ -50,9 +50,9 @@ ht-degree: 0%
 | サーバーサイド [!DNL Analytics] ログ | Edge Networkを介して送信されたすべての[!DNL Analytics] ヒットは、ヒットのステッチプロセスを経ることなく、サーバーサイドの[!DNL Target]詳細で強化されます。 |
 | クライアントサイド [!DNL Analytics] ログ | [!DNL Target]個のデータがクライアント側で返されるため、[Data Insertion API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)を使用して手動でデータを拡張して[!DNL Analytics]に送信できます。 |
 
-ロギング方法は、設定した[ データストリーム ](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)で[!DNL Adobe Analytics]が有効になっているかどうかで決まります。
+ロギング方法は、設定した[&#x200B; データストリーム &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)で[!DNL Adobe Analytics]が有効になっているかどうかで決まります。
 
-![ メソッド決定フローのログ記録](/help/dev/implement/a4t/assets/analytics-logging.png)
+![&#x200B; メソッド決定フローのログ記録](/help/dev/implement/a4t/assets/analytics-logging.png)
 
 ## 次のステップ
 

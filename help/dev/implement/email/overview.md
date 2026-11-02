@@ -48,7 +48,7 @@ adbox 広告およびリダイレクターは、あらゆるアクティビテ�
 
 ## セキュリティのベストプラクティス
 
-Redirectorでは、オープンリダイレクトの脆弱性のリスクにさらされる可能性があります。 第三者によるリダイレクトリンクの不正使用を避けるために、デフォルトのリダイレクト URL ドメインを許可リストに加えるするには、「承認済みホスト」を使用することをお勧めします。 [!DNL Target]はホストを使用して、リダイレクトを許可するドメインを許可リストに加えるします。 詳しくは、*Hosts*&#x200B;の [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)へのmbox呼び出しを許可するホストを指定する[ ホストの作成を参照してください。
+Redirectorでは、オープンリダイレクトの脆弱性のリスクにさらされる可能性があります。 第三者によるリダイレクトリンクの不正使用を避けるために、デフォルトのリダイレクト URL ドメインを許可リストに加えるするには、「承認済みホスト」を使用することをお勧めします。 [!DNL Target]はホストを使用して、リダイレクトを許可するドメインを許可リストに加えるします。 詳しくは、*Hosts*&#x200B;の [!DNL Target]&#x200B;[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist)へのmbox呼び出しを許可するホストを指定する ホストの作成を参照してください。
 
 ## 制限事項
 

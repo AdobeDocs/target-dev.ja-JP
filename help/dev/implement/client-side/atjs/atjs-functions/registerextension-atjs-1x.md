@@ -1,7 +1,7 @@
 ---
 keywords: registerExtension, registerextension, register extension, at.js, functions, function, clientCode, serverDomain, globalMboxName, globalMboxAutoCreate, timeout, registerExtension2
-description: '[!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL registerExtension （） ]関数を使用して、特定の拡張機能を登録します。 （at.js 1.x）'
-title: '[!UICONTROL registerExtension （） ]関数の使用方法を教えてください。'
+description: '[!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL registerExtension （） &#x200B;]関数を使用して、特定の拡張機能を登録します。 （at.js 1.x）'
+title: '[!UICONTROL registerExtension （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 71decf00-84c5-4914-b0cd-bb061fa6265f
 TQID: https://experienceleague.adobe.com/qTWubp0dNesN-8vsooz8pdbjfSw1W1ktm-0bG6YRzJw
@@ -25,7 +25,7 @@ workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 62%
 ---
-# [!UICONTROL registerExtension （） ] - at.js 1.x
+# [!UICONTROL registerExtension （） &#x200B;] - at.js 1.x
 
 特定の拡張を登録するための標準的な方法を提供します。
 

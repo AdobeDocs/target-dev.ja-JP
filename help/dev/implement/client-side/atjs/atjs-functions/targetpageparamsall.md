@@ -1,7 +1,7 @@
 ---
 keywords: targetPageParamsAll, targetpageparamsAll, PageParamsAll, pageparamsAll, pageparamsall, page parameters, at.js, functions, function, targetPageParamsAll0
-description: '[!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL targetPageParamsAll （） ]関数を使用して、リクエストコードの外部からすべてのmboxにパラメーターを添付します。'
-title: '[!UICONTROL targetPageParamsAll （） ]関数の使用方法を教えてください。'
+description: '[!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL targetPageParamsAll （） &#x200B;]関数を使用して、リクエストコードの外部からすべてのmboxにパラメーターを添付します。'
+title: '[!UICONTROL targetPageParamsAll （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 32045e60-6904-42a1-bf71-fd7e167a829f
 TQID: https://experienceleague.adobe.com/A2sZYp7CeE3-zGcqfbvgo32auAtXBKN0dYNa84grs1Q
@@ -27,13 +27,13 @@ workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 54%
 ---
-# [!UICONTROL targetPageParamsAll （） ]
+# [!UICONTROL targetPageParamsAll （） &#x200B;]
 
 このメソッドにより、リクエストコードの外部からすべての mbox にパラメーターを付加できます。
 
 これは、同じパラメーターのセットを複数の mbox 呼び出しに含めるのに非常に便利です。 この関数は、お客様によって定義される必要があります。 ページでリクエストするすべての mbox に渡されるパラメーターの配列を返す必要があります。 この関数は、at.jsが読み込まれる前、または&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 実装]** > **[!UICONTROL 編集]** > **[!UICONTROL コード設定]** > **[!UICONTROL ライブラリヘッダー]**&#x200B;で定義できます。
 
-[!UICONTROL targetPageParamsAll （） ]関数を使用して、次のいずれかの方法でパラメーターをtarget-global-mboxに渡すことができます。
+[!UICONTROL targetPageParamsAll （） &#x200B;]関数を使用して、次のいずれかの方法でパラメーターをtarget-global-mboxに渡すことができます。
 
 * アンパサンド区切りのリスト
 * 配列

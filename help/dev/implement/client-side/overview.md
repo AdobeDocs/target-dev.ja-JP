@@ -31,13 +31,13 @@ ht-degree: 25%
 ---
 # 概要：クライアントサイド web用に[!DNL Target]を実装する
 
-クライアント側での [!DNL Adobe Target] の実装では、[!DNL Target] アクティビティに関連付けられたエクスペリエンスをクライアントブラウザーに直接配信します。 ブラウザーは、表示するエクスペリエンスを決定して表示します。 クライアント側の実装では、WYSIWYG エディタ、[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) （VEC）、または非視覚的インタフェースである[フォームベースの Experience Composer ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)を使用して、アクティビティとパーソナライズされたエクスペリエンスを作成できます。
+クライアント側での [!DNL Adobe Target] の実装では、[!DNL Target] アクティビティに関連付けられたエクスペリエンスをクライアントブラウザーに直接配信します。 ブラウザーは、表示するエクスペリエンスを決定して表示します。 クライアント側の実装では、WYSIWYG エディタ、[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) （VEC）、または非視覚的インタフェースである[フォームベースの Experience Composer &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)を使用して、アクティビティとパーソナライズされたエクスペリエンスを作成できます。
 
 [!DNL Target] クライアントサイドを実装するには、次のいずれかのJavaScript ライブラリを使用する必要があります。
 
 * [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
 
-  [!UICONTROL Adobe Experience Platform Web SDK]を使用すると、[!UICONTROL Adobe Experience Edge Network]を通じて[!DNL Adobe Experience Cloud] （[!DNL Target]を含む）の様々なサービスを利用できます。 [!UICONTROL Adobe Experience Platform Web SDK]への移行を選択した場合は、[Adobe Experience Platform Web SDK]](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)の概要を参照してください。[!UICONTROL 
+  [!UICONTROL Adobe Experience Platform Web SDK]を使用すると、[!UICONTROL Adobe Experience Edge Network]を通じて[!DNL Adobe Experience Cloud] （[!DNL Target]を含む）の様々なサービスを利用できます。 [!UICONTROL Adobe Experience Platform Web SDK]への移行を選択した場合は、[Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)の概要を参照してください。
 
 * [[!DNL Target] at.js JavaScript library](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 

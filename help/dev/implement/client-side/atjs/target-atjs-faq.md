@@ -180,7 +180,7 @@ Safari訪問者をサポートするために、より優れたX-Domainは「無
 
 [!DNL Target] のお客様は、[!DNL Target] でクラウドベースのインスタンスを使用してテストをおこなったり、簡単な概念実証に利用したりする場合があります。 これらのドメインは、他の多くのドメインと同様に[パブリックサフィックスリスト](https://publicsuffix.org/list/public_suffix_list.dat)に含まれています。
 
-これらのドメインを使用する場合は、targetGlobalSettings() を使用して `cookieDomain` 設定をカスタマイズしない限り、最新のブラウザーでは Cookie が保存されません。 詳しくは、 [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)でのクラウドベースのインスタンスの使用を参照してください。[
+これらのドメインを使用する場合は、targetGlobalSettings() を使用して `cookieDomain` 設定をカスタマイズしない限り、最新のブラウザーでは Cookie が保存されません。 詳しくは、 [!DNL Target]&#x200B;[&#128279;](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)でのクラウドベースのインスタンスの使用を参照してください。
 
 ## at.js を使用する際に、IP アドレスを Cookie ドメインとして使用することはできますか。
 
@@ -224,7 +224,7 @@ if (/^123\.456\.78\..*/g.test(window.location.hostname)) {
 * 基になるページはシングルページアプリケーション（SPA）の一部であるか、ページの下部に表示される要素がページに含まれており、at.jsの「セレクターポーリングメカニズム」でそれらの要素が見つかりません。 `selectorsPollingTimeout` の値を増やすと問題が解決する場合があります。 詳しくは、[targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) を参照してください。
 * いずれかのクリック追跡指標が、その指標が設定された URL に関係なく、それ自体をすべてのページに追加しようとしている。 害はありませんが、この状況ではこれらのメッセージの多くが表示されます。
 
-  最適な結果を得るには、[最新バージョンのat.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md)をダウンロードして使用してください。 at.jsのダウンロード方法について詳しくは、「[*at.jsのデプロイ方法* > *タグマネージャーなしで[!DNL Target]を実装する方法*](how-to-deployatjs/implement-target-without-a-tag-manager.md)」の「 [!DNL Target]  インターフェイス ](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface)を使用してat.jsをダウンロードする」の節を参照してください。[
+  最適な結果を得るには、[最新バージョンのat.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md)をダウンロードして使用してください。 at.jsのダウンロード方法について詳しくは、「[*at.jsのデプロイ方法* > *タグマネージャーなしで[!DNL Target]を実装する方法*](how-to-deployatjs/implement-target-without-a-tag-manager.md)」の「 [!DNL Target]  インターフェイス [&#128279;](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface)を使用してat.jsをダウンロードする」の節を参照してください。
 
 ## [!DNL Target] のサーバー呼び出しが送られる tt.omtrdc.net というドメインは何ですか？
 
@@ -257,12 +257,12 @@ at.jsによって有効になっているAdobe Edge ネットワークとの通�
 * コミュニケーションセッションを追跡し
 * ランダムな文字で構成されています
 * セッション IDは30分間有効です
-* 応答トークンを無効にできます（[応答トークン ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)）
+* 応答トークンを無効にできます（[応答トークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)）
 * これらは、Adobe ソリューションの環境でのみ役立ちます。
 
 at.js リクエストで値「*」を持つ`Access-Control-Allow-Origin` ヘッダーが表示されることが予想されます。これは、公開されており、認証は必要なく、JavaScript呼び出しを介して任意のドメインからAdobe Edge Networkにアクセスする必要があるためです。
 
-ただし、コンテンツセキュリティポリシー（CSP）をページに適用する必要があります。 at.jsのCSP要件について詳しくは、[ コンテンツセキュリティポリシー](/help/dev/before-implement/privacy/content-security-policy.md)および[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)を参照してください。
+ただし、コンテンツセキュリティポリシー（CSP）をページに適用する必要があります。 at.jsのCSP要件について詳しくは、[&#x200B; コンテンツセキュリティポリシー](/help/dev/before-implement/privacy/content-security-policy.md)および[targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)を参照してください。
 
 ## at.js はどのくらいの頻度でネットワークリクエストを送信しますか？
 

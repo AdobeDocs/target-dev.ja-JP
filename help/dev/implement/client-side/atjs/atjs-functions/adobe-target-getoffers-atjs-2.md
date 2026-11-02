@@ -1,7 +1,7 @@
 ---
 keywords: adobe.target.getOffers, getOffers, getoffers, get offers, at.js, functions, function, $8
-description: '[!UICONTROL adobe.target.getOffers （） ]関数とその[!DNL Adobe Target] at.js ライブラリのオプションを使用して、リクエストを実行し、複数の[!DNL Target] オファーを取得します。 (at.js 2.x)'
-title: '[!UICONTROL adobe.target.getOffers （） ]関数の使用方法を教えてください。'
+description: '[!UICONTROL adobe.target.getOffers （） &#x200B;]関数とその[!DNL Adobe Target] at.js ライブラリのオプションを使用して、リクエストを実行し、複数の[!DNL Target] オファーを取得します。 (at.js 2.x)'
+title: '[!UICONTROL adobe.target.getOffers （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
 TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
@@ -29,7 +29,7 @@ workflow-type: tm+mt
 source-wordcount: '1359'
 ht-degree: 88%
 ---
-# [!UICONTROL adobe.target.getOffers （） ] - at.js 2.x
+# [!UICONTROL adobe.target.getOffers （） &#x200B;] - at.js 2.x
 
 この関数を使用すると、複数の mbox を渡すことで複数のオファーを取得できます。 さらに、アクティブなアクティビティのすべてのビュー向けに複数のオファーを取得できます。
 
@@ -48,7 +48,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->以下に示すすべてのフィールドで使用可能なタイプについて詳しくは、[ 配信 API ドキュメント ](/help/dev/implement/delivery-api/overview.md) を参照してください。
+>以下に示すすべてのフィールドで使用可能なタイプについて詳しくは、[&#x200B; 配信 API ドキュメント &#x200B;](/help/dev/implement/delivery-api/overview.md) を参照してください。
 
 | フィールド名 | 必須？ | 制限事項 | 説明 |
 | --- | --- | --- | --- |
@@ -91,7 +91,7 @@ ht-degree: 88%
 | Request > execute > mboxes > mbox > order > total | × | 0`>=`。 | 指定された注文合計を持つ特定の mbox のオファーを取得します。 |
 | Request > execute > mboxes > mbox > order > purchasedProductIds | × | 空白の値はありません。<P>各値の最大長= 50。<P>コンマで連結および区切ります。<P>製品 ID の全長 `<=`250 です。 | 指定された注文で購入された製品 ID を持つ特定の mbox のオファーを取得します。 |
 
-## すべてのビューについて[!UICONTROL getOffers （） ]を呼び出します
+## すべてのビューについて[!UICONTROL getOffers （） &#x200B;]を呼び出します
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -103,7 +103,7 @@ adobe.target.getOffers({
 });
 ```
 
-## [!UICONTROL getOffers （） ]を呼び出して、デバイス上で決定します
+## [!UICONTROL getOffers （） &#x200B;]を呼び出して、デバイス上で決定します
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({ 
@@ -122,7 +122,7 @@ adobe.target.getOffers({
 }); 
 ```
 
-## [!UICONTROL getOffers （） ]を呼び出して、渡されたパラメーターとプロファイル パラメーターを使用して最新のビューを取得します
+## [!UICONTROL getOffers （） &#x200B;]を呼び出して、渡されたパラメーターとプロファイル パラメーターを使用して最新のビューを取得します
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -143,7 +143,7 @@ adobe.target.getOffers({
 });
 ```
 
-## [!UICONTROL getOffers （） ]を呼び出して、パラメーターとプロファイルパラメーターが渡されたmboxを取得します。
+## [!UICONTROL getOffers （） &#x200B;]を呼び出して、パラメーターとプロファイルパラメーターが渡されたmboxを取得します。
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -170,7 +170,7 @@ adobe.target.getOffers({
 });
 ```
 
-## [!UICONTROL getOffers （） ]を呼び出して、クライアントサイドから分析ペイロードを取得します
+## [!UICONTROL getOffers （） &#x200B;]を呼び出して、クライアントサイドから分析ペイロードを取得します
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -222,9 +222,9 @@ adobe.target.getOffers({
 }
 ```
 
-その後、ペイロードは [ Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を介して [!DNL Adobe Analytics] に転送できます。
+その後、ペイロードは [&#x200B; Data Insertion API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) を介して [!DNL Adobe Analytics] に転送できます。
 
-## [!UICONTROL getOffers （） ]および[!UICONTROL applyOffers （） ]を介して、複数のmboxからデータを取得してレンダリングします
+## [!UICONTROL getOffers （） &#x200B;]および[!UICONTROL applyOffers （） &#x200B;]を介して、複数のmboxからデータを取得してレンダリングします
 
 at.js 2.x を使用すると、`[!UICONTROL getOffers()]` API を使用して複数の mbox を取得できます。 複数の mbox のデータを取得して、`[!UICONTROL applyOffers()]` CSS セレクターによって識別されるさまざまな場所で、データをレンダリングすることもできます。
 
@@ -303,9 +303,9 @@ adobe.target.getOffers({
 
 この例では `prefetch > mboxes` を使用していますが、`execute > mboxes` を使用することもできます。 `getOffers()` でプリフェッチを使用する場合は、`applyOffers()` 呼び出しでもプリフェッチを使用する必要があります。
 
-## [!UICONTROL getOffers （） ]を呼び出してpageLoadを実行します
+## [!UICONTROL getOffers （） &#x200B;]を呼び出してpageLoadを実行します
 
-次の例は、at.js 2.*x*&#x200B;で[!UICONTROL getOffers （） ]を使用してpageLoadを実行する方法を示しています
+次の例は、at.js 2.*x*&#x200B;で[!UICONTROL getOffers （） &#x200B;]を使用してpageLoadを実行する方法を示しています
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({

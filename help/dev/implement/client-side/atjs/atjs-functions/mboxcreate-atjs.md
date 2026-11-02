@@ -1,7 +1,7 @@
 ---
 keywords: mboxCreate, mboxcreate, mbox create, at.js，関数，関数
-description: '[!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL mboxCreate （） ]関数を使用して、mboxDefault クラス名を持つ最も近いDIVにオファーを適用します。 （at.js 1.x）'
-title: '[!UICONTROL mboxCreate （） ]関数の使用方法を教えてください。'
+description: '[!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL mboxCreate （） &#x200B;]関数を使用して、mboxDefault クラス名を持つ最も近いDIVにオファーを適用します。 （at.js 1.x）'
+title: '[!UICONTROL mboxCreate （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 86eba1fc-4e1d-4793-94e7-898bf81f8945
 TQID: https://experienceleague.adobe.com/hCEKL9RPtqIbMVEouzObjU6dc7TKl1hBtKZ1jEdicRE
@@ -25,7 +25,7 @@ workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 40%
 ---
-# [!UICONTROL mboxCreate （mbox,params） ] - at.js 1.x
+# [!UICONTROL mboxCreate （mbox,params） &#x200B;] - at.js 1.x
 
 リクエストを実行し、mboxDefault クラス名を持つ最も近い DIV にオファーを適用します。
 

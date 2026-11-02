@@ -49,7 +49,7 @@ at.js の最新バージョンは、次世代のクライアント側のテク�
 
 * ページ読み込み時にすべてのオファーをキャッシュし、複数のサーバー呼び出しを単一のサーバー呼び出しに減らす機能。
 * 従来のサーバー呼び出しで発生する遅延時間なしで、キャッシュ経由でオファーが即座に表示されるため、サイトでのエンドユーザーのエクスペリエンスが著しく向上します。
-* シンプルな1行のコードと1回限りの開発者セットアップにより、マーケターはSPA上のVECを介して[!UICONTROL A/B テスト ]および[!UICONTROL  エクスペリエンス ターゲティング ] （XT）アクティビティを作成して実行できます。
+* シンプルな1行のコードと1回限りの開発者セットアップにより、マーケターはSPA上のVECを介して[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL &#x200B; エクスペリエンス ターゲティング &#x200B;] （XT）アクティビティを作成して実行できます。
 
 ## at.js 2.*x* システム図
 
@@ -74,7 +74,7 @@ at.js の最新バージョンは、次世代のクライアント側のテク�
 
 （画像をクリックして全幅に拡大します）。
 
-![ ターゲットフローat.js 2.*x* triggerView](/help/dev/implement/client-side/assets/atjs-20-triggerview.png " ターゲットフローat.js 2.*x* triggerView"){zoomable="yes"}
+![&#x200B; ターゲットフローat.js 2.*x* triggerView](/help/dev/implement/client-side/assets/atjs-20-triggerview.png " ターゲットフローat.js 2.*x* triggerView"){zoomable="yes"}
 
 | 呼び出し | 詳細 |
 | --- | --- |
@@ -95,7 +95,7 @@ at.js の最新バージョンは、次世代のクライアント側のテク�
 >
 >または
 >
->[!DNL Target] UIを使用してat.js 2.*x*&#x200B;を手動でダウンロードし、選択した[ メソッドを使用してデプロイします](/help/dev/implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md)。
+>[!DNL Target] UIを使用してat.js 2.*x*&#x200B;を手動でダウンロードし、選択した[&#x200B; メソッドを使用してデプロイします](/help/dev/implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md)。
 
 ## 廃止された at.js 関数
 
@@ -347,7 +347,7 @@ at.js v2.10以降でクロスドメイントラッキングを使用するには
 
 適用できます。at.js カスタムイベントは `triggerView()` にも適用できます。
 
-### &amp;brace;`"page" : "true"`&amp;brace；で`triggerView()`を呼び出すと、[!DNL Target] バックエンドに通知が送信され、インプレッションが増加します。 これによりプロファイルスクリプトも実行されますか？
+### &brace;`"page" : "true"`&amp;brace；で`triggerView()`を呼び出すと、[!DNL Target] バックエンドに通知が送信され、インプレッションが増加します。 これによりプロファイルスクリプトも実行されますか？
 
 [!DNL Target] バックエンドに対してプリフェッチ呼び出しが実行されると、プロファイルスクリプトが実行されます。 その後、影響を受けたプロファイルデータは暗号化され、クライアント側に返されます。 `{"page": "true"}` を使用した `triggerView()` が呼び出されると、通知が暗号化されたプロファイルデータとともに送信されます。 このとき、[!DNL Target] バックエンドはプロファイルデータを復号してデータベースに保存します。
 
@@ -391,7 +391,7 @@ at.js 1.*x*&#x200B;の顧客は、vst.* mbox パラメーターを使用して�
 
 >[!NOTE]
 >
->[!UICONTROL 自動ターゲット ] アクティビティは、すべての変更が`Page Load Event`に適用される際に、at.js 2.*x*&#x200B;およびVECを通じてサポートされます。 特定のビューに変更が追加された場合、[!UICONTROL A/B テスト ]、[!UICONTROL 自動配分]、[!UICONTROL  エクスペリエンスのターゲット設定] （XT）アクティビティのみがサポートされます。
+>[!UICONTROL 自動ターゲット &#x200B;] アクティビティは、すべての変更が`Page Load Event`に適用される際に、at.js 2.*x*&#x200B;およびVECを通じてサポートされます。 特定のビューに変更が追加された場合、[!UICONTROL A/B テスト &#x200B;]、[!UICONTROL 自動配分]、[!UICONTROL &#x200B; エクスペリエンスのターゲット設定] （XT）アクティビティのみがサポートされます。
 
 ### 統合
 
@@ -796,7 +796,7 @@ at.js 2.*x* JSON ペイロード：
 
 バージョンは、version パラメーターを使用して、クエリ文字列パラメーターとして送信されます。
 
-## トレーニングビデオ：at.js 2.*x* アーキテクチャ図![概要バッジ ](../../assets/overview.png)
+## トレーニングビデオ：at.js 2.*x* アーキテクチャ図![概要バッジ &#x200B;](../../assets/overview.png)
 
 at.js 2.*x*&#x200B;は、Adobe [!DNL Target]のSPAのサポートを強化し、他のExperience Cloud ソリューションと統合します。 このビデオでは、すべてがどのように結び付いているかを説明します。
 

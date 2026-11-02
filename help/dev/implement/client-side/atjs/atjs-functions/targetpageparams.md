@@ -1,7 +1,7 @@
 ---
 keywords: targetPageParams, targetpageparams, pageParams, pageparams, page params, page parameters, at.js, functions, function, targetPageParams0
-description: '[!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL targetPageParams （） ]関数を使用して、リクエストコードの外部からグローバル mboxにパラメーターを添付します。'
-title: '[!UICONTROL targetPageParams （） ]関数の使用方法を教えてください。'
+description: '[!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL targetPageParams （） &#x200B;]関数を使用して、リクエストコードの外部からグローバル mboxにパラメーターを添付します。'
+title: '[!UICONTROL targetPageParams （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 274e4d1f-843a-443b-ad98-7139dc4a13f8
 TQID: https://experienceleague.adobe.com/xaSxd1biZ8G-LmgYN4YW9BZ2lDyjZyPHOOlfnbXC2jU
@@ -27,7 +27,7 @@ workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 66%
 ---
-# [!UICONTROL targetPageParams （） ]
+# [!UICONTROL targetPageParams （） &#x200B;]
 
 このメソッドにより、リクエストコードの外部からグローバル mbox にパラメーターを付加できます。
 
