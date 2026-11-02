@@ -435,7 +435,7 @@ at.js 1.*x*&#x200B;の顧客は、vst.* mbox パラメーターを使用して�
 
 ## レスポンストークン
 
-at.js 2.*x*&#x200B;は、at.js 1.*x*&#x200B;と同様に、応答トークンを表示するためにカスタムイベント `at-request-succeeded`を使用します。 `at-request-succeeded` カスタムイベントを使用するコード例については「[応答トークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)」を参照してください。
+at.js 2.*x*&#x200B;は、at.js 1.*x*&#x200B;と同様に、応答トークンを表示するためにカスタムイベント `at-request-succeeded`を使用します。 `at-request-succeeded` カスタムイベントを使用するコード例については「[応答トークン](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)」を参照してください。
 
 ## at.js 1.*x* パラメーターからat.js 2.*x* ペイロード マッピング
 
@@ -802,4 +802,4 @@ at.js 2.*x*&#x200B;は、Adobe [!DNL Target]のSPAのサポートを強化し、
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-詳しくは、[at.js 2.*x*&#x200B;の仕組みについて](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)を参照してください。
+詳しくは、[at.js 2.*x*&#x200B;の仕組みについて](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=ja)を参照してください。

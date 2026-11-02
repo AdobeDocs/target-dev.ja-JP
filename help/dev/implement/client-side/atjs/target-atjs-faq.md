@@ -166,7 +166,7 @@ Safari訪問者をサポートするために、より優れたX-Domainは「無
 
 ## Target [!UICONTROL Visual Experience Composer] （VEC）をシングルページアプリケーションで使用できますか？
 
-はい、at.js 2.xを使用する場合は、SPAにVECを使用できます。 詳しくは、[単一ページ （SPA） Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html)を参照してください。
+はい、at.js 2.xを使用する場合は、SPAにVECを使用できます。 詳しくは、[単一ページ （SPA） Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=ja)を参照してください。
 
 ## Adobe Experience Cloud デバッガーを at.js の実装と一緒に使用できますか。
 
@@ -257,7 +257,7 @@ at.jsによって有効になっているAdobe Edge ネットワークとの通�
 * コミュニケーションセッションを追跡し
 * ランダムな文字で構成されています
 * セッション IDは30分間有効です
-* 応答トークンを無効にできます（[応答トークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)）
+* 応答トークンを無効にできます（[応答トークン &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=ja)）
 * これらは、Adobe ソリューションの環境でのみ役立ちます。
 
 at.js リクエストで値「*」を持つ`Access-Control-Allow-Origin` ヘッダーが表示されることが予想されます。これは、公開されており、認証は必要なく、JavaScript呼び出しを介して任意のドメインからAdobe Edge Networkにアクセスする必要があるためです。
