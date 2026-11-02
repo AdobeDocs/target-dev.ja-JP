@@ -1,27 +1,30 @@
 ---
 keywords: 実装、非JavaScript、mbox、adbox
-description: ' [!DNL Adobe Target]を使用してオフサイト実装で画像を配信するには、AdBoxを使用します。 AdBoxはmboxに似ていますが、JavaScriptではなくURLによって制御されます。'
+description: AdBoxを使用して、[!DNL Adobe Target]を使用してオフサイト実装で画像を配信します。 AdBoxはmboxに似ていますが、JavaScriptではなくURLによって制御されます。
 title: 画像用のAdboxを作成するにはどうすればよいですか？
 feature: Implement Email
 exl-id: ad1eb6c4-7a16-4054-ae76-57971261e931
 TQID: https://experienceleague.adobe.com/OPo9T2Eb7afF8Ir8PAlY62OX83zhxtruUMKWCfUthxY
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+    internal-label: Implement email
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 337
+source-wordcount: '337'
 ht-degree: 67%
-
 ---
-
 # 画像用 adbox の作成
 
 AdBoxを使用して、[!DNL Adobe Target]を使用してオフサイト実装で画像を配信します。
@@ -50,7 +53,7 @@ adbox は mbox と似ていますが、JavaScript ではなく URL によって�
 
      URL エンコードをおこない、絶対参照にする必要があります。 [HTML URL エンコーディング参照](https://www.w3schools.com/tags/ref_urlencode.asp)を使用すると、URLをすばやくエンコードできます。
 
-1. 各代替画像の[リダイレクトオファー](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=ja)を作成します。
+1. 各代替画像の[リダイレクトオファー](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html)を作成します。
 
    >[!NOTE]
    >

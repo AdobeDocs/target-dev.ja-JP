@@ -1,26 +1,29 @@
 ---
 keywords: 実装、実装、設定、設定、ページパラメーター
-description: ページパラメーターを使用して [!DNL Target] にデータを取り込みます。
-title: ページパラメーターを使用して [!DNL Target] にデータを取り込むにはどうすればよいですか？
+description: ページパラメーターを使用して[!DNL Target]にデータを取り込みます。
+title: ページパラメーターを使用して[!DNL Target]にデータを取り込むにはどうすればよいですか？
 feature: Implementation
 exl-id: 9bb7157e-a938-4150-8a15-c9bf0a0e2296
 TQID: https://experienceleague.adobe.com/CYhZOFnli-DmREOOZGE2aGNn3x7BJ7uwGA2vfwUSnOk
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: f6df325aff4a2eb9321b86778d102737493e63bb
 workflow-type: tm+mt
-source-wordcount: 397
+source-wordcount: '399'
 ht-degree: 31%
-
 ---
-
 # ページのパラメーター
 
 ページパラメーター（「mbox パラメーター」とも呼ばれます）は、ページコードを通じて直接渡される名前と値のペアで、後で使用するために訪問者のプロファイルに保存されません。
@@ -78,8 +81,8 @@ targetPageParams（ページのグローバル mbox にパラメーターを追�
 
 ## 関連情報へのリンク
 
-レコメンデーション：[ページタイプに従った実装](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html?lang=ja)
+レコメンデーション：[ページタイプに従った実装](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html)
 
 注文の確認：[コンバージョンの追跡](../../implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)
 
-カテゴリ親和性：[カテゴリ親和性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html?lang=ja)
+カテゴリ親和性：[カテゴリ親和性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html)

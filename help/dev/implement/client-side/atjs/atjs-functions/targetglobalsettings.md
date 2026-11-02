@@ -1,35 +1,45 @@
 ---
 keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalSettings, at.js, functions, function, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookiedomain, crossDomain, crossdomain, timeout, timeout globalMboxAutoCreate, visitorApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiedomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3 optoutEnabled, optout, optout, selectorsPollingTimeout, dataProviders, Hybrid Personalization, deviceIdLifetime
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL targetGlobalSettings （） &#x200B;]関数を使用して、 [!DNL Target] UIまたはREST APIを使用する代わりに設定を上書きします。'
-title: '[!UICONTROL targetGlobalSettings （） &#x200B;]関数の使用方法を教えてください。'
+description: '[!DNL Adobe Target] at.js JavaScript ライブラリの[!UICONTROL targetGlobalSettings （） ]関数を使用して、[!DNL Target] UIまたはREST APIを使用する代わりに設定を上書きします。'
+title: '[!UICONTROL targetGlobalSettings （） ]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
 TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
-source-wordcount: 2705
+source-wordcount: '2707'
 ht-degree: 56%
-
 ---
-
-# [!UICONTROL targetGlobalSettings （） &#x200B;]
+# [!UICONTROL targetGlobalSettings （） ]
 
 at.js ライブラリの設定は、[!DNL Target] UIやREST APIで設定するのではなく、`[!UICONTROL targetGlobalSettings()]`を使用して上書きできます。
 
@@ -53,7 +63,7 @@ at.js ライブラリの設定は、[!DNL Target] UIやREST APIで設定する�
 
 * **型**：String
 * **デフォルト値**：なし
-* **説明**: [&#x200B; デバイス上の決定ルール アーティファクト &#x200B;](../../../server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)への完全修飾URL
+* **説明**: [ デバイス上の決定ルール アーティファクト ](../../../server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)への完全修飾URL
 
 ### bodyHiddenStyle
 
@@ -120,7 +130,7 @@ at.js ライブラリの設定は、[!DNL Target] UIやREST APIで設定する�
 
   at.js 2.5以降をweb プロパティに実装してデプロイする場合に、デフォルトの決定メソッドはサーバーサイドのみになります。
 
-  デフォルト設定としてサーバーサイドのみを使用すると、サーバーコールをブロックする[!DNL Target] エッジネットワークですべての決定が行われます。 このアプローチでは、遅延が増加する可能性がありますが、[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=ja)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=ja) （AP）、[自動ターゲット &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=ja) アクティビティを含む[!DNL Target]のマシンラーニング機能を適用できる機能など、大きなメリットも得られます。
+  デフォルト設定としてサーバーサイドのみを使用すると、サーバーコールをブロックする[!DNL Target] エッジネットワークですべての決定が行われます。 このアプローチでは、遅延が増加する可能性がありますが、[Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)、[Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) （AP）、[自動ターゲット ](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) アクティビティを含む[!DNL Target]のマシンラーニング機能を適用できる機能など、大きなメリットも得られます。
 
   さらに、セッションやチャネルをまたいで保持される[!DNL Target]のユーザープロファイルを使用して、パーソナライズされたエクスペリエンスを強化することで、ビジネスに強力な成果をもたらすことができます。
 
@@ -190,7 +200,7 @@ at.js ライブラリの設定は、[!DNL Target] UIやREST APIで設定する�
 
 * **タイプ**：ブール値
 * **デフォルト値**：false
-* **説明**: [!DNL Target]は、同意管理戦略をサポートするために、Adobe Experience Platformを介したオプトイン機能のサポートを提供しています。 オプトイン機能を使用すると、[!DNL Target] タグを実行する方法とタイミングを制御できます。 Adobe Experience Platformを介して、[!DNL Target] タグを事前承認するオプションもあります。 [!DNL Target] の at.js ライブラリでオプトインを使用する機能を有効にするには、`optinEnabled=true` 設定を追加する必要があります。 Adobe Experience Platformでは、拡張機能のインストールビューのGDPR オプトインドロップダウンリストから「有効」を選択する必要があります。 詳しくは、[Adobe Experience Platform ドキュメント &#x200B;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)を参照してください。 欧州連合（EU）の一般データ保護規則（GDPR）やカリフォルニア州消費者プライバシー法（CCPA）など、プライバシーとデータ保護に関する規制に関連するこの設定について詳しくは、[&#x200B; プライバシーとデータ保護に関する規制](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)を参照してください。
+* **説明**: [!DNL Target]は、同意管理戦略をサポートするために、Adobe Experience Platformを介したオプトイン機能のサポートを提供しています。 オプトイン機能を使用すると、[!DNL Target] タグを実行する方法とタイミングを制御できます。 Adobe Experience Platformを介して、[!DNL Target] タグを事前承認するオプションもあります。 [!DNL Target] の at.js ライブラリでオプトインを使用する機能を有効にするには、`optinEnabled=true` 設定を追加する必要があります。 Adobe Experience Platformでは、拡張機能のインストールビューのGDPR オプトインドロップダウンリストから「有効」を選択する必要があります。 詳しくは、[Adobe Experience Platform ドキュメント ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)を参照してください。 欧州連合（EU）の一般データ保護規則（GDPR）やカリフォルニア州消費者プライバシー法（CCPA）など、プライバシーとデータ保護に関する規制に関連するこの設定について詳しくは、[ プライバシーとデータ保護に関する規制](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)を参照してください。
 
 ### optoutEnabled
 
@@ -286,7 +296,7 @@ at.js ライブラリの設定は、[!DNL Target] UIやREST APIで設定する�
 window.targetGlobalSettings = {
    timeout: 200, // using custom timeout
    visitorApiTimeout: 500, // using custom API timeout
-   enabled: document.location.href.indexOf('https://www.adobe.com/jp') >= 0 // enabled ONLY on adobe.com
+   enabled: document.location.href.indexOf('https://www.adobe.com') >= 0 // enabled ONLY on adobe.com
 };
 ```
 
@@ -302,8 +312,8 @@ window.targetGlobalSettings = {
 
 | ビデオ | 説明 |
 |--- |--- |
-| [Adobe Target でのデータプロバイダーの使用](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=ja) | データプロバイダーは、サードパーティから Target へデータを簡単に渡すことのできる機能です。 サードパーティとしては、気象予報サービス、DMP、自社の Web サービスなども利用可能です。 このデータを利用して、オーディエンスやターゲットコンテンツを構築したり、訪問者プロファイルを充実させることができます。 |
-| [Adobe Target でのデータプロバイダーの実装](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=ja) | 実装の詳細と、Adobe [!DNL Target]のdataProviders機能を使用してサードパーティのデータプロバイダーからデータを取得し、[!DNL Target] リクエストに渡す方法の例。 |
+| [Adobe Target でのデータプロバイダーの使用](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) | データプロバイダーは、サードパーティから Target へデータを簡単に渡すことのできる機能です。 サードパーティとしては、気象予報サービス、DMP、自社の Web サービスなども利用可能です。 このデータを利用して、オーディエンスやターゲットコンテンツを構築したり、訪問者プロファイルを充実させることができます。 |
+| [Adobe Target でのデータプロバイダーの実装](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html) | 実装の詳細と、Adobe [!DNL Target]のdataProviders機能を使用してサードパーティのデータプロバイダーからデータを取得し、[!DNL Target] リクエストに渡す方法の例。 |
 
 `window.targetGlobalSettings.dataProviders` 設定は、データプロバイダーの配列です。
 
@@ -552,12 +562,12 @@ const PAGE_TEMPLATE = `
 
 * 現時点で、at.js v2.2 は、以下に対してのみ serverState を介したエクスペリエンスの配信をサポートしています。
 
-   * ページの読み込み時に実行される、VEC で作成されたアクティビティ。
-   * 事前読み込みされたビュー。
+  * ページの読み込み時に実行される、VEC で作成されたアクティビティ。
+  * 事前読み込みされたビュー。
 
-     at.js APIで[!DNL Target] ビューと`triggerView()`を使用するSPAの場合、at.js v2.2はサーバーサイドでプリフェッチされたすべてのビューのコンテンツをキャッシュし、各ビューが`triggerView()`を介してトリガーされるとすぐに適用します。[!DNL Target]への追加のコンテンツフェッチ呼び出しを実行する必要はありません。
+    at.js APIで[!DNL Target] ビューと`triggerView()`を使用するSPAの場合、at.js v2.2はサーバーサイドでプリフェッチされたすべてのビューのコンテンツをキャッシュし、各ビューが`triggerView()`を介してトリガーされるとすぐに適用します。[!DNL Target]への追加のコンテンツフェッチ呼び出しを実行する必要はありません。
 
-   * **注意**：現在、サーバー側で取得された mbox は、`serverState` ではサポートされていません。
+  * **注意**：現在、サーバー側で取得された mbox は、`serverState` ではサポートされていません。
 
 * `serverState`件のオファーを適用する場合、at.jsは`pageLoadEnabled`および`viewsEnabled`件の設定を考慮します。例えば、`pageLoadEnabled`件の設定がfalseの場合、ページ読み込みオファーは適用されません。
 

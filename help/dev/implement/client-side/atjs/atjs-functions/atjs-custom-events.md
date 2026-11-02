@@ -1,28 +1,32 @@
 ---
 keywords: カスタムイベント，at.js, リクエストに失敗しました，リクエストに成功しました，コンテンツレンダリングに失敗しました，コンテンツレンダリングに成功しました，ライブラリが読み込まれました，リクエスト開始，コンテンツレンダリング開始，オファーなし，コンテンツレンダリングリダイレクト，カスタムイベント 2
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリのカスタムイベントを使用すると、mbox リクエストまたはオファーが失敗または成功したときに通知されます。'
+description: '[!DNL Adobe Target] at.js JavaScript ライブラリのカスタムイベントを使用すると、mbox リクエストまたはオファーが失敗または成功したときに通知されます。'
 title: at.js カスタムイベントを使用するにはどうすればよいですか？
 feature: at.js
 exl-id: a4baed9a-9eb8-4343-9834-709b03e44ca2
 TQID: https://experienceleague.adobe.com/gCjLJ-XBlMe-GE-gaTJ2wHkn1jmal6Ftbs1GDb0zURA
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 661
+source-wordcount: '662'
 ht-degree: 70%
-
 ---
-
 # at.js カスタムイベント
 
 mbox リクエストまたはオファーの失敗や成功を把握するための `at.js custom events` について説明します。
@@ -58,11 +62,11 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(event) 
 });
 ```
 
-## トレーニングビデオ：応答トークンとat.js カスタムイベント ![&#x200B; チュートリアルバッジ &#x200B;](../../../assets/tutorial.png)
+## トレーニングビデオ：応答トークンとat.js カスタムイベント ![ チュートリアルバッジ ](../../../assets/tutorial.png)
 
 次のビデオでは、応答トークンとat.js カスタムイベントを使用して、[!DNL Target]からサードパーティシステムにプロファイル情報を共有する方法を説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/34066/?captions=jpn&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/23253/?quality=12)
 
 
 

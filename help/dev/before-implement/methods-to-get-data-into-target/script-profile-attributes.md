@@ -1,26 +1,29 @@
 ---
 keywords: 実装、実装、設定、設定、スクリプトプロファイル属性
-description: スクリプト プロファイル属性を使用して [!DNL Target] にデータを取り込みます。
-title: スクリプト プロファイル属性を使用して [!DNL Target] にデータを取り込むにはどうすればよいですか？
+description: スクリプトプロファイル属性を使用して[!DNL Target]にデータを取り込みます。
+title: スクリプト プロファイル属性を使用して[!DNL Target]にデータを取り込むにはどうすればよいですか？
 feature: Implementation
 exl-id: ba11f1de-e68b-4505-8e3e-cd4d46ef59a2
 TQID: https://experienceleague.adobe.com/bRsl4ipgw0OeuVD0d69wmnHmrVvcGt9o0KmkhrEECZQ
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 292
+source-wordcount: '294'
 ht-degree: 71%
-
 ---
-
 # スクリプトプロファイル属性
 
 スクリプト プロファイル属性は、[!DNL Adobe Target] ソリューションで定義された名前と値のペアです。 値は、サーバー呼び出しごとに、Target サーバーで JavaScript スニペットが実行されることで決まります。
@@ -64,4 +67,4 @@ user.purchase_recency: var dayInMillis = 3600 * 24 * 1000; if (mbox.name
 
 ### 関連情報へのリンク
 
-[プロファイルスクリプト属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=ja#concept_8C07AEAB0A144FECA8B4FEB091AED4D2)
+[プロファイルスクリプト属性](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html#concept_8C07AEAB0A144FECA8B4FEB091AED4D2)

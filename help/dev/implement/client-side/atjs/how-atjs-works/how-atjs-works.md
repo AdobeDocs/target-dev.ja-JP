@@ -1,44 +1,51 @@
 ---
 keywords: system diagram, flicker, at.js, implementation, javascript library, js, atjs, $8
-description: ページの読み込み時のワークフローを理解するのに役立つ  [!DNL Target]  at.js JavaScript ライブラリ関数（システム図を含む）について説明します。
+description: ページの読み込み時にワークフローを理解するのに役立つシステム図など、[!DNL Target] at.js JavaScript ライブラリがどのように機能するかを説明します。
 title: at.js Javascript ライブラリはどのように機能しますか？
 feature: at.js
 exl-id: 9183797c-857b-4b7f-a573-6bb1d583f7b1
 TQID: https://experienceleague.adobe.com/ZyfwRiSeZDL-gFA-3MehXoNO5XhdANPaAmHqDxVeQ-g
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1220
-ht-degree: 54%
-
+source-wordcount: '1221'
+ht-degree: 52%
 ---
-
 # at.js の仕組み
 
 クライアントサイドで [!DNL Adobe Target] を実装するには、at.js JavaScript ライブラリを使用する必要があります。
 
-クライアント側での [!DNL Adobe Target] の実装では、[!DNL Target] アクティビティに関連付けられたエクスペリエンスをクライアントブラウザーに直接配信します。 ブラウザーは、表示するエクスペリエンスを決定して表示します。 クライアント側の実装では、WYSIWYG エディターの [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=ja) （VEC）または非ビジュアルインターフェイスである[フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=ja) を使用して、テストエクスペリエンスとパーソナライゼーションエクスペリエンスを作成できます。
+クライアント側での [!DNL Adobe Target] の実装では、[!DNL Target] アクティビティに関連付けられたエクスペリエンスをクライアントブラウザーに直接配信します。 ブラウザーは、表示するエクスペリエンスを決定して表示します。 クライアント側の実装では、WYSIWYG エディターの [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) （VEC）または非ビジュアルインターフェイスである[フォームベースの Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) を使用して、テストエクスペリエンスとパーソナライゼーションエクスペリエンスを作成できます。
 
 ## at.js について
 
 at.js ライブラリは、[!DNL Adobe Target]のクライアントサイド実装のための実装ライブラリです。 at.js ライブラリは、Web 実装のページ読み込み時間を改善し、シングルページアプリケーション向けのより優れた実装オプションを提供します。 at.js は推奨される実装ライブラリであり、頻繁にアップデートされて新しい機能が追加されます。 すべてのユーザーが[最新バージョンのat.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md)を実装または移行することをお勧めします。
 
-詳細については、[Target JavaScript ライブラリ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=ja#libraries)を参照してください。
+詳細については、[Target JavaScript ライブラリ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#libraries)を参照してください。
 
-以下に示す[!DNL Target]実装では、次のAdobe Experience Cloud ソリューションが実装されています：[!DNL Analytics]、Target、および[!DNL Audience Manager]。 さらに、次の[!DNL Experience Cloud] コアサービスが実装されています：[!DNL Adobe Experience Platform]、[!UICONTROL &#x200B; オーディエンス &#x200B;]、[!UICONTROL 訪問者ID サービス &#x200B;]。
+以下に示す[!DNL Target]実装では、次のAdobe Experience Cloud ソリューションが実装されています：[!DNL Analytics]、Target、および[!DNL Audience Manager]。 さらに、次の[!DNL Experience Cloud] コアサービスが実装されています：[!DNL Adobe Experience Platform]、[!UICONTROL  オーディエンス ]、[!UICONTROL 訪問者ID サービス ]。
 
 ## at.js 1.*x*&#x200B;とat.js 2.x ワークフロー図の違いは何ですか？
 
@@ -47,11 +54,11 @@ at.js ライブラリは、[!DNL Adobe Target]のクライアントサイド実�
 抽象度の高い表示では、2 つのバージョン間にいくつかの違いがあります。
 
 * at.js 2.x は、グローバル mbox リクエストの概念がなく、ページ読み込みリクエストを使用します。 ページ読み込みリクエストは、Web サイトの最初のページ読み込み時に適用されるコンテンツを取得するリクエストとして表示できます。
-* at.js 2.xは、[!UICONTROL &#x200B; ビュー]という概念を管理します。これは、シングルページアプリケーション（SPA）に使用されます。 at.js 1.*x*&#x200B;はこの概念を認識していません。
+* at.js 2.xは、[!UICONTROL  ビュー]という概念を管理します。これは、シングルページアプリケーション（SPA）に使用されます。 at.js 1.*x*&#x200B;はこの概念を認識していません。
 
 ## at.js 2.x 図
 
-次の図は、[!UICONTROL &#x200B; ビュー]を含むat.js 2.xのワークフローと、これがSPA統合をどのように強化するかを理解するのに役立ちます。 at.js 2.x で使用されている概念に関するより詳しい概要については、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
+次の図は、[!UICONTROL  ビュー]を含むat.js 2.xのワークフローと、これがSPA統合をどのように強化するかを理解するのに役立ちます。 at.js 2.x で使用されている概念に関するより詳しい概要については、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
 
 （画像をクリックして全幅に拡大します）。
 
@@ -62,13 +69,13 @@ at.js ライブラリは、[!DNL Adobe Target]のクライアントサイド実�
 | 1 | ユーザーが認証された場合、呼び出しは[!UICONTROL Experience Cloud ID]を返します。別の呼び出しは顧客IDを同期します。 |
 | 2 | at.js ライブラリは、ドキュメント本文を同期して読み込み、非表示にします。<br />at.jsは、オプションの事前非表示スニペットをページに実装して、非同期で読み込むこともできます。 |
 | 3 | すべての設定済みパラメーター（MCID、SDID および顧客 ID）を含む、ページ読み込みリクエストがおこなわれます。 |
-| 4 | プロファイルスクリプトが実行され、[!UICONTROL &#x200B; プロファイルストア &#x200B;]に入力されます。 Storeは、[!UICONTROL &#x200B; オーディエンスライブラリ &#x200B;]から適格なオーディエンスをリクエストします（例えば、[!DNL Adobe Analytics]、[!DNL Audience Manager]などから共有されたオーディエンス）。<br />顧客属性は、バッチプロセスで[!UICONTROL &#x200B; プロファイルストア &#x200B;]に送信されます。 |
+| 4 | プロファイルスクリプトが実行され、[!UICONTROL  プロファイルストア ]に入力されます。 Storeは、[!UICONTROL  オーディエンスライブラリ ]から適格なオーディエンスをリクエストします（例えば、[!DNL Adobe Analytics]、[!DNL Audience Manager]などから共有されたオーディエンス）。<br />顧客属性は、バッチプロセスで[!UICONTROL  プロファイルストア ]に送信されます。 |
 | 5 | URL リクエストパラメーターとプロファイルデータに基づいて、[!DNL Target] が現在のページおよび将来のビューでどのアクティビティおよびエクスペリエンスを訪問者に返すかを決定します。 |
 | 6 | ターゲットコンテンツが（オプションで、追加のパーソナライゼーションに関するプロファイル値を含めて）ページに送り返されます。<br />デフォルトコンテンツがちらつくことなく、可能な限り迅速に現在のページ上のターゲットコンテンツが表示されます。<br />SPA でのユーザーアクションの結果として表示されるビューのターゲットコンテンツは、ブラウザーにキャッシュされます。そのため、`triggerView()` を介してビューがトリガーされたときに追加のサーバー呼び出しをおこなわずに即座にターゲットコンテンツを適用できます。 |
-| 7 | 分析データは[!UICONTROL &#x200B; データ収集] サーバーに送信されます。 |
+| 7 | 分析データは[!UICONTROL  データ収集] サーバーに送信されます。 |
 | 8 | ターゲットデータは、SDIDを介してAnalytics データと照合され、[!DNL Analytics] レポートストレージに処理されます。<br />[!DNL Analytics] その後、（A4T）レポートを使用して、[!DNL Analytics]と[!DNL Target]の両方でデータを表示できます。 |
 
-現在、`triggerView()`がSPAに実装されている場所では、[!UICONTROL &#x200B; ビュー]とアクションがキャッシュから取得され、サーバーコールなしでユーザーに表示されます。 `triggerView()` は、インプレッション数を増分して記録するために、[!DNL Target] バックエンド に通知リクエストもおこないます。 ビューを使用した SPA での at.js について詳しくは、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
+現在、`triggerView()`がSPAに実装されている場所では、[!UICONTROL  ビュー]とアクションがキャッシュから取得され、サーバーコールなしでユーザーに表示されます。 `triggerView()` は、インプレッション数を増分して記録するために、[!DNL Target] バックエンド に通知リクエストもおこないます。 ビューを使用した SPA での at.js について詳しくは、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。
 
 （画像をクリックして全幅に拡大します）。
 
@@ -76,11 +83,11 @@ at.js ライブラリは、[!DNL Adobe Target]のクライアントサイド実�
 
 | 手順 | 詳細 |
 | --- | --- |
-| 1 | `triggerView()`がSPAで呼び出され、[!UICONTROL &#x200B; ビュー]をレンダリングし、アクションを適用してビジュアル要素を変更します。 |
+| 1 | `triggerView()`がSPAで呼び出され、[!UICONTROL  ビュー]をレンダリングし、アクションを適用してビジュアル要素を変更します。 |
 | 2 | ビューのターゲットコンテンツがキャッシュから読み取られます。 |
 | 3 | デフォルトコンテンツがちらつくことなく、可能な限り迅速にターゲットコンテンツが表示されます。 |
-| 4 | アクティビティおよび増分指標で訪問者をカウントするために、[!DNL Target] [!UICONTROL &#x200B; プロファイルストア &#x200B;]に通知リクエストが送信されます。 |
-| 5 | [!DNL Analytics]個のデータが[!UICONTROL &#x200B; データ収集サーバー]に送信されました。 |
+| 4 | アクティビティおよび増分指標で訪問者をカウントするために、[!DNL Target] [!UICONTROL  プロファイルストア ]に通知リクエストが送信されます。 |
+| 5 | [!DNL Analytics]個のデータが[!UICONTROL  データ収集サーバー]に送信されました。 |
 | 6 | [!DNL Target] データはSDIDを介して[!DNL Analytics] データと照合され、[!DNL Analytics] レポートストレージに処理されます。 [!DNL Analytics]個のデータは、A4T レポートを使用して[!DNL Analytics]と[!DNL Target]の両方で表示できます。 |
 
 ### ビデオ： at.js 2.x のアーキテクチャ図
@@ -89,7 +96,7 @@ at.js 2.x は、Adobe Target の SAP のサポートを強化し、Adobe Target 
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-詳しくは、[at.js 2.x の仕組みについて](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=ja)を参照してください。
+詳しくは、[at.js 2.x の仕組みについて](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html)を参照してください。
 
 ## at.js 1.x の図
 
@@ -108,7 +115,7 @@ at.js 2.x は、Adobe Target の SAP のサポートを強化し、Adobe Target 
 
 ### ビデオ — Office hours：at.js のヒントと概要（2019年6月26日（PT））
 
-このビデオは、[!UICONTROL Adobe カスタマーケア &#x200B;] チームが主導した「Office Hours」の録画です。
+このビデオは、[!UICONTROL Adobe カスタマーケア ] チームが主導した「Office Hours」の録画です。
 
 * at.js を使用する利点
 * at.js の設定

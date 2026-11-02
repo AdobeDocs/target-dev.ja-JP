@@ -1,25 +1,27 @@
 ---
 keywords: 実装、実装、設定、設定、一括プロファイル更新api
-description: '[!UICONTROL Bulk Profile Update API]を使用して [!DNL Target] にデータを取得します。'
-title: '[!UICONTROL Bulk Profile Update API]を使用して [!DNL Target] にデータを取り込むにはどうすればよいですか？'
+description: '[!UICONTROL Bulk Profile Update API]を使用して[!DNL Target]にデータを取り込みます。'
+title: '[!UICONTROL Bulk Profile Update API]を使用して[!DNL Target]にデータを取り込むにはどうすればよいですか？'
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
 TQID: https://experienceleague.adobe.com/vBcIsBR6wwYr7MbRh7UJvt71ULDEq6iXVZ5spZlif-0
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 284
+source-wordcount: '286'
 ht-degree: 5%
-
 ---
-
 # プロファイルの一括更新API
 
 [!DNL Adobe Target] [!UICONTROL 一括プロファイル更新API]を使用すると、バッチファイルを使用して、複数の訪問者のユーザープロファイルをWeb サイトに一括で更新できます。
@@ -35,8 +37,8 @@ ht-degree: 5%
 * [!UICONTROL 顧客属性]がFTP アップロードを使用しています。 [!UICONTROL Target Bulk Profile Update API]では、HTTP POST APIが使用されています。
 * [!UICONTROL 顧客属性] データは[!DNL Analytics]と共有できます。 [!UICONTROL 一括プロファイル更新]は、[!DNL Target]でのみ使用できます。
 * ユーザー[!DNL Target]のプロファイルの作成に関する[!UICONTROL 顧客属性]のサポートはまだ表示されていません。
-   * [!UICONTROL Bulk Profile Update API] v2：各`pcId`に対してすべてのパラメーター値を指定する必要はありません。 プロファイルは、[!DNL Target]に見つからない`pcId`または`mbox3rdPartyId`に対して作成されます。
-   * [!UICONTROL Bulk Profile Update API] v1: [!UICONTROL Bulk Profile Update API]は、既存の[!DNL Target] プロファイルのみを更新します。 v1を使用している場合、`pcIds`または`mbox3rdPartyIds`が見つからないプロファイルは作成されません。
+  * [!UICONTROL Bulk Profile Update API] v2：各`pcId`に対してすべてのパラメーター値を指定する必要はありません。 プロファイルは、[!DNL Target]に見つからない`pcId`または`mbox3rdPartyId`に対して作成されます。
+  * [!UICONTROL Bulk Profile Update API] v1: [!UICONTROL Bulk Profile Update API]は、既存の[!DNL Target] プロファイルのみを更新します。 v1を使用している場合、`pcIds`または`mbox3rdPartyIds`が見つからないプロファイルは作成されません。
 * [!UICONTROL 顧客属性]では、[!UICONTROL Experience Cloud ID] （ECID）の使用と、CRM IDやロイヤルティ IDなどのソース IDの使用が必要です。
 * [!UICONTROL Bulk Profile Update API]には、TNT IDまたは`mbox3rdPartyId`のいずれかが必要です。
 * 送信する `mbox3rdPartyID` には、プラス記号（+）とスラッシュ（/）を含めることはできません。
