@@ -1,28 +1,31 @@
 ---
 keywords: モバイルアプリ，aep sdk，ネイティブアプリ，web ビュー，ネイティブ；swift,adobe experience platform モバイル sdk，モバイル sdk，ネイティブコード
-description: Web ビューを備えたネイティブアプリで [!DNL AEP Mobile SDK] を使用して [!DNL Adobe Target] を実装する方法について説明します。
-title: Web ビューでネイティブ コードを使用するモバイル アプリで [!DNL Adobe Target] を実装する
+description: Web ビューを使用するネイティブアプリで[!DNL AEP Mobile SDK]を使用して[!DNL Adobe Target]を実装する方法について説明します。
+title: Web ビューでネイティブコードを使用するモバイルアプリで[!DNL Adobe Target]を実装する
 feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
 TQID: https://experienceleague.adobe.com/JrbjPpq3ds0sl4rkMnuzF9SYk2PI4r676hHqN-Pvn78
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 624
+source-wordcount: '627'
 ht-degree: 0%
-
 ---
-
 # [!DNL Target]を[!DNL AEP Mobile SDK]で実装し、web ビューを備えたネイティブアプリで実装する
 
 この記事では、[!DNL Adobe Experience Platform Mobile SDK]を使用してweb ビューでネイティブコードを使用するモバイルアプリに[!DNL Adobe Target]を実装するためのベストプラクティスを紹介します。

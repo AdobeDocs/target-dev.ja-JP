@@ -1,29 +1,34 @@
 ---
 keywords: adobe.target.getOffer, getOffer, getoffer, get offer, get offer, at.js, functions, function, $8
-description: '[!UICONTROL adobe.target.getOffer （） &#x200B;]関数とその [!DNL Adobe Target] at.js ライブラリのオプションを使用して、リクエストを実行して [!DNL Target]  オファーを取得します。'
+description: '[!UICONTROL adobe.target.getOffer （） &#x200B;]関数とその[!DNL Adobe Target] at.js ライブラリのオプションを使用して、リクエストを実行して[!DNL Target] オファーを取得します。'
 title: '[!UICONTROL adobe.target.getOffer （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
 TQID: https://experienceleague.adobe.com/GcXVIt-42-PV0j4Q4oe5uePTZAn7PDIMicIAULDXz-s
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 472
+source-wordcount: '474'
 ht-degree: 72%
-
 ---
-
 # [!DNL adobe.target.getOffer(options)]
 
 この関数は、[!DNL Target] オファーを取得するためのリクエストを起動します。

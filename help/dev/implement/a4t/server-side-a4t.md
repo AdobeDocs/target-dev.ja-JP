@@ -9,19 +9,21 @@ exl-id: 716f7343-69a6-44d7-baec-a0a0df1b6e1f
 TQID: https://experienceleague.adobe.com/I7-G2VO2AN3qFsgkk4JX2Pg6WJfZq0HZkcGL4XQNoWg
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 161
+source-wordcount: '161'
 ht-degree: 0%
-
 ---
-
 # [!DNL Experience Platform Web SDK]のA4T データのサーバーサイドのログ
 
 [!DNL Adobe Experience Platform Web SDK]を使用すると、[!UICONTROL Adobe Analytics Edge Network]で[!UICONTROL Experience Platform for Target] （A4T）機能を実装できます。 サーバーサイドのログ記録が有効になっている場合、Edge Networkを介して送信されたすべての[!DNL Analytics] ヒットは、ヒットのステッチプロセスを経由することなく、サーバーサイドの[!DNL Target]詳細で強化されます。

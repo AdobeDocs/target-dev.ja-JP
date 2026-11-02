@@ -1,27 +1,30 @@
 ---
 keywords: at.js, debug at.js, adobe Experience Cloud debugger, experience cloud debugger, mbox trace, mbox highlight, debug, debugging, $9
-description: '[!UICONTROL Adobe Experience Cloud Debugger]を使用して、ライブラリ設定の表示、リクエストの確認、コンソールログのオン、通話リクエストの無効化 [!DNL Target] などを行います。'
+description: '[!UICONTROL Adobe Experience Cloud Debugger]を使用して、ライブラリ設定の表示、リクエストの確認、コンソールログの有効化、[!DNL Target]呼び出しリクエストの無効化などを行います。'
 title: でデバッグするにはどうすればよいですか。[!UICONTROL Adobe Experience Cloud Debugger]をお持ちですか？
 feature: at.js
 exl-id: ac215560-3f6f-4269-947c-961e7a43c9e1
 TQID: https://experienceleague.adobe.com/pZtiohItxWcjKFJTCXX8JtvOpEjFMsG1SJdp9ANalOE
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
-source-wordcount: 178
+source-wordcount: '179'
 ht-degree: 6%
-
 ---
-
 # [!UICONTROL Adobe Experience Cloud Debugger]を使用したat.jsのデバッグ
 
 [!UICONTROL Adobe Experience Cloud Debugger]拡張機能の使用に関する情報。これにより、[!DNL Target]実装を迅速かつ簡単に把握できます。

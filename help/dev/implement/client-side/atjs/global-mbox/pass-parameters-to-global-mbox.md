@@ -1,27 +1,30 @@
 ---
 keywords: グローバル mbox パラメーター、targetPageParams、クエリ文字列、配列、json、dtm
-description: '[!UICONTROL targetPageParams]関数を使用して、追加のターゲティング情報またはコンテキスト情報を [!DNL Adobe Target]  グローバル mboxに渡す方法を説明します。'
+description: '[!UICONTROL targetPageParams]関数を使用して、追加のターゲティング情報またはコンテキスト情報を[!DNL Adobe Target] グローバル mboxに渡す方法を説明します。'
 title: グローバル mboxにパラメーターを渡すにはどうすればよいですか？
 feature: at.js
 exl-id: 2a6be3e4-a618-4812-9e87-b01789705c40
 TQID: https://experienceleague.adobe.com/MRdqU23ARg1E-gf8QDbXOpaVJWd9Fx1pqJ4QXjsBdtA
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 378
+source-wordcount: '379'
 ht-degree: 62%
-
 ---
-
 # グローバル mbox にパラメーターを渡す
 
 JavaScript `targetPageParams`関数は、[!DNL Adobe Target]のグローバル mboxにパラメーターを渡すために使用されます。 これは、追加のターゲティング/コンテキスト情報を[!DNL Target]に渡すシナリオで必要です。

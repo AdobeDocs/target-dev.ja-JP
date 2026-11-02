@@ -1,30 +1,36 @@
 ---
 keywords: 実装、at.js non javascript、adbox、redirector、mbox
-description: AdBoxやリダイレクターの使用など、JavaScript以外のシナリオで [!DNL Adobe Target] を実装する方法について説明します。
-title: 電子メール用に [!DNL Target] を実装するにはどうすればよいですか？
+description: AdBoxやリダイレクターの使用など、JavaScript以外のシナリオで[!DNL Adobe Target]を実装する方法について説明します。
+title: メール用に[!DNL Target]を実装するにはどうすればよいですか？
 feature: Implement Email
 exl-id: dda00b75-5d58-4405-ae58-75e7883a30ed
 TQID: https://experienceleague.adobe.com/NeITIa97pW-yiB6EB-ajqRuBgp9mx-uzdwlREdgotj8
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+    internal-label: Implement email
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: e9001ce2-5245-4a8e-8601-dd958009072f
+    internal-label: Web experience
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 441
+source-wordcount: '443'
 ht-degree: 62%
-
 ---
-
 # 電子メール：[!DNL Target]を実装
 
 AdBoxやリダイレクターの使用など、JavaScript以外のシナリオでの[!DNL Target]の実装に関する情報。
@@ -42,7 +48,7 @@ adbox 広告およびリダイレクターは、あらゆるアクティビテ�
 
 ## セキュリティのベストプラクティス
 
-Redirectorでは、オープンリダイレクトの脆弱性のリスクにさらされる可能性があります。 第三者によるリダイレクトリンクの不正使用を避けるために、デフォルトのリダイレクト URL ドメインを許可リストに加えるするには、「承認済みホスト」を使用することをお勧めします。 [!DNL Target]はホストを使用して、リダイレクトを許可するドメインを許可リストに加えるします。 詳しくは、*Hosts*&#x200B;の [!DNL Target][&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=ja#allowlist)へのmbox呼び出しを許可するホストを指定する ホストの作成を参照してください。
+Redirectorでは、オープンリダイレクトの脆弱性のリスクにさらされる可能性があります。 第三者によるリダイレクトリンクの不正使用を避けるために、デフォルトのリダイレクト URL ドメインを許可リストに加えるするには、「承認済みホスト」を使用することをお勧めします。 [!DNL Target]はホストを使用して、リダイレクトを許可するドメインを許可リストに加えるします。 詳しくは、*Hosts*&#x200B;の [!DNL Target]&#x200B;[&#128279;](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=ja#allowlist)へのmbox呼び出しを許可するホストを指定する ホストの作成を参照してください。
 
 ## 制限事項
 

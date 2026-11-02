@@ -1,27 +1,30 @@
 ---
 keywords: adobe.target.triggerView, triggerView, triggerview, トリガービュー，at.js，関数，関数，viewName, viewname, ビュー名，adobe.target.triggerView1
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリのadobe.target.triggerView （）関数を使用して、シングルページアプリケーション（SPA）で使用します。 (at.js 2.x)'
+description: '[!DNL Adobe Target] at.js JavaScript ライブラリのadobe.target.triggerView （）関数を使用して、シングルページアプリケーション（SPA）で使用します。 (at.js 2.x)'
 title: adobe.target.triggerView （）関数の使用方法を教えてください。
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
 TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 446
+source-wordcount: '447'
 ht-degree: 20%
-
 ---
-
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
 この関数は、新しいページが読み込まれるときや、ページ上のコンポーネントが再レンダリングされるときに呼び出すことができます。 `adobe.target.triggerView()`は、[!UICONTROL Visual Experience Composer] （VEC）を使用して[!UICONTROL A/B テスト &#x200B;]および[!UICONTROL &#x200B; エクスペリエンスのターゲット設定] （XT）アクティビティを作成するシングルページアプリケーション （SPA）用に実装する必要があります。 `[!UICONTROL adobe.target.triggerView()]`がサイトに実装されていない場合、VECをSPAに使用することはできません。 詳細については、「[シングルページアプリケーションの実装](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)」を参照してください。

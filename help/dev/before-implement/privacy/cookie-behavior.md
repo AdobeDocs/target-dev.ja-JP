@@ -1,33 +1,42 @@
 ---
 keywords: 概要と参照、web キット、Cookie、ファーストパーティ、サードパーティ、ファーストパーティ、サードパーティ，
-description: ' [!DNL Target] Cookieの動作（ファーストパーティ Cookie、ファーストパーティ Cookieを使用したサードパーティ Cookie、またはサードパーティ Cookieのみ）について説明します。'
-title: ' [!DNL Target] Cookieに関する情報はどこで入手できますか？'
+description: '[!DNL Target]個のCookieの動作（ファーストパーティ Cookie、ファーストパーティ Cookieを含むサードパーティ Cookie、またはサードパーティ Cookieのみ）について説明します。'
+title: '[!DNL Target] Cookieに関する情報はどこで入手できますか？'
 feature: at.js
 exl-id: d44e02ce-8920-4130-bcad-699ca77c0dad
 TQID: https://experienceleague.adobe.com/Uc9Gb06t9DIkvBvLQJ9ZhopE8pyJovjyrQdsUmFD9-o
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1692
+source-wordcount: '1694'
 ht-degree: 49%
-
 ---
-
 # [!DNL Target]個のCookie
 
 Cookie の動作は、その Cookie がファーストパーティ Cookie であるか、ファーストパーティ Cookie を伴うサードパーティ Cookie であるか、サードパーティ Cookie のみであるかによって異なります。

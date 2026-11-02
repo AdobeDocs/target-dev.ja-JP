@@ -1,26 +1,29 @@
 ---
 keywords: 実装、実装、設定、ページパラメーター、tomcat、url エンコード、ページ内プロファイル属性、mbox パラメーター、ページ内プロファイル属性、スクリプトプロファイル属性、バルクプロファイル更新API、単一ファイル更新API、顧客属性、implement5、implement6、implement7、implement8、implement9、implementing0、implementing1、implementing2、implementing3、implementing4、implementing5、データプロバイダー、dataprovider、データプロバイダー
-description: データを [!DNL Target]  （ページパラメーター、プロファイル属性、スクリプトプロファイル属性、データプロバイダー、単一および一括プロファイル更新API、顧客属性）に取り込みます。
+description: データを[!DNL Target]に取り込みます（ページパラメーター、プロファイル属性、スクリプトプロファイル属性、データプロバイダー、単一および一括プロファイル更新API、顧客属性）。
 title: Adobe Targetにデータを取り込むにはどうすればよいですか？
 feature: Implementation
 exl-id: a54e306a-ea8e-4d3f-bc5d-b5895b6b9a84
 TQID: https://experienceleague.adobe.com/pmlPWRHb9tnrdSFm7s5OZ-RRsJJOxw-ntBY5AeswIcM
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 377
+source-wordcount: '377'
 ht-degree: 27%
-
 ---
-
 # メソッドの概要
 
 Adobe Targetへのデータの取り込み方法について説明します。

@@ -1,27 +1,31 @@
 ---
 keywords: 実装、実装、設定、設定、ページパラメーター
-description: ページ内プロファイル属性を使用して [!DNL Target] にデータを取り込みます。
-title: ページ内プロファイル属性を使用して [!DNL Target] にデータを取り込むにはどうすればよいですか？
+description: ページ内プロファイル属性を使用して[!DNL Target]にデータを取り込みます。
+title: ページ内プロファイル属性を使用して[!DNL Target]にデータを取り込むにはどうすればよいですか？
 feature: Implementation
 exl-id: c19fd746-21a2-4eb5-8c2a-c24806e09324
 TQID: https://experienceleague.adobe.com/jXWNNl7HfrR03tEoMz7KApX3onc1Zc44IAuXy4QF2tU
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 311
+source-wordcount: '313'
 ht-degree: 40%
-
 ---
-
 # ページ内プロファイル属性
 
 [!DNL Adobe Target]のページ内プロファイル属性（「mbox内プロファイル属性」とも呼ばれます）は、後で使用するために訪問者のプロファイルに保存されるページコードを通じて直接渡される名前と値のペアです。

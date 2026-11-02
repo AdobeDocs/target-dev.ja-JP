@@ -1,25 +1,27 @@
 ---
 keywords: 実装、実装、設定、設定、単一プロファイルの更新
-description: 単一のプロファイル更新APIを使用して [!DNL Target] にデータを取り込みます。
-title: '[!UICONTROL 単一プロファイル更新API]を使用して [!DNL Target] にデータを取り込むにはどうすればよいですか？'
+description: 単一のプロファイル更新APIを使用して、[!DNL Target]にデータを取り込みます。
+title: '[!UICONTROL 単一プロファイル更新API]を使用して[!DNL Target]にデータを取り込むにはどうすればよいですか？'
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
 TQID: https://experienceleague.adobe.com/tkh7YEJ9Vr5eMynNYYxYKZZDOXZTVJNxwUSCxiwPfzI
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 160
+source-wordcount: '162'
 ht-degree: 3%
-
 ---
-
 # [!UICONTROL 単一プロファイル更新API]
 
 [!DNL Adobe Target] [!UICONTROL 単一プロファイル更新API]を使用すると、単一ユーザーのプロファイル更新を送信できます。 [!UICONTROL 単一プロファイル更新API]は、[!UICONTROL 一括プロファイル更新API]とほぼ同じですが、1人の訪問者プロファイルが一度に更新され、.cvs ファイルではなくAPI呼び出しでインライン化されます。

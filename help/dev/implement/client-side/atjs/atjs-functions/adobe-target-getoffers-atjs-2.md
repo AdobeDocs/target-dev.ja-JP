@@ -1,29 +1,34 @@
 ---
 keywords: adobe.target.getOffers, getOffers, getoffers, get offers, at.js, functions, function, $8
-description: '[!UICONTROL adobe.target.getOffers （） &#x200B;]関数とその [!DNL Adobe Target] at.js ライブラリのオプションを使用して、複数の [!DNL Target]  オファーを取得するリクエストを実行します。 (at.js 2.x)'
+description: '[!UICONTROL adobe.target.getOffers （） &#x200B;]関数とその[!DNL Adobe Target] at.js ライブラリのオプションを使用して、リクエストを実行し、複数の[!DNL Target] オファーを取得します。 (at.js 2.x)'
 title: '[!UICONTROL adobe.target.getOffers （） &#x200B;]関数の使用方法を教えてください。'
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
 TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 1357
+source-wordcount: '1359'
 ht-degree: 88%
-
 ---
-
 # [!UICONTROL adobe.target.getOffers （） &#x200B;] - at.js 2.x
 
 この関数を使用すると、複数の mbox を渡すことで複数のオファーを取得できます。 さらに、アクティブなアクティビティのすべてのビュー向けに複数のオファーを取得できます。

@@ -1,28 +1,32 @@
 ---
 keywords: グローバル mbox、グローバル mboxのカスタマイズ、at.jsの編集、at.jsの実装
-description: at.jsのグローバル mboxをカスタマイズする方法については、 [!DNL Adobe Target]の[!UICONTROL 管理]-[!UICONTROL 実装] ページを参照してください。
+description: '[!DNL Adobe Target]の[!UICONTROL 管理]-[!UICONTROL 実装] ページで、at.jsのグローバル mboxをカスタマイズする方法について説明します。'
 title: グローバル mboxをカスタマイズするにはどうすればよいですか？
 feature: at.js
 exl-id: f7809c3d-6e77-4bbe-8da3-4ab0a448c801
 TQID: https://experienceleague.adobe.com/MtbjwpKrZ-WmBnE5tBY74oJgQVB-zPLrCuFDrFshkGo
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 227
+source-wordcount: '227'
 ht-degree: 16%
-
 ---
-
 # グローバル mbox のカスタマイズ
 
 at.jsの[!DNL Adobe Target] グローバル mboxのカスタマイズに役立つ情報。

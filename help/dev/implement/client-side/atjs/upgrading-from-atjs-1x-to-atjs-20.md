@@ -1,35 +1,46 @@
 ---
 keywords: at.js リリース、at.js バージョン、シングルページアプリ、spa、クロスドメイン、クロスドメイン
-description: ' [!DNL Adobe Target] at.js 1.xからat.js 2.xへのアップグレード方法について説明します。 システムフロー図の検証や、新機能や非推奨の機能の詳細をご確認ください。'
+description: '[!DNL Adobe Target] at.js 1.xからat.js 2.xへのアップグレード方法について説明します。 システムフロー図の検証や、新機能や非推奨の機能の詳細をご確認ください。'
 title: at.js バージョン 1.xからバージョン 2.xにアップグレードするにはどうすればよいですか？
 feature: at.js
 exl-id: fbfa5743-0fa5-44c6-89b3-fdee9b50e126
 TQID: https://experienceleague.adobe.com/JGsuogzhCvThr4QGHJ5g4d8ZqGVZ8ClAf7hXuoh7X0Q
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+    internal-label: Analytics integration
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
-source-wordcount: 3100
+source-wordcount: '3101'
 ht-degree: 47%
-
 ---
-
 # at.js 1.*x*&#x200B;からat.js 2.*x*&#x200B;へのアップグレード
 
 at.js の最新バージョンは、次世代のクライアント側のテクノロジーで、パーソナライゼーションを実行するための機能セットを提供します。[!DNL Adobe Target] この新しいバージョンは、シングルページアプリケーション（SPA）と調和したインタラクションを実現するための at.js のアップグレードに焦点を当てています。

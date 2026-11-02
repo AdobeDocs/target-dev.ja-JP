@@ -1,31 +1,38 @@
 ---
 keywords: system diagram, flicker, at.js, implementation, javascript library, js, atjs, $8
-description: ページの読み込み時のワークフローを理解するのに役立つ  [!DNL Target]  at.js JavaScript ライブラリ関数（システム図を含む）について説明します。
+description: ページの読み込み時にワークフローを理解するのに役立つシステム図など、[!DNL Target] at.js JavaScript ライブラリがどのように機能するかを説明します。
 title: at.js Javascript ライブラリはどのように機能しますか？
 feature: at.js
 exl-id: 9183797c-857b-4b7f-a573-6bb1d583f7b1
 TQID: https://experienceleague.adobe.com/ZyfwRiSeZDL-gFA-3MehXoNO5XhdANPaAmHqDxVeQ-g
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1220
-ht-degree: 54%
-
+source-wordcount: '1221'
+ht-degree: 52%
 ---
-
 # at.js の仕組み
 
 クライアントサイドで [!DNL Adobe Target] を実装するには、at.js JavaScript ライブラリを使用する必要があります。

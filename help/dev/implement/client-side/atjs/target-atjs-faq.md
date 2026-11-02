@@ -1,29 +1,34 @@
 ---
 keywords: at.js faq, at.js に関するよくある質問, faq, ちらつき, ローダー, ページローダー, クロスドメイン, ファイルサイズ, ファイルのサイズ, x-domain, at.js と mbox.js, x のみ, クロスドメイン, safari, シングルページアプリ, セレクターが見つかりません, セレクター, シングルページアプリケーション, tt.omtrdc.net, spa, Adobe Experience Manager, AEM, ip アドレス, httponly, HttpOnly, Secure, ip, cookie ドメイン
-description: ' [!DNL Adobe Target] at.js JavaScript ライブラリに関するよくある質問に対する回答をお読みください。'
+description: '[!DNL Adobe Target] at.js JavaScript ライブラリに関するよくある質問への回答を読みます。'
 title: at.js に関するよくある質問と回答
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
 TQID: https://experienceleague.adobe.com/wOC67fpxKtZKP3-o-T86oA-HqySuPGebT9W5LUHuxSA
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
-source-wordcount: 2994
+source-wordcount: '2995'
 ht-degree: 64%
-
 ---
-
 # at.js に関するよくある質問
 
 [!DNL Adobe Target] の at.js JavaScript ライブラリに関するよくある質問への回答
@@ -175,7 +180,7 @@ Safari訪問者をサポートするために、より優れたX-Domainは「無
 
 [!DNL Target] のお客様は、[!DNL Target] でクラウドベースのインスタンスを使用してテストをおこなったり、簡単な概念実証に利用したりする場合があります。 これらのドメインは、他の多くのドメインと同様に[パブリックサフィックスリスト](https://publicsuffix.org/list/public_suffix_list.dat)に含まれています。
 
-これらのドメインを使用する場合は、targetGlobalSettings() を使用して `cookieDomain` 設定をカスタマイズしない限り、最新のブラウザーでは Cookie が保存されません。 詳しくは、 [!DNL Target][&#128279;](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)でのクラウドベースのインスタンスの使用を参照してください。
+これらのドメインを使用する場合は、targetGlobalSettings() を使用して `cookieDomain` 設定をカスタマイズしない限り、最新のブラウザーでは Cookie が保存されません。 詳しくは、 [!DNL Target]&#x200B;[&#128279;](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)でのクラウドベースのインスタンスの使用を参照してください。
 
 ## at.js を使用する際に、IP アドレスを Cookie ドメインとして使用することはできますか。
 
