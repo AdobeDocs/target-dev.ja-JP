@@ -22,10 +22,10 @@ topic_v2:
     internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d1a60ca866f126520e9a17257adc50114ddd8e7
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 20%
+source-wordcount: '452'
+ht-degree: 19%
 ---
 # サポートされているブラウザー
 
@@ -45,15 +45,15 @@ TLSに関する重要な情報については、[TLS （Transport Layer Security
 | デバイスタイプ | ブラウザーのバージョン |
 |--- |--- |
 | [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
-| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li><li>[!DNL Safari]</li></ul> |
 
 ## ビジュアル編集の要件
 
-[!UICONTROL Visual Experience Composer] （VEC）でweb ページを確実に開き、作成し、プレビューするには、[Adobe Experience Cloud Visual Editing Helper ブラウザー拡張機能](https://experienceleague.adobe.com/ja/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}をweb ブラウザーにインストールするか、[!UICONTROL Enhanced Experience Composer （EEC） &#x200B;]を使用する必要があります。
+[!UICONTROL Visual Experience Composer] （VEC）でweb ページを確実に開き、作成し、プレビューするには、[Adobe Experience Cloud Visual Editing Helper ブラウザー拡張機能](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}をweb ブラウザーにインストールするか、[!UICONTROL Enhanced Experience Composer （EEC） ]を使用する必要があります。
 
 >[!NOTE]
 >
->[!DNL Google Chrome]と[!DNL Microsoft Edge]は現在、[!DNL Adobe Target]のweb ページのビジュアル編集をサポートする唯一のブラウザーです。
+>[!DNL Google Chrome]と[!DNL Microsoft Edge]は現在、[!DNL Adobe Target]のweb ページのビジュアル編集をサポートする唯一のブラウザーです。 [!DNL Safari]はVECまたはEECをサポートしていません。
 
 
 ## コンテンツ配信
@@ -71,5 +71,5 @@ TLSに関する重要な情報については、[TLS （Transport Layer Security
 * [!DNL Adobe Experience Platform Web SDK]は、[!DNL Google Chrome]、[!DNL Safari]、[!DNL Firefox]、[!DNL Microsoft Edge Chromium]の最新バージョンで最適に動作するように設計されています。 これらのブラウザーの古いバージョンまたは非推奨のブラウザー（[!DNL Internet Explorer]など）で特定の機能を使用すると、問題が発生する可能性があります。
 * at.js実装の場合、[!DNL Target]はInternet Explorerの以前のバージョン、および上記のブラウザーの以前のバージョンでデフォルトコンテンツを表示します。
 * Internet Explorerは、すべての不明な要素（カスタム要素など）を同じ要素タイプとして扱います。 その結果、配信はカスタム要素で機能しません。
-* [!DNL Target]は、上記に記載されていないブラウザーと[&#x200B; クイックモード &#x200B;](https://en.wikipedia.org/wiki/Quirks_mode)を使用しているブラウザーにデフォルトコンテンツを表示します。 at.js には、`<!DOCTYPE html>` など、標準モードでレンダリングを行う doctype が必要です。
+* [!DNL Target]は、上記に記載されていないブラウザーと[ クイックモード ](https://en.wikipedia.org/wiki/Quirks_mode)を使用しているブラウザーにデフォルトコンテンツを表示します。 at.js には、`<!DOCTYPE html>` など、標準モードでレンダリングを行う doctype が必要です。
 * 2018年9月12日以降、TLS 1.0 デバイスとブラウザーをサポートしないように[!DNL Adobe]配信インフラストラクチャを保護しています。 「[TLS（トランスポート層セキュリティ）暗号化の変更](../before-implement/tls-transport-layer-security-encryption.md)」を参照して、この変更による全体への影響について理解してください。
