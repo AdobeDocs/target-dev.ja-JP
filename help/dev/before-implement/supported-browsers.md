@@ -22,10 +22,10 @@ topic_v2:
     internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d1a60ca866f126520e9a17257adc50114ddd8e7
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 20%
+source-wordcount: '452'
+ht-degree: 19%
 ---
 # サポートされているブラウザー
 
@@ -45,7 +45,7 @@ TLSに関する重要な情報については、[TLS （Transport Layer Security
 | デバイスタイプ | ブラウザーのバージョン |
 |--- |--- |
 | [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
-| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li><li>[!DNL Safari]</li></ul> |
 
 ## ビジュアル編集の要件
 
@@ -53,7 +53,7 @@ TLSに関する重要な情報については、[TLS （Transport Layer Security
 
 >[!NOTE]
 >
->[!DNL Google Chrome]と[!DNL Microsoft Edge]は現在、[!DNL Adobe Target]のweb ページのビジュアル編集をサポートする唯一のブラウザーです。
+>[!DNL Google Chrome]と[!DNL Microsoft Edge]は現在、[!DNL Adobe Target]のweb ページのビジュアル編集をサポートする唯一のブラウザーです。 [!DNL Safari]はVECまたはEECをサポートしていません。
 
 
 ## コンテンツ配信
