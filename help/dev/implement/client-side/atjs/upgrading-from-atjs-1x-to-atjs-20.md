@@ -800,6 +800,6 @@ at.js 2.*x* JSON ペイロード：
 
 at.js 2.*x*&#x200B;は、Adobe [!DNL Target]のSPAのサポートを強化し、他のExperience Cloud ソリューションと統合します。 このビデオでは、すべてがどのように結び付いているかを説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3507926/?captions=jpn&quality=12)
 
 詳しくは、[at.js 2.*x*&#x200B;の仕組みについて](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=ja)を参照してください。
