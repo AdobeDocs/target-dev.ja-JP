@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
+source-git-commit: 78a2ba4a9668cee9813788f03c81eb68f3a6af07
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1316'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -203,5 +203,3 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
 この動作は、[!DNL Bulk Profile Update API]のv1とv2の両方に適用されます。
 
 空の値を送信して属性をクリアまたは削除しようとすると、何の影響もありません。
-
-明示的な属性削除のサポートは、APIの将来のバージョン（v3）で計画されていますが、現在は利用できません。
